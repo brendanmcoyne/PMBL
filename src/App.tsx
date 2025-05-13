@@ -9,22 +9,22 @@ import Players from "./components/Players.tsx";
 import Managers from "./components/Managers.tsx";
 import Archives from "./components/Archives.tsx";
 import Schedule from "./components/Schedule.tsx";
+import Headlines from "./components/Headlines.tsx";
 
 
 const MainContent = styled.div`
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    width: 100%;
     height: auto;
     min-height: 100vh;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
 `;
 
 const Content = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     width: 70%;
 `;
 
@@ -37,8 +37,8 @@ function Root() {
     return (
         <Wrapper>
             <Header />
+            <Nav />
             <MainContent>
-                <Nav />
                 <Content>
                     <Routes>
                         <Route path="/" element={<Home />} />
@@ -46,6 +46,7 @@ function Root() {
                         <Route path="/managers" element={<Managers />} />
                         <Route path="/archives" element={<Archives />} />
                         <Route path="/schedule" element={<Schedule />} />
+                        <Route path="/headlines" element={<Headlines />} />
                     </Routes>
                 </Content>
             </MainContent>

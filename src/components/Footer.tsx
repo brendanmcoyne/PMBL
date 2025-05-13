@@ -12,9 +12,7 @@ const FooterContainer = styled.footer`
 export default function Footer() {
     return (
         <FooterContainer>
-            <p>
-                All rights reserved by Brendan Coyne <Link to="/credits">Credits</Link> ©
-            </p>
+            <p>All rights reserved by Brendan Coyne <Link to="/credits">Credits</Link> ©</p>
         </FooterContainer>
     );
 }
