@@ -1,40 +1,55 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+import { useState } from "react";
+
+const StyledNavContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+`;
 
 const StyledNav = styled.nav`
     background-color: darkblue;
-    text-align: center;
-    flex-direction: row;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
 `;
 
-const StyledList = styled.ul`
+const ToggleButton = styled.button`
+    background-color: lightgray;
+    color: darkblue;
+    font-size: 1.5rem;
+    border: none;
+    padding: 7px 15px;
+    cursor: pointer;
+`;
+
+const StyledList = styled.ul<{ visible: boolean }>`
+    list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    width: 100%;
+    display: ${({ visible }) => (visible ? "flex" : "none")};
     flex-direction: row;
-    align-items: center;
-    list-style-type: none;
-    
+    justify-content: center;
+    background-color: darkblue;
 `;
 
 const StyledLink = styled.li`
-    padding: 3px;
+    padding: 10px;
+    margin: 5px;
     background-color: lightgray;
-    align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
     font-size: 1.2rem;
     width: 140px;
-    
-    
+    text-align: center;
+    cursor: pointer;
+
     a {
         color: red;
-        width: 100%;
+        text-decoration: none;
+        display: block;
     }
 
     &:hover {
@@ -42,29 +57,33 @@ const StyledLink = styled.li`
     }
 `;
 
+const Divider = styled.div`
+  height: 5px;
+  background-color: black;
+  width: 100%;
+`;
+
 export default function Nav() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
-        <StyledNav>
-            <StyledList>
-                <StyledLink>
-                    <Link to="/">Home</Link>
-                </StyledLink>
-                <StyledLink>
-                    <Link to="/players">Players</Link>
-                </StyledLink>
-                <StyledLink>
-                    <Link to="/managers">Managers</Link>
-                </StyledLink>
-                <StyledLink>
-                    <Link to="/archives">Archives</Link>
-                </StyledLink>
-                <StyledLink>
-                    <Link to="/schedule">Schedule</Link>
-                </StyledLink>
-                <StyledLink>
-                    <Link to="/headlines">Headlines</Link>
-                </StyledLink>
+        <StyledNavContainer>
+            <StyledNav>
+                <ToggleButton onClick={() => setMenuOpen(prev => !prev)}>
+                    {menuOpen ? "✖ Close" : "☰ Menu"}
+                </ToggleButton>
+            </StyledNav>
+
+            <StyledList visible={menuOpen}>
+                <StyledLink><Link to="/">Home</Link></StyledLink>
+                <StyledLink><Link to="/players">Players</Link></StyledLink>
+                <StyledLink><Link to="/managers">Managers</Link></StyledLink>
+                <StyledLink><Link to="/archives">Archives</Link></StyledLink>
+                <StyledLink><Link to="/schedule">Schedule</Link></StyledLink>
+                <StyledLink><Link to="/headlines">Headlines</Link></StyledLink>
             </StyledList>
-        </StyledNav>
-    )
+
+            <Divider />
+        </StyledNavContainer>
+    );
 }

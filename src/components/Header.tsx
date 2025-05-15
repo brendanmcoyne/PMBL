@@ -4,15 +4,17 @@ const StyledHeader = styled.header`
     background-color: darkblue;
     color: lightgray;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-    text-align: left;
+    align-items: center; 
+    padding-top: 4px;
+    padding-left: 10px;
+    height: 60px; 
 `;
 
 const StyledH3 = styled.h3`
     background-color: darkblue;
     color: white;
+    font-size: 28px; 
+    margin: 0; 
 `;
 
 export default function Header() {

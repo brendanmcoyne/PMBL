@@ -13,11 +13,8 @@ import Headlines from "./components/Headlines.tsx";
 
 
 const MainContent = styled.div`
+    flex-grow: 1;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
     justify-content: center;
     align-items: center;
 `;
@@ -29,8 +26,10 @@ const Content = styled.div`
 `;
 
 const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     width: 100vw;
-    margin: 0 auto;
 `;
 
 function Root() {
@@ -39,20 +38,17 @@ function Root() {
             <Header />
             <Nav />
             <MainContent>
-                <Content>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/players" element={<Players />} />
-                        <Route path="/managers" element={<Managers />} />
-                        <Route path="/archives" element={<Archives />} />
-                        <Route path="/schedule" element={<Schedule />} />
-                        <Route path="/headlines" element={<Headlines />} />
-                    </Routes>
-                </Content>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/players" element={<Content><Players /></Content>} />
+                    <Route path="/managers" element={<Content><Managers /></Content>} />
+                    <Route path="/archives" element={<Content><Archives /></Content>} />
+                    <Route path="/schedule" element={<Content><Schedule /></Content>} />
+                    <Route path="/headlines" element={<Content><Headlines /></Content>} />
+                </Routes>
             </MainContent>
             <Footer/>
         </Wrapper>
-
     );
 }
 
