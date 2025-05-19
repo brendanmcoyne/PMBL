@@ -15,6 +15,7 @@ const StyledNav = styled.nav`
     justify-content: flex-start;
     align-items: center;
     padding: 10px;
+    box-sizing: border-box;
 `;
 
 const ToggleButton = styled.button`
@@ -35,6 +36,7 @@ const StyledList = styled.ul<{ visible: boolean }>`
     flex-direction: row;
     justify-content: center;
     background-color: darkblue;
+    flex-wrap: wrap;
 `;
 
 const StyledLink = styled.li`

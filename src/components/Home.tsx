@@ -10,14 +10,19 @@ const Main = styled.main`
     justify-content: center;
 `;
 
-const BackgroundImage = styled.img`
+const BackgroundWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     z-index: 0;
+    width: 90%;
+    height: 100vh; 
+`;
+
+const BackgroundImage = styled.img`
+  position: relative;
+  height: calc(100% + 40px); 
+  width: 115%;
 `;
 
 const Overlay = styled.div`
@@ -72,10 +77,20 @@ const GenImage = styled.img`
   border-radius: 50%;
 `;
 
+const Divider = styled.div`
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    z-index: 2; 
+`;
+
 export default function Home() {
     return (
         <Main>
-            <BackgroundImage src="/4.jpg" alt="Background" />
+            <BackgroundWrapper>
+                <BackgroundImage src="/4.jpg" alt="Background" />
+                <Divider />
+            </BackgroundWrapper>
             <Overlay />
             <Wrapper>
                 <StyledHeader>Welcome to the Professional Mario Baseball League</StyledHeader>

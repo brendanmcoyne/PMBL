@@ -16,8 +16,26 @@ const StyledHeader = styled.h1`
 `;
 
 const DivisionDiv = styled.div`
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+`;
+
+const DivisionHeader = styled.h3`
+    text-align: center;
+    grid-column: span 2;
+    font-size: 2rem;
+`;
+
+const ManagerP = styled.p`
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 20px;
+    border: 3px solid black;
+    border-radius: 10%;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 40px 80px;
 `;
 
 export default function Managers() {
@@ -25,19 +43,19 @@ export default function Managers() {
         <ContentDiv>
             <StyledHeader>Managers List</StyledHeader>
             <DivisionDiv>
-                <h3>East Division</h3>
-                <p>Brendan</p>
-                <p>Justin</p>
-                <p>James</p>
-                <p>Matt</p>
+                <DivisionHeader>East Division</DivisionHeader>
+                <ManagerP style={{backgroundColor: '#CC0000'}}>Brendan</ManagerP>
+                <ManagerP style={{backgroundColor: '#FF9900'}}>Justin</ManagerP>
+                <ManagerP style={{backgroundColor: '#F1C232'}}>James</ManagerP>
+                <ManagerP style={{backgroundColor: '#6AA84F'}}>Matt</ManagerP>
             </DivisionDiv>
 
             <DivisionDiv>
-                <h3>West Division</h3>
-                <p>Isaac</p>
-                <p>Christach</p>
-                <p>Morgan</p>
-                <p>DANdrew</p>
+                <DivisionHeader>West Division</DivisionHeader>
+                <ManagerP style={{backgroundColor: '#3586E8'}}>Isaac</ManagerP>
+                <ManagerP style={{backgroundColor: '#9900FF'}}>Christach</ManagerP>
+                <ManagerP style={{backgroundColor: '#FF00FF'}}>Morgan</ManagerP>
+                <ManagerP style={{backgroundColor: '#999999'}}>DANdrew</ManagerP>
             </DivisionDiv>
         </ContentDiv>
     );
