@@ -11,25 +11,34 @@ export const ContentDiv = styled.div`
 `;
 
 const StyledHeader = styled.h1`
-    text-align: center; /* Center the header text */
-    margin-bottom: 1rem; /* Space below the header */
+    text-align: center; 
+    margin-bottom: 1rem; 
+`;
+
+const DivisionDiv = styled.div`
+    display: flex;
+    flex-direction: column;
 `;
 
 export default function Managers() {
     return(
         <ContentDiv>
             <StyledHeader>Managers List</StyledHeader>
-            <h3>East Division</h3>
-            <p>Brendan</p>
-            <p>Justin</p>
-            <p>James</p>
-            <p>Matt</p>
+            <DivisionDiv>
+                <h3>East Division</h3>
+                <p>Brendan</p>
+                <p>Justin</p>
+                <p>James</p>
+                <p>Matt</p>
+            </DivisionDiv>
 
-            <h3>West Division</h3>
-            <p>Isaac</p>
-            <p>Christach</p>
-            <p>Morgan</p>
-            <p>DANdrew</p>
+            <DivisionDiv>
+                <h3>West Division</h3>
+                <p>Isaac</p>
+                <p>Christach</p>
+                <p>Morgan</p>
+                <p>DANdrew</p>
+            </DivisionDiv>
         </ContentDiv>
     );
 }
