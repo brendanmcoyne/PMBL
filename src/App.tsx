@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router";
+import "/globals.css";
 
 import Header from "./components/Header.tsx";
 import Footer from "./components/Footer.tsx";
@@ -10,6 +11,16 @@ import Managers from "./components/Managers.tsx";
 import Archives from "./components/Archives.tsx";
 import Schedule from "./components/Schedule.tsx";
 import Headlines from "./components/Headlines.tsx";
+
+import Season1 from './components/seasons/Season1.tsx';
+import Season2 from './components/seasons/Season2.tsx';
+
+import Awards1 from "./components/seasons/Season1/Awards.tsx";
+import Awards2 from "./components/seasons/Season2/Awards.tsx";
+import Schedule1 from "./components/seasons/Season1/Schedule.tsx";
+import Schedule2 from "./components/seasons/Season2/Schedule.tsx";
+import Playoffs1 from "./components/seasons/Season1/Playoffs.tsx";
+import Playoffs2 from "./components/seasons/Season2/Playoffs.tsx";
 
 
 const MainContent = styled.div`
@@ -45,6 +56,24 @@ function Root() {
                     <Route path="/archives" element={<Content><Archives /></Content>} />
                     <Route path="/schedule" element={<Content><Schedule /></Content>} />
                     <Route path="/headlines" element={<Content><Headlines /></Content>} />
+
+                    /* Archives */
+                    <Route path="/archives/seasons/Season1" element={<Season1 />} />
+                    <Route path="/archives/seasons/Season2" element={<Season2 />} />
+
+                    /* Season 1 */
+                    <Route path="/archives/seasons/Season1/Awards" element={<Awards1 />} />
+                    <Route path="/archives/seasons/Season1/Schedule" element={<Schedule1 />} />
+                    <Route path="/archives/seasons/Season1/Playoffs" element={<Playoffs1 />} />
+
+                    /* Season 2 */
+                    <Route path="/archives/seasons/Season2/Awards" element={<Awards2 />} />
+                    <Route path="/archives/seasons/Season2/Schedule" element={<Schedule2 />} />
+                    <Route path="/archives/seasons/Season2/Playoffs" element={<Playoffs2 />} />
+
+                    /* Season 3 */
+
+
                 </Routes>
             </MainContent>
             <Footer/>
