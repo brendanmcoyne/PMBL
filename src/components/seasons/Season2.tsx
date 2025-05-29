@@ -48,6 +48,9 @@ export default function Season2() {
             <StyledLink>
                 <Link to="/archives/seasons/Season2/Playoffs">Playoffs</Link>
             </StyledLink>
+            <StyledLink>
+                <Link to="/archives/seasons/Season2/Standings">Standings</Link>
+            </StyledLink>
         </ContentDiv>
 
     );
