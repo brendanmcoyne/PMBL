@@ -67,13 +67,13 @@ function Root() {
                     <Route path="/archives/seasons/Season1/Awards" element={<Awards1 />} />
                     <Route path="/archives/seasons/Season1/Schedule" element={<Schedule1 />} />
                     <Route path="/archives/seasons/Season1/Playoffs" element={<Playoffs1 />} />
-                    <Route path="/archives/seasons/Season1/Playoffs" element={<Standings1 />} />
+                    <Route path="/archives/seasons/Season1/Standings" element={<Standings1 />} />
 
                     /* Season 2 */
                     <Route path="/archives/seasons/Season2/Awards" element={<Awards2 />} />
                     <Route path="/archives/seasons/Season2/Schedule" element={<Schedule2 />} />
                     <Route path="/archives/seasons/Season2/Playoffs" element={<Playoffs2 />} />
-                    <Route path="/archives/seasons/Season1/Playoffs" element={<Standings2 />} />
+                    <Route path="/archives/seasons/Season2/Standings" element={<Standings2 />} />
 
                     /* Season 3 */
 

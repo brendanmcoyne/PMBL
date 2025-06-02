@@ -31,8 +31,8 @@ const ManagerP = styled.p`
     margin-left: 60px;
     margin-right: 60px;
     margin-top: 20px;
-    border: 3px solid black;
-    border-radius: 10%;
+    border: 2px solid black;
+    border-radius: 2%;
     font-size: 1.6rem;
     text-align: center;
     padding: 40px 80px;

@@ -46,10 +46,10 @@ export default function Season1() {
                 <Link to="/archives/seasons/Season1/Awards">Awards</Link>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season1/Playoffs">Playoffs</Link>
+                <Link to="/archives/seasons/Season1/Standings">Standings</Link>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season2/Standings">Standings</Link>
+                <Link to="/archives/seasons/Season1/Playoffs">Playoffs</Link>
             </StyledLink>
         </ContentDiv>
 
