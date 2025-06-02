@@ -213,7 +213,7 @@ export default function Schedule1() {
                 <TeamRecord>(2-1)</TeamRecord>
                 <VsContainer>
                     <Scores>9 - 7</Scores>
-                    <Stadium>Yoshi Park</Stadium>
+                    <Stadium>Mario Stadium</Stadium>
                 </VsContainer>
                 <TeamRecord>(1-2)</TeamRecord>
             </Matchup>
@@ -254,7 +254,7 @@ export default function Schedule1() {
 
                 <TeamRecord>(2-2)</TeamRecord>
                 <VsContainer>
-                    <Scores>19 - 6</Scores>
+                    <Scores>6 - 19</Scores>
                     <Stadium>DK Jungle</Stadium>
                 </VsContainer>
                 <TeamRecord>(3-1)</TeamRecord>
@@ -377,7 +377,7 @@ export default function Schedule1() {
 
                 <TeamRecord>(4-2)</TeamRecord>
                 <VsContainer>
-                    <Scores>4 - 5</Scores>
+                    <Scores>5 - 4</Scores>
                     <Stadium>Wario City</Stadium>
                 </VsContainer>
                 <TeamRecord>(3-3)</TeamRecord>
@@ -528,7 +528,7 @@ export default function Schedule1() {
 
                 <TeamRecord>(6-3)</TeamRecord>
                 <VsContainer>
-                    <Scores>1 - 7</Scores>
+                    <Scores>7 - 1</Scores>
                     <Stadium>Mario Stadium</Stadium>
                 </VsContainer>
                 <TeamRecord>(3-6)</TeamRecord>
