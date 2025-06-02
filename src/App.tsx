@@ -23,6 +23,10 @@ import Playoffs1 from "./components/seasons/Season1/Playoffs.tsx";
 import Playoffs2 from "./components/seasons/Season2/Playoffs.tsx";
 import Standings1 from "./components/seasons/Season1/Standings.tsx";
 import Standings2 from "./components/seasons/Season2/Standings.tsx";
+import Other1 from "./components/seasons/Season1/Other.tsx";
+import Other2 from "./components/seasons/Season2/Other.tsx";
+import Draft1 from "./components/seasons/Season1/Draft.tsx";
+import Draft2 from "./components/seasons/Season2/Draft.tsx";
 
 
 const MainContent = styled.div`
@@ -68,12 +72,16 @@ function Root() {
                     <Route path="/archives/seasons/Season1/Schedule" element={<Schedule1 />} />
                     <Route path="/archives/seasons/Season1/Playoffs" element={<Playoffs1 />} />
                     <Route path="/archives/seasons/Season1/Standings" element={<Standings1 />} />
+                    <Route path="/archives/seasons/Season1/Other" element={<Other1 />} />
+                    <Route path="/archives/seasons/Season1/Draft" element={<Draft1 />} />
 
                     /* Season 2 */
                     <Route path="/archives/seasons/Season2/Awards" element={<Awards2 />} />
                     <Route path="/archives/seasons/Season2/Schedule" element={<Schedule2 />} />
                     <Route path="/archives/seasons/Season2/Playoffs" element={<Playoffs2 />} />
                     <Route path="/archives/seasons/Season2/Standings" element={<Standings2 />} />
+                    <Route path="/archives/seasons/Season2/Other" element={<Other2 />} />
+                    <Route path="/archives/seasons/Season2/Draft" element={<Draft2 />} />
 
                     /* Season 3 */
 

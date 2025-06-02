@@ -43,6 +43,9 @@ export default function Season2() {
                 <Link to="/archives/seasons/Season2/Schedule">Schedule</Link>
             </StyledLink>
             <StyledLink>
+                <Link to="/archives/seasons/Season2/Draft">Draft</Link>
+            </StyledLink>
+            <StyledLink>
                 <Link to="/archives/seasons/Season2/Awards">Awards</Link>
             </StyledLink>
             <StyledLink>
@@ -50,6 +53,9 @@ export default function Season2() {
             </StyledLink>
             <StyledLink>
                 <Link to="/archives/seasons/Season2/Playoffs">Playoffs</Link>
+            </StyledLink>
+            <StyledLink>
+                <Link to="/archives/seasons/Season2/Other">Other</Link>
             </StyledLink>
         </ContentDiv>
 

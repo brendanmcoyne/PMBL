@@ -7,7 +7,7 @@ export const ContentDiv = styled.div`
     justify-content: flex-start;
     width: 100%;
     font-size: calc(0.5rem + 1vw);
-    padding-top: 2rem; /* Add some top padding */
+    padding-top: 2rem; 
 `;
 
 const StyledHeader = styled.h1`
