@@ -8,6 +8,7 @@ const Main = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 `;
 
 const BackgroundWrapper = styled.div`
@@ -16,7 +17,7 @@ const BackgroundWrapper = styled.div`
     left: 0;
     z-index: 0;
     width: 90%;
-    height: 100vh; 
+    height: 100vh;
 `;
 
 const BackgroundImage = styled.img`
@@ -77,29 +78,23 @@ const GenImage = styled.img`
   border-radius: 50%;
 `;
 
-const Divider = styled.div`
-    width: 100%;
-    height: 5px;
-    background-color: black;
-    z-index: 2; 
-`;
-
 export default function Home() {
     return (
-        <Main>
-            <BackgroundWrapper>
-                <BackgroundImage src="/4.jpg" alt="Background" />
-                <Divider />
-            </BackgroundWrapper>
-            <Overlay />
-            <Wrapper>
-                <StyledHeader>Welcome to the Professional Mario Baseball League</StyledHeader>
-                <ImageWrapper>
-                    <LogoBackground>
-                        <GenImage src="/LeagueLogo_fix.png" alt="Professional Mario Baseball League Logo" />
-                    </LogoBackground>
-                </ImageWrapper>
-            </Wrapper>
-        </Main>
+        <>
+            <Main>
+                <BackgroundWrapper>
+                    <BackgroundImage src="/4.jpg" alt="Background" />
+                </BackgroundWrapper>
+                <Overlay />
+                <Wrapper>
+                    <StyledHeader>Welcome to the Professional Mario Baseball League</StyledHeader>
+                    <ImageWrapper>
+                        <LogoBackground>
+                            <GenImage src="/LeagueLogo_fix.png" alt="Professional Mario Baseball League Logo" />
+                        </LogoBackground>
+                    </ImageWrapper>
+                </Wrapper>
+            </Main>
+        </>
     );
 }

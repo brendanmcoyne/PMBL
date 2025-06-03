@@ -1,11 +1,163 @@
 import { styled } from "styled-components";
+import { useState } from "react";
 
-const StyledHeader = styled.h1`
-    position: absolute;
-    align-items: center;
+const players = [
+    { name: "Baby Daisy", src: "/players/Baby_Daisy.webp", color: "Orange", captain: false },
+    { name: "Baby DK", src: "/players/Baby_Donkey_Kong.webp", color: "Brown", captain: false },
+    { name: "Baby Luigi", src: "/players/Baby_Luigi.webp", color: "Green", captain: false },
+    { name: "Baby Mario", src: "/players/Baby_Mario.webp", color: "Red", captain: false },
+    { name: "Baby Peach", src: "/players/Baby_Peach.webp", color: "Pink", captain: false },
+    { name: "Birdo", src: "/players/Birdo.webp", color: "Pink", captain: true },
+    { name: "Blooper", src: "/players/Blooper.webp", color: "White", captain: false },
+    { name: "Blue Dry Bones", src: "/players/Blue_Dry_Bones.webp", color: "Blue", captain: false },
+    { name: "Blue Kritter", src: "/players/Blue_Kritter.webp", color: "Blue", captain: false },
+    { name: "Blue Magikoopa", src: "/players/Blue_Magikoopa.webp", color: "Blue", captain: false },
+    { name: "Blue Noki", src: "/players/Blue_Noki.webp", color: "Blue", captain: false },
+    { name: "Blue Pianta", src: "/players/Blue_Pianta.webp", color: "Blue", captain: false },
+    { name: "Blue Shy Guy", src: "/players/Blue_Shy_Guy.webp", color: "Blue", captain: false },
+    { name: "Blue Toad", src: "/players/Blue_Toad.webp", color: "Blue", captain: false },
+    { name: "Blue Yoshi", src: "/players/Blue_Yoshi.webp", color: "Blue", captain: false },
+    { name: "Boo", src: "/players/Boo.webp", color: "White", captain: false },
+    { name: "Boomerang Bro", src: "/players/Boomerang_Bro.webp", color: "Blue", captain: false },
+    { name: "Bowser", src: "/players/Bowser.webp", color: "Black", captain: true },
+    { name: "Bowser Jr.", src: "/players/Bowser_Jr.webp", color: "Black", captain: true },
+    { name: "Brown Kritter", src: "/players/Brown_Kritter.webp", color: "Brown", captain: false },
+    { name: "Daisy", src: "/players/Daisy.webp", color: "Orange", captain: true },
+    { name: "Dark Bones", src: "/players/Dark_Bones.webp", color: "Red", captain: false },
+    { name: "Diddy Kong", src: "/players/Diddy_Kong.webp", color: "None", captain: true },
+    { name: "Dixie Kong", src: "/players/Dixie_Kong.webp", color: "Pink", captain: false },
+    { name: "Donkey Kong", src: "/players/Donkey_Kong.webp", color: "Brown", captain: true },
+    { name: "Dry Bones", src: "/players/Dry_Bones.webp", color: "White", captain: false },
+    { name: "Fire Bro", src: "/players/Fire_Bro.webp", color: "Red", captain: false },
+    { name: "Funky Kong", src: "/players/Funky_Kong.webp", color: "Light Blue", captain: false },
+    { name: "Goomba", src: "/players/Goomba.webp", color: "Brown", captain: false },
+    { name: "Gray Shy Guy", src: "/players/Gray_Shy_Guy.webp", color: "Black", captain: false },
+    { name: "Green Dry Bones", src: "/players/Green_Dry_Bones.webp", color: "Green", captain: false },
+    { name: "Green Kritter", src: "/players/Green_Kritter.webp", color: "Green", captain: false },
+    { name: "Green Magikoopa", src: "/players/Green_Magikoopa.webp", color: "Green", captain: false },
+    { name: "Green Noki", src: "/players/Green_Noki.webp", color: "Green", captain: false },
+    { name: "Green Paratroopa", src: "/players/Paratroopa.webp", color: "Green", captain: false },
+    { name: "Green Shy Guy", src: "/players/Green_Shy_Guy.webp", color: "Green", captain: false },
+    { name: "Green Toad", src: "/players/Green_Toad.webp", color: "Green", captain: false },
+    { name: "Hammer Bro", src: "/players/Hammer_Bro.webp", color: "Green", captain: false },
+    { name: "King Boo", src: "/players/King_Boo.webp", color: "White", captain: false },
+    { name: "King K. Rool", src: "/players/King_K_Rool.webp", color: "Green", captain: false },
+    { name: "Koopa", src: "/players/Koopa.webp", color: "Green", captain: false },
+    { name: "Light Blue Yoshi", src: "/players/Light_Blue_Yoshi.webp", color: "Light Blue", captain: false },
+    { name: "Luigi", src: "/players/Luigi.webp", color: "Green", captain: true },
+    { name: "Mario", src: "/players/Mario.webp", color: "Red", captain: true },
+    { name: "Monty Mole", src: "/players/Monty_Mole.webp", color: "Brown", captain: false },
+    { name: "Paragoomba", src: "/players/Paragoomba.webp", color: "Brown", captain: false },
+    { name: "Paratroopa", src: "/players/Paratroopa.webp", color: "Red", captain: false },
+    { name: "Peach", src: "/players/Peach.webp", color: "Pink", captain: true },
+    { name: "Petey Piranha", src: "/players/Petey_Piranha.webp", color: "Light Green", captain: false },
+    { name: "Pink Yoshi", src: "/players/Pink_Yoshi.webp", color: "Pink", captain: false },
+    { name: "Purple Toad", src: "/players/Purple_Toad.webp", color: "Purple", captain: false },
+    { name: "Red Koopa", src: "/players/Red_Koopa.webp", color: "Red", captain: false },
+    { name: "Red Kritter", src: "/players/Red_Kritter.webp", color: "Red" },
+    { name: "Red Magikoopa", src: "/players/Red_Magikoopa.webp", color: "Red", captain: false },
+    { name: "Red Noki", src: "/players/Red_Noki.webp", color: "Red", captain: false },
+    { name: "Red Pianta", src: "/players/Red_Pianta.webp", color: "Red", captain: false },
+    { name: "Red Shy Guy", src: "/players/Red_Shy_Guy.webp", color: "Red", captain: false },
+    { name: "Red Toad", src: "/players/Red_Toad.webp", color: "Red", captain: false },
+    { name: "Red Yoshi", src: "/players/Red_Yoshi.webp", color: "Red", captain: false },
+    { name: "Tiny Kong", src: "/players/Tiny_Kong.webp", color: "Light Blue", captain: false },
+    { name: "Toadette", src: "/players/Toadette.webp", color: "Pink", captain: false },
+    { name: "Toadsworth", src: "/players/Toadsworth.webp", color: "Brown", captain: false },
+    { name: "Waluigi", src: "/players/Waluigi.webp", color: "Purple", captain: true },
+    { name: "Wario", src: "/players/Wario.webp", color: "Yellow", captain: true },
+    { name: "Wiggler", src: "/players/Wiggler.webp", color: "Yellow", captain: false },
+    { name: "Yellow Magikoopa", src: "/players/Yellow_Magikoopa.webp", color: "Yellow", captain: false },
+    { name: "Yellow Pianta", src: "/players/Yellow_Pianta.webp", color: "Yellow", captain: false },
+    { name: "Yellow Shy Guy", src: "/players/Yellow_Shy_Guy.webp", color: "Yellow", captain: false },
+    { name: "Yellow Toad", src: "/players/Yellow_Toad.webp", color: "Yellow", captain: false },
+    { name: "Yellow Yoshi", src: "/players/Yellow_Yoshi.webp", color: "Yellow", captain: false },
+    { name: "Yoshi", src: "/players/Yoshi.webp", color: "Light Green", captain: true },
+
+];
+
+export const ContentDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: calc(0.5rem + 1vw);
+  padding-top: 2rem;
 `;
+
+const SortSelect = styled.select`
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+`;
+
+const DivisionDiv = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 90%;
+`;
+
+const DivisionHeader = styled.h3`
+  text-align: center;
+  grid-column: span 3;
+  font-size: 2rem;
+`;
+
+const Player = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+`;
+
+const GenImage = styled.img`
+  width: 150px;
+  height: auto;
+  border: 3px solid black;
+  padding: 5px;
+`;
+
+const PlayerName = styled.span`
+  font-weight: bold;
+  text-align: center;
+`;
+
 export default function Players() {
-    return(
-        <StyledHeader>Welcome to the Professional Mario Baseball League (Players)</StyledHeader>
+    const [sortOption, setSortOption] = useState("az");
+    const colorOrder = ["Red", "Orange", "Yellow", "Light Green", "Green", "Light Blue", "Blue", "Pink", "Purple", "Brown", "White", "Black", "None"];
+
+    const sortedPlayers = [...players]
+        .filter((player) => {
+            if (sortOption === "captains") return player.captain;
+            return true;
+        })
+        .sort((a, b) => {
+            if (sortOption === "az") return a.name.localeCompare(b.name);
+            if (sortOption === "za") return b.name.localeCompare(a.name);
+            if (sortOption === "color") return colorOrder.indexOf(a.color) - colorOrder.indexOf(b.color);
+            return 0;
+        });
+
+    return (
+        <ContentDiv>
+            <DivisionHeader>Player List</DivisionHeader>
+
+            <SortSelect value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
+                <option value="az">Sort A-Z</option>
+                <option value="za">Sort Z-A</option>
+                <option value="color">Sort by Color</option>
+                <option value="captains">Captains Only</option>
+            </SortSelect>
+
+            <DivisionDiv>
+                {sortedPlayers.map((player) => (
+                    <Player key={player.name}>
+                        <GenImage src={player.src} alt={player.name} />
+                        <PlayerName>{player.name}</PlayerName>
+                    </Player>
+                ))}
+            </DivisionDiv>
+        </ContentDiv>
     );
 }
