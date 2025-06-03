@@ -24,10 +24,9 @@ const DivisionDiv = styled.div`
   width: 90%;
 `;
 
-const DivisionHeader = styled.h3`
+const DivisionHeader = styled.h1`
   text-align: center;
   grid-column: span 3;
-  font-size: 2rem;
 `;
 
 const Player = styled.div`

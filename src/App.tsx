@@ -28,6 +28,9 @@ import Other2 from "./components/seasons/Season2/Other.tsx";
 import Draft1 from "./components/seasons/Season1/Draft.tsx";
 import Draft2 from "./components/seasons/Season2/Draft.tsx";
 
+import Koopa from "./components/headlines/Koopa.tsx";
+import DryBones from "./components/headlines/DryBones.tsx";
+
 
 const MainContent = styled.div`
     flex-grow: 1;
@@ -86,6 +89,9 @@ function Root() {
                     /* Season 3 */
 
 
+                    /* Headlines */
+                    <Route path="/headlines/Koopa.tsx" element={<Koopa />} />
+                    <Route path="/headlines/DryBones.tsx" element={<DryBones />} />
                 </Routes>
             </MainContent>
             <Footer/>
