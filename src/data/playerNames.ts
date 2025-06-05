@@ -6,16 +6,66 @@ export type Player = {
 };
 
 export const players: Player[] = [
-    { name: "Baby Daisy", src: "/players/Baby_Daisy.webp", color: "Orange", captain: false },
-    { name: "Baby DK", src: "/players/Baby_Donkey_Kong.webp", color: "Brown", captain: false },
-    { name: "Baby Luigi", src: "/players/Baby_Luigi.webp", color: "Green", captain: false },
-    { name: "Baby Mario", src: "/players/Baby_Mario.webp", color: "Red", captain: false },
-    { name: "Baby Peach", src: "/players/Baby_Peach.webp", color: "Pink", captain: false },
-    { name: "Birdo", src: "/players/Birdo.webp", color: "Pink", captain: true },
-    { name: "Blooper", src: "/players/Blooper.webp", color: "White", captain: false },
-    { name: "Blue Dry Bones", src: "/players/Blue_Dry_Bones.webp", color: "Blue", captain: false },
-    { name: "Blue Kritter", src: "/players/Blue_Kritter.webp", color: "Blue", captain: false },
-    { name: "Blue Magikoopa", src: "/players/Blue_Magikoopa.webp", color: "Blue", captain: false },
+    {
+        name: "Baby Daisy",
+        src: "/players/Baby_Daisy.webp",
+        color: "Orange",
+        captain: false
+    },
+    {
+        name: "Baby DK",
+        src: "/players/Baby_Donkey_Kong.webp",
+        color: "Brown",
+        captain: false
+    },
+    {
+        name: "Baby Luigi",
+        src: "/players/Baby_Luigi.webp",
+        color: "Green",
+        captain: false
+    },
+    {
+        name: "Baby Mario",
+        src: "/players/Baby_Mario.webp",
+        color: "Red",
+        captain: false
+    },
+    {
+        name: "Baby Peach",
+        src: "/players/Baby_Peach.webp",
+        color: "Pink",
+        captain: false
+    },
+    {
+        name: "Birdo",
+        src: "/players/Birdo.webp",
+        color: "Pink",
+        captain: true
+    },
+    {
+        name: "Blooper",
+        src: "/players/Blooper.webp",
+        color: "White",
+        captain: false
+    },
+    {
+        name: "Blue Dry Bones",
+        src: "/players/Blue_Dry_Bones.webp",
+        color: "Blue",
+        captain: false
+    },
+    {
+        name: "Blue Kritter",
+        src: "/players/Blue_Kritter.webp",
+        color: "Blue",
+        captain: false
+    },
+    {
+        name: "Blue Magikoopa",
+        src: "/players/Blue_Magikoopa.webp",
+        color: "Blue",
+        captain: false
+    },
     { name: "Blue Noki", src: "/players/Blue_Noki.webp", color: "Blue", captain: false },
     { name: "Blue Pianta", src: "/players/Blue_Pianta.webp", color: "Blue", captain: false },
     { name: "Blue Shy Guy", src: "/players/Blue_Shy_Guy.webp", color: "Blue", captain: false },
