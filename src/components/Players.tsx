@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { useState } from "react";
 import { players } from "../data/playerNames.ts";
+import type { Player } from "../data/playerNames.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -79,16 +80,22 @@ const CloseButton = styled.button`
     position: absolute;
     top: 10px;
     right: 15px;
+    width: 30px;        
+    height: 30px;       
     font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 100%;
+    border-radius: 50%; 
     background-color: red;
-    border: 2px solid red;
+    border: 2px solid red;     
+    display: flex;       
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 `;
 
 export default function Players() {
     const [sortOption, setSortOption] = useState("az");
-    const [selectedPlayer, setSelectedPlayer] = useState(null);
+    const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
 
     const colorOrder = [
         "Red", "Orange", "Yellow", "Light Green", "Green",
@@ -96,7 +103,7 @@ export default function Players() {
         "White", "Black", "None"
     ];
 
-    const sortedPlayers = [...players]
+    const sortedPlayers: Player[] = [...players]
         .filter((player) => {
             if (sortOption === "captains") return player.captain;
             return true;
@@ -120,7 +127,7 @@ export default function Players() {
             </SortSelect>
 
             <DivisionDiv>
-                {sortedPlayers.map((player) => (
+                {sortedPlayers.map((player: Player) => (
                     <Player key={player.name} onClick={() => setSelectedPlayer(player)}>
                         <GenImage src={player.src} alt={player.name} />
                         <PlayerName>{player.name}</PlayerName>
@@ -133,7 +140,6 @@ export default function Players() {
                     <ModalContent onClick={(e) => e.stopPropagation()}>
                         <CloseButton onClick={() => setSelectedPlayer(null)}>✕</CloseButton>
                         <h2>{selectedPlayer.name} {selectedPlayer.captain ? "(C)" : ""}</h2>
-                        <p>{selectedPlayer.nickname}</p>
                         <img src={selectedPlayer.src} alt={selectedPlayer.name} width="150" />
                         <p>Color: {selectedPlayer.color}</p>
                     </ModalContent>
