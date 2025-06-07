@@ -75,18 +75,18 @@ export default function Players() {
             <Story>
                 <Headline>Koopa found Guilty of Assault</Headline>
                 <GenImage src="/koopa_behind_the_bars.jpg" alt="Koopa" style={{ width: "500px", height: "300px", objectFit: "cover" }} />
-                <Description>The Week 7 Incident has now been brought to justice, and the plantiff has been found guilty on all charges.</Description>
+                <Description>The Week 7 Incident has now been brought to justice, and the plaintiff has been found guilty on all charges.</Description>
                 <StyledLink>
-                    <Link to="/headlines/Koopa">Click to read more!</Link>
+                    <Link to="/headlines/Koopa.tsx">Click to read more!</Link>
                 </StyledLink>
             </Story>
 
             <Story>
                 <Headline>Dry Bones gets a slap on the wrist</Headline>
-                <GenImage src="/DryBonesMSS.webp" alt="Dry Bones" />
+                <GenImage src="/Caucasian bones playground.png" alt="Dry Bones" style={{ width: "500px", height: "300px", objectFit: "cover" }} />
                 <Description>After weeks of accusations, the controversial ruling for Dry Bones has been released.</Description>
                 <StyledLink>
-                    <Link to="/headlines/DryBones">Click to read more!</Link>
+                    <Link to="/headlines/DryBones.tsx">Click to read more!</Link>
                 </StyledLink>
             </Story>
 

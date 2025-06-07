@@ -20,7 +20,7 @@ const SortSelect = styled.select`
 
 const DivisionDiv = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
     gap: 10px;
     width: 90%;
 `;
@@ -35,6 +35,16 @@ const Player = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: #eee;
+    }
 `;
 
 const GenImage = styled.img`
@@ -42,10 +52,6 @@ const GenImage = styled.img`
     height: auto;
     border: 3px solid black;
     padding: 5px;
-    
-    &:hover {
-        background-color: lightgray;
-    }
 `;
 
 const PlayerName = styled.span`
@@ -142,6 +148,7 @@ export default function Players() {
                         <h2>{selectedPlayer.name} {selectedPlayer.captain ? "(C)" : ""}</h2>
                         <img src={selectedPlayer.src} alt={selectedPlayer.name} width="150" />
                         <p>Color: {selectedPlayer.color}</p>
+                        <p>Games Played: {selectedPlayer.gp}</p>
                     </ModalContent>
                 </ModalBackground>
             )}

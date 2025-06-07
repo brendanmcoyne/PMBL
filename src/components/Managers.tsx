@@ -37,6 +37,11 @@ const ManagerP = styled.p`
     font-size: 1.6rem;
     text-align: center;
     padding: 40px 80px;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.07);
+    }
 `;
 
 export default function Managers() {
