@@ -74,7 +74,7 @@ export default function Koopa() {
 
             <Passage>
                 The weapon in question was found to be a Blue Shell, and the managers reacted accordingly. Fear struck the league as an attack of
-                this level revealed deep systematic problems between players, the court was reading to launch a full investigation. Manager Matt of
+                this level revealed deep systematic problems between players, the court was ready to launch a full investigation. Manager Matt of
                 the Yoshi Eggs also claimed that, "Red koopa denies any affiliation with the Koopa Klux Klan as well as the Communist party".
             </Passage>
 
@@ -108,8 +108,8 @@ export default function Koopa() {
             </Ruling>
 
             <Passage>
-                Manager Justin was relieved in the fact that his players got retribution, and that Koopa was brought to Justin. Manager James was also
-                relieved that him or his team would not face any punishments due to Koopa's actions. To this day, this has been one of the harshest rulings
+                Manager Justin was relieved in the fact that his players got retribution, and that Koopa was brought to justice. Manager James was also
+                relieved that him and his team would not face any punishment due to Koopa's actions. To this day, this has been one of the harshest rulings
                 that the court has given to a sports related case. The punishment has not only struck fear into players and managers to follow the rules,
                 but has given the court some of it's credibility back after the controversial Dry Bones ruling.
             </Passage>

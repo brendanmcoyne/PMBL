@@ -47,10 +47,10 @@ export default function DryBones() {
             <StyledHeader>Dry Bones gets a slap on the wrist</StyledHeader>
             <GenImage src="/Caucasian bones playground.png" alt="Dry Bones" />
             <Passage>
-                Around Week 3, star hitter Dry Bones from Manager Morgan's Diddy Monkeys began facing sever backlash due to accusations made
+                Around Week 3, star hitter Dry Bones from Manager Morgan's Diddy Monkeys began facing severe backlash due to accusations made
                 about him the week prior. The league was led to believe that Dry Bones had been spotted numerous times around preschools at
                 peculiar hours. Manager Matt of the Yoshi Eggs said, "J-nasty and I just witnessed Caucasian bones walk into the Boston children’s museum"
-                In the middle of Week 5. At the start of Week 7, Manager Morgan Odysseus Hartwell has this to say about his player:
+                in the middle of Week 5. At the start of Week 7, Manager Morgan Odysseus Hartwell has this to say about his player:
             </Passage>
 
             <Passage>
@@ -64,8 +64,8 @@ export default function DryBones() {
             </Passage>
 
             <Passage>
-                The matter got even worse for Caucasian Bones, as the trial was right before the Conference Series against Manager James, and the
-                verdict was released during the series. However, the court had an unfavorable ruling:
+                The matter got even worse for Caucasian Bones, as the trial was scheduled to be right before the Conference Series against Manager James,
+                and the verdict to be released during the series. However, the court had an unfavorable ruling:
             </Passage>
 
             <Ruling>
@@ -136,7 +136,7 @@ export default function DryBones() {
             <Passage>
                 Dry Bones would go onto having a serviceable game in Game 3 of the Conference Series, clinching Manager Morgan's first win of the series
                 in the 10th inning at Daisy Cruiser. However Manager James would win the next game to clinch his ticket to the World Series with a 3-1
-                series win.
+                series win. Dry Bones denied to speak to the media following the series loss.
             </Passage>
         </ContentDiv>
     );
