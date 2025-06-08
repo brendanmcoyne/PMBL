@@ -77,6 +77,8 @@ const ModalContent = styled.div`
     border-radius: 10px;
     width: 90%;
     max-width: 500px;
+    max-height: 90vh; /* key part */
+    overflow-y: auto;  /* enable vertical scroll */
     text-align: center;
     position: relative;
     border: 2px solid black;
@@ -97,6 +99,11 @@ const CloseButton = styled.button`
     align-items: center;
     justify-content: center;
     padding: 0;
+`;
+
+const StyledMiniHeader = styled.h3`
+    text-align: center;
+    font-weight: bold;
 `;
 
 export default function Players() {
@@ -145,10 +152,26 @@ export default function Players() {
                 <ModalBackground onClick={() => setSelectedPlayer(null)}>
                     <ModalContent onClick={(e) => e.stopPropagation()}>
                         <CloseButton onClick={() => setSelectedPlayer(null)}>✕</CloseButton>
-                        <h2>{selectedPlayer.name} {selectedPlayer.captain ? "(C)" : ""}</h2>
+                        <h2>{selectedPlayer.name}</h2>
+                        <p>{selectedPlayer.captain ? "Captain" : ""}</p>
                         <img src={selectedPlayer.src} alt={selectedPlayer.name} width="150" />
+                        {selectedPlayer.awards && selectedPlayer.awards.length > 0 && (
+                            <>
+                                <StyledMiniHeader>Awards</StyledMiniHeader>
+                                <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+                                    {selectedPlayer.awards.map((award, index) => (
+
+                                        <li key={index}>
+                                            {award.name} (Season {award.season})
+                                        </li>
+                                    ))}
+                                </ul>
+                            </>
+                        )}
+                        <StyledMiniHeader>About</StyledMiniHeader>
                         <p>Color: {selectedPlayer.color}</p>
                         <p>Games Played: {selectedPlayer.gp}</p>
+
                     </ModalContent>
                 </ModalBackground>
             )}
