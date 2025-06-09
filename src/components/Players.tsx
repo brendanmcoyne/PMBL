@@ -121,6 +121,10 @@ export default function Players() {
             if (sortOption === "captains") return player.captain;
             return true;
         })
+        .filter((player) => {
+            if (sortOption === "mii") return player.mii;
+            return true;
+        })
         .sort((a, b) => {
             if (sortOption === "az") return a.name.localeCompare(b.name);
             if (sortOption === "za") return b.name.localeCompare(a.name);
@@ -137,6 +141,7 @@ export default function Players() {
                 <option value="za">Sort Z-A</option>
                 <option value="color">Sort by Color</option>
                 <option value="captains">Captains Only</option>
+                <option value="mii">Miis Only</option>
             </SortSelect>
 
             <DivisionDiv>

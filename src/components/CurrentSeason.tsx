@@ -21,7 +21,7 @@ const GenImage = styled.img`
     height: auto;
 `;
 
-export default function Schedule() {
+export default function CurrentSeason() {
     return(
         <ContentDiv>
             <StyledHeader>This page is under construction.</StyledHeader>

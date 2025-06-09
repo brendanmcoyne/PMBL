@@ -9,7 +9,7 @@ import Home from "./components/Home.tsx";
 import Players from "./components/Players.tsx";
 import Managers from "./components/Managers.tsx";
 import Archives from "./components/Archives.tsx";
-import Schedule from "./components/Schedule.tsx";
+import CurrentSeason from "./components/CurrentSeason.tsx";
 import Headlines from "./components/Headlines.tsx";
 
 import Season1 from './components/seasons/Season1.tsx';
@@ -63,7 +63,7 @@ function Root() {
                     <Route path="/players" element={<Content><Players /></Content>} />
                     <Route path="/managers" element={<Content><Managers /></Content>} />
                     <Route path="/archives" element={<Content><Archives /></Content>} />
-                    <Route path="/schedule" element={<Content><Schedule /></Content>} />
+                    <Route path="/season" element={<Content><CurrentSeason /></Content>} />
                     <Route path="/headlines" element={<Content><Headlines /></Content>} />
 
                     /* Archives */

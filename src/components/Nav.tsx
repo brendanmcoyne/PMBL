@@ -81,7 +81,7 @@ export default function Nav() {
                 <StyledLink><Link to="/players">Players</Link></StyledLink>
                 <StyledLink><Link to="/managers">Managers</Link></StyledLink>
                 <StyledLink><Link to="/archives">Archives</Link></StyledLink>
-                <StyledLink><Link to="/schedule">Schedule</Link></StyledLink>
+                <StyledLink><Link to="/season">Season</Link></StyledLink>
                 <StyledLink><Link to="/headlines">Headlines</Link></StyledLink>
             </StyledList>
 

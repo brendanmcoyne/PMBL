@@ -9,6 +9,7 @@ export type Player = {
     color: string;
     gp: number;
     captain?: boolean;
+    mii?: boolean;
     awards?: Award[];
 };
 
@@ -18,7 +19,8 @@ export const players: Player[] = [
         src: "/players/Baby_Daisy.webp",
         color: "Orange",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Baby DK",
@@ -26,6 +28,7 @@ export const players: Player[] = [
         color: "Brown",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -35,21 +38,24 @@ export const players: Player[] = [
         src: "/players/Baby_Luigi.webp",
         color: "Green",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Baby Mario",
         src: "/players/Baby_Mario.webp",
         color: "Red",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Baby Peach",
         src: "/players/Baby_Peach.webp",
         color: "Pink",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Birdo",
@@ -57,6 +63,7 @@ export const players: Player[] = [
         color: "Pink",
         gp: 10,
         captain: true,
+        mii: false,
         awards: [
             { name: "All-Star", season: 1},
             { name: "1x Game MVP", season: 1},
@@ -68,7 +75,7 @@ export const players: Player[] = [
         color: "White",
         gp: 0,
         captain: false,
-
+        mii: false,
     },
     {
         name: "Blue Dry Bones",
@@ -76,6 +83,7 @@ export const players: Player[] = [
         color: "Blue",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
             { name: "1x Semifinals Game MVP", season: 1}
@@ -87,6 +95,7 @@ export const players: Player[] = [
         color: "Blue",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "Defensive Player of the Year", season: 1},
             { name: "Golden Glove Winner", season: 1},
@@ -99,49 +108,56 @@ export const players: Player[] = [
         src: "/players/Blue_Magikoopa.webp",
         color: "Blue",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Blue Noki",
         src: "/players/Blue_Noki.webp",
         color: "Blue",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Blue Pianta",
         src: "/players/Blue_Pianta.webp",
         color: "Blue",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Blue Shy Guy",
         src: "/players/Blue_Shy_Guy.webp",
         color: "Blue",
         gp: 9,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Blue Toad",
         src: "/players/Blue_Toad.webp",
         color: "Blue",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Blue Yoshi",
         src: "/players/Blue_Yoshi.webp",
         color: "Blue",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Boo",
         src: "/players/Boo.webp",
         color: "White",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Boomerang Bro",
@@ -149,6 +165,7 @@ export const players: Player[] = [
         color: "Blue",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "All-Star", season: 1},
             { name: "2x Game MVP", season: 1},
@@ -160,6 +177,7 @@ export const players: Player[] = [
         color: "Black",
         gp: 10,
         captain: true,
+        mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
             { name: "1x Finals Game MVP", season: 1},
@@ -173,6 +191,7 @@ export const players: Player[] = [
         color: "Black",
         gp: 10,
         captain: true,
+        mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
             { name: "1x Game MVP", season: 1},
@@ -184,6 +203,7 @@ export const players: Player[] = [
         color: "Brown",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
             { name: "1x Finals Game MVP", season: 1},
@@ -197,6 +217,7 @@ export const players: Player[] = [
         color: "Orange",
         gp: 10,
         captain: true,
+        mii: false,
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -207,6 +228,7 @@ export const players: Player[] = [
         color: "Red",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "Morgan Hartwell Man of the Year Award", season: 1},
             { name: "All-Star", season: 1},
@@ -219,6 +241,7 @@ export const players: Player[] = [
         color: "None",
         gp: 10,
         captain: true,
+        mii: false,
         awards: [
             { name: "Captain of the Year", season: 1},
         ]
@@ -229,6 +252,7 @@ export const players: Player[] = [
         color: "Pink",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -239,6 +263,7 @@ export const players: Player[] = [
         color: "Brown",
         gp: 10,
         captain: true,
+        mii: false,
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -249,6 +274,7 @@ export const players: Player[] = [
         color: "White",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -259,6 +285,7 @@ export const players: Player[] = [
         color: "Red",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "Golden Glove Winner", season: 1},
             { name: "Silver Slugger Winner", season: 1},
@@ -272,6 +299,7 @@ export const players: Player[] = [
         color: "Light Blue",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "2x Game MVP", season: 1},
         ]
@@ -281,14 +309,16 @@ export const players: Player[] = [
         src: "/players/Goomba.webp",
         color: "Brown",
         gp: 1,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Gray Shy Guy",
         src: "/players/Gray_Shy_Guy.webp",
         color: "Black",
         gp: 1,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Green Dry Bones",
@@ -296,6 +326,7 @@ export const players: Player[] = [
         color: "Green",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "All Star Game MVP", season: 1},
             { name: "All-Star", season: 1},
@@ -307,6 +338,7 @@ export const players: Player[] = [
         color: "Green",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "All-Star", season: 1},
             { name: "2x Game MVP", season: 1},
@@ -318,6 +350,7 @@ export const players: Player[] = [
         color: "Green",
         gp: 1,
         captain: false,
+        mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
         ]
@@ -327,14 +360,16 @@ export const players: Player[] = [
         src: "/players/Green_Noki.webp",
         color: "Green",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Green Paratroopa",
         src: "/players/Paratroopa.webp",
         color: "Green",
         gp: 5,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Green Shy Guy",
@@ -342,6 +377,7 @@ export const players: Player[] = [
         color: "Green",
         gp: 8,
         captain: false,
+        mii: false,
         awards: [
             { name: "Comeback Player of the Year", season: 1},
         ]
@@ -351,7 +387,8 @@ export const players: Player[] = [
         src: "/players/Green_Toad.webp",
         color: "Green",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Hammer Bro",
@@ -359,6 +396,7 @@ export const players: Player[] = [
         color: "Green",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
             { name: "All-Star", season: 1},
@@ -372,6 +410,7 @@ export const players: Player[] = [
         color: "White",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "All-Star", season: 1},
             { name: "1x Game MVP", season: 1},
@@ -383,6 +422,7 @@ export const players: Player[] = [
         color: "Green",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
             { name: "Finals MVP", season: 1},
@@ -400,6 +440,7 @@ export const players: Player[] = [
         color: "Green",
         gp: 0,
         captain: false,
+        mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
         ]
@@ -409,7 +450,8 @@ export const players: Player[] = [
         src: "/players/Light_Blue_Yoshi.webp",
         color: "Light Blue",
         gp: 1,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Luigi",
@@ -417,6 +459,7 @@ export const players: Player[] = [
         color: "Green",
         gp: 10,
         captain: true,
+        mii: false,
         awards: [
             { name: "All-Star", season: 1},
         ]
@@ -427,6 +470,7 @@ export const players: Player[] = [
         color: "Red",
         gp: 10,
         captain: true,
+        mii: false,
         awards: [
             { name: "All-Star", season: 1},
         ]
@@ -437,6 +481,7 @@ export const players: Player[] = [
         color: "Brown",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "Most Hated Player", season: 1},
             { name: "1x Game MVP", season: 1},
@@ -447,7 +492,8 @@ export const players: Player[] = [
         src: "/players/Paragoomba.webp",
         color: "Brown",
         gp: 2,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Paratroopa",
@@ -455,6 +501,7 @@ export const players: Player[] = [
         color: "Red",
         gp: 6,
         captain: false,
+        mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
         ]
@@ -465,6 +512,7 @@ export const players: Player[] = [
         color: "Pink",
         gp: 10,
         captain: true,
+        mii: false,
         awards: [
             { name: "All-Star", season: 1},
         ]
@@ -475,6 +523,7 @@ export const players: Player[] = [
         color: "Light Green",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "League MVP", season: 1},
             { name: "Golden Glove Winner", season: 1},
@@ -490,6 +539,7 @@ export const players: Player[] = [
         color: "Pink",
         gp: 7,
         captain: false,
+        mii: false,
         awards: [
             { name: "All-Star", season: 1},
             { name: "1x Game MVP", season: 1},
@@ -501,14 +551,16 @@ export const players: Player[] = [
         src: "/players/Purple_Toad.webp",
         color: "Purple",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Red Koopa",
         src: "/players/Red_Koopa.webp",
         color: "Red",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Red Kritter",
@@ -516,6 +568,7 @@ export const players: Player[] = [
         color: "Red",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "1x Semifinals Game MVP", season: 1},
             { name: "2x Game MVP", season: 1},
@@ -527,6 +580,7 @@ export const players: Player[] = [
         color: "Red",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "2x Game MVP", season: 1},
         ]
@@ -536,7 +590,8 @@ export const players: Player[] = [
         src: "/players/Red_Noki.webp",
         color: "Red",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Red Pianta",
@@ -544,6 +599,7 @@ export const players: Player[] = [
         color: "Red",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "2x Game MVP", season: 1},
         ]
@@ -554,6 +610,7 @@ export const players: Player[] = [
         color: "Red",
         gp: 9,
         captain: false,
+        mii: false,
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -563,21 +620,24 @@ export const players: Player[] = [
         src: "/players/Red_Toad.webp",
         color: "Red",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Red Yoshi",
         src: "/players/Red_Yoshi.webp",
         color: "Red",
         gp: 3,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Tiny Kong",
         src: "/players/Tiny_Kong.webp",
         color: "Light Blue",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Toadette",
@@ -585,6 +645,7 @@ export const players: Player[] = [
         color: "Pink",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -594,21 +655,24 @@ export const players: Player[] = [
         src: "/players/Toadsworth.webp",
         color: "Brown",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Waluigi",
         src: "/players/Waluigi.webp",
         color: "Purple",
         gp: 10,
-        captain: true
+        captain: true,
+        mii: false,
     },
     {
         name: "Wario",
         src: "/players/Wario.webp",
         color: "Yellow",
         gp: 10,
-        captain: true
+        captain: true,
+        mii: false,
     },
     {
         name: "Wiggler",
@@ -616,6 +680,7 @@ export const players: Player[] = [
         color: "Yellow",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "All-Star", season: 1},
         ]
@@ -626,6 +691,7 @@ export const players: Player[] = [
         color: "Yellow",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
         ]
@@ -635,14 +701,16 @@ export const players: Player[] = [
         src: "/players/Yellow_Pianta.webp",
         color: "Yellow",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Yellow Shy Guy",
         src: "/players/Yellow_Shy_Guy.webp",
         color: "Yellow",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: false,
     },
     {
         name: "Yellow Toad",
@@ -650,6 +718,7 @@ export const players: Player[] = [
         color: "Yellow",
         gp: 10,
         captain: false,
+        mii: false,
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -660,6 +729,7 @@ export const players: Player[] = [
         color: "Yellow",
         gp: 1,
         captain: false,
+        mii: false,
         awards: [
             { name: "All-Star", season: 1},
         ]
@@ -669,21 +739,24 @@ export const players: Player[] = [
         src: "/players/Yoshi.webp",
         color: "Light Green",
         gp: 10,
-        captain: true
+        captain: true,
+        mii: false,
     },
     {
         name: "Triangle",
         src: "/players/mii.jpg",
         color: "Light Blue",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Jack White",
         src: "/players/mii.jpg",
         color: "Red",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Geek Squad",
@@ -691,6 +764,7 @@ export const players: Player[] = [
         color: "Green",
         gp: 10,
         captain: false,
+        mii: true,
         awards: [
             { name: "All-Star", season: 1},
         ]
@@ -701,6 +775,7 @@ export const players: Player[] = [
         color: "Blue",
         gp: 10,
         captain: false,
+        mii: true,
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -710,28 +785,32 @@ export const players: Player[] = [
         src: "/players/mii.jpg",
         color: "Blue",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Antenna",
         src: "/players/mii.jpg",
         color: "Red",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Grayson McKean",
         src: "/players/mii.jpg",
         color: "Pink",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Shaq",
         src: "/players/mii.jpg",
         color: "Blue",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Bob Marley",
@@ -739,6 +818,7 @@ export const players: Player[] = [
         color: "Green",
         gp: 10,
         captain: false,
+        mii: true,
         awards: [
             { name: "All-Star", season: 1},
         ]
@@ -748,28 +828,32 @@ export const players: Player[] = [
         src: "/players/mii.jpg",
         color: "Brown",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Sabrina",
         src: "/players/mii.jpg",
         color: "Pink",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Sebesta",
         src: "/players/mii.jpg",
         color: "White",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Gramps",
         src: "/players/mii.jpg",
         color: "White",
         gp: 9,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Hamburger",
@@ -777,6 +861,7 @@ export const players: Player[] = [
         color: "Yellow",
         gp: 10,
         captain: false,
+        mii: true,
         awards: [
             { name: "2x Game MVP", season: 1},
         ]
@@ -786,14 +871,16 @@ export const players: Player[] = [
         src: "/players/mii.jpg",
         color: "Blue",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Michelle Obama",
         src: "/players/mii.jpg",
         color: "Purple",
         gp: 0,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Broseph",
@@ -801,13 +888,15 @@ export const players: Player[] = [
         color: "Light Green",
         gp: 10,
         captain: false,
+        mii: true,
     },
     {
         name: "Chungy",
         src: "/players/mii.jpg",
         color: "Yellow",
         gp: 10,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Entity 404",
@@ -815,6 +904,7 @@ export const players: Player[] = [
         color: "Black",
         gp: 9,
         captain: false,
+        mii: true,
         awards: [
             { name: "World Series Champion", season: 1},
         ]
@@ -824,7 +914,8 @@ export const players: Player[] = [
         src: "/players/mii.jpg",
         color: "Orange",
         gp: 5,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Tate McRae",
@@ -832,6 +923,7 @@ export const players: Player[] = [
         color: "Orange",
         gp: 4,
         captain: false,
+        mii: true,
         awards: [
             { name: "World Series Champion", season: 1},
         ]
@@ -841,7 +933,8 @@ export const players: Player[] = [
         src: "/players/mii.jpg",
         color: "White",
         gp: 9,
-        captain: false
+        captain: false,
+        mii: true,
     },
     {
         name: "Bertha",
@@ -849,6 +942,7 @@ export const players: Player[] = [
         color: "Light Green",
         gp: 10,
         captain: false,
+        mii: true,
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -859,6 +953,7 @@ export const players: Player[] = [
         color: "Pink",
         gp: 10,
         captain: false,
+        mii: true,
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -869,6 +964,7 @@ export const players: Player[] = [
         color: "Red",
         gp: 10,
         captain: false,
+        mii: true,
         awards: [
             { name: "Most Improved Player", season: 1},
         ]
