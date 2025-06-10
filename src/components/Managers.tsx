@@ -69,8 +69,8 @@ const ModalContent = styled.div`
     border-radius: 10px;
     width: 90%;
     max-width: 500px;
-    max-height: 90vh; /* key part */
-    overflow-y: auto;  /* enable vertical scroll */
+    max-height: 90vh; 
+    overflow-y: auto;
     text-align: center;
     position: relative;
     border: 2px solid black;
@@ -122,6 +122,7 @@ export default function Managers() {
                     <ModalContent onClick={(e) => e.stopPropagation()} >
                         <CloseButton onClick={() => setSelectedManager(null)}>✕</CloseButton>
                         <h2>{selectedManager.name}</h2>
+                        <img src={selectedManager.src} alt={selectedManager.name} width="150" />
                         <StyledMiniHeader>About</StyledMiniHeader>
                         <p>Record: {selectedManager.record}</p>
                         <p>Playoff Berths: {selectedManager.playoffs} </p>

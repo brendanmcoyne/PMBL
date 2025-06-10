@@ -1,5 +1,6 @@
 export type Manager = {
     name: string;
+    src: string;
     color: string;
     record: string;
     division: string;
@@ -11,6 +12,7 @@ export type Manager = {
 export const managers: Manager[] = [
     {
         name: "Isaac",
+        src: "/managers/Isaac.jpg",
         color: "#3586E8",
         record: "4 - 6",
         division: "West",
@@ -20,6 +22,7 @@ export const managers: Manager[] = [
     },
     {
         name: "Brendan",
+        src: "/managers/Brendan.jpg",
         color: "#CC0000",
         record: "7 - 3",
         division: "East",
@@ -29,6 +32,7 @@ export const managers: Manager[] = [
     },
     {
         name: "Christach",
+        src: "/managers/Christach.jpg",
         color: "#9900FF",
         record: "3 - 7",
         division: "West",
@@ -38,6 +42,7 @@ export const managers: Manager[] = [
     },
     {
         name: "Justin",
+        src: "/managers/Justin.jpg",
         color: "#FF9900",
         record: "6 - 4",
         division: "East",
@@ -47,6 +52,7 @@ export const managers: Manager[] = [
     },
     {
         name: "Morgan",
+        src: "/managers/Morgan.jpg",
         color: "#FF00FF",
         record: "5 - 5",
         division: "East",
@@ -56,6 +62,7 @@ export const managers: Manager[] = [
     },
     {
         name: "James",
+        src: "/managers/James.JPG",
         color: "#F1C232",
         record: "6 - 4",
         division: "East",
@@ -65,6 +72,7 @@ export const managers: Manager[] = [
     },
     {
         name: "DANdrew",
+        src: "/managers/Andrew.jpg",
         color: "#999999",
         record: "5 - 5",
         division: "West",
@@ -74,6 +82,7 @@ export const managers: Manager[] = [
     },
     {
         name: "Matt",
+        src: "/managers/Matt.jpg",
         color: "#6AA84F",
         record: "4 - 6",
         division: "East",
