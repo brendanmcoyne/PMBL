@@ -3,6 +3,7 @@ import { useState } from "react";
 import { managers } from "../data/ManagerNotes.ts";
 import type { Manager } from "../data/ManagerNotes.ts";
 
+
 export const ContentDiv = styled.div`
     display: flex;
     flex-direction: column;
@@ -94,8 +95,17 @@ const CloseButton = styled.button`
 `;
 
 const ManagerName = styled.span`
-  font-weight: bold;
-  text-align: center;
+    font-weight: bold;
+    text-align: center;
+`;
+
+const StatDisplay = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+`;
+
+const Stat = styled.p`
+    font-size: large;
 `;
 
 export default function Managers() {
@@ -124,10 +134,12 @@ export default function Managers() {
                         <h2>{selectedManager.name}</h2>
                         <img src={selectedManager.src} alt={selectedManager.name} width="150" />
                         <StyledMiniHeader>About</StyledMiniHeader>
-                        <p>Record: {selectedManager.record}</p>
-                        <p>Playoff Berths: {selectedManager.playoffs} </p>
-                        <p>Division Titles: {selectedManager.divships} </p>
-                        <p>World Series Titles: {selectedManager.champs}</p>
+                        <StatDisplay>
+                            <Stat>Record: {selectedManager.record}</Stat>
+                            <Stat>Division Titles: {selectedManager.divships} </Stat>
+                            <Stat>Playoff Berths: {selectedManager.playoffs} </Stat>
+                            <Stat>World Series Titles: {selectedManager.champs}</Stat>
+                        </StatDisplay>
                     </ModalContent>
                 </ModalBackground>
             )}
