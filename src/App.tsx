@@ -1,10 +1,15 @@
 import { styled } from "styled-components";
 import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
+
 import "/globals.css";
+
 
 import Header from "./components/Header.tsx";
 import Footer from "./components/Footer.tsx";
 import Nav from "./components/Nav.tsx";
+import LoadingScreen from "./components/LoadingScreen.tsx";
 import Home from "./components/Home.tsx";
 import Players from "./components/Players.tsx";
 import Managers from "./components/Managers.tsx";
@@ -53,8 +58,56 @@ const Wrapper = styled.div`
 `;
 
 function Root() {
+    const location = useLocation();
+    const [showLoading, setShowLoading] = useState(false);
+    const [isFirstLoad, setIsFirstLoad] = useState(true);
+
+    const mainNavPaths = [
+        "/",
+        "/players",
+        "/managers",
+        "/archives",
+        "/season",
+        "/headlines",
+    ];
+
+    const isMainNavPage = mainNavPaths.includes(location.pathname);
+
+    const skipNextLoading = useRef(false); //Makes sure that "loading" isn't rendered right after "Welcome!"
+
+    useEffect(() => {
+        if (isFirstLoad) {
+            setShowLoading(true);
+            const timer = setTimeout(() => {
+                setShowLoading(false);
+                setIsFirstLoad(false);
+                skipNextLoading.current = true;  // Set flag to skip next loading
+            }, 750);
+            return () => clearTimeout(timer);
+        }
+
+        if (skipNextLoading.current) { // Skip the loading for the immediate nav after first load
+            skipNextLoading.current = false;
+            setShowLoading(false);
+            return;
+        }
+
+        if (isMainNavPage) {  //Only forces loads for nav pages, not internal pages
+            setShowLoading(true);
+            const timer = setTimeout(() => {
+                setShowLoading(false);
+            }, 750);
+            return () => clearTimeout(timer);
+        } else {
+            setShowLoading(false);
+        }
+    }, [location.pathname, isMainNavPage, isFirstLoad]);
+
     return (
         <Wrapper>
+            {showLoading && (
+                <LoadingScreen message={isFirstLoad ? "Welcome!" : "Loading"} />
+            )}
             <Header />
             <Nav />
             <MainContent>

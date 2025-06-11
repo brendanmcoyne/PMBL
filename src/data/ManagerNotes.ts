@@ -22,7 +22,7 @@ export const managers: Manager[] = [
     },
     {
         name: "Brendan",
-        src: "/managers/Brendan.jpg",
+        src: "/managers/Brendan.JPEG",
         color: "#CC0000",
         record: "7 - 3",
         division: "East",

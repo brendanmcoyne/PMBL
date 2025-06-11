@@ -15,6 +15,33 @@ export type Player = {
 
 export const players: Player[] = [
     {
+        name: "Abu Patel",
+        src: "/players/mii.jpg",
+        color: "Blue",
+        gp: 10,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Alfonzo",
+        src: "/players/mii.jpg",
+        color: "Blue",
+        gp: 10,
+        captain: false,
+        mii: true,
+        awards: [
+            { name: "1x Game MVP", season: 1},
+        ]
+    },
+    {
+        name: "Antenna",
+        src: "/players/mii.jpg",
+        color: "Red",
+        gp: 10,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Baby Daisy",
         src: "/players/Baby_Daisy.webp",
         color: "Orange",
@@ -56,6 +83,17 @@ export const players: Player[] = [
         gp: 10,
         captain: false,
         mii: false,
+    },
+    {
+        name: "Bertha",
+        src: "/players/mii.jpg",
+        color: "Light Green",
+        gp: 10,
+        captain: false,
+        mii: true,
+        awards: [
+            { name: "1x Game MVP", season: 1},
+        ]
     },
     {
         name: "Birdo",
@@ -152,6 +190,17 @@ export const players: Player[] = [
         mii: false,
     },
     {
+        name: "Bob Marley",
+        src: "/players/mii.jpg",
+        color: "Green",
+        gp: 10,
+        captain: false,
+        mii: true,
+        awards: [
+            { name: "All-Star", season: 1},
+        ]
+    },
+    {
         name: "Boo",
         src: "/players/Boo.webp",
         color: "White",
@@ -198,6 +247,14 @@ export const players: Player[] = [
         ]
     },
     {
+        name: "Broseph",
+        src: "/players/mii.jpg",
+        color: "Light Green",
+        gp: 10,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Brown Kritter",
         src: "/players/Brown_Kritter.webp",
         color: "Brown",
@@ -212,6 +269,14 @@ export const players: Player[] = [
         ]
     },
     {
+        name: "Chungy",
+        src: "/players/mii.jpg",
+        color: "Yellow",
+        gp: 10,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Daisy",
         src: "/players/Daisy.webp",
         color: "Orange",
@@ -221,6 +286,14 @@ export const players: Player[] = [
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
+    },
+    {
+        name: "Danny B",
+        src: "/players/mii.jpg",
+        color: "White",
+        gp: 9,
+        captain: false,
+        mii: true,
     },
     {
         name: "Dark Bones",
@@ -234,6 +307,14 @@ export const players: Player[] = [
             { name: "All-Star", season: 1},
             { name: "1x Game MVP", season: 1},
         ]
+    },
+    {
+        name: "Diddler",
+        src: "/players/mii.jpg",
+        color: "Blue",
+        gp: 10,
+        captain: false,
+        mii: true,
     },
     {
         name: "Diddy Kong",
@@ -280,6 +361,17 @@ export const players: Player[] = [
         ]
     },
     {
+        name: "Entity 404",
+        src: "/players/mii.jpg",
+        color: "Black",
+        gp: 9,
+        captain: false,
+        mii: true,
+        awards: [
+            { name: "World Series Champion", season: 1},
+        ]
+    },
+    {
         name: "Fire Bro",
         src: "/players/Fire_Bro.webp",
         color: "Red",
@@ -305,6 +397,17 @@ export const players: Player[] = [
         ]
     },
     {
+        name: "Geek Squad",
+        src: "/players/mii.jpg",
+        color: "Green",
+        gp: 10,
+        captain: false,
+        mii: true,
+        awards: [
+            { name: "All-Star", season: 1},
+        ]
+    },
+    {
         name: "Goomba",
         src: "/players/Goomba.webp",
         color: "Brown",
@@ -313,12 +416,36 @@ export const players: Player[] = [
         mii: false,
     },
     {
+        name: "Gramms",
+        src: "/players/mii.jpg",
+        color: "Brown",
+        gp: 10,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Gramps",
+        src: "/players/mii.jpg",
+        color: "White",
+        gp: 9,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Gray Shy Guy",
         src: "/players/Gray_Shy_Guy.webp",
         color: "Black",
         gp: 1,
         captain: false,
         mii: false,
+    },
+    {
+        name: "Grayson McKean",
+        src: "/players/mii.jpg",
+        color: "Pink",
+        gp: 10,
+        captain: false,
+        mii: true,
     },
     {
         name: "Green Dry Bones",
@@ -391,6 +518,17 @@ export const players: Player[] = [
         mii: false,
     },
     {
+        name: "Hamburger",
+        src: "/players/mii.jpg",
+        color: "Yellow",
+        gp: 10,
+        captain: false,
+        mii: true,
+        awards: [
+            { name: "2x Game MVP", season: 1},
+        ]
+    },
+    {
         name: "Hammer Bro",
         src: "/players/Hammer_Bro.webp",
         color: "Green",
@@ -401,6 +539,25 @@ export const players: Player[] = [
             { name: "World Series Champion", season: 1},
             { name: "All-Star", season: 1},
             { name: "1x Semifinals Game MVP", season: 1},
+            { name: "1x Game MVP", season: 1},
+        ]
+    },
+    {
+        name: "Jack White",
+        src: "/players/mii.jpg",
+        color: "Red",
+        gp: 10,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Jesstithyn",
+        src: "/players/mii.jpg",
+        color: "Pink",
+        gp: 10,
+        captain: false,
+        mii: true,
+        awards: [
             { name: "1x Game MVP", season: 1},
         ]
     },
@@ -476,6 +633,25 @@ export const players: Player[] = [
         ]
     },
     {
+        name: "Michelle Obama",
+        src: "/players/mii.jpg",
+        color: "Purple",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "MLK",
+        src: "/players/mii.jpg",
+        color: "Red",
+        gp: 10,
+        captain: false,
+        mii: true,
+        awards: [
+            { name: "Most Improved Player", season: 1},
+        ]
+    },
+    {
         name: "Monty Mole",
         src: "/players/Monty_Mole.webp",
         color: "Brown",
@@ -486,6 +662,14 @@ export const players: Player[] = [
             { name: "Most Hated Player", season: 1},
             { name: "1x Game MVP", season: 1},
         ]
+    },
+    {
+        name: "Nose",
+        src: "/players/mii.jpg",
+        color: "Orange",
+        gp: 5,
+        captain: false,
+        mii: true,
     },
     {
         name: "Paragoomba",
@@ -632,6 +816,41 @@ export const players: Player[] = [
         mii: false,
     },
     {
+        name: "Sabrina",
+        src: "/players/mii.jpg",
+        color: "Pink",
+        gp: 10,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Sebesta",
+        src: "/players/mii.jpg",
+        color: "White",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Shaq",
+        src: "/players/mii.jpg",
+        color: "Blue",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Tate McRae",
+        src: "/players/mii.jpg",
+        color: "Orange",
+        gp: 4,
+        captain: false,
+        mii: true,
+        awards: [
+            { name: "World Series Champion", season: 1},
+        ]
+    },
+    {
         name: "Tiny Kong",
         src: "/players/Tiny_Kong.webp",
         color: "Light Blue",
@@ -657,6 +876,14 @@ export const players: Player[] = [
         gp: 10,
         captain: false,
         mii: false,
+    },
+    {
+        name: "Triangle",
+        src: "/players/mii.jpg",
+        color: "Light Blue",
+        gp: 0,
+        captain: false,
+        mii: true,
     },
     {
         name: "Waluigi",
@@ -741,232 +968,5 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
-    },
-    {
-        name: "Triangle",
-        src: "/players/mii.jpg",
-        color: "Light Blue",
-        gp: 0,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Jack White",
-        src: "/players/mii.jpg",
-        color: "Red",
-        gp: 10,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Geek Squad",
-        src: "/players/mii.jpg",
-        color: "Green",
-        gp: 10,
-        captain: false,
-        mii: true,
-        awards: [
-            { name: "All-Star", season: 1},
-        ]
-    },
-    {
-        name: "Alfonzo",
-        src: "/players/mii.jpg",
-        color: "Blue",
-        gp: 10,
-        captain: false,
-        mii: true,
-        awards: [
-            { name: "1x Game MVP", season: 1},
-        ]
-    },
-    {
-        name: "Abu Patel",
-        src: "/players/mii.jpg",
-        color: "Blue",
-        gp: 10,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Antenna",
-        src: "/players/mii.jpg",
-        color: "Red",
-        gp: 10,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Grayson McKean",
-        src: "/players/mii.jpg",
-        color: "Pink",
-        gp: 10,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Shaq",
-        src: "/players/mii.jpg",
-        color: "Blue",
-        gp: 0,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Bob Marley",
-        src: "/players/mii.jpg",
-        color: "Green",
-        gp: 10,
-        captain: false,
-        mii: true,
-        awards: [
-            { name: "All-Star", season: 1},
-        ]
-    },
-    {
-        name: "Gramms",
-        src: "/players/mii.jpg",
-        color: "Brown",
-        gp: 10,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Sabrina",
-        src: "/players/mii.jpg",
-        color: "Pink",
-        gp: 10,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Sebesta",
-        src: "/players/mii.jpg",
-        color: "White",
-        gp: 0,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Gramps",
-        src: "/players/mii.jpg",
-        color: "White",
-        gp: 9,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Hamburger",
-        src: "/players/mii.jpg",
-        color: "Yellow",
-        gp: 10,
-        captain: false,
-        mii: true,
-        awards: [
-            { name: "2x Game MVP", season: 1},
-        ]
-    },
-    {
-        name: "Diddler",
-        src: "/players/mii.jpg",
-        color: "Blue",
-        gp: 10,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Michelle Obama",
-        src: "/players/mii.jpg",
-        color: "Purple",
-        gp: 0,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Broseph",
-        src: "/players/mii.jpg",
-        color: "Light Green",
-        gp: 10,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Chungy",
-        src: "/players/mii.jpg",
-        color: "Yellow",
-        gp: 10,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Entity 404",
-        src: "/players/mii.jpg",
-        color: "Black",
-        gp: 9,
-        captain: false,
-        mii: true,
-        awards: [
-            { name: "World Series Champion", season: 1},
-        ]
-    },
-    {
-        name: "Nose",
-        src: "/players/mii.jpg",
-        color: "Orange",
-        gp: 5,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Tate McRae",
-        src: "/players/mii.jpg",
-        color: "Orange",
-        gp: 4,
-        captain: false,
-        mii: true,
-        awards: [
-            { name: "World Series Champion", season: 1},
-        ]
-    },
-    {
-        name: "Danny B",
-        src: "/players/mii.jpg",
-        color: "White",
-        gp: 9,
-        captain: false,
-        mii: true,
-    },
-    {
-        name: "Bertha",
-        src: "/players/mii.jpg",
-        color: "Light Green",
-        gp: 10,
-        captain: false,
-        mii: true,
-        awards: [
-            { name: "1x Game MVP", season: 1},
-        ]
-    },
-    {
-        name: "Jesstithyn",
-        src: "/players/mii.jpg",
-        color: "Pink",
-        gp: 10,
-        captain: false,
-        mii: true,
-        awards: [
-            { name: "1x Game MVP", season: 1},
-        ]
-    },
-    {
-        name: "MLK",
-        src: "/players/mii.jpg",
-        color: "Red",
-        gp: 10,
-        captain: false,
-        mii: true,
-        awards: [
-            { name: "Most Improved Player", season: 1},
-        ]
     },
 ];
