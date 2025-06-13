@@ -76,31 +76,44 @@ function Root() {
     const skipNextLoading = useRef(false); //Makes sure that "loading" isn't rendered right after "Welcome!"
 
     useEffect(() => {
+        let earlyCancelTimer: number | null = null;
+        let minimumVisibleTimer: number | null = null;
+
         if (isFirstLoad) {
             setShowLoading(true);
-            const timer = setTimeout(() => {
+            minimumVisibleTimer = window.setTimeout(() => {
                 setShowLoading(false);
                 setIsFirstLoad(false);
-                skipNextLoading.current = true;  // Set flag to skip next loading
+                skipNextLoading.current = true;
             }, 750);
-            return () => clearTimeout(timer);
+            return () => {
+                if (minimumVisibleTimer) clearTimeout(minimumVisibleTimer);
+            };
         }
 
-        if (skipNextLoading.current) { // Skip the loading for the immediate nav after first load
+        if (skipNextLoading.current) {
             skipNextLoading.current = false;
-            setShowLoading(false);
             return;
         }
 
-        if (isMainNavPage) {  //Only forces loads for nav pages, not internal pages
-            setShowLoading(true);
-            const timer = setTimeout(() => {
-                setShowLoading(false);
-            }, 750);
-            return () => clearTimeout(timer);
-        } else {
-            setShowLoading(false);
+        if (isMainNavPage) {
+            setShowLoading(true); // Show immediately
+
+            // Early cancel: hide if page loads quickly
+            earlyCancelTimer = window.setTimeout(() => {
+                // If not cancelled in 100ms, lock for 750ms
+                minimumVisibleTimer = window.setTimeout(() => {
+                    setShowLoading(false);
+                }, 750);
+            }, 100);
+
+            return () => {
+                if (earlyCancelTimer) clearTimeout(earlyCancelTimer);
+                if (minimumVisibleTimer) clearTimeout(minimumVisibleTimer);
+            };
         }
+
+        setShowLoading(false); // for non-main nav pages
     }, [location.pathname, isMainNavPage, isFirstLoad]);
 
     return (

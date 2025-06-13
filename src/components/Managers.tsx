@@ -2,6 +2,8 @@ import { styled } from "styled-components";
 import { useState } from "react";
 import { managers } from "../data/ManagerNotes.ts";
 import type { Manager } from "../data/ManagerNotes.ts";
+import { rosters } from "../data/Season1Rosters.ts";
+import type { Roster } from "../data/Season1Rosters.ts";
 
 
 export const ContentDiv = styled.div`
@@ -108,11 +110,42 @@ const Stat = styled.p`
     font-size: large;
 `;
 
+interface ToggleButtonProps {
+    active: boolean;
+}
+
+const ToggleButton = styled.button<ToggleButtonProps>`
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: lightgray;
+    }
+
+    ${({ active }) =>
+            active &&
+            `
+      font-weight: bold;
+      background-color: #d3d3d3;
+  `}
+`;
+
 export default function Managers() {
     const [selectedManager, setSelectedManager] = useState<Manager | null>(null);
+    const [activeModalTab, setActiveModalTab] = useState<"info" | "roster">("info");
 
-    const sortedManagers: Manager[] = [...managers]
-    return(
+    const sortedManagers: Manager[] = [...managers];
+
+    const getRosterForManager = (managerName: string): Roster | undefined => {
+        return rosters.find((r) => r.manager === managerName);
+    };
+
+    return (
         <ContentDiv>
             <StyledHeader>Managers List</StyledHeader>
             <div style={{ display: 'flex', gap: "200px" }}>
@@ -121,7 +154,14 @@ export default function Managers() {
             </div>
             <DivisionDiv>
                 {sortedManagers.map((manager: Manager) => (
-                    <Manager key={manager.name} onClick={() => setSelectedManager(manager)} style={{backgroundColor: manager.color }}>
+                    <Manager
+                        key={manager.name}
+                        onClick={() => {
+                            setSelectedManager(manager);
+                            setActiveModalTab("info");
+                        }}
+                        style={{ backgroundColor: manager.color }}
+                    >
                         <ManagerName>{manager.name}</ManagerName>
                     </Manager>
                 ))}
@@ -129,22 +169,53 @@ export default function Managers() {
 
             {selectedManager && (
                 <ModalBackground onClick={() => setSelectedManager(null)}>
-                    <ModalContent onClick={(e) => e.stopPropagation()} >
+                    <ModalContent onClick={(e) => e.stopPropagation()}>
                         <CloseButton onClick={() => setSelectedManager(null)}>✕</CloseButton>
-                        <h2>{selectedManager.name}</h2>
-                        <img src={selectedManager.src} alt={selectedManager.name} width="150" />
-                        <StyledMiniHeader>About</StyledMiniHeader>
-                        <StatDisplay>
-                            <Stat>Record: {selectedManager.record}</Stat>
-                            <Stat>Division Titles: {selectedManager.divships} </Stat>
-                            <Stat>Playoff Berths: {selectedManager.playoffs} </Stat>
-                            <Stat>World Series Titles: {selectedManager.champs}</Stat>
-                        </StatDisplay>
+
+                        {/* Toggle Buttons */}
+                        <div style={{ marginBottom: "1rem" }}>
+                            <ToggleButton
+                                active={activeModalTab === "info"}
+                                onClick={() => setActiveModalTab("info")}
+                            >
+                                Info
+                            </ToggleButton>
+                            <ToggleButton
+                                active={activeModalTab === "roster"}
+                                onClick={() => setActiveModalTab("roster")}
+                            >
+                                Roster
+                            </ToggleButton>
+                        </div>
+
+                        {activeModalTab === "info" && (
+                            <>
+                                <h2>{selectedManager.name}</h2>
+                                <img src={selectedManager.src} alt={selectedManager.name} width="150" />
+                                <StyledMiniHeader>About</StyledMiniHeader>
+                                <StatDisplay>
+                                    <Stat>Record: {selectedManager.record}</Stat>
+                                    <Stat>Division Titles: {selectedManager.divships}</Stat>
+                                    <Stat>Playoff Berths: {selectedManager.playoffs}</Stat>
+                                    <Stat>World Series Titles: {selectedManager.champs}</Stat>
+                                </StatDisplay>
+                            </>
+                        )}
+
+                        {activeModalTab === "roster" && (
+                            <>
+                                <StyledMiniHeader>Season 1 Roster</StyledMiniHeader>
+                                <p><strong>Captain:</strong> {getRosterForManager(selectedManager.name)?.captain || "N/A"}</p>
+                                <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+                                    {getRosterForManager(selectedManager.name)?.roster.map((player) => (
+                                        <li>{player.name}</li>
+                                    ))}
+                                </ul>
+                            </>
+                        )}
                     </ModalContent>
                 </ModalBackground>
             )}
         </ContentDiv>
-
-
     );
 }

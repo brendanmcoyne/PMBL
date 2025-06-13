@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { useState, useEffect } from 'react';
 
 const Main = styled.main`
     position: relative;
@@ -79,6 +80,16 @@ const GenImage = styled.img`
 `;
 
 export default function Home() {
+    const [ready, setReady] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setReady(true);
+        }, 100); // small delay to allow loading screen to display
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (!ready) return null; // wait to render until short delay finishes
     return (
         <>
             <Main>

@@ -1,4 +1,5 @@
 import {styled} from "styled-components";
+import {Link} from "react-router-dom";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -72,9 +73,23 @@ const StyledTrade = styled.div`
     margin-bottom: 1.5rem; 
 `;
 
+const ToggleButton = styled.button`
+    background-color: lightgray;
+    color: darkblue;
+    font-size: 1.5rem;
+    border: none;
+    padding: 7px 15px;
+    cursor: pointer;
+    align-self: flex-start;  
+    margin-left: 2rem;
+`;
+
 export default function Draft1 () {
     return (
         <ContentDiv>
+            <ToggleButton>
+                <Link to="/archives/seasons/Season1">Back</Link>
+            </ToggleButton>
             <StyledHeader>Season 1 PMBL Draft</StyledHeader>
             <StyledMiniHeader>Round 1</StyledMiniHeader>
 

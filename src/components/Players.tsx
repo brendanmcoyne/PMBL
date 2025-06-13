@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import { players } from "../data/playerNames.ts";
 import type { Player } from "../data/playerNames.ts";
 
@@ -131,6 +131,17 @@ export default function Players() {
             if (sortOption === "color") return colorOrder.indexOf(a.color) - colorOrder.indexOf(b.color);
             return 0;
         });
+
+    const [ready, setReady] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setReady(true);
+        }, 100);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (!ready) return null;
 
     return (
         <ContentDiv>

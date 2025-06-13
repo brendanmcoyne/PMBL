@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import {Link} from "react-router-dom";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -43,9 +44,24 @@ const StyledTeam = styled.p`
     margin: 0;
 `;
 
+const ToggleButton = styled.button`
+    background-color: lightgray;
+    color: darkblue;
+    font-size: 1.5rem;
+    border: none;
+    padding: 7px 15px;
+    cursor: pointer;
+    align-self: flex-start;  
+    margin-left: 2rem;
+`;
+
+
 export default function Other1 () {
     return (
         <ContentDiv>
+            <ToggleButton>
+                <Link to="/archives/seasons/Season1">Back</Link>
+            </ToggleButton>
             <StyledHeader>Game Stats</StyledHeader>
 
             <StyledMiniHeader>Most Runs in a Game (One Team)</StyledMiniHeader>
