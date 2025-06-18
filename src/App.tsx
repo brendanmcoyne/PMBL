@@ -50,11 +50,12 @@ const Content = styled.div`
     width: 70%;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ dark?: boolean }>`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     width: 100vw;
+    background-color: ${(props) => (props.dark ? "#1e1e1e" : "white")};
 `;
 
 function Root() {
@@ -72,7 +73,7 @@ function Root() {
     ];
 
     const isMainNavPage = mainNavPaths.includes(location.pathname);
-
+    const isHomePage = location.pathname === "/";
     const skipNextLoading = useRef(false); //Makes sure that "loading" isn't rendered right after "Welcome!"
 
     useEffect(() => {
@@ -97,11 +98,8 @@ function Root() {
         }
 
         if (isMainNavPage) {
-            setShowLoading(true); // Show immediately
-
-            // Early cancel: hide if page loads quickly
+            setShowLoading(true);
             earlyCancelTimer = window.setTimeout(() => {
-                // If not cancelled in 100ms, lock for 750ms
                 minimumVisibleTimer = window.setTimeout(() => {
                     setShowLoading(false);
                 }, 750);
@@ -113,11 +111,11 @@ function Root() {
             };
         }
 
-        setShowLoading(false); // for non-main nav pages
+        setShowLoading(false);
     }, [location.pathname, isMainNavPage, isFirstLoad]);
 
     return (
-        <Wrapper>
+        <Wrapper dark={isHomePage}>
             {showLoading && (
                 <LoadingScreen message={isFirstLoad ? "Welcome!" : "Loading"} />
             )}
