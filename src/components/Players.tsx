@@ -36,7 +36,8 @@ const Player = styled.div`
     align-items: center;
     padding: 20px;
     cursor: pointer;
-    background-color: #f9f9f9;
+    background-color: darkblue;
+    //background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 10px;
     transition: transform 0.2s;

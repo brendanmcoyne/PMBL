@@ -55,7 +55,7 @@ const Wrapper = styled.div<{ dark?: boolean }>`
     flex-direction: column;
     min-height: 100vh;
     width: 100vw;
-    background-color: ${(props) => (props.dark ? "#1e1e1e" : "white")};
+    background-color: #1e1e1e;
 `;
 
 function Root() {
