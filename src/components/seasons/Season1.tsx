@@ -14,6 +14,8 @@ export const ContentDiv = styled.div`
 const StyledHeader = styled.h1`
     text-align: center;
     margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledLink = styled.p`
@@ -50,26 +52,26 @@ export default function Season1() {
     return(
         <ContentDiv>
             <ToggleButton>
-                <Link to="/archives">Back</Link>
+                <Link style={{color: "darkblue"}} to="/archives">Back</Link>
             </ToggleButton>
             <StyledHeader>Season 1 PMBL</StyledHeader>
             <StyledLink>
-                <Link to="/archives/seasons/Season1/Schedule">Schedule</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Schedule">Schedule</Link>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season1/Draft">Draft</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Draft">Draft</Link>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season1/Awards">Awards</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Awards">Awards</Link>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season1/Standings">Standings</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Standings">Standings</Link>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season1/Playoffs">Playoffs</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Playoffs">Playoffs</Link>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season1/Other">Other</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Other">Other</Link>
             </StyledLink>
         </ContentDiv>
 

@@ -14,6 +14,8 @@ export const ContentDiv = styled.div`
 const StyledHeader = styled.h1`
     text-align: center;
     margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledLink = styled.p`
@@ -37,7 +39,6 @@ const StyledLink = styled.p`
 
 const ToggleButton = styled.button`
     background-color: lightgray;
-    color: darkblue;
     font-size: 1.5rem;
     border: none;
     padding: 7px 15px;
@@ -50,26 +51,26 @@ export default function Season2() {
     return(
         <ContentDiv>
             <ToggleButton>
-                <Link to="/archives">Back</Link>
+                <Link style={{color: "darkblue"}} to="/archives">Back</Link>
             </ToggleButton>
             <StyledHeader>Season 2 PMBL</StyledHeader>
             <StyledLink>
-                <Link to="/archives/seasons/Season2/Schedule">Schedule</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Schedule">Schedule</Link>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season2/Draft">Draft</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Draft">Draft</Link>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season2/Awards">Awards</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Awards">Awards</Link>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season2/Standings">Standings</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Standings">Standings</Link>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season2/Playoffs">Playoffs</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Playoffs">Playoffs</Link>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season2/Other">Other</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Other">Other</Link>
             </StyledLink>
         </ContentDiv>
 

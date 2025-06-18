@@ -14,12 +14,16 @@ export const ContentDiv = styled.div`
 const StyledHeader = styled.h1`
     text-align: center;
     margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledMiniHeader = styled.h3`
     text-align: center;
     grid-column: span 4;
     font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const TeamDetails = styled.div`
@@ -29,6 +33,8 @@ const TeamDetails = styled.div`
     gap: 1rem;
     justify-content: center;
     text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const DivisionDiv = styled.div`
@@ -57,7 +63,7 @@ export default function Standings1() {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link to="/archives/seasons/Season1">Back</Link>
+                <Link style={{color: "darkblue"}} to="/archives/seasons/Season1">Back</Link>
             </ToggleButton>
             <StyledHeader>Season 1 PMBL Standings</StyledHeader>
             <DivisionDiv>

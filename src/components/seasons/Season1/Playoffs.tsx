@@ -13,12 +13,16 @@ export const ContentDiv = styled.div`
 const StyledHeader = styled.h1`
     text-align: center;
     margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledMiniHeader = styled.h3`
     text-align: center;
     grid-column: span 2;
     font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const Matchup = styled.div`
@@ -31,6 +35,8 @@ const Matchup = styled.div`
     width: 100%;
     max-width: 500px;
     text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const TeamName = styled.p`
@@ -78,17 +84,21 @@ const ToggleButton = styled.button`
     margin-left: 2rem;
 `;
 
+const Game = styled.h3`
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+`;
 export default function Playoffs1() {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link to="/archives/seasons/Season1">Back</Link>
+                <Link style={{color: "darkblue"}} to="/archives/seasons/Season1">Back</Link>
             </ToggleButton>
             <StyledHeader>Season 1 PMBL Playoffs</StyledHeader>
             <StyledMiniHeader>Conference Series</StyledMiniHeader>
             <StyledMiniHeader>(1) Brendan v.s. (4) Justin</StyledMiniHeader>
 
-            <h3>Game 1</h3>
+            <Game>Game 1</Game>
             <Matchup>
                 <TeamName>Justin</TeamName>
                 <VsText>vs</VsText>
@@ -102,7 +112,7 @@ export default function Playoffs1() {
                 <TeamRecord>(1-0)</TeamRecord>
             </Matchup>
 
-            <h3>Game 2</h3>
+            <Game>Game 2</Game>
             <Matchup>
                 <TeamName>Justin</TeamName>
                 <VsText>vs</VsText>
@@ -116,7 +126,7 @@ export default function Playoffs1() {
                 <TeamRecord>(2-0)</TeamRecord>
             </Matchup>
 
-            <h3>Game 3</h3>
+            <Game>Game 3</Game>
             <Matchup>
                 <TeamName>Brendan</TeamName>
                 <VsText>vs</VsText>
@@ -132,7 +142,7 @@ export default function Playoffs1() {
 
             <StyledMiniHeader>(2) Morgan v.s. (3) James</StyledMiniHeader>
 
-            <h3>Game 1</h3>
+            <Game>Game 1</Game>
             <Matchup>
                 <TeamName>James</TeamName>
                 <VsText>vs</VsText>
@@ -146,7 +156,7 @@ export default function Playoffs1() {
                 <TeamRecord>(0-1)</TeamRecord>
             </Matchup>
 
-            <h3>Game 2</h3>
+            <Game>Game 2</Game>
             <Matchup>
                 <TeamName>James</TeamName>
                 <VsText>vs</VsText>
@@ -160,7 +170,7 @@ export default function Playoffs1() {
                 <TeamRecord>(0-2)</TeamRecord>
             </Matchup>
 
-            <h3>Game 3</h3>
+            <Game>Game 3</Game>
             <Matchup>
                 <TeamName>Morgan</TeamName>
                 <VsText>vs</VsText>
@@ -174,7 +184,7 @@ export default function Playoffs1() {
                 <TeamRecord>(2-1)</TeamRecord>
             </Matchup>
 
-            <h3>Game 4</h3>
+            <Game>Game 4</Game>
             <Matchup>
                 <TeamName>Morgan</TeamName>
                 <VsText>vs</VsText>
@@ -191,7 +201,7 @@ export default function Playoffs1() {
             <StyledMiniHeader>WORLD SERIES</StyledMiniHeader>
             <StyledMiniHeader>(1) Brendan v.s. (3) James</StyledMiniHeader>
 
-            <h3>Game 1</h3>
+            <Game>Game 1</Game>
             <Matchup>
                 <TeamName>James</TeamName>
                 <VsText>vs</VsText>
@@ -205,7 +215,7 @@ export default function Playoffs1() {
                 <TeamRecord>(0-1)</TeamRecord>
             </Matchup>
 
-            <h3>Game 2</h3>
+            <Game>Game 2</Game>
             <Matchup>
                 <TeamName>James</TeamName>
                 <VsText>vs</VsText>
@@ -219,7 +229,7 @@ export default function Playoffs1() {
                 <TeamRecord>(0-2)</TeamRecord>
             </Matchup>
 
-            <h3>Game 3</h3>
+            <Game>Game 3</Game>
             <Matchup>
                 <TeamName>Brendan</TeamName>
                 <VsText>vs</VsText>

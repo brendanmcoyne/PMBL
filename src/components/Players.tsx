@@ -12,12 +12,6 @@ export const ContentDiv = styled.div`
     padding-top: 2rem;
 `;
 
-const SortSelect = styled.select`
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-`;
-
 const DivisionDiv = styled.div`
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
@@ -28,6 +22,14 @@ const DivisionDiv = styled.div`
 const DivisionHeader = styled.h1`
     text-align: center;
     grid-column: span 3;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+`;
+
+const PlayerName = styled.span`
+    font-weight: bold;
+    text-align: center;
+    color: white;
 `;
 
 const Player = styled.div`
@@ -37,14 +39,18 @@ const Player = styled.div`
     padding: 20px;
     cursor: pointer;
     background-color: darkblue;
-    //background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    border: 3px solid black;
     border-radius: 10px;
     transition: transform 0.2s;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 
     &:hover {
         transform: scale(1.05);
         background-color: #eee;
+
+        ${PlayerName} {
+            color: #1e1e1e; 
+        }
     }
 `;
 
@@ -53,11 +59,7 @@ const GenImage = styled.img`
     height: auto;
     border: 3px solid black;
     padding: 5px;
-`;
-
-const PlayerName = styled.span`
-  font-weight: bold;
-  text-align: center;
+    background-color: white;
 `;
 
 const ModalBackground = styled.div`
@@ -78,8 +80,8 @@ const ModalContent = styled.div`
     border-radius: 10px;
     width: 90%;
     max-width: 500px;
-    max-height: 90vh; /* key part */
-    overflow-y: auto;  /* enable vertical scroll */
+    max-height: 90vh; 
+    overflow-y: auto;  
     text-align: center;
     position: relative;
     border: 2px solid black;
@@ -105,6 +107,28 @@ const CloseButton = styled.button`
 const StyledMiniHeader = styled.h3`
     text-align: center;
     font-weight: bold;
+`;
+
+const SortButtonsContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+`;
+
+const SortButton = styled.button<{ active?: boolean }>`
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: ${({ active }) => (active ? "#00007B" : "darkblue")};
+    color: ${({ active }) => (active ? "white" : "black")};
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: ${({ active }) => (active ? "darkblue" : "#ddd")};
+    }
 `;
 
 export default function Players() {
@@ -148,13 +172,13 @@ export default function Players() {
         <ContentDiv>
             <DivisionHeader>Player List</DivisionHeader>
 
-            <SortSelect value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
-                <option value="az">Sort A-Z</option>
-                <option value="za">Sort Z-A</option>
-                <option value="color">Sort by Color</option>
-                <option value="captains">Captains Only</option>
-                <option value="mii">Miis Only</option>
-            </SortSelect>
+            <SortButtonsContainer>
+                <SortButton active={sortOption === "az"} onClick={() => setSortOption("az")}>Sort A-Z</SortButton>
+                <SortButton active={sortOption === "za"} onClick={() => setSortOption("za")}>Sort Z-A</SortButton>
+                <SortButton active={sortOption === "color"} onClick={() => setSortOption("color")}>Sort by Color</SortButton>
+                <SortButton active={sortOption === "captains"} onClick={() => setSortOption("captains")}>Captains Only</SortButton>
+                <SortButton active={sortOption === "mii"} onClick={() => setSortOption("mii")}>Miis Only</SortButton>
+            </SortButtonsContainer>
 
             <DivisionDiv>
                 {sortedPlayers.map((player: Player) => (

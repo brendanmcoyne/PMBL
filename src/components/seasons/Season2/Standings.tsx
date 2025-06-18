@@ -13,11 +13,13 @@ export const ContentDiv = styled.div`
 
 const StyledHeader = styled.h1`
     align-items: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const GenImage = styled.img`
-  width: 20%;
-  height: auto;
+    width: 20%;
+    height: auto;
 `;
 
 const ToggleButton = styled.button`
@@ -35,7 +37,7 @@ export default function Standings2() {
     return(
         <ContentDiv>
             <ToggleButton>
-                <Link to="/archives/seasons/Season2">Back</Link>
+                <Link style={{color: "darkblue"}} to="/archives/seasons/Season2">Back</Link>
             </ToggleButton>
             <StyledHeader>This page is under construction.</StyledHeader>
             <GenImage src="/145px-Wiggler-MSS.webp" alt="Professional Mario Baseball League Logo" />

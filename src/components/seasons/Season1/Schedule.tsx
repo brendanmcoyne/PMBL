@@ -13,12 +13,16 @@ export const ContentDiv = styled.div`
 const StyledHeader = styled.h1`
     text-align: center;
     margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledMiniHeader = styled.h3`
     text-align: center;
     grid-column: span 2;
     font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const Matchup = styled.div`
@@ -31,6 +35,8 @@ const Matchup = styled.div`
     width: 100%;
     max-width: 500px;
     text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const TeamName = styled.p`
@@ -69,7 +75,6 @@ const Scores = styled.span`
 
 const ToggleButton = styled.button`
     background-color: lightgray;
-    color: darkblue;
     font-size: 1.5rem;
     border: none;
     padding: 7px 15px;
@@ -82,7 +87,7 @@ export default function Schedule1() {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link to="/archives/seasons/Season1">Back</Link>
+                <Link style={{color: "darkblue"}} to="/archives/seasons/Season1">Back</Link>
             </ToggleButton>
             <StyledHeader>Season 1 Regular Season</StyledHeader>
             <StyledMiniHeader>Week 1</StyledMiniHeader>
@@ -218,7 +223,7 @@ export default function Schedule1() {
                 <TeamRecord>(2-1)</TeamRecord>
             </Matchup>
 
-            <p style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>The Monty Mole Game</p>
+            <p style={{ color: 'white', fontWeight: 'bold', marginBottom: '0.5rem' }}>The Monty Mole Game</p>
 
             <Matchup>
                 <TeamName>Justin</TeamName>
@@ -342,7 +347,7 @@ export default function Schedule1() {
                 <TeamRecord>(3-2)</TeamRecord>
             </Matchup>
 
-            <p style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>The Dominican Domination</p>
+            <p style={{ color: 'white', fontWeight: 'bold', marginBottom: '0.5rem' }}>The Dominican Domination</p>
 
             <Matchup>
                 <TeamName>Morgan</TeamName>
@@ -426,7 +431,7 @@ export default function Schedule1() {
                 <TeamRecord>(3-4)</TeamRecord>
             </Matchup>
 
-            <p>The Shy Guy Tribute Game</p>
+            <p style={{ color: 'white', fontWeight: 'bold', marginBottom: '0.5rem' }}>The Shy Guy Tribute Game</p>
             <Matchup>
                 <TeamName>Matt</TeamName>
                 <VsText>vs</VsText>
@@ -440,7 +445,7 @@ export default function Schedule1() {
                 <TeamRecord>(5-2)</TeamRecord>
             </Matchup>
 
-            <p>The Dominican Domination II</p>
+            <p style={{ color: 'white', fontWeight: 'bold', marginBottom: '0.5rem' }}>The Dominican Domination II</p>
             <Matchup>
                 <TeamName>Isaac</TeamName>
                 <VsText>vs</VsText>
@@ -577,7 +582,7 @@ export default function Schedule1() {
 
             <StyledMiniHeader>Week 10</StyledMiniHeader>
 
-            <p>The Yoshi Park Home Run Derby</p>
+            <p style={{ color: 'white', fontWeight: 'bold', marginBottom: '0.5rem' }}>The Yoshi Park Home Run Derby</p>
             <Matchup>
                 <TeamName>James</TeamName>
                 <VsText>vs</VsText>

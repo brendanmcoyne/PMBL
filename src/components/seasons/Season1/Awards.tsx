@@ -13,29 +13,39 @@ export const ContentDiv = styled.div`
 const StyledHeader = styled.h1`
     text-align: center;
     margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledMiniHeader = styled.h3`
     text-align: center;
     font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledWinner = styled.h4`
     text-align: center;
     margin: 0;
     font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledManager = styled.h5`
     text-align: center;
     margin: 0;
     font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledTeam = styled.p`
     text-align: center;
     font-size: 0.8rem;
     margin: 0;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const ToggleButton = styled.button`
@@ -53,7 +63,7 @@ export default function Awards1() {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link to="/archives/seasons/Season1">Back</Link>
+                <Link style={{color: "darkblue"}} to="/archives/seasons/Season1">Back</Link>
             </ToggleButton>
             <StyledHeader>Season 1 Awards</StyledHeader>
 

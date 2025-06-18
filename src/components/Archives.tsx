@@ -8,18 +8,22 @@ export const ContentDiv = styled.div`
     justify-content: flex-start;
     width: 100%;
     font-size: calc(0.5rem + 1vw);
-    padding-top: 2rem; /* Add some top padding */
+    padding-top: 2rem;
 `;
 
 const StyledHeader = styled.h1`
     text-align: center;
     margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledMiniHeader = styled.h3`
     text-align: center;
     grid-column: span 2;
     font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledLink = styled.p`
@@ -47,11 +51,11 @@ export default function Archives() {
             <StyledHeader>Archives</StyledHeader>
             <StyledMiniHeader>Seasons</StyledMiniHeader>
             <StyledLink>
-                <Link to="/archives/seasons/Season1">Season 1</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1">Season 1</Link>
                 <p style={{color: '#FFFFFF', fontWeight: 'bold'}}>Spring 2025 Season</p>
             </StyledLink>
             <StyledLink>
-                <Link to="/archives/seasons/Season2">Season 2</Link>
+                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2">Season 2</Link>
                 <p style={{color: '#FFFFFF', fontWeight: 'bold'}}>Fall 2025 Season</p>
             </StyledLink>
         </ContentDiv>

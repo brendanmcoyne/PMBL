@@ -13,29 +13,40 @@ export const ContentDiv = styled.div`
 const StyledHeader = styled.h1`
     text-align: center;
     margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledMiniHeader = styled.h3`
     text-align: center;
     font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledPick = styled.h4`
     text-align: center;
     margin: 0;
     font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledManager = styled.p`
     text-align: center;
     font-size: 0.8rem;
     margin: 0;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledPlayer = styled.h5`
     text-align: center;
     margin: 0;
     font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    
 `;
 
 const StyledRound = styled.div`
@@ -44,11 +55,12 @@ const StyledRound = styled.div`
     gap: 30px;
     width: 60%; 
 `;
+
 const Pick = styled.span`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #f9f9f9;
+    background-color: darkblue;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 1rem;
@@ -58,7 +70,7 @@ const Pick = styled.span`
 const Trade = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #f9f9f9;
+    background-color: darkblue;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 1rem;
@@ -88,7 +100,7 @@ export default function Draft1 () {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link to="/archives/seasons/Season1">Back</Link>
+                <Link style={{color: "darkblue"}} to="/archives/seasons/Season1">Back</Link>
             </ToggleButton>
             <StyledHeader>Season 1 PMBL Draft</StyledHeader>
             <StyledMiniHeader>Round 1</StyledMiniHeader>

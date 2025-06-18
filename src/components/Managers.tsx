@@ -5,6 +5,9 @@ import type { Manager } from "../data/ManagerNotes.ts";
 import { rosters } from "../data/Season1Rosters.ts";
 import type { Roster } from "../data/Season1Rosters.ts";
 
+interface ToggleButtonProps {
+    active: boolean;
+}
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -19,6 +22,8 @@ export const ContentDiv = styled.div`
 const StyledHeader = styled.h1`
     text-align: center; 
     margin-bottom: 1rem; 
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -36,6 +41,8 @@ const DivisionHeader = styled.h3`
     text-align: center;
     grid-column: span 2;
     font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const Manager = styled.div`
@@ -47,6 +54,8 @@ const Manager = styled.div`
     font-size: 1.6rem;
     text-align: center;
     padding: 40px 80px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     transition: transform 0.2s;
 
     &:hover {
@@ -110,10 +119,6 @@ const Stat = styled.p`
     font-size: large;
 `;
 
-interface ToggleButtonProps {
-    active: boolean;
-}
-
 const ToggleButton = styled.button<ToggleButtonProps>`
     margin: 0 0.5rem;
     padding: 0.5rem 1rem;
@@ -135,6 +140,10 @@ const ToggleButton = styled.button<ToggleButtonProps>`
   `}
 `;
 
+const TileSetup = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
 export default function Managers() {
     const [selectedManager, setSelectedManager] = useState<Manager | null>(null);
     const [activeModalTab, setActiveModalTab] = useState<"info" | "roster">("info");
@@ -162,7 +171,10 @@ export default function Managers() {
                         }}
                         style={{ backgroundColor: manager.color }}
                     >
-                        <ManagerName>{manager.name}</ManagerName>
+                        <TileSetup>
+                            <img src={manager.emblem} alt={manager.name}/>
+                            <ManagerName>{manager.name}</ManagerName>
+                        </TileSetup>
                     </Manager>
                 ))}
             </DivisionDiv>
