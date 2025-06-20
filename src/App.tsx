@@ -5,8 +5,6 @@ import { useEffect, useState, useRef } from "react";
 
 import "/globals.css";
 
-
-import Header from "./components/Header.tsx";
 import Footer from "./components/Footer.tsx";
 import Nav from "./components/Nav.tsx";
 import LoadingScreen from "./components/LoadingScreen.tsx";
@@ -119,7 +117,6 @@ function Root() {
             {showLoading && (
                 <LoadingScreen message={isFirstLoad ? "Welcome!" : "Loading"} />
             )}
-            <Header />
             <Nav />
             <MainContent>
                 <Routes>

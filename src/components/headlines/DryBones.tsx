@@ -6,39 +6,118 @@ export const ContentDiv = styled.div`
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    font-size: calc(0.5rem + 1vw);
-    padding-top: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 3rem 1rem;
+    color: #f0f0f0;
+`;
+
+const Passage = styled.span`
+  display: block;
+  max-width: 800px;
+  text-align: left;
+  margin: 20px auto;
+  line-height: 1.7;
 `;
 
 const StyledHeader = styled.h1`
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-    margin-bottom: 1rem;
+    max-width: 90%;
+    font-weight: 600;
+`;
+
+const ArticleMeta = styled.div`
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 8px 0 16px 0;
+  font-style: italic;
+  text-align: center;
+`;
+
+const SeparatorLine = styled.hr`
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0 0 30px 0;
+  width: 80%;
+  max-width: 600px;
 `;
 
 const GenImage = styled.img`
-    width: 500px;
-    height: 300px;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
     border: 3px solid black;
     padding: 8px;
     margin: 20px 0;
     background-color: white;
 `;
 
-const Passage = styled.span`
-    display: block;
-    text-align: left;
-    margin: 30px 100px;
-    
+const Ruling = styled.div`
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #f4e1c1;
+    color: #222;
+    border-radius: 8px;
+    border: 2px solid #444;
+    padding: 25px 30px;
+    font-family: "Georgia", serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    h2 {
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 2px solid #8b6e3a;
+        padding-bottom: 8px;
+        color: #6b4e1a;
+    }
+
+    p, pre {
+        margin: 1rem 0;
+        white-space: pre-wrap;
+    }
 `;
 
-const Ruling = styled.span`
-    display: block;
-    text-align: center;
-    margin: 30px 100px;
-    background-color: burlywood;
-    border-radius: 5px;
-    border: 1px solid black;
+const NewsletterRuling = styled.div`
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fef9e7; /* soft cream */
+  color: #333;
+  border-radius: 8px;
+  border: 1.5px solid #d4c27a;
+  padding: 20px 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #b89830;
+    border-bottom: 2px solid #d4c27a;
+    padding-bottom: 6px;
+    letter-spacing: 1.2px;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  em {
+    font-style: italic;
+    color: #555;
+  }
 `;
 
 export default function DryBones() {
@@ -46,6 +125,10 @@ export default function DryBones() {
         <ContentDiv>
             <StyledHeader>Dry Bones gets a slap on the wrist</StyledHeader>
             <GenImage src="/Caucasian bones playground.png" alt="Dry Bones" />
+            <ArticleMeta>
+                Written by: PMBL News — May 6, 2025
+            </ArticleMeta>
+            <SeparatorLine />
             <Passage>
                 Around Week 3, star hitter Dry Bones from Manager Morgan's Diddy Monkeys began facing severe backlash due to accusations made
                 about him the week prior. The league was led to believe that Dry Bones had been spotted numerous times around preschools at
@@ -69,21 +152,23 @@ export default function DryBones() {
             </Passage>
 
             <Ruling>
-                IN THE COURT OF HONORABLE JUDGE TOADSWORTH Mushroom Kingdom District
-                Court Case No. 24-BONE-659
-                The Kingdom v. Dry Bones
-                VERDICT
-                After four grueling hours of testimony, the Court has reached a verdict in the matter of The Kingdom v. Dry Bones, in which the skeletal
-                Koopa “Caucasian Bones” was accused of “generally creeping out the preschool and exhibiting suspicious behavior toward individuals under
-                the age of 18.”
-                The jury - consisting of five Goombas, one Chain Chomp, Rosalina, and Black Toad - find the defendant:
-                Not guilty of unlawful “bonering” in a minor-zoned area,but guilty of persistent loitering and behavior deemed unsettling and inappropriate
-                for proximity to minors.
-                Sentence: Dry Bones is hereby ordered to remain at least 500 feet away from all educational institutions, playgrounds, mini-golf courses,
-                and nurseries. Furthermore, he must attend six weeks of therapy, hosted by Libloshi. If he follows through by not skipping any days of
-                therapy and maintaining his distance at all times, he will not be suspended for any playing time in Season 2 of the PMBL. Court is adjourned.
-                This verdict is final, unless appealed to the High Court of Peach’s Castle.
-                Hon. Judge Toadsworth presiding
+                <h2>VERDICT</h2>
+                <pre>
+                    IN THE COURT OF HONORABLE JUDGE TOADSWORTH Mushroom Kingdom District{"\n"}
+                    Court Case No. 24-BONE-659{"\n"}
+                    The Kingdom v. Dry Bones{"\n\n"}
+                    After four grueling hours of testimony, the Court has reached a verdict in the matter of The Kingdom v. Dry Bones, in which the skeletal
+                    Koopa “Caucasian Bones” was accused of “generally creeping out the preschool and exhibiting suspicious behavior toward individuals under
+                    the age of 18.”{"\n\n"}
+                    The jury - consisting of five Goombas, one Chain Chomp, Rosalina, and Black Toad - find the defendant:
+                    Not guilty of unlawful “bonering” in a minor-zoned area,but guilty of persistent loitering and behavior deemed unsettling and inappropriate
+                    for proximity to minors.{"\n\n"}
+                    Sentence: Dry Bones is hereby ordered to remain at least 500 feet away from all educational institutions, playgrounds, mini-golf courses,
+                    and nurseries. Furthermore, he must attend six weeks of therapy, hosted by Libloshi. If he follows through by not skipping any days of
+                    therapy and maintaining his distance at all times, he will not be suspended for any playing time in Season 2 of the PMBL. Court is adjourned.{"\n\n"}
+                    This verdict is final, unless appealed to the High Court of Peach’s Castle.{"\n"}
+                    Hon. Judge Toadsworth presiding
+                </pre>
             </Ruling>
 
             <Passage>
@@ -106,25 +191,32 @@ export default function DryBones() {
                 The Mushroom Kingdom Herald even went on to make a statement about this supposed robbery of the legal system:
             </Passage>
 
-            <Ruling>
-                JUDGE TOOK TRIP FROM BOWSER
-                By: Nose, Mushroom Kingdom Herald staff reporter
-
-                A top federal judge took an all-expense trip to Seaside Kingdom from Bowser, according to leaked financial records.
-
-                Judge Toadsworth visited the beloved vacation spot with his extended family without paying a dime, instead using
-                a trip voucher gifted by a top Bowser aide.
-
-                This comes as Toadsworth faces controversy after his ruling on a recent high-profile case gave an accused child creep no jail time.
-
-                “It’s a clear ethical violation,” said Elvin Gadd, a professor of law at Western Mushroom University. “This is grounds for disbarment.”
-
-                Toadsworth declined to comment.
-
-                A representative for Bowser declined an interview but provided a written statement.
-
-                “Bowser is a family man who deeply believes in this kingdom’s justice system,” the representative wrote.
-            </Ruling>
+            <NewsletterRuling>
+                <h3>JUDGE TOOK TRIP FROM BOWSER</h3>
+                <p><em>By: Nose, Mushroom Kingdom Herald staff reporter</em></p>
+                <p>
+                    A top federal judge took an all-expense trip to Seaside Kingdom from Bowser, according to leaked financial records.
+                </p>
+                <p>
+                    Judge Toadsworth visited the beloved vacation spot with his extended family without paying a dime, instead using
+                    a trip voucher gifted by a top Bowser aide.
+                </p>
+                <p>
+                    This comes as Toadsworth faces controversy after his ruling on a recent high-profile case gave an accused child creep no jail time.
+                </p>
+                <p>
+                    “It’s a clear ethical violation,” said Elvin Gadd, a professor of law at Western Mushroom University. “This is grounds for disbarment.”
+                </p>
+                <p>
+                    Toadsworth declined to comment.
+                </p>
+                <p>
+                    A representative for Bowser declined an interview but provided a written statement.
+                </p>
+                <p>
+                    “Bowser is a family man who deeply believes in this kingdom’s justice system,” the representative wrote.
+                </p>
+            </NewsletterRuling>
 
             <Passage>
                 The league as a whole is now concerned that Toadsworth, AKA "The Judge", has ruined his credibility and his draft stock going into

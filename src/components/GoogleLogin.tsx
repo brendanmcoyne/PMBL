@@ -12,13 +12,20 @@ type GoogleUser = {
 const Button = styled.button`
     background-color: lightgray;
     color: darkblue;
-    margin-right: 10px;
-    padding: 8px 16px;
-    border: none;
+    width: 100px;           
+    height: 40px;           
+    font-size: 1.1rem;
+    font-weight: 500;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: gray;
+    }
 `;
+
 
 const ProfImage = styled.img`
     background-color: white;

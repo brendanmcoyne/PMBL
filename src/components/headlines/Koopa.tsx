@@ -6,19 +6,41 @@ export const ContentDiv = styled.div`
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    font-size: calc(0.5rem + 1vw);
-    padding-top: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+    color: white;
+`;
+
+const ArticleMeta = styled.div`
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 8px 0 16px 0;
+  font-style: italic;
+  text-align: center;
+`;
+
+const SeparatorLine = styled.hr`
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0 0 30px 0;
+  width: 80%;
+  max-width: 600px;
 `;
 
 const StyledHeader = styled.h1`
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-    margin-bottom: 1rem;
+    max-width: 90%;
+    font-weight: 600;
 `;
 
 const GenImage = styled.img`
-    width: 500px;
-    height: 300px;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
     border: 3px solid black;
     padding: 8px;
     margin: 20px 0;
@@ -27,25 +49,52 @@ const GenImage = styled.img`
 
 const Passage = styled.span`
     display: block;
+    max-width: 800px;
     text-align: left;
-    margin: 30px 100px;
-    
+    margin: 20px auto;
+    line-height: 1.7;
 `;
 
-const Ruling = styled.span`
-    display: block;
+const Ruling = styled.div`
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #f4e1c1;
+    color: #222;
+    border-radius: 8px;
+    border: 2px solid #444;
+    padding: 25px 30px;
+    font-family: "Georgia", serif;
+    font-size: 1rem;
+    line-height: 1.6;
     text-align: center;
-    margin: 30px 100px;
-    background-color: burlywood;
-    border-radius: 5px;
-    border: 1px solid black;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    h2 {
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 2px solid #8b6e3a;
+        padding-bottom: 8px;
+        color: #6b4e1a;
+    }
+
+    p, pre {
+        margin: 1rem 0;
+        white-space: pre-wrap;
+    }
 `;
 
 export default function Koopa() {
     return (
         <ContentDiv>
             <StyledHeader>Koopa found Guilty of Assault</StyledHeader>
-            <GenImage src="/koopa_behind_the_bars.jpg" alt="Koopa" style={{ width: "500px", height: "300px", objectFit: "cover" }} />
+            <GenImage src="/koopa_behind_the_bars.jpg" alt="Koopa"/>
+            <ArticleMeta>
+                Written by: PMBL News — June 2, 2025
+            </ArticleMeta>
+            <SeparatorLine />
             <Passage>
                 After the Week 6 win against Manager Isaac and the Mario Fireballs, two of Manager Justin's players, Red Shy Guy and
                 Green Shy Guy were shot outside of Mario Stadium in a hit and run. This news was broadcasted on the Week 7 news report
@@ -84,28 +133,30 @@ export default function Koopa() {
             </Passage>
 
             <Ruling>
-                IN THE COURT OF HONORABLE JUDGE TOADSWORTH Mushroom Kingdom District Court Case No. 25-KOOPA-912
-                The Kingdom v. Koopa Troopa
-                VERDICT
-                After weeks of testimonies and deliberation, the Court has reached a verdict in the matter of The Kingdom v. Koopa Troopa, in which
-                the defendant Green Koopa was accused of “vehicular shelling” of both Red Shy Guy, also known as Ruy Guy, and Green Shy Guy, known as
-                Gruy Guy, shortly after their 9-4 win against Isaac in Week 6.
-                The jury — consisting of Yellow Shy Guy, Green Dry Bones, 2 Piantas, Baby Luigi, and 4 Nokis — finds the defendant:
-                Guilty of aggravated assault with a deadly weapon from his Bullet Bike
-                Guilty of reckless endangerment by launching projectiles from a moving vehicle
-                Guilty of speeding in a school zone during school hours
-                Sentence: Koopa Troopa has been SUSPENDED for the first 3 games of the Season 2 PMBL season. He will still be available on draft
-                night, however managers have been informed he may not play until Week 4. Any MVPs that Koopa Troopa wins during Season 2 will be
-                STRIPPED and given to the 2nd highest point scoring player. He owes $16,750 in damages to the victims for medical bills and
-                emotional damages. Violating his 3 game suspension will cause an indefinite suspension from playing time. His license will
-                not be revoked.
-
-                The Jury has also noted that both the Koopa Klux Klan and manager James had no involvement in the drive by shooting. No evidence
-                was found for any teammates or klansman being aware of the intentions of Koopa, and neither the klan nor the team will be punished
-                due to his actions.
-                This verdict is final, unless appealed to the High Court of Peach’s Castle.
-                Hon. Judge Toadsworth presiding
+                <h2>VERDICT</h2>
+                <pre>
+    IN THE COURT OF HONORABLE JUDGE TOADSWORTH Mushroom Kingdom District{"\n"}
+                    Court Case No. 25-KOOPA-912{"\n"}
+                    The Kingdom v. Koopa Troopa{"\n\n"}
+                    After weeks of testimonies and deliberation, the Court has reached a verdict in the matter of The Kingdom v. Koopa Troopa, in which
+                    the defendant Green Koopa was accused of “vehicular shelling” of both Red Shy Guy, also known as Ruy Guy, and Green Shy Guy, known as
+                    Gruy Guy, shortly after their 9-4 win against Isaac in Week 6.{"\n\n"}
+                    The jury — consisting of Yellow Shy Guy, Green Dry Bones, 2 Piantas, Baby Luigi, and 4 Nokis — finds the defendant:
+                    Guilty of aggravated assault with a deadly weapon from his Bullet Bike, guilty of reckless endangerment by launching projectiles from
+                    a moving vehicle, and guilty of speeding in a school zone during school hours{"\n\n"}
+                    Sentence: Koopa Troopa has been SUSPENDED for the first 3 games of the Season 2 PMBL season. He will still be available on draft
+                    night, however managers have been informed he may not play until Week 4. Any MVPs that Koopa Troopa wins during Season 2 will be
+                    STRIPPED and given to the 2nd highest point scoring player. He owes $16,750 in damages to the victims for medical bills and
+                    emotional damages. Violating his 3 game suspension will cause an indefinite suspension from playing time. His license will
+                    not be revoked.{"\n\n"}
+                    The Jury has also noted that both the Koopa Klux Klan and manager James had no involvement in the drive by shooting. No evidence
+                    was found for any teammates or klansman being aware of the intentions of Koopa, and neither the klan nor the team will be punished
+                    due to his actions. {"\n\n"}
+                    This verdict is final, unless appealed to the High Court of Peach’s Castle.
+                    Hon. Judge Toadsworth presiding
+  </pre>
             </Ruling>
+
 
             <Passage>
                 Manager Justin was relieved in the fact that his players got retribution, and that Koopa was brought to justice. Manager James was also
