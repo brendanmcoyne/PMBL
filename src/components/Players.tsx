@@ -2,6 +2,9 @@ import { styled } from "styled-components";
 import {useEffect, useState} from "react";
 import { players } from "../data/playerNames.ts";
 import type { Player } from "../data/playerNames.ts";
+import { stats } from "../data/playerStats.ts";
+import type { Stat } from "../data/playerStats.ts";
+
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -80,11 +83,21 @@ const ModalContent = styled.div`
     border-radius: 10px;
     width: 90%;
     max-width: 500px;
-    max-height: 90vh; 
-    overflow-y: auto;  
+    max-height: 90vh;
+    overflow: hidden;
     text-align: center;
     position: relative;
     border: 2px solid black;
+`;
+
+const ModalScrollWrapper = styled.div`
+    max-height: calc(90vh - 4rem); 
+    overflow-y: auto;
+    padding: 1rem; 
+    box-sizing: border-box;
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
 `;
 
 const CloseButton = styled.button`
@@ -97,8 +110,6 @@ const CloseButton = styled.button`
     cursor: pointer;
     border-radius: 50%; 
     background-color: red;
-    border: 2px solid red;     
-    display: flex;       
     align-items: center;
     justify-content: center;
     padding: 0;
@@ -134,6 +145,7 @@ const SortButton = styled.button<{ active?: boolean }>`
 export default function Players() {
     const [sortOption, setSortOption] = useState("az");
     const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
+    const [selectedStat, setSelectedStat] = useState<Stat | null>(null);
 
     const colorOrder = [
         "Red", "Orange", "Yellow", "Light Green", "Green",
@@ -182,37 +194,55 @@ export default function Players() {
 
             <DivisionDiv>
                 {sortedPlayers.map((player: Player) => (
-                    <Player key={player.name} onClick={() => setSelectedPlayer(player)}>
+                    <Player
+                        key={player.name}
+                        onClick={() => {
+                            setSelectedPlayer(player);
+                            const statForPlayer = stats.find(stat => stat.name === player.name);
+                            setSelectedStat(statForPlayer || null);
+                        }}
+                    >
                         <GenImage src={player.src} alt={player.name} />
                         <PlayerName>{player.name}</PlayerName>
                     </Player>
                 ))}
             </DivisionDiv>
 
-            {selectedPlayer && (
-                <ModalBackground onClick={() => setSelectedPlayer(null)}>
+            {selectedPlayer && selectedStat && (
+                <ModalBackground onClick={() => {
+                    setSelectedPlayer(null);
+                    setSelectedStat(null);
+                }}>
                     <ModalContent onClick={(e) => e.stopPropagation()}>
-                        <CloseButton onClick={() => setSelectedPlayer(null)}>✕</CloseButton>
-                        <h2>{selectedPlayer.name}</h2>
-                        <p>{selectedPlayer.captain ? "Captain" : ""}</p>
-                        <img src={selectedPlayer.src} alt={selectedPlayer.name} width="150" />
-                        {selectedPlayer.awards && selectedPlayer.awards.length > 0 && (
-                            <>
-                                <StyledMiniHeader>Awards</StyledMiniHeader>
-                                <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-                                    {selectedPlayer.awards.map((award, index) => (
+                        <CloseButton onClick={() => {setSelectedPlayer(null);setSelectedStat(null);}}>✕</CloseButton>
+                        <ModalScrollWrapper>
+                            <h2>{selectedPlayer.name}</h2>
+                            <p>{selectedPlayer.captain ? "Captain" : ""}</p>
+                            <img src={selectedPlayer.src} alt={selectedPlayer.name} width="150" />
 
-                                        <li key={index}>
-                                            {award.name} (Season {award.season})
-                                        </li>
-                                    ))}
-                                </ul>
-                            </>
-                        )}
-                        <StyledMiniHeader>About</StyledMiniHeader>
-                        <p>Color: {selectedPlayer.color}</p>
-                        <p>Games Played: {selectedPlayer.gp}</p>
+                            {Array.isArray(selectedPlayer.awards) && selectedPlayer.awards.length > 0 && (
+                                <>
+                                    <StyledMiniHeader>Awards</StyledMiniHeader>
+                                    <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+                                        {selectedPlayer.awards.map((award, index) => (
+                                            <li key={index}>
+                                                {award.name} (Season {award.season})
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </>
+                            )}
 
+                            <StyledMiniHeader>About</StyledMiniHeader>
+                            <p>Color: {selectedPlayer.color}</p>
+                            <p>Games Played: {selectedPlayer.gp}</p>
+
+                            <StyledMiniHeader>Stats</StyledMiniHeader>
+                            <p>Batting: {selectedStat.batting}</p>
+                            <p>Pitching: {selectedStat.pitching}</p>
+                            <p>Fielding: {selectedStat.fielding}</p>
+                            <p>Running: {selectedStat.running}</p>
+                        </ModalScrollWrapper>
                     </ModalContent>
                 </ModalBackground>
             )}

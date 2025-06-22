@@ -12,7 +12,7 @@ type GoogleUser = {
 const Button = styled.button`
     background-color: lightgray;
     color: darkblue;
-    width: 100px;           
+    width: 120px;           
     height: 40px;           
     font-size: 1.1rem;
     font-weight: 500;
@@ -26,16 +26,20 @@ const Button = styled.button`
     }
 `;
 
+const UserName = styled.span`
+  color: white;
+  font-weight: 600;
+`;
 
 const ProfImage = styled.img`
     background-color: white;
     border: 1px solid white;
 `;
+
 export default function GoogleLogin() {
     const [user, setUser] = useState<GoogleUser | null>(null);
     const [selectedCaptain, setSelectedCaptain] = useState<string | null>(null);
 
-    // Load user and captain from localStorage on mount
     useEffect(() => {
         const storedUser = localStorage.getItem("googleUser");
         if (storedUser) {
@@ -113,25 +117,17 @@ export default function GoogleLogin() {
             {user ? (
                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                     <ProfImage
-                        src={
-                            selectedCaptain && captainImages[selectedCaptain]
-                                ? captainImages[selectedCaptain]
-                                : user.picture
-                        }
+                        src={selectedCaptain && captainImages[selectedCaptain] ? captainImages[selectedCaptain] : !selectedCaptain ? "/LeagueLogo_noWords.png" : user.picture}
                         alt={user.name}
-                        style={{
-                            borderRadius: "50%",
-                            width: 32,
-                            height: 32,
-                            objectFit: "cover",
-                        }}
+                        style={{borderRadius: "50%", width: 32, height: 32, objectFit: "cover",}}
                     />
-                    <span>{user.name}</span>
+                    <UserName>{user.name}</UserName>
                     <Button onClick={handleLogout}>Sign Out</Button>
                 </div>
             ) : (
                 <Button onClick={() => login()}>Sign In</Button>
             )}
+
         </div>
     );
 }

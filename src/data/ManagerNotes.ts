@@ -1,3 +1,9 @@
+type Penant = {
+    season: number;
+    type: string;
+    division?: string;
+}
+
 export type Manager = {
     name: string;
     emblem: string;
@@ -5,6 +11,7 @@ export type Manager = {
     color: string;
     record: string;
     division: string;
+    penants?: Penant[];
     divships?: number;
     playoffs?: number;
     champs?: number;
@@ -29,6 +36,10 @@ export const managers: Manager[] = [
         color: "#CC0000",
         record: "7 - 3",
         division: "East",
+        penants: [
+            {season: 1, type: "World Series Runner Up"},
+            {season: 1, type: "Division Champion", division: "East"}
+        ],
         playoffs: 1,
         divships: 1,
         champs: 0,
@@ -61,7 +72,10 @@ export const managers: Manager[] = [
         src: "/managers/Morgan.jpg",
         color: "#FF00FF",
         record: "5 - 5",
-        division: "East",
+        division: "West",
+        penants: [
+            {season: 1, type: "Division Champion", division: "West"}
+        ],
         playoffs: 1,
         divships: 1,
         champs: 0,
@@ -73,6 +87,9 @@ export const managers: Manager[] = [
         color: "#F1C232",
         record: "6 - 4",
         division: "East",
+        penants: [
+            {season: 1, type: "World Series Champion"},
+        ],
         playoffs: 1,
         divships: 0,
         champs: 1,
