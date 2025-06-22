@@ -59,7 +59,8 @@ const Player = styled.div`
 
 const GenImage = styled.img`
     width: 150px;
-    height: auto;
+    height: 150px;   
+    object-fit: cover; 
     border: 3px solid black;
     padding: 5px;
     background-color: white;
@@ -174,7 +175,7 @@ export default function Players() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setReady(true);
-        }, 100);
+        }, 50);
         return () => clearTimeout(timer);
     }, []);
 

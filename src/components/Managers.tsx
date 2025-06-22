@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import { managers } from "../data/ManagerNotes.ts";
 import type { Manager } from "../data/ManagerNotes.ts";
 import { rosters } from "../data/Season1Rosters.ts";
@@ -76,16 +76,18 @@ const ModalBackground = styled.div`
 `;
 
 const ModalContent = styled.div`
-    background: white;
+    background: #f9f9f9;
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 90%;
-    max-width: 500px;
-    max-height: 90vh; 
+    max-width: 550px;
+    max-height: 90vh;
     overflow-y: auto;
     text-align: center;
     position: relative;
-    border: 2px solid black;
+    border: none;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    font-family: 'Segoe UI', sans-serif;
 `;
 
 const CloseButton = styled.button`
@@ -97,9 +99,7 @@ const CloseButton = styled.button`
     font-size: 1.2rem;
     cursor: pointer;
     border-radius: 50%; 
-    background-color: red;
-    border: 2px solid red;     
-    display: flex;       
+    background-color: red;     
     align-items: center;
     justify-content: center;
     padding: 0;
@@ -119,25 +119,30 @@ const Stat = styled.p`
     font-size: large;
 `;
 
+const ModalScrollWrapper = styled.div`
+    max-height: calc(90vh - 4rem);
+    overflow-y: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+`;
+
 const ToggleButton = styled.button<ToggleButtonProps>`
     margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.2rem;
     font-size: 1rem;
     cursor: pointer;
-    border: 1px solid black;
-    background-color: white;
-    border-radius: 5px;
+    border: none;
+    background-color: ${({ active }) => (active ? "#4a90e2" : "#e0e0e0")};
+    color: ${({ active }) => (active ? "white" : "black")};
+    border-radius: 20px;
+    transition: background-color 0.2s, color 0.2s;
 
     &:hover {
-        background-color: lightgray;
+        background-color: ${({ active }) => (active ? "#357ABD" : "#d3d3d3")};
     }
-
-    ${({ active }) =>
-            active &&
-            `
-      font-weight: bold;
-      background-color: #d3d3d3;
-  `}
 `;
 
 const TileSetup = styled.div`
@@ -153,6 +158,17 @@ export default function Managers() {
     const getRosterForManager = (managerName: string): Roster | undefined => {
         return rosters.find((r) => r.manager === managerName);
     };
+
+    const [ready, setReady] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setReady(true);
+        }, 50);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (!ready) return null;
 
     return (
         <ContentDiv>
@@ -183,7 +199,7 @@ export default function Managers() {
                 <ModalBackground onClick={() => setSelectedManager(null)}>
                     <ModalContent onClick={(e) => e.stopPropagation()}>
                         <CloseButton onClick={() => setSelectedManager(null)}>✕</CloseButton>
-
+                        <ModalScrollWrapper>
                         {/* Toggle Buttons */}
                         <div style={{ marginBottom: "1rem" }}>
                             <ToggleButton
@@ -217,14 +233,38 @@ export default function Managers() {
                         {activeModalTab === "roster" && (
                             <>
                                 <StyledMiniHeader>Season 1 Roster</StyledMiniHeader>
+
+                                {/* Accolades Display */}
+                                {getRosterForManager(selectedManager.name)?.accolades && (
+                                    <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap", gap: "8px", marginBottom: "10px" }}>
+                                        {getRosterForManager(selectedManager.name)?.accolades?.map((acc) => (
+                                            <div
+                                                key={acc.type}
+                                                style={{
+                                                    backgroundColor: acc.color.toLowerCase(),
+                                                    color: "white",
+                                                    padding: "4px 8px",
+                                                    borderRadius: "8px",
+                                                    fontSize: "0.9rem",
+                                                    fontWeight: "bold"
+                                                }}
+                                            >
+                                                {acc.type}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+
                                 <p><strong>Captain:</strong> {getRosterForManager(selectedManager.name)?.captain || "N/A"}</p>
+
                                 <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
                                     {getRosterForManager(selectedManager.name)?.roster.map((player) => (
-                                        <li>{player.name}</li>
+                                        <li key={player.name}>{player.name}</li>
                                     ))}
                                 </ul>
                             </>
                         )}
+                        </ModalScrollWrapper>
                     </ModalContent>
                 </ModalBackground>
             )}

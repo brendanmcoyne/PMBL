@@ -1,4 +1,9 @@
-export type Team = {
+type Accs = {
+    type: string;
+    color: string;
+}
+
+type Team = {
     name: string,
 }
 
@@ -6,6 +11,7 @@ export type Roster = {
     manager: string;
     captain: string;
     roster: Team[];
+    accolades?: Accs[];
 }
 
 export const rosters: Roster[] = [
@@ -24,6 +30,11 @@ export const rosters: Roster[] = [
             {name: "Gramms"},
             {name: "Green Toad"},
             {name: "Michelle Obama"},
+        ],
+        accolades: [
+            {type: "World Series Runners Up", color: "Silver"},
+            {type: "Best Record Champions", color: "Green"},
+            {type: "East Division Champions", color: "Blue"},
         ]
     },
     {
@@ -58,6 +69,9 @@ export const rosters: Roster[] = [
             { name: "Paratroopa" },
             { name: "Entity 404" },
             { name: "Tate McRae" }
+        ],
+        accolades: [
+            {type: "World Series Champions", color: "Gold"},
         ]
     },
     {
@@ -126,6 +140,9 @@ export const rosters: Roster[] = [
             { name: "Gramps" },
             { name: "Yellow Shy Guy" },
             { name: "Danny B" }
+        ],
+        accolades: [
+            {type: "West Division Champions", color: "Red"},
         ]
     },
     {

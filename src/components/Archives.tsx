@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
+import {useEffect, useState} from "react";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -46,6 +47,18 @@ const StyledLink = styled.p`
 `;
 
 export default function Archives() {
+
+    const [ready, setReady] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setReady(true);
+        }, 50);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (!ready) return null;
+
     return(
         <ContentDiv>
             <StyledHeader>Archives</StyledHeader>

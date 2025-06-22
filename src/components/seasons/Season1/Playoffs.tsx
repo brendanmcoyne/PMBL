@@ -88,6 +88,8 @@ const Game = styled.h3`
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
+
+
 export default function Playoffs1() {
     return (
         <ContentDiv>

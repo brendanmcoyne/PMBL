@@ -8,9 +8,9 @@ export const ContentDiv = styled.div`
     justify-content: flex-start;
     width: 100%;
     font-size: calc(0.5rem + 1vw);
-    padding-top: 2rem; /* Add some top padding */
+    padding-top: 2rem;
+    min-height: 100vh;
 `;
-
 const StyledHeader = styled.h1`
     text-align: center;
     margin-bottom: 1rem;
@@ -26,26 +26,13 @@ const StyledMiniHeader = styled.h3`
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
-const TeamDetails = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-`;
-
 const DivisionDiv = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
-`;
-
-const DetailContainer = styled.div`
-    width: 80px;
-    text-align: center;
+    margin-bottom: 2rem;
+    width: 90%;
+    max-width: 800px;
 `;
 
 const ToggleButton = styled.button`
@@ -59,6 +46,26 @@ const ToggleButton = styled.button`
     margin-left: 2rem;
 `;
 
+const GridRow = styled.div`
+    display: grid;
+    grid-template-columns: 140px repeat(6, 1fr);
+    gap: 10px;
+    padding: 0.75rem 1rem;
+    align-items: center;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid white;
+    background-color: #12121c;
+    border-radius: 10px;
+`;
+
+const HeaderRow = styled(GridRow)`
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-bottom: 2px solid white;
+`;
+
 export default function Standings1() {
     return (
         <ContentDiv>
@@ -68,100 +75,100 @@ export default function Standings1() {
             <StyledHeader>Season 1 PMBL Standings</StyledHeader>
             <DivisionDiv>
             <StyledMiniHeader>East Division</StyledMiniHeader>
-                <TeamDetails>
-                    <DetailContainer>Team</DetailContainer>
-                    <DetailContainer>Record</DetailContainer>
-                    <DetailContainer>Div</DetailContainer>
-                    <DetailContainer>Streak</DetailContainer>
-                    <DetailContainer>PF</DetailContainer>
-                    <DetailContainer>PA</DetailContainer>
-                    <DetailContainer>PD</DetailContainer>
-                </TeamDetails>
-            <TeamDetails>
-                <DetailContainer style={{ fontWeight: "bold", width: "100px" }}>Brendan</DetailContainer>
-                <DetailContainer>7 - 3</DetailContainer>
-                <DetailContainer>5 - 1</DetailContainer>
-                <DetailContainer>W3</DetailContainer>
-                <DetailContainer>71</DetailContainer>
-                <DetailContainer>53</DetailContainer>
-                <DetailContainer>18</DetailContainer>
-            </TeamDetails>
-            <TeamDetails>
-                <DetailContainer style={{ fontWeight: "bold", width: "100px" }}>James</DetailContainer>
-                <DetailContainer>6 - 4</DetailContainer>
-                <DetailContainer>3 - 3</DetailContainer>
-                <DetailContainer>L1</DetailContainer>
-                <DetailContainer>85</DetailContainer>
-                <DetailContainer>72</DetailContainer>
-                <DetailContainer>13</DetailContainer>
-            </TeamDetails>
-            <TeamDetails>
-                <DetailContainer style={{ fontWeight: "bold", width: "100px" }}>Justin</DetailContainer>
-                <DetailContainer>6 - 4</DetailContainer>
-                <DetailContainer>2 - 4</DetailContainer>
-                <DetailContainer>L1</DetailContainer>
-                <DetailContainer>74</DetailContainer>
-                <DetailContainer>62</DetailContainer>
-                <DetailContainer>12</DetailContainer>
-            </TeamDetails>
-            <TeamDetails>
-                <DetailContainer style={{ fontWeight: "bold", width: "100px" }}>Matt</DetailContainer>
-                <DetailContainer>4 - 6</DetailContainer>
-                <DetailContainer>2 - 4</DetailContainer>
-                <DetailContainer>W1</DetailContainer>
-                <DetailContainer>72</DetailContainer>
-                <DetailContainer>90</DetailContainer>
-                <DetailContainer>-18</DetailContainer>
-            </TeamDetails>
+                <HeaderRow>
+                    <div>Team</div>
+                    <div>Record</div>
+                    <div>Div</div>
+                    <div>Streak</div>
+                    <div>PF</div>
+                    <div>PA</div>
+                    <div>PD</div>
+                </HeaderRow>
+                <GridRow>
+                    <div style={{ fontWeight: "bold" }}>Brendan</div>
+                    <div>7 - 3</div>
+                    <div>5 - 1</div>
+                    <div>W3</div>
+                    <div>71</div>
+                    <div>53</div>
+                    <div>18</div>
+                </GridRow>
+                <GridRow>
+                    <div style={{ fontWeight: "bold" }}>James</div>
+                    <div>6 - 4</div>
+                    <div>3 - 3</div>
+                    <div>L1</div>
+                    <div>85</div>
+                    <div>72</div>
+                    <div>13</div>
+                </GridRow>
+                <GridRow>
+                    <div style={{ fontWeight: "bold" }}>Justin</div>
+                    <div>6 - 4</div>
+                    <div>2 - 4</div>
+                    <div>L1</div>
+                    <div>74</div>
+                    <div>62</div>
+                    <div>12</div>
+                </GridRow>
+                <GridRow>
+                    <div style={{ fontWeight: "bold" }}>Matt</div>
+                    <div>4 - 6</div>
+                    <div>2 - 4</div>
+                    <div>W1</div>
+                    <div>72</div>
+                    <div>90</div>
+                    <div>-18</div>
+                </GridRow>
             </DivisionDiv>
 
             <DivisionDiv>
             <StyledMiniHeader>West Division</StyledMiniHeader>
-                <TeamDetails>
-                    <DetailContainer>Team</DetailContainer>
-                    <DetailContainer>Record</DetailContainer>
-                    <DetailContainer>Div</DetailContainer>
-                    <DetailContainer>Streak</DetailContainer>
-                    <DetailContainer>PF</DetailContainer>
-                    <DetailContainer>PA</DetailContainer>
-                    <DetailContainer>PD</DetailContainer>
-                </TeamDetails>
-            <TeamDetails>
-                <DetailContainer style={{ fontWeight: "bold", width: "100px" }}>Morgan</DetailContainer>
-                <DetailContainer>5 - 5</DetailContainer>
-                <DetailContainer>5 - 1</DetailContainer>
-                <DetailContainer>W1</DetailContainer>
-                <DetailContainer>55</DetailContainer>
-                <DetailContainer>57</DetailContainer>
-                <DetailContainer>-2</DetailContainer>
-            </TeamDetails>
-            <TeamDetails>
-                <DetailContainer style={{ fontWeight: "bold", width: "100px" }}>DANdrew</DetailContainer>
-                <DetailContainer>5 - 5</DetailContainer>
-                <DetailContainer>3 - 3</DetailContainer>
-                <DetailContainer>W3</DetailContainer>
-                <DetailContainer>69</DetailContainer>
-                <DetailContainer>77</DetailContainer>
-                <DetailContainer>-8</DetailContainer>
-            </TeamDetails>
-            <TeamDetails>
-                <DetailContainer style={{ fontWeight: "bold", width: "100px" }}>Isaac</DetailContainer>
-                <DetailContainer>4 - 6</DetailContainer>
-                <DetailContainer>3 - 3</DetailContainer>
-                <DetailContainer>L2</DetailContainer>
-                <DetailContainer>91</DetailContainer>
-                <DetailContainer>61</DetailContainer>
-                <DetailContainer>30</DetailContainer>
-            </TeamDetails>
-            <TeamDetails>
-                <DetailContainer style={{ fontWeight: "bold", width: "100px" }}>Christach</DetailContainer>
-                <DetailContainer>3 - 7</DetailContainer>
-                <DetailContainer>1 - 5</DetailContainer>
-                <DetailContainer>L3</DetailContainer>
-                <DetailContainer>53</DetailContainer>
-                <DetailContainer>99</DetailContainer>
-                <DetailContainer>-46</DetailContainer>
-            </TeamDetails>
+                <HeaderRow>
+                    <div>Team</div>
+                    <div>Record</div>
+                    <div>Div</div>
+                    <div>Streak</div>
+                    <div>PF</div>
+                    <div>PA</div>
+                    <div>PD</div>
+                </HeaderRow>
+                <GridRow>
+                    <div style={{ fontWeight: "bold" }}>Morgan</div>
+                    <div>5 - 5</div>
+                    <div>5 - 1</div>
+                    <div>W1</div>
+                    <div>55</div>
+                    <div>57</div>
+                    <div>-2</div>
+                </GridRow>
+                <GridRow>
+                    <div style={{ fontWeight: "bold" }}>DANdrew</div>
+                    <div>5 - 5</div>
+                    <div>3 - 3</div>
+                    <div>W3</div>
+                    <div>69</div>
+                    <div>77</div>
+                    <div>-8</div>
+                </GridRow>
+                <GridRow>
+                    <div style={{ fontWeight: "bold" }}>Isaac</div>
+                    <div>4 - 6</div>
+                    <div>3 - 3</div>
+                    <div>L2</div>
+                    <div>91</div>
+                    <div>61</div>
+                    <div>30</div>
+                </GridRow>
+                <GridRow>
+                    <div style={{ fontWeight: "bold" }}>Christach</div>
+                    <div>3 - 7</div>
+                    <div>1 - 5</div>
+                    <div>L3</div>
+                    <div>53</div>
+                    <div>99</div>
+                    <div>-46</div>
+                </GridRow>
             </DivisionDiv>
         </ContentDiv>
     )
