@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import GoogleLogin from "./GoogleLogin";
+
 const StyledNavContainer = styled.div`
-  width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;   
+    z-index: 1000;
 `;
 
 const StyledNav = styled.nav`
@@ -10,7 +15,7 @@ const StyledNav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 6px 15px;
     box-sizing: border-box;
     flex-wrap: wrap;
 `;
@@ -18,51 +23,38 @@ const StyledNav = styled.nav`
 const LeftSection = styled.div`
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 5px;
 `;
 
 const StyledList = styled.ul`
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 3px;
     padding: 0;
-    margin: 0;
     flex-wrap: wrap;
 `;
 
 const StyledLink = styled.li`
-    background-color: lightgray;
     font-size: 1.1rem;
-    padding: 10px 0; 
-    width: 120px;    
+    padding: 6px 14px;
     text-align: center;
     border-radius: 6px;
     transition: background-color 0.2s ease-in-out;
-    flex-shrink: 0;
 
     a {
-        color: darkblue;
+        color: white;
         text-decoration: none;
-        font-weight: 500;
-        display: block;
-        width: 100%;
+        font-weight: bold;
         height: 100%;
+        &:hover {
+            text-decoration: underline;
+        }
     }
-
-    &:hover {
-        background-color: gray;
-    }
-`;
-
-const Divider = styled.div`
-    height: 5px;
-    background-color: black;
-    width: 100%;
 `;
 
 const Logo = styled.img`
-  height: 80px;  // increased from 60px
+  height: 70px;
   width: auto;
 `;
 
@@ -83,7 +75,6 @@ export default function Nav() {
                 </LeftSection>
                 <GoogleLogin />
             </StyledNav>
-            <Divider />
         </StyledNavContainer>
     );
 }

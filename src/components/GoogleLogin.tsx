@@ -9,31 +9,45 @@ type GoogleUser = {
     picture: string;
 };
 
-const Button = styled.button`
-    background-color: lightgray;
-    color: darkblue;
-    width: 120px;           
-    height: 40px;           
+const SignButton = styled.span`
+    color: white;
+    cursor: pointer;
     font-size: 1.1rem;
     font-weight: 500;
-    border-radius: 6px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.2s ease-in-out;
+    padding-right: 10px;
 
     &:hover {
-        background-color: gray;
+        text-decoration: underline;
     }
 `;
 
 const UserName = styled.span`
-  color: white;
-  font-weight: 600;
+    color: white;
+    font-weight: 600;
 `;
 
 const ProfImage = styled.img`
     background-color: white;
     border: 1px solid white;
+`;
+
+const Container = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+`;
+
+const UserInfo = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+`;
+
+const Divider = styled.div`
+    width: 1px;
+    height: 24px;
+    background-color: black;
+    margin: 0 8px;
 `;
 
 export default function GoogleLogin() {
@@ -52,7 +66,6 @@ export default function GoogleLogin() {
         }
     }, []);
 
-    // Listen for captain changes
     useEffect(() => {
         const updateCaptain = () => {
             const storedCaptain = localStorage.getItem("selectedCaptain");
@@ -113,21 +126,29 @@ export default function GoogleLogin() {
     };
 
     return (
-        <div>
+        <Container>
             {user ? (
-                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                    <ProfImage
-                        src={selectedCaptain && captainImages[selectedCaptain] ? captainImages[selectedCaptain] : !selectedCaptain ? "/LeagueLogo_noWords.png" : user.picture}
-                        alt={user.name}
-                        style={{borderRadius: "50%", width: 32, height: 32, objectFit: "cover",}}
-                    />
-                    <UserName>{user.name}</UserName>
-                    <Button onClick={handleLogout}>Sign Out</Button>
-                </div>
+                <>
+                    <UserInfo>
+                        <ProfImage
+                            src={
+                                selectedCaptain && captainImages[selectedCaptain]
+                                    ? captainImages[selectedCaptain]
+                                    : !selectedCaptain
+                                        ? "/LeagueLogo_noWords.png"
+                                        : user.picture
+                            }
+                            alt={user.name}
+                            style={{ borderRadius: "50%", width: 32, height: 32, objectFit: "cover" }}
+                        />
+                        <UserName>{user.name}</UserName>
+                    </UserInfo>
+                    <Divider />
+                    <SignButton onClick={handleLogout}>Sign Out</SignButton>
+                </>
             ) : (
-                <Button onClick={() => login()}>Sign In</Button>
+                <SignButton onClick={() => login()}>Sign In</SignButton>
             )}
-
-        </div>
+        </Container>
     );
 }

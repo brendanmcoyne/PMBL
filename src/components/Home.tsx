@@ -14,9 +14,9 @@ const Page = styled.div`
 
 const Main = styled.main`
     position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,10 +31,9 @@ const BackgroundWrapper = styled.div`
     width: 90%;
     height: 100vh;
 `;
-
 const BackgroundImage = styled.img`
-    position: relative;
-    height: calc(100% + 40px); 
+    position: absolute;
+    height: calc(100% + 40px);
     width: 115%;
     opacity: 0.4;
 `;

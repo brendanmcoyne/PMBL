@@ -70,6 +70,7 @@ const ModalBackground = styled.div`
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 2000; 
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
@@ -83,7 +84,7 @@ const ModalContent = styled.div`
     padding: 2rem;
     border-radius: 10px;
     width: 90%;
-    max-width: 500px;
+    max-width: 700px;
     max-height: 90vh;
     overflow: hidden;
     text-align: center;
@@ -94,8 +95,7 @@ const ModalContent = styled.div`
 const ModalScrollWrapper = styled.div`
     max-height: calc(90vh - 4rem); 
     overflow-y: auto;
-    padding: 1rem; 
-    box-sizing: border-box;
+    padding: 1rem;
     &::-webkit-scrollbar {
         width: 6px;
     }
@@ -141,6 +141,68 @@ const SortButton = styled.button<{ active?: boolean }>`
     &:hover {
         background-color: ${({ active }) => (active ? "darkblue" : "#ddd")};
     }
+`;
+
+const StatBarContainer = styled.div`
+    width: 100%;
+    margin: 0.5rem 0;
+`;
+
+const StatBarLabel = styled.div`
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 0.25rem;
+`;
+
+const StatBarBackground = styled.div`
+    width: 100%;
+    height: 12px;  /* reduced from 16px */
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+`;
+
+const StatBarFill = styled.div<{ value: number }>`
+    height: 100%;
+    width: ${({ value }) => (value / 10) * 100}%;
+    background-color: darkblue;
+`;
+
+const StatBar = ({ label, value }: { label: string; value: number }) => (
+    <StatBarContainer>
+        <StatBarLabel>{label}: {value}</StatBarLabel>
+        <StatBarBackground>
+            <StatBarFill value={value} />
+        </StatBarBackground>
+    </StatBarContainer>
+);
+
+const ModalTopLayout = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem; /* more horizontal space */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* align items to top */
+    margin-bottom: 1rem;
+`;
+
+const ModalLeft = styled.div`
+    flex: 1;
+    min-width: 200px;   /* wider to give photo more room */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;  /* space between photo and name */
+`;
+
+const ModalRight = styled.div`
+    flex: 2;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* align bars to top */
 `;
 
 export default function Players() {
@@ -215,11 +277,23 @@ export default function Players() {
                     setSelectedStat(null);
                 }}>
                     <ModalContent onClick={(e) => e.stopPropagation()}>
-                        <CloseButton onClick={() => {setSelectedPlayer(null);setSelectedStat(null);}}>✕</CloseButton>
+                        <CloseButton onClick={() => {
+                            setSelectedPlayer(null);
+                            setSelectedStat(null);
+                        }}>✕</CloseButton>
                         <ModalScrollWrapper>
-                            <h2>{selectedPlayer.name}</h2>
-                            <p>{selectedPlayer.captain ? "Captain" : ""}</p>
-                            <img src={selectedPlayer.src} alt={selectedPlayer.name} width="150" />
+                            <StyledMiniHeader style={{fontSize: "33px"}}>{selectedPlayer.name} {selectedPlayer.captain ? "(C)" : ""}</StyledMiniHeader>
+                            <ModalTopLayout>
+                                <ModalLeft>
+                                    <img style={{marginTop: "40px", padding: "3px", border: "3px solid black"}} src={selectedPlayer.src} alt={selectedPlayer.name} width="160" />
+                                </ModalLeft>
+                                <ModalRight>
+                                    <StatBar label="Batting" value={selectedStat.batting} />
+                                    <StatBar label="Pitching" value={selectedStat.pitching} />
+                                    <StatBar label="Fielding" value={selectedStat.fielding} />
+                                    <StatBar label="Running" value={selectedStat.running} />
+                                </ModalRight>
+                            </ModalTopLayout>
 
                             {Array.isArray(selectedPlayer.awards) && selectedPlayer.awards.length > 0 && (
                                 <>
@@ -237,12 +311,6 @@ export default function Players() {
                             <StyledMiniHeader>About</StyledMiniHeader>
                             <p>Color: {selectedPlayer.color}</p>
                             <p>Games Played: {selectedPlayer.gp}</p>
-
-                            <StyledMiniHeader>Stats</StyledMiniHeader>
-                            <p>Batting: {selectedStat.batting}</p>
-                            <p>Pitching: {selectedStat.pitching}</p>
-                            <p>Fielding: {selectedStat.fielding}</p>
-                            <p>Running: {selectedStat.running}</p>
                         </ModalScrollWrapper>
                     </ModalContent>
                 </ModalBackground>

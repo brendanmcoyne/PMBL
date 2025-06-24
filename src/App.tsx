@@ -36,10 +36,11 @@ import DryBones from "./components/headlines/DryBones.tsx";
 
 
 const MainContent = styled.div`
+    padding-top: 80px;
     flex-grow: 1;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* centers content horizontally only */
 `;
 
 const Content = styled.div`

@@ -22,11 +22,15 @@ const StyledHeader = styled.h1`
 const StyledMiniHeader = styled.h3`
     text-align: center;
     grid-column: span 2;
-    font-size: 2rem;
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
+const ArchiveDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    
+`;
 const StyledLink = styled.p`
     margin-left: 60px;
     margin-right: 60px;
@@ -35,8 +39,8 @@ const StyledLink = styled.p`
     font-size: 1.6rem;
     text-align: center;
     padding: 40px 80px;
-    background-color: darkblue;
-
+    background-color: #00008b;
+    border-radius: 15px;
     width: 200px; 
     height: 100px;
     display: flex;
@@ -44,6 +48,12 @@ const StyledLink = styled.p`
     justify-content: center;
     align-items: center;
     white-space: nowrap;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.05);
+        background-color: #00007b;
+    }
+    
 `;
 
 export default function Archives() {
@@ -62,15 +72,19 @@ export default function Archives() {
     return(
         <ContentDiv>
             <StyledHeader>Archives</StyledHeader>
-            <StyledMiniHeader>Seasons</StyledMiniHeader>
-            <StyledLink>
-                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1">Season 1</Link>
-                <p style={{color: '#FFFFFF', fontWeight: 'bold'}}>Spring 2025 Season</p>
-            </StyledLink>
-            <StyledLink>
-                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2">Season 2</Link>
-                <p style={{color: '#FFFFFF', fontWeight: 'bold'}}>Fall 2025 Season</p>
-            </StyledLink>
+            <StyledMiniHeader>Here you'll find any and all information from past seasons</StyledMiniHeader>
+            <ArchiveDiv>
+                <StyledLink>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1">Season 1</Link>
+                    <p style={{color: '#FFFFFF', fontWeight: 'bold'}}>Spring 2025 Season</p>
+                </StyledLink>
+                <StyledLink>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2">Season 2</Link>
+                    <p style={{color: '#FFFFFF', fontWeight: 'bold'}}>Fall 2025 Season</p>
+                </StyledLink>
+            </ArchiveDiv>
+
+            <StyledMiniHeader>Photos</StyledMiniHeader>
         </ContentDiv>
 
     );
