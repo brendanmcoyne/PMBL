@@ -1,6 +1,10 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 
+interface StyledLinkProps {
+    bg?: string;
+}
+
 export const ContentDiv = styled.div`
     display: flex;
     flex-direction: column;
@@ -18,23 +22,43 @@ const StyledHeader = styled.h1`
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
-const StyledLink = styled.p`
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-top: 20px;
+const StyledLink = styled.p<StyledLinkProps>`
+    margin: 20px 60px;
     border: 3px solid black;
     font-size: 1.6rem;
     text-align: center;
     padding: 40px 80px;
-    background-color: darkblue;
     border-radius: 8px;
-
-    width: 200px; 
+    width: 200px;
     height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image: ${({ bg }) => `url(${bg})`};
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5); 
+        z-index: 1;
+    }
+
+    &:hover {
+        transform: scale(1.07);
+    }
     
+    a {
+        color: white;
+        font-weight: bold;
+        z-index: 2;
+        text-shadow: 1px 1px 4px black;
+    }
 `;
 
 const ToggleButton = styled.button`
@@ -61,22 +85,22 @@ export default function Season1() {
             </ToggleButton>
             <StyledHeader>Season 1 PMBL</StyledHeader>
             <LinkDiv>
-                <StyledLink>
+                <StyledLink bg="/archives/schedule.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Schedule">Schedule</Link>
                 </StyledLink>
-                <StyledLink>
+                <StyledLink bg="/archives/Draft.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Draft">Draft</Link>
                 </StyledLink>
-                <StyledLink>
+                <StyledLink bg="/archives/awards.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Awards">Awards</Link>
                 </StyledLink>
-                <StyledLink>
+                <StyledLink bg="/archives/Standings.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Standings">Standings</Link>
                 </StyledLink>
-                <StyledLink>
+                <StyledLink bg="/archives/playoffs.png">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Playoffs">Playoffs</Link>
                 </StyledLink>
-                <StyledLink>
+                <StyledLink bg="/archives/other.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Other">Other</Link>
                 </StyledLink>
             </LinkDiv>

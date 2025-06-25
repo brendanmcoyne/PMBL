@@ -18,21 +18,17 @@ const Main = styled.main`
     min-height: 100vh;
     overflow: hidden; 
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
 `;
 
 const BackgroundWrapper = styled.div`
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
     width: 90%;
     height: 100vh;
 `;
+
 const BackgroundImage = styled.img`
-    position: absolute;
     height: calc(100% + 40px);
     width: 115%;
     opacity: 0.4;
@@ -40,11 +36,9 @@ const BackgroundImage = styled.img`
 
 const Wrapper = styled.div`
     text-align: center;
-    align-items: center;
     flex-direction: column;
     width: 100%;
     z-index: 2;
-    position: relative;
 `;
 
 const StyledHeader = styled.h1`
@@ -54,24 +48,20 @@ const StyledHeader = styled.h1`
 `;
 
 const ImageWrapper = styled.div`
-    border-radius: 50%;
-    width: 300px;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     margin: 20px auto;
 `;
 
 const GenImage = styled.img`
-    width: 300px;
+    width: 350px;
     height: auto;
     border-radius: 50%;
 `;
 
 const ContentSection = styled.section`
-  width: 100%;
   background-color: #1e1e1e;
   color: white;
   text-align: center;
@@ -80,7 +70,7 @@ const ContentSection = styled.section`
 const GenGif = styled.img`
     width: 50%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 10%;
 `;
 
 const TextSection = styled.section`
@@ -111,7 +101,6 @@ const Captain = styled.img<CaptainProps>`
     border: 2px solid black;
     width: 100px;
     height: 100px;
-    object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s;
     background-color: white;
@@ -132,7 +121,6 @@ const CaptainSection = styled.section`
     margin-top: 10px;
     background-color: darkblue;
     text-align: center;
-    grid-column: span 6;
     padding-bottom: 20px;
 `;
 
@@ -243,7 +231,6 @@ export default function Home() {
                 </TextSection>
                 <GenGif src="/Wii_Remote.webp" alt="Professional Mario Baseball League Logo" />
             </ContentSection>
-
         </Page>
     );
 }

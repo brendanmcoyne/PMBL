@@ -17,7 +17,7 @@ export const ContentDiv = styled.div`
 
 const DivisionDiv = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     width: 85%;
 `;
@@ -226,7 +226,6 @@ const AboutSection = styled.div`
     p {
         margin: 0.25rem 0;
     }
-
     h3 {
         margin: 0.5rem 0 0.25rem 0;
     }

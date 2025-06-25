@@ -8,7 +8,7 @@ export const ContentDiv = styled.div`
     justify-content: flex-start;
     width: 100%;
     font-size: calc(0.5rem + 1vw);
-    padding-top: 2rem; /* Add some top padding */
+    padding-top: 2rem;
 `;
 
 const StyledHeader = styled.h1`
@@ -18,32 +18,57 @@ const StyledHeader = styled.h1`
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
-const StyledLink = styled.p`
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-top: 20px;
+interface StyledLinkProps {
+    bg?: string;
+}
+
+const StyledLink = styled.p<StyledLinkProps>`
+    margin: 20px 60px;
     border: 3px solid black;
     font-size: 1.6rem;
     text-align: center;
     padding: 40px 80px;
-    background-color: darkblue;
-
+    border-radius: 8px;
     width: 200px;
     height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    white-space: nowrap;
+    background-image: ${({ bg }) => `url(${bg})`};
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    &:hover {
+        transform: scale(1.07);
+    }
+
+    a {
+        color: white;
+        font-weight: bold;
+        z-index: 2;
+        text-shadow: 1px 1px 4px black;
+    }
 `;
 
 const ToggleButton = styled.button`
     background-color: lightgray;
+    color: darkblue;
     font-size: 1.5rem;
     border: none;
     padding: 7px 15px;
     cursor: pointer;
-    align-self: flex-start;  
+    align-self: flex-start;
     margin-left: 2rem;
 `;
 
@@ -60,22 +85,22 @@ export default function Season2() {
             </ToggleButton>
             <StyledHeader>Season 2 PMBL</StyledHeader>
             <LinkDiv>
-                <StyledLink>
+                <StyledLink bg="/archives/schedule.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Schedule">Schedule</Link>
                 </StyledLink>
-                <StyledLink>
+                <StyledLink bg="/archives/Draft.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Draft">Draft</Link>
                 </StyledLink>
-                <StyledLink>
+                <StyledLink bg="/archives/awards.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Awards">Awards</Link>
                 </StyledLink>
-                <StyledLink>
+                <StyledLink bg="/archives/Standings.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Standings">Standings</Link>
                 </StyledLink>
-                <StyledLink>
+                <StyledLink bg="/archives/playoffs.png">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Playoffs">Playoffs</Link>
                 </StyledLink>
-                <StyledLink>
+                <StyledLink bg="/archives/other.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Other">Other</Link>
                 </StyledLink>
             </LinkDiv>

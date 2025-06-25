@@ -8,6 +8,7 @@ export type Manager = {
     divships?: number;
     playoffs?: number;
     champs?: number;
+    s1banner: string;
 }
 
 export const managers: Manager[] = [
@@ -22,6 +23,7 @@ export const managers: Manager[] = [
         playoffs: 1,
         divships: 1,
         champs: 0,
+        s1banner: "/banners/DKWilds-MSS.webp",
     },
     {
         name: "Justin",
@@ -33,6 +35,7 @@ export const managers: Manager[] = [
         playoffs: 1,
         divships: 0,
         champs: 0,
+        s1banner: "/banners/LuigiKnights-MSS.webp",
     },
     {
         name: "James",
@@ -44,6 +47,7 @@ export const managers: Manager[] = [
         playoffs: 1,
         divships: 0,
         champs: 1,
+        s1banner: "/banners/BowserMonsters-MSS.webp",
     },
     {
         name: "Matt",
@@ -55,6 +59,7 @@ export const managers: Manager[] = [
         playoffs: 0,
         divships: 0,
         champs: 0,
+        s1banner: "/banners/YoshiEggs-MSS.webp",
     },
     {
         name: "Isaac",
@@ -66,6 +71,7 @@ export const managers: Manager[] = [
         playoffs: 0,
         divships: 0,
         champs: 0,
+        s1banner: "/banners/MarioFireballs-MSS.webp",
     },
     {
         name: "Christach",
@@ -77,6 +83,7 @@ export const managers: Manager[] = [
         playoffs: 0,
         divships: 0,
         champs: 0,
+        s1banner: "/banners/PeachMonarchs-MSS.webp",
     },
     {
         name: "Morgan",
@@ -88,6 +95,7 @@ export const managers: Manager[] = [
         playoffs: 1,
         divships: 1,
         champs: 0,
+        s1banner: "/banners/DiddyMonkeys-MSS.webp",
     },
     {
         name: "DANdrew",
@@ -99,6 +107,7 @@ export const managers: Manager[] = [
         playoffs: 0,
         divships: 0,
         champs: 0,
+        s1banner: "/banners/WaluigiSpitballs-MSS.webp",
     },
 
 

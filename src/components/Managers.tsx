@@ -23,7 +23,6 @@ const StyledHeader = styled.h1`
     text-align: center; 
     margin-bottom: 1rem; 
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -40,18 +39,16 @@ const DivisionDiv = styled.div`
 
 const DivisionHeader = styled.h3`
     text-align: center;
-    grid-column: span 2;
     font-size: 2rem;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const Manager = styled.div`
     width: 100px;
     height: 140px;
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 15px;
     border: 2px solid black;
     border-radius: 2%;
     font-size: 1.6rem;
@@ -68,7 +65,6 @@ const Manager = styled.div`
 const ModalBackground = styled.div`
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 1100;
     width: 100vw;
     height: 100vh;
@@ -85,7 +81,7 @@ const ModalBackground = styled.div`
 `;
 
 const ModalContent = styled.div`
-    background: #f9f9f9;
+    background: #CFD8E6;
     padding: 2rem;
     border-radius: 20px;
     width: 90%;
@@ -119,10 +115,6 @@ const ManagerName = styled.span`
     text-align: center;
 `;
 
-const Stat = styled.p`
-    font-size: large;
-`;
-
 const ModalScrollWrapper = styled.div`
     max-height: calc(90vh - 4rem);
     overflow-y: auto;
@@ -148,6 +140,62 @@ const ToggleButton = styled.button<ToggleButtonProps>`
 const TileSetup = styled.div`
     display: flex;
     flex-direction: column;
+`;
+
+const ModalTopLayout = styled.div`
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+`;
+
+const ModalLeft = styled.div`
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    gap: 1rem;
+`;
+
+const ModalRight = styled.div`
+    flex: 2;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+`;
+
+const ModalManagerName = styled.h2`
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    font-weight: bold;
+`;
+
+const ModalImage = styled.img`
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4a90e2;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+`;
+
+const StatCard = styled.div`
+    background-color: #f0f4f8;
+    border-left: 6px solid #4a90e2;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: left;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 `;
 
 export default function Managers() {
@@ -212,13 +260,20 @@ export default function Managers() {
                         </div>
                         {activeModalTab === "info" && (
                             <>
-                                <h2>{selectedManager.name}</h2>
-                                <img src={selectedManager.src} alt={selectedManager.name} width="150" />
-                                <StyledMiniHeader>About</StyledMiniHeader>
-                                    <Stat>Record: {selectedManager.record}</Stat>
-                                    <Stat>Division Titles: {selectedManager.divships}</Stat>
-                                    <Stat>Playoff Berths: {selectedManager.playoffs}</Stat>
-                                    <Stat>World Series Titles: {selectedManager.champs}</Stat>
+                                <ModalManagerName>{selectedManager.name}</ModalManagerName>
+                                <ModalTopLayout>
+                                    <ModalLeft>
+                                        <ModalImage src={selectedManager.src} alt={selectedManager.name} />
+                                        <img src={selectedManager.s1banner} alt={`${selectedManager.name} banner`} />
+                                    </ModalLeft>
+
+                                    <ModalRight>
+                                        <StatCard>Record: {selectedManager.record}</StatCard>
+                                        <StatCard>Division Titles: {selectedManager.divships}</StatCard>
+                                        <StatCard>Playoff Berths: {selectedManager.playoffs}</StatCard>
+                                        <StatCard>World Series Titles: {selectedManager.champs}</StatCard>
+                                    </ModalRight>
+                                </ModalTopLayout>
                             </>
                         )}
 
@@ -233,10 +288,26 @@ export default function Managers() {
                                         ))}
                                     </div>
                                 )}
-                                <p><strong>Captain:</strong> {getRosterForManager(selectedManager.name)?.captain || "N/A"}</p>
-                                <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+                                <p style={{fontWeight: "bold", marginBottom: "0.4rem" }}>
+                                    <strong>Captain:</strong> {getRosterForManager(selectedManager.name)?.captain || "N/A"}
+                                </p>
+                                <ul style={{
+                                    listStyleType: "none",
+                                    paddingLeft: 0,
+                                    marginTop: "0.5rem",
+                                    display: "grid",
+                                    gridTemplateColumns: "1fr 1fr",
+                                    gap: "0.3rem",
+                                }}>
                                     {getRosterForManager(selectedManager.name)?.roster.map((player) => (
-                                        <li key={player.name}>{player.name}</li>
+                                        <li key={player.name} style={{
+                                            background: "#e3e3e3",
+                                            padding: "6px 10px",
+                                            borderRadius: "6px",
+                                            fontWeight: "500",
+                                        }}>
+                                            {player.name}
+                                        </li>
                                     ))}
                                 </ul>
                             </>

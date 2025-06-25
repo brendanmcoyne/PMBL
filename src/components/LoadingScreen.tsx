@@ -14,7 +14,7 @@ const spin = keyframes`
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(720deg);
     }
 `;
 
@@ -32,6 +32,7 @@ const Overlay = styled.div`
 
 const SpinningBackground = styled.img`
     position: absolute;
+    top: 13%;
     width: 25rem;
     height: 25rem;
     margin-bottom: 20px;

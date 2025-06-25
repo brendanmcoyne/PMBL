@@ -31,6 +31,10 @@ const Story = styled.div`
     border-radius: 15px;
     overflow: hidden;
     margin: 1rem;
+    transition: 0.5s;
+    &:hover {
+        transform: scale(1.05);
+    }
 `;
 
 const Overlay = styled.div`
