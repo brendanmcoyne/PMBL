@@ -284,14 +284,8 @@ export default function Players() {
 
             <DivisionDiv>
                 {sortedPlayers.map((player: Player) => (
-                    <Player
-                        key={player.name}
-                        onClick={() => {
-                            setSelectedPlayer(player);
-                            const statForPlayer = stats.find(stat => stat.name === player.name);
-                            setSelectedStat(statForPlayer || null);
-                        }}
-                    >
+                    <Player key={player.name} onClick={() => {setSelectedPlayer(player); const statForPlayer =
+                        stats.find(stat => stat.name === player.name); setSelectedStat(statForPlayer || null);}}>
                         <GenImage src={player.src} alt={player.name} />
                         <PlayerName>{player.name}</PlayerName>
                     </Player>
@@ -299,20 +293,15 @@ export default function Players() {
             </DivisionDiv>
 
             {selectedPlayer && selectedStat && (
-                <ModalBackground onClick={() => {
-                    setSelectedPlayer(null);
-                    setSelectedStat(null);
-                }}>
-                    <ModalContent style={{backgroundColor: selectedPlayer.color}} onClick={(e) => e.stopPropagation()}>
-                        <CloseButton onClick={() => {
-                            setSelectedPlayer(null);
-                            setSelectedStat(null);
-                        }}>✕</CloseButton>
+                <ModalBackground onClick={() => {setSelectedPlayer(null); setSelectedStat(null)}}>
+                    <ModalContent style={{backgroundColor: selectedPlayer.color === "Light Blue" ? "lightblue" : selectedPlayer.color === "Light Green" ? "lightgreen" : selectedPlayer.color, color: selectedPlayer.color === "Black" ? "white" : ""}} onClick={(e) => e.stopPropagation()}>
+                        <CloseButton onClick={() => {setSelectedPlayer(null); setSelectedStat(null)}}>✕</CloseButton>
                         <ModalScrollWrapper>
                             <StyledMiniHeader style={{fontSize: "33px"}}>{selectedPlayer.name} {selectedPlayer.captain ? "(C)" : ""}</StyledMiniHeader>
                             <ModalTopLayout>
                                 <ModalLeft>
-                                    <img style={{backgroundColor: "lightgray", marginTop: "30px", padding: "3px", border: "3px solid black"}} src={selectedPlayer.src} alt={selectedPlayer.name} width="160" />
+                                    <img style={{backgroundColor: "lightgray", marginTop: "30px", padding: "3px", border: "3px solid black"}} src={selectedPlayer.src}
+                                         alt={selectedPlayer.name} width="160" />
                                     <AboutSection>
                                         <StyledMiniHeader>About</StyledMiniHeader>
                                         <p>Color: {selectedPlayer.color}</p>
@@ -332,7 +321,19 @@ export default function Players() {
                                     <StyledMiniHeader>Awards</StyledMiniHeader>
                                     <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
                                         {selectedPlayer.awards.map((award, index) => (
-                                            <li key={index}>
+                                            <li key={index} style = {{
+                                                fontWeight: award.name === "League MVP" || award.name === "Finals MVP" ? "bold" : "",
+                                                color: award.name === "League MVP" ? "white" : "",
+                                                backgroundColor:
+                                                award.name === "World Series Champion" || award.name === "World Series MVP" ? "gold" :
+                                                award.name === "Offensive Player of the Year" ? "red" :
+                                                award.name === "Defensive Player of the Year" ? "darkgreen" :
+                                                award.name === "Golden Glove Winner" ? "yellow" :
+                                                award.name === "Silver Slugger Winner" ? "lightgray" :
+                                                award.name === "League MVP" ? "darkblue":
+                                                award.name === "Morgan Hartwell Man of the Year Award" ? "orange" : "",
+                                                borderRadius: "8px"
+                                            }}>
                                                 {award.name} (Season {award.season})
                                             </li>
                                         ))}

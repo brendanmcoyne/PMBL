@@ -582,7 +582,7 @@ export const players: Player[] = [
         mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
-            { name: "Finals MVP", season: 1},
+            { name: "World Series MVP", season: 1},
             { name: "Offensive Player of the Year", season: 1},
             { name: "Silver Slugger Winner", season: 1},
             { name: "All-Star", season: 1},

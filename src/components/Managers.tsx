@@ -179,14 +179,7 @@ export default function Managers() {
             </div>
             <DivisionDiv>
                 {sortedManagers.filter(m => m.division === "East").map((manager: Manager) => (
-                    <Manager
-                        key={manager.name}
-                        onClick={() => {
-                            setSelectedManager(manager);
-                            setActiveModalTab("info");
-                        }}
-                        style={{ backgroundColor: manager.color }}
-                    >
+                    <Manager key={manager.name} onClick={() => {setSelectedManager(manager);setActiveModalTab("info");}} style={{ backgroundColor: manager.color }}>
                         <TileSetup>
                             <img src={manager.emblem} alt={manager.name}/>
                             <ManagerName>{manager.name}</ManagerName>
@@ -199,14 +192,7 @@ export default function Managers() {
             </div>
             <DivisionDiv>
                 {sortedManagers.filter(m => m.division === "West").map((manager: Manager) => (
-                    <Manager
-                        key={manager.name}
-                        onClick={() => {
-                            setSelectedManager(manager);
-                            setActiveModalTab("info");
-                        }}
-                        style={{ backgroundColor: manager.color }}
-                    >
+                    <Manager key={manager.name} onClick={() => {setSelectedManager(manager);setActiveModalTab("info");}} style={{ backgroundColor: manager.color }}>
                         <TileSetup>
                             <img src={manager.emblem} alt={manager.name}/>
                             <ManagerName>{manager.name}</ManagerName>
@@ -220,22 +206,10 @@ export default function Managers() {
                     <ModalContent onClick={(e) => e.stopPropagation()}>
                         <CloseButton onClick={() => setSelectedManager(null)}>✕</CloseButton>
                         <ModalScrollWrapper>
-                        {/* Toggle Buttons */}
                         <div style={{ marginBottom: "1rem" }}>
-                            <ToggleButton
-                                active={activeModalTab === "info"}
-                                onClick={() => setActiveModalTab("info")}
-                            >
-                                Info
-                            </ToggleButton>
-                            <ToggleButton
-                                active={activeModalTab === "roster"}
-                                onClick={() => setActiveModalTab("roster")}
-                            >
-                                Roster
-                            </ToggleButton>
+                            <ToggleButton active={activeModalTab === "info"} onClick={() => setActiveModalTab("info")}>Info</ToggleButton>
+                            <ToggleButton active={activeModalTab === "roster"} onClick={() => setActiveModalTab("roster")}>Roster</ToggleButton>
                         </div>
-
                         {activeModalTab === "info" && (
                             <>
                                 <h2>{selectedManager.name}</h2>
@@ -251,30 +225,15 @@ export default function Managers() {
                         {activeModalTab === "roster" && (
                             <>
                                 <StyledMiniHeader>Season 1 Roster</StyledMiniHeader>
-
-                                {/* Accolades Display */}
                                 {getRosterForManager(selectedManager.name)?.accolades && (
                                     <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap", gap: "8px", marginBottom: "10px" }}>
                                         {getRosterForManager(selectedManager.name)?.accolades?.map((acc) => (
-                                            <div
-                                                key={acc.type}
-                                                style={{
-                                                    backgroundColor: acc.color.toLowerCase(),
-                                                    color: "white",
-                                                    padding: "4px 8px",
-                                                    borderRadius: "8px",
-                                                    fontSize: "0.9rem",
-                                                    fontWeight: "bold"
-                                                }}
-                                            >
-                                                {acc.type}
-                                            </div>
+                                            <div key={acc.type} style={{backgroundColor: acc.color.toLowerCase(), color: "white",
+                                                padding: "4px 8px", borderRadius: "8px", fontSize: "0.9rem", fontWeight: "bold"}}>{acc.type}</div>
                                         ))}
                                     </div>
                                 )}
-
                                 <p><strong>Captain:</strong> {getRosterForManager(selectedManager.name)?.captain || "N/A"}</p>
-
                                 <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
                                     {getRosterForManager(selectedManager.name)?.roster.map((player) => (
                                         <li key={player.name}>{player.name}</li>
