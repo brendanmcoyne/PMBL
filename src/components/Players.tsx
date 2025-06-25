@@ -18,8 +18,8 @@ export const ContentDiv = styled.div`
 const DivisionDiv = styled.div`
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
-    gap: 10px;
-    width: 90%;
+    gap: 15px;
+    width: 85%;
 `;
 
 const DivisionHeader = styled.h1`
@@ -77,6 +77,12 @@ const ModalBackground = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-in-out;
+    @keyframes fadeIn {
+        from { opacity: 0.5; }
+        to { opacity: 1; }
+    }
 `;
 
 const ModalContent = styled.div`
@@ -110,10 +116,11 @@ const CloseButton = styled.button`
     font-size: 1.2rem;
     cursor: pointer;
     border-radius: 50%; 
-    background-color: red;
+    background-color: lightgray;
     align-items: center;
     justify-content: center;
     padding: 0;
+    border: none;
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -133,14 +140,10 @@ const SortButton = styled.button<{ active?: boolean }>`
     font-size: 1rem;
     cursor: pointer;
     background-color: ${({ active }) => (active ? "#00007B" : "darkblue")};
-    color: ${({ active }) => (active ? "white" : "black")};
+    color: ${({ active }) => (active ? "white" : "darkgray")};
     border: 2px solid darkblue;
     border-radius: 5px;
     transition: background-color 0.2s;
-
-    &:hover {
-        background-color: ${({ active }) => (active ? "darkblue" : "#ddd")};
-    }
 `;
 
 const StatBarContainer = styled.div`
@@ -156,7 +159,7 @@ const StatBarLabel = styled.div`
 
 const StatBarBackground = styled.div`
     width: 100%;
-    height: 12px;  /* reduced from 16px */
+    height: 12px; 
     background-color: #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -165,36 +168,48 @@ const StatBarBackground = styled.div`
 const StatBarFill = styled.div<{ value: number }>`
     height: 100%;
     width: ${({ value }) => (value / 10) * 100}%;
-    background-color: darkblue;
+    background: linear-gradient(to right, #004080, #007bff);
+    border-radius: 8px;
+    transition: width 0.3s ease-in-out;
 `;
 
-const StatBar = ({ label, value }: { label: string; value: number }) => (
-    <StatBarContainer>
-        <StatBarLabel>{label}: {value}</StatBarLabel>
-        <StatBarBackground>
-            <StatBarFill value={value} />
-        </StatBarBackground>
-    </StatBarContainer>
-);
+const StatBar = ({ label, value }: { label: string; value: number }) => {
+    const getEmoji = (val: number) => {
+        if (val >= 7) return "🔥";
+        if (val <= 3) return "🧊";
+        return "";
+    };
+
+    return (
+        <StatBarContainer>
+            <StatBarLabel>
+                {label}: {value} {getEmoji(value)}
+            </StatBarLabel>
+            <StatBarBackground>
+                <StatBarFill value={value} />
+            </StatBarBackground>
+        </StatBarContainer>
+    );
+};
 
 const ModalTopLayout = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 2.5rem; /* more horizontal space */
+    gap: 2.5rem; 
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start; /* align items to top */
+    align-items: flex-start;
     margin-bottom: 1rem;
 `;
 
 const ModalLeft = styled.div`
     flex: 1;
-    min-width: 200px;   /* wider to give photo more room */
+    min-width: 200px;   
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;  /* space between photo and name */
+    gap: 0.5rem; 
 `;
 
 const ModalRight = styled.div`
@@ -202,7 +217,19 @@ const ModalRight = styled.div`
     min-width: 220px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* align bars to top */
+    justify-content: flex-start; 
+`;
+
+const AboutSection = styled.div`
+    padding: 0;
+    margin-top: 0.5rem;
+    p {
+        margin: 0.25rem 0;
+    }
+
+    h3 {
+        margin: 0.5rem 0 0.25rem 0;
+    }
 `;
 
 export default function Players() {
@@ -276,7 +303,7 @@ export default function Players() {
                     setSelectedPlayer(null);
                     setSelectedStat(null);
                 }}>
-                    <ModalContent onClick={(e) => e.stopPropagation()}>
+                    <ModalContent style={{backgroundColor: selectedPlayer.color}} onClick={(e) => e.stopPropagation()}>
                         <CloseButton onClick={() => {
                             setSelectedPlayer(null);
                             setSelectedStat(null);
@@ -285,7 +312,12 @@ export default function Players() {
                             <StyledMiniHeader style={{fontSize: "33px"}}>{selectedPlayer.name} {selectedPlayer.captain ? "(C)" : ""}</StyledMiniHeader>
                             <ModalTopLayout>
                                 <ModalLeft>
-                                    <img style={{marginTop: "40px", padding: "3px", border: "3px solid black"}} src={selectedPlayer.src} alt={selectedPlayer.name} width="160" />
+                                    <img style={{backgroundColor: "lightgray", marginTop: "30px", padding: "3px", border: "3px solid black"}} src={selectedPlayer.src} alt={selectedPlayer.name} width="160" />
+                                    <AboutSection>
+                                        <StyledMiniHeader>About</StyledMiniHeader>
+                                        <p>Color: {selectedPlayer.color}</p>
+                                        <p>Games Played: {selectedPlayer.gp}</p>
+                                    </AboutSection>
                                 </ModalLeft>
                                 <ModalRight>
                                     <StatBar label="Batting" value={selectedStat.batting} />
@@ -307,10 +339,6 @@ export default function Players() {
                                     </ul>
                                 </>
                             )}
-
-                            <StyledMiniHeader>About</StyledMiniHeader>
-                            <p>Color: {selectedPlayer.color}</p>
-                            <p>Games Played: {selectedPlayer.gp}</p>
                         </ModalScrollWrapper>
                     </ModalContent>
                 </ModalBackground>

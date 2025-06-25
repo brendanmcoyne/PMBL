@@ -21,6 +21,7 @@ const GenImage = styled.img`
     max-width: 100%;
     width: 20vw;
     height: auto;
+    margin-bottom: 30px;
 `;
 
 export default function CurrentSeason() {

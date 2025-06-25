@@ -5,11 +5,10 @@ export const ContentDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 1rem;
     width: 100%;
+    padding: 2rem 1rem;
     font-size: calc(0.5rem + 1vw);
 `;
-
 
 const StyledHeader = styled.h1`
     text-align: center;
@@ -26,59 +25,56 @@ const StyledMiniHeader = styled.h3`
 `;
 
 const Story = styled.div`
-    background-color: darkblue;
-    border: 1px solid #ddd;
+    position: relative;
+    width: 100%;
+    height: 400px;
     border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 30px;
+    overflow: hidden;
+    margin: 1rem;
+`;
+
+const Overlay = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
-    width: 90%;
-    max-width: 700px;
+    padding: 1rem;
 `;
 
 const GenImage = styled.img`
     width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
     object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin: 20px 0;
+    filter: brightness(65%);
 `;
 
 const Headline = styled.h2`
-    text-align: center;
-    font-weight: bold;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #1a1a1a;
-`;
-
-const Description = styled.p`
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
     color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    margin: 0;
     padding: 0 1rem;
 `;
 
 const StyledLink = styled(Link)`
-    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
     text-decoration: none;
-    border: 2px solid black;
+    border: none;
     color: white;
-    background-color: #003366;
-    padding: 15px 30px;
-    border-radius: 10px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 8px;
 
     &:hover {
-        background-color: #0055aa;
+        background-color: rgba(0, 0, 0, 0.8);
     }
 `;
 
@@ -89,28 +85,21 @@ export default function Players() {
             <StyledMiniHeader>Featuring all the top baseball stories!</StyledMiniHeader>
 
             <Story>
-                <Headline>Koopa Found Guilty of Assault</Headline>
-                <GenImage
-                    src="/koopa_behind_the_bars.jpg"
-                    alt="Koopa"
-                />
-                <Description>
-                    The Week 7 Incident has now been brought to justice, and the plaintiff has been found guilty on all charges.
-                </Description>
-                <StyledLink to="/headlines/Koopa.tsx">Click to read more!</StyledLink>
+                <GenImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
+                <Overlay>
+                    <Headline>Koopa Found Guilty of Assault</Headline>
+                    <StyledLink to="/headlines/Koopa.tsx">Click to read more!</StyledLink>
+                </Overlay>
             </Story>
 
             <Story>
-                <Headline>Dry Bones Gets a Slap on the Wrist</Headline>
-                <GenImage
-                    src="/Caucasian bones playground.png"
-                    alt="Dry Bones"
-                />
-                <Description>
-                    After weeks of accusations, the controversial ruling for Dry Bones has been released.
-                </Description>
-                <StyledLink to="/headlines/DryBones.tsx">Click to read more!</StyledLink>
+                <GenImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
+                <Overlay>
+                    <Headline>Dry Bones Gets a Slap on the Wrist</Headline>
+                    <StyledLink to="/headlines/DryBones.tsx">Click to read more!</StyledLink>
+                </Overlay>
             </Story>
+
         </ContentDiv>
     );
 

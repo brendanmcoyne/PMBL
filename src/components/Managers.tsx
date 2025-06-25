@@ -33,8 +33,9 @@ const StyledMiniHeader = styled.h3`
 
 const DivisionDiv = styled.div`
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    margin-bottom: 40px;
 `;
 
 const DivisionHeader = styled.h3`
@@ -46,6 +47,8 @@ const DivisionHeader = styled.h3`
 `;
 
 const Manager = styled.div`
+    width: 100px;
+    height: 140px;
     margin-left: 60px;
     margin-right: 60px;
     margin-top: 20px;
@@ -57,7 +60,6 @@ const Manager = styled.div`
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     transition: transform 0.2s;
-
     &:hover {
         transform: scale(1.07);
     }
@@ -67,12 +69,19 @@ const ModalBackground = styled.div`
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1100;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-in-out;
+    @keyframes fadeIn {
+        from { opacity: 0.5; }
+        to { opacity: 1; }
+    }
 `;
 
 const ModalContent = styled.div`
@@ -86,7 +95,6 @@ const ModalContent = styled.div`
     text-align: center;
     position: relative;
     border: none;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
     font-family: 'Segoe UI', sans-serif;
 `;
 
@@ -99,7 +107,8 @@ const CloseButton = styled.button`
     font-size: 1.2rem;
     cursor: pointer;
     border-radius: 50%; 
-    background-color: red;     
+    border: none;
+    background-color: darkgray;     
     align-items: center;
     justify-content: center;
     padding: 0;
@@ -108,11 +117,6 @@ const CloseButton = styled.button`
 const ManagerName = styled.span`
     font-weight: bold;
     text-align: center;
-`;
-
-const StatDisplay = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 `;
 
 const Stat = styled.p`
@@ -125,7 +129,7 @@ const ModalScrollWrapper = styled.div`
     padding: 1rem;
     box-sizing: border-box;
     &::-webkit-scrollbar {
-        width: 6px;
+        width: 0;
     }
 `;
 
@@ -139,16 +143,13 @@ const ToggleButton = styled.button<ToggleButtonProps>`
     color: ${({ active }) => (active ? "white" : "black")};
     border-radius: 20px;
     transition: background-color 0.2s, color 0.2s;
-
-    &:hover {
-        background-color: ${({ active }) => (active ? "#357ABD" : "#d3d3d3")};
-    }
 `;
 
 const TileSetup = styled.div`
     display: flex;
     flex-direction: column;
 `;
+
 export default function Managers() {
     const [selectedManager, setSelectedManager] = useState<Manager | null>(null);
     const [activeModalTab, setActiveModalTab] = useState<"info" | "roster">("info");
@@ -174,11 +175,30 @@ export default function Managers() {
         <ContentDiv>
             <StyledHeader>Managers List</StyledHeader>
             <div style={{ display: 'flex', gap: "200px" }}>
-                <DivisionHeader>West Division</DivisionHeader>
                 <DivisionHeader>East Division</DivisionHeader>
             </div>
             <DivisionDiv>
-                {sortedManagers.map((manager: Manager) => (
+                {sortedManagers.filter(m => m.division === "East").map((manager: Manager) => (
+                    <Manager
+                        key={manager.name}
+                        onClick={() => {
+                            setSelectedManager(manager);
+                            setActiveModalTab("info");
+                        }}
+                        style={{ backgroundColor: manager.color }}
+                    >
+                        <TileSetup>
+                            <img src={manager.emblem} alt={manager.name}/>
+                            <ManagerName>{manager.name}</ManagerName>
+                        </TileSetup>
+                    </Manager>
+                ))}
+            </DivisionDiv>
+            <div style={{ display: 'flex', gap: "200px" }}>
+                <DivisionHeader>West Division</DivisionHeader>
+            </div>
+            <DivisionDiv>
+                {sortedManagers.filter(m => m.division === "West").map((manager: Manager) => (
                     <Manager
                         key={manager.name}
                         onClick={() => {
@@ -221,12 +241,10 @@ export default function Managers() {
                                 <h2>{selectedManager.name}</h2>
                                 <img src={selectedManager.src} alt={selectedManager.name} width="150" />
                                 <StyledMiniHeader>About</StyledMiniHeader>
-                                <StatDisplay>
                                     <Stat>Record: {selectedManager.record}</Stat>
                                     <Stat>Division Titles: {selectedManager.divships}</Stat>
                                     <Stat>Playoff Berths: {selectedManager.playoffs}</Stat>
                                     <Stat>World Series Titles: {selectedManager.champs}</Stat>
-                                </StatDisplay>
                             </>
                         )}
 

@@ -14,6 +14,7 @@ import Managers from "./components/Managers.tsx";
 import Archives from "./components/Archives.tsx";
 import CurrentSeason from "./components/CurrentSeason.tsx";
 import Headlines from "./components/Headlines.tsx";
+import Scrolling from "./components/Scrolling.tsx";
 
 import Season1 from './components/seasons/Season1.tsx';
 import Season2 from './components/seasons/Season2.tsx';
@@ -115,6 +116,7 @@ function Root() {
 
     return (
         <Wrapper dark={isHomePage}>
+            <Scrolling />
             {showLoading && (
                 <LoadingScreen message={isFirstLoad ? "Welcome!" : "Loading"} />
             )}

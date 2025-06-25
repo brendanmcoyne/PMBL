@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import {Link} from "react-router-dom";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -86,6 +87,71 @@ const Ruling = styled.div`
     }
 `;
 
+const Story = styled.div`
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 1rem;
+`;
+
+const Overlay = styled.div`
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+const StyledLink = styled(Link)`
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+`;
+
+const Headline = styled.h2`
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+`;
+
+const Stories = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+`;
+
+const MiniImage = styled.img`
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+`;
+
+const StyledMiniHeader = styled.h3`
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+`;
+
+
 export default function Koopa() {
     return (
         <ContentDiv>
@@ -164,6 +230,19 @@ export default function Koopa() {
                 that the court has given to a sports related case. The punishment has not only struck fear into players and managers to follow the rules,
                 but has given the court some of it's credibility back after the controversial Dry Bones ruling.
             </Passage>
+
+            <SeparatorLine />
+            <StyledMiniHeader>Check out more stories below!</StyledMiniHeader>
+
+            <Stories>
+                <Story>
+                    <MiniImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
+                    <Overlay>
+                        <Headline>Dry Bones Gets a Slap on the Wrist</Headline>
+                        <StyledLink to="/headlines/DryBones.tsx">Click to read more!</StyledLink>
+                    </Overlay>
+                </Story>
+            </Stories>
         </ContentDiv>
     );
 }

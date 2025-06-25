@@ -1,10 +1,10 @@
 import { styled } from 'styled-components';
+import {Link} from "react-router-dom";
 
 export const ContentDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     width: 100%;
     font-size: 1.1rem;
     line-height: 1.6;
@@ -68,7 +68,6 @@ const Ruling = styled.div`
     line-height: 1.6;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-
     h2 {
         margin-bottom: 1rem;
         font-size: 1.6rem;
@@ -79,7 +78,6 @@ const Ruling = styled.div`
         padding-bottom: 8px;
         color: #6b4e1a;
     }
-
     p, pre {
         margin: 1rem 0;
         white-space: pre-wrap;
@@ -89,10 +87,9 @@ const Ruling = styled.div`
 const NewsletterRuling = styled.div`
   max-width: 800px;
   margin: 30px auto;
-  background-color: #fef9e7; /* soft cream */
+  background-color: #fef9e7; 
   color: #333;
   border-radius: 8px;
-  border: 1.5px solid #d4c27a;
   padding: 20px 25px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
@@ -106,10 +103,8 @@ const NewsletterRuling = styled.div`
     font-size: 1.4rem;
     color: #b89830;
     border-bottom: 2px solid #d4c27a;
-    padding-bottom: 6px;
     letter-spacing: 1.2px;
   }
-
   p {
     margin-bottom: 1rem;
   }
@@ -120,36 +115,92 @@ const NewsletterRuling = styled.div`
   }
 `;
 
+const StyledMiniHeader = styled.h3`
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+`;
+
+const StyledLink = styled(Link)`
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+`;
+
+const Story = styled.div`
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 1rem;
+`;
+
+const Overlay = styled.div`
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+const Headline = styled.h2`
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+`;
+
+const Stories = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+`;
+
+const MiniImage = styled.img`
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+`;
+
 export default function DryBones() {
     return (
         <ContentDiv>
             <StyledHeader>Dry Bones gets a slap on the wrist</StyledHeader>
-            <GenImage src="/Caucasian bones playground.png" alt="Dry Bones" />
+            <GenImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
             <ArticleMeta>
                 Written by: PMBL News — May 6, 2025
             </ArticleMeta>
             <SeparatorLine />
-            <Passage>
-                Around Week 3, star hitter Dry Bones from Manager Morgan's Diddy Monkeys began facing severe backlash due to accusations made
+            <Passage>Around Week 3, star hitter Dry Bones from Manager Morgan's Diddy Monkeys began facing severe backlash due to accusations made
                 about him the week prior. The league was led to believe that Dry Bones had been spotted numerous times around preschools at
                 peculiar hours. Manager Matt of the Yoshi Eggs said, "J-nasty and I just witnessed Caucasian bones walk into the Boston children’s museum"
-                in the middle of Week 5. At the start of Week 7, Manager Morgan Odysseus Hartwell has this to say about his player:
-            </Passage>
+                in the middle of Week 5. At the start of Week 7, Manager Morgan Odysseus Hartwell has this to say about his player:</Passage>
 
-            <Passage>
-                "Fake f*cking news about Caucasian bones I f*cking hate these hacks in the media who drum up obvious nonsense sh*t all the f*cking
-                time for a quick buck and have zero respect for the game or the players, absolutely shameless character assassination"
-            </Passage>
+            <Passage>"Fake f*cking news about Caucasian bones I f*cking hate these hacks in the media who drum up obvious nonsense sh*t all the f*cking
+                time for a quick buck and have zero respect for the game or the players, absolutely shameless character assassination"</Passage>
 
-            <Passage>
-                Allegations continued throughout the rest of Week 7 and the rest of the season, as fans and other managers continued to express their
-                opinions on the player. "I'm a huge Caucasian bones hater", said Manager Brendan.
-            </Passage>
+            <Passage>Allegations continued throughout the rest of Week 7 and the rest of the season, as fans and other managers continued to express their
+                opinions on the player. "I'm a huge Caucasian bones hater", said Manager Brendan.</Passage>
 
-            <Passage>
-                The matter got even worse for Caucasian Bones, as the trial was scheduled to be right before the Conference Series against Manager James,
-                and the verdict to be released during the series. However, the court had an unfavorable ruling:
-            </Passage>
+            <Passage>The matter got even worse for Caucasian Bones, as the trial was scheduled to be right before the Conference Series against Manager James,
+                and the verdict to be released during the series. However, the court had an unfavorable ruling:</Passage>
 
             <Ruling>
                 <h2>VERDICT</h2>
@@ -171,65 +222,44 @@ export default function DryBones() {
                 </pre>
             </Ruling>
 
-            <Passage>
-                Right after the verdict was dropped, the managers of the league rapidly expressed the feelings about the verdict:
-            </Passage>
-
-            <Passage>
-                "JURY BIAS JURY BIAS ITS ALL GOOMBAS ITS ALL HIS FRIENDS THIS IS A HUMILIATION OF THE MUSHROOM KINGDOM LEGAL SYSTEM", Manager Andrew
-            </Passage>
-
-            <Passage>
-                "THIS IS RIDICULOUS. AN OUTRAGE. THAT MAN SHOULD BE LOCKED UP", Manager Isaac
-            </Passage>
-
-            <Passage>
-                "I'm chilling", Manager Morgan
-            </Passage>
-
-            <Passage>
-                The Mushroom Kingdom Herald even went on to make a statement about this supposed robbery of the legal system:
-            </Passage>
+            <Passage>Right after the verdict was dropped, the managers of the league rapidly expressed the feelings about the verdict:</Passage>
+            <Passage>"JURY BIAS JURY BIAS ITS ALL GOOMBAS ITS ALL HIS FRIENDS THIS IS A HUMILIATION OF THE MUSHROOM KINGDOM LEGAL SYSTEM", Manager Andrew</Passage>
+            <Passage>"THIS IS RIDICULOUS. AN OUTRAGE. THAT MAN SHOULD BE LOCKED UP", Manager Isaac</Passage>
+            <Passage>"I'm chilling", Manager Morgan</Passage>
+            <Passage>The Mushroom Kingdom Herald even went on to make a statement about this supposed robbery of the legal system:</Passage>
 
             <NewsletterRuling>
                 <h3>JUDGE TOOK TRIP FROM BOWSER</h3>
                 <p><em>By: Nose, Mushroom Kingdom Herald staff reporter</em></p>
-                <p>
-                    A top federal judge took an all-expense trip to Seaside Kingdom from Bowser, according to leaked financial records.
-                </p>
-                <p>
-                    Judge Toadsworth visited the beloved vacation spot with his extended family without paying a dime, instead using
-                    a trip voucher gifted by a top Bowser aide.
-                </p>
-                <p>
-                    This comes as Toadsworth faces controversy after his ruling on a recent high-profile case gave an accused child creep no jail time.
-                </p>
-                <p>
-                    “It’s a clear ethical violation,” said Elvin Gadd, a professor of law at Western Mushroom University. “This is grounds for disbarment.”
-                </p>
-                <p>
-                    Toadsworth declined to comment.
-                </p>
-                <p>
-                    A representative for Bowser declined an interview but provided a written statement.
-                </p>
-                <p>
-                    “Bowser is a family man who deeply believes in this kingdom’s justice system,” the representative wrote.
-                </p>
+                <p>A top federal judge took an all-expense trip to Seaside Kingdom from Bowser, according to leaked financial records.</p>
+                <p>Judge Toadsworth visited the beloved vacation spot with his extended family without paying a dime, instead using a trip voucher gifted by a top Bowser aide.</p>
+                <p>This comes as Toadsworth faces controversy after his ruling on a recent high-profile case gave an accused child creep no jail time.</p>
+                <p>“It’s a clear ethical violation,” said Elvin Gadd, a professor of law at Western Mushroom University. “This is grounds for disbarment.”</p>
+                <p>Toadsworth declined to comment.</p>
+                <p>A representative for Bowser declined an interview but provided a written statement.</p>
+                <p>“Bowser is a family man who deeply believes in this kingdom’s justice system,” the representative wrote.</p>
             </NewsletterRuling>
 
-            <Passage>
-                The league as a whole is now concerned that Toadsworth, AKA "The Judge", has ruined his credibility and his draft stock going into
+            <Passage>The league as a whole is now concerned that Toadsworth, AKA "The Judge", has ruined his credibility and his draft stock going into
                 Season 2, after being a steal in the sixth round and being one of the only bright spots on Manager Chris and Zach's league low 3-7 record team.
                 The Managers Union is also concerned about the credibility of the Mushroom Kingdom legal system going forward with any high profile
-                cases, especially any those in acquaintance with Bowser.
-            </Passage>
+                cases, especially any those in acquaintance with Bowser.</Passage>
 
-            <Passage>
-                Dry Bones would go onto having a serviceable game in Game 3 of the Conference Series, clinching Manager Morgan's first win of the series
+            <Passage>Dry Bones would go onto having a serviceable game in Game 3 of the Conference Series, clinching Manager Morgan's first win of the series
                 in the 10th inning at Daisy Cruiser. However Manager James would win the next game to clinch his ticket to the World Series with a 3-1
-                series win. Dry Bones denied to speak to the media following the series loss.
-            </Passage>
+                series win. Dry Bones denied to speak to the media following the series loss.</Passage>
+            <SeparatorLine />
+            <StyledMiniHeader>Check out more stories below!</StyledMiniHeader>
+
+            <Stories>
+                <Story>
+                    <MiniImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
+                    <Overlay>
+                        <Headline>Koopa Found Guilty of Assault</Headline>
+                        <StyledLink to="/headlines/Koopa.tsx">Click to read more!</StyledLink>
+                    </Overlay>
+                </Story>
+            </Stories>
         </ContentDiv>
     );
 }
