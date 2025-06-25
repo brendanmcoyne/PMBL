@@ -1,6 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-// Grows logo
 const grow = keyframes`
     from {
         transform: scale(1);
@@ -10,7 +9,6 @@ const grow = keyframes`
     }
 `;
 
-// Spins background
 const spin = keyframes`
     from {
         transform: rotate(0deg);

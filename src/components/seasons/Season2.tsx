@@ -47,6 +47,11 @@ const ToggleButton = styled.button`
     margin-left: 2rem;
 `;
 
+const LinkDiv = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+`;
+
 export default function Season2() {
     return(
         <ContentDiv>
@@ -54,24 +59,26 @@ export default function Season2() {
                 <Link style={{color: "darkblue"}} to="/archives">Back</Link>
             </ToggleButton>
             <StyledHeader>Season 2 PMBL</StyledHeader>
-            <StyledLink>
-                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Schedule">Schedule</Link>
-            </StyledLink>
-            <StyledLink>
-                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Draft">Draft</Link>
-            </StyledLink>
-            <StyledLink>
-                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Awards">Awards</Link>
-            </StyledLink>
-            <StyledLink>
-                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Standings">Standings</Link>
-            </StyledLink>
-            <StyledLink>
-                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Playoffs">Playoffs</Link>
-            </StyledLink>
-            <StyledLink>
-                <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Other">Other</Link>
-            </StyledLink>
+            <LinkDiv>
+                <StyledLink>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Schedule">Schedule</Link>
+                </StyledLink>
+                <StyledLink>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Draft">Draft</Link>
+                </StyledLink>
+                <StyledLink>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Awards">Awards</Link>
+                </StyledLink>
+                <StyledLink>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Standings">Standings</Link>
+                </StyledLink>
+                <StyledLink>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Playoffs">Playoffs</Link>
+                </StyledLink>
+                <StyledLink>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Other">Other</Link>
+                </StyledLink>
+            </LinkDiv>
         </ContentDiv>
 
     );

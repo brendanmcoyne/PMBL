@@ -48,7 +48,7 @@ const Wrapper = styled.div`
 `;
 
 const StyledHeader = styled.h1`
-    font-size: 60px;
+    font-size: 55px;
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
@@ -64,18 +64,8 @@ const ImageWrapper = styled.div`
     margin: 20px auto;
 `;
 
-const LogoBackground = styled.div`
-    background-color: #001f3f;
-    border-radius: 50%;
-    padding: 20px;
-    border: 4px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
-
 const GenImage = styled.img`
-    width: 100%;
+    width: 300px;
     height: auto;
     border-radius: 50%;
 `;
@@ -174,9 +164,7 @@ export default function Home() {
                 <Wrapper>
                     <StyledHeader>Welcome to the Professional Mario Baseball League</StyledHeader>
                     <ImageWrapper>
-                        <LogoBackground>
                             <GenImage src="/LeagueLogo_fix.png" alt="Professional Mario Baseball League Logo" />
-                        </LogoBackground>
                     </ImageWrapper>
                 </Wrapper>
             </Main>
