@@ -44,7 +44,8 @@ const Wrapper = styled.div`
 const StyledHeader = styled.h1`
     font-size: 55px;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
 `;
 
 const ImageWrapper = styled.div`
@@ -56,9 +57,16 @@ const ImageWrapper = styled.div`
 `;
 
 const GenImage = styled.img`
-    width: 350px;
+    width: 300px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 20px;
+    border: 3px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 `;
 
 const ContentSection = styled.section`

@@ -10,6 +10,7 @@ export type Player = {
     gp: number;
     captain?: boolean;
     mii?: boolean;
+    banner?: string;
     awards?: Award[];
 };
 
@@ -102,6 +103,7 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
+        banner: "/banners/BirdoBows-MSS.webp",
         awards: [
             { name: "All-Star", season: 1},
             { name: "1x Game MVP", season: 1},
@@ -227,6 +229,7 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
+        banner: "/banners/BowserMonsters-MSS.webp",
         awards: [
             { name: "World Series Champion", season: 1},
             { name: "1x Finals Game MVP", season: 1},
@@ -241,6 +244,7 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
+        banner: "/banners/BowserJrRookies-MSS.webp",
         awards: [
             { name: "World Series Champion", season: 1},
             { name: "1x Game MVP", season: 1},
@@ -283,6 +287,7 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
+        banner: "/banners/DaisyFlowers-MSS.webp",
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -323,6 +328,7 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
+        banner: "/banners/DiddyMonkeys-MSS.webp",
         awards: [
             { name: "Captain of the Year", season: 1},
         ]
@@ -345,6 +351,7 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
+        banner: "/banners/DKWilds-MSS.webp",
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -617,6 +624,7 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
+        banner: "/banners/LuigiKnights-MSS.webp",
         awards: [
             { name: "All-Star", season: 1},
         ]
@@ -628,6 +636,7 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
+        banner: "/banners/MarioFireballs-MSS.webp",
         awards: [
             { name: "All-Star", season: 1},
         ]
@@ -697,6 +706,7 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
+        banner: "/banners/PeachMonarchs-MSS.webp",
         awards: [
             { name: "All-Star", season: 1},
         ]
@@ -892,6 +902,7 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
+        banner: "/banners/WaluigiSpitballs-MSS.webp",
     },
     {
         name: "Wario",
@@ -900,6 +911,7 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
+        banner: "/banners/WarioMuscles-MSS.webp",
     },
     {
         name: "Wiggler",
@@ -968,5 +980,6 @@ export const players: Player[] = [
         gp: 10,
         captain: true,
         mii: false,
+        banner: "/banners/YoshiEggs-MSS.webp",
     },
 ];

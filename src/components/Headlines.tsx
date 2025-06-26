@@ -89,6 +89,14 @@ export default function Players() {
             <StyledMiniHeader>Featuring all the top baseball stories!</StyledMiniHeader>
 
             <Story>
+                <GenImage src="/miibaseball.jpg" alt="Miis" />
+                <Overlay>
+                    <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
+                    <StyledLink to="/headlines/MiiBreakout.tsx">Click to read more!</StyledLink>
+                </Overlay>
+            </Story>
+
+            <Story>
                 <GenImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
                 <Overlay>
                     <Headline>Koopa Found Guilty of Assault</Headline>
@@ -103,6 +111,7 @@ export default function Players() {
                     <StyledLink to="/headlines/DryBones.tsx">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
+
 
         </ContentDiv>
     );

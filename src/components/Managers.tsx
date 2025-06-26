@@ -20,9 +20,10 @@ export const ContentDiv = styled.div`
 `;
 
 const StyledHeader = styled.h1`
-    text-align: center; 
-    margin-bottom: 1rem; 
+    font-size: 55px;
     color: white;
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -211,7 +212,7 @@ export default function Managers() {
 
     return (
         <ContentDiv>
-            <StyledHeader>Managers List</StyledHeader>
+            <StyledHeader style={{fontSize: "80px"}}>Managers List</StyledHeader>
             <div style={{display: 'flex', gap: "200px"}}>
                 <DivisionHeader>East Division</DivisionHeader>
             </div>

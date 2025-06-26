@@ -25,11 +25,11 @@ const DivisionDiv = styled.div`
     width: 85%;
 `;
 
-const DivisionHeader = styled.h1`
-    text-align: center;
-    grid-column: span 3;
+const StyledHeader = styled.h1`
+    font-size: 55px;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
 `;
 
 const PlayerName = styled.span`
@@ -208,8 +208,6 @@ const ModalRight = styled.div`
 `;
 
 const AboutSection = styled.div`
-    padding: 0;
-    margin-top: 0.5rem;
     p {
         margin: 0.25rem 0;
     }
@@ -277,7 +275,7 @@ export default function Players() {
 
     return (
         <ContentDiv>
-            <DivisionHeader>Player List</DivisionHeader>
+            <StyledHeader>Player List</StyledHeader>
 
             <SortButtonsContainer>
                 <SortButton active={sortOption === "az"} onClick={() => setSortOption("az")}>Sort A-Z</SortButton>
@@ -303,7 +301,7 @@ export default function Players() {
 
             {selectedPlayer && selectedStat && (
                 <ModalBackground onClick={() => { setSelectedPlayer(null); setSelectedStat(null); }}>
-                    <ModalContent style={{backgroundColor: "#BFD8E6", color: selectedPlayer.color === "Black" ? "white" : ""}}
+                    <ModalContent style={{backgroundColor: "#BFD8E6"}}
                         onClick={(e) => e.stopPropagation()}>
                         <CloseButton onClick={() => { setSelectedPlayer(null); setSelectedStat(null); }}>✕</CloseButton>
                         <ModalScrollWrapper>
@@ -311,21 +309,24 @@ export default function Players() {
                                 <ToggleButton active={activeModalTab === "info"} onClick={() => setActiveModalTab("info")}>Info</ToggleButton>
                                 <ToggleButton active={activeModalTab === "awards"} onClick={() => setActiveModalTab("awards")}>Awards</ToggleButton>
                             </div>
-                            <StyledMiniHeader style={{ fontSize: "33px" }}>
-                                {selectedPlayer.name} {selectedPlayer.captain ? "(C)" : ""}
+                            <StyledMiniHeader style={{ fontSize: "33px", margin: "5px" }}>
+                                {selectedPlayer.name}
                             </StyledMiniHeader>
+                            {selectedPlayer.captain ? <img style={{marginBottom: "10px", padding: "0"}} src={selectedPlayer.banner} alt="banner"/> : ""}
                             {activeModalTab === "info" && (
                                 <ModalTopLayout>
                                     <ModalLeft>
-                                        <img style={{backgroundColor: "lightgray", padding: "3px", border: "4px solid #4a90e2"}}
+                                        <img style={{backgroundColor: "#dbe9f4", padding: "3px", border: "4px solid #4a90e2"}}
                                             src={selectedPlayer.src} alt={selectedPlayer.name} width="160"/>
                                         <AboutSection>
                                             <StyledMiniHeader>About</StyledMiniHeader>
-                                            <p>Color: {selectedPlayer.color}</p>
+                                            <p style={{borderRadius: "8px", backgroundColor: selectedPlayer.color === "Light Blue" ? "lightblue" :
+                                                selectedPlayer.color === "Light Green" ? "lightgreen" : selectedPlayer.color,
+                                                color: selectedPlayer.color === "Black" ? "white" : ""}}>Color: {selectedPlayer.color}</p>
                                             <p>Games Played: {selectedPlayer.gp}</p>
                                         </AboutSection>
                                     </ModalLeft>
-                                    <ModalRight>
+                                    <ModalRight style={{fontWeight: "bold"}}>
                                         <StatCard>
                                             <div>Batting: {statWithEmoji(selectedStat.batting)}</div>
                                             <StatBarContainer>
