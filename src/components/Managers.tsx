@@ -81,7 +81,7 @@ const ModalBackground = styled.div`
 `;
 
 const ModalContent = styled.div`
-    background: #CFD8E6;
+    background-color: #BFD8E6;
     padding: 2rem;
     border-radius: 20px;
     width: 90%;
@@ -110,11 +110,6 @@ const CloseButton = styled.button`
     padding: 0;
 `;
 
-const ManagerName = styled.span`
-    font-weight: bold;
-    text-align: center;
-`;
-
 const ModalScrollWrapper = styled.div`
     max-height: calc(90vh - 4rem);
     overflow-y: auto;
@@ -133,23 +128,24 @@ const ToggleButton = styled.button<ToggleButtonProps>`
     border: none;
     background-color: ${({ active }) => (active ? "#4a90e2" : "#e0e0e0")};
     color: ${({ active }) => (active ? "white" : "black")};
-    border-radius: 20px;
+    border-radius: 10px;
     transition: background-color 0.2s, color 0.2s;
 `;
 
 const TileSetup = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    width: 100%;
 `;
 
 const ModalTopLayout = styled.div`
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
 `;
 
 const ModalLeft = styled.div`
@@ -158,8 +154,7 @@ const ModalLeft = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
-    gap: 1rem;
+    gap: 10px;
 `;
 
 const ModalRight = styled.div`
@@ -167,15 +162,11 @@ const ModalRight = styled.div`
     min-width: 220px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
 `;
 
 const ModalManagerName = styled.h2`
     font-size: 2rem;
-    margin-bottom: 1rem;
     color: #222;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-    font-weight: bold;
 `;
 
 const ModalImage = styled.img`
@@ -189,13 +180,12 @@ const ModalImage = styled.img`
 
 const StatCard = styled.div`
     background-color: #f0f4f8;
-    border-left: 6px solid #4a90e2;
-    padding: 0.8rem 1rem;
+    border-left: 5px solid #4a90e2;
+    padding: 0.9rem 1rem;
     margin-bottom: 0.5rem;
     border-radius: 8px;
     font-size: 1rem;
     text-align: left;
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 `;
 
 export default function Managers() {
@@ -213,37 +203,45 @@ export default function Managers() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setReady(true);
-        }, 50);
+            }, 50);
         return () => clearTimeout(timer);
-    }, []);
+        }, []);
 
     if (!ready) return null;
 
     return (
         <ContentDiv>
             <StyledHeader>Managers List</StyledHeader>
-            <div style={{ display: 'flex', gap: "200px" }}>
+            <div style={{display: 'flex', gap: "200px"}}>
                 <DivisionHeader>East Division</DivisionHeader>
             </div>
             <DivisionDiv>
                 {sortedManagers.filter(m => m.division === "East").map((manager: Manager) => (
-                    <Manager key={manager.name} onClick={() => {setSelectedManager(manager);setActiveModalTab("info");}} style={{ backgroundColor: manager.color }}>
+                    <Manager key={manager.name} onClick={() => {
+                        setSelectedManager(manager);
+                        setActiveModalTab("info");
+                    }} style={{backgroundColor: manager.color}}>
                         <TileSetup>
-                            <img src={manager.emblem} alt={manager.name}/>
-                            <ManagerName>{manager.name}</ManagerName>
+                            <img src={manager.emblem} alt={manager.name}
+                                 style={{width: "100px", height: "100px", objectFit: "contain"}}/>
+                            <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
                         </TileSetup>
                     </Manager>
                 ))}
             </DivisionDiv>
-            <div style={{ display: 'flex', gap: "200px" }}>
+            <div style={{display: 'flex', gap: "200px"}}>
                 <DivisionHeader>West Division</DivisionHeader>
             </div>
             <DivisionDiv>
                 {sortedManagers.filter(m => m.division === "West").map((manager: Manager) => (
-                    <Manager key={manager.name} onClick={() => {setSelectedManager(manager);setActiveModalTab("info");}} style={{ backgroundColor: manager.color }}>
+                    <Manager key={manager.name} onClick={() => {
+                        setSelectedManager(manager);
+                        setActiveModalTab("info");
+                    }} style={{backgroundColor: manager.color}}>
                         <TileSetup>
-                            <img src={manager.emblem} alt={manager.name}/>
-                            <ManagerName>{manager.name}</ManagerName>
+                            <img src={manager.emblem} alt={manager.name}
+                                 style={{width: "100px", height: "100px", objectFit: "contain"}}/>
+                            <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
                         </TileSetup>
                     </Manager>
                 ))}
@@ -254,64 +252,67 @@ export default function Managers() {
                     <ModalContent onClick={(e) => e.stopPropagation()}>
                         <CloseButton onClick={() => setSelectedManager(null)}>✕</CloseButton>
                         <ModalScrollWrapper>
-                        <div style={{ marginBottom: "1rem" }}>
-                            <ToggleButton active={activeModalTab === "info"} onClick={() => setActiveModalTab("info")}>Info</ToggleButton>
-                            <ToggleButton active={activeModalTab === "roster"} onClick={() => setActiveModalTab("roster")}>Roster</ToggleButton>
-                        </div>
-                        {activeModalTab === "info" && (
-                            <>
-                                <ModalManagerName>{selectedManager.name}</ModalManagerName>
-                                <ModalTopLayout>
-                                    <ModalLeft>
-                                        <ModalImage src={selectedManager.src} alt={selectedManager.name} />
-                                        <img src={selectedManager.s1banner} alt={`${selectedManager.name} banner`} />
-                                    </ModalLeft>
+                            <div style={{marginBottom: "1rem"}}>
+                                <ToggleButton active={activeModalTab === "info"}
+                                              onClick={() => setActiveModalTab("info")}>Info</ToggleButton>
+                                <ToggleButton active={activeModalTab === "roster"}
+                                              onClick={() => setActiveModalTab("roster")}>Roster</ToggleButton>
+                            </div>
+                            {activeModalTab === "info" && (
+                                <>
+                                    <ModalManagerName>{selectedManager.name}</ModalManagerName>
+                                    <ModalTopLayout>
+                                        <ModalLeft>
+                                            <ModalImage src={selectedManager.src} alt="photo"/>
+                                            <img src={selectedManager.s1banner} alt="banner"/>
+                                        </ModalLeft>
+                                        <ModalRight>
+                                            <StatCard>Record: {selectedManager.record}</StatCard>
+                                            <StatCard>Division Titles: {selectedManager.divships}</StatCard>
+                                            <StatCard>Playoff Berths: {selectedManager.playoffs}</StatCard>
+                                            <StatCard>World Series Titles: {selectedManager.champs}</StatCard>
+                                        </ModalRight>
+                                    </ModalTopLayout>
+                                </>
+                            )}
 
-                                    <ModalRight>
-                                        <StatCard>Record: {selectedManager.record}</StatCard>
-                                        <StatCard>Division Titles: {selectedManager.divships}</StatCard>
-                                        <StatCard>Playoff Berths: {selectedManager.playoffs}</StatCard>
-                                        <StatCard>World Series Titles: {selectedManager.champs}</StatCard>
-                                    </ModalRight>
-                                </ModalTopLayout>
-                            </>
-                        )}
-
-                        {activeModalTab === "roster" && (
-                            <>
-                                <StyledMiniHeader>Season 1 Roster</StyledMiniHeader>
-                                {getRosterForManager(selectedManager.name)?.accolades && (
-                                    <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap", gap: "8px", marginBottom: "10px" }}>
-                                        {getRosterForManager(selectedManager.name)?.accolades?.map((acc) => (
-                                            <div key={acc.type} style={{backgroundColor: acc.color.toLowerCase(), color: "white",
-                                                padding: "4px 8px", borderRadius: "8px", fontSize: "0.9rem", fontWeight: "bold"}}>{acc.type}</div>
+                            {activeModalTab === "roster" && (
+                                <>
+                                    <StyledMiniHeader>Season 1 Roster</StyledMiniHeader>
+                                    {getRosterForManager(selectedManager.name)?.accolades && (
+                                        <div style={{display: "flex", flexDirection: "column", gap: "8px", marginBottom: "10px"}}>
+                                            {getRosterForManager(selectedManager.name)?.accolades?.map((acc) => (
+                                                <div key={acc.type} style={{
+                                                    backgroundColor: acc.color,
+                                                    color: "white",
+                                                    padding: "4px",
+                                                    borderRadius: "8px",
+                                                    fontSize: "0.9rem",
+                                                    fontWeight: "bold"
+                                                }}>{acc.type}</div>
+                                            ))}
+                                        </div>
+                                    )}
+                                    <p style={{fontWeight: "bold", marginBottom: "0.4rem"}}>
+                                        <strong>Captain:</strong> {getRosterForManager(selectedManager.name)?.captain || "N/A"}
+                                    </p>
+                                    <ul style={{
+                                        listStyleType: "none", padding: 0, marginTop: "0.5rem", display: "grid",
+                                        gridTemplateColumns: "1fr 1fr", gap: "0.3rem",
+                                    }}>
+                                        {getRosterForManager(selectedManager.name)?.roster.map((player) => (
+                                            <li key={player.name} style={{
+                                                background: "#e3e3e3",
+                                                padding: "6px 10px",
+                                                borderRadius: "6px",
+                                                fontWeight: "500",
+                                            }}>
+                                                {player.name}
+                                            </li>
                                         ))}
-                                    </div>
-                                )}
-                                <p style={{fontWeight: "bold", marginBottom: "0.4rem" }}>
-                                    <strong>Captain:</strong> {getRosterForManager(selectedManager.name)?.captain || "N/A"}
-                                </p>
-                                <ul style={{
-                                    listStyleType: "none",
-                                    paddingLeft: 0,
-                                    marginTop: "0.5rem",
-                                    display: "grid",
-                                    gridTemplateColumns: "1fr 1fr",
-                                    gap: "0.3rem",
-                                }}>
-                                    {getRosterForManager(selectedManager.name)?.roster.map((player) => (
-                                        <li key={player.name} style={{
-                                            background: "#e3e3e3",
-                                            padding: "6px 10px",
-                                            borderRadius: "6px",
-                                            fontWeight: "500",
-                                        }}>
-                                            {player.name}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </>
-                        )}
+                                    </ul>
+                                </>
+                            )}
                         </ModalScrollWrapper>
                     </ModalContent>
                 </ModalBackground>

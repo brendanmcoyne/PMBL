@@ -186,7 +186,7 @@ const MiniImage = styled.img`
 export default function DryBones() {
     return (
         <ContentDiv>
-            <StyledHeader>Dry Bones gets a slap on the wrist</StyledHeader>
+            <StyledHeader>Dry Bones Gets a Slap on the Wrist</StyledHeader>
             <GenImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
             <ArticleMeta>
                 Written by: PMBL News — May 6, 2025

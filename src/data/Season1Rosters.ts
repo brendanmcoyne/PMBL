@@ -32,9 +32,9 @@ export const rosters: Roster[] = [
             {name: "Michelle Obama"},
         ],
         accolades: [
-            {type: "World Series Runners Up", color: "Silver"},
-            {type: "Best Record Champions", color: "Green"},
-            {type: "East Division Champions", color: "Blue"},
+            {type: "World Series Runners Up", color: "silver"},
+            {type: "Best Record Champions", color: "green"},
+            {type: "East Division Champions", color: "blue"},
         ]
     },
     {
@@ -71,7 +71,7 @@ export const rosters: Roster[] = [
             { name: "Tate McRae" }
         ],
         accolades: [
-            {type: "World Series Champions", color: "Gold"},
+            {type: "World Series Champions", color: "gold"},
         ]
     },
     {
@@ -142,7 +142,7 @@ export const rosters: Roster[] = [
             { name: "Danny B" }
         ],
         accolades: [
-            {type: "West Division Champions", color: "Red"},
+            {type: "West Division Champions", color: "red"},
         ]
     },
     {

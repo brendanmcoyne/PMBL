@@ -5,6 +5,9 @@ import type { Player } from "../data/playerNames.ts";
 import { stats } from "../data/playerStats.ts";
 import type { Stat } from "../data/playerStats.ts";
 
+interface ToggleButtonProps {
+    active: boolean;
+}
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -17,7 +20,7 @@ export const ContentDiv = styled.div`
 
 const DivisionDiv = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
     gap: 15px;
     width: 85%;
 `;
@@ -146,51 +149,35 @@ const SortButton = styled.button<{ active?: boolean }>`
     transition: background-color 0.2s;
 `;
 
-const StatBarContainer = styled.div`
-    width: 100%;
-    margin: 0.5rem 0;
-`;
-
-const StatBarLabel = styled.div`
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: 0.25rem;
-`;
-
-const StatBarBackground = styled.div`
-    width: 100%;
-    height: 12px; 
-    background-color: #ddd;
+const StatCard = styled.div`
+    background-color: #f0f4f8;
+    border-left: 5px solid #4a90e2;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
     border-radius: 8px;
-    overflow: hidden;
+    font-size: 1rem;
+    text-align: left;
+`;
+
+const StatBarContainer = styled.div`
+    background-color: #dbe9f4;
+    border-radius: 8px;      
+    overflow: hidden;       
+    height: 1.25rem;
+    margin-top: 0.35rem;
 `;
 
 const StatBarFill = styled.div<{ value: number }>`
     height: 100%;
-    width: ${({ value }) => (value / 10) * 100}%;
-    background: linear-gradient(to right, #004080, #007bff);
-    border-radius: 8px;
-    transition: width 0.3s ease-in-out;
+    width: ${({ value }) => `${(value / 10) * 100}%`};
+    background-image: ${({ value }) => {
+        if (value >= 7)      return 'linear-gradient(90deg,#ff9966 0%,#ff5e62 100%)';  
+        if (value >= 4)      return 'linear-gradient(90deg,#6dd5fa 0%,#2980b9 100%)';  
+        return 'linear-gradient(90deg,#84fab0 0%,#8fd3f4 100%)';  
+    }};
+    transition: width 0.35s ease-in-out;
+    border-radius: inherit;  
 `;
-
-const StatBar = ({ label, value }: { label: string; value: number }) => {
-    const getEmoji = (val: number) => {
-        if (val >= 7) return "🔥";
-        if (val <= 3) return "🧊";
-        return "";
-    };
-
-    return (
-        <StatBarContainer>
-            <StatBarLabel>
-                {label}: {value} {getEmoji(value)}
-            </StatBarLabel>
-            <StatBarBackground>
-                <StatBarFill value={value} />
-            </StatBarBackground>
-        </StatBarContainer>
-    );
-};
 
 const ModalTopLayout = styled.div`
     display: flex;
@@ -231,10 +218,29 @@ const AboutSection = styled.div`
     }
 `;
 
+const ToggleButton = styled.button<ToggleButtonProps>`
+    margin: 0 0.5rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: ${({ active }) => (active ? "#4a90e2" : "#e0e0e0")};
+    color: ${({ active }) => (active ? "white" : "black")};
+    border-radius: 10px;
+    transition: background-color 0.2s, color 0.2s;
+`;
+
+function statWithEmoji(value: number): string {
+    if (value >= 7) return `${value} 🔥`;
+    if (value <= 3) return `${value} 🧊`;
+    return `${value}`;
+}
+
 export default function Players() {
     const [sortOption, setSortOption] = useState("az");
     const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
     const [selectedStat, setSelectedStat] = useState<Stat | null>(null);
+    const [activeModalTab, setActiveModalTab] = useState<"info" | "awards">("info");
 
     const colorOrder = [
         "Red", "Orange", "Yellow", "Light Green", "Green",
@@ -283,8 +289,12 @@ export default function Players() {
 
             <DivisionDiv>
                 {sortedPlayers.map((player: Player) => (
-                    <Player key={player.name} onClick={() => {setSelectedPlayer(player); const statForPlayer =
-                        stats.find(stat => stat.name === player.name); setSelectedStat(statForPlayer || null);}}>
+                    <Player key={player.name} onClick={() => {
+                        setSelectedPlayer(player);
+                        const statForPlayer = stats.find(stat => stat.name === player.name);
+                        setSelectedStat(statForPlayer || null);
+                        setActiveModalTab("info");
+                    }}>
                         <GenImage src={player.src} alt={player.name} />
                         <PlayerName>{player.name}</PlayerName>
                     </Player>
@@ -292,51 +302,82 @@ export default function Players() {
             </DivisionDiv>
 
             {selectedPlayer && selectedStat && (
-                <ModalBackground onClick={() => {setSelectedPlayer(null); setSelectedStat(null)}}>
-                    <ModalContent style={{backgroundColor: selectedPlayer.color === "Light Blue" ? "lightblue" : selectedPlayer.color === "Light Green" ? "lightgreen" : selectedPlayer.color, color: selectedPlayer.color === "Black" ? "white" : ""}} onClick={(e) => e.stopPropagation()}>
-                        <CloseButton onClick={() => {setSelectedPlayer(null); setSelectedStat(null)}}>✕</CloseButton>
+                <ModalBackground onClick={() => { setSelectedPlayer(null); setSelectedStat(null); }}>
+                    <ModalContent style={{backgroundColor: "#BFD8E6", color: selectedPlayer.color === "Black" ? "white" : ""}}
+                        onClick={(e) => e.stopPropagation()}>
+                        <CloseButton onClick={() => { setSelectedPlayer(null); setSelectedStat(null); }}>✕</CloseButton>
                         <ModalScrollWrapper>
-                            <StyledMiniHeader style={{fontSize: "33px"}}>{selectedPlayer.name} {selectedPlayer.captain ? "(C)" : ""}</StyledMiniHeader>
-                            <ModalTopLayout>
-                                <ModalLeft>
-                                    <img style={{backgroundColor: "lightgray", marginTop: "30px", padding: "3px", border: "3px solid black"}} src={selectedPlayer.src}
-                                         alt={selectedPlayer.name} width="160" />
-                                    <AboutSection>
-                                        <StyledMiniHeader>About</StyledMiniHeader>
-                                        <p>Color: {selectedPlayer.color}</p>
-                                        <p>Games Played: {selectedPlayer.gp}</p>
-                                    </AboutSection>
-                                </ModalLeft>
-                                <ModalRight>
-                                    <StatBar label="Batting" value={selectedStat.batting} />
-                                    <StatBar label="Pitching" value={selectedStat.pitching} />
-                                    <StatBar label="Fielding" value={selectedStat.fielding} />
-                                    <StatBar label="Running" value={selectedStat.running} />
-                                </ModalRight>
-                            </ModalTopLayout>
-
-                            {Array.isArray(selectedPlayer.awards) && selectedPlayer.awards.length > 0 && (
+                            <div style={{ marginBottom: "1rem", marginTop: "1rem" }}>
+                                <ToggleButton active={activeModalTab === "info"} onClick={() => setActiveModalTab("info")}>Info</ToggleButton>
+                                <ToggleButton active={activeModalTab === "awards"} onClick={() => setActiveModalTab("awards")}>Awards</ToggleButton>
+                            </div>
+                            <StyledMiniHeader style={{ fontSize: "33px" }}>
+                                {selectedPlayer.name} {selectedPlayer.captain ? "(C)" : ""}
+                            </StyledMiniHeader>
+                            {activeModalTab === "info" && (
+                                <ModalTopLayout>
+                                    <ModalLeft>
+                                        <img style={{backgroundColor: "lightgray", padding: "3px", border: "4px solid #4a90e2"}}
+                                            src={selectedPlayer.src} alt={selectedPlayer.name} width="160"/>
+                                        <AboutSection>
+                                            <StyledMiniHeader>About</StyledMiniHeader>
+                                            <p>Color: {selectedPlayer.color}</p>
+                                            <p>Games Played: {selectedPlayer.gp}</p>
+                                        </AboutSection>
+                                    </ModalLeft>
+                                    <ModalRight>
+                                        <StatCard>
+                                            <div>Batting: {statWithEmoji(selectedStat.batting)}</div>
+                                            <StatBarContainer>
+                                                <StatBarFill value={selectedStat.batting} />
+                                            </StatBarContainer>
+                                        </StatCard>
+                                        <StatCard>
+                                            <div>Pitching: {statWithEmoji(selectedStat.pitching)}</div>
+                                            <StatBarContainer>
+                                                <StatBarFill value={selectedStat.pitching} />
+                                            </StatBarContainer>
+                                        </StatCard>
+                                        <StatCard>
+                                            <div>Fielding: {statWithEmoji(selectedStat.fielding)}</div>
+                                            <StatBarContainer>
+                                                <StatBarFill value={selectedStat.fielding} />
+                                            </StatBarContainer>
+                                        </StatCard>
+                                        <StatCard>
+                                            <div>Running: {statWithEmoji(selectedStat.running)}</div>
+                                            <StatBarContainer>
+                                                <StatBarFill value={selectedStat.running} />
+                                            </StatBarContainer>
+                                        </StatCard>
+                                    </ModalRight>
+                                </ModalTopLayout>
+                            )}
+                            {activeModalTab === "awards" && (
                                 <>
-                                    <StyledMiniHeader>Awards</StyledMiniHeader>
-                                    <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-                                        {selectedPlayer.awards.map((award, index) => (
-                                            <li key={index} style = {{
-                                                fontWeight: award.name === "League MVP" || award.name === "Finals MVP" ? "bold" : "",
-                                                color: award.name === "League MVP" ? "white" : "",
-                                                backgroundColor:
-                                                award.name === "World Series Champion" || award.name === "World Series MVP" ? "gold" :
-                                                award.name === "Offensive Player of the Year" ? "red" :
-                                                award.name === "Defensive Player of the Year" ? "darkgreen" :
-                                                award.name === "Golden Glove Winner" ? "yellow" :
-                                                award.name === "Silver Slugger Winner" ? "lightgray" :
-                                                award.name === "League MVP" ? "darkblue":
-                                                award.name === "Morgan Hartwell Man of the Year Award" ? "orange" : "",
-                                                borderRadius: "8px"
-                                            }}>
-                                                {award.name} (Season {award.season})
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    {Array.isArray(selectedPlayer.awards) && selectedPlayer.awards.length > 0 ? (
+                                        <>
+                                            <StyledMiniHeader>Awards</StyledMiniHeader>
+                                            <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+                                                {selectedPlayer.awards.map((award, index) => (
+                                                    <li key={index} style={{ fontWeight: award.name === "League MVP"
+                                                        || award.name === "Finals MVP" ? "bold" : "",
+                                                        color: award.name === "League MVP" ? "white" : "",
+                                                        backgroundColor: award.name === "World Series Champion"
+                                                        || award.name === "World Series MVP" ? "gold" :
+                                                        award.name === "Offensive Player of the Year" ? "red" :
+                                                        award.name === "Defensive Player of the Year" ? "darkgreen" :
+                                                        award.name === "Golden Glove Winner" ? "yellow" :
+                                                        award.name === "Silver Slugger Winner" ? "lightgray" :
+                                                        award.name === "League MVP" ? "darkblue" :
+                                                        award.name === "Morgan Hartwell Man of the Year Award" ? "orange" : "",
+                                                        borderRadius: "8px"}}>
+                                                        {award.name} (Season {award.season})
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </>
+                                    ) : (<p style={{ fontStyle: "italic" }}>No awards yet.</p>)}
                                 </>
                             )}
                         </ModalScrollWrapper>

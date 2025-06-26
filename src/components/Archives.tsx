@@ -89,9 +89,10 @@ export default function Archives() {
             <h3 style={{textAlign: "center", color: "white", marginTop: "50px"}}>Gallery</h3>
 
             <Gallery>
-                <img src="/archives/IMG_7373.jpg" alt="IMG_6188"/>
-                <img src="/archives/IMG_7375.jpg" alt="IMG_6189"/>
-                <img src="/archives/IMG_7376.jpg" alt="IMG_6190"/>
+                <img src="/archives/IMG_7373.jpg" alt="1"/>
+                <img src="/archives/IMG_7375.jpg" alt="2"/>
+                <img src="/archives/IMG_7376.jpg" alt="3"/>
+                <img src="/archives/IMG_7425.jpg" alt="4"/>
             </Gallery>
         </ContentDiv>
 
