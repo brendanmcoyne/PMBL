@@ -85,7 +85,7 @@ export default function MiiBreakout() {
                         <MiniImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
                         <Overlay>
                             <Headline>Koopa Found Guilty of Assault</Headline>
-                            <StyledLink to="/headlines/Koopa.tsx">Click to read more!</StyledLink>
+                            <StyledLink to="/headlines/Koopa">Click to read more!</StyledLink>
                         </Overlay>
                     </Story>
                 </Stories>
@@ -95,7 +95,7 @@ export default function MiiBreakout() {
                         <MiniImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
                         <Overlay>
                             <Headline>Dry Bones Gets a Slap on the Wrist</Headline>
-                            <StyledLink to="/headlines/DryBones.tsx">Click to read more!</StyledLink>
+                            <StyledLink to="/headlines/DryBones">Click to read more!</StyledLink>
                         </Overlay>
                     </Story>
                 </Stories>

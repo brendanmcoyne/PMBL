@@ -79,7 +79,7 @@ export default function DryBones() {
                         <MiniImage src="/miibaseball.jpg" alt="Mii" />
                         <Overlay>
                             <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
-                            <StyledLink to="/headlines/MiiBreakout.tsx">Click to read more!</StyledLink>
+                            <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>
                         </Overlay>
                     </Story>
                 </Stories>
@@ -88,7 +88,7 @@ export default function DryBones() {
                         <MiniImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
                         <Overlay>
                             <Headline>Koopa Found Guilty of Assault</Headline>
-                            <StyledLink to="/headlines/Koopa.tsx">Click to read more!</StyledLink>
+                            <StyledLink to="/headlines/Koopa">Click to read more!</StyledLink>
                         </Overlay>
                     </Story>
                 </Stories>
