@@ -12,9 +12,11 @@ export const ContentDiv = styled.div`
 `;
 
 const StyledHeader = styled.h1`
-    align-items: center;
+    font-size: 80px;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
 `;
 
 const GenImage = styled.img`

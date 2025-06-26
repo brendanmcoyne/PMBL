@@ -25,11 +25,10 @@ const StyledLink = styled.p`
     margin-top: 20px;
     border: 3px solid black;
     font-size: 1.6rem;
-    text-align: center;
     padding: 40px 80px;
     background-color: #00008b;
     border-radius: 15px;
-    width: 200px; 
+    width: 200px;
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -73,16 +72,14 @@ export default function Archives() {
 
     return(
         <ContentDiv>
-            <StyledHeader>Archives</StyledHeader>
+            <StyledHeader style={{fontSize: "80px"}}>Archives</StyledHeader>
             <h3 style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</h3>
             <div style={{display: "flex", flexDirection: "row"}}>
                 <StyledLink>
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1">Season 1</Link>
-                    <p style={{color: '#FFFFFF', fontWeight: 'bold'}}>Spring 2025 Season</p>
                 </StyledLink>
                 <StyledLink>
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2">Season 2</Link>
-                    <p style={{color: '#FFFFFF', fontWeight: 'bold'}}>Fall 2025 Season</p>
                 </StyledLink>
             </div>
 

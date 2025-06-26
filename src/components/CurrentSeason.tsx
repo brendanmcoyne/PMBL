@@ -11,10 +11,11 @@ export const ContentDiv = styled.div`
 `;
 
 const StyledHeader = styled.h1`
-    align-items: center;
-    text-align: center;
+    font-size: 55px;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
 `;
 
 const GenImage = styled.img`
@@ -27,7 +28,7 @@ const GenImage = styled.img`
 export default function CurrentSeason() {
     return(
         <ContentDiv>
-            <StyledHeader>This page is under construction.</StyledHeader>
+            <StyledHeader style={{fontSize: "80px"}}>This page is under construction.</StyledHeader>
             <GenImage src="/145px-Wiggler-MSS.webp" alt="Professional Mario Baseball League Logo" />
         </ContentDiv>
     );

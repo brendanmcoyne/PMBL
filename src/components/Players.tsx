@@ -275,7 +275,7 @@ export default function Players() {
 
     return (
         <ContentDiv>
-            <StyledHeader>Player List</StyledHeader>
+            <StyledHeader style={{fontSize: "80px"}}>Player List</StyledHeader>
 
             <SortButtonsContainer>
                 <SortButton active={sortOption === "az"} onClick={() => setSortOption("az")}>Sort A-Z</SortButton>
