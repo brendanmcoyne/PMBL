@@ -48,25 +48,18 @@ const StyledHeader = styled.h1`
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
 `;
 
-const ImageWrapper = styled.div`
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto;
-`;
-
-const GenImage = styled.img`
-    width: 300px;
-    height: auto;
-    border-radius: 20px;
-    border: 3px solid white;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: scale(1.05);
-    }
+const GrandHeader = styled.h1`
+    font-size: 90px;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 2px 2px 0 #000,
+    0px 0px 12px #ff0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0 auto;
+    padding: 0 10px;
 `;
 
 const ContentSection = styled.section`
@@ -125,6 +118,23 @@ const Captain = styled.img<CaptainProps>`
     `}
 `;
 
+const ImageWrapper = styled.div`
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+`;
+
+const GenImage = styled.img`
+    width: 500px;
+    height: auto;
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.05);
+    }
+`;
+
 const CaptainSection = styled.section`
     margin-top: 10px;
     background-color: darkblue;
@@ -158,9 +168,9 @@ export default function Home() {
                     <BackgroundImage src="/4.jpg" alt="Decorative Background" />
                 </BackgroundWrapper>
                 <Wrapper>
-                    <StyledHeader>Welcome to the Professional Mario Baseball League</StyledHeader>
+                    <GrandHeader>Welcome to the Professional Mario Baseball League</GrandHeader>
                     <ImageWrapper>
-                            <GenImage src="/LeagueLogo_fix.png" alt="Professional Mario Baseball League Logo" />
+                        <GenImage src="/LeagueLogo_fix.png" alt="Professional Mario Baseball League Logo" />
                     </ImageWrapper>
                 </Wrapper>
             </Main>

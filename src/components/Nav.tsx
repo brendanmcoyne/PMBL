@@ -56,6 +56,10 @@ const StyledLink = styled.li`
 const Logo = styled.img`
   height: 70px;
   width: auto;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.05);
+    }
 `;
 
 export default function Nav() {

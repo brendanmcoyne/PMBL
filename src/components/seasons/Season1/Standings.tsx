@@ -66,6 +66,14 @@ const HeaderRow = styled(GridRow)`
     border-bottom: 2px solid white;
 `;
 
+const RulesDiv = styled.div`
+    color: white;
+    display: grid;
+    gap: 0px 80px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+`;
+
 export default function Standings1() {
     return (
         <ContentDiv>
@@ -85,7 +93,7 @@ export default function Standings1() {
                     <div>PD</div>
                 </HeaderRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>Brendan</div>
+                    <div style={{ fontWeight: "bold" }}>Brendan<sup>z</sup></div>
                     <div>7 - 3</div>
                     <div>5 - 1</div>
                     <div>W3</div>
@@ -94,7 +102,7 @@ export default function Standings1() {
                     <div>18</div>
                 </GridRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>James</div>
+                    <div style={{ fontWeight: "bold" }}>James<sup>x</sup></div>
                     <div>6 - 4</div>
                     <div>3 - 3</div>
                     <div>L1</div>
@@ -103,7 +111,7 @@ export default function Standings1() {
                     <div>13</div>
                 </GridRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>Justin</div>
+                    <div style={{ fontWeight: "bold" }}>Justin<sup>x</sup></div>
                     <div>6 - 4</div>
                     <div>2 - 4</div>
                     <div>L1</div>
@@ -112,7 +120,7 @@ export default function Standings1() {
                     <div>12</div>
                 </GridRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>Matt</div>
+                    <div style={{ fontWeight: "bold" }}>Matt<sup>e</sup></div>
                     <div>4 - 6</div>
                     <div>2 - 4</div>
                     <div>W1</div>
@@ -134,7 +142,7 @@ export default function Standings1() {
                     <div>PD</div>
                 </HeaderRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>Morgan</div>
+                    <div style={{ fontWeight: "bold" }}>Morgan<sup>y</sup></div>
                     <div>5 - 5</div>
                     <div>5 - 1</div>
                     <div>W1</div>
@@ -143,7 +151,7 @@ export default function Standings1() {
                     <div>-2</div>
                 </GridRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>DANdrew</div>
+                    <div style={{ fontWeight: "bold" }}>DANdrew<sup>e</sup></div>
                     <div>5 - 5</div>
                     <div>3 - 3</div>
                     <div>W3</div>
@@ -152,7 +160,7 @@ export default function Standings1() {
                     <div>-8</div>
                 </GridRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>Isaac</div>
+                    <div style={{ fontWeight: "bold" }}>Isaac<sup>e</sup></div>
                     <div>4 - 6</div>
                     <div>3 - 3</div>
                     <div>L2</div>
@@ -161,7 +169,7 @@ export default function Standings1() {
                     <div>30</div>
                 </GridRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>Christach</div>
+                    <div style={{ fontWeight: "bold" }}>Christach<sup>e</sup></div>
                     <div>3 - 7</div>
                     <div>1 - 5</div>
                     <div>L3</div>
@@ -170,6 +178,13 @@ export default function Standings1() {
                     <div>-46</div>
                 </GridRow>
             </DivisionDiv>
+
+            <RulesDiv>
+                <p><sup>z</sup> - Clinched Conference</p>
+                <p><sup>y</sup> - Clinched Division</p>
+                <p><sup>x</sup> - Clinched Playoff Berth</p>
+                <p><sup>e</sup> - Eliminated</p>
+            </RulesDiv>
         </ContentDiv>
     )
 }

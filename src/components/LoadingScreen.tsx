@@ -5,7 +5,7 @@ const grow = keyframes`
         transform: scale(1);
     }
     to {
-        transform: scale(1.2);
+        transform: scale(1.4);
     }
 `;
 
@@ -32,7 +32,7 @@ const Overlay = styled.div`
 
 const SpinningBackground = styled.img`
     position: absolute;
-    top: 13%;
+    top: 10%;
     width: 25rem;
     height: 25rem;
     margin-bottom: 20px;
@@ -43,21 +43,22 @@ const SpinningBackground = styled.img`
 `;
 
 const Image = styled.img`
-  width: 20rem;
-  height: 20rem;
-  object-fit: contain;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-  animation: ${grow} 1s ease-out forwards;
-  z-index: 1;
+    width: 20rem;
+    height: 20rem;
+    margin-top: 250px;
+    object-fit: contain;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    animation: ${grow} 1s ease-out forwards;
+    z-index: 1;
 `;
 
 const Header = styled.h2`
-  font-size: 60px;
-  color: white;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-  z-index: 1;
+    font-size: 150px;
+    color: white;
+    z-index: 2;
+    margin-bottom: 100px;
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
 `;
 
 export default function LoadingScreen({ message = "Loading" }) {

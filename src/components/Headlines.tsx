@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
+import { SeparatorLine } from "../components/headlines/HeadlineStyles";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -16,12 +17,14 @@ const StyledHeader = styled.h1`
     font-family: 'Luckiest Guy', cursive;
     text-align: center;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
+    margin-bottom: 0;
 `;
 
 const StyledMiniHeader = styled.h3`
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: white;
+    margin-bottom: 30px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
@@ -88,6 +91,7 @@ export default function Players() {
         <ContentDiv>
             <StyledHeader>PMBL Headlines</StyledHeader>
             <StyledMiniHeader>Featuring all the top baseball stories!</StyledMiniHeader>
+            <SeparatorLine />
 
             <Story>
                 <GenImage src="/miibaseball.jpg" alt="Miis" />
