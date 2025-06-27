@@ -11,11 +11,14 @@ export const ContentDiv = styled.div`
     padding-top: 2rem;
     min-height: 100vh;
 `;
+
 const StyledHeader = styled.h1`
-    text-align: center;
-    margin-bottom: 1rem;
+    font-size: 80px;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
+    margin-bottom: 0;
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -67,9 +70,9 @@ const HeaderRow = styled(GridRow)`
 `;
 
 const RulesDiv = styled.div`
-    color: white;
+    color: lightgray;
     display: grid;
-    gap: 0px 80px;
+    gap: 0 80px;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
 `;
@@ -180,10 +183,10 @@ export default function Standings1() {
             </DivisionDiv>
 
             <RulesDiv>
-                <p><sup>z</sup> - Clinched Conference</p>
-                <p><sup>y</sup> - Clinched Division</p>
-                <p><sup>x</sup> - Clinched Playoff Berth</p>
-                <p><sup>e</sup> - Eliminated</p>
+                <p style={{margin: "10px"}}><sup>z</sup> - Clinched Conference</p>
+                <p style={{margin: "10px"}}><sup>y</sup> - Clinched Division</p>
+                <p style={{margin: "10px"}}><sup>x</sup> - Clinched Playoff Berth</p>
+                <p style={{margin: "10px"}}><sup>e</sup> - Eliminated</p>
             </RulesDiv>
         </ContentDiv>
     )

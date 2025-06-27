@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 import {useEffect, useState} from "react";
+import { SeparatorLine } from "../components/headlines/HeadlineStyles";
 
 interface StyledLinkProps {
     bg?: string;
@@ -21,6 +22,15 @@ const StyledHeader = styled.h1`
     color: white;
     font-family: 'Luckiest Guy', cursive;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
+    margin-bottom: 0;
+`;
+
+const StyledMiniHeader = styled.h3`
+    text-align: center;
+    font-size: 1.7rem;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledLink = styled.p<StyledLinkProps>`
@@ -30,8 +40,8 @@ const StyledLink = styled.p<StyledLinkProps>`
     text-align: center;
     padding: 40px 80px;
     border-radius: 8px;
-    width: 200px;
-    height: 100px;
+    width: 250px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,7 +102,8 @@ export default function Archives() {
     return(
         <ContentDiv>
             <StyledHeader style={{fontSize: "80px"}}>Archives</StyledHeader>
-            <h3 style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</h3>
+            <StyledMiniHeader style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
+            <SeparatorLine/>
             <div style={{display: "flex", flexDirection: "row"}}>
                 <StyledLink bg="/archives/bowserbat.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1">Season 1</Link>
@@ -103,6 +114,8 @@ export default function Archives() {
             </div>
 
             <StyledHeader style={{fontSize: "80px"}}>Gallery</StyledHeader>
+            <StyledMiniHeader>In here you'll find photos and memories from seasons past</StyledMiniHeader>
+            <SeparatorLine/>
 
             <Gallery>
                 <img src="/archives/IMG_7373.jpg" alt="1"/>
