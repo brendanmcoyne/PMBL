@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
+import { SeparatorLine } from "../headlines/HeadlineStyles";
 
 interface StyledLinkProps {
     bg?: string;
@@ -20,6 +21,15 @@ const StyledHeader = styled.h1`
     color: white;
     font-family: 'Luckiest Guy', cursive;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
+    margin-bottom: 0;
+`;
+
+const StyledMiniHeader = styled.h3`
+    text-align: center;
+    font-size: 1.7rem;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledLink = styled.p<StyledLinkProps>`
@@ -84,6 +94,8 @@ export default function Season1() {
                 <Link style={{color: "darkblue"}} to="/archives">Back</Link>
             </ToggleButton>
             <StyledHeader>Season 1 PMBL</StyledHeader>
+            <StyledMiniHeader style={{textAlign: "center", color: "white"}}>All Records from Season 1</StyledMiniHeader>
+            <SeparatorLine/>
             <LinkDiv>
                 <StyledLink bg="/archives/schedule.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Schedule">Schedule</Link>

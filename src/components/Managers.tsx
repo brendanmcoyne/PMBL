@@ -58,6 +58,7 @@ const Manager = styled.div`
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     transition: transform 0.2s;
+    cursor: pointer;
     &:hover {
         transform: scale(1.07);
     }

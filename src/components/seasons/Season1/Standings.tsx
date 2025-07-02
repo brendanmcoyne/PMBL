@@ -96,7 +96,7 @@ export default function Standings1() {
                     <div>PD</div>
                 </HeaderRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>Brendan<sup>z</sup></div>
+                    <div style={{ fontWeight: "bold", color: "#CC0000" }}>Brendan<sup style={{color: "#3C78D8"}}>z</sup></div>
                     <div>7 - 3</div>
                     <div>5 - 1</div>
                     <div>W3</div>
@@ -105,7 +105,7 @@ export default function Standings1() {
                     <div>18</div>
                 </GridRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>James<sup>x</sup></div>
+                    <div style={{ fontWeight: "bold", color: "#F1C232" }}>James<sup style={{color: "#38761D"}}>x</sup></div>
                     <div>6 - 4</div>
                     <div>3 - 3</div>
                     <div>L1</div>
@@ -114,7 +114,7 @@ export default function Standings1() {
                     <div>13</div>
                 </GridRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>Justin<sup>x</sup></div>
+                    <div style={{ fontWeight: "bold", color: "#FF9900" }}>Justin<sup style={{color: "#38761D"}}>x</sup></div>
                     <div>6 - 4</div>
                     <div>2 - 4</div>
                     <div>L1</div>
@@ -123,7 +123,7 @@ export default function Standings1() {
                     <div>12</div>
                 </GridRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>Matt<sup>e</sup></div>
+                    <div style={{ fontWeight: "bold", color: "#6AA84F" }}>Matt<sup style={{color: "#A0A0A0"}}>e</sup></div>
                     <div>4 - 6</div>
                     <div>2 - 4</div>
                     <div>W1</div>
@@ -145,7 +145,7 @@ export default function Standings1() {
                     <div>PD</div>
                 </HeaderRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>Morgan<sup>y</sup></div>
+                    <div style={{ fontWeight: "bold", color: "#FF00FF" }}>Morgan<sup style={{color: "#FF9900"}}>y</sup></div>
                     <div>5 - 5</div>
                     <div>5 - 1</div>
                     <div>W1</div>
@@ -154,7 +154,7 @@ export default function Standings1() {
                     <div>-2</div>
                 </GridRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>DANdrew<sup>e</sup></div>
+                    <div style={{ fontWeight: "bold", color: "#999999" }}>DANdrew<sup style={{color: "#A0A0A0"}}>e</sup></div>
                     <div>5 - 5</div>
                     <div>3 - 3</div>
                     <div>W3</div>
@@ -163,7 +163,7 @@ export default function Standings1() {
                     <div>-8</div>
                 </GridRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>Isaac<sup>e</sup></div>
+                    <div style={{ fontWeight: "bold", color: "#3586E8" }}>Isaac<sup style={{color: "#A0A0A0"}}>e</sup></div>
                     <div>4 - 6</div>
                     <div>3 - 3</div>
                     <div>L2</div>
@@ -172,7 +172,7 @@ export default function Standings1() {
                     <div>30</div>
                 </GridRow>
                 <GridRow>
-                    <div style={{ fontWeight: "bold" }}>Christach<sup>e</sup></div>
+                    <div style={{ fontWeight: "bold", color: "#9900FF" }}>Christach<sup style={{color: "#A0A0A0"}}>e</sup></div>
                     <div>3 - 7</div>
                     <div>1 - 5</div>
                     <div>L3</div>
@@ -183,10 +183,14 @@ export default function Standings1() {
             </DivisionDiv>
 
             <RulesDiv>
-                <p style={{margin: "10px"}}><sup>z</sup> - Clinched Conference</p>
-                <p style={{margin: "10px"}}><sup>y</sup> - Clinched Division</p>
-                <p style={{margin: "10px"}}><sup>x</sup> - Clinched Playoff Berth</p>
-                <p style={{margin: "10px"}}><sup>e</sup> - Eliminated</p>
+                <p style={{margin: "10px"}}><sup style={{color: "#3C78D8"}}>z</sup> - Clinched Conference</p>
+                <p style={{margin: "10px"}}><sup style={{color: "#FF9900"}}>y</sup> - Clinched Division</p>
+                <p style={{margin: "10px"}}><sup style={{color: "#38761D"}}>x</sup> - Clinched Playoff Berth</p>
+                <p style={{margin: "10px"}}><sup style={{color: "#A0A0A0"}}>e</sup> - Eliminated</p>
+                <p style={{margin: "10px"}}>Div - Division Record</p>
+                <p style={{margin: "10px"}}>PF - Points For</p>
+                <p style={{margin: "10px"}}>PF - Points Against</p>
+                <p style={{margin: "10px"}}>PD - Points Differential</p>
             </RulesDiv>
         </ContentDiv>
     )

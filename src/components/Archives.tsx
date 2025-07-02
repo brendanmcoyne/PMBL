@@ -104,7 +104,7 @@ export default function Archives() {
             <StyledHeader style={{fontSize: "80px"}}>Archives</StyledHeader>
             <StyledMiniHeader style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
             <SeparatorLine/>
-            <div style={{display: "flex", flexDirection: "row"}}>
+            <div style={{display: "flex", flexDirection: "row", marginTop: "30px"}}>
                 <StyledLink bg="/archives/bowserbat.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1">Season 1</Link>
                 </StyledLink>

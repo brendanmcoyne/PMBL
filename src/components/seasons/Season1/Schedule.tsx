@@ -49,9 +49,8 @@ const ToggleButton = styled.button`
 const MatchupLabel = styled.p`
     color: white;
     font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    grid-column: span 2;  
+    font-size: 30px;
+    margin: 0;
     text-align: center;
 `;
 
@@ -123,9 +122,9 @@ export default function Schedule1() {
 
             <Week>
                 <Matchup>
-                    <TeamName>DANdrew</TeamName>
+                    <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{backgroundColor: ""}}>Brendan</TeamName>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <TeamRecord>(1-0)</TeamRecord>
                     <div />
                     <TeamRecord>(0-1)</TeamRecord>
@@ -134,9 +133,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>James</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Justin</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
                     <TeamRecord>(1-0)</TeamRecord>
                     <div />
                     <TeamRecord>(0-1)</TeamRecord>
@@ -145,9 +144,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>Isaac</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Christach</TeamName>
+                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
                     <TeamRecord>(1-0)</TeamRecord>
                     <div />
                     <TeamRecord>(0-1)</TeamRecord>
@@ -156,9 +155,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>Morgan</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Matt</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <TeamRecord>(0-1)</TeamRecord>
                     <div />
                     <TeamRecord>(1-0)</TeamRecord>
@@ -171,9 +170,9 @@ export default function Schedule1() {
 
             <Week>
                 <Matchup>
-                    <TeamName>Matt</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>James</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <TeamRecord>(2-0)</TeamRecord>
                     <div/>
                     <TeamRecord>(1-1)</TeamRecord>
@@ -181,9 +180,9 @@ export default function Schedule1() {
                     <Stadium>Bowser Jr's Playroom</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>Brendan</TeamName>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Isaac</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <TeamRecord>(1-1)</TeamRecord>
                     <div />
                     <TeamRecord>(1-1)</TeamRecord>
@@ -192,9 +191,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>Justin</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Christach</TeamName>
+                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
                     <TeamRecord>(1-1)</TeamRecord>
                     <div/>
                     <TeamRecord>(0-2)</TeamRecord>
@@ -202,9 +201,9 @@ export default function Schedule1() {
                     <Stadium>Yoshi Park</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>Morgan</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>DANdrew</TeamName>
+                    <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
                     <TeamRecord>(1-1)</TeamRecord>
                     <div/>
                     <TeamRecord>(1-1)</TeamRecord>
@@ -217,9 +216,9 @@ export default function Schedule1() {
 
             <Week>
                 <Matchup>
-                    <TeamName>James</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Brendan</TeamName>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <TeamRecord>(1-2)</TeamRecord>
                     <div />
                     <TeamRecord>(2-1)</TeamRecord>
@@ -228,9 +227,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>Matt</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Isaac</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <TeamRecord>(2-1)</TeamRecord>
                     <div />
                     <TeamRecord>(2-1)</TeamRecord>
@@ -239,9 +238,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>Justin</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Morgan</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <TeamRecord>(2-1)</TeamRecord>
                     <div />
                     <TeamRecord>(1-2)</TeamRecord>
@@ -250,9 +249,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>DANdrew</TeamName>
+                    <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Christach</TeamName>
+                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
                     <TeamRecord>(2-1)</TeamRecord>
                     <div />
                     <TeamRecord>(0-3)</TeamRecord>
@@ -266,9 +265,9 @@ export default function Schedule1() {
 
             <Week>
                 <Matchup>
-                    <TeamName>Isaac</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>DANdrew</TeamName>
+                    <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
                     <TeamRecord>(3-1)</TeamRecord>
                     <div />
                     <TeamRecord>(2-2)</TeamRecord>
@@ -276,9 +275,9 @@ export default function Schedule1() {
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>Matt</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Brendan</TeamName>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <TeamRecord>(2-2)</TeamRecord>
                     <div />
                     <TeamRecord>(3-1)</TeamRecord>
@@ -286,9 +285,9 @@ export default function Schedule1() {
                     <Stadium>DK Jungle</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>Justin</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>James</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <TeamRecord>(2-2)</TeamRecord>
                     <div />
                     <TeamRecord>(2-2)</TeamRecord>
@@ -296,9 +295,9 @@ export default function Schedule1() {
                     <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>Christach</TeamName>
+                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Morgan</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <TeamRecord>(1-3)</TeamRecord>
                     <div />
                     <TeamRecord>(1-3)</TeamRecord>
@@ -311,9 +310,9 @@ export default function Schedule1() {
 
             <Week>
                 <Matchup>
-                    <TeamName>Brendan</TeamName>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>James</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <TeamRecord>(3-2)</TeamRecord>
                     <div />
                     <TeamRecord>(3-2)</TeamRecord>
@@ -321,9 +320,9 @@ export default function Schedule1() {
                     <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>Christach</TeamName>
+                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Matt</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <TeamRecord>(1-4)</TeamRecord>
                     <div />
                     <TeamRecord>(3-2)</TeamRecord>
@@ -331,9 +330,9 @@ export default function Schedule1() {
                     <Stadium>Yoshi Park</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>DANdrew</TeamName>
+                    <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Justin</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
                     <TeamRecord>(2-3)</TeamRecord>
                     <div />
                     <TeamRecord>(3-2)</TeamRecord>
@@ -341,9 +340,9 @@ export default function Schedule1() {
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>Morgan</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Isaac</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <TeamRecord>(2-3)</TeamRecord>
                     <div />
                     <TeamRecord>(3-2)</TeamRecord>
@@ -356,9 +355,9 @@ export default function Schedule1() {
 
             <Week>
                 <Matchup>
-                    <TeamName>Isaac</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Justin</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
                     <TeamRecord>(3-3)</TeamRecord>
                     <div />
                     <TeamRecord>(4-2)</TeamRecord>
@@ -366,9 +365,9 @@ export default function Schedule1() {
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>DANdrew</TeamName>
+                    <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Morgan</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <TeamRecord>(2-4)</TeamRecord>
                     <div />
                     <TeamRecord>(3-3)</TeamRecord>
@@ -376,9 +375,9 @@ export default function Schedule1() {
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>Brendan</TeamName>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Matt</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <TeamRecord>(4-2)</TeamRecord>
                     <div />
                     <TeamRecord>(3-3)</TeamRecord>
@@ -386,9 +385,9 @@ export default function Schedule1() {
                     <Stadium>Wario City</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>Christach</TeamName>
+                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>James</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <TeamRecord>(2-4)</TeamRecord>
                     <div />
                     <TeamRecord>(3-3)</TeamRecord>
@@ -401,9 +400,9 @@ export default function Schedule1() {
 
             <Week>
                 <Matchup>
-                    <TeamName>Brendan</TeamName>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Christach</TeamName>
+                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
                     <TeamRecord>(4-3)</TeamRecord>
                     <div />
                     <TeamRecord>(3-4)</TeamRecord>
@@ -411,9 +410,9 @@ export default function Schedule1() {
                     <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>Matt</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Justin</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
                     <TeamRecord>(3-4)</TeamRecord>
                     <div />
                     <TeamRecord>(5-2)</TeamRecord>
@@ -421,9 +420,9 @@ export default function Schedule1() {
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>Isaac</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Morgan</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <TeamRecord>(3-4)</TeamRecord>
                     <div />
                     <TeamRecord>(4-3)</TeamRecord>
@@ -431,9 +430,9 @@ export default function Schedule1() {
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
                 <Matchup>
-                    <TeamName>James</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>DANdrew</TeamName>
+                    <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
                     <TeamRecord>(4-3)</TeamRecord>
                     <div />
                     <TeamRecord>(2-5)</TeamRecord>
@@ -446,9 +445,9 @@ export default function Schedule1() {
 
             <Week>
                 <Matchup>
-                    <TeamName>Justin</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Brendan</TeamName>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <TeamRecord>(5-3)</TeamRecord>
                     <div />
                     <TeamRecord>(5-3)</TeamRecord>
@@ -457,9 +456,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>Christach</TeamName>
+                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Isaac</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <TeamRecord>(3-5)</TeamRecord>
                     <div />
                     <TeamRecord>(4-4)</TeamRecord>
@@ -468,9 +467,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>James</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Morgan</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <TeamRecord>(5-3)</TeamRecord>
                     <div />
                     <TeamRecord>(4-4)</TeamRecord>
@@ -479,9 +478,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>Matt</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>DANdrew</TeamName>
+                    <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
                     <TeamRecord>(3-5)</TeamRecord>
                     <div />
                     <TeamRecord>(3-5)</TeamRecord>
@@ -494,9 +493,9 @@ export default function Schedule1() {
 
             <Week>
                 <Matchup>
-                    <TeamName>Isaac</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>James</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <TeamRecord>(4-5)</TeamRecord>
                     <div />
                     <TeamRecord>(6-3)</TeamRecord>
@@ -505,9 +504,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>Justin</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Matt</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <TeamRecord>(6-3)</TeamRecord>
                     <div />
                     <TeamRecord>(3-6)</TeamRecord>
@@ -516,9 +515,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>Morgan</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Brendan</TeamName>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <TeamRecord>(4-5)</TeamRecord>
                     <div />
                     <TeamRecord>(6-3)</TeamRecord>
@@ -527,9 +526,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>Christach</TeamName>
+                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>DANdrew</TeamName>
+                    <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
                     <TeamRecord>(3-6)</TeamRecord>
                     <div />
                     <TeamRecord>(4-5)</TeamRecord>
@@ -542,9 +541,9 @@ export default function Schedule1() {
 
             <Week>
                 <Matchup>
-                    <TeamName>James</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Matt</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <TeamRecord>(6-4)</TeamRecord>
                     <div />
                     <TeamRecord>(4-6)</TeamRecord>
@@ -553,9 +552,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>Brendan</TeamName>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Justin</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
                     <TeamRecord>(7-3)</TeamRecord>
                     <div />
                     <TeamRecord>(6-4)</TeamRecord>
@@ -564,9 +563,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>DANdrew</TeamName>
+                    <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Isaac</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <TeamRecord>(5-5)</TeamRecord>
                     <div />
                     <TeamRecord>(4-6)</TeamRecord>
@@ -575,9 +574,9 @@ export default function Schedule1() {
                 </Matchup>
 
                 <Matchup>
-                    <TeamName>Morgan</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>Christach</TeamName>
+                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
                     <TeamRecord>(5-5)</TeamRecord>
                     <div />
                     <TeamRecord>(3-7)</TeamRecord>
@@ -590,9 +589,9 @@ export default function Schedule1() {
 
             <CenteredMatchupWrapper>
                 <Matchup>
-                    <TeamName>All-Star East</TeamName>
+                    <TeamName style={{color: "#4A86E8"}}>All-Star East</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName>All-Star West</TeamName>
+                    <TeamName style={{color: "#FF0000"}}>All-Star West</TeamName>
                     <TeamRecord>(1-0)</TeamRecord>
                     <div />
                     <TeamRecord>(0-1)</TeamRecord>
@@ -603,16 +602,85 @@ export default function Schedule1() {
 
             <StyledMiniHeader>Special Games</StyledMiniHeader>
 
-            <MatchupLabel>The Monty Mole Game</MatchupLabel>
-            <p style={{color: "white"}}>Week 3: Justin vs Morgan</p>
-            <MatchupLabel>The Dominican Domination</MatchupLabel>
-            <p style={{color: "white"}}>Week 5: Morgan vs Isaac</p>
-            <MatchupLabel>The Shy Guy Tribute Game</MatchupLabel>
-            <p style={{color: "white"}}>Week 7: Justin vs Matt</p>
-            <MatchupLabel>The Dominican Domination II</MatchupLabel>
-            <p style={{color: "white"}}>Week 7: Morgan vs Isaac</p>
-            <MatchupLabel>The Yoshi Park Home Run Derby</MatchupLabel>
-            <p style={{color: "white"}}>Week 10: James vs Matt</p>
+            <Week style={{display: "flex", flexDirection: "column", maxWidth: "600px"}}>
+                <Matchup style={{display: "flex", flexDirection: "column"}}>
+                    <MatchupLabel>The Monty Mole Game</MatchupLabel>
+                    <h5 style={{margin: "0"}}>Week 3</h5>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
+                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
+                            <TeamName style={{color: "#FF9900", marginRight: "10px"}}>Justin</TeamName>
+                        </div>
+                        <VsText>vs</VsText>
+                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
+                            <TeamName style={{color: "#FF00FF", marginLeft: "10px"}}>Morgan</TeamName>
+                        </div>
+                    </div>
+                    <ScoreLine>9 - 7</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
+                </Matchup>
+                <Matchup style={{display: "flex", flexDirection: "column"}}>
+                    <MatchupLabel>The Dominican Domination</MatchupLabel>
+                    <h5 style={{margin: "0"}}>Week 5</h5>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
+                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
+                            <TeamName style={{color: "#FF00FF", marginRight: "10px"}}>Morgan</TeamName>
+                        </div>
+                        <VsText>vs</VsText>
+                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
+                            <TeamName style={{color: "#3586E8", marginLeft: "10px"}}>Isaac</TeamName>
+                        </div>
+                    </div>
+                    <ScoreLine>5 - 4</ScoreLine>
+                    <Stadium>DK Jungle</Stadium>
+                </Matchup>
+                <Matchup style={{display: "flex", flexDirection: "column"}}>
+                    <MatchupLabel>The Shy Guy Tribute Game</MatchupLabel>
+                    <h5 style={{margin: "0"}}>Week 7</h5>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
+                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
+                            <TeamName style={{color: "#6AA84F", marginRight: "10px"}}>Matt</TeamName>
+                        </div>
+                        <VsText>vs</VsText>
+                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
+                            <TeamName style={{color: "#FF9900", marginLeft: "10px"}}>Justin</TeamName>
+                        </div>
+                    </div>
+                    <ScoreLine>11 - 14</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
+                </Matchup>
+                <Matchup style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                    <MatchupLabel>The Dominican Domination II</MatchupLabel>
+                    <h5 style={{margin: "0"}}>Week 7</h5>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
+                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
+                            <TeamName style={{color: "#3586E8", marginRight: "10px"}}>Isaac</TeamName>
+                        </div>
+                        <VsText>vs</VsText>
+                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
+                            <TeamName style={{color: "#FF00FF", marginLeft: "10px"}}>Morgan</TeamName>
+                        </div>
+                    </div>
+                    <ScoreLine>5 - 7</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
+                </Matchup>
+                <Matchup style={{display: "flex", flexDirection: "column"}}>
+                    <MatchupLabel>The Yoshi Park Home Run Derby</MatchupLabel>
+                    <h5 style={{margin: "0"}}>Week 10</h5>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
+                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
+                            <TeamName style={{ color: "#F1C232"}}>James</TeamName>
+                        </div>
+                        <VsText style={{ margin: "0 10px" }}>vs</VsText>
+                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
+                            <TeamName style={{ color: "#6AA84F"}}>Matt</TeamName>
+                        </div>
+                    </div>
+                    <ScoreLine>14 - 15</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
+                </Matchup>
+            </Week>
+
+
 
         </ContentDiv>
     );
