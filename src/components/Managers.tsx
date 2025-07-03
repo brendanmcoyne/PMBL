@@ -4,6 +4,7 @@ import { managers } from "../data/ManagerNotes.ts";
 import type { Manager } from "../data/ManagerNotes.ts";
 import { rosters } from "../data/Season1Rosters.ts";
 import type { Roster } from "../data/Season1Rosters.ts";
+import { SeparatorLine } from "../components/headlines/HeadlineStyles";
 
 interface ToggleButtonProps {
     active: boolean;
@@ -29,6 +30,7 @@ const StyledHeader = styled.h1`
 const StyledMiniHeader = styled.h3`
     text-align: center;
     font-weight: bold;
+    color: white;
 `;
 
 const DivisionDiv = styled.div`
@@ -190,6 +192,29 @@ const StatCard = styled.div`
     text-align: left;
 `;
 
+const RivalryParagraph = styled.p`
+    color: white;
+    max-width: 500px; 
+    margin: 0 auto; 
+    line-height: 1.6; 
+    background-color: #303030;
+    border-radius: 15px;
+    border-bottom: 2px solid white;
+    padding: 16px 20px; 
+`;
+
+const Rivalry = styled.div`
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+`;
+
+const RivalryDiv = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+`;
+
 export default function Managers() {
     const [selectedManager, setSelectedManager] = useState<Manager | null>(null);
     const [activeModalTab, setActiveModalTab] = useState<"info" | "roster">("info");
@@ -217,6 +242,7 @@ export default function Managers() {
             <div style={{display: 'flex', gap: "200px"}}>
                 <DivisionHeader>East Division</DivisionHeader>
             </div>
+            <SeparatorLine/>
             <DivisionDiv>
                 {sortedManagers.filter(m => m.division === "East").map((manager: Manager) => (
                     <Manager key={manager.name} onClick={() => {
@@ -234,6 +260,7 @@ export default function Managers() {
             <div style={{display: 'flex', gap: "200px"}}>
                 <DivisionHeader>West Division</DivisionHeader>
             </div>
+            <SeparatorLine/>
             <DivisionDiv>
                 {sortedManagers.filter(m => m.division === "West").map((manager: Manager) => (
                     <Manager key={manager.name} onClick={() => {
@@ -249,6 +276,83 @@ export default function Managers() {
                 ))}
             </DivisionDiv>
 
+            <StyledHeader style={{fontSize: "80px"}}>Rivalries</StyledHeader>
+
+            <SeparatorLine/>
+
+            <RivalryDiv>
+                <Rivalry>
+                    <StyledMiniHeader>The Battle of 726</StyledMiniHeader>
+                    <StyledMiniHeader style={{display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", justifyItems: "center"}}>
+                        <span style={{ color: "#CC0000", fontWeight: "bold"}}>Brendan</span>
+                        <span style={{ color: "white"}}>vs</span>
+                        <span style={{ color: "#3586E8", fontWeight: "bold"}}>Isaac</span>
+                    </StyledMiniHeader>
+                    <RivalryParagraph>
+                        These two managers were the creators of the PMBL, and live under the same roof.
+                        Their passion for Mario Baseball has sparked the interest in the rest of the managers, creating the league
+                        everyone knows and loves. </RivalryParagraph>
+                    <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Brendan leads 1-0</p>
+                </Rivalry>
+
+                <Rivalry>
+                    <StyledMiniHeader>The Park Drive Rivalry</StyledMiniHeader>
+                    <StyledMiniHeader style={{display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", justifyItems: "center"}}>
+                        <span style={{ color: "#FF9900", marginLeft: "3px"}}>Justin</span>
+                        <span style={{ color: "white"}}>{' '}vs{' '}</span>
+                        <span style={{ color: "#9900FF", marginLeft: "20px"}}>Christach</span>
+                    </StyledMiniHeader>
+                    <RivalryParagraph>
+                        Just a quick walk down the road from 726 Commonwealth Avenue was the household of
+                        the three Managers; Justin, Chris, and Zach, with all 3 of them living under the same roof. In their sole game
+                        so far, Christach rallied down 7-0, but still ended up losing 9-8. </RivalryParagraph>
+                    <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Justin leads 1-0</p>
+                </Rivalry>
+
+                <Rivalry>
+                    <StyledMiniHeader>The 48 Buswell Battle</StyledMiniHeader>
+                    <StyledMiniHeader style={{display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", justifyItems: "center"}}>
+                        <span style={{ color: "#F1C232"}}>James</span>
+                        <span style={{ color: "white"}}>{' '}vs{' '}</span>
+                        <span style={{ color: "#FF00FF", marginLeft: "20px"}}>Morgan</span>
+                    </StyledMiniHeader>
+                    <RivalryParagraph>
+                        A rivlary so fierce that they didn't even travel to games together despite sleeping
+                        above/below one another. Both teams were dipped in controversy throughout Season 1, and met in the playoffs,
+                        with James winning the series 3-1. </RivalryParagraph>
+                    <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>James leads 4-1</p>
+                </Rivalry>
+
+                <Rivalry>
+                    <StyledMiniHeader>The Computer Engineering Clash</StyledMiniHeader>
+                    <StyledMiniHeader style={{display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", justifyItems: "center"}}>
+                        <span style={{ color: "#FF9900", marginRight: "20px"}}>Justin</span>
+                        <span style={{ color: "white"}}>{' '}vs{' '}</span>
+                        <span style={{color: "#6AA84F"}}>Matt</span>
+                    </StyledMiniHeader>
+                    <RivalryParagraph>
+                        Two division rivals of the same major. Both fan favorite teams played in the Week 7
+                        Shy Guy Tribute Game, where Matt took an early 5-0 lead in the 1st, to lose 11-14 with a 3 run walk-off homer
+                        in the first ever 10 inning game.</RivalryParagraph>
+                    <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Justin leads 2-0</p>
+                </Rivalry>
+            </RivalryDiv>
+            <Rivalry style={{marginTop: "0"}}>
+                <StyledMiniHeader>Middlesex Matchups</StyledMiniHeader>
+                <StyledMiniHeader>
+                    <span style={{ color: "#F1C232"}}>James</span>,
+                    <span style={{ color: "#CC0000"}}>{' '}Brendan</span>,
+                    <span style={{ color: "#FF00FF"}}>{' '}Morgan</span>
+                </StyledMiniHeader>
+                <RivalryParagraph>The members of Middlesex County, MA, have had their fair share of exciting matchups
+                    throughout the leagues history. In the Season 1 playoffs, there was two Middlesex matchups, one in the Conference Series,
+                    and one in the World Series, culminating in James winning both, and the first ever PMBL World Series Title. </RivalryParagraph>
+                <p style={{ color: "lightgray", fontStyle: "italic", marginTop: "20px", marginBottom: "0", textAlign: "center" }}>James leads Morgan 4-1</p>
+                <p style={{ color: "lightgray", fontStyle: "italic", margin: "0", textAlign: "center" }}>James leads Brendan 4-1</p>
+                <p style={{ color: "lightgray", fontStyle: "italic", margin: "0", textAlign: "center" }}>Brendan leads Morgan 1-0</p>
+            </Rivalry>
+
+
             {selectedManager && (
                 <ModalBackground onClick={() => setSelectedManager(null)}>
                     <ModalContent onClick={(e) => e.stopPropagation()}>
@@ -261,7 +365,7 @@ export default function Managers() {
                                               onClick={() => setActiveModalTab("roster")}>Roster</ToggleButton>
                             </div>
                             {activeModalTab === "info" && (
-                                <>
+                                <div>
                                     <ModalManagerName>{selectedManager.name}</ModalManagerName>
                                     <ModalTopLayout>
                                         <ModalLeft>
@@ -275,12 +379,12 @@ export default function Managers() {
                                             <StatCard>World Series Titles: {selectedManager.champs}</StatCard>
                                         </ModalRight>
                                     </ModalTopLayout>
-                                </>
+                                </div>
                             )}
 
                             {activeModalTab === "roster" && (
-                                <>
-                                    <StyledMiniHeader>Season 1 Roster</StyledMiniHeader>
+                                <div style={{color: "#303030"}}>
+                                    <StyledMiniHeader style={{color: "#303030"}}>Season 1 Roster</StyledMiniHeader>
                                     {getRosterForManager(selectedManager.name)?.accolades && (
                                         <div style={{display: "flex", flexDirection: "column", gap: "8px", marginBottom: "10px"}}>
                                             {getRosterForManager(selectedManager.name)?.accolades?.map((acc) => (
@@ -313,7 +417,7 @@ export default function Managers() {
                                             </li>
                                         ))}
                                     </ul>
-                                </>
+                                </div>
                             )}
                         </ModalScrollWrapper>
                     </ModalContent>

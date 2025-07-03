@@ -679,9 +679,6 @@ export default function Schedule1() {
                     <Stadium>Yoshi Park</Stadium>
                 </Matchup>
             </Week>
-
-
-
         </ContentDiv>
     );
 }

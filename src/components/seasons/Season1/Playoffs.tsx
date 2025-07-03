@@ -88,6 +88,25 @@ const ScoreLine = styled.div`
     margin-top: -1.5rem; 
 `;
 
+const GamesRow3 = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;       
+  width: 100%;
+  max-width: 900px; 
+  margin-bottom: 2rem;
+`;
+
+const WorldSeriesHeader = styled(StyledMiniHeader)`
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;  
+  letter-spacing: 0.1em;
+  color: #FFD700;   
+  text-shadow: 2px 2px 4px #000;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+`;
+
 export default function Playoffs1() {
     return (
         <ContentDiv>
@@ -100,134 +119,156 @@ export default function Playoffs1() {
                 (1) <span style={{color: "#CC0000"}}>Brendan</span> v.s. (4) <span style={{color: "#FF9900"}}>Justin</span>
             </StyledMiniHeader>
 
-            <StyledMiniHeader>Game 1</StyledMiniHeader>
-            <Matchup>
-                <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
-                <VsText>vs</VsText>
-                <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                <TeamRecord>(0-1)</TeamRecord>
-                <div/>
-                <TeamRecord>(1-0)</TeamRecord>
-                <ScoreLine>3 - 7</ScoreLine>
-                <Stadium>Mario Stadium</Stadium>
-            </Matchup>
+            <GamesRow3>
+                <div>
+                    <StyledMiniHeader>Game 1</StyledMiniHeader>
+                    <Matchup>
+                        <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
+                        <VsText>vs</VsText>
+                        <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                        <TeamRecord>(0-1)</TeamRecord>
+                        <div/>
+                        <TeamRecord>(1-0)</TeamRecord>
+                        <ScoreLine>3 - 7</ScoreLine>
+                        <Stadium>Mario Stadium</Stadium>
+                    </Matchup>
+                </div>
 
-            <StyledMiniHeader>Game 2</StyledMiniHeader>
-            <Matchup>
-                <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
-                <VsText>vs</VsText>
-                <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                <TeamRecord>(0-2)</TeamRecord>
-                <div/>
-                <TeamRecord>(2-0)</TeamRecord>
-                <ScoreLine>1 - 7</ScoreLine>
-                <Stadium>Mario Stadium</Stadium>
-            </Matchup>
+                <div>
+                    <StyledMiniHeader>Game 2</StyledMiniHeader>
+                    <Matchup>
+                        <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
+                        <VsText>vs</VsText>
+                        <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                        <TeamRecord>(0-2)</TeamRecord>
+                        <div/>
+                        <TeamRecord>(2-0)</TeamRecord>
+                        <ScoreLine>1 - 7</ScoreLine>
+                        <Stadium>Mario Stadium</Stadium>
+                    </Matchup>
+                </div>
 
-            <StyledMiniHeader>Game 3</StyledMiniHeader>
-            <Matchup>
-                <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                <VsText>vs</VsText>
-                <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
-                <TeamRecord>(3-0)</TeamRecord>
-                <div/>
-                <TeamRecord>(0-3)</TeamRecord>
-                <ScoreLine>1 - 0</ScoreLine>
-                <Stadium>DK Jungle</Stadium>
-            </Matchup>
+                <div>
+                    <StyledMiniHeader>Game 3</StyledMiniHeader>
+                    <Matchup>
+                        <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                        <VsText>vs</VsText>
+                        <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
+                        <TeamRecord>(3-0)</TeamRecord>
+                        <div/>
+                        <TeamRecord>(0-3)</TeamRecord>
+                        <ScoreLine>1 - 0</ScoreLine>
+                        <Stadium>DK Jungle</Stadium>
+                    </Matchup>
+                </div>
+            </GamesRow3>
 
             <StyledMiniHeader>
                 (2) <span style={{color: "#FF00FF"}}>Morgan</span> v.s. (3) <span style={{color: "#F1C232"}}>James</span>
             </StyledMiniHeader>
 
-            <StyledMiniHeader>Game 1</StyledMiniHeader>
-            <Matchup>
-                <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                <VsText>vs</VsText>
-                <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                <TeamRecord>(1-0)</TeamRecord>
-                <div/>
-                <TeamRecord>(0-1)</TeamRecord>
-                <ScoreLine>11 - 6</ScoreLine>
-                <Stadium>Mario Stadium</Stadium>
-            </Matchup>
+            <GamesRow3>
+                <div>
+                    <StyledMiniHeader>Game 1</StyledMiniHeader>
+                    <Matchup>
+                        <TeamName style={{color: "#F1C232"}}>James</TeamName>
+                        <VsText>vs</VsText>
+                        <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                        <TeamRecord>(1-0)</TeamRecord>
+                        <div/>
+                        <TeamRecord>(0-1)</TeamRecord>
+                        <ScoreLine>11 - 6</ScoreLine>
+                        <Stadium>Mario Stadium</Stadium>
+                    </Matchup>
+                </div>
+                <div>
+                    <StyledMiniHeader>Game 2</StyledMiniHeader>
+                    <Matchup>
+                        <TeamName style={{color: "#F1C232"}}>James</TeamName>
+                        <VsText>vs</VsText>
+                        <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                        <TeamRecord>(2-0)</TeamRecord>
+                        <div/>
+                        <TeamRecord>(0-2)</TeamRecord>
+                        <ScoreLine>11 - 5</ScoreLine>
+                        <Stadium>Mario Stadium</Stadium>
+                    </Matchup>
+                </div>
+                <div>
+                    <StyledMiniHeader>Game 3</StyledMiniHeader>
+                    <Matchup>
+                        <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                        <VsText>vs</VsText>
+                        <TeamName style={{color: "#F1C232"}}>James</TeamName>
+                        <TeamRecord>(1-2)</TeamRecord>
+                        <div/>
+                        <TeamRecord>(2-1)</TeamRecord>
+                        <ScoreLine>6 - 4</ScoreLine>
+                        <Stadium>Daisy Cruiser</Stadium>
+                    </Matchup>
+                </div>
+            </GamesRow3>
+                <div style={{marginBottom: "50px"}}>
+                    <StyledMiniHeader style={{marginTop: "5px"}}>Game 4</StyledMiniHeader>
+                    <Matchup>
+                        <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                        <VsText>vs</VsText>
+                        <TeamName style={{color: "#F1C232"}}>James</TeamName>
+                        <TeamRecord>(1-3)</TeamRecord>
+                        <div/>
+                        <TeamRecord>(3-1)</TeamRecord>
+                        <ScoreLine>4 - 6</ScoreLine>
+                        <Stadium>Daisy Cruiser</Stadium>
+                    </Matchup>
+                </div>
 
-            <StyledMiniHeader>Game 2</StyledMiniHeader>
-            <Matchup>
-                <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                <VsText>vs</VsText>
-                <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                <TeamRecord>(2-0)</TeamRecord>
-                <div/>
-                <TeamRecord>(0-2)</TeamRecord>
-                <ScoreLine>11 - 5</ScoreLine>
-                <Stadium>Mario Stadium</Stadium>
-            </Matchup>
 
-            <StyledMiniHeader>Game 3</StyledMiniHeader>
-            <Matchup>
-                <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                <VsText>vs</VsText>
-                <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                <TeamRecord>(1-2)</TeamRecord>
-                <div/>
-                <TeamRecord>(2-1)</TeamRecord>
-                <ScoreLine>6 - 4</ScoreLine>
-                <Stadium>Daisy Cruiser</Stadium>
-            </Matchup>
-
-            <StyledMiniHeader>Game 4</StyledMiniHeader>
-            <Matchup>
-                <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                <VsText>vs</VsText>
-                <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                <TeamRecord>(1-3)</TeamRecord>
-                <div/>
-                <TeamRecord>(3-1)</TeamRecord>
-                <ScoreLine>4 - 6</ScoreLine>
-                <Stadium>Daisy Cruiser</Stadium>
-            </Matchup>
-
-            <StyledMiniHeader>WORLD SERIES</StyledMiniHeader>
+            <WorldSeriesHeader>WORLD SERIES</WorldSeriesHeader>
             <StyledMiniHeader>
                 (1) <span style={{color: "#CC0000"}}>Brendan</span> v.s. (3) <span style={{color: "#F1C232"}}>James</span>
             </StyledMiniHeader>
 
-            <StyledMiniHeader>Game 1</StyledMiniHeader>
-            <Matchup>
-                <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                <VsText>vs</VsText>
-                <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                <TeamRecord>(1-0)</TeamRecord>
-                <div/>
-                <TeamRecord>(0-1)</TeamRecord>
-                <ScoreLine>7 - 0</ScoreLine>
-                <Stadium>Mario Stadium</Stadium>
-            </Matchup>
-
-            <StyledMiniHeader>Game 2</StyledMiniHeader>
-            <Matchup>
-                <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                <VsText>vs</VsText>
-                <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                <TeamRecord>(2-0)</TeamRecord>
-                <div/>
-                <TeamRecord>(0-2)</TeamRecord>
-                <ScoreLine>13 - 6</ScoreLine>
-                <Stadium>Mario Stadium</Stadium>
-            </Matchup>
-
-            <StyledMiniHeader>Game 3</StyledMiniHeader>
-            <Matchup>
-                <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                <VsText>vs</VsText>
-                <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                <TeamRecord>(0-3)</TeamRecord>
-                <div/>
-                <TeamRecord>(3-0)</TeamRecord>
-                <ScoreLine>5 - 7</ScoreLine>
-                <Stadium>Daisy Cruiser</Stadium>
-            </Matchup>
+            <GamesRow3>
+                <div>
+                    <StyledMiniHeader>Game 1</StyledMiniHeader>
+                    <Matchup>
+                        <TeamName style={{ color: "#F1C232" }}>James</TeamName>
+                        <VsText>vs</VsText>
+                        <TeamName style={{ color: "#CC0000" }}>Brendan</TeamName>
+                        <TeamRecord>(1-0)</TeamRecord>
+                        <div />
+                        <TeamRecord>(0-1)</TeamRecord>
+                        <ScoreLine>7 - 0</ScoreLine>
+                        <Stadium>Mario Stadium</Stadium>
+                    </Matchup>
+                </div>
+                <div>
+                    <StyledMiniHeader>Game 2</StyledMiniHeader>
+                    <Matchup>
+                        <TeamName style={{ color: "#F1C232" }}>James</TeamName>
+                        <VsText>vs</VsText>
+                        <TeamName style={{ color: "#CC0000" }}>Brendan</TeamName>
+                        <TeamRecord>(2-0)</TeamRecord>
+                        <div />
+                        <TeamRecord>(0-2)</TeamRecord>
+                        <ScoreLine>13 - 6</ScoreLine>
+                        <Stadium>Mario Stadium</Stadium>
+                    </Matchup>
+                </div>
+                <div>
+                    <StyledMiniHeader>Game 3</StyledMiniHeader>
+                    <Matchup>
+                        <TeamName style={{ color: "#CC0000" }}>Brendan</TeamName>
+                        <VsText>vs</VsText>
+                        <TeamName style={{ color: "#F1C232" }}>James</TeamName>
+                        <TeamRecord>(0-3)</TeamRecord>
+                        <div />
+                        <TeamRecord>(3-0)</TeamRecord>
+                        <ScoreLine>5 - 7</ScoreLine>
+                        <Stadium>Daisy Cruiser</Stadium>
+                    </Matchup>
+                </div>
+            </GamesRow3>
 
             <StyledHeader>World Series Champion</StyledHeader>
             <StyledMiniHeader>James</StyledMiniHeader>

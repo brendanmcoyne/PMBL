@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import {Link} from "react-router-dom";
+import { SeparatorLine } from "../../headlines/HeadlineStyles";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -11,10 +12,11 @@ export const ContentDiv = styled.div`
 `;
 
 const StyledHeader = styled.h1`
-    text-align: center;
-    margin-bottom: 1rem;
+    font-size: 80px;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
+    margin-bottom: 0;
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -24,36 +26,40 @@ const StyledMiniHeader = styled.h3`
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
-const StyledWinner = styled.h4`
-    text-align: center;
-    margin: 0;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+const StatCard = styled.div`
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 450px;
+    border-bottom: 1px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
-const StyledManager = styled.h4`
-    text-align: center;
-    margin: 0;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+const StatText = styled.h4`
+    color: #FFBF00;
+    text-shadow: 0 0 8px rgba(255, 191, 0, 0.4);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 3px;
 `;
 
-const StyledScore = styled.h4`
-    text-align: center;
-    margin: 0;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+const StatSubText = styled.h5`
+    margin: 0.2rem 0;
+    font-size: 1.2rem;
+    color: #CCCCCC;
+    font-weight: normal;
 `;
 
-const StyledTeam = styled.p`
-    text-align: center;
-    font-size: 0.8rem;
-    margin: 0;
-    color: darkgray;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+const StyledWeek = styled.p`
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 0.4rem;
+    font-style: italic;
 `;
 
 const ToggleButton = styled.button`
@@ -67,6 +73,17 @@ const ToggleButton = styled.button`
     margin-left: 2rem;
 `;
 
+const NameSpan = styled.span<{ color: string }>`
+    color: ${(props) => props.color};
+    font-weight: bold;
+`;
+
+const VsText = styled.span`
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+`;
 
 export default function Other1 () {
     return (
@@ -75,90 +92,135 @@ export default function Other1 () {
                 <Link style={{color: "darkblue"}} to="/archives/seasons/Season1">Back</Link>
             </ToggleButton>
             <StyledHeader>Game Stats</StyledHeader>
+            <SeparatorLine/>
 
-            <StyledMiniHeader>Most Runs in a Game (One Team)</StyledMiniHeader>
-            <StyledWinner>23, Isaac</StyledWinner>
-            <StyledManager>Christach vs Isaac</StyledManager>
-            <StyledScore>4 - 23</StyledScore>
-            <StyledTeam>Week 8</StyledTeam>
+                <StyledMiniHeader>Most Runs in a Game (One Team)</StyledMiniHeader>
+                <StatCard>
+                        <StatText>23, <NameSpan color="#3586E8">Isaac</NameSpan></StatText>
+                        <StatSubText>
+                                <NameSpan color="#3586E8">Isaac</NameSpan> <VsText>vs</VsText> <NameSpan color="#9900FF">Christach</NameSpan>
+                        </StatSubText>
+                        <StatSubText>23 - 4</StatSubText>
+                        <StyledWeek>Week 8</StyledWeek>
+                </StatCard>
 
             <StyledMiniHeader>Most Runs in a Game (Combined)</StyledMiniHeader>
-            <StyledWinner>29</StyledWinner>
-            <StyledManager>James vs Matt</StyledManager>
-            <StyledScore>14 - 15</StyledScore>
-            <StyledTeam>Week 10</StyledTeam>
+                <StatCard>
+                        <StatText>29</StatText>
+                        <StatSubText>
+                                <NameSpan color="#F1C232">James</NameSpan> <VsText>vs</VsText> <NameSpan color="#6AA84F">Matt</NameSpan>
+                        </StatSubText>
+                        <StatSubText>14 - 15</StatSubText>
+                        <StyledWeek>Week 10</StyledWeek>
+                </StatCard>
 
-            <StyledMiniHeader>Biggest Shutout</StyledMiniHeader>
-            <StyledWinner>9, Isaac</StyledWinner>
-            <StyledManager>Isaac vs Christach</StyledManager>
-            <StyledScore>9 - 0</StyledScore>
-            <StyledTeam>Week 1</StyledTeam>
+                <StyledMiniHeader>Biggest Shutout</StyledMiniHeader>
+                <StatCard>
+                        <StatText>9, <NameSpan color="#3586E8">Isaac</NameSpan></StatText>
+                        <StatSubText>
+                                <NameSpan color="#3586E8">Isaac</NameSpan> <VsText>vs</VsText> <NameSpan color="#9900FF">Christach</NameSpan>
+                        </StatSubText>
+                        <StatSubText>9 - 0</StatSubText>
+                        <StyledWeek>Week 1</StyledWeek>
+                </StatCard>
 
-            <StyledMiniHeader>Largest Margin of Victory</StyledMiniHeader>
-            <StyledWinner>19, Isaac</StyledWinner>
-            <StyledManager>Christach vs Isaac</StyledManager>
-            <StyledScore>4 - 23</StyledScore>
-            <StyledTeam>Week 8</StyledTeam>
+                <StyledMiniHeader>Largest Margin of Victory</StyledMiniHeader>
+                <StatCard>
+                        <StatText>19, <NameSpan color="#3586E8">Isaac</NameSpan></StatText>
+                        <StatSubText>
+                                <NameSpan color="#9900FF">Christach</NameSpan> <VsText>vs</VsText> <NameSpan color="#3586E8">Isaac</NameSpan>
+                        </StatSubText>
+                        <StatSubText>4 - 23</StatSubText>
+                        <StyledWeek>Week 8</StyledWeek>
+                </StatCard>
 
-            <StyledMiniHeader>Most Consecutive Runs Scored</StyledMiniHeader>
-            <StyledWinner>21, All-Star East</StyledWinner>
-            <StyledManager>All Star Game</StyledManager>
-            <StyledScore>21 - 4</StyledScore>
-            <StyledTeam>All Star Break</StyledTeam>
+                <StyledMiniHeader>Most Consecutive Runs Scored</StyledMiniHeader>
+                <StatCard>
+                        <StatText>21, All-Star East</StatText>
+                        <StatSubText>All Star Game</StatSubText>
+                        <StatSubText>21 - 4</StatSubText>
+                        <StyledWeek>All Star Break</StyledWeek>
+                </StatCard>
 
-            <StyledMiniHeader>Biggest Deficit to Comeback and Tie</StyledMiniHeader>
-            <StyledWinner>8, Isaac (Down 0 - 8)</StyledWinner>
-            <StyledManager>DANdrew vs Isaac</StyledManager>
-            <StyledScore>Lost 15 - 10</StyledScore>
-            <StyledTeam>Week 10</StyledTeam>
+                <StyledMiniHeader>Biggest Deficit to Comeback and Tie</StyledMiniHeader>
+                <StatCard>
+                        <StatText>8, <NameSpan color="#3586E8">Isaac</NameSpan> (Down 0 - 8)</StatText>
+                        <StatSubText>
+                                <NameSpan color="#999999">DANdrew</NameSpan> <VsText>vs</VsText> <NameSpan color="#3586E8">Isaac</NameSpan>
+                        </StatSubText>
+                        <StatSubText>Lost 15 - 10</StatSubText>
+                </StatCard>
 
-            <StyledMiniHeader>Biggest Comeback to Win</StyledMiniHeader>
-            <StyledWinner>7, Matt (Down 8 - 1)</StyledWinner>
-            <StyledManager>James vs Matt</StyledManager>
-            <StyledScore>14 - 15</StyledScore>
-            <StyledTeam>Week 10</StyledTeam>
+                <StyledMiniHeader>Biggest Comeback to Win</StyledMiniHeader>
+                <StatCard>
+                        <StatText>7, <NameSpan color="#6AA84F">Matt</NameSpan> (Down 8 - 1)</StatText>
+                        <StatSubText>
+                                <NameSpan color="#F1C232">James</NameSpan> <VsText>vs</VsText> <NameSpan color="#6AA84F">Matt</NameSpan>
+                        </StatSubText>
+                        <StatSubText>14 - 15</StatSubText>
+                        <StyledWeek>Week 10</StyledWeek>
+                </StatCard>
 
-            <StyledMiniHeader>Longest Game</StyledMiniHeader>
-            <StyledWinner>10 Innings</StyledWinner>
-            <StyledManager>Matt vs Justin</StyledManager>
-            <StyledScore>11 - 14</StyledScore>
-            <StyledTeam>Week 7</StyledTeam>
-            <StyledManager>DANdrew vs Isaac</StyledManager>
-            <StyledScore>15 - 10</StyledScore>
-            <StyledTeam>Week 10</StyledTeam>
-            <StyledManager>Morgan vs James</StyledManager>
-            <StyledScore>6 - 4</StyledScore>
-            <StyledTeam>Conference Series Game 3</StyledTeam>
+                <StyledMiniHeader>Longest Game</StyledMiniHeader>
+                <StatText style={{margin: "0"}}>10 Innings</StatText>
+                <StatCard>
+                        <StatSubText>
+                                <NameSpan color="#6AA84F">Matt</NameSpan> <VsText>vs</VsText> <NameSpan color="#FF9900">Justin</NameSpan>
+                        </StatSubText>
+                        <StatSubText>11 - 14</StatSubText>
+                        <StyledWeek>Week 7</StyledWeek>
+                </StatCard>
+                <StatCard>
+                        <StatSubText>
+                                <NameSpan color="#999999">DANdrew</NameSpan> <VsText>vs</VsText> <NameSpan color="#3586E8">Isaac</NameSpan>
+                        </StatSubText>
+                        <StatSubText>15 - 10</StatSubText>
+                        <StyledWeek>Week 10</StyledWeek>
+                </StatCard>
+                <StatCard>
+                        <StatSubText>
+                                <NameSpan color="#FF00FF">Morgan</NameSpan> <VsText>vs</VsText> <NameSpan color="#F1C232">James</NameSpan>
+                        </StatSubText>
+                        <StatSubText>6 - 4</StatSubText>
+                        <StyledWeek>Conference Series Game 3</StyledWeek>
+                </StatCard>
 
-            <StyledMiniHeader>Latest First Score</StyledMiniHeader>
-            <StyledWinner>Top 7th</StyledWinner>
-            <StyledManager>Brendan vs Justin</StyledManager>
-            <StyledScore>1 - 0</StyledScore>
-            <StyledTeam>Conference Series Game 3</StyledTeam>
+                <StyledMiniHeader>Latest First Score</StyledMiniHeader>
+                <StatCard>
+                        <StatText>Top 7th</StatText>
+                        <StatSubText>
+                                <NameSpan color="#CC0000">Brendan</NameSpan> <VsText>vs</VsText> <NameSpan color="#FF9900">Justin</NameSpan>
+                        </StatSubText>
+                        <StatSubText>1 - 0</StatSubText>
+                        <StyledWeek>Conference Series Game 3</StyledWeek>
+                </StatCard>
 
-            <StyledHeader>Stadium Stats</StyledHeader>
-            <StyledMiniHeader>Games at each Stadium (Incl. Playoffs)</StyledMiniHeader>
-            <StyledWinner>Mario Stadium: 23</StyledWinner>
-            <StyledWinner>Daisy Cruiser: 10</StyledWinner>
-            <StyledWinner>Yoshi Park: 7</StyledWinner>
-            <StyledWinner>Wario City: 5</StyledWinner>
-            <StyledWinner>DK Jungle: 4</StyledWinner>
-            <StyledWinner>Bowser Jr's Playroom: 1</StyledWinner>
-            <StyledWinner>Bowsers Castle: 0</StyledWinner>
+                <StyledHeader>Stadium Stats</StyledHeader>
+                <SeparatorLine />
 
-            <StyledMiniHeader>Home team records</StyledMiniHeader>
-            <StyledWinner>Mario Stadium: 11 - 11</StyledWinner>
-            <StyledWinner>Daisy Cruiser: 7 - 3</StyledWinner>
-            <StyledWinner>Yoshi Park: 4 - 4</StyledWinner>
-            <StyledWinner>Wario City: 1 - 4</StyledWinner>
-            <StyledWinner>DK Jungle: 1 - 3</StyledWinner>
-            <StyledWinner>Bowser Jr's Playroom: 0 - 1</StyledWinner>
+                <StyledMiniHeader>Games at each Stadium</StyledMiniHeader>
+                <StatCard><StatText style={{color: "#FF4F4F"}}>Mario Stadium: 22</StatText></StatCard>
+                <StatCard><StatText style={{color: "#FFA500"}}>Daisy Cruiser: 10</StatText></StatCard>
+                <StatCard><StatText style={{color: "#4CAF50"}}>Yoshi Park: 8</StatText></StatCard>
+                <StatCard><StatText style={{color: "#FFD700"}}>Wario City: 5</StatText></StatCard>
+                <StatCard><StatText style={{color: "#8B4513"}}>DK Jungle: 4</StatText></StatCard>
+                <StatCard><StatText style={{color: "#CDA434"}}>Bowser Jr's Playroom: 1</StatText></StatCard>
+                <StatCard><StatText style={{color: "#111111"}}>Bowsers Castle: 0</StatText></StatCard>
 
-            <StyledHeader>Games Morgan was in attendance for</StyledHeader>
-            <StyledMiniHeader>46 of 50</StyledMiniHeader>
+                <StyledMiniHeader>Home Team Records</StyledMiniHeader>
+                <StatCard><StatText style={{ color: "#FFD700" }}>Mario Stadium: 11 - 11</StatText></StatCard>
+                <StatCard><StatText style={{ color: "#4CAF50" }}>Daisy Cruiser: 7 - 3</StatText></StatCard>
+                <StatCard><StatText style={{ color: "#FFD700" }}>Yoshi Park: 4 - 4</StatText></StatCard>
+                <StatCard><StatText style={{ color: "#FF4F4F" }}>Wario City: 1 - 4</StatText></StatCard>
+                <StatCard><StatText style={{ color: "#FF4F4F" }}>DK Jungle: 1 - 3</StatText></StatCard>
+                <StatCard><StatText style={{ color: "#FF4F4F" }}>Bowser Jr's Playroom: 0 - 1</StatText></StatCard>
 
-
-
+                <StyledHeader style={{ fontSize: "60px", maxWidth: "700px", textAlign: "center"}}>
+                        Games Morgan was in Attendance for
+                </StyledHeader>
+                <StatCard style={{width: "200px"}}>
+                        <StatText>46 of 50</StatText>
+                </StatCard>
         </ContentDiv>
 
     );
