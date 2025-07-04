@@ -16,42 +16,17 @@ const StyledHeader = styled.h1`
     font-size: 80px;
     color: white;
     font-family: 'Luckiest Guy', cursive;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0 0 12px #ff0;
     margin-bottom: 30px;
 `;
 
 const StyledMiniHeader = styled.h3`
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     color: #FFBF00;
     margin-top: 0;
     margin-bottom: 20px;
     text-shadow: 0 0 8px rgba(255, 191, 0, 0.4);
-`;
-
-const StyledWinner = styled.h4`
-    text-align: center;
-    margin: 0;
-    font-size: 35px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-`;
-
-const StyledManager = styled.h5`
-    text-align: center;
-    margin: 0;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-`;
-
-const StyledTeam = styled.p`
-    text-align: center;
-    font-size: 0.8rem;
-    margin: 0;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const ToggleButton = styled.button`
@@ -71,7 +46,7 @@ const GenImage = styled.img`
     height: 280px;
     object-fit: contain;
     border-radius: 16px;
-    border: 4px solid white;
+    border: 4px solid goldenrod;
     background-color: white;
     margin-bottom: 1rem;
 `;
@@ -95,6 +70,7 @@ const WinnerDiv = styled.div`
     text-align: center;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease;
+    border-bottom: 2px solid white;
 `;
 
 const TextBox = styled.div`
@@ -112,11 +88,30 @@ const TextBox = styled.div`
     }
 `;
 
+const StyledWinner = styled.h4`
+    font-size: 30px;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+`;
+
+const StyledManager = styled.h5`
+    font-size: 20px;
+    margin: 0;
+    color: white;
+`;
+
+const StyledTeam = styled.p`
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 0;
+`;
+
 const ImageBox = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const AwardRow = styled.div`
@@ -130,6 +125,14 @@ const AwardRow = styled.div`
     margin-bottom: 3rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
     flex-wrap: wrap;
+    border-bottom: 2px solid white;
+`;
+
+const ImgEmblem = styled.img`
+    margin-top: 10px; 
+    width: 80px;
+    height: auto; 
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
 `;
 
 export default function Awards1() {
@@ -142,15 +145,14 @@ export default function Awards1() {
 
             <StyledMiniHeader>Most Valuable Player</StyledMiniHeader>
             <AwardRow>
-
                 <ImageBox>
                     <GenImage src="/season1awards/petey.jpg" alt="Petey" />
                 </ImageBox>
                 <TextBox>
                     <StyledWinner>Petey Piranha</StyledWinner>
-                    <StyledManager>Morgan</StyledManager>
+                    <StyledManager style={{color: "#FF00FF"}}>Morgan</StyledManager>
                     <StyledTeam>Diddy Monkeys</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt="Diddy" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt="Diddy"/>
                 </TextBox>
             </AwardRow>
 
@@ -161,9 +163,9 @@ export default function Awards1() {
                 </ImageBox>
                 <TextBox>
                     <StyledWinner>King K. Rool</StyledWinner>
-                    <StyledManager>James</StyledManager>
+                    <StyledManager style={{color: "#F1C232"}}>James</StyledManager>
                     <StyledTeam>Bowser Monsters</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-BowserMonsters.webp" alt="Bowser" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-BowserMonsters.webp" alt="Bowser"/>
                 </TextBox>
             </AwardRow>
 
@@ -174,9 +176,9 @@ export default function Awards1() {
                 </ImageBox>
                 <TextBox>
                     <StyledWinner>Blue Kritter</StyledWinner>
-                    <StyledManager>Brendan</StyledManager>
+                    <StyledManager style={{color: "#CC0000"}}>Brendan</StyledManager>
                     <StyledTeam>DK Wild</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-DKWilds.webp" alt="DK" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-DKWilds.webp" alt="DK"/>
                 </TextBox>
             </AwardRow>
 
@@ -185,25 +187,25 @@ export default function Awards1() {
                 <WinnerDiv>
                     <GenImage src="/season1awards/petey.jpg" alt="Petey"/>
                     <StyledWinner>Petey Piranha</StyledWinner>
-                    <StyledManager>Morgan</StyledManager>
+                    <StyledManager style={{color: "#FF00FF"}}>Morgan</StyledManager>
                     <StyledTeam>Diddy Monkeys</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt="Diddy" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt="Diddy"/>
                 </WinnerDiv>
 
                 <WinnerDiv>
                     <GenImage src="/season1awards/FireBro.jpg" alt="Fire Bro"/>
                     <StyledWinner>Fire Bro</StyledWinner>
-                    <StyledManager>Isaac</StyledManager>
+                    <StyledManager style={{color: "#3586E8"}}>Isaac</StyledManager>
                     <StyledTeam>Mario Fireballs</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-MarioFireballs.png" alt="Mario" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-MarioFireballs.png" alt="Mario"/>
                 </WinnerDiv>
 
                 <WinnerDiv>
                     <GenImage src="/players/Blue_Kritter.webp" alt="Blue Kritter"/>
                     <StyledWinner>Blue Kritter</StyledWinner>
-                    <StyledManager>Brendan</StyledManager>
+                    <StyledManager style={{color: "#CC0000"}}>Brendan</StyledManager>
                     <StyledTeam>DK Wild</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-DKWilds.webp" alt="DK" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-DKWilds.webp" alt="DK"/>
                 </WinnerDiv>
             </AwardDiv>
 
@@ -212,25 +214,25 @@ export default function Awards1() {
                 <WinnerDiv>
                     <GenImage src="/season1awards/petey.jpg" alt="Petey"/>
                     <StyledWinner>Petey Piranha</StyledWinner>
-                    <StyledManager>Morgan</StyledManager>
+                    <StyledManager style={{color: "#FF00FF"}}>Morgan</StyledManager>
                     <StyledTeam>Diddy Monkeys</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt="Diddy" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt="Diddy"/>
                 </WinnerDiv>
 
                 <WinnerDiv>
                     <GenImage src="/season1awards/FireBro.jpg" alt="Fire Bro"/>
                     <StyledWinner>Fire Bro</StyledWinner>
-                    <StyledManager>Isaac</StyledManager>
+                    <StyledManager style={{color: "#3586E8"}}>Isaac</StyledManager>
                     <StyledTeam>Mario Fireballs</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-MarioFireballs.png" alt="Mario" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-MarioFireballs.png" alt="Mario"/>
                 </WinnerDiv>
 
                 <WinnerDiv>
                     <GenImage src="/season1awards/kingK.jpg" alt="King K"/>
                     <StyledWinner>King K. Rool</StyledWinner>
-                    <StyledManager>James</StyledManager>
+                    <StyledManager style={{color: "#F1C232"}}>James</StyledManager>
                     <StyledTeam>Bowser Monsters</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-BowserMonsters.webp" alt="Bowser" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-BowserMonsters.webp" alt="Bowser"/>
                 </WinnerDiv>
             </AwardDiv>
             <StyledMiniHeader>Morgan Hartwell Man of the Year Award</StyledMiniHeader>
@@ -241,9 +243,9 @@ export default function Awards1() {
                 <TextBox>
 
                     <StyledWinner>Dark Bones</StyledWinner>
-                    <StyledManager>Christach</StyledManager>
+                    <StyledManager style={{color: "#9900FF"}}>Christach</StyledManager>
                     <StyledTeam>Peach Monarchs</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-PeachMonarchs.png" alt="Peach" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-PeachMonarchs.png" alt="Peach"/>
                 </TextBox>
             </AwardRow>
             <StyledMiniHeader>Comeback Player of the Year</StyledMiniHeader>
@@ -254,25 +256,25 @@ export default function Awards1() {
                 <TextBox>
 
                     <StyledWinner>Green Shy Guy</StyledWinner>
-                    <StyledManager>Justin</StyledManager>
+                    <StyledManager style={{color: "#FF9900"}}>Justin</StyledManager>
                     <StyledTeam>Luigi Knights</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-LuigiKnights.webp" alt="Luigi" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-LuigiKnights.webp" alt="Luigi"/>
                 </TextBox>
             </AwardRow>
             <AwardDiv>
                 <WinnerDiv>
                     <GenImage src="/managers/Justin.jpg" alt="Justin"/>
                     <StyledMiniHeader>Manager of the Year</StyledMiniHeader>
-                    <StyledManager style={{fontSize: "35px"}}>Justin</StyledManager>
+                    <StyledManager style={{fontSize: "35px", color: "#FF9900"}}>Justin</StyledManager>
                     <StyledTeam>Luigi Knights</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-LuigiKnights.webp" alt="Luigi" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-LuigiKnights.webp" alt="Luigi"/>
                 </WinnerDiv>
                 <WinnerDiv>
                     <GenImage src="/season1awards/DiddyKong.jpg" alt="Diddy Kong"/>
                     <StyledMiniHeader>Captain of the Year</StyledMiniHeader>
                     <StyledManager style={{fontSize: "35px"}}>Diddy Kong</StyledManager>
                     <StyledTeam>Diddy Monkeys</StyledTeam>
-                    <img src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt="Diddy" style={{ width: "80px", height: "auto" }}/>
+                    <ImgEmblem src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt="Diddy"/>
                 </WinnerDiv>
             </AwardDiv>
             <AwardDiv>
@@ -280,17 +282,17 @@ export default function Awards1() {
                         <GenImage src="/players/mii.jpg" alt="MLK"/>
                         <StyledMiniHeader>Most Improved Player</StyledMiniHeader>
                         <StyledWinner>MLK</StyledWinner>
-                        <StyledManager>Christach</StyledManager>
+                        <StyledManager style={{color: "#9900FF"}}>Christach</StyledManager>
                         <StyledTeam>Peach Monarchs</StyledTeam>
-                        <img src="/emblems/MSS-Emblem-PeachMonarchs.png" alt="Peach" style={{ width: "80px", height: "auto" }}/>
+                        <ImgEmblem src="/emblems/MSS-Emblem-PeachMonarchs.png" alt="Peach"/>
                 </WinnerDiv>
                 <WinnerDiv>
                         <GenImage src="/season1awards/MontyMole.jpg" alt="Monty Mole"/>
                         <StyledMiniHeader>Most Hated Player</StyledMiniHeader>
                         <StyledWinner>Monty Mole</StyledWinner>
-                        <StyledManager>Justin</StyledManager>
+                        <StyledManager style={{color: "#FF9900"}}>Justin</StyledManager>
                         <StyledTeam>Luigi Knights</StyledTeam>
-                        <img src="/emblems/MSS-Emblem-LuigiKnights.webp" alt="Luigi" style={{ width: "80px", height: "auto" }}/>
+                        <ImgEmblem src="/emblems/MSS-Emblem-LuigiKnights.webp" alt="Luigi"/>
                 </WinnerDiv>
             </AwardDiv>
         </ContentDiv>

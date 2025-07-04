@@ -65,7 +65,7 @@ const GridRow = styled.div`
 
 const HeaderRow = styled(GridRow)`
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.06) 100%);
     border-bottom: 2px solid white;
 `;
 

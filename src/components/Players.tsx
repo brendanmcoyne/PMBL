@@ -38,25 +38,22 @@ const PlayerName = styled.span`
     color: white;
 `;
 
-const Player = styled.div`
+const Player = styled.div<{ $accent: string }>`
+    --accent: ${({ $accent }) => $accent};
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.06) 100%);
+    border-bottom: 3px solid white;
+    border-radius: 14px;
+    padding: 1.1rem 0.85rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    gap: 0.65rem;
+    text-align: center;
     cursor: pointer;
-    background-color: darkblue;
-    border: 3px solid black;
-    border-radius: 10px;
-    transition: transform 0.2s;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
 
     &:hover {
-        transform: scale(1.05);
-        background-color: #eee;
-
-        ${PlayerName} {
-            color: #1e1e1e; 
-        }
+        transform: translateY(-4px) scale(1.04);
     }
 `;
 
@@ -139,14 +136,17 @@ const SortButtonsContainer = styled.div`
 `;
 
 const SortButton = styled.button<{ active?: boolean }>`
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.4rem;
     font-size: 1rem;
+    font-weight: bold;
+    border: none;
     cursor: pointer;
-    background-color: ${({ active }) => (active ? "#00007B" : "darkblue")};
-    color: ${({ active }) => (active ? "white" : "darkgray")};
-    border: 2px solid darkblue;
-    border-radius: 5px;
-    transition: background-color 0.2s;
+    margin-bottom: 20px;
+    background-color: ${({ active }) => (active ? "#1d3fdc" : "#2c2c80")};
+    color: white;
+    box-shadow: ${({ active }) =>
+            active ? "0 0 8px rgba(255, 255, 255, 0.6)" : "none"};
+    transition: all 0.2s ease;
 `;
 
 const StatCard = styled.div`
@@ -157,6 +157,7 @@ const StatCard = styled.div`
     border-radius: 8px;
     font-size: 1rem;
     text-align: left;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 `;
 
 const StatBarContainer = styled.div`
@@ -287,12 +288,15 @@ export default function Players() {
 
             <DivisionDiv>
                 {sortedPlayers.map((player: Player) => (
-                    <Player key={player.name} onClick={() => {
-                        setSelectedPlayer(player);
-                        const statForPlayer = stats.find(stat => stat.name === player.name);
-                        setSelectedStat(statForPlayer || null);
-                        setActiveModalTab("info");
-                    }}>
+                    <Player
+                        key={player.name}
+                        $accent={player.color === "Light Blue" ? "#6dd5fa" : player.color === "Light Green" ? "#8bc34a" : player.color?.toLowerCase() || "darkblue"}
+                        onClick={() => {
+                            setSelectedPlayer(player);
+                            setSelectedStat(stats.find((s) => s.name === player.name) || null);
+                            setActiveModalTab("info");
+                        }}
+                    >
                         <GenImage src={player.src} alt={player.name} />
                         <PlayerName>{player.name}</PlayerName>
                     </Player>
@@ -320,7 +324,7 @@ export default function Players() {
                                             src={selectedPlayer.src} alt={selectedPlayer.name} width="160"/>
                                         <AboutSection>
                                             <StyledMiniHeader>About</StyledMiniHeader>
-                                            <p style={{borderRadius: "8px", backgroundColor: selectedPlayer.color === "Light Blue" ? "lightblue" :
+                                            <p style={{fontWeight: "bold", borderRadius: "8px", backgroundColor: selectedPlayer.color === "Light Blue" ? "lightblue" :
                                                 selectedPlayer.color === "Light Green" ? "lightgreen" : selectedPlayer.color,
                                                 color: selectedPlayer.color === "Black" ? "white" : ""}}>Color: {selectedPlayer.color}</p>
                                             <p>Games Played: {selectedPlayer.gp}</p>
