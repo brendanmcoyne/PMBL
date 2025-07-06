@@ -99,9 +99,19 @@ const GamesRow3 = styled.div`
 
 const WorldSeriesHeader = styled(StyledMiniHeader)`
   font-family: 'Anton', sans-serif;
-  font-size: 3rem;  
+  font-size: 6rem;  
   letter-spacing: 0.1em;
   color: #FFD700;   
+  text-shadow: 2px 2px 4px #000;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+`;
+
+const ConfSeriesHeader = styled(StyledMiniHeader)`
+  font-family: 'Anton', sans-serif;
+  font-size: 5rem;  
+  letter-spacing: 0.1em;
+  color: #888888;   
   text-shadow: 2px 2px 4px #000;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -114,7 +124,7 @@ export default function Playoffs1() {
                 <Link style={{color: "darkblue"}} to="/archives/seasons/Season1">Back</Link>
             </ToggleButton>
             <StyledHeader>Season 1 PMBL Playoffs</StyledHeader>
-            <StyledMiniHeader>Conference Series</StyledMiniHeader>
+            <ConfSeriesHeader>Conference Series</ConfSeriesHeader>
             <StyledMiniHeader>
                 (1) <span style={{color: "#CC0000"}}>Brendan</span> v.s. (4) <span style={{color: "#FF9900"}}>Justin</span>
             </StyledMiniHeader>

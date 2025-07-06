@@ -102,18 +102,17 @@ const Trade = styled.div`
     display: flex;
     flex-direction: column;
     background-color: #12121c;
-    border: 1px solid #ccc;
     border-radius: 10px;
     padding: 1rem;
     box-sizing: border-box;
+    width: 350px;
 `;
 
 const StyledTrade = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    display: flex;
+    justify-content: center;
     gap: 30px;
-    width: 60%;   
-    margin-bottom: 1.5rem; 
+    margin-bottom: 40px;
 `;
 
 const ToggleButton = styled.button`
@@ -125,6 +124,14 @@ const ToggleButton = styled.button`
     cursor: pointer;
     align-self: flex-start;  
     margin-left: 2rem;
+`;
+
+const TradeArrow = styled.span`
+    align-self: center;
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+    font-weight: bold;
 `;
 
 const Draft1 = () => {
@@ -165,37 +172,37 @@ const Draft1 = () => {
             <StyledMiniHeader>Post Draft</StyledMiniHeader>
 
             <StyledTrade>
-                <Trade>
-                    <StyledManager>Isaac Receives:</StyledManager>
+                <Trade style={{border: "1px solid #3586E8"}}>
+                    <StyledManager style={{color: "#3586E8"}}>Isaac Receives:</StyledManager>
                     <StyledPlayer>Blue Yoshi</StyledPlayer>
                 </Trade>
-
-                <Trade>
-                    <StyledManager>Morgan Receives:</StyledManager>
+                <TradeArrow>⇄</TradeArrow>
+                <Trade style={{border: "1px solid #FF00FF"}}>
+                    <StyledManager style={{color: "#FF00FF"}}>Morgan Receives:</StyledManager>
                     <StyledPlayer>Yellow Toad</StyledPlayer>
                 </Trade>
             </StyledTrade>
 
             <StyledTrade>
-                <Trade>
-                    <StyledManager>Christach Receives:</StyledManager>
+                <Trade style={{border: "1px solid #9900FF"}}>
+                    <StyledManager style={{color: "#9900FF"}}>Christach Receives:</StyledManager>
                     <StyledPlayer>Wario</StyledPlayer>
                 </Trade>
-
-                <Trade>
-                    <StyledManager>Matt Receives:</StyledManager>
+                <TradeArrow>⇄</TradeArrow>
+                <Trade style={{border: "1px solid #6AA84F"}}>
+                    <StyledManager style={{color: "#6AA84F"}}>Matt Receives:</StyledManager>
                     <StyledPlayer>Wiggler, Chungy</StyledPlayer>
                 </Trade>
             </StyledTrade>
 
             <StyledTrade>
-                <Trade>
-                    <StyledManager>Isaac Receives:</StyledManager>
+                <Trade style={{border: "1px solid #3586E8"}}>
+                    <StyledManager style={{color: "#3586E8"}}>Isaac Receives:</StyledManager>
                     <StyledPlayer>Red Yoshi</StyledPlayer>
                 </Trade>
-
-                <Trade>
-                    <StyledManager>DANdrew Receives:</StyledManager>
+                <TradeArrow>⇄</TradeArrow>
+                <Trade style={{border: "1px solid #999999"}}>
+                    <StyledManager style={{color: "#999999"}}>DANdrew Receives:</StyledManager>
                     <StyledPlayer>Blue Yoshi</StyledPlayer>
                 </Trade>
             </StyledTrade>
@@ -203,13 +210,13 @@ const Draft1 = () => {
             <StyledMiniHeader>Week 5</StyledMiniHeader>
 
             <StyledTrade>
-                <Trade>
-                    <StyledManager>Brendan Receives:</StyledManager>
+                <Trade style={{border: "1px solid #CC0000"}}>
+                    <StyledManager style={{color: "#CC0000"}}>Brendan Receives:</StyledManager>
                     <StyledPlayer>Michelle Obama</StyledPlayer>
                 </Trade>
-
-                <Trade>
-                    <StyledManager>DANdrew Receives:</StyledManager>
+                <TradeArrow>⇄</TradeArrow>
+                <Trade style={{border: "1px solid #999999"}}>
+                    <StyledManager style={{color: "#999999"}}>DANdrew Receives:</StyledManager>
                     <StyledPlayer>Nose</StyledPlayer>
                 </Trade>
             </StyledTrade>
