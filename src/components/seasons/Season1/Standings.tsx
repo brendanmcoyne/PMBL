@@ -60,6 +60,11 @@ const GridRow = styled.div`
     border-bottom: 1px solid white;
     background-color: #12121c;
     border-radius: 10px;
+    @media screen and (max-width: 600px) {
+        grid-template-columns: minmax(80px, 2fr) repeat(6, 1fr);
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
 `;
 
 const HeaderRow = styled(GridRow)`

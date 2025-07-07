@@ -57,7 +57,7 @@ export const GenImage = styled.img`
     margin: 20px 0;
     background-color: white;
     @media screen and (max-width: 1000px) {
-        max-height: 275px;
+        width: 375px;
     }
 `;
 
@@ -177,7 +177,7 @@ export const Overlay = styled.div`
 
 export const Headline = styled.h2`
     color: white;
-    font-size: 1.48rem;
+    font-size: 1.4rem;
     text-align: center;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     white-space: normal;

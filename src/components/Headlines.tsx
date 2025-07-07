@@ -42,6 +42,10 @@ const Story = styled.div`
     &:hover {
         transform: scale(1.05);
     }
+    @media screen and (max-width: 600px) {
+        height: 250px;
+        margin: 0.75rem 0;
+    }
 `;
 
 const Overlay = styled.div`

@@ -32,6 +32,9 @@ const BackgroundImage = styled.img`
     height: calc(100% + 40px);
     width: 115%;
     opacity: 0.4;
+    @media screen and (max-width: 1000px) {
+        object-fit: cover;
+    }
 `;
 
 const Wrapper = styled.div`
@@ -75,6 +78,9 @@ const GenGif = styled.img`
     width: 50%;
     height: auto;
     border-radius: 10%;
+    @media screen and (max-width: 1000px) {
+        width: 300px;
+    }
 `;
 
 const TextSection = styled.section`
@@ -134,6 +140,9 @@ const GenImage = styled.img`
     transition: transform 0.3s ease;
     &:hover {
         transform: scale(1.05);
+    }
+    @media screen and (max-width: 1000px) {
+        width: 400px;
     }
 `;
 

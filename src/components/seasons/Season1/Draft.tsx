@@ -79,6 +79,9 @@ const Pick = styled.span`
     overflow: hidden;
     width: 200px; 
     height: 180px;
+    @media screen and (max-width: 1000px) {
+        width: 180px;
+    }
 `;
 
 const PickText = styled.span`
@@ -114,7 +117,7 @@ const Trade = styled.div`
     box-sizing: border-box;
     width: 350px;
     @media screen and (max-width: 1000px) {
-        width: 10rem;
+        width: 9rem;
     }
 `;
 

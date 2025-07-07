@@ -76,7 +76,7 @@ const StyledLink = styled.li`
         }
     }
     @media (max-width: 1000px) {
-        font-size: .75rem;
+        font-size: .6rem;
         margin: 0;
     }
 `;
@@ -102,6 +102,7 @@ const LogoMobile = styled.img`
         height: 50px;
         width: auto;
         margin: 0;
+        padding: 0;
     }
 `;
 

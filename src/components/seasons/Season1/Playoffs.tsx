@@ -124,7 +124,7 @@ const BannerDiv = styled.div`
     text-align: center;
     margin: 3rem auto;
     @media screen and (max-width: 1000px) {
-        width: 300px;
+        width: 275px;
         margin-bottom: .25rem;
     }
 `;
