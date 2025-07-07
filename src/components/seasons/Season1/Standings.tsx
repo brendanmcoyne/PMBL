@@ -63,7 +63,7 @@ const GridRow = styled.div`
     @media screen and (max-width: 600px) {
         grid-template-columns: minmax(80px, 2fr) repeat(6, 1fr);
         font-size: 0.8rem;
-        padding: 0.5rem;
+        padding: 0.4rem;
     }
 `;
 
