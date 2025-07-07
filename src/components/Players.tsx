@@ -146,6 +146,10 @@ const SortButtonsContainer = styled.div`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
+
+        & > * {
+            width: 100%;  
+        }
         & > *:last-child {
             grid-column: span 2;
             justify-self: center;
@@ -165,6 +169,9 @@ const SortButton = styled.button<{ active?: boolean }>`
     box-shadow: ${({ active }) =>
             active ? "0 0 8px rgba(255, 255, 255, 0.6)" : "none"};
     transition: all 0.2s ease;
+    @media screen and (max-width: 1000px) {
+        width: 175px;
+    }
 `;
 
 const StatCard = styled.div`

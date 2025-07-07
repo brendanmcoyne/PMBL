@@ -50,12 +50,20 @@ const StyledList = styled.ul`
     flex-direction: row;
     gap: 3px;
     padding: 0;
-    flex-wrap: wrap;
+    margin: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     @media (max-width: 1000px) {
-        width: 100%;
         justify-content: center;
-        overflow-x: auto;
+        width: 100%;
     }
 `;
 
@@ -76,8 +84,8 @@ const StyledLink = styled.li`
         }
     }
     @media (max-width: 1000px) {
-        font-size: 0.8rem;
-        padding: 4px 10px;
+        font-size: 0.75rem;
+        padding: 4px 8px;
     }
 `;
 
