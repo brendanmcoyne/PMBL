@@ -206,6 +206,7 @@ const StatCard = styled.div`
     border-radius: 8px;
     font-size: 1rem;
     text-align: left;
+    color: black;
 `;
 
 const RivalryParagraph = styled.p`

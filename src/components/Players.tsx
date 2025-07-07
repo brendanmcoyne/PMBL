@@ -44,6 +44,7 @@ const PlayerName = styled.span`
     font-weight: bold;
     text-align: center;
     color: white;
+    font-size: 1.45rem;
 `;
 
 const Player = styled.div<{ $accent: string }>`
@@ -183,6 +184,7 @@ const StatCard = styled.div`
     font-size: 1rem;
     text-align: left;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    color: black;
 `;
 
 const StatBarContainer = styled.div`
@@ -367,7 +369,7 @@ export default function Players() {
                         }}
                     >
                         <GenImage src={player.src} alt={player.name} />
-                        <PlayerName>{player.name}</PlayerName>
+                        <PlayerName >{player.name}</PlayerName>
                     </Player>
                 ))}
             </DivisionDiv>
@@ -382,7 +384,7 @@ export default function Players() {
                                 <ToggleButton active={activeModalTab === "info"} onClick={() => setActiveModalTab("info")}>Info</ToggleButton>
                                 <ToggleButton active={activeModalTab === "awards"} onClick={() => setActiveModalTab("awards")}>Awards</ToggleButton>
                             </div>
-                            <StyledMiniHeader style={{ fontSize: "33px", margin: "5px" }}>
+                            <StyledMiniHeader style={{ fontSize: "33px", margin: "5px", color: "black" }}>
                                 {selectedPlayer.name}
                             </StyledMiniHeader>
                             {selectedPlayer.captain ? <img style={{marginBottom: "10px", padding: "0"}} src={selectedPlayer.banner} alt="banner"/> : ""}
@@ -392,11 +394,11 @@ export default function Players() {
                                         <img style={{backgroundColor: "#dbe9f4", padding: "3px", border: "4px solid #4a90e2"}}
                                             src={selectedPlayer.src} alt={selectedPlayer.name} width="160"/>
                                         <AboutSection>
-                                            <StyledMiniHeader>About</StyledMiniHeader>
-                                            <p style={{fontWeight: "bold", borderRadius: "8px", backgroundColor: selectedPlayer.color === "Light Blue" ? "lightblue" :
-                                                selectedPlayer.color === "Light Green" ? "lightgreen" : selectedPlayer.color,
-                                                color: selectedPlayer.color === "Black" ? "white" : ""}}>Color: {selectedPlayer.color}</p>
-                                            <p>Games Played: {selectedPlayer.gp}</p>
+                                            <StyledMiniHeader style={{color: "black"}}>About</StyledMiniHeader>
+                                            <p style={{fontWeight: "bold", borderRadius: "8px", backgroundColor: selectedPlayer.color ===
+                                                "Light Blue" ? "lightblue" : selectedPlayer.color === "Light Green" ? "lightgreen" : selectedPlayer.color,
+                                                color: selectedPlayer.color === "black" ? "white" : "black"}}>Color: {selectedPlayer.color}</p>
+                                            <p style={{color: "black"}}>Games Played: {selectedPlayer.gp}</p>
                                         </AboutSection>
                                     </ModalLeft>
                                     <ModalRight style={{fontWeight: "bold"}}>
@@ -431,7 +433,7 @@ export default function Players() {
                                 <>
                                     {Array.isArray(selectedPlayer.awards) && selectedPlayer.awards.length > 0 ? (
                                         <>
-                                            <StyledMiniHeader>Awards</StyledMiniHeader>
+                                            <StyledMiniHeader style={{color: "black"}}>Awards</StyledMiniHeader>
                                             <AwardsList>
                                                 {selectedPlayer.awards.map(({ name, season }, idx) => {
                                                     const [kind, emoji] = classifyAward(name);
@@ -444,7 +446,7 @@ export default function Players() {
                                                 })}
                                             </AwardsList>
                                         </>
-                                    ) : (<p style={{ fontStyle: "italic" }}>No awards yet.</p>)}
+                                    ) : (<p style={{ fontStyle: "italic", color: "black"}}>No awards yet.</p>)}
                                 </>
                             )}
                         </ModalScrollWrapper>
