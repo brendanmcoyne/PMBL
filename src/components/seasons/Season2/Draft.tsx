@@ -35,7 +35,7 @@ export default function Draft2() {
     return(
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "darkblue"}} to="/archives/seasons/Season2">Back</Link>
+                <Link style={{color: "white"}} to="/archives/seasons/Season2">← Back</Link>
             </ToggleButton>
             <StyledHeader>This page is under construction.</StyledHeader>
             <GenImage src="/145px-Wiggler-MSS.webp" alt="Wiggle my Iggle" />

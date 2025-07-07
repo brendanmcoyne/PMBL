@@ -145,7 +145,7 @@ const Draft1 = () => {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "darkblue"}} to="/archives/seasons/Season1">Back</Link>
+                <Link style={{color: "white"}} to="/archives/seasons/Season1">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 1 PMBL Draft</StyledHeader>
             {rounds.map((roundPicks, roundIndex) => (

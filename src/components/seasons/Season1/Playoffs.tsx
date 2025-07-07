@@ -134,7 +134,7 @@ export default function Playoffs1() {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "darkblue"}} to="/archives/seasons/Season1">Back</Link>
+                <Link style={{color: "white"}} to="/archives/seasons/Season1">← Back</Link>
             </ToggleButton>
             <StyledHeader style={{marginBottom: "10px"}}>Season 1 PMBL Playoffs</StyledHeader>
 
@@ -299,7 +299,7 @@ export default function Playoffs1() {
                 <WorldSeriesHeader style={{marginBottom: "0", textShadow: "none"}}>World Series Champions</WorldSeriesHeader>
                 <img src="/LeagueLogo_noWords.png" alt="logo" style={{width: "150px", height: "150px", objectFit: "contain", margin: "0",}}/>
                 <h2 style={{fontFamily: "'Anton', sans-serif", letterSpacing: "2px", fontSize: "4rem", margin: "0", color: "#F1C232"}}>James</h2>
-                <h4 style={{fontFamily: "'Open Sans', sans-serif"}}>Bowser Monsters</h4>
+                <h4 style={{fontFamily: "'Open Sans', sans-serif", color: "black"}}>Bowser Monsters</h4>
                 <img src="/emblems/MSS-Emblem-BowserMonsters.webp" alt="Bowser"/>
             </BannerDiv>
         </ContentDiv>

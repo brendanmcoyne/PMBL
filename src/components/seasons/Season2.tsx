@@ -88,7 +88,7 @@ export default function Season2() {
     return(
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "darkblue"}} to="/archives">Back</Link>
+                <Link style={{color: "white"}} to="/archives">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 2 PMBL</StyledHeader>
             <StyledMiniHeader style={{textAlign: "center", color: "white"}}>All Records from Season 2</StyledMiniHeader>
