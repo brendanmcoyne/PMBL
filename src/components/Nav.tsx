@@ -53,9 +53,10 @@ const StyledList = styled.ul`
     flex-wrap: wrap;
 
     @media (max-width: 1000px) {
-        justify-content: center;
+        flex-direction: column;
+        align-items: stretch;
         width: 100%;
-        gap: 2px;
+        gap: 4px;
     }
 `;
 
@@ -75,9 +76,12 @@ const StyledLink = styled.li`
             text-decoration: underline;
         }
     }
+    
     @media (max-width: 1000px) {
-        font-size: .6rem;
-        margin: 0;
+        font-size: 1rem;
+        width: 100%;
+        padding: 10px 0;
+        background-color: rgba(255, 255, 255, 0.1);
     }
 `;
 

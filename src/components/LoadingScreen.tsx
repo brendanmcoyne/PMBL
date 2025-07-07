@@ -41,7 +41,7 @@ const SpinningBackground = styled.img`
     object-fit: contain;
     z-index: 0;
     @media screen and (max-width: 1000px) {
-        margin-top: 4.5rem;
+        margin-top: 6.5rem;
         width: 15rem;
         height: 15rem;
     }

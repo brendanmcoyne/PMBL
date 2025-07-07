@@ -50,7 +50,7 @@ const DivisionDiv = styled.div`
 
 const GridRow = styled.div`
     display: grid;
-    grid-template-columns: 140px repeat(6, 1fr);
+    grid-template-columns: minmax(100px, 1.5fr) repeat(6, 1fr);
     gap: 10px;
     padding: 0.75rem 1rem;
     align-items: center;
