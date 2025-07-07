@@ -19,6 +19,9 @@ const StyledHeader = styled.h1`
     text-align: center;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 12px #ff0;
     margin-bottom: 0;
+    @media screen and (max-width: 1000px) {
+        font-size: 55px;
+    }
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -29,13 +32,11 @@ const StyledMiniHeader = styled.h3`
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    
 `;
 
 const Matchup = styled.div`
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: auto auto auto auto;
     gap: 0.25rem 2rem;
     padding: 1rem;
     background-color: #12121c;
@@ -46,6 +47,10 @@ const Matchup = styled.div`
     box-sizing: border-box;
     border-bottom: 1px solid white;
     max-width: 600px;
+    margin: 0 auto;
+    @media screen and (max-width: 1000px) {
+        width: 400px;
+    }
 `;
 
 const TeamName = styled.p`
@@ -88,7 +93,10 @@ const GamesRow3 = styled.div`
     gap: 1rem;
     width: 100%;
     max-width: 900px;
-    margin-bottom: 3rem;  // give sections space!
+    margin-bottom: 3rem;
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 `;
 
 const WorldSeriesHeader = styled(StyledMiniHeader)`
@@ -99,6 +107,9 @@ const WorldSeriesHeader = styled(StyledMiniHeader)`
     text-shadow: 2px 2px 4px #000;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    @media screen and (max-width: 1000px) {
+        font-size: 48px;
+    }
 `;
 
 const BannerDiv = styled.div`
@@ -111,7 +122,11 @@ const BannerDiv = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 3rem auto;         
+    margin: 3rem auto;
+    @media screen and (max-width: 1000px) {
+        width: 300px;
+        margin-bottom: .25rem;
+    }
 `;
 
 export default function Playoffs1() {

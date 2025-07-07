@@ -40,6 +40,11 @@ const SpinningBackground = styled.img`
     animation: ${spin} 5s linear infinite;
     object-fit: contain;
     z-index: 0;
+    @media screen and (max-width: 1000px) {
+        margin-top: 62px;
+        width: 15rem;
+        height: 15rem;
+    }
 `;
 
 const Image = styled.img`
@@ -50,6 +55,11 @@ const Image = styled.img`
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     animation: ${grow} 1s ease-out forwards;
     z-index: 1;
+
+    @media screen and (max-width: 1000px) {
+        width: 12rem;
+        height: 12rem;
+    }
 `;
 
 const Header = styled.h2`
@@ -59,6 +69,10 @@ const Header = styled.h2`
     margin-bottom: 100px;
     font-family: 'Luckiest Guy', cursive;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
+    @media screen and (max-width: 1000px) {
+        font-size: 75px;
+        margin-bottom: 120px;
+    }
 `;
 
 export default function LoadingScreen({ message = "Loading" }) {

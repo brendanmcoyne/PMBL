@@ -18,6 +18,9 @@ const StyledHeader = styled.h1`
     text-align: center;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
     margin-bottom: 0;
+    @media screen and (max-width: 1000px) {
+        font-size: 55px;
+    }
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -51,7 +54,10 @@ const Overlay = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    gap: 1rem;
     padding: 1rem;
+    box-sizing: border-box;
 `;
 
 const GenImage = styled.img`
@@ -63,23 +69,28 @@ const GenImage = styled.img`
 
 const Headline = styled.h2`
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: bold;
     text-align: center;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    margin: 0;
-    padding: 0 1rem;
+    padding: 0.75rem 1.25rem;
+    max-width: 90%;
+    margin: 0 auto;
+    @media screen and (max-width: 1000px) {
+        font-size: 1.7rem;
+    }
 `;
 
+
 const StyledLink = styled(Link)`
-    margin-top: 1rem;
     font-size: 1.1rem;
     text-decoration: none;
-    border: none;
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px 20px;
     border-radius: 8px;
+    text-align: center;
+    pointer-events: auto;
 
     &:hover {
         background-color: rgba(0, 0, 0, 0.8);

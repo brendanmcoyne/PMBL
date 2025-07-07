@@ -23,6 +23,9 @@ const StyledHeader = styled.h1`
     font-family: 'Luckiest Guy', cursive;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
     margin-bottom: 0;
+    @media screen and (max-width: 1000px) {
+        font-size: 60px;
+    }
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -49,9 +52,7 @@ const StyledLink = styled.p<StyledLinkProps>`
     background-size: cover;
     background-position: center;
     position: relative;
-    overflow: hidden;
     transition: transform 0.2s;
-
     &::before {
         content: '';
         position: absolute;
@@ -59,11 +60,9 @@ const StyledLink = styled.p<StyledLinkProps>`
         background: rgba(0, 0, 0, 0.5); 
         z-index: 1;
     }
-
     &:hover {
         transform: scale(1.07);
     }
-    
     a {
         color: white;
         font-weight: bold;
@@ -75,6 +74,10 @@ const StyledLink = styled.p<StyledLinkProps>`
 const LinkDiv = styled.div`
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 export default function Season1() {

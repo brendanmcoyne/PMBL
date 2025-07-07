@@ -18,11 +18,17 @@ const StyledHeader = styled.h1`
     font-family: 'Luckiest Guy', cursive;
     text-align: center;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
+    @media screen and (max-width: 1000px) {
+        font-size: 55px;
+    }
 `;
 
 const GenImage = styled.img`
     width: 20%;
     height: auto;
+    @media screen and (max-width: 1000px) {
+        width: 40%;
+    }
 `;
 
 export default function Schedule2() {

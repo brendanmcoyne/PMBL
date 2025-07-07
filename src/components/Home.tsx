@@ -49,7 +49,10 @@ const StyledHeader = styled.h1`
 `;
 
 const GrandHeader = styled.h1`
-    font-size: 90px;
+    font-size: 5rem;
+    @media screen and (max-width: 1000px) {
+        font-size: 3rem;
+    }
     color: white;
     font-family: 'Luckiest Guy', cursive;
     text-align: center;

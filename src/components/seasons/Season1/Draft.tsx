@@ -19,6 +19,9 @@ const StyledHeader = styled.h1`
     text-align: center;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 12px #ff0;
     margin-bottom: 0;
+    @media screen and (max-width: 1000px) {
+        font-size: 55px;
+    }
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -57,7 +60,10 @@ const StyledRound = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 30px;
-    width: 60%; 
+    width: 60%;
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 `;
 
 const Pick = styled.span`
@@ -107,6 +113,9 @@ const Trade = styled.div`
     padding: 1rem;
     box-sizing: border-box;
     width: 350px;
+    @media screen and (max-width: 1000px) {
+        width: 10rem;
+    }
 `;
 
 const StyledTrade = styled.div`

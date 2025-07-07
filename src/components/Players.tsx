@@ -23,13 +23,20 @@ const DivisionDiv = styled.div`
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     gap: 15px;
     width: 85%;
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+    }
 `;
 
 const StyledHeader = styled.h1`
-    font-size: 55px;
+    font-size: 80px;
     color: white;
     font-family: 'Luckiest Guy', cursive;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
+    @media screen and (max-width: 1000px) {
+        font-size: 55px;
+    }
 `;
 
 const PlayerName = styled.span`
@@ -321,7 +328,7 @@ export default function Players() {
 
     return (
         <ContentDiv>
-            <StyledHeader style={{fontSize: "80px"}}>Player List</StyledHeader>
+            <StyledHeader>Player List</StyledHeader>
 
             <SortButtonsContainer>
                 <SortButton active={sortOption === "az"} onClick={() => setSortOption("az")}>Sort A-Z</SortButton>

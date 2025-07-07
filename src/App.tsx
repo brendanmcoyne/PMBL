@@ -42,7 +42,10 @@ const MainContent = styled.div`
     flex-grow: 1;
     width: 100%;
     display: flex;
-    justify-content: center; /* centers content horizontally only */
+    justify-content: center;
+    @media (max-width: 1000px) {
+        padding-top: 0; 
+    }
 `;
 
 const Content = styled.div`
@@ -57,6 +60,7 @@ const Wrapper = styled.div<{ dark?: boolean }>`
     min-height: 100vh;
     width: 100vw;
     background-color: #1e1e1e;
+    overflow-x: hidden;
 `;
 
 function Root() {

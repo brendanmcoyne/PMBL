@@ -20,10 +20,14 @@ export const ContentDiv = styled.div`
 `;
 
 const StyledHeader = styled.h1`
-    font-size: 55px;
+    font-size: 80px;
     color: white;
     font-family: 'Luckiest Guy', cursive;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
+    @media screen and (max-width: 1000px) {
+        font-size: 55px;
+        text-align: center;
+    }
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -31,7 +35,11 @@ const StyledMiniHeader = styled.h3`
     font-weight: bold;
     color: white;
     font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
     margin: 0;
+    @media screen and (max-width: 1000px) {
+        font-size: 45px;
+    }
 `;
 
 const DivisionDiv = styled.div`
@@ -39,6 +47,9 @@ const DivisionDiv = styled.div`
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-bottom: 40px;
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 `;
 
 const DivisionHeader = styled.h3`
@@ -200,7 +211,8 @@ const StatCard = styled.div`
 const RivalryParagraph = styled.p`
     color: white;
     max-width: 500px; 
-    margin: 0 auto; 
+    margin: 0 auto;
+    font-size: 1.2rem;
     line-height: 1.6; 
     background-color: #303030;
     border-radius: 8px;
@@ -248,7 +260,7 @@ export default function Managers() {
 
     return (
         <ContentDiv>
-            <StyledHeader style={{fontSize: "80px"}}>Managers List</StyledHeader>
+            <StyledHeader>Managers List</StyledHeader>
             <div style={{display: 'flex', gap: "200px"}}>
                 <DivisionHeader style={{color: "#4285F4"}}>East Division</DivisionHeader>
             </div>
@@ -304,9 +316,9 @@ export default function Managers() {
                 ))}
             </DivisionDiv>
 
-            <StyledHeader style={{fontSize: "80px"}}>Rivalries</StyledHeader>
+            <StyledHeader>Rivalries</StyledHeader>
                 <Rivalry>
-                    <StyledMiniHeader style={{fontSize: "80px"}}>The Battle of 726</StyledMiniHeader>
+                    <StyledMiniHeader>The Battle of 726</StyledMiniHeader>
                     <VersusRow>
                         <span style={{color: "#CC0000", textAlign: "right", paddingRight: "1rem"}}>Brendan</span>
                         <span style={{textAlign: "center"}}>vs</span>
@@ -320,7 +332,7 @@ export default function Managers() {
                 </Rivalry>
 
                 <Rivalry>
-                    <StyledMiniHeader style={{fontSize: "80px"}}>The Park Drive Rivalry</StyledMiniHeader>
+                    <StyledMiniHeader>The Park Drive Rivalry</StyledMiniHeader>
                     <VersusRow>
                         <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem"}}>Justin</span>
                         <span style={{textAlign: "center"}}>vs</span>
@@ -334,7 +346,7 @@ export default function Managers() {
                 </Rivalry>
 
                 <Rivalry>
-                    <StyledMiniHeader style={{fontSize: "80px"}}>The 48 Buswell Battle</StyledMiniHeader>
+                    <StyledMiniHeader>The 48 Buswell Battle</StyledMiniHeader>
                     <VersusRow>
                         <span style={{ color: "#F1C232", textAlign: "right", paddingRight: "1rem"}}>James</span>
                         <span style={{textAlign: "center"}}>vs</span>
@@ -348,7 +360,7 @@ export default function Managers() {
                 </Rivalry>
 
                 <Rivalry>
-                    <StyledMiniHeader style={{fontSize: "80px"}}>The Computer Engineering Clash</StyledMiniHeader>
+                    <StyledMiniHeader> The Computer Engineering Clash</StyledMiniHeader>
                     <VersusRow>
                         <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem"}}>Justin</span>
                         <span style={{textAlign: "center"}}>vs</span>
@@ -361,7 +373,7 @@ export default function Managers() {
                     <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Justin leads 2-0</p>
                 </Rivalry>
             <Rivalry style={{marginTop: "0"}}>
-                <StyledMiniHeader style={{fontSize: "80px"}}>Middlesex Matchups</StyledMiniHeader>
+                <StyledMiniHeader>Middlesex Matchups</StyledMiniHeader>
                 <StyledMiniHeader style={{fontSize: "2.5rem"}}>
                     <span style={{ color: "#F1C232"}}>James</span>,
                     <span style={{ color: "#CC0000"}}>{' '}Brendan</span>,

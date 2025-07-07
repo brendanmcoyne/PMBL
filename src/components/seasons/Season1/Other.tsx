@@ -18,6 +18,9 @@ const StyledHeader = styled.h1`
     font-family: 'Luckiest Guy', cursive;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
     margin-bottom: 0;
+    @media screen and (max-width: 1000px) {
+         font-size: 55px;
+    }
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -25,6 +28,9 @@ const StyledMiniHeader = styled.h3`
     font-size: 2rem;
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    @media screen and (max-width: 1000px) {
+        width: 300px;
+    }
 `;
 
 const StatCard = styled.div`
@@ -38,6 +44,9 @@ const StatCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media screen and (max-width: 1000px) {
+        width: 300px;
+    }
 `;
 
 const StatText = styled.h4`
@@ -47,6 +56,9 @@ const StatText = styled.h4`
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 3px;
+    @media screen and (max-width: 1000px) {
+        font-size: 1.4rem;
+    }
 `;
 
 const StatSubText = styled.h5`

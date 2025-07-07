@@ -20,6 +20,9 @@ const StyledHeader = styled.h1`
     text-align: center;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
     margin-bottom: 0;
+    @media screen and (max-width: 1000px) {
+        font-size: 55px;
+    }
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -30,6 +33,10 @@ const StyledMiniHeader = styled.h3`
     letter-spacing: 2px;
     font-size: 3rem;
     font-family: 'Bebas Neue', sans-serif;
+    @media screen and (max-width: 1000px) {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
 `;
 
 const DivisionDiv = styled.div`

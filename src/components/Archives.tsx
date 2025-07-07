@@ -49,21 +49,16 @@ const StyledLink = styled.p<StyledLinkProps>`
     background-size: cover;
     background-position: center;
     position: relative;
-    overflow: hidden;
     transition: transform 0.2s;
-
     &::before {
         content: '';
         position: absolute;
         inset: 0;
         background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
     }
-
     &:hover {
         transform: scale(1.07);
     }
-
     a {
         color: white;
         font-weight: bold;
@@ -86,6 +81,16 @@ const Gallery = styled.div`
     }
 `;
 
+const ResponsiveFlex = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+`;
+
 export default function Archives() {
 
     const [ready, setReady] = useState(false);
@@ -104,14 +109,14 @@ export default function Archives() {
             <StyledHeader style={{fontSize: "80px"}}>Archives</StyledHeader>
             <StyledMiniHeader style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
             <SeparatorLine/>
-            <div style={{display: "flex", flexDirection: "row", marginTop: "30px"}}>
+            <ResponsiveFlex>
                 <StyledLink bg="/archives/bowserbat.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1">Season 1</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/mario-super-sluggers-screenshot.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2">Season 2</Link>
                 </StyledLink>
-            </div>
+            </ResponsiveFlex>
 
             <StyledHeader style={{fontSize: "80px"}}>Gallery</StyledHeader>
             <StyledMiniHeader>In here you'll find photos and memories from seasons past</StyledMiniHeader>

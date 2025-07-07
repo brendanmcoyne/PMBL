@@ -13,11 +13,14 @@ export const ContentDiv = styled.div`
 `;
 
 export const Passage = styled.span`
-  display: block;
-  max-width: 800px;
-  text-align: left;
-  margin: 20px auto;
-  line-height: 1.7;
+    display: block;
+    max-width: 800px;
+    text-align: left;
+    margin: 20px auto;
+    line-height: 1.7;
+    @media screen and (max-width: 1000px) {
+        max-width: 400px;
+    }
 `;
 
 export const StyledHeader = styled.h1`
@@ -29,19 +32,19 @@ export const StyledHeader = styled.h1`
 `;
 
 export const ArticleMeta = styled.div`
-  font-size: 0.9rem;
-  color: #aaa;
-  margin: 8px 0 16px 0;
-  font-style: italic;
-  text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 8px 0 16px 0;
+    font-style: italic;
+    text-align: center;
 `;
 
 export const SeparatorLine = styled.hr`
-  border: none;
-  border-top: 1px solid #ccc;
-  margin: 0 0 30px 0;
-  width: 80%;
-  max-width: 600px;
+    border: none;
+    border-top: 1px solid #ccc;
+    width: 80%;
+    margin: 0 0 30px 0;
+    max-width: 600px;
 `;
 
 export const GenImage = styled.img`
@@ -53,6 +56,9 @@ export const GenImage = styled.img`
     padding: 8px;
     margin: 20px 0;
     background-color: white;
+    @media screen and (max-width: 1000px) {
+        max-height: 275px;
+    }
 `;
 
 export const Ruling = styled.div`
@@ -82,37 +88,43 @@ export const Ruling = styled.div`
         margin: 1rem 0;
         white-space: pre-wrap;
     }
+    @media screen and (max-width: 1000px) {
+        max-width: 400px;
+    }
 `;
 
 export const NewsletterRuling = styled.div`
-  max-width: 800px;
-  margin: 30px auto;
-  background-color: #fef9e7; 
-  color: #333;
-  border-radius: 8px;
-  padding: 20px 25px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #fef9e7; 
+    color: #333;
+    border-radius: 8px;
+    padding: 20px 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 
-  h3 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: #b89830;
-    border-bottom: 2px solid #d4c27a;
-    letter-spacing: 1.2px;
-  }
-  p {
-    margin-bottom: 1rem;
-  }
+    h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: #b89830;
+        border-bottom: 2px solid #d4c27a;
+        letter-spacing: 1.2px;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
 
-  em {
-    font-style: italic;
-    color: #555;
-  }
+    em {
+        font-style: italic;
+        color: #555;
+    }
+    @media screen and (max-width: 1000px) {
+        max-width: 400px;
+    }
 `;
 
 export const StyledMiniHeader = styled.h3`
@@ -165,7 +177,7 @@ export const Overlay = styled.div`
 
 export const Headline = styled.h2`
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.48rem;
     text-align: center;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     white-space: normal;
@@ -194,4 +206,7 @@ export const StoryDiv = styled.div`
     justify-content: center;
     gap: 30px;
     margin: 2rem 0;
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: repeat(1, 500px);
+    }
 `;

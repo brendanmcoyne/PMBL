@@ -10,7 +10,6 @@ export const ContentDiv = styled.div`
     font-size: calc(0.5rem + 1vw);
     padding-top: 2rem;
     background-color: #1a1a1a;
-    min-height: 100vh;
 `;
 
 const StyledHeader = styled.h1`
@@ -19,6 +18,9 @@ const StyledHeader = styled.h1`
     font-family: 'Luckiest Guy', cursive;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0 0 12px #ff0;
     margin-bottom: 30px;
+    @media screen and (max-width: 1000px) {
+        font-size: 55px;
+    }
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -28,6 +30,9 @@ const StyledMiniHeader = styled.h3`
     color: #FFBF00;
     margin: 20px;
     text-shadow: 0 0 8px rgba(255, 191, 0, 0.4);
+    @media screen and (max-width: 1000px) {
+        font-size: 2.5rem;
+    }
 `;
 
 const GenImage = styled.img`
@@ -105,16 +110,19 @@ const ImageBox = styled.div`
 
 const AwardRow = styled.div`
     display: flex;
-    gap: 32px;
     background-color: #3a3d46;
     border-radius: 20px;
-    padding: 32px;
+    padding: 28px;
     width: 95%;             
     max-width: 1000px;      
     margin-bottom: 3rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
     flex-wrap: wrap;
     border-bottom: 2px solid white;
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        padding: 20px 0;
+    }
 `;
 
 const ImgEmblem = styled.img`

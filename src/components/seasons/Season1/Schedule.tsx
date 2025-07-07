@@ -19,6 +19,9 @@ const StyledHeader = styled.h1`
     text-align: center;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 12px #ff0;
     margin-bottom: 0;
+    @media screen and (max-width: 1000px) {
+        font-size: 55px;
+    }
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -34,6 +37,9 @@ const CenteredMatchupWrapper = styled.div`
     justify-content: center;
     width: 100%;
     max-width: 500px;
+    @media screen and (max-width: 1000px) {
+        width: 85%;
+    }
 `;
 
 const MatchupLabel = styled.p`
@@ -50,6 +56,11 @@ const Week = styled.div`
     gap: 1rem 3rem;
     width: 100%;
     max-width: 1100px;
+    margin: 0 auto;
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: repeat(1, 1fr);
+        width: 85%;
+    }
 `;
 
 const Matchup = styled.div`
