@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import {Link} from "react-router-dom";
+import { ToggleButton } from "../../CommonStyles.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -31,19 +32,8 @@ const StyledMiniHeader = styled.h3`
 const CenteredMatchupWrapper = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
     width: 100%;
     max-width: 500px;
-`;
-
-const ToggleButton = styled.button`
-    background-color: lightgray;
-    font-size: 1.5rem;
-    border: none;
-    padding: 7px 15px;
-    cursor: pointer;
-    align-self: flex-start;  
-    margin-left: 2rem;
 `;
 
 const MatchupLabel = styled.p`
@@ -118,7 +108,7 @@ export default function Schedule1() {
                 <Link style={{color: "darkblue"}} to="/archives/seasons/Season1">Back</Link>
             </ToggleButton>
             <StyledHeader>Season 1 Regular Season</StyledHeader>
-            <StyledMiniHeader>Week 1</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 1</StyledMiniHeader>
 
             <Week>
                 <Matchup>
@@ -166,7 +156,7 @@ export default function Schedule1() {
                 </Matchup>
             </Week>
 
-            <StyledMiniHeader>Week 2</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 2</StyledMiniHeader>
 
             <Week>
                 <Matchup>
@@ -212,7 +202,7 @@ export default function Schedule1() {
                 </Matchup>
             </Week>
 
-            <StyledMiniHeader>Week 3</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 3</StyledMiniHeader>
 
             <Week>
                 <Matchup>
@@ -261,7 +251,7 @@ export default function Schedule1() {
             </Week>
 
 
-            <StyledMiniHeader>Week 4</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 4</StyledMiniHeader>
 
             <Week>
                 <Matchup>
@@ -306,7 +296,7 @@ export default function Schedule1() {
                 </Matchup>
             </Week>
 
-            <StyledMiniHeader>Week 5</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 5</StyledMiniHeader>
 
             <Week>
                 <Matchup>
@@ -351,7 +341,7 @@ export default function Schedule1() {
                 </Matchup>
             </Week>
 
-            <StyledMiniHeader>Week 6</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 6</StyledMiniHeader>
 
             <Week>
                 <Matchup>
@@ -396,7 +386,7 @@ export default function Schedule1() {
                 </Matchup>
             </Week>
 
-            <StyledMiniHeader>Week 7</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 7</StyledMiniHeader>
 
             <Week>
                 <Matchup>
@@ -441,7 +431,7 @@ export default function Schedule1() {
                 </Matchup>
             </Week>
 
-            <StyledMiniHeader>Week 8</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 8</StyledMiniHeader>
 
             <Week>
                 <Matchup>
@@ -489,7 +479,7 @@ export default function Schedule1() {
                 </Matchup>
             </Week>
 
-            <StyledMiniHeader>Week 9</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 9</StyledMiniHeader>
 
             <Week>
                 <Matchup>
@@ -537,7 +527,7 @@ export default function Schedule1() {
                 </Matchup>
             </Week>
 
-            <StyledMiniHeader>Week 10</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 10</StyledMiniHeader>
 
             <Week>
                 <Matchup>
@@ -585,7 +575,7 @@ export default function Schedule1() {
                 </Matchup>
             </Week>
 
-            <StyledMiniHeader>** All Star Game **</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>** All Star Game **</StyledMiniHeader>
 
             <CenteredMatchupWrapper>
                 <Matchup>
@@ -600,7 +590,7 @@ export default function Schedule1() {
                 </Matchup>
             </CenteredMatchupWrapper>
 
-            <StyledMiniHeader>Special Games</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Special Games</StyledMiniHeader>
 
             <Week style={{display: "flex", flexDirection: "column", maxWidth: "600px"}}>
                 <Matchup style={{display: "flex", flexDirection: "column"}}>

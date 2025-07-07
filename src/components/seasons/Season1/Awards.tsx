@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import {Link} from "react-router-dom";
+import { ToggleButton } from "../../CommonStyles.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -7,7 +8,7 @@ export const ContentDiv = styled.div`
     align-items: center;
     width: 100%;
     font-size: calc(0.5rem + 1vw);
-    padding: 2rem;
+    padding-top: 2rem;
     background-color: #1a1a1a;
     min-height: 100vh;
 `;
@@ -22,22 +23,11 @@ const StyledHeader = styled.h1`
 
 const StyledMiniHeader = styled.h3`
     text-align: center;
-    font-size: 3rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
     color: #FFBF00;
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin: 20px;
     text-shadow: 0 0 8px rgba(255, 191, 0, 0.4);
-`;
-
-const ToggleButton = styled.button`
-    background-color: lightgray;
-    color: darkblue;
-    font-size: 1.5rem;
-    border: none;
-    padding: 7px 15px;
-    cursor: pointer;
-    align-self: flex-start;  
-    margin-left: 2rem;
 `;
 
 const GenImage = styled.img`
@@ -61,7 +51,7 @@ const AwardDiv = styled.div`
 `;
 
 const WinnerDiv = styled.div`
-    background-color: #2c2c2c;
+    background-color: #3a3d46;
     border-radius: 16px;
     padding: 25px;
     display: flex;
@@ -92,7 +82,6 @@ const StyledWinner = styled.h4`
     font-size: 30px;
     margin: 0;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const StyledManager = styled.h5`
@@ -117,7 +106,7 @@ const ImageBox = styled.div`
 const AwardRow = styled.div`
     display: flex;
     gap: 32px;
-    background-color: #2c2c2c;
+    background-color: #3a3d46;
     border-radius: 20px;
     padding: 32px;
     width: 95%;             
@@ -264,14 +253,14 @@ export default function Awards1() {
             <AwardDiv>
                 <WinnerDiv>
                     <GenImage src="/managers/Justin.jpg" alt="Justin"/>
-                    <StyledMiniHeader>Manager of the Year</StyledMiniHeader>
+                    <StyledMiniHeader style={{margin: "0"}}>Manager of the Year</StyledMiniHeader>
                     <StyledManager style={{fontSize: "35px", color: "#FF9900"}}>Justin</StyledManager>
                     <StyledTeam>Luigi Knights</StyledTeam>
                     <ImgEmblem src="/emblems/MSS-Emblem-LuigiKnights.webp" alt="Luigi"/>
                 </WinnerDiv>
                 <WinnerDiv>
                     <GenImage src="/season1awards/DiddyKong.jpg" alt="Diddy Kong"/>
-                    <StyledMiniHeader>Captain of the Year</StyledMiniHeader>
+                    <StyledMiniHeader style={{margin: "0"}}>Captain of the Year</StyledMiniHeader>
                     <StyledManager style={{fontSize: "35px"}}>Diddy Kong</StyledManager>
                     <StyledTeam>Diddy Monkeys</StyledTeam>
                     <ImgEmblem src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt="Diddy"/>
@@ -280,7 +269,7 @@ export default function Awards1() {
             <AwardDiv>
                 <WinnerDiv>
                         <GenImage src="/players/mii.jpg" alt="MLK"/>
-                        <StyledMiniHeader>Most Improved Player</StyledMiniHeader>
+                        <StyledMiniHeader style={{margin: "0"}}>Most Improved Player</StyledMiniHeader>
                         <StyledWinner>MLK</StyledWinner>
                         <StyledManager style={{color: "#9900FF"}}>Christach</StyledManager>
                         <StyledTeam>Peach Monarchs</StyledTeam>
@@ -288,7 +277,7 @@ export default function Awards1() {
                 </WinnerDiv>
                 <WinnerDiv>
                         <GenImage src="/season1awards/MontyMole.jpg" alt="Monty Mole"/>
-                        <StyledMiniHeader>Most Hated Player</StyledMiniHeader>
+                        <StyledMiniHeader style={{margin: "0"}}>Most Hated Player</StyledMiniHeader>
                         <StyledWinner>Monty Mole</StyledWinner>
                         <StyledManager style={{color: "#FF9900"}}>Justin</StyledManager>
                         <StyledTeam>Luigi Knights</StyledTeam>

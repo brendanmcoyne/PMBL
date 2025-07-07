@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 import { SeparatorLine } from "../headlines/HeadlineStyles";
+import { ToggleButton } from "../CommonStyles.ts";
 
 interface StyledLinkProps {
     bg?: string;
@@ -69,17 +70,6 @@ const StyledLink = styled.p<StyledLinkProps>`
         z-index: 2;
         text-shadow: 1px 1px 4px black;
     }
-`;
-
-const ToggleButton = styled.button`
-    background-color: lightgray;
-    color: darkblue;
-    font-size: 1.5rem;
-    border: none;
-    padding: 7px 15px;
-    cursor: pointer;
-    align-self: flex-start;  
-    margin-left: 2rem;
 `;
 
 const LinkDiv = styled.div`

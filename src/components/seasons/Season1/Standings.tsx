@@ -1,5 +1,6 @@
 import {styled} from "styled-components";
 import {Link} from "react-router-dom";
+import { ToggleButton } from "../../CommonStyles.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -38,17 +39,6 @@ const DivisionDiv = styled.div`
     margin-bottom: 2rem;
     width: 90%;
     max-width: 800px;
-`;
-
-const ToggleButton = styled.button`
-    background-color: lightgray;
-    color: darkblue;
-    font-size: 1.5rem;
-    border: none;
-    padding: 7px 15px;
-    cursor: pointer;
-    align-self: flex-start;  
-    margin-left: 2rem;
 `;
 
 const GridRow = styled.div`

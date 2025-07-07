@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import {Link} from "react-router-dom";
+import { ToggleButton } from "../../CommonStyles.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -22,17 +23,6 @@ const StyledHeader = styled.h1`
 const GenImage = styled.img`
     width: 20%;
     height: auto;
-`;
-
-const ToggleButton = styled.button`
-    background-color: lightgray;
-    color: darkblue;
-    font-size: 1.5rem;
-    border: none;
-    padding: 7px 15px;
-    cursor: pointer;
-    align-self: flex-start;  
-    margin-left: 2rem;
 `;
 
 export default function Standings2() {

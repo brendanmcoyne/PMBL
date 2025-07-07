@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import {Link} from "react-router-dom";
 import { SeparatorLine } from "../../headlines/HeadlineStyles";
+import { ToggleButton } from "../../CommonStyles.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -60,17 +61,6 @@ const StyledWeek = styled.p`
     color: #aaa;
     margin-top: 0.4rem;
     font-style: italic;
-`;
-
-const ToggleButton = styled.button`
-    background-color: lightgray;
-    color: darkblue;
-    font-size: 1.5rem;
-    border: none;
-    padding: 7px 15px;
-    cursor: pointer;
-    align-self: flex-start;  
-    margin-left: 2rem;
 `;
 
 const NameSpan = styled.span<{ color: string }>`

@@ -1,6 +1,7 @@
 import {styled} from "styled-components";
 import { Link } from "react-router-dom";
 import { draftRoster } from "../../../data/Season1Draft";
+import { ToggleButton } from "../../CommonStyles.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -115,17 +116,6 @@ const StyledTrade = styled.div`
     margin-bottom: 40px;
 `;
 
-const ToggleButton = styled.button`
-    background-color: lightgray;
-    color: darkblue;
-    font-size: 1.5rem;
-    border: none;
-    padding: 7px 15px;
-    cursor: pointer;
-    align-self: flex-start;  
-    margin-left: 2rem;
-`;
-
 const TradeArrow = styled.span`
     align-self: center;
     font-size: 2rem;
@@ -148,7 +138,7 @@ const Draft1 = () => {
             <StyledHeader>Season 1 PMBL Draft</StyledHeader>
             {rounds.map((roundPicks, roundIndex) => (
                 <div key={roundIndex}>
-                    <StyledMiniHeader>Round {roundIndex + 1}</StyledMiniHeader>
+                    <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Round {roundIndex + 1}</StyledMiniHeader>
                     <StyledRound>
                         {roundPicks.map((entry, i) => (
                             <Pick key={i} style={{borderBottom: `2px solid ${entry.color}`}}>
@@ -169,7 +159,7 @@ const Draft1 = () => {
             ))}
 
             <StyledHeader>Season 1 Trades</StyledHeader>
-            <StyledMiniHeader>Post Draft</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Post Draft</StyledMiniHeader>
 
             <StyledTrade>
                 <Trade style={{border: "1px solid #3586E8"}}>
@@ -207,9 +197,9 @@ const Draft1 = () => {
                 </Trade>
             </StyledTrade>
 
-            <StyledMiniHeader>Week 5</StyledMiniHeader>
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", marginTop: "0"}}>Week 5</StyledMiniHeader>
 
-            <StyledTrade>
+            <StyledTrade style={{marginBottom: "50px"}}>
                 <Trade style={{border: "1px solid #CC0000"}}>
                     <StyledManager style={{color: "#CC0000"}}>Brendan Receives:</StyledManager>
                     <StyledPlayer>Michelle Obama</StyledPlayer>

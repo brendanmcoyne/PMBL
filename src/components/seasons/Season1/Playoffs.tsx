@@ -1,5 +1,6 @@
 import {styled} from "styled-components";
 import {Link} from "react-router-dom";
+import { ToggleButton } from "../../CommonStyles.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -29,16 +30,6 @@ const StyledMiniHeader = styled.h3`
     font-weight: 700;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     
-`;
-
-const ToggleButton = styled.button`
-    background-color: lightgray;
-    font-size: 1.5rem;
-    border: none;
-    padding: 7px 15px;
-    cursor: pointer;
-    align-self: flex-start;
-    margin-left: 2rem;
 `;
 
 const Matchup = styled.div`

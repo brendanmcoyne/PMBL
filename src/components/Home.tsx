@@ -90,6 +90,9 @@ const CaptainGrid = styled.div`
     gap: 20px;
     justify-items: center;
     padding: 20px;
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 `;
 
 const CaptainCard = styled.div`
@@ -105,17 +108,13 @@ const Captain = styled.img<CaptainProps>`
     cursor: pointer;
     transition: transform 0.2s;
     background-color: white;
-
     &:hover {
         transform: scale(1.05);
         background-color: #ddd;
     }
-
     ${({ selected }) =>
     selected &&
-    `
-        border: 4px solid white;
-    `}
+    `border: 4px solid white;`}
 `;
 
 const ImageWrapper = styled.div`
