@@ -7,8 +7,6 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 // Load client ID from Vite env
 const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
-//\\ DO NOT TOUCH //\\
-
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <GoogleOAuthProvider clientId={clientId}>

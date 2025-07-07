@@ -25,11 +25,13 @@ const StyledHeader = styled.h1`
 
 const StyledMiniHeader = styled.h3`
     text-align: center;
-    font-size: 2rem;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: #FFBF00;
+    margin: 20px;
+    text-shadow: 0 0 8px rgba(255, 191, 0, 0.4);
     @media screen and (max-width: 1000px) {
-        width: 300px;
+        font-size: 2.5rem;
     }
 `;
 
@@ -41,6 +43,7 @@ const StatCard = styled.div`
     max-width: 450px;
     border-bottom: 1px solid white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    background-color: #2d241b;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -217,9 +220,9 @@ export default function Other1 () {
                 <StatCard><StatText style={{ color: "#FF4F4F" }}>DK Jungle: 1 - 3</StatText></StatCard>
                 <StatCard><StatText style={{ color: "#FF4F4F" }}>Bowser Jr's Playroom: 0 - 1</StatText></StatCard>
 
-                <StyledHeader style={{ fontSize: "60px", maxWidth: "700px", textAlign: "center"}}>
+                <StyledMiniHeader style={{ fontSize: "60px", maxWidth: "750px", textAlign: "center"}}>
                         Games Morgan was in Attendance for
-                </StyledHeader>
+                </StyledMiniHeader>
                 <StatCard style={{width: "200px"}}>
                         <StatText>46 of 50</StatText>
                 </StatCard>

@@ -57,7 +57,7 @@ const AwardDiv = styled.div`
 `;
 
 const WinnerDiv = styled.div`
-    background-color: #3a3d46;
+    background-color: #2d241b;
     border-radius: 16px;
     padding: 25px;
     display: flex;
@@ -111,7 +111,7 @@ const ImageBox = styled.div`
 
 const AwardRow = styled.div`
     display: flex;
-    background-color: #3a3d46;
+    background-color: #2d241b;
     border-radius: 20px;
     padding: 28px;
     width: 95%;             
@@ -261,7 +261,7 @@ export default function Awards1() {
             </AwardRow>
             <AwardDiv>
                 <WinnerDiv>
-                    <GenImage src="/managers/Justin.jpg" alt="Justin"/>
+                    <GenImage style={{objectFit: "cover"}} src="/managers/Justin.jpg" alt="Justin"/>
                     <StyledMiniHeader style={{margin: "0"}}>Manager of the Year</StyledMiniHeader>
                     <StyledManager style={{fontSize: "35px", color: "#FF9900"}}>Justin</StyledManager>
                     <StyledTeam>Luigi Knights</StyledTeam>
