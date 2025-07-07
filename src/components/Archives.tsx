@@ -65,6 +65,10 @@ const StyledLink = styled.p<StyledLinkProps>`
         z-index: 2;
         text-shadow: 1px 1px 4px black;
     }
+    @media (max-width: 1000px) {
+        width: 220px;
+        height: 100px;
+    }
 `;
 
 const Gallery = styled.div`

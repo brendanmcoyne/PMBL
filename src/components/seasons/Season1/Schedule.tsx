@@ -132,7 +132,6 @@ export default function Schedule1() {
                     <ScoreLine>2 - 0</ScoreLine>
                     <Stadium>Wario City</Stadium>
                 </Matchup>
-
                 <Matchup>
                     <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
@@ -143,7 +142,6 @@ export default function Schedule1() {
                     <ScoreLine>8 - 7</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
-
                 <Matchup>
                     <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <VsText>vs</VsText>
@@ -154,7 +152,6 @@ export default function Schedule1() {
                     <ScoreLine>9 - 0</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
-
                 <Matchup>
                     <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
@@ -190,17 +187,6 @@ export default function Schedule1() {
                     <ScoreLine>8 - 4</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
-
-                <Matchup>
-                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
-                    <TeamRecord>(1-1)</TeamRecord>
-                    <div/>
-                    <TeamRecord>(0-2)</TeamRecord>
-                    <ScoreLine>9 - 8</ScoreLine>
-                    <Stadium>Yoshi Park</Stadium>
-                </Matchup>
                 <Matchup>
                     <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
@@ -211,6 +197,17 @@ export default function Schedule1() {
                     <ScoreLine>13 - 5</ScoreLine>
                     <Stadium>DK Jungle</Stadium>
                 </Matchup>
+                <Matchup>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
+                    <TeamRecord>(1-1)</TeamRecord>
+                    <div/>
+                    <TeamRecord>(0-2)</TeamRecord>
+                    <ScoreLine>9 - 8</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
+                </Matchup>
+
             </Week>
 
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 3</StyledMiniHeader>
@@ -237,18 +234,6 @@ export default function Schedule1() {
                     <ScoreLine>3 - 11</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
-
-                <Matchup>
-                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                    <TeamRecord>(2-1)</TeamRecord>
-                    <div />
-                    <TeamRecord>(1-2)</TeamRecord>
-                    <ScoreLine>9 - 7</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
-                </Matchup>
-
                 <Matchup>
                     <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
                     <VsText>vs</VsText>
@@ -259,22 +244,22 @@ export default function Schedule1() {
                     <ScoreLine>17 - 6</ScoreLine>
                     <Stadium>Wario City</Stadium>
                 </Matchup>
+                <Matchup>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                    <TeamRecord>(2-1)</TeamRecord>
+                    <div />
+                    <TeamRecord>(1-2)</TeamRecord>
+                    <ScoreLine>9 - 7</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
+                </Matchup>
             </Week>
 
 
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 4</StyledMiniHeader>
 
             <Week>
-                <Matchup>
-                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
-                    <TeamRecord>(3-1)</TeamRecord>
-                    <div />
-                    <TeamRecord>(2-2)</TeamRecord>
-                    <ScoreLine>13 - 2</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
-                </Matchup>
                 <Matchup>
                     <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <VsText>vs</VsText>
@@ -284,6 +269,16 @@ export default function Schedule1() {
                     <TeamRecord>(3-1)</TeamRecord>
                     <ScoreLine>6 - 19</ScoreLine>
                     <Stadium>DK Jungle</Stadium>
+                </Matchup>
+                <Matchup>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#999999"}}>DANdrew</TeamName>
+                    <TeamRecord>(3-1)</TeamRecord>
+                    <div />
+                    <TeamRecord>(2-2)</TeamRecord>
+                    <ScoreLine>13 - 2</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
                 </Matchup>
                 <Matchup>
                     <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
@@ -401,16 +396,6 @@ export default function Schedule1() {
 
             <Week>
                 <Matchup>
-                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
-                    <TeamRecord>(4-3)</TeamRecord>
-                    <div />
-                    <TeamRecord>(3-4)</TeamRecord>
-                    <ScoreLine>6 - 7</ScoreLine>
-                    <Stadium>Daisy Cruiser</Stadium>
-                </Matchup>
-                <Matchup>
                     <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
@@ -418,16 +403,6 @@ export default function Schedule1() {
                     <div />
                     <TeamRecord>(5-2)</TeamRecord>
                     <ScoreLine>11 - 14</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
-                </Matchup>
-                <Matchup>
-                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                    <TeamRecord>(3-4)</TeamRecord>
-                    <div />
-                    <TeamRecord>(4-3)</TeamRecord>
-                    <ScoreLine>6 - 7</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
                 <Matchup>
@@ -440,22 +415,31 @@ export default function Schedule1() {
                     <ScoreLine>10 - 6</ScoreLine>
                     <Stadium>Yoshi Park</Stadium>
                 </Matchup>
+                <Matchup>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                    <TeamRecord>(3-4)</TeamRecord>
+                    <div />
+                    <TeamRecord>(4-3)</TeamRecord>
+                    <ScoreLine>6 - 7</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
+                </Matchup>
+                <Matchup>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
+                    <TeamRecord>(4-3)</TeamRecord>
+                    <div />
+                    <TeamRecord>(3-4)</TeamRecord>
+                    <ScoreLine>6 - 7</ScoreLine>
+                    <Stadium>Daisy Cruiser</Stadium>
+                </Matchup>
             </Week>
 
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 8</StyledMiniHeader>
 
             <Week>
-                <Matchup>
-                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <TeamRecord>(5-3)</TeamRecord>
-                    <div />
-                    <TeamRecord>(5-3)</TeamRecord>
-                    <ScoreLine>0 - 6</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
-                </Matchup>
-
                 <Matchup>
                     <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
                     <VsText>vs</VsText>
@@ -466,7 +450,16 @@ export default function Schedule1() {
                     <ScoreLine>4 - 23</ScoreLine>
                     <Stadium>Wario City</Stadium>
                 </Matchup>
-
+                <Matchup>
+                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                    <TeamRecord>(5-3)</TeamRecord>
+                    <div />
+                    <TeamRecord>(5-3)</TeamRecord>
+                    <ScoreLine>0 - 6</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
+                </Matchup>
                 <Matchup>
                     <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
@@ -477,7 +470,6 @@ export default function Schedule1() {
                     <ScoreLine>7 - 1</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
-
                 <Matchup>
                     <TeamName style={{color: "#6AA84F"}}>Matt</TeamName>
                     <VsText>vs</VsText>
@@ -503,7 +495,6 @@ export default function Schedule1() {
                     <ScoreLine>8 - 10</ScoreLine>
                     <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
-
                 <Matchup>
                     <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
                     <VsText>vs</VsText>
@@ -514,18 +505,6 @@ export default function Schedule1() {
                     <ScoreLine>7 - 1</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
-
-                <Matchup>
-                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <TeamRecord>(4-5)</TeamRecord>
-                    <div />
-                    <TeamRecord>(6-3)</TeamRecord>
-                    <ScoreLine>3 - 7</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
-                </Matchup>
-
                 <Matchup>
                     <TeamName style={{color: "#9900FF"}}>Christach</TeamName>
                     <VsText>vs</VsText>
@@ -535,6 +514,16 @@ export default function Schedule1() {
                     <TeamRecord>(4-5)</TeamRecord>
                     <ScoreLine>3 - 7</ScoreLine>
                     <Stadium>Yoshi Park</Stadium>
+                </Matchup>
+                <Matchup>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                    <TeamRecord>(4-5)</TeamRecord>
+                    <div />
+                    <TeamRecord>(6-3)</TeamRecord>
+                    <ScoreLine>3 - 7</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
                 </Matchup>
             </Week>
 
@@ -618,6 +607,9 @@ export default function Schedule1() {
                     </div>
                     <ScoreLine>9 - 7</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
+                    <p style={{color: "lightgray"}}>Late in the 6th down 5 - 7 with the bases loaded, Monty Mole woould hit a grand
+                        slam into left field to propel Justin ahead of Morgan. Monty Mole would later win game MVP and become one
+                        of the most despised players in the league. </p>
                 </Matchup>
                 <Matchup style={{display: "flex", flexDirection: "column"}}>
                     <MatchupLabel>The Dominican Domination</MatchupLabel>
@@ -633,6 +625,9 @@ export default function Schedule1() {
                     </div>
                     <ScoreLine>5 - 4</ScoreLine>
                     <Stadium>DK Jungle</Stadium>
+                    <p style={{color: "lightgray"}}>After taking a surprising 2-0 lead, Morgan would then let up 4 straight runs to
+                        be down 4-2. In the bottom of the 7th, Morgan rallied to score 3 after a great Petey Piranha defensive
+                        performance and a 2 runs score from the Dominican. Captain Diddy would deliver a slap hit to drive in the winning run.</p>
                 </Matchup>
                 <Matchup style={{display: "flex", flexDirection: "column"}}>
                     <MatchupLabel>The Shy Guy Tribute Game</MatchupLabel>
@@ -648,6 +643,10 @@ export default function Schedule1() {
                     </div>
                     <ScoreLine>11 - 14</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
+                    <p style={{color: "lightgray"}}>Right after the attacks of Red Shy Guy and Green Shy Guy, Goomba and Paragoomba
+                        would be subbed in for their first games of the year. After giving up 5 to Matt in the 1st, Justin would rally
+                        to tie it 11-11 in the bottom of the 7th. This game became the longest game in PMBL, being the first game to
+                        go to the 10th inning. Daisy would hit a 3-run walkoff for Justin to seal the victory.</p>
                 </Matchup>
                 <Matchup style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
                     <MatchupLabel>The Dominican Domination II</MatchupLabel>
@@ -661,8 +660,11 @@ export default function Schedule1() {
                             <TeamName style={{color: "#FF00FF", marginLeft: "10px"}}>Morgan</TeamName>
                         </div>
                     </div>
-                    <ScoreLine>5 - 7</ScoreLine>
+                    <ScoreLine>6 - 7</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
+                    <p style={{color: "lightgray"}}>Down 3-6 in the 6th, Petey "The Dominican" Piranha would hit a grand slam to left center to
+                        take the lead 7-6 over Isaac. Petey Piranha would win Game MVP again to continue his league MVP campaign, and take
+                        division lead for the rest of the season.</p>
                 </Matchup>
                 <Matchup style={{display: "flex", flexDirection: "column"}}>
                     <MatchupLabel>The Yoshi Park Home Run Derby</MatchupLabel>
@@ -678,6 +680,10 @@ export default function Schedule1() {
                     </div>
                     <ScoreLine>14 - 15</ScoreLine>
                     <Stadium>Yoshi Park</Stadium>
+                    <p style={{color: "lightgray"}}>With Matt already eliminated from the playoffs, he would find himself down 1-8 early,
+                        but would rally to score 14 straight runs, with 9 of those runs coming in the top of the 7th. In the bottom of
+                        the 7th, James would score 6 runs to bring the game within one, but failed to capitalize and would be swept in the
+                        season series by Matt after the highest scoring game in league history.</p>
                 </Matchup>
             </Week>
         </ContentDiv>
