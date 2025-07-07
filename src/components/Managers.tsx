@@ -4,7 +4,6 @@ import { managers } from "../data/ManagerNotes.ts";
 import type { Manager } from "../data/ManagerNotes.ts";
 import { rosters } from "../data/Season1Rosters.ts";
 import type { Roster } from "../data/Season1Rosters.ts";
-import { SeparatorLine } from "../components/headlines/HeadlineStyles";
 
 interface ToggleButtonProps {
     active: boolean;
@@ -31,6 +30,8 @@ const StyledMiniHeader = styled.h3`
     text-align: center;
     font-weight: bold;
     color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
 `;
 
 const DivisionDiv = styled.div`
@@ -42,8 +43,12 @@ const DivisionDiv = styled.div`
 
 const DivisionHeader = styled.h3`
     text-align: center;
-    font-size: 2rem;
+    margin-top: 0;
     color: white;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const Manager = styled.div`
@@ -198,7 +203,7 @@ const RivalryParagraph = styled.p`
     margin: 0 auto; 
     line-height: 1.6; 
     background-color: #303030;
-    border-radius: 15px;
+    border-radius: 8px;
     border-bottom: 2px solid white;
     padding: 16px 20px; 
 `;
@@ -210,9 +215,14 @@ const Rivalry = styled.div`
     margin: 20px;
 `;
 
-const RivalryDiv = styled.div`
+const VersusRow = styled.div`
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: white;
 `;
 
 export default function Managers() {
@@ -240,36 +250,54 @@ export default function Managers() {
         <ContentDiv>
             <StyledHeader style={{fontSize: "80px"}}>Managers List</StyledHeader>
             <div style={{display: 'flex', gap: "200px"}}>
-                <DivisionHeader>East Division</DivisionHeader>
+                <DivisionHeader style={{color: "#4285F4"}}>East Division</DivisionHeader>
             </div>
-            <SeparatorLine/>
             <DivisionDiv>
                 {sortedManagers.filter(m => m.division === "East").map((manager: Manager) => (
                     <Manager key={manager.name} onClick={() => {
                         setSelectedManager(manager);
                         setActiveModalTab("info");
-                    }} style={{backgroundColor: manager.color}}>
+                    }} style={{background:
+                            manager.name === "Brendan"
+                            ? "linear-gradient(100deg, rgba(204, 0, 0, 1) 20%, rgba(204, 0, 0, .2) 100%)"
+                            : manager.name === "Justin"
+                            ? "linear-gradient(100deg, rgba(255, 153, 0, 1) 20%, rgba(255, 153, 0, .2) 100%)"
+                            : manager.name === "James"
+                            ? "linear-gradient(100deg, rgba(241, 194, 50, 1) 20%, rgba(241, 194, 50, .2) 100%)"
+                            : manager.name === "Matt"
+                            ? "linear-gradient(100deg, rgba(106, 168, 79, 1) 20%, rgba(0, 255, 0, .2) 100%)"
+                            : ""}}>
                         <TileSetup>
                             <img src={manager.emblem} alt={manager.name}
-                                 style={{width: "100px", height: "100px", objectFit: "contain"}}/>
+                                 style={{width: "100px", height: "100px", objectFit: "contain",
+                                     filter: "drop-shadow(0 0 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))"}}/>
                             <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
                         </TileSetup>
                     </Manager>
                 ))}
             </DivisionDiv>
             <div style={{display: 'flex', gap: "200px"}}>
-                <DivisionHeader>West Division</DivisionHeader>
+                <DivisionHeader style={{color: "#FF0000"}}>West Division</DivisionHeader>
             </div>
-            <SeparatorLine/>
             <DivisionDiv>
                 {sortedManagers.filter(m => m.division === "West").map((manager: Manager) => (
                     <Manager key={manager.name} onClick={() => {
                         setSelectedManager(manager);
                         setActiveModalTab("info");
-                    }} style={{backgroundColor: manager.color}}>
+                    }} style={{background:
+                            manager.name === "Isaac"
+                            ? "linear-gradient(100deg, rgba(53, 134, 232, 1) 20%, rgba(53, 134, 232, .2) 100%)"
+                            : manager.name === "Christach"
+                            ? "linear-gradient(100deg, rgba(153, 0, 255, 1) 20%, rgba(153, 0, 255, .2) 100%)"
+                            : manager.name === "Morgan"
+                            ? "linear-gradient(100deg, rgba(255, 0, 255, 1) 20%, rgba(255, 0, 255, .2) 100%)"
+                            : manager.name === "DANdrew"
+                            ? "linear-gradient(100deg, rgba(153, 153, 153, 1) 20%, rgba(153, 153, 153, .2) 100%)"
+                            : manager.color}}>
                         <TileSetup>
                             <img src={manager.emblem} alt={manager.name}
-                                 style={{width: "100px", height: "100px", objectFit: "contain"}}/>
+                                 style={{width: "100px", height: "100px", objectFit: "contain",
+                                     filter: "drop-shadow(0 0 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))"}}/>
                             <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
                         </TileSetup>
                     </Manager>
@@ -277,17 +305,13 @@ export default function Managers() {
             </DivisionDiv>
 
             <StyledHeader style={{fontSize: "80px"}}>Rivalries</StyledHeader>
-
-            <SeparatorLine/>
-
-            <RivalryDiv>
                 <Rivalry>
-                    <StyledMiniHeader>The Battle of 726</StyledMiniHeader>
-                    <StyledMiniHeader style={{display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", justifyItems: "center"}}>
-                        <span style={{ color: "#CC0000", fontWeight: "bold"}}>Brendan</span>
-                        <span style={{ color: "white"}}>vs</span>
-                        <span style={{ color: "#3586E8", fontWeight: "bold"}}>Isaac</span>
-                    </StyledMiniHeader>
+                    <StyledMiniHeader style={{fontSize: "80px"}}>The Battle of 726</StyledMiniHeader>
+                    <VersusRow>
+                        <span style={{color: "#CC0000", textAlign: "right", paddingRight: "1rem"}}>Brendan</span>
+                        <span style={{textAlign: "center"}}>vs</span>
+                        <span style={{color: "#3586E8", textAlign: "left", paddingLeft: "1rem"}}>Isaac</span>
+                    </VersusRow>
                     <RivalryParagraph>
                         These two managers were the creators of the PMBL, and live under the same roof.
                         Their passion for Mario Baseball has sparked the interest in the rest of the managers, creating the league
@@ -296,12 +320,12 @@ export default function Managers() {
                 </Rivalry>
 
                 <Rivalry>
-                    <StyledMiniHeader>The Park Drive Rivalry</StyledMiniHeader>
-                    <StyledMiniHeader style={{display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", justifyItems: "center"}}>
-                        <span style={{ color: "#FF9900", marginLeft: "3px"}}>Justin</span>
-                        <span style={{ color: "white"}}>{' '}vs{' '}</span>
-                        <span style={{ color: "#9900FF", marginLeft: "20px"}}>Christach</span>
-                    </StyledMiniHeader>
+                    <StyledMiniHeader style={{fontSize: "80px"}}>The Park Drive Rivalry</StyledMiniHeader>
+                    <VersusRow>
+                        <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem"}}>Justin</span>
+                        <span style={{textAlign: "center"}}>vs</span>
+                        <span style={{ color: "#9900FF", textAlign: "left", paddingLeft: "1rem"}}>Christach</span>
+                    </VersusRow>
                     <RivalryParagraph>
                         Just a quick walk down the road from 726 Commonwealth Avenue was the household of
                         the three Managers; Justin, Chris, and Zach, with all 3 of them living under the same roof. In their sole game
@@ -310,12 +334,12 @@ export default function Managers() {
                 </Rivalry>
 
                 <Rivalry>
-                    <StyledMiniHeader>The 48 Buswell Battle</StyledMiniHeader>
-                    <StyledMiniHeader style={{display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", justifyItems: "center"}}>
-                        <span style={{ color: "#F1C232"}}>James</span>
-                        <span style={{ color: "white"}}>{' '}vs{' '}</span>
-                        <span style={{ color: "#FF00FF", marginLeft: "20px"}}>Morgan</span>
-                    </StyledMiniHeader>
+                    <StyledMiniHeader style={{fontSize: "80px"}}>The 48 Buswell Battle</StyledMiniHeader>
+                    <VersusRow>
+                        <span style={{ color: "#F1C232", textAlign: "right", paddingRight: "1rem"}}>James</span>
+                        <span style={{textAlign: "center"}}>vs</span>
+                        <span style={{ color: "#FF00FF", textAlign: "left", paddingLeft: "1rem"}}>Morgan</span>
+                    </VersusRow>
                     <RivalryParagraph>
                         A rivlary so fierce that they didn't even travel to games together despite sleeping
                         above/below one another. Both teams were dipped in controversy throughout Season 1, and met in the playoffs,
@@ -324,22 +348,21 @@ export default function Managers() {
                 </Rivalry>
 
                 <Rivalry>
-                    <StyledMiniHeader>The Computer Engineering Clash</StyledMiniHeader>
-                    <StyledMiniHeader style={{display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", justifyItems: "center"}}>
-                        <span style={{ color: "#FF9900", marginRight: "20px"}}>Justin</span>
-                        <span style={{ color: "white"}}>{' '}vs{' '}</span>
-                        <span style={{color: "#6AA84F"}}>Matt</span>
-                    </StyledMiniHeader>
+                    <StyledMiniHeader style={{fontSize: "80px"}}>The Computer Engineering Clash</StyledMiniHeader>
+                    <VersusRow>
+                        <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem"}}>Justin</span>
+                        <span style={{textAlign: "center"}}>vs</span>
+                        <span style={{color: "#6AA84F", textAlign: "left", paddingLeft: "1rem"}}>Matt</span>
+                    </VersusRow>
                     <RivalryParagraph>
                         Two division rivals of the same major. Both fan favorite teams played in the Week 7
                         Shy Guy Tribute Game, where Matt took an early 5-0 lead in the 1st, to lose 11-14 with a 3 run walk-off homer
                         in the first ever 10 inning game.</RivalryParagraph>
                     <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Justin leads 2-0</p>
                 </Rivalry>
-            </RivalryDiv>
             <Rivalry style={{marginTop: "0"}}>
-                <StyledMiniHeader>Middlesex Matchups</StyledMiniHeader>
-                <StyledMiniHeader>
+                <StyledMiniHeader style={{fontSize: "80px"}}>Middlesex Matchups</StyledMiniHeader>
+                <StyledMiniHeader style={{fontSize: "2.5rem"}}>
                     <span style={{ color: "#F1C232"}}>James</span>,
                     <span style={{ color: "#CC0000"}}>{' '}Brendan</span>,
                     <span style={{ color: "#FF00FF"}}>{' '}Morgan</span>
@@ -393,19 +416,16 @@ export default function Managers() {
                                                     color: "white",
                                                     padding: "4px",
                                                     borderRadius: "8px",
-                                                    fontSize: "0.9rem",
                                                     fontWeight: "bold"
                                                 }}>{acc.type}</div>
                                             ))}
                                         </div>
                                     )}
                                     <p style={{fontWeight: "bold", marginBottom: "0.4rem"}}>
-                                        <strong>Captain:</strong> {getRosterForManager(selectedManager.name)?.captain || "N/A"}
+                                        <strong>Captain:</strong> {getRosterForManager(selectedManager.name)?.captain}
                                     </p>
-                                    <ul style={{
-                                        listStyleType: "none", padding: 0, marginTop: "0.5rem", display: "grid",
-                                        gridTemplateColumns: "1fr 1fr", gap: "0.3rem",
-                                    }}>
+                                    <img src={selectedManager.s1banner} alt="banner"/>
+                                    <ul style={{listStyleType: "none", padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.3rem",}}>
                                         {getRosterForManager(selectedManager.name)?.roster.map((player) => (
                                             <li key={player.name} style={{
                                                 background: "#e3e3e3",

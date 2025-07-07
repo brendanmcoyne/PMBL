@@ -24,9 +24,11 @@ const StyledHeader = styled.h1`
 const StyledMiniHeader = styled.h3`
     text-align: center;
     grid-column: span 4;
-    font-size: 2rem;
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    font-size: 3rem;
+    font-family: 'Bebas Neue', sans-serif;
 `;
 
 const DivisionDiv = styled.div`
@@ -85,7 +87,7 @@ export default function Standings1() {
             </ToggleButton>
             <StyledHeader>Season 1 PMBL Standings</StyledHeader>
             <DivisionDiv>
-            <StyledMiniHeader>East Division</StyledMiniHeader>
+            <StyledMiniHeader style={{color: "#4285F4"}}>East Division</StyledMiniHeader>
                 <HeaderRow>
                     <div>Team</div>
                     <div>Record</div>
@@ -134,7 +136,7 @@ export default function Standings1() {
             </DivisionDiv>
 
             <DivisionDiv>
-            <StyledMiniHeader>West Division</StyledMiniHeader>
+            <StyledMiniHeader style={{color: "#FF0000"}}>West Division</StyledMiniHeader>
                 <HeaderRow>
                     <div>Team</div>
                     <div>Record</div>

@@ -7,7 +7,7 @@ export const ContentDiv = styled.div`
     align-items: center;
     width: 100%;
     font-size: calc(0.5rem + 1vw);
-    padding-top: 2rem;
+    padding: 4rem 1rem;
     position: relative;
 `;
 
@@ -25,7 +25,10 @@ const StyledMiniHeader = styled.h3`
     grid-column: span 2;
     font-size: 2rem;
     color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    
 `;
 
 const ToggleButton = styled.button`
@@ -89,32 +92,35 @@ const ScoreLine = styled.div`
 `;
 
 const GamesRow3 = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;       
-  width: 100%;
-  max-width: 900px; 
-  margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 3rem;  // give sections space!
 `;
 
 const WorldSeriesHeader = styled(StyledMiniHeader)`
-  font-family: 'Anton', sans-serif;
-  font-size: 6rem;  
-  letter-spacing: 0.1em;
-  color: #FFD700;   
-  text-shadow: 2px 2px 4px #000;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+    font-family: 'Anton', sans-serif;
+    font-size: 6rem;  
+    letter-spacing: 0.1em;
+    color: #FFD700;   
+    text-shadow: 2px 2px 4px #000;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 `;
 
-const ConfSeriesHeader = styled(StyledMiniHeader)`
-  font-family: 'Anton', sans-serif;
-  font-size: 5rem;  
-  letter-spacing: 0.1em;
-  color: #888888;   
-  text-shadow: 2px 2px 4px #000;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+const BannerDiv = styled.div`
+    border: 20px solid #F1C232; 
+    background-color: #EEEEEE;
+    width: 700px;
+    padding: 2rem 3rem;          
+    box-shadow: 0 0 20px 5px rgba(241, 194, 50, 0.4); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 3rem auto;         
 `;
 
 export default function Playoffs1() {
@@ -123,8 +129,9 @@ export default function Playoffs1() {
             <ToggleButton>
                 <Link style={{color: "darkblue"}} to="/archives/seasons/Season1">Back</Link>
             </ToggleButton>
-            <StyledHeader>Season 1 PMBL Playoffs</StyledHeader>
-            <ConfSeriesHeader>Conference Series</ConfSeriesHeader>
+            <StyledHeader style={{marginBottom: "10px"}}>Season 1 PMBL Playoffs</StyledHeader>
+
+            <WorldSeriesHeader style={{color: "#888888"}}>Conference Series</WorldSeriesHeader>
             <StyledMiniHeader>
                 (1) <span style={{color: "#CC0000"}}>Brendan</span> v.s. (4) <span style={{color: "#FF9900"}}>Justin</span>
             </StyledMiniHeader>
@@ -234,6 +241,7 @@ export default function Playoffs1() {
 
 
             <WorldSeriesHeader>WORLD SERIES</WorldSeriesHeader>
+
             <StyledMiniHeader>
                 (1) <span style={{color: "#CC0000"}}>Brendan</span> v.s. (3) <span style={{color: "#F1C232"}}>James</span>
             </StyledMiniHeader>
@@ -280,8 +288,13 @@ export default function Playoffs1() {
                 </div>
             </GamesRow3>
 
-            <StyledHeader>World Series Champion</StyledHeader>
-            <StyledMiniHeader>James</StyledMiniHeader>
+            <BannerDiv>
+                <WorldSeriesHeader style={{marginBottom: "0", textShadow: "none"}}>World Series Champions</WorldSeriesHeader>
+                <img src="/LeagueLogo_noWords.png" alt="logo" style={{width: "150px", height: "150px", objectFit: "contain", margin: "0",}}/>
+                <h2 style={{fontFamily: "'Anton', sans-serif", letterSpacing: "2px", fontSize: "4rem", margin: "0", color: "#F1C232"}}>James</h2>
+                <h4 style={{fontFamily: "'Open Sans', sans-serif"}}>Bowser Monsters</h4>
+                <img src="/emblems/MSS-Emblem-BowserMonsters.webp" alt="Bowser"/>
+            </BannerDiv>
         </ContentDiv>
 
     )

@@ -126,6 +126,7 @@ const CloseButton = styled.button`
 const StyledMiniHeader = styled.h3`
     text-align: center;
     font-weight: bold;
+    font-family: 'Archivo Black', sans-serif;
 `;
 
 const SortButtonsContainer = styled.div`
@@ -228,6 +229,50 @@ const ToggleButton = styled.button<ToggleButtonProps>`
     border-radius: 10px;
     transition: background-color 0.2s, color 0.2s;
 `;
+
+const AwardsList = styled.ul`
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;    
+`;
+
+const AwardRow = styled.li<{ $kind: string }>`
+    padding: 0.6rem 1.1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+    background: ${({ $kind }) => {
+    switch ($kind) {
+        case "champ":        return "#FFD700";
+        case "finalsMvp":    return "linear-gradient(90deg, #FFD700, #E5E4E2)";
+        case "leagueMvp":    return "#07246C";
+        case "offense":      return "#FF5E57";
+        case "defense":      return "#006400";
+        case "slugger":      return "#D3D3D3";
+        case "glove":        return "#F9DC5C";
+        default:             return "#ffffff";   
+    }
+    }};
+    color: ${({ $kind }) =>
+        $kind === "leagueMvp" ? "#fff" : "#000"};
+    `;
+
+const classifyAward = (name: string) => {
+    if (name === "World Series Champion")                     return ["champ", "🏆"];
+    if (name === "World Series MVP" || name === "Finals MVP") return ["finalsMvp", "🎖️"];
+    if (name === "League MVP")                                return ["leagueMvp", "🌟"];
+    if (name === "Offensive Player of the Year")              return ["offense", "💥"];
+    if (name === "Defensive Player of the Year")              return ["defense", "🛡️"];
+    if (name === "Silver Slugger Winner")                     return ["slugger", "🥈"];
+    if (name === "Golden Glove Winner")                       return ["glove", "🥇"];
+    return ["other", "⭐"];
+};
 
 function statWithEmoji(value: number): string {
     if (value >= 7) return `${value} 🔥`;
@@ -363,24 +408,17 @@ export default function Players() {
                                     {Array.isArray(selectedPlayer.awards) && selectedPlayer.awards.length > 0 ? (
                                         <>
                                             <StyledMiniHeader>Awards</StyledMiniHeader>
-                                            <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-                                                {selectedPlayer.awards.map((award, index) => (
-                                                    <li key={index} style={{ fontWeight: award.name === "League MVP"
-                                                        || award.name === "Finals MVP" ? "bold" : "",
-                                                        color: award.name === "League MVP" ? "white" : "",
-                                                        backgroundColor: award.name === "World Series Champion"
-                                                        || award.name === "World Series MVP" ? "gold" :
-                                                        award.name === "Offensive Player of the Year" ? "red" :
-                                                        award.name === "Defensive Player of the Year" ? "darkgreen" :
-                                                        award.name === "Golden Glove Winner" ? "yellow" :
-                                                        award.name === "Silver Slugger Winner" ? "lightgray" :
-                                                        award.name === "League MVP" ? "darkblue" :
-                                                        award.name === "Morgan Hartwell Man of the Year Award" ? "orange" : "",
-                                                        borderRadius: "8px"}}>
-                                                        {award.name} (Season {award.season})
-                                                    </li>
-                                                ))}
-                                            </ul>
+                                            <AwardsList>
+                                                {selectedPlayer.awards.map(({ name, season }, idx) => {
+                                                    const [kind, emoji] = classifyAward(name);
+                                                    return (
+                                                        <AwardRow key={idx} $kind={kind}>
+                                                            <span>{emoji}</span>
+                                                            {name} <span style={{ opacity: .75, color: "black" }}>— Season {season}</span>
+                                                        </AwardRow>
+                                                    );
+                                                })}
+                                            </AwardsList>
                                         </>
                                     ) : (<p style={{ fontStyle: "italic" }}>No awards yet.</p>)}
                                 </>
