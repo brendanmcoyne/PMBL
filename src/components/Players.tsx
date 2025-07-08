@@ -394,7 +394,7 @@ export default function Players() {
                                             <StyledMiniHeader style={{color: "black"}}>About</StyledMiniHeader>
                                             <p style={{fontWeight: "bold", borderRadius: "8px", backgroundColor: selectedPlayer.color ===
                                                 "Light Blue" ? "lightblue" : selectedPlayer.color === "Light Green" ? "lightgreen" : selectedPlayer.color,
-                                                color: selectedPlayer.color === "black" ? "white" : "black"}}>Color: {selectedPlayer.color}</p>
+                                                color: selectedPlayer.color === "Black" ? "white" : "black"}}>Color: {selectedPlayer.color}</p>
                                             <p style={{color: "black"}}>Games Played: {selectedPlayer.gp}</p>
                                         </AboutSection>
                                     </ModalLeft>
