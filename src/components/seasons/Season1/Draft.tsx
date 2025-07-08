@@ -1,7 +1,7 @@
 import {styled} from "styled-components";
 import { Link } from "react-router-dom";
 import { draftRoster } from "../../../data/Season1Draft";
-import { ToggleButton } from "../../CommonStyles.ts";
+import { ToggleButton, StyledHeader } from "../../CommonStyles.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -10,18 +10,6 @@ export const ContentDiv = styled.div`
     width: 100%;
     font-size: calc(0.5rem + 1vw);
     padding-top: 2rem;
-`;
-
-const StyledHeader = styled.h1`
-    font-size: 80px;
-    color: white;
-    font-family: 'Luckiest Guy', cursive;
-    text-align: center;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 12px #ff0;
-    margin-bottom: 0;
-    @media screen and (max-width: 1000px) {
-        font-size: 55px;
-    }
 `;
 
 const StyledMiniHeader = styled.h3`

@@ -4,6 +4,7 @@ import { players } from "../data/playerNames.ts";
 import type { Player } from "../data/playerNames.ts";
 import { stats } from "../data/playerStats.ts";
 import type { Stat } from "../data/playerStats.ts";
+import { StyledHeader } from "../components/CommonStyles.ts";
 
 interface ToggleButtonProps {
     active: boolean;
@@ -26,17 +27,6 @@ const DivisionDiv = styled.div`
     @media screen and (max-width: 1000px) {
         grid-template-columns: repeat(2,1fr);
         justify-content: center;
-    }
-`;
-
-const StyledHeader = styled.h1`
-    font-size: 80px;
-    color: white;
-    font-family: 'Luckiest Guy', cursive;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
-    text-align: center;
-    @media screen and (max-width: 1000px) {
-        font-size: 55px;
     }
 `;
 

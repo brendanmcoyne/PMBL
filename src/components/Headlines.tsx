@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
-import { SeparatorLine } from "../components/headlines/HeadlineStyles";
+import { SeparatorLine, Overlay, StyledMiniHeader } from "../components/headlines/HeadlineStyles";
+import { StyledHeader } from "../components/CommonStyles.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -9,26 +10,6 @@ export const ContentDiv = styled.div`
     width: 100%;
     padding: 2rem 1rem;
     font-size: calc(0.5rem + 1vw);
-`;
-
-const StyledHeader = styled.h1`
-    font-size: 80px;
-    color: white;
-    font-family: 'Luckiest Guy', cursive;
-    text-align: center;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
-    margin-bottom: 0;
-    @media screen and (max-width: 1000px) {
-        font-size: 55px;
-    }
-`;
-
-const StyledMiniHeader = styled.h3`
-    text-align: center;
-    font-size: 1.7rem;
-    color: white;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
 const Story = styled.div`
@@ -46,22 +27,6 @@ const Story = styled.div`
         height: 250px;
         margin: 0.75rem 0;
     }
-`;
-
-const Overlay = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 1rem;
-    box-sizing: border-box;
 `;
 
 const GenImage = styled.img`
@@ -85,7 +50,6 @@ const Headline = styled.h2`
     }
 `;
 
-
 const StyledLink = styled(Link)`
     font-size: 1.1rem;
     text-decoration: none;
@@ -107,7 +71,6 @@ export default function Players() {
             <StyledHeader>PMBL Headlines</StyledHeader>
             <StyledMiniHeader>Featuring all the top baseball stories!</StyledMiniHeader>
             <SeparatorLine />
-
             <Story>
                 <GenImage src="/miibaseball.jpg" alt="Miis" />
                 <Overlay>
@@ -115,7 +78,6 @@ export default function Players() {
                     <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
-
             <Story>
                 <GenImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
                 <Overlay>
@@ -123,7 +85,6 @@ export default function Players() {
                     <StyledLink to="/headlines/Koopa">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
-
             <Story>
                 <GenImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
                 <Overlay>
@@ -131,8 +92,6 @@ export default function Players() {
                     <StyledLink to="/headlines/DryBones">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
-
-
         </ContentDiv>
     );
 

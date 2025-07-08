@@ -19,7 +19,7 @@ export const Passage = styled.span`
     margin: 20px auto;
     line-height: 1.7;
     @media screen and (max-width: 1000px) {
-        max-width: 400px;
+        max-width: 375px;
     }
 `;
 
@@ -89,7 +89,7 @@ export const Ruling = styled.div`
         white-space: pre-wrap;
     }
     @media screen and (max-width: 1000px) {
-        max-width: 400px;
+        max-width: 375px;
     }
 `;
 
@@ -123,7 +123,7 @@ export const NewsletterRuling = styled.div`
         color: #555;
     }
     @media screen and (max-width: 1000px) {
-        max-width: 400px;
+        max-width: 375px;
     }
 `;
 
@@ -131,6 +131,7 @@ export const StyledMiniHeader = styled.h3`
     text-align: center;
     font-size: 2rem;
     color: white;
+    margin-top: 0;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 

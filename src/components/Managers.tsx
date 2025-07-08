@@ -4,6 +4,7 @@ import { managers } from "../data/ManagerNotes.ts";
 import type { Manager } from "../data/ManagerNotes.ts";
 import { rosters } from "../data/Season1Rosters.ts";
 import type { Roster } from "../data/Season1Rosters.ts";
+import { StyledHeader } from "../components/CommonStyles.ts";
 
 interface ToggleButtonProps {
     active: boolean;
@@ -17,17 +18,6 @@ export const ContentDiv = styled.div`
     width: 100%;
     font-size: calc(0.5rem + 1vw);
     padding-top: 2rem; 
-`;
-
-const StyledHeader = styled.h1`
-    font-size: 80px;
-    color: white;
-    font-family: 'Luckiest Guy', cursive;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
-    @media screen and (max-width: 1000px) {
-        font-size: 55px;
-        text-align: center;
-    }
 `;
 
 const StyledMiniHeader = styled.h3`

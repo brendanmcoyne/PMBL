@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 import { useState, useEffect } from 'react';
+import { StyledHeader } from "../components/CommonStyles.ts";
 
 interface CaptainProps {
     selected: boolean;
@@ -42,13 +43,6 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 100%;
     z-index: 2;
-`;
-
-const StyledHeader = styled.h1`
-    font-size: 55px;
-    color: white;
-    font-family: 'Luckiest Guy', cursive;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
 `;
 
 const GrandHeader = styled.h1`

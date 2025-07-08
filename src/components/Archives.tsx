@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 import {useEffect, useState} from "react";
-import { SeparatorLine } from "../components/headlines/HeadlineStyles";
+import { SeparatorLine } from "../components/headlines/HeadlineStyles.ts";
+import { StyledHeader } from "../components/CommonStyles.ts";
 
 interface StyledLinkProps {
     bg?: string;
@@ -15,14 +16,6 @@ export const ContentDiv = styled.div`
     width: 100%;
     font-size: calc(0.5rem + 1vw);
     padding-top: 2rem;
-`;
-
-const StyledHeader = styled.h1`
-    font-size: 55px;
-    color: white;
-    font-family: 'Luckiest Guy', cursive;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0px  0px 12px #ff0;
-    margin-bottom: 0;
 `;
 
 const StyledMiniHeader = styled.h3`
@@ -110,7 +103,7 @@ export default function Archives() {
 
     return(
         <ContentDiv>
-            <StyledHeader style={{fontSize: "80px"}}>Archives</StyledHeader>
+            <StyledHeader>Archives</StyledHeader>
             <StyledMiniHeader style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
             <SeparatorLine/>
             <ResponsiveFlex>

@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import {Link} from "react-router-dom";
-import { ToggleButton } from "../../CommonStyles.ts";
+import { ToggleButton, StyledHeader } from "../../CommonStyles.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -10,18 +10,6 @@ export const ContentDiv = styled.div`
     font-size: calc(0.5rem + 1vw);
     padding-top: 2rem;
     background-color: #1a1a1a;
-`;
-
-const StyledHeader = styled.h1`
-    font-size: 80px;
-    color: white;
-    font-family: 'Luckiest Guy', cursive;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000, 0 0 12px #ff0;
-    margin-bottom: 30px;
-    text-align: center;
-    @media screen and (max-width: 1000px) {
-        font-size: 55px;
-    }
 `;
 
 const StyledMiniHeader = styled.h3`
