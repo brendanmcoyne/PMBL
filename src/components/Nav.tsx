@@ -84,7 +84,7 @@ const StyledLink = styled.li`
         }
     }
     @media (max-width: 1000px) {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         padding: 4px 8px;
     }
 `;
@@ -155,7 +155,6 @@ export default function Nav() {
                         <StyledLink><Link to="/headlines">Headlines</Link></StyledLink>
                     </StyledList>
                 </LeftSection>
-
                 <GoogleDesktop>
                     <GoogleLogin />
                 </GoogleDesktop>

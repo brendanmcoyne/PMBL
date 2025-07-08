@@ -45,6 +45,9 @@ const PlayerName = styled.span`
     text-align: center;
     color: white;
     font-size: 1.45rem;
+    @media screen and (max-width: 1000px) {
+        font-size: 1.4rem;
+    }
 `;
 
 const Player = styled.div<{ $accent: string }>`
@@ -73,6 +76,10 @@ const GenImage = styled.img`
     border: 3px solid black;
     padding: 5px;
     background-color: white;
+    @media screen and (max-width: 1000px) {
+        width: 130px;
+        height: 130px;
+    }
 `;
 
 const ModalBackground = styled.div`
