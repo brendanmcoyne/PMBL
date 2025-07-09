@@ -59,7 +59,7 @@ export const draftRoster: DraftRoster[] = [
         round: 1,
         player: "Birdo",
         manager: "Isaac",
-        captain: true,
+        captain: false,
         photo: "/players/Birdo.webp",
         color: "#3586E8",
     },
