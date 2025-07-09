@@ -184,6 +184,9 @@ export const Headline = styled.h2`
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    @media screen and (max-width: 1000px) {
+        width: 350px;
+    }
 `;
 
 export const Stories = styled.div`

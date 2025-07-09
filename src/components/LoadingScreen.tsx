@@ -61,6 +61,10 @@ const Image = styled.img`
         height: 12rem;
         margin-top: 180px;
     }
+    @media screen and (max-width: 400px) {
+        width: 0;
+        height: 0;
+    }
 `;
 
 const Header = styled.h2`
