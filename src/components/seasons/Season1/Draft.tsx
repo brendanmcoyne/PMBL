@@ -33,6 +33,14 @@ const StyledManager = styled.p`
     margin: 0;
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media screen and (max-width: 600px) {
+        white-space: normal;
+        font-size: 0.75rem;
+    }
 `;
 
 const StyledPlayer = styled.h5`
@@ -103,17 +111,35 @@ const Trade = styled.div`
     border-radius: 10px;
     padding: 1rem;
     box-sizing: border-box;
-    width: 350px;
-    @media screen and (max-width: 1000px) {
-        width: 9rem;
+    width: 300px;
+    min-height: 140px;
+    flex-shrink: 0; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        max-width: 200px;
     }
 `;
 
 const StyledTrade = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     margin-bottom: 40px;
+    flex-wrap: nowrap;
+    width: 100%;
+`;
+
+const AllTradesWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
 `;
 
 const TradeArrow = styled.span`
@@ -161,55 +187,57 @@ const Draft1 = () => {
             <StyledHeader>Season 1 Trades</StyledHeader>
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Post Draft</StyledMiniHeader>
 
-            <StyledTrade>
-                <Trade style={{border: "1px solid #3586E8"}}>
-                    <StyledManager style={{color: "#3586E8"}}>Isaac Receives:</StyledManager>
-                    <StyledPlayer>Blue Yoshi</StyledPlayer>
-                </Trade>
-                <TradeArrow>⇄</TradeArrow>
-                <Trade style={{border: "1px solid #FF00FF"}}>
-                    <StyledManager style={{color: "#FF00FF"}}>Morgan Receives:</StyledManager>
-                    <StyledPlayer>Yellow Toad</StyledPlayer>
-                </Trade>
-            </StyledTrade>
+            <AllTradesWrapper>
+                <StyledTrade>
+                    <Trade style={{border: "1px solid #3586E8"}}>
+                        <StyledManager style={{color: "#3586E8"}}>Isaac Receives:</StyledManager>
+                        <StyledPlayer>Blue Yoshi</StyledPlayer>
+                    </Trade>
+                    <TradeArrow>⇄</TradeArrow>
+                    <Trade style={{border: "1px solid #FF00FF"}}>
+                        <StyledManager style={{color: "#FF00FF"}}>Morgan Receives:</StyledManager>
+                        <StyledPlayer>Yellow Toad</StyledPlayer>
+                    </Trade>
+                </StyledTrade>
 
-            <StyledTrade>
-                <Trade style={{border: "1px solid #9900FF"}}>
-                    <StyledManager style={{color: "#9900FF"}}>Christach Receives:</StyledManager>
-                    <StyledPlayer>Wario</StyledPlayer>
-                </Trade>
-                <TradeArrow>⇄</TradeArrow>
-                <Trade style={{border: "1px solid #6AA84F"}}>
-                    <StyledManager style={{color: "#6AA84F"}}>Matt Receives:</StyledManager>
-                    <StyledPlayer>Wiggler, Chungy</StyledPlayer>
-                </Trade>
-            </StyledTrade>
+                <StyledTrade>
+                    <Trade style={{border: "1px solid #9900FF"}}>
+                        <StyledManager style={{color: "#9900FF"}}>Christach Receives:</StyledManager>
+                        <StyledPlayer>Wario</StyledPlayer>
+                    </Trade>
+                    <TradeArrow>⇄</TradeArrow>
+                    <Trade style={{border: "1px solid #6AA84F"}}>
+                        <StyledManager style={{color: "#6AA84F"}}>Matt Receives:</StyledManager>
+                        <StyledPlayer>Wiggler, Chungy</StyledPlayer>
+                    </Trade>
+                </StyledTrade>
 
-            <StyledTrade>
-                <Trade style={{border: "1px solid #3586E8"}}>
-                    <StyledManager style={{color: "#3586E8"}}>Isaac Receives:</StyledManager>
-                    <StyledPlayer>Red Yoshi</StyledPlayer>
-                </Trade>
-                <TradeArrow>⇄</TradeArrow>
-                <Trade style={{border: "1px solid #999999"}}>
-                    <StyledManager style={{color: "#999999"}}>DANdrew Receives:</StyledManager>
-                    <StyledPlayer>Blue Yoshi</StyledPlayer>
-                </Trade>
-            </StyledTrade>
+                <StyledTrade>
+                    <Trade style={{border: "1px solid #3586E8"}}>
+                        <StyledManager style={{color: "#3586E8"}}>Isaac Receives:</StyledManager>
+                        <StyledPlayer>Red Yoshi</StyledPlayer>
+                    </Trade>
+                    <TradeArrow>⇄</TradeArrow>
+                    <Trade style={{border: "1px solid #999999"}}>
+                        <StyledManager style={{color: "#999999"}}>DANdrew Receives:</StyledManager>
+                        <StyledPlayer>Blue Yoshi</StyledPlayer>
+                    </Trade>
+                </StyledTrade>
 
-            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", marginTop: "0"}}>Week 5</StyledMiniHeader>
+                <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", marginTop: "0"}}>Week 5</StyledMiniHeader>
 
-            <StyledTrade style={{marginBottom: "50px"}}>
-                <Trade style={{border: "1px solid #CC0000"}}>
-                    <StyledManager style={{color: "#CC0000"}}>Brendan Receives:</StyledManager>
-                    <StyledPlayer>Michelle Obama</StyledPlayer>
-                </Trade>
-                <TradeArrow>⇄</TradeArrow>
-                <Trade style={{border: "1px solid #999999"}}>
-                    <StyledManager style={{color: "#999999"}}>DANdrew Receives:</StyledManager>
-                    <StyledPlayer>Nose</StyledPlayer>
-                </Trade>
-            </StyledTrade>
+                <StyledTrade style={{marginBottom: "50px"}}>
+                    <Trade style={{border: "1px solid #CC0000"}}>
+                        <StyledManager style={{color: "#CC0000"}}>Brendan Receives:</StyledManager>
+                        <StyledPlayer>Michelle Obama</StyledPlayer>
+                    </Trade>
+                    <TradeArrow>⇄</TradeArrow>
+                    <Trade style={{border: "1px solid #999999"}}>
+                        <StyledManager style={{color: "#999999"}}>DANdrew Receives:</StyledManager>
+                        <StyledPlayer>Nose</StyledPlayer>
+                    </Trade>
+                </StyledTrade>
+            </AllTradesWrapper>
         </ContentDiv>
     );
 };

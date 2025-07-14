@@ -160,10 +160,14 @@ export const Story = styled.div`
 
     &:hover {
         transform: scale(1.05);
+        @media screen and (max-width: 750px) {
+            transform: none;
+        }
     }
 `;
 
 export const Overlay = styled.div`
+    text-align: center;
     position: absolute;
     top: 0;
     width: 100%;
@@ -184,8 +188,9 @@ export const Headline = styled.h2`
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    max-width: 90%;
     @media screen and (max-width: 1000px) {
-        width: 350px;
+        max-width: 350px;
     }
 `;
 

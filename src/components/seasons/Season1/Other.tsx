@@ -15,13 +15,28 @@ export const ContentDiv = styled.div`
 const StyledMiniHeader = styled.h3`
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem;
-    color: #FFBF00;
+    font-size: 3.75rem;
+    color: #FFD700;
     margin: 20px;
-    text-shadow: 0 0 8px rgba(255, 191, 0, 0.4);
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+
     @media screen and (max-width: 1000px) {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
     }
+`;
+
+const StatsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 950px;
+  justify-items: center;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
 `;
 
 const StatCard = styled.div`
@@ -29,28 +44,26 @@ const StatCard = styled.div`
     border-radius: 12px;
     margin: 1rem 0;
     width: 100%;
-    max-width: 450px;
-    border-bottom: 1px solid white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    background-color: #2d241b;
+    max-width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background-color: #2e2e2e;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     @media screen and (max-width: 1000px) {
         width: 300px;
     }
 `;
 
 const StatText = styled.h4`
-    color: #FFBF00;
-    text-shadow: 0 0 8px rgba(255, 191, 0, 0.4);
+    color: #FFD700;
     font-size: 1.6rem;
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 3px;
-    @media screen and (max-width: 1000px) {
-        font-size: 1.4rem;
-    }
+    text-shadow: 0 0 5px rgba(244, 230, 140, 0.15);
 `;
 
 const StatSubText = styled.h5`
@@ -88,72 +101,74 @@ export default function Other1 () {
             <StyledHeader>Game Stats</StyledHeader>
             <SeparatorLine/>
 
+            <StatsGrid>
                 <StyledMiniHeader>Most Runs in a Game (One Team)</StyledMiniHeader>
                 <StatCard>
-                        <StatText>23, <NameSpan color="#3586E8">Isaac</NameSpan></StatText>
-                        <StatSubText>
-                                <NameSpan color="#3586E8">Isaac</NameSpan> <VsText>vs</VsText> <NameSpan color="#9900FF">Christach</NameSpan>
-                        </StatSubText>
-                        <StatSubText>23 - 4</StatSubText>
-                        <StyledWeek>Week 8</StyledWeek>
+                    <StatText>23, <NameSpan color="#3586E8">Isaac</NameSpan></StatText>
+                    <StatSubText>
+                        <NameSpan color="#3586E8">Isaac</NameSpan> <VsText>vs</VsText> <NameSpan color="#9900FF">Christach</NameSpan>
+                    </StatSubText>
+                    <StatSubText>23 - 4</StatSubText>
+                    <StyledWeek>Week 8</StyledWeek>
                 </StatCard>
 
-            <StyledMiniHeader>Most Runs in a Game (Combined)</StyledMiniHeader>
+                <StyledMiniHeader>Most Runs in a Game (Combined)</StyledMiniHeader>
                 <StatCard>
-                        <StatText>29</StatText>
-                        <StatSubText>
-                                <NameSpan color="#F1C232">James</NameSpan> <VsText>vs</VsText> <NameSpan color="#6AA84F">Matt</NameSpan>
-                        </StatSubText>
-                        <StatSubText>14 - 15</StatSubText>
-                        <StyledWeek>Week 10</StyledWeek>
+                    <StatText>29</StatText>
+                    <StatSubText>
+                        <NameSpan color="#F1C232">James</NameSpan> <VsText>vs</VsText> <NameSpan color="#6AA84F">Matt</NameSpan>
+                    </StatSubText>
+                    <StatSubText>14 - 15</StatSubText>
+                    <StyledWeek>Week 10</StyledWeek>
                 </StatCard>
 
                 <StyledMiniHeader>Biggest Shutout</StyledMiniHeader>
                 <StatCard>
-                        <StatText>9, <NameSpan color="#3586E8">Isaac</NameSpan></StatText>
-                        <StatSubText>
-                                <NameSpan color="#3586E8">Isaac</NameSpan> <VsText>vs</VsText> <NameSpan color="#9900FF">Christach</NameSpan>
-                        </StatSubText>
-                        <StatSubText>9 - 0</StatSubText>
-                        <StyledWeek>Week 1</StyledWeek>
+                    <StatText>9, <NameSpan color="#3586E8">Isaac</NameSpan></StatText>
+                    <StatSubText>
+                        <NameSpan color="#3586E8">Isaac</NameSpan> <VsText>vs</VsText> <NameSpan color="#9900FF">Christach</NameSpan>
+                    </StatSubText>
+                    <StatSubText>9 - 0</StatSubText>
+                    <StyledWeek>Week 1</StyledWeek>
                 </StatCard>
 
                 <StyledMiniHeader>Largest Margin of Victory</StyledMiniHeader>
                 <StatCard>
-                        <StatText>19, <NameSpan color="#3586E8">Isaac</NameSpan></StatText>
-                        <StatSubText>
-                                <NameSpan color="#9900FF">Christach</NameSpan> <VsText>vs</VsText> <NameSpan color="#3586E8">Isaac</NameSpan>
-                        </StatSubText>
-                        <StatSubText>4 - 23</StatSubText>
-                        <StyledWeek>Week 8</StyledWeek>
+                    <StatText>19, <NameSpan color="#3586E8">Isaac</NameSpan></StatText>
+                    <StatSubText>
+                        <NameSpan color="#9900FF">Christach</NameSpan> <VsText>vs</VsText> <NameSpan color="#3586E8">Isaac</NameSpan>
+                    </StatSubText>
+                    <StatSubText>4 - 23</StatSubText>
+                    <StyledWeek>Week 8</StyledWeek>
                 </StatCard>
 
                 <StyledMiniHeader>Most Consecutive Runs Scored</StyledMiniHeader>
                 <StatCard>
-                        <StatText>21, All-Star East</StatText>
-                        <StatSubText>All Star Game</StatSubText>
-                        <StatSubText>21 - 4</StatSubText>
-                        <StyledWeek>All Star Break</StyledWeek>
+                    <StatText>21, All-Star East</StatText>
+                    <StatSubText>All Star Game</StatSubText>
+                    <StatSubText>21 - 4</StatSubText>
+                    <StyledWeek>All Star Break</StyledWeek>
                 </StatCard>
 
                 <StyledMiniHeader>Biggest Deficit to Comeback and Tie</StyledMiniHeader>
                 <StatCard>
-                        <StatText>8, <NameSpan color="#3586E8">Isaac</NameSpan> (Down 0 - 8)</StatText>
-                        <StatSubText>
-                                <NameSpan color="#999999">DANdrew</NameSpan> <VsText>vs</VsText> <NameSpan color="#3586E8">Isaac</NameSpan>
-                        </StatSubText>
-                        <StatSubText>Lost 15 - 10</StatSubText>
+                    <StatText>8, <NameSpan color="#3586E8">Isaac</NameSpan> (Down 0 - 8)</StatText>
+                    <StatSubText>
+                        <NameSpan color="#999999">DANdrew</NameSpan> <VsText>vs</VsText> <NameSpan color="#3586E8">Isaac</NameSpan>
+                    </StatSubText>
+                    <StatSubText>Lost 15 - 10</StatSubText>
                 </StatCard>
 
                 <StyledMiniHeader>Biggest Comeback to Win</StyledMiniHeader>
                 <StatCard>
-                        <StatText>7, <NameSpan color="#6AA84F">Matt</NameSpan> (Down 8 - 1)</StatText>
-                        <StatSubText>
-                                <NameSpan color="#F1C232">James</NameSpan> <VsText>vs</VsText> <NameSpan color="#6AA84F">Matt</NameSpan>
-                        </StatSubText>
-                        <StatSubText>14 - 15</StatSubText>
-                        <StyledWeek>Week 10</StyledWeek>
+                    <StatText>7, <NameSpan color="#6AA84F">Matt</NameSpan> (Down 8 - 1)</StatText>
+                    <StatSubText>
+                        <NameSpan color="#F1C232">James</NameSpan> <VsText>vs</VsText> <NameSpan color="#6AA84F">Matt</NameSpan>
+                    </StatSubText>
+                    <StatSubText>14 - 15</StatSubText>
+                    <StyledWeek>Week 10</StyledWeek>
                 </StatCard>
+            </StatsGrid>
 
                 <StyledMiniHeader>Longest Game</StyledMiniHeader>
                 <StatText style={{margin: "0"}}>10 Innings</StatText>

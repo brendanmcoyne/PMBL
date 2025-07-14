@@ -54,6 +54,9 @@ const StyledLink = styled.p<StyledLinkProps>`
 
     &:hover {
         transform: scale(1.07);
+        @media screen and (max-width: 500px) {
+            transform: none;
+        }
     }
 
     a {

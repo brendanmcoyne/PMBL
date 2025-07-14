@@ -22,6 +22,9 @@ const Story = styled.div`
     transition: 0.5s;
     &:hover {
         transform: scale(1.05);
+        @media screen and (max-width: 750px) {
+            transform: none;
+        }
     }
     @media screen and (max-width: 600px) {
         height: 250px;

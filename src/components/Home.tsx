@@ -69,11 +69,15 @@ const ContentSection = styled.section`
 `;
 
 const GenGif = styled.img`
-    width: 50%;
+    width: 100%;
+    max-width: 800px;
     height: auto;
-    border-radius: 10%;
-    @media screen and (max-width: 1000px) {
-        width: 300px;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    @media screen and (max-width: 500px) {
+        max-width: 80%;
     }
 `;
 

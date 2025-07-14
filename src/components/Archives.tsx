@@ -51,6 +51,9 @@ const StyledLink = styled.p<StyledLinkProps>`
     }
     &:hover {
         transform: scale(1.07);
+        @media screen and (max-width: 500px) {
+            transform: none;
+        }
     }
     a {
         color: white;
@@ -71,6 +74,9 @@ const Gallery = styled.div`
 
     img {
         width: 100%;
+        @media screen and (max-width: 750px) {
+            max-width: 400px;
+        }
         margin-bottom: 16px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

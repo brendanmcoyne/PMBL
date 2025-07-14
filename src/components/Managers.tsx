@@ -25,11 +25,12 @@ const StyledMiniHeader = styled.h3`
     font-weight: bold;
     color: white;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 80px;
-    margin: 0;
     @media screen and (max-width: 1000px) {
         font-size: 45px;
     }
+    font-size: 4.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 `;
 
 const DivisionDiv = styled.div`
@@ -69,6 +70,9 @@ const Manager = styled.div`
     cursor: pointer;
     &:hover {
         transform: scale(1.07);
+        @media screen and (max-width: 500px) {
+            transform: none;
+        }
     }
 `;
 
@@ -200,22 +204,35 @@ const StatCard = styled.div`
 `;
 
 const RivalryParagraph = styled.p`
-    color: white;
-    max-width: 500px; 
-    margin: 0 auto;
-    font-size: 1.2rem;
-    line-height: 1.6; 
-    background-color: #303030;
-    border-radius: 8px;
-    border-bottom: 2px solid white;
-    padding: 16px 20px; 
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    max-width: 500px;
+    margin: 1rem auto;
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    font-size: 1.1rem;
+    line-height: 1.75;
+
+    @media screen and (max-width: 600px) {
+        font-size: 1rem;
+        padding: 16px;
+    }
 `;
 
 const Rivalry = styled.div`
-    color: white;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
+    background: #1e1e1e;
+    border: 2px solid #444;
+    border-radius: 16px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    width: 800px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    transition: transform 0.2s ease;
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 12px rgba(255,255,255,0.15);
+    }
 `;
 
 const VersusRow = styled.div`

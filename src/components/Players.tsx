@@ -56,6 +56,9 @@ const Player = styled.div<{ $accent: string }>`
 
     &:hover {
         transform: translateY(-4px) scale(1.04);
+        @media screen and (max-width: 500px) {
+            transform: none;
+        }
     }
 `;
 
