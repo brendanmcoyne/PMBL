@@ -72,7 +72,7 @@ const Header = styled.h2`
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
     @media screen and (max-width: 1000px) {
         font-size: 75px;
-        margin-bottom: 120px;
+        margin-bottom: 100px;
     }
 `;
 
