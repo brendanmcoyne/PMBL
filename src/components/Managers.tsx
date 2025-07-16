@@ -25,12 +25,13 @@ const StyledMiniHeader = styled.h3`
     font-weight: bold;
     color: white;
     font-family: 'Bebas Neue', sans-serif;
-    @media screen and (max-width: 1000px) {
-        font-size: 45px;
-    }
     font-size: 4.5rem;
     margin-top: 0;
     margin-bottom: 0.5rem;
+
+    @media screen and (max-width: 600px) {
+        font-size: 2.5rem;
+    }
 `;
 
 const DivisionDiv = styled.div`
@@ -226,12 +227,16 @@ const Rivalry = styled.div`
     border-radius: 16px;
     margin: 30px auto;
     padding: 30px 20px;
-    width: 800px;
+    width: 90%;
+    max-width: 800px;
     box-shadow: 0 0 10px rgba(255,255,255,0.05);
     transition: transform 0.2s ease;
     &:hover {
         transform: scale(1.01);
         box-shadow: 0 0 12px rgba(255,255,255,0.15);
+    }
+    @media screen and (max-width: 600px) {
+        padding: 20px 12px;
     }
 `;
 
@@ -243,6 +248,15 @@ const VersusRow = styled.div`
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
     color: white;
+    @media screen and (max-width: 600px) {
+        font-size: 1.6rem;
+        gap: 0.3rem;
+    }
+    span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 `;
 
 export default function Managers() {
@@ -325,62 +339,59 @@ export default function Managers() {
             </DivisionDiv>
 
             <StyledHeader>Rivalries</StyledHeader>
-                <Rivalry>
-                    <StyledMiniHeader>The Battle of 726</StyledMiniHeader>
-                    <VersusRow>
-                        <span style={{color: "#CC0000", textAlign: "right", paddingRight: "1rem"}}>Brendan</span>
-                        <span style={{textAlign: "center"}}>vs</span>
-                        <span style={{color: "#3586E8", textAlign: "left", paddingLeft: "1rem"}}>Isaac</span>
-                    </VersusRow>
-                    <RivalryParagraph>
-                        These two managers were the creators of the PMBL, and live under the same roof.
-                        Their passion for Mario Baseball has sparked the interest in the rest of the managers, creating the league
-                        everyone knows and loves. </RivalryParagraph>
-                    <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Brendan leads 1-0</p>
-                </Rivalry>
-
-                <Rivalry>
-                    <StyledMiniHeader>The Park Drive Rivalry</StyledMiniHeader>
-                    <VersusRow>
-                        <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem"}}>Justin</span>
-                        <span style={{textAlign: "center"}}>vs</span>
-                        <span style={{ color: "#9900FF", textAlign: "left", paddingLeft: "1rem"}}>Christach</span>
-                    </VersusRow>
-                    <RivalryParagraph>
-                        Just a quick walk down the road from 726 Commonwealth Avenue was the household of
-                        the three Managers; Justin, Chris, and Zach, with all 3 of them living under the same roof. In their sole game
-                        so far, Christach rallied down 7-0, but still ended up losing 9-8. </RivalryParagraph>
-                    <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Justin leads 1-0</p>
-                </Rivalry>
-
-                <Rivalry>
-                    <StyledMiniHeader>The 48 Buswell Battle</StyledMiniHeader>
-                    <VersusRow>
-                        <span style={{ color: "#F1C232", textAlign: "right", paddingRight: "1rem"}}>James</span>
-                        <span style={{textAlign: "center"}}>vs</span>
-                        <span style={{ color: "#FF00FF", textAlign: "left", paddingLeft: "1rem"}}>Morgan</span>
-                    </VersusRow>
-                    <RivalryParagraph>
-                        A rivlary so fierce that they didn't even travel to games together despite sleeping
-                        above/below one another. Both teams were dipped in controversy throughout Season 1, and met in the playoffs,
-                        with James winning the series 3-1. </RivalryParagraph>
-                    <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>James leads 4-1</p>
-                </Rivalry>
-
-                <Rivalry>
-                    <StyledMiniHeader> The Computer Engineering Clash</StyledMiniHeader>
-                    <VersusRow>
-                        <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem"}}>Justin</span>
-                        <span style={{textAlign: "center"}}>vs</span>
-                        <span style={{color: "#6AA84F", textAlign: "left", paddingLeft: "1rem"}}>Matt</span>
-                    </VersusRow>
-                    <RivalryParagraph>
-                        Two division rivals of the same major. Both fan favorite teams played in the Week 7
-                        Shy Guy Tribute Game, where Matt took an early 5-0 lead in the 1st, to lose 11-14 with a 3 run walk-off homer
-                        in the first ever 10 inning game.</RivalryParagraph>
-                    <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Justin leads 2-0</p>
-                </Rivalry>
-            <Rivalry style={{marginTop: "0"}}>
+            <Rivalry>
+                <StyledMiniHeader>The Battle of 726</StyledMiniHeader>
+                <VersusRow>
+                    <span style={{color: "#CC0000", textAlign: "right", paddingRight: "1rem"}}>Brendan</span>
+                    <span style={{textAlign: "center"}}>vs</span>
+                    <span style={{color: "#3586E8", textAlign: "left", paddingLeft: "1rem"}}>Isaac</span>
+                </VersusRow>
+                <RivalryParagraph>
+                    These two managers were the creators of the PMBL, and live under the same roof.
+                    Their passion for Mario Baseball has sparked the interest in the rest of the managers, creating the league
+                    everyone knows and loves. </RivalryParagraph>
+                <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Brendan leads 1-0</p>
+            </Rivalry>
+            <Rivalry>
+                <StyledMiniHeader>The Park Drive Rivalry</StyledMiniHeader>
+                <VersusRow>
+                    <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem"}}>Justin</span>
+                    <span style={{textAlign: "center"}}>vs</span>
+                    <span style={{ color: "#9900FF", textAlign: "left", paddingLeft: "1rem"}}>Christach</span>
+                </VersusRow>
+                <RivalryParagraph>
+                    Just a quick walk down the road from 726 Commonwealth Avenue was the household of
+                    the three Managers; Justin, Chris, and Zach, with all 3 of them living under the same roof. In their sole game
+                    so far, Christach rallied down 7-0, but still ended up losing 9-8. </RivalryParagraph>
+                <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Justin leads 1-0</p>
+            </Rivalry>
+            <Rivalry>
+                <StyledMiniHeader>The 48 Buswell Battle</StyledMiniHeader>
+                <VersusRow>
+                    <span style={{ color: "#F1C232", textAlign: "right", paddingRight: "1rem"}}>James</span>
+                    <span style={{textAlign: "center"}}>vs</span>
+                    <span style={{ color: "#FF00FF", textAlign: "left", paddingLeft: "1rem"}}>Morgan</span>
+                </VersusRow>
+                <RivalryParagraph>
+                    A rivlary so fierce that they didn't even travel to games together despite sleeping
+                    above/below one another. Both teams were dipped in controversy throughout Season 1, and met in the playoffs,
+                    with James winning the series 3-1. </RivalryParagraph>
+                <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>James leads 4-1</p>
+            </Rivalry>
+            <Rivalry>
+                <StyledMiniHeader> The Computer Engineering Clash</StyledMiniHeader>
+                <VersusRow>
+                    <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem"}}>Justin</span>
+                    <span style={{textAlign: "center"}}>vs</span>
+                    <span style={{color: "#6AA84F", textAlign: "left", paddingLeft: "1rem"}}>Matt</span>
+                </VersusRow>
+                <RivalryParagraph>
+                    Two division rivals of the same major. Both fan favorite teams played in the Week 7
+                    Shy Guy Tribute Game, where Matt took an early 5-0 lead in the 1st, to lose 11-14 with a 3 run walk-off homer
+                    in the first ever 10 inning game.</RivalryParagraph>
+                <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Justin leads 2-0</p>
+            </Rivalry>
+            <Rivalry>
                 <StyledMiniHeader>Middlesex Matchups</StyledMiniHeader>
                 <StyledMiniHeader style={{fontSize: "2.5rem"}}>
                     <span style={{ color: "#F1C232"}}>James</span>,
@@ -394,7 +405,6 @@ export default function Managers() {
                 <p style={{ color: "lightgray", fontStyle: "italic", margin: "0", textAlign: "center" }}>James leads Brendan 4-1</p>
                 <p style={{ color: "lightgray", fontStyle: "italic", margin: "0", textAlign: "center" }}>Brendan leads Morgan 1-0</p>
             </Rivalry>
-
 
             {selectedManager && (
                 <ModalBackground onClick={() => setSelectedManager(null)}>
