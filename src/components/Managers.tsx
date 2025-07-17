@@ -252,11 +252,6 @@ const VersusRow = styled.div`
         font-size: 1.6rem;
         gap: 0.3rem;
     }
-    span {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
 `;
 
 export default function Managers() {
