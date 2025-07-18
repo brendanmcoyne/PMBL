@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { StyledHeader } from "../components/CommonStyles.ts";
 import UpdatedStandings from "./UpdatedStandings.tsx";
+import { useState } from "react";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -19,6 +20,7 @@ const StyledMiniHeader = styled.h3`
     font-family: 'Bebas Neue', sans-serif;
     font-size: 3.5rem;
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 
     @media screen and (max-width: 600px) {
         font-size: 2.5rem;
@@ -31,6 +33,7 @@ const UpcomingGame = styled.div`
     height: 200px;
     width: 1000px;
     padding: 1rem;
+    text-align: center;
 `;
 
 const TwoSection = styled.div`
@@ -67,22 +70,190 @@ const PlayoffProjection = styled.div`
     margin: 0 1rem;
 `;
 
+const TinyText = styled.span`
+    color: lightgray;
+    margin-top: 0;
+    font-style: italic;
+`;
+
+const ArrowButton = styled.button`
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 20px;
+    background-color: #555;
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-left: 10px;
+`;
+
 export default function CurrentSeason() {
+    const [division, setDivision] = useState<'West' | 'East'>('West');
+    const [week, setWeek] = useState(0);
+
+    const eastTeams = [
+        { name: 'Brendan', color: "#CC0000", record: '0-0', divRecord: '0-0' },
+        { name: 'James', color: "#F1C232", record: '0-0', divRecord: '0-0' },
+        { name: 'Justin', color: "#FF9900", record: '0-0', divRecord: '0-0' },
+        { name: 'Matt', color: "#6AA84F", record: '0-0', divRecord: '0-0' },
+    ];
+
+    const westTeams = [
+        { name: 'Morgan', color: "#FF00FF", record: '0-0', divRecord: '0-0' },
+        { name: 'DANdrew', color: "#999999", record: '0-0', divRecord: '0-0' },
+        { name: 'Isaac', color: "#3586E8", record: '0-0', divRecord: '0-0' },
+        { name: 'Christach', color: "#9900FF", record: '0-0', divRecord: '0-0' },
+    ];
+
+    const Week1 = [
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+    ];
+
+    const Week2 = [
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+    ];
+
+    const Week3 = [
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+    ];
+
+    const Week4 = [
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+    ];
+
+    const Week5 = [
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+    ];
+
+    const Week6 = [
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+    ];
+    const Week7 = [
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+    ];
+    const Week8 = [
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+    ];
+    const Week9 = [
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+    ];
+    const Week10 = [
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+    ];
+
+    const currentTeams = division === 'West' ? westTeams : eastTeams;
+    const allWeeks = [Week1, Week2, Week3, Week4, Week5, Week6, Week7, Week8, Week9, Week10];
+    const currentWeek = allWeeks[week];
+    const weekLabel = `Week ${week + 1}`;
+
     return(
         <ContentDiv>
             <StyledHeader>Current Season</StyledHeader>
 
             <UpcomingGame>
                 <StyledMiniHeader>Upcoming Game</StyledMiniHeader>
+                <TinyText>No games yet.</TinyText>
             </UpcomingGame>
             <TwoSection>
                 <Standings>
                     <StyledMiniHeader style={{marginBottom: "0"}}>Current Standings</StyledMiniHeader>
-                    <StyledMiniHeader style={{color: "#FF0000", fontSize: "2rem", marginTop: "0"}}>West Division</StyledMiniHeader>
-                </Standings>
+
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", textAlign: "center" }}>
+                        <ArrowButton onClick={() => setDivision('East')} disabled={division === 'East'}
+                                style={{color: division === 'West' ? "white" : "darkgray",}}>◀
+                        </ArrowButton>
+                        <StyledMiniHeader style={{ color: division === 'West' ? "#FF0000" : "#4285F4", fontSize: "2rem", margin: "0 1rem" }}>
+                            {division} Division
+                        </StyledMiniHeader>
+                        <ArrowButton onClick={() => setDivision('West')} disabled={division === 'West'}
+                                style={{color: division === 'East' ? "white" : "darkgray"}}>▶
+                        </ArrowButton>
+                    </div>
+
+                    <div style={{
+                        display: "flex", justifyContent: "space-between", padding: "0.5rem 1rem",
+                        borderBottom: "1px solid gray", color: "lightgray", fontWeight: "bold", fontSize: "1.1rem"
+                    }}>
+                        <span style={{ flex: 1 }}>Team</span>
+                        <span style={{ flex: 1, textAlign: "center" }}>Record</span>
+                        <span style={{ flex: 1, textAlign: "center" }}>Div Record</span>
+                    </div>
+
+                    <div style={{ padding: "0 1rem 1rem 1rem"}}>
+                        {currentTeams.map((team, index) => (
+                            <div key={index} style={{ display: "flex", justifyContent: "space-between", color: "white", margin: "0.5rem 0" }}>
+                                <span style={{ flex: 1, color: team.color, fontWeight: "bold"}}>{team.name}</span>
+                                <span style={{ flex: 1, textAlign: "center" }}>{team.record}</span>
+                                <span style={{ flex: 1, textAlign: "center" }}>{team.divRecord}</span>
+                            </div>
+                        ))}
+                    </div>
+                </ Standings>
 
                 <Schedule>
-                    <StyledMiniHeader>Week Schedule</StyledMiniHeader>
+                    <StyledMiniHeader style={{marginBottom: "0"}}>Week Schedule</StyledMiniHeader>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", textAlign: "center" }}>
+                        <ArrowButton onClick={() => setWeek(prev => Math.max(prev - 1, 0))} disabled={week === 0}
+                                style={{color: week === 0 ? "darkgray" : "white"}}>◀
+                        </ArrowButton>
+                        <StyledMiniHeader style={{ color: "white", fontSize: "2rem", margin: "0 1rem" }}>
+                            {weekLabel}
+                        </StyledMiniHeader>
+                        <ArrowButton onClick={() => setWeek(prev => Math.min(prev + 1, allWeeks.length - 1))} disabled={week === allWeeks.length - 1}
+                                     style={{color: week === 9 ? "darkgray" : "white"}}>▶
+                        </ArrowButton>
+                    </div>
+
+                    <div style={{
+                        display: "flex", justifyContent: "space-between", padding: "0.5rem 1rem",
+                        borderBottom: "1px solid gray", color: "lightgray", fontWeight: "bold", fontSize: "1.1rem"
+                    }}>
+                        <span style={{ flex: 1 }}>Team</span>
+                        <span style={{ flex: 1, textAlign: "center" }}>Record</span>
+                        <span style={{ flex: 1, textAlign: "center" }}>Div Record</span>
+                    </div>
+
+                    <div style={{ padding: "0 1rem 1rem 1rem"}}>
+                        {currentTeams.map((team, index) => (
+                            <div key={index} style={{ display: "flex", justifyContent: "space-between", color: "white", margin: "0.5rem 0" }}>
+                                <span style={{ flex: 1, color: team.color, fontWeight: "bold"}}>{team.name}</span>
+                                <span style={{ flex: 1, textAlign: "center" }}>{team.record}</span>
+                                <span style={{ flex: 1, textAlign: "center" }}>{team.divRecord}</span>
+                            </div>
+                        ))}
+                    </div>
                 </Schedule>
             </TwoSection>
             <TwoSection>
