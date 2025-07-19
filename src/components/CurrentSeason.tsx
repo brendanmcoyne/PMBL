@@ -92,6 +92,7 @@ const ArrowButton = styled.button`
 export default function CurrentSeason() {
     const [division, setDivision] = useState<'West' | 'East'>('West');
     const [week, setWeek] = useState(0);
+    const [round, setRound] = useState<'Conference Series' | 'World Series'>('Conference Series');
 
     const eastTeams = [
         { name: 'Brendan', color: "#CC0000", record: '0-0', divRecord: '0-0' },
@@ -108,75 +109,85 @@ export default function CurrentSeason() {
     ];
 
     const Week1 = [
-        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
     ];
 
     const Week2 = [
-        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
     ];
 
     const Week3 = [
-        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
     ];
 
     const Week4 = [
-        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
     ];
 
     const Week5 = [
-        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
     ];
 
     const Week6 = [
-        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
     ];
     const Week7 = [
-        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
     ];
     const Week8 = [
-        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
     ];
     const Week9 = [
-        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
     ];
     const Week10 = [
-        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: ""},
-        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: ""},
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 3, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
+        { matchup: 4, away: "", awaycolor: "", home: "", homecolor: "", score: ""},
     ];
+
+    const ConfSeries = [
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", record: ""},
+        { matchup: 2, away: "", awaycolor: "", home: "", homecolor: "", record: ""},
+    ]
+
+    const WorldSeries = [
+        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", record: ""},
+    ]
 
     const currentTeams = division === 'West' ? westTeams : eastTeams;
     const allWeeks = [Week1, Week2, Week3, Week4, Week5, Week6, Week7, Week8, Week9, Week10];
     const currentWeek = allWeeks[week];
     const weekLabel = `Week ${week + 1}`;
+    const playoffRound = round === 'World Series' ? WorldSeries : ConfSeries;
 
     return(
         <ContentDiv>
@@ -213,7 +224,7 @@ export default function CurrentSeason() {
 
                     <div style={{ padding: "0 1rem 1rem 1rem"}}>
                         {currentTeams.map((team, index) => (
-                            <div key={index} style={{ display: "flex", justifyContent: "space-between", color: "white", margin: "0.5rem 0" }}>
+                            <div key={index} style={{ display: "flex", justifyContent: "space-between", color: "white", margin: "1rem 0" }}>
                                 <span style={{ flex: 1, color: team.color, fontWeight: "bold"}}>{team.name}</span>
                                 <span style={{ flex: 1, textAlign: "center" }}>{team.record}</span>
                                 <span style={{ flex: 1, textAlign: "center" }}>{team.divRecord}</span>
@@ -236,22 +247,31 @@ export default function CurrentSeason() {
                         </ArrowButton>
                     </div>
 
-                    <div style={{
-                        display: "flex", justifyContent: "space-between", padding: "0.5rem 1rem",
-                        borderBottom: "1px solid gray", color: "lightgray", fontWeight: "bold", fontSize: "1.1rem"
-                    }}>
-                        <span style={{ flex: 1 }}>Team</span>
-                        <span style={{ flex: 1, textAlign: "center" }}>Record</span>
-                        <span style={{ flex: 1, textAlign: "center" }}>Div Record</span>
-                    </div>
-
-                    <div style={{ padding: "0 1rem 1rem 1rem"}}>
-                        {currentTeams.map((team, index) => (
-                            <div key={index} style={{ display: "flex", justifyContent: "space-between", color: "white", margin: "0.5rem 0" }}>
-                                <span style={{ flex: 1, color: team.color, fontWeight: "bold"}}>{team.name}</span>
-                                <span style={{ flex: 1, textAlign: "center" }}>{team.record}</span>
-                                <span style={{ flex: 1, textAlign: "center" }}>{team.divRecord}</span>
+                    <div style={{ padding: "0 1rem 1rem 1rem" }}>
+                        {currentWeek.map((game, index) => (
+                            <div key={index} style={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                color: "white",
+                                margin: "0.5rem 0",
+                                borderBottom: "1px solid #444",
+                                paddingBottom: "0.5rem"
+                            }}>
+                            <span style={{ flex: 1, color: game.awaycolor, fontWeight: "bold", textAlign: "left" }}>
+                                {game.away || "TBD"}
+                            </span>
+                                <div style={{flex: 1, textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", fontSize: "1.2rem"}}>
+                                    <span>vs</span>
+                                    <span style={{fontSize: "0.8rem", color: "#aaa", marginTop: "2px"}}>
+                                        {game.score || "0-0"}
+                                    </span>
+                                </div>
+                            <span style={{ flex: 1, color: game.homecolor, fontWeight: "bold", textAlign: "right" }}>
+                                {game.home || "TBD"}
+                            </span>
                             </div>
+
                         ))}
                     </div>
                 </Schedule>
@@ -262,6 +282,46 @@ export default function CurrentSeason() {
                 </StatLeaders>
                 <PlayoffProjection>
                     <StyledMiniHeader>Current Playoffs</StyledMiniHeader>
+
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", textAlign: "center" }}>
+                        <ArrowButton onClick={() => setRound('Conference Series')} disabled={round === 'Conference Series'}
+                                     style={{color: round === 'World Series' ? "white" : "darkgray",}}>◀
+                        </ArrowButton>
+                        <StyledMiniHeader style={{ color: round === 'Conference Series' ? "#888888" : "#FFD700", fontSize: "2rem", margin: "0 1rem" }}>
+                            {round}
+                        </StyledMiniHeader>
+                        <ArrowButton onClick={() => setRound('World Series')} disabled={round === 'World Series'}
+                                     style={{color: round === 'Conference Series' ? "white" : "darkgray"}}>▶
+                        </ArrowButton>
+                    </div>
+
+                    <div style={{ padding: "0 1rem 1rem 1rem" }}>
+                        {playoffRound.map((matchup, index) => (
+                            <div key={index} style={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                color: "white",
+                                margin: "0.5rem 0",
+                                borderBottom: "1px solid #444",
+                                paddingBottom: "0.5rem"
+                            }}>
+                            <span style={{ flex: 1, color: matchup.awaycolor, fontWeight: "bold", textAlign: "left" }}>
+                                {matchup.away || "TBD"}
+                            </span>
+                                <div style={{flex: 1, textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", fontSize: "1.2rem"}}>
+                                    <span>vs</span>
+                                    <span style={{fontSize: "0.8rem", color: "#aaa", marginTop: "2px"}}>
+                                        {matchup.record || "0-0"}
+                                    </span>
+                                </div>
+                                <span style={{ flex: 1, color: matchup.homecolor, fontWeight: "bold", textAlign: "right" }}>
+                                {matchup.home || "TBD"}
+                            </span>
+                            </div>
+
+                        ))}
+                    </div>
                 </PlayoffProjection>
             </TwoSection>
             <UpdatedStandings />
