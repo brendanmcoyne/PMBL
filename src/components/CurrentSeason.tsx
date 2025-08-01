@@ -40,6 +40,9 @@ const TwoSection = styled.div`
     display: flex;
     flex-direction: row;
     margin: 20px;
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
 `;
 
 const Standings = styled.div`

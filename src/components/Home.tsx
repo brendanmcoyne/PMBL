@@ -290,7 +290,7 @@ export default function Home() {
             <StyledHeader>Live Updates!</StyledHeader>
             <ContentSection style={{marginBottom: '50px'}}>
                 <TextSection style={{marginTop: "30px"}}>
-                    This website will continued to be updated constantly throughout the season.<br /><br />
+                    This website will continue to be updated constantly throughout the season.<br /><br />
                     We've developed a live stat system so fans and friends of the league are able to keep up with their favorite players from outside the living room.<br /><br />
                     The committee of the PMBL is devoted to bringing the best baseball experience to any and all fans.
                 </TextSection>
