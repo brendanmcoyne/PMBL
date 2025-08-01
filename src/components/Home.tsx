@@ -71,8 +71,9 @@ const GrandHeader = styled.h1<{ animate?: boolean }>`
     opacity: 0;
     transform: translateY(30px);
     @media screen and (max-width: 1000px) {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
+    
     ${({ animate }) =>
             animate &&
             css`
@@ -108,6 +109,9 @@ const ContentSection = styled.section`
     color: white;
     text-align: center;
     display: flex;
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
 `;
 
 const GenGif = styled.img`
@@ -118,8 +122,8 @@ const GenGif = styled.img`
     margin: 20px auto;
     display: block;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    @media screen and (max-width: 500px) {
-        max-width: 80%;
+    @media screen and (max-width: 1000px) {
+        width: 350px;
     }
 `;
 
