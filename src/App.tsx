@@ -122,9 +122,10 @@ function Root() {
     return (
         <Wrapper dark={isHomePage}>
             <Scrolling />
-            {showLoading && (
-                <LoadingScreen message={isFirstLoad ? "Welcome!" : "Loading"} />
-            )}
+            <LoadingScreen
+                message={isFirstLoad ? "Welcome!" : "Loading"}
+                loading={showLoading}
+            />
             <Nav />
             <MainContent>
                 <Routes>

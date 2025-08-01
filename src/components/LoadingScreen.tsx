@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { useEffect, useState } from "react";
 
 const grow = keyframes`
     from { transform: scale(1); }
@@ -10,17 +11,19 @@ const spin = keyframes`
     to { transform: rotate(720deg); }
 `;
 
-const Overlay = styled.div`
+const Overlay = styled.div<{ fadingOut: boolean }>`
     position: fixed;
     inset: 0;
     z-index: 9999;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; 
-    padding-top: 10rem; 
+    justify-content: flex-start;
+    padding-top: 10rem;
     background-color: darkblue;
     overflow: hidden;
+    opacity: ${({ fadingOut }) => (fadingOut ? 0 : 1)};
+    transition: opacity 0.5s ease;
 
     @media screen and (max-width: 1000px) {
         padding-top: 5rem;
@@ -71,7 +74,7 @@ const Header = styled.h2`
     z-index: 2;
     margin-top: 80px;
     font-family: 'Luckiest Guy', cursive;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 12px #ff0;
 
     @media screen and (max-width: 1000px) {
         font-size: 75px;
@@ -79,9 +82,27 @@ const Header = styled.h2`
     }
 `;
 
-export default function LoadingScreen({ message = "Loading" }) {
+export default function LoadingScreen({ message = "Loading", loading }: { message?: string; loading: boolean }) {
+    const [shouldRender, setShouldRender] = useState(true);
+    const [fadingOut, setFadingOut] = useState(false);
+
+    useEffect(() => {
+        if (!loading) {
+            setFadingOut(true);
+            const timeout = setTimeout(() => {
+                setShouldRender(false);
+            }, 500); // match transition duration
+            return () => clearTimeout(timeout);
+        } else {
+            setShouldRender(true);
+            setFadingOut(false);
+        }
+    }, [loading]);
+
+    if (!shouldRender) return null;
+
     return (
-        <Overlay>
+        <Overlay fadingOut={fadingOut}>
             <LogoWrapper>
                 <SpinningBackground src="/baseball.webp" alt="Background" />
                 <Image src="/LeagueLogo_fix.png" alt="Loading..." />

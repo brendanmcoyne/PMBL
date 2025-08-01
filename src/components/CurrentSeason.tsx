@@ -316,10 +316,9 @@ export default function CurrentSeason() {
                                     </span>
                                 </div>
                                 <span style={{ flex: 1, color: matchup.homecolor, fontWeight: "bold", textAlign: "right" }}>
-                                {matchup.home || "TBD"}
-                            </span>
+                                    {matchup.home || "TBD"}
+                                </span>
                             </div>
-
                         ))}
                     </div>
                 </PlayoffProjection>

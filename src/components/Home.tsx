@@ -1,10 +1,21 @@
-import { styled } from 'styled-components';
+import { styled, keyframes, css } from 'styled-components';
 import { useState, useEffect } from 'react';
 import { StyledHeader } from "../components/CommonStyles.ts";
 
 interface CaptainProps {
     selected: boolean;
 }
+
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const Page = styled.div`
     display: flex;
@@ -32,7 +43,7 @@ const BackgroundWrapper = styled.div`
 const BackgroundImage = styled.img`
     height: calc(100% + 40px);
     width: 115%;
-    opacity: 0.4;
+    opacity: 0.3;
     @media screen and (max-width: 1000px) {
         object-fit: cover;
     }
@@ -45,32 +56,63 @@ const Wrapper = styled.div`
     z-index: 2;
 `;
 
-const GrandHeader = styled.h1`
-    font-size: 5rem;
-    @media screen and (max-width: 1000px) {
-        font-size: 3rem;
-    }
+const GrandHeader = styled.h1<{ animate?: boolean }>`
+    font-size: 7rem;
     color: white;
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Anton', cursive;
     text-align: center;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000,
     -2px 2px 0 #000, 2px 2px 0 #000,
-    0px 0px 12px #ff0;
+    0 0 12px #ff0;
     word-wrap: break-word;
     overflow-wrap: break-word;
     margin: 0 auto;
     padding: 0 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    @media screen and (max-width: 1000px) {
+        font-size: 3rem;
+    }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.3s;
+    `}
+`;
+
+const GenImage = styled.img<{ animate?: boolean }>`
+    width: 500px;
+    height: auto;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.6s;
+    `}
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 400px;
+    }
 `;
 
 const ContentSection = styled.section`
-  background-color: #1e1e1e;
-  color: white;
-  text-align: center;
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    display: flex;
 `;
 
 const GenGif = styled.img`
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     height: auto;
     border-radius: 10px;
     margin: 20px auto;
@@ -85,7 +127,7 @@ const TextSection = styled.section`
     max-width: 600px;
     margin: 40px auto;
     text-align: center;
-    font-size: 20px;
+    font-size: 23px;
     line-height: 1.6;
     padding: 0 20px;
     color: white;
@@ -132,18 +174,6 @@ const ImageWrapper = styled.div`
     margin: 20px auto;
 `;
 
-const GenImage = styled.img`
-    width: 500px;
-    height: auto;
-    transition: transform 0.3s ease;
-    &:hover {
-        transform: scale(1.05);
-    }
-    @media screen and (max-width: 1000px) {
-        width: 400px;
-    }
-`;
-
 const CaptainSection = styled.section`
     margin-top: 10px;
     background-color: darkblue;
@@ -177,26 +207,28 @@ export default function Home() {
                     <BackgroundImage src="/4.jpg" alt="Decorative Background" />
                 </BackgroundWrapper>
                 <Wrapper>
-                    <GrandHeader>Welcome to the Professional Mario Baseball League</GrandHeader>
+                    <GrandHeader animate={ready}>
+                        Welcome to the Professional Mario Baseball League
+                    </GrandHeader>
                     <ImageWrapper>
-                        <GenImage src="/LeagueLogo_fix.png" alt="Professional Mario Baseball League Logo" />
+                        <GenImage src="/LeagueLogo_fix.png" alt="Professional Mario Baseball League Logo" animate={ready} />
                     </ImageWrapper>
                 </Wrapper>
             </Main>
 
-            <ContentSection>
-                <StyledHeader>About the League</StyledHeader>
-                <TextSection>
+            <StyledHeader style={{marginTop: "60px"}}>About the League</StyledHeader>
+            <ContentSection style={{marginBottom: '50px'}}>
+                <GenGif src="/mario-superstar-baseball-mario.gif" alt="Professional Mario Baseball League Logo" />
+                <TextSection style={{marginTop: "30px"}}>
                     Founded in the Winter of 2025, the Professional Mario Baseball League came to life. The league started out with 10 managers across 8 teams, and the first ever draft and game was held on February 21st, 2025.<br /><br />
                     The league has blossomed into a fan-favorite activity among friends and rivals. Each week brings exciting matchups, thrilling debates, and memorable moments from everyone's favorite Mushroom Kingdom characters.<br /><br />
                     Whether you're a long-time fan or new to the league, there's something here for everyone. Let the games begin!
                 </TextSection>
-                <GenGif src="/mario-superstar-baseball-mario.gif" alt="Professional Mario Baseball League Logo" />
             </ContentSection>
 
             <CaptainSection>
                 <StyledHeader>Choose Your Favorite Captain!</StyledHeader>
-                <TextSection>
+                <TextSection style={{backgroundColor: "darkblue", maxWidth: "1000px"}}>
                     Click to select your favorite team captain for your profile photo!
                 </TextSection>
             <CaptainGrid>
@@ -251,10 +283,12 @@ export default function Home() {
             </CaptainGrid>
             </CaptainSection>
 
-            <ContentSection>
-                <StyledHeader>Constant Updates!</StyledHeader>
-                <TextSection>
-                    This website will continued to be updated throughout the offseason, regular season, and post season! Make sure to let us know if anything else should be added!
+            <StyledHeader>Live Updates!</StyledHeader>
+            <ContentSection style={{marginBottom: '50px'}}>
+                <TextSection style={{marginTop: "30px"}}>
+                    This website will continued to be updated constantly throughout the season.<br /><br />
+                    We've developed a live stat system so fans and friends of the league are able to keep up with their favorite players from outside the living room.<br /><br />
+                    The committee of the PMBL is devoted to bringing the best baseball experience to any and all fans.
                 </TextSection>
                 <GenGif src="/Wii_Remote.webp" alt="Professional Mario Baseball League Logo" />
             </ContentSection>

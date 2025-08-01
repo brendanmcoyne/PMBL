@@ -14,7 +14,8 @@ export const ToggleButton = styled.button`
 export const StyledHeader = styled.h1`
     font-size: 80px;
     color: white;
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Anton', cursive;
+    letter-spacing: 2px;
     text-align: center;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
     @media screen and (max-width: 1000px) {
