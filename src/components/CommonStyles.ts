@@ -17,8 +17,9 @@ export const StyledHeader = styled.h1`
     font-family: 'Anton', cursive;
     letter-spacing: 2px;
     text-align: center;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 0px 12px #ff0;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 12px #ff0;
     @media screen and (max-width: 1000px) {
-        font-size: 55px;
+        font-size: 50px;
+        letter-spacing: 1px;
     }
 `;
