@@ -1,9 +1,13 @@
-import { ContentDiv, StyledHeader, GenImage, ArticleMeta, SeparatorLine, Passage, NewsletterRuling, StyledMiniHeader,
-    StoryDiv, Stories, Story, MiniImage, StyledLink, Overlay, Headline} from "../../components/headlines/HeadlineStyles";
+import {ContentDiv, StyledHeader, GenImage, ArticleMeta, SeparatorLine, Passage, NewsletterRuling, StyledMiniHeader,
+    StoryDiv, Stories, Story, MiniImage, StyledLink, Overlay, Headline, ToggleButton} from "../../components/headlines/HeadlineStyles";
+import {Link} from "react-router-dom";
 
 export default function MiiBreakout() {
     return (
         <ContentDiv>
+            <ToggleButton>
+                <Link style={{color: "white"}} to="/headlines">← Back</Link>
+            </ToggleButton>
             <StyledHeader>Head Analyst Predicts Mii Breakout Season</StyledHeader>
             <GenImage src="/miibaseball.jpg" alt="Miis" />
             <ArticleMeta>

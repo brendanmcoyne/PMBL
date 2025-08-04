@@ -1,9 +1,13 @@
-import { ContentDiv, StyledHeader, GenImage, ArticleMeta, SeparatorLine, Passage, Ruling, NewsletterRuling,
-    StyledMiniHeader, StoryDiv, Stories, Story, MiniImage, StyledLink, Overlay, Headline} from "../../components/headlines/HeadlineStyles";
+import {ContentDiv, StyledHeader, GenImage, ArticleMeta, SeparatorLine, Passage, Ruling, NewsletterRuling, StyledMiniHeader,
+    StoryDiv, Stories, Story, MiniImage, StyledLink, Overlay, Headline, ToggleButton} from "../../components/headlines/HeadlineStyles";
+import {Link} from "react-router-dom";
 
 export default function DryBones() {
     return (
         <ContentDiv>
+            <ToggleButton>
+                <Link style={{color: "white"}} to="/headlines">← Back</Link>
+            </ToggleButton>
             <StyledHeader>Dry Bones Gets a Slap on the Wrist</StyledHeader>
             <GenImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
             <ArticleMeta>

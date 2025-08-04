@@ -1,12 +1,18 @@
-import { styled } from "styled-components";
+import { styled, css, keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import {useEffect, useState} from "react";
-import { SeparatorLine } from "../components/headlines/HeadlineStyles.ts";
-import { StyledHeader } from "../components/CommonStyles.ts";
+import { StyledHeader, StyledLink, SeparatorLine } from "../components/CommonStyles.ts";
 
-interface StyledLinkProps {
-    bg?: string;
-}
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -18,53 +24,19 @@ export const ContentDiv = styled.div`
     padding-top: 2rem;
 `;
 
-const StyledMiniHeader = styled.h3`
+const StyledMiniHeader = styled.h3<{ animate?: boolean }>`
     text-align: center;
     font-size: 1.7rem;
     color: white;
+    margin-top: 0;
     margin-bottom: 30px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-`;
-
-const StyledLink = styled.p<StyledLinkProps>`
-    margin: 20px 60px;
-    border: 3px solid black;
-    font-size: 1.6rem;
-    text-align: center;
-    padding: 40px 80px;
-    border-radius: 8px;
-    width: 250px;
-    height: 130px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: ${({ bg }) => `url(${bg})`};
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    transition: transform 0.2s;
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.5);
-    }
-    &:hover {
-        transform: scale(1.07);
-        @media screen and (max-width: 500px) {
-            transform: none;
-        }
-    }
-    a {
-        color: white;
-        font-weight: bold;
-        z-index: 2;
-        text-shadow: 1px 1px 4px black;
-    }
-    @media (max-width: 1000px) {
-        width: 220px;
-        height: 100px;
-    }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.5s;
+    `}
 `;
 
 const Gallery = styled.div`
@@ -84,24 +56,28 @@ const Gallery = styled.div`
     }
 `;
 
-const ResponsiveFlex = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-top: 30px;
-
-  @media (max-width: 1000px) {
-    flex-direction: column;
-  }
+const ResponsiveFlex = styled.div<{ animate?: boolean }>`
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.5s;
+    `}
 `;
 
 export default function Archives() {
-
     const [ready, setReady] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setReady(true);
-        }, 50);
+        }, 100);
         return () => clearTimeout(timer);
     }, []);
 
@@ -109,10 +85,10 @@ export default function Archives() {
 
     return(
         <ContentDiv>
-            <StyledHeader>Archives</StyledHeader>
-            <StyledMiniHeader style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
-            <SeparatorLine/>
-            <ResponsiveFlex>
+            <StyledHeader animate={ready}>Archives</StyledHeader>
+            <StyledMiniHeader animate={ready} style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
+            <SeparatorLine animate={ready}/>
+            <ResponsiveFlex animate={ready}>
                 <StyledLink bg="/archives/bowserbat.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1">Season 1</Link>
                 </StyledLink>
@@ -121,8 +97,8 @@ export default function Archives() {
                 </StyledLink>
             </ResponsiveFlex>
 
-            <StyledHeader style={{fontSize: "80px"}}>Gallery</StyledHeader>
-            <StyledMiniHeader>In here you'll find photos and memories from seasons past</StyledMiniHeader>
+            <StyledHeader animate={ready} style={{fontSize: "80px", marginTop: "70px"}}>Gallery</StyledHeader>
+            <StyledMiniHeader animate={ready}>In here you'll find photos and memories from seasons past</StyledMiniHeader>
             <SeparatorLine/>
 
             <Gallery>

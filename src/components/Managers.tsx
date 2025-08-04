@@ -1,14 +1,54 @@
-import { styled } from "styled-components";
-import {useEffect, useState} from "react";
 import { managers } from "../data/ManagerNotes.ts";
 import type { Manager } from "../data/ManagerNotes.ts";
 import { rosters } from "../data/Season1Rosters.ts";
 import type { Roster } from "../data/Season1Rosters.ts";
 import { StyledHeader } from "../components/CommonStyles.ts";
+import {styled, css, keyframes} from 'styled-components';
+import { useEffect, useState } from 'react';
 
 interface ToggleButtonProps {
     active: boolean;
 }
+
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const DivisionContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    width: 100%;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+`;
+
+const DivisionSection = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    max-width: 600px;
+    margin: 5px;
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+    }
+`;
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -26,8 +66,7 @@ const StyledMiniHeader = styled.h3`
     color: white;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4.5rem;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin: 0;
 
     @media screen and (max-width: 600px) {
         font-size: 2.5rem;
@@ -36,45 +75,57 @@ const StyledMiniHeader = styled.h3`
 
 const DivisionDiv = styled.div`
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 1rem;
+
     @media screen and (max-width: 1000px) {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
 `;
 
-const DivisionHeader = styled.h3`
+const DivisionHeader = styled.h3<{ animate?: boolean }>`
     text-align: center;
-    margin-top: 0;
+    margin: 0;
     color: white;
     letter-spacing: 2px;
     font-size: 3rem;
     font-family: 'Bebas Neue', sans-serif;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.3s;
+    `}
 `;
 
-const Manager = styled.div`
-    width: 100px;
+const Manager = styled.div<{ animate?: boolean }>`
+    width: 130px;
     height: 140px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 15px;
-    border: 2px solid black;
-    border-radius: 2%;
     font-size: 1.6rem;
+    margin: 7px;
     text-align: center;
-    padding: 40px 80px;
+    padding: 40px 60px;
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    border: 2px solid black;
+    border-radius: 2%;
     transition: transform 0.2s;
     cursor: pointer;
+
     &:hover {
         transform: scale(1.07);
         @media screen and (max-width: 500px) {
             transform: none;
         }
     }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.3s;
+    `}
 `;
 
 const ModalBackground = styled.div`
@@ -147,12 +198,21 @@ const ToggleButton = styled.button<ToggleButtonProps>`
     transition: background-color 0.2s, color 0.2s;
 `;
 
-const TileSetup = styled.div`
+const TileSetup = styled.div<{ animate?: boolean }>`
     display: flex;
     flex-direction: column;
     align-items: center;  
     justify-content: center;
     width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+
+    ${({ animate }) =>
+            animate &&
+            css`
+    animation: ${fadeInUp} 1s ease forwards;
+    animation-delay: 0.6s;
+  `}
 `;
 
 const ModalTopLayout = styled.div`
@@ -269,7 +329,7 @@ export default function Managers() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setReady(true);
-            }, 50);
+            }, 100);
         return () => clearTimeout(timer);
         }, []);
 
@@ -277,63 +337,70 @@ export default function Managers() {
 
     return (
         <ContentDiv>
-            <StyledHeader>Managers List</StyledHeader>
-            <div style={{display: 'flex', gap: "200px"}}>
-                <DivisionHeader style={{color: "#4285F4"}}>East Division</DivisionHeader>
-            </div>
-            <DivisionDiv>
-                {sortedManagers.filter(m => m.division === "East").map((manager: Manager) => (
-                    <Manager key={manager.name} onClick={() => {
-                        setSelectedManager(manager);
-                        setActiveModalTab("info");
-                    }} style={{background:
-                            manager.name === "Brendan"
-                            ? "linear-gradient(100deg, rgba(204, 0, 0, 1) 20%, rgba(204, 0, 0, .2) 100%)"
-                            : manager.name === "Justin"
-                            ? "linear-gradient(100deg, rgba(255, 153, 0, 1) 20%, rgba(255, 153, 0, .2) 100%)"
-                            : manager.name === "James"
-                            ? "linear-gradient(100deg, rgba(241, 194, 50, 1) 20%, rgba(241, 194, 50, .2) 100%)"
-                            : manager.name === "Matt"
-                            ? "linear-gradient(100deg, rgba(106, 168, 79, 1) 20%, rgba(0, 255, 0, .2) 100%)"
-                            : ""}}>
-                        <TileSetup>
-                            <img src={manager.emblem} alt={manager.name}
-                                 style={{width: "100px", height: "100px", objectFit: "contain",
-                                     filter: "drop-shadow(0 0 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))"}}/>
-                            <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
-                        </TileSetup>
-                    </Manager>
-                ))}
-            </DivisionDiv>
-            <div style={{display: 'flex', gap: "200px"}}>
-                <DivisionHeader style={{color: "#FF0000"}}>West Division</DivisionHeader>
-            </div>
-            <DivisionDiv>
-                {sortedManagers.filter(m => m.division === "West").map((manager: Manager) => (
-                    <Manager key={manager.name} onClick={() => {
-                        setSelectedManager(manager);
-                        setActiveModalTab("info");
-                    }} style={{background:
-                            manager.name === "Isaac"
-                            ? "linear-gradient(100deg, rgba(53, 134, 232, 1) 20%, rgba(53, 134, 232, .2) 100%)"
-                            : manager.name === "Christach"
-                            ? "linear-gradient(100deg, rgba(153, 0, 255, 1) 20%, rgba(153, 0, 255, .2) 100%)"
-                            : manager.name === "Morgan"
-                            ? "linear-gradient(100deg, rgba(255, 0, 255, 1) 20%, rgba(255, 0, 255, .2) 100%)"
-                            : manager.name === "DANdrew"
-                            ? "linear-gradient(100deg, rgba(153, 153, 153, 1) 20%, rgba(153, 153, 153, .2) 100%)"
-                            : manager.color}}>
-                        <TileSetup>
-                            <img src={manager.emblem} alt={manager.name}
-                                 style={{width: "100px", height: "100px", objectFit: "contain",
-                                     filter: "drop-shadow(0 0 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))"}}/>
-                            <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
-                        </TileSetup>
-                    </Manager>
-                ))}
-            </DivisionDiv>
+            <StyledHeader animate={ready}>Managers</StyledHeader>
+            <DivisionContainer>
+                <DivisionSection>
+                    <DivisionHeader animate={ready} style={{color: "#4285F4"}}>East Division</DivisionHeader>
+                    <DivisionDiv>
+                        {sortedManagers.filter(m => m.division === "East").map((manager: Manager) => (
+                            <Manager animate={ready} key={manager.name} onClick={() => {
+                                setSelectedManager(manager);
+                                setActiveModalTab("info");
+                            }} style={{
+                                background:
+                                    manager.name === "Brendan"
+                                        ? "linear-gradient(100deg, rgba(204, 0, 0, 1) 20%, rgba(204, 0, 0, .2) 100%)"
+                                        : manager.name === "Justin"
+                                            ? "linear-gradient(100deg, rgba(255, 153, 0, 1) 20%, rgba(255, 153, 0, .2) 100%)"
+                                            : manager.name === "James"
+                                                ? "linear-gradient(100deg, rgba(241, 194, 50, 1) 20%, rgba(241, 194, 50, .2) 100%)"
+                                                : manager.name === "Matt"
+                                                    ? "linear-gradient(100deg, rgba(106, 168, 79, 1) 20%, rgba(0, 255, 0, .2) 100%)"
+                                                    : ""
+                            }}>
+                                <TileSetup animate={ready}>
+                                    <img src={manager.emblem} alt={manager.name}
+                                         style={{width: "100px", height: "100px", objectFit: "contain",
+                                             filter: "drop-shadow(0 0 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))"}}/>
+                                    <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
+                                </TileSetup>
+                            </Manager>
+                        ))}
+                    </DivisionDiv>
+                </DivisionSection>
 
-            <StyledHeader>Rivalries</StyledHeader>
+                <DivisionSection>
+                    <DivisionHeader animate={ready} style={{color: "#FF0000"}}>West Division</DivisionHeader>
+                    <DivisionDiv>
+                        {sortedManagers.filter(m => m.division === "West").map((manager: Manager) => (
+                            <Manager animate={ready} key={manager.name} onClick={() => {
+                                setSelectedManager(manager);
+                                setActiveModalTab("info");
+                            }} style={{
+                                background:
+                                    manager.name === "Isaac"
+                                        ? "linear-gradient(100deg, rgba(53, 134, 232, 1) 20%, rgba(53, 134, 232, .2) 100%)"
+                                        : manager.name === "Christach"
+                                            ? "linear-gradient(100deg, rgba(153, 0, 255, 1) 20%, rgba(153, 0, 255, .2) 100%)"
+                                            : manager.name === "Morgan"
+                                                ? "linear-gradient(100deg, rgba(255, 0, 255, 1) 20%, rgba(255, 0, 255, .2) 100%)"
+                                                : manager.name === "DANdrew"
+                                                    ? "linear-gradient(100deg, rgba(153, 153, 153, 1) 20%, rgba(153, 153, 153, .2) 100%)"
+                                                    : manager.color
+                            }}>
+                                <TileSetup animate={ready}>
+                                    <img src={manager.emblem} alt={manager.name}
+                                         style={{width: "100px", height: "100px", objectFit: "contain",
+                                             filter: "drop-shadow(0 0 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))"}}/>
+                                    <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
+                                </TileSetup>
+                            </Manager>
+                        ))}
+                    </DivisionDiv>
+                </DivisionSection>
+            </DivisionContainer>
+
+            <StyledHeader animate={ready} style={{margin: "0"}}>Rivalries</StyledHeader>
             <Rivalry>
                 <StyledMiniHeader>The Battle of 726</StyledMiniHeader>
                 <VersusRow>

@@ -1,9 +1,13 @@
-import { ContentDiv, StyledHeader, GenImage, ArticleMeta, SeparatorLine, Passage, Ruling, StyledMiniHeader,
-    StoryDiv, Stories, Story, MiniImage, StyledLink, Overlay, Headline} from "../../components/headlines/HeadlineStyles";
+import {ContentDiv, StyledHeader, GenImage, ArticleMeta, SeparatorLine, Passage, Ruling, StyledMiniHeader,
+    StoryDiv, Stories, Story, MiniImage, StyledLink, Overlay, Headline, ToggleButton} from "../../components/headlines/HeadlineStyles";
+import {Link} from "react-router-dom";
 
 export default function Koopa() {
     return (
         <ContentDiv>
+            <ToggleButton>
+                <Link style={{color: "white"}} to="/headlines">← Back</Link>
+            </ToggleButton>
             <StyledHeader>Koopa found Guilty of Assault</StyledHeader>
             <GenImage src="/koopa_behind_the_bars.jpg" alt="Koopa"/>
             <ArticleMeta>

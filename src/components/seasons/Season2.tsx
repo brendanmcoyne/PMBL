@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
-import { SeparatorLine } from "../headlines/HeadlineStyles";
-import { ToggleButton, StyledHeader } from "../CommonStyles.ts";
+import { ToggleButton, StyledHeader, StyledMiniHeader, StyledLink, SeparatorLine } from "../CommonStyles.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -11,60 +10,6 @@ export const ContentDiv = styled.div`
     width: 100%;
     font-size: calc(0.5rem + 1vw);
     padding-top: 2rem;
-`;
-
-const StyledMiniHeader = styled.h3`
-    text-align: center;
-    font-size: 1.7rem;
-    color: white;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-`;
-
-interface StyledLinkProps {
-    bg?: string;
-}
-
-const StyledLink = styled.p<StyledLinkProps>`
-    margin: 20px 60px;
-    border: 3px solid black;
-    font-size: 1.6rem;
-    text-align: center;
-    padding: 40px 80px;
-    border-radius: 8px;
-    width: 200px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: ${({ bg }) => `url(${bg})`};
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.2s;
-
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-    }
-
-    &:hover {
-        transform: scale(1.07);
-        @media screen and (max-width: 500px) {
-            transform: none;
-        }
-    }
-
-    a {
-        color: white;
-        font-weight: bold;
-        z-index: 2;
-        text-shadow: 1px 1px 4px black;
-    }
 `;
 
 const LinkDiv = styled.div`
@@ -84,7 +29,7 @@ export default function Season2() {
             </ToggleButton>
             <StyledHeader>Season 2 PMBL</StyledHeader>
             <StyledMiniHeader style={{textAlign: "center", color: "white"}}>All Records from Season 2</StyledMiniHeader>
-            <SeparatorLine/>
+            <SeparatorLine />
             <LinkDiv>
                 <StyledLink bg="/archives/schedule.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Schedule">Schedule</Link>

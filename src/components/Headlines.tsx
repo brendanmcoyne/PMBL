@@ -1,7 +1,19 @@
-import { styled } from "styled-components";
+import { styled, keyframes, css } from "styled-components";
 import { Link } from "react-router-dom";
-import { SeparatorLine, Overlay, StyledMiniHeader } from "../components/headlines/HeadlineStyles";
-import { StyledHeader } from "../components/CommonStyles.ts";
+import { Overlay } from "../components/headlines/HeadlineStyles";
+import { StyledHeader, SeparatorLine, StyledMiniHeader } from "../components/CommonStyles.ts";
+import {useEffect, useState} from "react";
+
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -12,7 +24,7 @@ export const ContentDiv = styled.div`
     font-size: calc(0.5rem + 1vw);
 `;
 
-const Story = styled.div`
+const Story = styled.div<{ animate?: boolean }>`
     position: relative;
     width: 100%;
     height: 400px;
@@ -30,6 +42,12 @@ const Story = styled.div`
         height: 250px;
         margin: 0.75rem 0;
     }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.7s;
+    `}
 `;
 
 const GenImage = styled.img`
@@ -69,26 +87,37 @@ const StyledLink = styled(Link)`
 `;
 
 export default function Players() {
+    const [ready, setReady] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setReady(true);
+        }, 100);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (!ready) return null;
+
     return (
         <ContentDiv>
-            <StyledHeader>PMBL Headlines</StyledHeader>
-            <StyledMiniHeader>Featuring all the top baseball stories!</StyledMiniHeader>
-            <SeparatorLine />
-            <Story>
+            <StyledHeader animate={ready}>PMBL Headlines</StyledHeader>
+            <StyledMiniHeader animate={ready}>Featuring all the top baseball stories!</StyledMiniHeader>
+            <SeparatorLine animate={ready}/>
+            <Story animate={ready}>
                 <GenImage src="/miibaseball.jpg" alt="Miis" />
                 <Overlay>
                     <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
                     <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
-            <Story>
+            <Story animate={ready}>
                 <GenImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
                 <Overlay>
                     <Headline>Koopa Found Guilty of Assault</Headline>
                     <StyledLink to="/headlines/Koopa">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
-            <Story>
+            <Story animate={ready}>
                 <GenImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
                 <Overlay>
                     <Headline>Dry Bones Gets a Slap on the Wrist</Headline>

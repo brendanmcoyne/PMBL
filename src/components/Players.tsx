@@ -1,10 +1,21 @@
-import { styled } from "styled-components";
 import {useEffect, useState} from "react";
 import { players } from "../data/playerNames.ts";
 import type { Player } from "../data/playerNames.ts";
 import { stats } from "../data/playerStats.ts";
 import type { Stat } from "../data/playerStats.ts";
 import { StyledHeader } from "../components/CommonStyles.ts";
+import { styled, keyframes, css } from "styled-components";
+
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 interface ToggleButtonProps {
     active: boolean;
@@ -19,7 +30,7 @@ export const ContentDiv = styled.div`
     padding-top: 2rem;
 `;
 
-const DivisionDiv = styled.div`
+const DivisionDiv = styled.div<{ animate?: boolean }>`
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     gap: 15px;
@@ -28,6 +39,12 @@ const DivisionDiv = styled.div`
         grid-template-columns: repeat(2,1fr);
         justify-content: center;
     }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.5s;
+    `}
 `;
 
 const PlayerName = styled.span`
@@ -40,7 +57,7 @@ const PlayerName = styled.span`
     }
 `;
 
-const Player = styled.div<{ $accent: string }>`
+const Player = styled.div<{ $accent: string; animate?: boolean }>`
     --accent: ${({ $accent }) => $accent};
     background: linear-gradient(100deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.06) 100%);
     border-bottom: 3px solid white;
@@ -60,9 +77,21 @@ const Player = styled.div<{ $accent: string }>`
             transform: none;
         }
     }
+    ${({ animate }) =>
+            animate
+                    ? css`
+          opacity: 0;
+          transform: translateY(30px);
+          animation: ${fadeInUp} 1s ease forwards;
+          animation-delay: 0.7s;
+        `
+                    : css`
+          opacity: 1;
+          transform: none;
+        `}
 `;
 
-const GenImage = styled.img`
+const GenImage = styled.img<{ animate?: boolean }>`
     width: 150px;
     height: 150px;   
     object-fit: cover; 
@@ -73,6 +102,12 @@ const GenImage = styled.img`
         width: 130px;
         height: 130px;
     }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.9s;
+    `}
 `;
 
 const ModalBackground = styled.div`
@@ -158,7 +193,7 @@ const SortButtonsContainer = styled.div`
     }
 `;
 
-const SortButton = styled.button<{ active?: boolean }>`
+const SortButton = styled.button<{ animate?: boolean, active?: boolean }>`
     padding: 0.6rem 1.4rem;
     font-size: 1rem;
     font-weight: bold;
@@ -173,6 +208,12 @@ const SortButton = styled.button<{ active?: boolean }>`
     @media screen and (max-width: 1000px) {
         width: 175px;
     }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.3s;
+    `}
 `;
 
 const StatCard = styled.div`
@@ -339,7 +380,7 @@ export default function Players() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setReady(true);
-        }, 50);
+        }, 100);
         return () => clearTimeout(timer);
     }, []);
 
@@ -347,19 +388,19 @@ export default function Players() {
 
     return (
         <ContentDiv>
-            <StyledHeader>Player List</StyledHeader>
+            <StyledHeader animate={ready}>Players</StyledHeader>
 
             <SortButtonsContainer>
-                <SortButton active={sortOption === "az"} onClick={() => setSortOption("az")}>Sort A-Z</SortButton>
-                <SortButton active={sortOption === "za"} onClick={() => setSortOption("za")}>Sort Z-A</SortButton>
-                <SortButton active={sortOption === "color"} onClick={() => setSortOption("color")}>Sort by Color</SortButton>
-                <SortButton active={sortOption === "captains"} onClick={() => setSortOption("captains")}>Captains Only</SortButton>
-                <SortButton active={sortOption === "mii"} onClick={() => setSortOption("mii")}>Miis Only</SortButton>
+                <SortButton animate={ready} active={sortOption === "az"} onClick={() => setSortOption("az")}>Sort A-Z</SortButton>
+                <SortButton animate={ready} active={sortOption === "za"} onClick={() => setSortOption("za")}>Sort Z-A</SortButton>
+                <SortButton animate={ready} active={sortOption === "color"} onClick={() => setSortOption("color")}>Sort by Color</SortButton>
+                <SortButton animate={ready} active={sortOption === "captains"} onClick={() => setSortOption("captains")}>Captains Only</SortButton>
+                <SortButton animate={ready} active={sortOption === "mii"} onClick={() => setSortOption("mii")}>Miis Only</SortButton>
             </SortButtonsContainer>
 
             <DivisionDiv>
                 {sortedPlayers.map((player: Player) => (
-                    <Player
+                    <Player animate={ready}
                         key={player.name}
                         $accent={player.color === "Light Blue" ? "#6dd5fa" : player.color === "Light Green" ? "#8bc34a" : player.color?.toLowerCase() || "darkblue"}
                         onClick={() => {
