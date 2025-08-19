@@ -161,7 +161,7 @@ const Draft1 = () => {
             <ToggleButton>
                 <Link style={{color: "white"}} to="/archives/seasons/Season1">← Back</Link>
             </ToggleButton>
-            <StyledHeader>Season 1 PMBL Draft</StyledHeader>
+            <StyledHeader style={{marginBottom: "0"}}>Season 1 PMBL Draft</StyledHeader>
             {rounds.map((roundPicks, roundIndex) => (
                 <div key={roundIndex}>
                     <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Round {roundIndex + 1}</StyledMiniHeader>
@@ -184,7 +184,7 @@ const Draft1 = () => {
 
             ))}
 
-            <StyledHeader>Season 1 Trades</StyledHeader>
+            <StyledHeader style={{marginBottom: "0"}}>Season 1 Trades</StyledHeader>
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Post Draft</StyledMiniHeader>
 
             <AllTradesWrapper>

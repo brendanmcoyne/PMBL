@@ -2,29 +2,29 @@ import { useEffect, useState } from "react";
 import Papa from "papaparse";
 import styled from "styled-components";
 
-// Adjust this type to match the exact headers in your Google Sheet
-type StatRow = {
-    Player: string;
-    Hits: string;
-    Runs: string;
-};
+type StatRow = Record<string, string>;
+
+const TablesContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+`;
 
 const TableWrapper = styled.div`
     background-color: #2e2e2e;
     border-radius: 12px;
     padding: 1rem;
-    width: 1000px;
-    margin: 2rem auto;
+    flex: 1 1 500px;
+    min-width: 300px;
     color: white;
     font-family: 'Bebas Neue', sans-serif;
-
-    @media screen and (max-width: 1050px) {
-        width: 95%;
-    }
 `;
 
 const TableTitle = styled.h3`
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1rem;
 
@@ -36,7 +36,7 @@ const TableTitle = styled.h3`
 const StyledTable = styled.table`
     width: 100%;
     border-collapse: collapse;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
     th, td {
         border: 1px solid #444;
@@ -53,55 +53,74 @@ const StyledTable = styled.table`
     }
 `;
 
-const UpdatedStandings = () => {
-    const [data, setData] = useState<StatRow[]>([]);
-    const sheetUrl =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?output=csv";
+export default function UpdatedStandings() {
+    const [batting, setBatting] = useState<StatRow[]>([]);
+    const [pitching, setPitching] = useState<StatRow[]>([]);
+
+    const battingUrl =
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQo5-YjKdGLo6sZbyHyQInzOoHO0mkLSgUFr67Wpp5SBgpeme6Y3F2Z6HI9cJrE4onG3r-qBv4qtwoA/pub?gid=0&single=true&output=csv";
+    const pitchingUrl =
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQo5-YjKdGLo6sZbyHyQInzOoHO0mkLSgUFr67Wpp5SBgpeme6Y3F2Z6HI9cJrE4onG3r-qBv4qtwoA/pub?gid=303745750&single=true&output=csv";
 
     useEffect(() => {
-        const fetchData = () => {
-            Papa.parse<StatRow>(sheetUrl, {
+        const fetchSheet = (url: string, setData: (data: StatRow[]) => void) => {
+            Papa.parse<StatRow>(url, {
                 download: true,
                 header: true,
                 complete: (results) => {
                     const rows = results.data.filter((row) =>
-                        Object.values(row).some((cell) => cell !== null && cell !== "")
+                        Object.values(row).some((cell) => cell?.trim() !== "")
                     );
                     setData(rows);
                 },
             });
         };
 
-        fetchData();
-        const interval = setInterval(fetchData, 5000); // Refresh every 5s
+        const fetchAll = () => {
+            fetchSheet(battingUrl, setBatting);
+            fetchSheet(pitchingUrl, setPitching);
+        };
+
+        fetchAll();
+        const interval = setInterval(fetchAll, 10000);
         return () => clearInterval(interval);
     }, []);
 
-    if (data.length === 0) return null;
-
-    return (
-        <TableWrapper>
-            <TableTitle>Live Stat Feed</TableTitle>
-            <StyledTable>
-                <thead>
-                <tr>
-                    {Object.keys(data[0] ?? {}).map((header) => (
-                        <th key={header}>{header}</th>
-                    ))}
-                </tr>
-                </thead>
-                <tbody>
-                {data.map((row, idx) => (
-                    <tr key={idx}>
-                        {Object.values(row).map((cell, i) => (
-                            <td key={i}>{cell}</td>
+    const renderTable = (title: string, data: StatRow[]) => {
+        if (data.length === 0) return null;
+        return (
+            <TableWrapper>
+                <TableTitle>{title}</TableTitle>
+                <StyledTable>
+                    <thead>
+                    <tr>
+                        {Object.keys(data[0]).map((header) => (
+                            <th key={header}>{header}</th>
                         ))}
                     </tr>
-                ))}
-                </tbody>
-            </StyledTable>
-        </TableWrapper>
-    );
-};
+                    </thead>
+                    <tbody>
+                    {data.map((row, idx) => (
+                        <tr key={idx}>
+                            {Object.values(row).map((cell, i) => {
+                                let display = cell;
+                                if (display === "#DIV/0!") {
+                                    display = "0";
+                                }
+                                return <td key={i}>{display}</td>;
+                            })}
+                        </tr>
+                    ))}
+                    </tbody>
+                </StyledTable>
+            </TableWrapper>
+        );
+    };
 
-export default UpdatedStandings;
+    return (
+        <TablesContainer>
+            {renderTable("Batting Stats", batting)}
+            {renderTable("Pitching Stats", pitching)}
+        </TablesContainer>
+    );
+}

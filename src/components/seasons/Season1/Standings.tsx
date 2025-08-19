@@ -31,9 +31,13 @@ const DivisionDiv = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 2rem;
-    width: 90%;
-    max-width: 800px;
+    width: 45%;
+    min-width: 320px;
+    max-width: 600px;
+
+    @media screen and (max-width: 900px) {
+        width: 90%;
+    }
 `;
 
 const GridRow = styled.div`
@@ -64,9 +68,26 @@ const HeaderRow = styled(GridRow)`
 const RulesDiv = styled.div`
     color: lightgray;
     display: grid;
+    margin-top: 10px;
     gap: 0 80px;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
+`;
+
+const StandingsContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export default function Standings1() {
@@ -76,103 +97,105 @@ export default function Standings1() {
                 <Link style={{color: "white"}} to="/archives/seasons/Season1">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 1 PMBL Standings</StyledHeader>
-            <DivisionDiv>
-            <StyledMiniHeader style={{color: "#4285F4"}}>East Division</StyledMiniHeader>
-                <HeaderRow>
-                    <div>Team</div>
-                    <div>Record</div>
-                    <div>Div</div>
-                    <div>Streak</div>
-                    <div>PF</div>
-                    <div>PA</div>
-                    <div>PD</div>
-                </HeaderRow>
-                <GridRow>
-                    <div style={{ fontWeight: "bold", color: "#CC0000" }}>Brendan<sup style={{color: "#3C78D8"}}>z</sup></div>
-                    <div>7 - 3</div>
-                    <div>5 - 1</div>
-                    <div>W3</div>
-                    <div>71</div>
-                    <div>53</div>
-                    <div>18</div>
-                </GridRow>
-                <GridRow>
-                    <div style={{ fontWeight: "bold", color: "#F1C232" }}>James<sup style={{color: "#38761D"}}>x</sup></div>
-                    <div>6 - 4</div>
-                    <div>3 - 3</div>
-                    <div>L1</div>
-                    <div>85</div>
-                    <div>72</div>
-                    <div>13</div>
-                </GridRow>
-                <GridRow>
-                    <div style={{ fontWeight: "bold", color: "#FF9900" }}>Justin<sup style={{color: "#38761D"}}>x</sup></div>
-                    <div>6 - 4</div>
-                    <div>2 - 4</div>
-                    <div>L1</div>
-                    <div>74</div>
-                    <div>62</div>
-                    <div>12</div>
-                </GridRow>
-                <GridRow>
-                    <div style={{ fontWeight: "bold", color: "#6AA84F" }}>Matt<sup style={{color: "#A0A0A0"}}>e</sup></div>
-                    <div>4 - 6</div>
-                    <div>2 - 4</div>
-                    <div>W1</div>
-                    <div>72</div>
-                    <div>90</div>
-                    <div>-18</div>
-                </GridRow>
-            </DivisionDiv>
+            <StandingsContainer>
+                <DivisionDiv>
+                    <StyledMiniHeader style={{marginTop: "0", color: "#4285F4"}}>East Division</StyledMiniHeader>
+                    <HeaderRow>
+                        <div>Team</div>
+                        <div>Record</div>
+                        <div>Div</div>
+                        <div>Streak</div>
+                        <div>PF</div>
+                        <div>PA</div>
+                        <div>PD</div>
+                    </HeaderRow>
+                    <GridRow>
+                        <div style={{ fontWeight: "bold", color: "#CC0000" }}>Brendan<sup style={{color: "#3C78D8"}}>z</sup></div>
+                        <div>7 - 3</div>
+                        <div>5 - 1</div>
+                        <div>W3</div>
+                        <div>71</div>
+                        <div>53</div>
+                        <div>18</div>
+                    </GridRow>
+                    <GridRow>
+                        <div style={{ fontWeight: "bold", color: "#F1C232" }}>James<sup style={{color: "#38761D"}}>x</sup></div>
+                        <div>6 - 4</div>
+                        <div>3 - 3</div>
+                        <div>L1</div>
+                        <div>85</div>
+                        <div>72</div>
+                        <div>13</div>
+                    </GridRow>
+                    <GridRow>
+                        <div style={{ fontWeight: "bold", color: "#FF9900" }}>Justin<sup style={{color: "#38761D"}}>x</sup></div>
+                        <div>6 - 4</div>
+                        <div>2 - 4</div>
+                        <div>L1</div>
+                        <div>74</div>
+                        <div>62</div>
+                        <div>12</div>
+                    </GridRow>
+                    <GridRow>
+                        <div style={{ fontWeight: "bold", color: "#6AA84F" }}>Matt<sup style={{color: "#A0A0A0"}}>e</sup></div>
+                        <div>4 - 6</div>
+                        <div>2 - 4</div>
+                        <div>W1</div>
+                        <div>72</div>
+                        <div>90</div>
+                        <div>-18</div>
+                    </GridRow>
+                </DivisionDiv>
 
-            <DivisionDiv>
-            <StyledMiniHeader style={{color: "#FF0000"}}>West Division</StyledMiniHeader>
-                <HeaderRow>
-                    <div>Team</div>
-                    <div>Record</div>
-                    <div>Div</div>
-                    <div>Streak</div>
-                    <div>PF</div>
-                    <div>PA</div>
-                    <div>PD</div>
-                </HeaderRow>
-                <GridRow>
-                    <div style={{ fontWeight: "bold", color: "#FF00FF" }}>Morgan<sup style={{color: "#FF9900"}}>y</sup></div>
-                    <div>5 - 5</div>
-                    <div>5 - 1</div>
-                    <div>W1</div>
-                    <div>55</div>
-                    <div>57</div>
-                    <div>-2</div>
-                </GridRow>
-                <GridRow>
-                    <div style={{ fontWeight: "bold", color: "#999999" }}>DANdrew<sup style={{color: "#A0A0A0"}}>e</sup></div>
-                    <div>5 - 5</div>
-                    <div>3 - 3</div>
-                    <div>W3</div>
-                    <div>69</div>
-                    <div>77</div>
-                    <div>-8</div>
-                </GridRow>
-                <GridRow>
-                    <div style={{ fontWeight: "bold", color: "#3586E8" }}>Isaac<sup style={{color: "#A0A0A0"}}>e</sup></div>
-                    <div>4 - 6</div>
-                    <div>3 - 3</div>
-                    <div>L2</div>
-                    <div>91</div>
-                    <div>61</div>
-                    <div>30</div>
-                </GridRow>
-                <GridRow>
-                    <div style={{ fontWeight: "bold", color: "#9900FF" }}>Christach<sup style={{color: "#A0A0A0"}}>e</sup></div>
-                    <div>3 - 7</div>
-                    <div>1 - 5</div>
-                    <div>L3</div>
-                    <div>53</div>
-                    <div>99</div>
-                    <div>-46</div>
-                </GridRow>
-            </DivisionDiv>
+                <DivisionDiv>
+                    <StyledMiniHeader style={{marginTop: "0", color: "#FF0000"}}>West Division</StyledMiniHeader>
+                    <HeaderRow>
+                        <div>Team</div>
+                        <div>Record</div>
+                        <div>Div</div>
+                        <div>Streak</div>
+                        <div>PF</div>
+                        <div>PA</div>
+                        <div>PD</div>
+                    </HeaderRow>
+                    <GridRow>
+                        <div style={{ fontWeight: "bold", color: "#FF00FF" }}>Morgan<sup style={{color: "#FF9900"}}>y</sup></div>
+                        <div>5 - 5</div>
+                        <div>5 - 1</div>
+                        <div>W1</div>
+                        <div>55</div>
+                        <div>57</div>
+                        <div>-2</div>
+                    </GridRow>
+                    <GridRow>
+                        <div style={{ fontWeight: "bold", color: "#999999" }}>DANdrew<sup style={{color: "#A0A0A0"}}>e</sup></div>
+                        <div>5 - 5</div>
+                        <div>3 - 3</div>
+                        <div>W3</div>
+                        <div>69</div>
+                        <div>77</div>
+                        <div>-8</div>
+                    </GridRow>
+                    <GridRow>
+                        <div style={{ fontWeight: "bold", color: "#3586E8" }}>Isaac<sup style={{color: "#A0A0A0"}}>e</sup></div>
+                        <div>4 - 6</div>
+                        <div>3 - 3</div>
+                        <div>L2</div>
+                        <div>91</div>
+                        <div>61</div>
+                        <div>30</div>
+                    </GridRow>
+                    <GridRow>
+                        <div style={{ fontWeight: "bold", color: "#9900FF" }}>Christach<sup style={{color: "#A0A0A0"}}>e</sup></div>
+                        <div>3 - 7</div>
+                        <div>1 - 5</div>
+                        <div>L3</div>
+                        <div>53</div>
+                        <div>99</div>
+                        <div>-46</div>
+                    </GridRow>
+                </DivisionDiv>
+            </StandingsContainer>
 
             <RulesDiv>
                 <p style={{margin: "10px"}}><sup style={{color: "#3C78D8"}}>z</sup> - Clinched Conference</p>

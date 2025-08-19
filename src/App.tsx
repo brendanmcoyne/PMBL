@@ -15,6 +15,7 @@ import Archives from "./components/Archives.tsx";
 import CurrentSeason from "./components/CurrentSeason.tsx";
 import Headlines from "./components/Headlines.tsx";
 import Scrolling from "./components/Scrolling.tsx";
+import FullStats from "./components/FullStats.tsx";
 
 import Season1 from './components/seasons/Season1.tsx';
 import Season2 from './components/seasons/Season2.tsx';
@@ -135,6 +136,7 @@ function Root() {
                     <Route path="/archives" element={<Content><Archives /></Content>} />
                     <Route path="/season" element={<Content><CurrentSeason /></Content>} />
                     <Route path="/headlines" element={<Content><Headlines /></Content>} />
+                    <Route path="/season/stats" element={<Content><FullStats/></Content>} />
 
                     /* Archives */
                     <Route path="/archives/seasons/Season1" element={<Season1 />} />

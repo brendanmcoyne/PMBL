@@ -1,7 +1,26 @@
 import { styled } from "styled-components";
 import { StyledHeader } from "../components/CommonStyles.ts";
-import UpdatedStandings from "./UpdatedStandings.tsx";
 import { useState } from "react";
+import StatLeadersMini from "./StatLeaders";
+import { Link } from "react-router-dom";
+
+const LinkButton = styled(Link)`
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  background-color: #4285f4;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #3367d6;
+  }
+`;
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -282,6 +301,7 @@ export default function CurrentSeason() {
             <TwoSection>
                 <StatLeaders>
                     <StyledMiniHeader>Stat Leaders</StyledMiniHeader>
+                    <StatLeadersMini />
                 </StatLeaders>
                 <PlayoffProjection>
                     <StyledMiniHeader>Current Playoffs</StyledMiniHeader>
@@ -326,7 +346,9 @@ export default function CurrentSeason() {
                     </div>
                 </PlayoffProjection>
             </TwoSection>
-            <UpdatedStandings />
+            <LinkButton to="/season/stats">
+                View Full Season Stats
+            </LinkButton>
         </ContentDiv>
     );
 }

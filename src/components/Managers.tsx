@@ -5,6 +5,7 @@ import type { Roster } from "../data/Season1Rosters.ts";
 import { StyledHeader } from "../components/CommonStyles.ts";
 import {styled, css, keyframes} from 'styled-components';
 import { useEffect, useState } from 'react';
+import { Rivalry, RivalryTitle, RivalryDesc, RivalryRecord, RivalryRecords, VersusRow } from "../components/StyledRivalry.ts";
 
 interface ToggleButtonProps {
     active: boolean;
@@ -42,8 +43,7 @@ const DivisionSection = styled.div`
     flex-direction: column;
     align-items: center;
     width: 45%;
-    max-width: 600px;
-    margin: 5px;
+    margin: 6px;
 
     @media screen and (max-width: 1000px) {
         width: 100%;
@@ -76,8 +76,8 @@ const StyledMiniHeader = styled.h3`
 const DivisionDiv = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 1rem;
+    gap: 10px;
+    margin-top: .5rem;
 
     @media screen and (max-width: 1000px) {
         grid-template-columns: 1fr;
@@ -264,56 +264,6 @@ const StatCard = styled.div`
     color: black;
 `;
 
-const RivalryParagraph = styled.p`
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-    max-width: 500px;
-    margin: 1rem auto;
-    padding: 20px 24px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    font-size: 1.1rem;
-    line-height: 1.75;
-
-    @media screen and (max-width: 600px) {
-        font-size: 1rem;
-        padding: 16px;
-    }
-`;
-
-const Rivalry = styled.div`
-    background: #1e1e1e;
-    border: 2px solid #444;
-    border-radius: 16px;
-    margin: 30px auto;
-    padding: 30px 20px;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(255,255,255,0.05);
-    transition: transform 0.2s ease;
-    &:hover {
-        transform: scale(1.01);
-        box-shadow: 0 0 12px rgba(255,255,255,0.15);
-    }
-    @media screen and (max-width: 600px) {
-        padding: 20px 12px;
-    }
-`;
-
-const VersusRow = styled.div`
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    margin: 0 auto;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    color: white;
-    @media screen and (max-width: 600px) {
-        font-size: 1.6rem;
-        gap: 0.3rem;
-    }
-`;
-
 export default function Managers() {
     const [selectedManager, setSelectedManager] = useState<Manager | null>(null);
     const [activeModalTab, setActiveModalTab] = useState<"info" | "roster">("info");
@@ -402,70 +352,74 @@ export default function Managers() {
 
             <StyledHeader animate={ready} style={{margin: "0"}}>Rivalries</StyledHeader>
             <Rivalry>
-                <StyledMiniHeader>The Battle of 726</StyledMiniHeader>
+                <RivalryTitle>The Battle of 726</RivalryTitle>
                 <VersusRow>
-                    <span style={{color: "#CC0000", textAlign: "right", paddingRight: "1rem"}}>Brendan</span>
-                    <span style={{textAlign: "center"}}>vs</span>
-                    <span style={{color: "#3586E8", textAlign: "left", paddingLeft: "1rem"}}>Isaac</span>
+                    <span style={{ color: "#CC0000", textAlign: "right", paddingRight: "1rem" }}>Brendan</span>
+                    <span>vs</span>
+                    <span style={{ color: "#3586E8", textAlign: "left", paddingLeft: "1rem" }}>Isaac</span>
                 </VersusRow>
-                <RivalryParagraph>
+                <RivalryDesc>
                     These two managers were the creators of the PMBL, and live under the same roof.
-                    Their passion for Mario Baseball has sparked the interest in the rest of the managers, creating the league
-                    everyone knows and loves. </RivalryParagraph>
-                <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Brendan leads 1-0</p>
+                    Their passion for Mario Baseball has sparked the interest in the rest of the managers,
+                    creating the league everyone knows and loves. In their sole matchup so far, Brendan took
+                    an 8-4 win after being shutout the week before.
+                </RivalryDesc>
+                <RivalryRecord>Brendan leads 1-0</RivalryRecord>
             </Rivalry>
             <Rivalry>
-                <StyledMiniHeader>The Park Drive Rivalry</StyledMiniHeader>
+                <RivalryTitle>The Park Drive Rivalry</RivalryTitle>
                 <VersusRow>
                     <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem"}}>Justin</span>
                     <span style={{textAlign: "center"}}>vs</span>
                     <span style={{ color: "#9900FF", textAlign: "left", paddingLeft: "1rem"}}>Christach</span>
                 </VersusRow>
-                <RivalryParagraph>
+                <RivalryDesc>
                     Just a quick walk down the road from 726 Commonwealth Avenue was the household of
                     the three Managers; Justin, Chris, and Zach, with all 3 of them living under the same roof. In their sole game
-                    so far, Christach rallied down 7-0, but still ended up losing 9-8. </RivalryParagraph>
-                <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Justin leads 1-0</p>
+                    so far, Christach rallied down 7-0, but still ended up losing 9-8. </RivalryDesc>
+                <RivalryRecord>Justin leads 1-0</RivalryRecord>
             </Rivalry>
             <Rivalry>
-                <StyledMiniHeader>The 48 Buswell Battle</StyledMiniHeader>
+                <RivalryTitle>The 48 Buswell Battle</RivalryTitle>
                 <VersusRow>
                     <span style={{ color: "#F1C232", textAlign: "right", paddingRight: "1rem"}}>James</span>
-                    <span style={{textAlign: "center"}}>vs</span>
+                    <span>vs</span>
                     <span style={{ color: "#FF00FF", textAlign: "left", paddingLeft: "1rem"}}>Morgan</span>
                 </VersusRow>
-                <RivalryParagraph>
+                <RivalryDesc>
                     A rivlary so fierce that they didn't even travel to games together despite sleeping
                     above/below one another. Both teams were dipped in controversy throughout Season 1, and met in the playoffs,
-                    with James winning the series 3-1. </RivalryParagraph>
-                <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>James leads 4-1</p>
+                    with James winning the series 3-1. </RivalryDesc>
+                <RivalryRecord>James leads 4-1</RivalryRecord>
             </Rivalry>
             <Rivalry>
-                <StyledMiniHeader> The Computer Engineering Clash</StyledMiniHeader>
+                <RivalryTitle> The Computer Engineering Clash</RivalryTitle>
                 <VersusRow>
                     <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem"}}>Justin</span>
-                    <span style={{textAlign: "center"}}>vs</span>
+                    <span>vs</span>
                     <span style={{color: "#6AA84F", textAlign: "left", paddingLeft: "1rem"}}>Matt</span>
                 </VersusRow>
-                <RivalryParagraph>
+                <RivalryDesc>
                     Two division rivals of the same major. Both fan favorite teams played in the Week 7
                     Shy Guy Tribute Game, where Matt took an early 5-0 lead in the 1st, to lose 11-14 with a 3 run walk-off homer
-                    in the first ever 10 inning game.</RivalryParagraph>
-                <p style={{ color: "lightgray", fontStyle: "italic", textAlign: "center" }}>Justin leads 2-0</p>
+                    in the first ever 10 inning game. They would play again a few weeks later, with Justin winning again.</RivalryDesc>
+                <RivalryRecord>Justin leads 2-0</RivalryRecord>
             </Rivalry>
             <Rivalry>
-                <StyledMiniHeader>Middlesex Matchups</StyledMiniHeader>
+                <RivalryTitle>Middlesex Matchups</RivalryTitle>
                 <StyledMiniHeader style={{fontSize: "2.5rem"}}>
                     <span style={{ color: "#F1C232"}}>James</span>,
                     <span style={{ color: "#CC0000"}}>{' '}Brendan</span>,
                     <span style={{ color: "#FF00FF"}}>{' '}Morgan</span>
                 </StyledMiniHeader>
-                <RivalryParagraph>The members of Middlesex County, MA, have had their fair share of exciting matchups
+                <RivalryDesc>The members of Middlesex County, MA, have had their fair share of exciting matchups
                     throughout the leagues history. In the Season 1 playoffs, there was two Middlesex matchups, one in the Conference Series,
-                    and one in the World Series, culminating in James winning both, and the first ever PMBL World Series Title. </RivalryParagraph>
-                <p style={{ color: "lightgray", fontStyle: "italic", marginTop: "20px", marginBottom: "0", textAlign: "center" }}>James leads Morgan 4-1</p>
-                <p style={{ color: "lightgray", fontStyle: "italic", margin: "0", textAlign: "center" }}>James leads Brendan 4-1</p>
-                <p style={{ color: "lightgray", fontStyle: "italic", margin: "0", textAlign: "center" }}>Brendan leads Morgan 1-0</p>
+                    and one in the World Series, culminating in James winning both, and the first ever PMBL World Series Title. </RivalryDesc>
+                <RivalryRecords>
+                    <RivalryRecord>James leads Morgan 4-1</RivalryRecord>
+                    <RivalryRecord>James leads Brendan 4-1</RivalryRecord>
+                    <RivalryRecord>Brendan leads Morgan 1-0</RivalryRecord>
+                </RivalryRecords>
             </Rivalry>
 
             {selectedManager && (
