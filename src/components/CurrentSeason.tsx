@@ -49,6 +49,9 @@ const UpcomingGame = styled.div`
     width: 1000px;
     padding: 1rem;
     text-align: center;
+    @media screen and (max-width: 1000px) {
+        width: 400px;
+    }
 `;
 
 const TwoSection = styled.div`
@@ -65,6 +68,9 @@ const Standings = styled.div`
     border-radius: 12px;
     width: 500px;
     margin: 1rem;
+    @media screen and (max-width: 1000px) {
+        width: 400px;
+    }
 `;
 
 const Schedule = styled.div`
@@ -72,6 +78,9 @@ const Schedule = styled.div`
     border-radius: 12px;
     width: 500px;
     margin: 1rem;
+    @media screen and (max-width: 1000px) {
+        width: 400px;
+    }
 `;
 
 const StatLeaders = styled.div`
@@ -79,6 +88,9 @@ const StatLeaders = styled.div`
     border-radius: 12px;
     width: 500px;
     margin: 0 1rem;
+    @media screen and (max-width: 1000px) {
+        width: 400px;
+    }
 `;
 
 const PlayoffProjection = styled.div`
@@ -86,6 +98,9 @@ const PlayoffProjection = styled.div`
     border-radius: 12px;
     width: 500px;
     margin: 0 1rem;
+    @media screen and (max-width: 1000px) {
+        width: 400px;
+    }
 `;
 
 const TinyText = styled.span`

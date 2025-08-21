@@ -54,6 +54,9 @@ const Gallery = styled.div`
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         break-inside: avoid;
     }
+    @media screen and (max-width: 1000px) {
+        max-width: 400px;
+    }
 `;
 
 const ResponsiveFlex = styled.div<{ animate?: boolean }>`

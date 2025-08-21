@@ -10,25 +10,32 @@ export const Rivalry = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    @media screen and (max-width: 1000px) {
+        width: 375px;
+    }
 `;
 
 export const RivalryTitle = styled.h2`
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 3rem;
-  text-align: center;
-  color: #fff;
-  margin: 0;
-  position: relative;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    position: relative;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #4a90e2;
-    margin: 0.5rem auto 0;
-    border-radius: 2px;
-  }
+    &::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: #4a90e2;
+        margin: 0.5rem auto 0;
+        border-radius: 2px;
+    }
+    
+    @media screen and (max-width: 1000px) {
+        font-size: 1.75rem;
+    }
 `;
 
 export const RivalryDesc = styled.p`

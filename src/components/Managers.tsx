@@ -120,12 +120,19 @@ const Manager = styled.div<{ animate?: boolean }>`
             transform: none;
         }
     }
+
+    @media screen and (max-width: 750px) {
+        width: 175px;
+        height: 200px;
+    }
+    
     ${({ animate }) =>
             animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.3s;
     `}
+    
 `;
 
 const ModalBackground = styled.div`
@@ -405,7 +412,7 @@ export default function Managers() {
                     in the first ever 10 inning game. They would play again a few weeks later, with Justin winning again.</RivalryDesc>
                 <RivalryRecord>Justin leads 2-0</RivalryRecord>
             </Rivalry>
-            <Rivalry>
+            <Rivalry style={{alignItems: "center"}}>
                 <RivalryTitle>Middlesex Matchups</RivalryTitle>
                 <StyledMiniHeader style={{fontSize: "2.5rem"}}>
                     <span style={{ color: "#F1C232"}}>James</span>,
