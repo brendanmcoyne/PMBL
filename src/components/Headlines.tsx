@@ -24,7 +24,7 @@ export const ContentDiv = styled.div`
     font-size: calc(0.5rem + 1vw);
 `;
 
-const Story = styled.div<{ animate?: boolean }>`
+export const Story = styled.div<{ animate?: boolean }>`
     position: relative;
     width: 100%;
     height: 400px;
@@ -50,14 +50,14 @@ const Story = styled.div<{ animate?: boolean }>`
     `}
 `;
 
-const GenImage = styled.img`
+export const GenImage = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(65%);
 `;
 
-const Headline = styled.h2`
+export const Headline = styled.h2`
     color: white;
     font-size: 2.2rem;
     font-weight: bold;
@@ -71,7 +71,7 @@ const Headline = styled.h2`
     }
 `;
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
     font-size: 1.1rem;
     text-decoration: none;
     color: white;

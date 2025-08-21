@@ -1,8 +1,23 @@
 import { useEffect, useState } from "react";
 import Papa from "papaparse";
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 type StatRow = Record<string, string>;
+
+const LinkButton = styled(Link)`
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+`;
 
 const LeadersWrapper = styled.div`
     display: flex;
@@ -14,15 +29,12 @@ const LeadersWrapper = styled.div`
 
 const Category = styled.div`
     background-color: #2e2e2e;
-    border-radius: 12px;
-    padding: 1rem;
+    padding: 0 1rem;
     margin-bottom: 0;
 `;
 
-const CategoryTitle = styled.h4`
-    flex: 1;                 
-    text-align: center;           
-    font-size: 1.8rem;
+const CategoryTitle = styled.h4`     
+    text-align: center;
     font-family: 'Bebas Neue', sans-serif;
 `;
 
@@ -40,6 +52,7 @@ const ArrowButton = styled.button`
     height: 40px;
     padding: 0;
     font-size: 20px;
+    line-height: 40px;
     background-color: #555;
     border-radius: 50%; 
     display: flex;
@@ -49,13 +62,6 @@ const ArrowButton = styled.button`
     color: white;
 `;
 
-const TitleRow = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%; 
-  margin-bottom: 0.5rem;
-`;
 
 export default function StatLeadersMini() {
     const [batting, setBatting] = useState<StatRow[]>([]);
@@ -110,24 +116,35 @@ export default function StatLeadersMini() {
     return (
         <LeadersWrapper>
             <Category>
-                <TitleRow>
-                    <ArrowButton onClick={() => setPage(prev => (prev - 1 + pages.length) % pages.length)}>◀</ArrowButton>
-                    <CategoryTitle style={{ margin: "0 1rem" }}>{currentPage.title}</CategoryTitle>
-                    <ArrowButton onClick={() => setPage(prev => (prev + 1) % pages.length)}>▶</ArrowButton>
-                </TitleRow>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", textAlign: "center", marginTop: "-1rem", marginBottom: "1.5rem" }}>
+                    <ArrowButton style={{marginRight: "20px"}} onClick={() => setPage(prev => (prev - 1 + pages.length) % pages.length)}>◀</ArrowButton>
+                    <CategoryTitle style={{ margin: "0", fontSize: "2rem" }}>
+                        {currentPage.title}
+                    </CategoryTitle>
+                    <ArrowButton style={{marginLeft: "20px"}} onClick={() => setPage(prev => (prev + 1) % pages.length)}>▶</ArrowButton>
+                </div>
 
                 {topPlayers.map((player, i) => (
-                    <PlayerRow key={i}>
+                    <PlayerRow key={i} style={{marginBottom: ".5rem"}}>
                         <div>
                             <span style={{ width: "1.5rem", textAlign: "right", marginRight: "3px" }}>{i + 1}.</span>
                             <span>{getPlayerName(player)}</span>
                         </div>
                         <div>
-                            <span style={{ marginLeft: "auto" }}>{player[currentPage.stat]}</span>
+                            <span style={{ marginLeft: "auto" }}>
+                                {currentPage.stat === "AVG"
+                                ? parseFloat(player[currentPage.stat]).toFixed(3)
+                                : currentPage.stat === "ERA"
+                                ? parseFloat(player[currentPage.stat]).toFixed(2)
+                                : player[currentPage.stat]}
+                            </span>
                         </div>
                     </PlayerRow>
                 ))}
             </Category>
+            <LinkButton to="/season/stats">
+                View Full Season Stats
+            </LinkButton>
         </LeadersWrapper>
     );
 }

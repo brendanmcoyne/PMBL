@@ -68,7 +68,7 @@ export const GenImage = styled.img`
     margin: 20px 0;
     background-color: white;
     @media screen and (max-width: 1000px) {
-        width: 375px;
+        width: 400px;
     }
 `;
 

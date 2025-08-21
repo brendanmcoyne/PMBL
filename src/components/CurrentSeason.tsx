@@ -2,24 +2,20 @@ import { styled } from "styled-components";
 import { StyledHeader } from "../components/CommonStyles.ts";
 import { useState } from "react";
 import StatLeadersMini from "./StatLeaders";
-import { Link } from "react-router-dom";
+import { Story, Headline, StyledLink } from "../components/Headlines.tsx";
+import { Overlay } from "../components/headlines/HeadlineStyles";
 
-const LinkButton = styled(Link)`
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
-  background-color: #4285f4;
-  color: white;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.5rem;
-  text-align: center;
-  text-decoration: none;
-  transition: background 0.2s ease-in-out;
+const GenImageWrapper = styled.div`
+    width: 90%;
+    margin: 0 auto;
+`;
 
-  &:hover {
-    background-color: #3367d6;
-  }
+const GenImage = styled.img`
+    width: 90%;
+    height: auto;
+    filter: brightness(65%);
+    display: block;
+    margin: 0 auto;
 `;
 
 export const ContentDiv = styled.div`
@@ -276,7 +272,7 @@ export default function CurrentSeason() {
                                 justifyContent: "space-between",
                                 alignItems: "center",
                                 color: "white",
-                                margin: "0.5rem 0",
+                                margin: "0.5rem",
                                 borderBottom: "1px solid #444",
                                 paddingBottom: "0.5rem"
                             }}>
@@ -325,7 +321,7 @@ export default function CurrentSeason() {
                                 justifyContent: "space-between",
                                 alignItems: "center",
                                 color: "white",
-                                margin: "0.5rem 0",
+                                margin: "0.5rem",
                                 borderBottom: "1px solid #444",
                                 paddingBottom: "0.5rem"
                             }}>
@@ -344,11 +340,22 @@ export default function CurrentSeason() {
                             </div>
                         ))}
                     </div>
+                    <div style={{ textAlign: "center", marginTop: "1rem" }}>
+                        {round === "Conference Series" && <img src="/alcs.png" alt="ALCS" style={{ maxWidth: "60%" }} />}
+                        {round === "World Series" && <img src="/worldseries.png" alt="World Series" style={{ width: "265px", padding: "15px", backgroundColor: "#041E42" }} />}
+                    </div>
                 </PlayoffProjection>
             </TwoSection>
-            <LinkButton to="/season/stats">
-                View Full Season Stats
-            </LinkButton>
+            <StyledMiniHeader>Most Recent Story</StyledMiniHeader>
+            <Story>
+                <GenImageWrapper>
+                    <GenImage src="/miibaseball.jpg" alt="Miis"/>
+                </GenImageWrapper>
+                <Overlay>
+                    <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
+                    <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>
+                </Overlay>
+            </Story>
         </ContentDiv>
     );
 }
