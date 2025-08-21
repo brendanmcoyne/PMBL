@@ -12,6 +12,7 @@ export const Rivalry = styled.div`
     flex-direction: column;
     gap: 1.5rem;
     box-sizing: border-box;
+    min-width: 350px;
 
     @media screen and (max-width: 1000px) {
         padding: 1.5rem;

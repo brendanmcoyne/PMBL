@@ -122,9 +122,8 @@ const Manager = styled.div<{ animate?: boolean }>`
     }
 
     @media screen and (max-width: 750px) {
-        width: 175px;
-        height: 200px;
-        padding: 0; 
+        width: 190px;
+        height: 220px;
     }
     
     ${({ animate }) =>
