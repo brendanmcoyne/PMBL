@@ -4,14 +4,21 @@ export const Rivalry = styled.div`
     background: linear-gradient(145deg, #1e1e1e, #121212);
     border-radius: 16px;
     padding: 2rem;
-    margin: 2rem auto;
+    margin: 1rem auto;
     max-width: 800px;
+    width: 100%;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    box-sizing: border-box;
+
     @media screen and (max-width: 1000px) {
-        width: 375px;
+        padding: 1.5rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 1rem;
     }
 `;
 
@@ -61,10 +68,11 @@ export const RivalryRecord = styled.div`
 `;
 
 export const RivalryRecords = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 10px;
 `;
 
 export const VersusRow = styled.div`

@@ -124,6 +124,7 @@ const Manager = styled.div<{ animate?: boolean }>`
     @media screen and (max-width: 750px) {
         width: 175px;
         height: 200px;
+        padding: 0; 
     }
     
     ${({ animate }) =>
@@ -132,7 +133,14 @@ const Manager = styled.div<{ animate?: boolean }>`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.3s;
     `}
-    
+`;
+
+const ManagerContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 `;
 
 const ModalBackground = styled.div`
@@ -315,12 +323,14 @@ export default function Managers() {
                                                     ? "linear-gradient(100deg, rgba(106, 168, 79, 1) 20%, rgba(0, 255, 0, .2) 100%)"
                                                     : ""
                             }}>
+                                <ManagerContent>
                                 <TileSetup animate={ready}>
                                     <img src={manager.emblem} alt={manager.name}
                                          style={{width: "100px", height: "100px", objectFit: "contain",
                                              filter: "drop-shadow(0 0 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))"}}/>
                                     <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
                                 </TileSetup>
+                                </ManagerContent>
                             </Manager>
                         ))}
                     </DivisionDiv>
@@ -345,12 +355,14 @@ export default function Managers() {
                                                     ? "linear-gradient(100deg, rgba(153, 153, 153, 1) 20%, rgba(153, 153, 153, .2) 100%)"
                                                     : manager.color
                             }}>
-                                <TileSetup animate={ready}>
-                                    <img src={manager.emblem} alt={manager.name}
-                                         style={{width: "100px", height: "100px", objectFit: "contain",
-                                             filter: "drop-shadow(0 0 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))"}}/>
-                                    <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
-                                </TileSetup>
+                                <ManagerContent>
+                                    <TileSetup animate={ready}>
+                                        <img src={manager.emblem} alt={manager.name}
+                                             style={{width: "100px", height: "100px", objectFit: "contain",
+                                                 filter: "drop-shadow(0 0 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))"}}/>
+                                        <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
+                                    </TileSetup>
+                                </ManagerContent>
                             </Manager>
                         ))}
                     </DivisionDiv>
