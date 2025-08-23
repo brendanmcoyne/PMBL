@@ -140,6 +140,20 @@ const ManagerContent = styled.div`
     align-items: center;
     justify-content: center;
     height: 100%;
+
+    img {
+        width: 100px;
+        height: 100px;
+
+        @media screen and (max-width: 750px) {
+            width: 140px;
+            height: 140px;
+        }
+    }
+    
+    @media screen and (max-width: 750px) {
+        font-size: 1.3rem;
+    }
 `;
 
 const ModalBackground = styled.div`

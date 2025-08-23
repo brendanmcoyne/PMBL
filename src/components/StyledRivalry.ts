@@ -4,23 +4,13 @@ export const Rivalry = styled.div`
     background: linear-gradient(145deg, #1e1e1e, #121212);
     border-radius: 16px;
     padding: 2rem;
-    margin: 1rem auto;
+    margin: 2rem auto;   /* ensures horizontal centering */
     max-width: 800px;
-    width: 100%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    width: 95%;          /* makes it fill nicely on mobile */
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    box-sizing: border-box;
-    min-width: 350px;
-
-    @media screen and (max-width: 1000px) {
-        padding: 1.5rem;
-    }
-
-    @media screen and (max-width: 600px) {
-        padding: 1rem;
-    }
+    align-items: center; /* ensures children are centered */
 `;
 
 export const RivalryTitle = styled.h2`
