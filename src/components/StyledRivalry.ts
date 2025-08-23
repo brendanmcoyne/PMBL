@@ -13,8 +13,9 @@ export const Rivalry = styled.div`
     align-items: center;
 
     @media screen and (max-width: 600px) {
-        width: 95%;           /* keep consistent centering on phones */
-        min-width: unset;     /* avoid forcing a scroll bar */
+        width: 100%;       /* take the full width */
+        max-width: none;   /* don’t cap at 800px here */
+        border-radius: 0;     /* avoid forcing a scroll bar */
     }
 `;
 
