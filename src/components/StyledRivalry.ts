@@ -4,13 +4,17 @@ export const Rivalry = styled.div`
     background: linear-gradient(145deg, #1e1e1e, #121212);
     border-radius: 16px;
     padding: 2rem;
-    margin: 2rem auto;   /* ensures horizontal centering */
+    margin: 2rem auto;  
     max-width: 800px;
-    width: 95%;          /* makes it fill nicely on mobile */
+    width: 100%;         
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center; /* ensures children are centered */
+    align-items: center;
+    @media screen and (max-width: 600px) {
+        width: 90%;           
+        min-width: 320px;    
+    }
 `;
 
 export const RivalryTitle = styled.h2`
