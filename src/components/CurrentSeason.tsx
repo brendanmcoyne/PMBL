@@ -1,9 +1,20 @@
-import { styled } from "styled-components";
+import {keyframes, css, styled} from "styled-components";
 import { StyledHeader } from "../components/CommonStyles.ts";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import StatLeadersMini from "./StatLeaders";
 import { Story, Headline, StyledLink } from "../components/Headlines.tsx";
 import { Overlay } from "../components/headlines/HeadlineStyles";
+
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const GenImageWrapper = styled.div`
     width: 90%;
@@ -28,7 +39,7 @@ export const ContentDiv = styled.div`
     padding-top: 2rem;
 `;
 
-const StyledMiniHeader = styled.h3`
+const StyledMiniHeader = styled.h3<{ animate?: boolean }>`
     text-align: center;
     font-weight: bold;
     color: white;
@@ -40,19 +51,34 @@ const StyledMiniHeader = styled.h3`
     @media screen and (max-width: 600px) {
         font-size: 2.5rem;
     }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.5s;
+    `}
 `;
 
-const UpcomingGame = styled.div`
+const UpcomingGame = styled.div<{ animate?: boolean }>`
     background-color: #2e2e2e;
     border-radius: 12px;
-    height: 200px;
+    min-height: 400px;
     width: 1000px;
     padding: 1rem;
     margin: 0 1rem 1rem 1rem;
     text-align: center;
     @media screen and (max-width: 1000px) {
+        height: auto;
+        min-height: 150px;
         width: 350px;
     }
+    
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.5s;
+    `}
 `;
 
 const TwoSection = styled.div`
@@ -64,7 +90,7 @@ const TwoSection = styled.div`
     }
 `;
 
-const Standings = styled.div`
+const Standings = styled.div<{ animate?: boolean }>`
     background-color: #2e2e2e;
     border-radius: 12px;
     width: 500px;
@@ -72,9 +98,15 @@ const Standings = styled.div`
     @media screen and (max-width: 1000px) {
         width: 350px;
     }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.5s;
+    `}
 `;
 
-const Schedule = styled.div`
+const Schedule = styled.div<{ animate?: boolean }>`
     background-color: #2e2e2e;
     border-radius: 12px;
     width: 500px;
@@ -82,9 +114,15 @@ const Schedule = styled.div`
     @media screen and (max-width: 1000px) {
         width: 350px;
     }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.5s;
+    `}
 `;
 
-const StatLeaders = styled.div`
+const StatLeaders = styled.div<{ animate?: boolean }>`
     background-color: #2e2e2e;
     border-radius: 12px;
     width: 500px;
@@ -92,9 +130,15 @@ const StatLeaders = styled.div`
     @media screen and (max-width: 1000px) {
         width: 350px;
     }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.5s;
+    `}
 `;
 
-const PlayoffProjection = styled.div`
+const PlayoffProjection = styled.div<{ animate?: boolean }>`
     background-color: #2e2e2e;
     border-radius: 12px;
     width: 500px;
@@ -102,6 +146,12 @@ const PlayoffProjection = styled.div`
     @media screen and (max-width: 1000px) {
         width: 350px;
     }
+    ${({ animate }) =>
+            animate &&
+            css`
+      animation: ${fadeInUp} 1s ease forwards;
+      animation-delay: 0.5s;
+    `}
 `;
 
 const TinyText = styled.span`
@@ -124,6 +174,7 @@ const ArrowButton = styled.button`
 `;
 
 export default function CurrentSeason() {
+    const [ready, setReady] = useState(false);
     const [division, setDivision] = useState<'West' | 'East'>('West');
     const [week, setWeek] = useState(0);
     const [round, setRound] = useState<'Conference Series' | 'World Series'>('Conference Series');
@@ -223,16 +274,25 @@ export default function CurrentSeason() {
     const weekLabel = `Week ${week + 1}`;
     const playoffRound = round === 'World Series' ? WorldSeries : ConfSeries;
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setReady(true);
+        }, 100);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (!ready) return null;
+
     return(
         <ContentDiv>
-            <StyledHeader>Current Season</StyledHeader>
+            <StyledHeader animate={ready}>Current Season</StyledHeader>
 
-            <UpcomingGame>
+            <UpcomingGame animate={ready}>
                 <StyledMiniHeader>Upcoming Game</StyledMiniHeader>
                 <TinyText>No games yet.</TinyText>
             </UpcomingGame>
             <TwoSection>
-                <Standings>
+                <Standings animate={ready}>
                     <StyledMiniHeader style={{marginBottom: "0"}}>Current Standings</StyledMiniHeader>
 
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", textAlign: "center" }}>
@@ -267,7 +327,7 @@ export default function CurrentSeason() {
                     </div>
                 </ Standings>
 
-                <Schedule>
+                <Schedule animate={ready}>
                     <StyledMiniHeader style={{marginBottom: "0"}}>Week Schedule</StyledMiniHeader>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", textAlign: "center" }}>
                         <ArrowButton onClick={() => setWeek(prev => Math.max(prev - 1, 0))} disabled={week === 0}
@@ -310,12 +370,13 @@ export default function CurrentSeason() {
                     </div>
                 </Schedule>
             </TwoSection>
+
             <TwoSection>
-                <StatLeaders>
+                <StatLeaders animate={ready}>
                     <StyledMiniHeader>Stat Leaders</StyledMiniHeader>
                     <StatLeadersMini />
                 </StatLeaders>
-                <PlayoffProjection>
+                <PlayoffProjection animate={ready}>
                     <StyledMiniHeader>Current Playoffs</StyledMiniHeader>
 
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", textAlign: "center" }}>

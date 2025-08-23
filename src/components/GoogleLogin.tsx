@@ -26,7 +26,11 @@ const UserName = styled.span`
     color: white;
     font-weight: 600;
     white-space: nowrap;
+    max-width: 100px;      /* cap how wide it can get */
+    overflow: hidden;      /* hide overflow */
+    text-overflow: ellipsis; /* show "..." if too long */
 `;
+
 
 const ProfImage = styled.img`
     background-color: white;

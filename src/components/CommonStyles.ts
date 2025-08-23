@@ -92,9 +92,9 @@ export const StyledLink = styled.p<StyledLinkProps>`
     text-align: center;
     padding: 40px 80px;
     border-radius: 8px;
-    width: 200px;
-    height: 100px;
     display: flex;
+    width: 220px;
+    height: 110px;
     flex-direction: column;
     justify-content: center;
     background-image: ${({ bg }) => `url(${bg})`};
@@ -113,6 +113,8 @@ export const StyledLink = styled.p<StyledLinkProps>`
         transform: scale(1.07);
         @media screen and (max-width: 500px) {
             transform: none;
+            width: 200px;
+            height: 100px;
         }
     }
     a {
