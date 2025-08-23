@@ -6,16 +6,16 @@ export const Rivalry = styled.div`
     padding: 2rem;
     margin: 2rem auto;
     max-width: 800px;
-    width: 95%;             /* slightly inset, prevents edge bump */
+    width: 95%; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @media screen and (max-width: 600px) {
-        width: 100%;       /* take the full width */
-        max-width: none;   /* don’t cap at 800px here */
-        border-radius: 0;     /* avoid forcing a scroll bar */
+        width: 100%;      
+        max-width: none;   
+        border-radius: 0;    
     }
 `;
 

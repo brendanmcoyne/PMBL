@@ -15,6 +15,7 @@ const SignButton = styled.span`
     font-size: 1.1rem;
     font-weight: 500;
     padding-right: 10px;
+    white-space: nowrap;
 
     &:hover {
         text-decoration: underline;
@@ -24,6 +25,7 @@ const SignButton = styled.span`
 const UserName = styled.span`
     color: white;
     font-weight: 600;
+    white-space: nowrap;
 `;
 
 const ProfImage = styled.img`
@@ -35,6 +37,8 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: nowrap;       /* <— stop items from wrapping */
+    white-space: nowrap;     /* <— keep text like “Sign Out” on one line */
 `;
 
 const UserInfo = styled.div`
