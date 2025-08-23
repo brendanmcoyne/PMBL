@@ -4,18 +4,20 @@ export const Rivalry = styled.div`
     background: linear-gradient(145deg, #1e1e1e, #121212);
     border-radius: 16px;
     padding: 2rem;
-    margin: 2rem auto;  
+    margin: 2rem auto;
     max-width: 800px;
-    width: 100%;         
+    width: 95%;             /* slightly inset, prevents edge bump */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     @media screen and (max-width: 600px) {
-        width: 90%;           
-        min-width: 320px;    
+        width: 95%;           /* keep consistent centering on phones */
+        min-width: unset;     /* avoid forcing a scroll bar */
     }
 `;
+
 
 export const RivalryTitle = styled.h2`
     font-family: 'Bebas Neue', sans-serif;

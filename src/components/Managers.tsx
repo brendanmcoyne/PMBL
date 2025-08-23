@@ -146,13 +146,12 @@ const ManagerContent = styled.div`
         height: 100px;
 
         @media screen and (max-width: 750px) {
-            width: 140px;
-            height: 140px;
+            width: 160px;
+            height: 160px;
         }
     }
-    
     @media screen and (max-width: 750px) {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 `;
 
