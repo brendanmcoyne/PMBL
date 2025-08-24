@@ -36,16 +36,19 @@ const Category = styled.div`
 const CategoryTitle = styled.h4`     
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.75rem;
+    white-space: nowrap; 
 `;
-
 
 const PlayerRow = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center; 
     padding: 0.3rem 0;
     border-bottom: 1px solid #444;
     font-size: 1.2rem;
 `;
+
 
 const ArrowButton = styled.button`
     width: 40px;
@@ -125,19 +128,19 @@ export default function StatLeadersMini() {
                 </div>
 
                 {topPlayers.map((player, i) => (
-                    <PlayerRow key={i} style={{marginBottom: ".5rem"}}>
-                        <div>
-                            <span style={{ width: "1.5rem", textAlign: "right", marginRight: "3px" }}>{i + 1}.</span>
-                            <span>{getPlayerName(player)}</span>
+                    <PlayerRow key={i}>
+                        <div style={{ display: "flex", gap: "0.25rem", flexShrink: 1, minWidth: 0 }}>
+                            <span style={{ width: "1.5rem", textAlign: "right" }}>{i + 1}.</span>
+                            <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+        {getPlayerName(player)}
+      </span>
                         </div>
-                        <div>
-                            <span style={{ marginLeft: "auto" }}>
-                                {currentPage.stat === "AVG"
+                        <div style={{ flexShrink: 0, whiteSpace: "nowrap", marginLeft: "1rem" }}>
+                            {currentPage.stat === "AVG"
                                 ? parseFloat(player[currentPage.stat]).toFixed(3)
                                 : currentPage.stat === "ERA"
-                                ? parseFloat(player[currentPage.stat]).toFixed(2)
-                                : player[currentPage.stat]}
-                            </span>
+                                    ? parseFloat(player[currentPage.stat]).toFixed(2)
+                                    : player[currentPage.stat]}
                         </div>
                     </PlayerRow>
                 ))}

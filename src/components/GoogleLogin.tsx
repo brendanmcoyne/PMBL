@@ -26,9 +26,13 @@ const UserName = styled.span`
     color: white;
     font-weight: 600;
     white-space: nowrap;
-    max-width: 100px;      /* cap how wide it can get */
-    overflow: hidden;      /* hide overflow */
-    text-overflow: ellipsis; /* show "..." if too long */
+    max-width: 300px;  
+    overflow: hidden;     
+    text-overflow: ellipsis; 
+    @media screen and (max-width: 800px) {
+        max-width: 150px;
+    } 
+    
 `;
 
 
@@ -41,8 +45,8 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     gap: 8px;
-    flex-wrap: nowrap;       /* <— stop items from wrapping */
-    white-space: nowrap;     /* <— keep text like “Sign Out” on one line */
+    flex-wrap: nowrap;   
+    white-space: nowrap; 
 `;
 
 const UserInfo = styled.div`

@@ -2,7 +2,8 @@ import {keyframes, css, styled} from "styled-components";
 import { StyledHeader } from "../components/CommonStyles.ts";
 import {useEffect, useState} from "react";
 import StatLeadersMini from "./StatLeaders";
-import { Story, Headline, StyledLink } from "../components/Headlines.tsx";
+import Game from "./UpcomingGame";
+import { Story, StyledLink } from "../components/Headlines.tsx";
 import { Overlay } from "../components/headlines/HeadlineStyles";
 
 const fadeInUp = keyframes`
@@ -19,6 +20,9 @@ const fadeInUp = keyframes`
 const GenImageWrapper = styled.div`
     width: 90%;
     margin: 0 auto;
+    @media screen and (max-width: 1000px) {
+        transform: translateY(20px);
+    }
 `;
 
 const GenImage = styled.img`
@@ -27,6 +31,9 @@ const GenImage = styled.img`
     filter: brightness(65%);
     display: block;
     margin: 0 auto;
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+    }
 `;
 
 export const ContentDiv = styled.div`
@@ -67,17 +74,15 @@ const UpcomingGame = styled.div<{ animate?: boolean }>`
     padding: 1rem;
     margin: 0 1rem 1rem 1rem;
     text-align: center;
+
     @media screen and (max-width: 1000px) {
-        height: auto;
-        min-height: 150px;
+        min-height: auto; 
         width: 350px;
     }
-    
-    ${({ animate }) =>
-            animate &&
-            css`
-      animation: ${fadeInUp} 1s ease forwards;
-      animation-delay: 0.5s;
+
+    ${({ animate }) => animate && css`
+        animation: ${fadeInUp} 1s ease forwards;
+        animation-delay: 0.5s;
     `}
 `;
 
@@ -87,6 +92,7 @@ const TwoSection = styled.div`
     margin: 20px;
     @media screen and (max-width: 1000px) {
         flex-direction: column;
+        margin: 0;
     }
 `;
 
@@ -129,6 +135,7 @@ const StatLeaders = styled.div<{ animate?: boolean }>`
     margin: 0 1rem;
     @media screen and (max-width: 1000px) {
         width: 350px;
+        margin: 1rem;
     }
     ${({ animate }) =>
             animate &&
@@ -145,6 +152,7 @@ const PlayoffProjection = styled.div<{ animate?: boolean }>`
     margin: 0 1rem;
     @media screen and (max-width: 1000px) {
         width: 350px;
+        margin: 1rem;
     }
     ${({ animate }) =>
             animate &&
@@ -152,12 +160,6 @@ const PlayoffProjection = styled.div<{ animate?: boolean }>`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.5s;
     `}
-`;
-
-const TinyText = styled.span`
-    color: lightgray;
-    margin-top: 0;
-    font-style: italic;
 `;
 
 const ArrowButton = styled.button`
@@ -171,6 +173,20 @@ const ArrowButton = styled.button`
     align-items: center;
     justify-content: center; 
     margin-left: 10px;
+`;
+
+const Headline = styled.h2`
+    color: white;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    padding: 0.75rem 1.25rem;
+    max-width: 90%;
+    margin: 0 auto;
+    @media screen and (max-width: 1000px) {
+        font-size: 1rem;
+    }
 `;
 
 export default function CurrentSeason() {
@@ -288,8 +304,8 @@ export default function CurrentSeason() {
             <StyledHeader animate={ready}>Current Season</StyledHeader>
 
             <UpcomingGame animate={ready}>
-                <StyledMiniHeader>Upcoming Game</StyledMiniHeader>
-                <TinyText>No games yet.</TinyText>
+                <StyledMiniHeader style={{marginBottom: "0"}}>Upcoming Game</StyledMiniHeader>
+                <Game />
             </UpcomingGame>
             <TwoSection>
                 <Standings animate={ready}>
@@ -418,7 +434,7 @@ export default function CurrentSeason() {
                         ))}
                     </div>
                     <div style={{ textAlign: "center", marginTop: "1rem" }}>
-                        {round === "Conference Series" && <img src="/alcs.png" alt="ALCS" style={{ maxWidth: "60%" }} />}
+                        {round === "Conference Series" && <img src="/alcs.png" alt="ALCS" style={{ maxWidth: "54%" }} />}
                         {round === "World Series" && <img src="/worldseries.png" alt="World Series" style={{ width: "265px", padding: "15px", backgroundColor: "#041E42" }} />}
                     </div>
                 </PlayoffProjection>
