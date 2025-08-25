@@ -52,19 +52,19 @@ const StatRow = styled.div`
 
 const StyledMiniHeader = styled.h3`
     text-align: center;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    color: #FFD700;
+    font-size: 1.75rem;
+    color: #2ac;
     margin-top: 0;
     margin-bottom: 5px;
     position: relative;
+    font-family: 'Oswald', sans-serif;
 
     &::after {
         content: "";
         display: block;
         width: 60px;
         height: 3px;
-        background: #4a90e2;
+        background: #888888;
         margin: 0.4rem auto 0;
         border-radius: 2px;
     }

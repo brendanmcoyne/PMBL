@@ -14,9 +14,9 @@ export const ContentDiv = styled.div`
 
 const StyledMiniHeader = styled.h3`
     text-align: center;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem;
-    color: #FFBF00;
+    font-size: 3.5rem;
+    color: #2ac;
+    font-family: 'Oswald', sans-serif;
     margin: 20px;
     text-shadow: 0 0 8px rgba(255, 191, 0, 0.4);
     @media screen and (max-width: 1000px) {
@@ -30,7 +30,7 @@ const GenImage = styled.img`
     height: 280px;
     object-fit: contain;
     border-radius: 16px;
-    border: 4px solid goldenrod;
+    border: 4px solid black;
     background-color: white;
     margin-bottom: 1rem;
 `;
@@ -45,7 +45,7 @@ const AwardDiv = styled.div`
 `;
 
 const WinnerDiv = styled.div`
-    background-color: #2d241b;
+    background-color: #0a2631;
     border-radius: 16px;
     padding: 25px;
     display: flex;
@@ -99,7 +99,7 @@ const ImageBox = styled.div`
 
 const AwardRow = styled.div`
     display: flex;
-    background-color: #2d241b;
+    background-color: #0a2631;
     border-radius: 20px;
     padding: 28px;
     width: 95%;             

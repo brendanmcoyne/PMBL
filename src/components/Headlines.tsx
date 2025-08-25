@@ -55,6 +55,9 @@ export const GenImage = styled.img`
     height: 100%;
     object-fit: cover;
     filter: brightness(65%);
+    @media screen and (max-width: 750px) {
+        width: 350px;
+    }
 `;
 
 export const Headline = styled.h2`
@@ -64,7 +67,7 @@ export const Headline = styled.h2`
     text-align: center;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     padding: 0.75rem 1.25rem;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     @media screen and (max-width: 1000px) {
         font-size: 1.7rem;

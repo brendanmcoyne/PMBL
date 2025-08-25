@@ -18,17 +18,21 @@ const TableWrapper = styled.div`
     background-color: #2e2e2e;
     border-radius: 12px;
     padding: 1.5rem;
-    width: 95%;         
+    width: 110%;
     color: white;
     font-family: 'Bebas Neue', sans-serif;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    overflow-x: auto;  
 `;
+
 
 const TableTitle = styled.h3`
     font-size: 2.5rem;
     text-align: center;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    color: #f9f9f9;
+
     @media screen and (max-width: 500px) {
         font-size: 1.6rem;
     }
@@ -37,10 +41,12 @@ const TableTitle = styled.h3`
 const StyledTable = styled.table`
     width: 100%;
     font-size: 1.2rem;
+    border-collapse: collapse;
 
     th, td {
         padding: 0.75rem 0.5rem;
         text-align: center;
+        white-space: nowrap;
     }
 
     th {
@@ -58,6 +64,8 @@ const StyledTable = styled.table`
         border-bottom: 1px solid #444;
     }
 `;
+
+
 
 export default function UpdatedStandings() {
     const [batting, setBatting] = useState<StatRow[]>([]);
@@ -124,8 +132,10 @@ export default function UpdatedStandings() {
         const displayedData = sortedData(data);
 
         return (
+            <>
+
+            <TableTitle>{title}</TableTitle>
             <TableWrapper>
-                <TableTitle>{title}</TableTitle>
                 <StyledTable>
                     <thead>
                     <tr>
@@ -168,6 +178,7 @@ export default function UpdatedStandings() {
                     </tbody>
                 </StyledTable>
             </TableWrapper>
+            </>
         );
     };
 

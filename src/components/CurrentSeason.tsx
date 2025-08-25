@@ -3,8 +3,6 @@ import { StyledHeader } from "../components/CommonStyles.ts";
 import {useEffect, useState} from "react";
 import StatLeadersMini from "./StatLeaders";
 import Game from "./UpcomingGame";
-import { Story, StyledLink } from "../components/Headlines.tsx";
-import { Overlay } from "../components/headlines/HeadlineStyles";
 
 const fadeInUp = keyframes`
   0% {
@@ -15,25 +13,6 @@ const fadeInUp = keyframes`
     opacity: 1;
     transform: translateY(0);
   }
-`;
-
-const GenImageWrapper = styled.div`
-    width: 90%;
-    margin: 0 auto;
-    @media screen and (max-width: 1000px) {
-        transform: translateY(20px);
-    }
-`;
-
-const GenImage = styled.img`
-    width: 90%;
-    height: auto;
-    filter: brightness(65%);
-    display: block;
-    margin: 0 auto;
-    @media screen and (max-width: 1000px) {
-        width: 100%;
-    }
 `;
 
 export const ContentDiv = styled.div`
@@ -173,20 +152,6 @@ const ArrowButton = styled.button`
     align-items: center;
     justify-content: center; 
     margin-left: 10px;
-`;
-
-const Headline = styled.h2`
-    color: white;
-    font-size: 2.2rem;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    padding: 0.75rem 1.25rem;
-    max-width: 90%;
-    margin: 0 auto;
-    @media screen and (max-width: 1000px) {
-        font-size: 1rem;
-    }
 `;
 
 export default function CurrentSeason() {
@@ -439,16 +404,6 @@ export default function CurrentSeason() {
                     </div>
                 </PlayoffProjection>
             </TwoSection>
-            <StyledMiniHeader>Most Recent Story</StyledMiniHeader>
-            <Story>
-                <GenImageWrapper>
-                    <GenImage src="/miibaseball.jpg" alt="Miis"/>
-                </GenImageWrapper>
-                <Overlay>
-                    <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
-                    <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>
-                </Overlay>
-            </Story>
         </ContentDiv>
     );
 }

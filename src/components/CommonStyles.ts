@@ -111,10 +111,8 @@ export const StyledLink = styled.p<StyledLinkProps>`
     }
     &:hover {
         transform: scale(1.07);
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 1000px) {
             transform: none;
-            width: 200px;
-            height: 100px;
         }
     }
     a {

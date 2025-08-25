@@ -291,6 +291,17 @@ const StatCard = styled.div`
     color: black;
 `;
 
+const Image = styled.img`
+    width: 100px; 
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+    @media screen and (max-width: 1000px) {
+        width: 125px;
+        height: 125px;
+    }
+`;
+
 export default function Managers() {
     const [selectedManager, setSelectedManager] = useState<Manager | null>(null);
     const [activeModalTab, setActiveModalTab] = useState<"info" | "roster">("info");
@@ -337,9 +348,7 @@ export default function Managers() {
                             }}>
                                 <ManagerContent>
                                 <TileSetup animate={ready}>
-                                    <img src={manager.emblem} alt={manager.name}
-                                         style={{width: "100px", height: "100px", objectFit: "contain",
-                                             filter: "drop-shadow(0 0 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))"}}/>
+                                    <Image src={manager.emblem} alt={manager.name}/>
                                     <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
                                 </TileSetup>
                                 </ManagerContent>
@@ -369,9 +378,7 @@ export default function Managers() {
                             }}>
                                 <ManagerContent>
                                     <TileSetup animate={ready}>
-                                        <img src={manager.emblem} alt={manager.name}
-                                             style={{width: "100px", height: "100px", objectFit: "contain",
-                                                 filter: "drop-shadow(0 0 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))"}}/>
+                                        <Image src={manager.emblem} alt={manager.name}/>
                                         <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
                                     </TileSetup>
                                 </ManagerContent>
