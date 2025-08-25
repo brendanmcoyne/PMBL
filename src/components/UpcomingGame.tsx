@@ -23,8 +23,8 @@ const TeamColumn = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 `;
 
 const TeamLabel = styled.div`
@@ -33,18 +33,22 @@ const TeamLabel = styled.div`
 `;
 
 const Logo = styled.img`
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     margin-bottom: 0.5rem;
+    @media screen and (max-width: 1000px) {
+        width: 100px;
+        height: 100px;
+    }
 `;
 
 const Manager = styled.div`
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
 `;
 
 const Record = styled.p`
     color: lightgray;
-    font-size: 1rem;
+    font-size: .75rem;
     margin: 0;
 `;
 
@@ -76,24 +80,35 @@ const Lob = styled.td`
 
 export default function Game() {
     const game = {
-        away: { name: "Morgan", color: "", manager: "Morgan", record: "0-0", scores: [1, 0, 2, 0, 2, 0, 0], R: 5, H: 7, E: 1, LOB: 5  },
-        home: { name: "James", color: "", manager: "James", record: "0-0", scores: [0, 0, 0, 2, 0, 0, 0], R: 2, H: 6, E: 0, LOB: 6 },
+        away: { name: "Morgan", color: "#FF00FF", manager: "Morgan", record: "0-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0  },
+        home: { name: "James", color: "#F1C232", manager: "James", record: "0-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
     };
+
+    {/*
+        Brendan: "#CC0000"
+        Justin: "#FF9900"
+        James: "#F1C232"
+        Matt: "#6AA84F"
+        Isaac: "#3586E8"
+        Christach: "#9900FF"
+        Morgan: "#FF00FF"
+        DANdrew: "#999999"
+    */}
 
     return (
         <ContentDiv>
             <TeamsRow>
                 <TeamColumn>
                     <TeamLabel>Away Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-BowserJr.webp" alt={`${game.away.name} logo`} />
-                    <Manager>Manager: {game.away.manager}</Manager>
+                    <Logo src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt={`${game.away.name} logo`} />
+                    <Manager style={{color: game.away.color}}>{game.away.manager}</Manager>
                     <Record>({game.away.record})</Record>
                 </TeamColumn>
                 <p style={{margin: "0", transform: "translateY(-10px)", fontFamily: "'Luckiest Guy', cursive", fontSize: "3rem"}}>vs</p>
                 <TeamColumn>
                     <TeamLabel>Home Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-MarioFireballs.png" alt={`${game.home.name} logo`} />
-                    <Manager>Manager: {game.home.manager}</Manager>
+                    <Logo src="/emblems/MSS-Emblem-BowserMonsters.webp" alt={`${game.home.name} logo`} />
+                    <Manager style={{color: game.home.color}}>{game.home.manager}</Manager>
                     <Record>({game.home.record})</Record>
                 </TeamColumn>
             </TeamsRow>
@@ -111,7 +126,7 @@ export default function Game() {
                 </thead>
                 <tbody>
                 <tr>
-                    <Td>{game.away.name}</Td>
+                    <Td style={{color: game.away.color}}>{game.away.name}</Td>
                     {game.away.scores.map((s, i) => <Td key={i}>{s}</Td>)}
                     <Td>{game.away.R}</Td>
                     <Td>{game.away.H}</Td>
@@ -119,7 +134,7 @@ export default function Game() {
                     <Lob>{game.away.LOB}</Lob>
                 </tr>
                 <tr>
-                    <Td>{game.home.name}</Td>
+                    <Td style={{color: game.home.color}}>{game.home.name}</Td>
                     {game.home.scores.map((s, i) => <Td key={i}>{s}</Td>)}
                     <Td>{game.home.R}</Td>
                     <Td>{game.home.H}</Td>
@@ -128,7 +143,19 @@ export default function Game() {
                 </tr>
                 </tbody>
             </ScoreTable>
-            <h4 style={{marginTop: "0", marginBottom: "0.75rem"}}>Location: Daisy Cruiser</h4>
+            <h4 style={{ marginTop: "0", marginBottom: "0.75rem" }}>
+                Location: <span style={{ color: "" }}>TBD</span>
+            </h4>
+
+            {/*
+                Mario Stadium: "#FF4F4F"
+                Daisy Cruiser: "#FFA500"
+                Yoshi Park: "#4CAF50"
+                Wario City: "#FFD700"
+                DK Jungle: "#8B4513"
+                Bowser Jr's Playroom: "#CDA434"
+                Bowsers Castle: "#111111"
+            */}
         </ContentDiv>
     );
 }
