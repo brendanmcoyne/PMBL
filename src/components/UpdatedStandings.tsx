@@ -73,9 +73,10 @@ export default function UpdatedStandings() {
     const [sortConfig, setSortConfig] = useState<{ key: string; direction: "asc" | "desc" } | null>(null);
 
     const battingUrl =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQo5-YjKdGLo6sZbyHyQInzOoHO0mkLSgUFr67Wpp5SBgpeme6Y3F2Z6HI9cJrE4onG3r-qBv4qtwoA/pub?gid=0&single=true&output=csv";
+        "https://docs.google.com/spreadsheets/d/10-yEizVL_OOBVuxvH3oMUg0p9Pkx8YXX7zsXwVlsZYw/export?format=csv&gid=0";
+
     const pitchingUrl =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQo5-YjKdGLo6sZbyHyQInzOoHO0mkLSgUFr67Wpp5SBgpeme6Y3F2Z6HI9cJrE4onG3r-qBv4qtwoA/pub?gid=303745750&single=true&output=csv";
+        "https://docs.google.com/spreadsheets/d/10-yEizVL_OOBVuxvH3oMUg0p9Pkx8YXX7zsXwVlsZYw/export?format=csv&gid=303745750";
 
     useEffect(() => {
         const fetchSheet = (url: string, setData: (data: StatRow[]) => void) => {

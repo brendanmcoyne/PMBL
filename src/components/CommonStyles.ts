@@ -16,14 +16,14 @@ interface StyledLinkProps {
     animate?: boolean;
 }
 
-export const SeparatorLine = styled.hr<{ animate?: boolean }>`
+export const SeparatorLine = styled.hr<{ $animate?: boolean }>`
     border: none;
     border-top: 1px solid #ccc;
     width: 80%;
     margin: 0 0 30px 0;
     max-width: 600px;
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.3s;
@@ -41,7 +41,7 @@ export const ToggleButton = styled.button`
     margin-left: 2rem;
 `;
 
-export const StyledHeader = styled.h1<{ animate?: boolean }>`
+export const StyledHeader = styled.h1<{ $animate?: boolean }>`
     font-size: 80px;
     color: white;
     font-family: 'Anton', cursive;
@@ -56,8 +56,8 @@ export const StyledHeader = styled.h1<{ animate?: boolean }>`
         letter-spacing: 1px;
     }
     
-    ${({ animate }) => 
-            animate ? css`
+    ${({ $animate }) => 
+            $animate ? css`
                 opacity: 0;
                 transform: translateY(30px);
                 animation: ${fadeInUp} 1s ease forwards;
@@ -69,15 +69,15 @@ export const StyledHeader = styled.h1<{ animate?: boolean }>`
     }
 `;
 
-export const StyledMiniHeader = styled.h3<{animate?: boolean}>`
+export const StyledMiniHeader = styled.h3<{ $animate?: boolean}>`
     text-align: center;
     font-size: 1.7rem;
     color: white;
     margin-top: 0;
     margin-bottom: 30px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.3s;

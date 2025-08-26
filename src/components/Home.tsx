@@ -2,10 +2,6 @@ import { styled, keyframes, css } from 'styled-components';
 import { useState, useEffect } from 'react';
 import { StyledHeader } from "../components/CommonStyles.ts";
 
-interface CaptainProps {
-    selected: boolean;
-}
-
 const fadeInUp = keyframes`
   0% {
     opacity: 0;
@@ -56,7 +52,7 @@ const Wrapper = styled.div`
     z-index: 2;
 `;
 
-const GrandHeader = styled.h1<{ animate?: boolean }>`
+const GrandHeader = styled.h1<{ $animate?: boolean }>`
     font-size: 7rem;
     color: white;
     font-family: 'Anton', cursive;
@@ -73,23 +69,23 @@ const GrandHeader = styled.h1<{ animate?: boolean }>`
     @media screen and (max-width: 1000px) {
         font-size: 3.5rem;
     }
-    
-    ${({ animate }) =>
-            animate &&
+
+    ${({ $animate }) =>
+            $animate &&
             css`
-      animation: ${fadeInUp} 1s ease forwards;
-      animation-delay: 0.3s;
-    `}
+                animation: ${fadeInUp} 1s ease forwards;
+                animation-delay: 0.6s;
+            `}
 `;
 
-const GenImage = styled.img<{ animate?: boolean }>`
+const GenImage = styled.img<{ $animate?: boolean }>`
     width: 500px;
     height: auto;
     transition: transform 0.3s ease;
     opacity: 0;
     transform: translateY(30px);
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.6s;
@@ -153,7 +149,7 @@ const CaptainCard = styled.div`
     color: white;
 `;
 
-const Captain = styled.img<CaptainProps>`
+const Captain = styled.img<{$selected: boolean}>`
     border-radius: 50%;
     border: 2px solid black;
     width: 100px;
@@ -165,8 +161,8 @@ const Captain = styled.img<CaptainProps>`
         transform: scale(1.05);
         background-color: #ddd;
     }
-    ${({ selected }) =>
-    selected &&
+    ${({ $selected }) =>
+    $selected &&
     `border: 4px solid white;`}
 `;
 
@@ -211,11 +207,11 @@ export default function Home() {
                     <BackgroundImage src="/4.jpg" alt="Decorative Background" />
                 </BackgroundWrapper>
                 <Wrapper>
-                    <GrandHeader animate={ready}>
+                    <GrandHeader $animate={ready}>
                         Welcome to the Professional Mario Baseball League
                     </GrandHeader>
                     <ImageWrapper>
-                        <GenImage src="/LeagueLogo_fix.png" alt="Professional Mario Baseball League Logo" animate={ready} />
+                        <GenImage src="/LeagueLogo_fix.png" alt="Professional Mario Baseball League Logo" $animate={ready} />
                     </ImageWrapper>
                 </Wrapper>
             </Main>
@@ -237,51 +233,51 @@ export default function Home() {
                 </TextSection>
             <CaptainGrid>
                 <CaptainCard onClick={() => handleCaptainSelect("Birdo")}>
-                    <Captain src="/emblems/MSS-Emblem-BirdoBows.webp" alt="Birdo" selected={selectedCaptain === "Birdo"}/>
+                    <Captain src="/emblems/MSS-Emblem-BirdoBows.webp" alt="Birdo" $selected={selectedCaptain === "Birdo"}/>
                     <p>Birdo</p>
                 </CaptainCard>
                 <CaptainCard onClick={() => handleCaptainSelect("Bowser Jr")}>
-                    <Captain src="/emblems/MSS-Emblem-BowserJr.webp" alt="Bowser Jr" selected={selectedCaptain === "Bowser Jr"} />
+                    <Captain src="/emblems/MSS-Emblem-BowserJr.webp" alt="Bowser Jr" $selected={selectedCaptain === "Bowser Jr"} />
                     <p>Bowser Jr</p>
                 </CaptainCard>
                 <CaptainCard onClick={() => handleCaptainSelect("Bowser")}>
-                    <Captain src="/emblems/MSS-Emblem-BowserMonsters.webp" alt="Bowser" selected={selectedCaptain === "Bowser"} />
+                    <Captain src="/emblems/MSS-Emblem-BowserMonsters.webp" alt="Bowser" $selected={selectedCaptain === "Bowser"} />
                     <p>Bowser</p>
                 </CaptainCard>
                 <CaptainCard onClick={() => handleCaptainSelect("Daisy")}>
-                    <Captain src="/emblems/MSS-Emblem-DaisyFlowers.webp" alt="Daisy" selected={selectedCaptain === "Daisy"} />
+                    <Captain src="/emblems/MSS-Emblem-DaisyFlowers.webp" alt="Daisy" $selected={selectedCaptain === "Daisy"} />
                     <p>Daisy</p>
                 </CaptainCard>
                 <CaptainCard onClick={() => handleCaptainSelect("Diddy Kong")}>
-                    <Captain src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt="Diddy Kong" selected={selectedCaptain === "Diddy Kong"} />
+                    <Captain src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt="Diddy Kong" $selected={selectedCaptain === "Diddy Kong"} />
                     <p>Diddy Kong</p>
                 </CaptainCard>
                 <CaptainCard onClick={() => handleCaptainSelect("Donkey Kong")}>
-                    <Captain src="/emblems/MSS-Emblem-DKWilds.webp" alt="Donkey Kong" selected={selectedCaptain === "Donkey Kong"}/>
+                    <Captain src="/emblems/MSS-Emblem-DKWilds.webp" alt="Donkey Kong" $selected={selectedCaptain === "Donkey Kong"}/>
                     <p>Donkey Kong</p>
                 </CaptainCard>
                 <CaptainCard onClick={() => handleCaptainSelect("Luigi")}>
-                    <Captain src="/emblems/MSS-Emblem-LuigiKnights.webp" alt="Luigi" selected={selectedCaptain === "Luigi"}/>
+                    <Captain src="/emblems/MSS-Emblem-LuigiKnights.webp" alt="Luigi" $selected={selectedCaptain === "Luigi"}/>
                     <p>Luigi</p>
                 </CaptainCard>
                 <CaptainCard onClick={() => handleCaptainSelect("Mario")}>
-                    <Captain src="/emblems/MSS-Emblem-MarioFireballs.png" alt="Mario" selected={selectedCaptain === "Mario"}/>
+                    <Captain src="/emblems/MSS-Emblem-MarioFireballs.png" alt="Mario" $selected={selectedCaptain === "Mario"}/>
                     <p>Mario</p>
                 </CaptainCard>
                 <CaptainCard onClick={() => handleCaptainSelect("Peach")}>
-                    <Captain src="/emblems/MSS-Emblem-PeachMonarchs.png" alt="Peach" selected={selectedCaptain === "Peach"}/>
+                    <Captain src="/emblems/MSS-Emblem-PeachMonarchs.png" alt="Peach" $selected={selectedCaptain === "Peach"}/>
                     <p>Peach</p>
                 </CaptainCard>
                 <CaptainCard onClick={() => handleCaptainSelect("Waluigi")}>
-                    <Captain src="/emblems/MSS-Emblem-WaluigiSpitballs.webp" alt="Waluigi" selected={selectedCaptain === "Waluigi"}/>
+                    <Captain src="/emblems/MSS-Emblem-WaluigiSpitballs.webp" alt="Waluigi" $selected={selectedCaptain === "Waluigi"}/>
                     <p>Waluigi</p>
                 </CaptainCard>
                 <CaptainCard onClick={() => handleCaptainSelect("Wario")}>
-                    <Captain src="/emblems/MSS-Emblem-WarioMuscles.webp" alt="Wario" selected={selectedCaptain === "Wario"}/>
+                    <Captain src="/emblems/MSS-Emblem-WarioMuscles.webp" alt="Wario" $selected={selectedCaptain === "Wario"}/>
                     <p>Wario</p>
                 </CaptainCard>
                 <CaptainCard onClick={() => handleCaptainSelect("Yoshi")}>
-                    <Captain src="/emblems/MSS-Emblem-YoshiEggs.webp" alt="Yoshi" selected={selectedCaptain === "Yoshi"}/>
+                    <Captain src="/emblems/MSS-Emblem-YoshiEggs.webp" alt="Yoshi" $selected={selectedCaptain === "Yoshi"}/>
                     <p>Yoshi</p>
                 </CaptainCard>
             </CaptainGrid>

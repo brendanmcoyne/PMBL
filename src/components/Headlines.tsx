@@ -24,7 +24,7 @@ export const ContentDiv = styled.div`
     font-size: calc(0.5rem + 1vw);
 `;
 
-export const Story = styled.div<{ animate?: boolean }>`
+export const Story = styled.div<{ $animate?: boolean }>`
     position: relative;
     width: 100%;
     height: 400px;
@@ -43,8 +43,8 @@ export const Story = styled.div<{ animate?: boolean }>`
         width: 300px;
         margin: 0.75rem 0;
     }
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.7s;
@@ -104,24 +104,24 @@ export default function Players() {
 
     return (
         <ContentDiv>
-            <StyledHeader animate={ready}>PMBL Headlines</StyledHeader>
-            <StyledMiniHeader animate={ready}>Featuring all the top baseball stories!</StyledMiniHeader>
-            <SeparatorLine animate={ready}/>
-            <Story animate={ready}>
+            <StyledHeader $animate={ready}>PMBL Headlines</StyledHeader>
+            <StyledMiniHeader $animate={ready}>Featuring all the top baseball stories!</StyledMiniHeader>
+            <SeparatorLine $animate={ready}/>
+            <Story $animate={ready}>
                 <GenImage src="/miibaseball.jpg" alt="Miis" />
                 <Overlay>
                     <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
                     <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
-            <Story animate={ready}>
+            <Story $animate={ready}>
                 <GenImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
                 <Overlay>
                     <Headline>Koopa Found Guilty of Assault</Headline>
                     <StyledLink to="/headlines/Koopa">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
-            <Story animate={ready}>
+            <Story $animate={ready}>
                 <GenImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
                 <Overlay>
                     <Headline>Dry Bones Gets a Slap on the Wrist</Headline>

@@ -25,7 +25,7 @@ export const ContentDiv = styled.div`
     padding-top: 2rem;
 `;
 
-const StyledMiniHeader = styled.h3<{ animate?: boolean }>`
+const StyledMiniHeader = styled.h3<{ $animate?: boolean }>`
     text-align: center;
     font-weight: bold;
     color: white;
@@ -37,15 +37,15 @@ const StyledMiniHeader = styled.h3<{ animate?: boolean }>`
     @media screen and (max-width: 600px) {
         font-size: 2.5rem;
     }
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.5s;
     `}
 `;
 
-const UpcomingGame = styled.div<{ animate?: boolean }>`
+const UpcomingGame = styled.div<{ $animate?: boolean }>`
     background-color: #2e2e2e;
     border-radius: 12px;
     min-height: 400px;
@@ -59,7 +59,8 @@ const UpcomingGame = styled.div<{ animate?: boolean }>`
         width: 350px;
     }
 
-    ${({ animate }) => animate && css`
+    ${({ $animate }) => 
+            $animate && css`
         animation: ${fadeInUp} 1s ease forwards;
         animation-delay: 0.5s;
     `}
@@ -75,7 +76,7 @@ const TwoSection = styled.div`
     }
 `;
 
-const Standings = styled.div<{ animate?: boolean }>`
+const Standings = styled.div<{ $animate?: boolean }>`
     background-color: #2e2e2e;
     border-radius: 12px;
     width: 500px;
@@ -83,15 +84,15 @@ const Standings = styled.div<{ animate?: boolean }>`
     @media screen and (max-width: 1000px) {
         width: 350px;
     }
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.5s;
     `}
 `;
 
-const Schedule = styled.div<{ animate?: boolean }>`
+const Schedule = styled.div<{ $animate?: boolean }>`
     background-color: #2e2e2e;
     border-radius: 12px;
     width: 500px;
@@ -99,15 +100,15 @@ const Schedule = styled.div<{ animate?: boolean }>`
     @media screen and (max-width: 1000px) {
         width: 350px;
     }
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.5s;
     `}
 `;
 
-const StatLeaders = styled.div<{ animate?: boolean }>`
+const StatLeaders = styled.div<{ $animate?: boolean }>`
     background-color: #2e2e2e;
     border-radius: 12px;
     width: 500px;
@@ -116,15 +117,15 @@ const StatLeaders = styled.div<{ animate?: boolean }>`
         width: 350px;
         margin: 1rem;
     }
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.5s;
     `}
 `;
 
-const PlayoffProjection = styled.div<{ animate?: boolean }>`
+const PlayoffProjection = styled.div<{ $animate?: boolean }>`
     background-color: #2e2e2e;
     border-radius: 12px;
     width: 500px;
@@ -133,8 +134,8 @@ const PlayoffProjection = styled.div<{ animate?: boolean }>`
         width: 350px;
         margin: 1rem;
     }
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.5s;
@@ -266,14 +267,14 @@ export default function CurrentSeason() {
 
     return(
         <ContentDiv>
-            <StyledHeader animate={ready}>Current Season</StyledHeader>
+            <StyledHeader $animate={ready}>Current Season</StyledHeader>
 
-            <UpcomingGame animate={ready}>
+            <UpcomingGame $animate={ready}>
                 <StyledMiniHeader style={{marginBottom: "0"}}>Upcoming Game</StyledMiniHeader>
                 <Game />
             </UpcomingGame>
             <TwoSection>
-                <Standings animate={ready}>
+                <Standings $animate={ready}>
                     <StyledMiniHeader style={{marginBottom: "0"}}>Current Standings</StyledMiniHeader>
 
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", textAlign: "center" }}>
@@ -308,7 +309,7 @@ export default function CurrentSeason() {
                     </div>
                 </ Standings>
 
-                <Schedule animate={ready}>
+                <Schedule $animate={ready}>
                     <StyledMiniHeader style={{marginBottom: "0"}}>Week Schedule</StyledMiniHeader>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", textAlign: "center" }}>
                         <ArrowButton onClick={() => setWeek(prev => Math.max(prev - 1, 0))} disabled={week === 0}
@@ -353,11 +354,11 @@ export default function CurrentSeason() {
             </TwoSection>
 
             <TwoSection>
-                <StatLeaders animate={ready}>
+                <StatLeaders $animate={ready}>
                     <StyledMiniHeader>Stat Leaders</StyledMiniHeader>
                     <StatLeadersMini />
                 </StatLeaders>
-                <PlayoffProjection animate={ready}>
+                <PlayoffProjection $animate={ready}>
                     <StyledMiniHeader>Current Playoffs</StyledMiniHeader>
 
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", textAlign: "center" }}>

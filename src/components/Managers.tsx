@@ -84,7 +84,7 @@ const DivisionDiv = styled.div`
     }
 `;
 
-const DivisionHeader = styled.h3<{ animate?: boolean }>`
+const DivisionHeader = styled.h3<{ $animate?: boolean }>`
     text-align: center;
     margin: 0;
     color: white;
@@ -92,15 +92,15 @@ const DivisionHeader = styled.h3<{ animate?: boolean }>`
     font-size: 3rem;
     font-family: 'Bebas Neue', sans-serif;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.3s;
     `}
 `;
 
-const Manager = styled.div<{ animate?: boolean }>`
+const Manager = styled.div<{ $animate?: boolean }>`
     width: 130px;
     height: 140px;
     font-size: 1.6rem;
@@ -126,8 +126,8 @@ const Manager = styled.div<{ animate?: boolean }>`
         height: 220px;
     }
     
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.3s;
@@ -225,7 +225,7 @@ const ToggleButton = styled.button<ToggleButtonProps>`
     transition: background-color 0.2s, color 0.2s;
 `;
 
-const TileSetup = styled.div<{ animate?: boolean }>`
+const TileSetup = styled.div<{ $animate?: boolean }>`
     display: flex;
     flex-direction: column;
     align-items: center;  
@@ -234,8 +234,8 @@ const TileSetup = styled.div<{ animate?: boolean }>`
     opacity: 0;
     transform: translateY(30px);
 
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
     animation: ${fadeInUp} 1s ease forwards;
     animation-delay: 0.6s;
@@ -325,13 +325,13 @@ export default function Managers() {
 
     return (
         <ContentDiv>
-            <StyledHeader animate={ready}>Managers</StyledHeader>
+            <StyledHeader $animate={ready}>Managers</StyledHeader>
             <DivisionContainer>
                 <DivisionSection>
-                    <DivisionHeader animate={ready} style={{color: "#4285F4"}}>East Division</DivisionHeader>
+                    <DivisionHeader $animate={ready} style={{color: "#4285F4"}}>East Division</DivisionHeader>
                     <DivisionDiv>
                         {sortedManagers.filter(m => m.division === "East").map((manager: Manager) => (
-                            <Manager animate={ready} key={manager.name} onClick={() => {
+                            <Manager $animate={ready} key={manager.name} onClick={() => {
                                 setSelectedManager(manager);
                                 setActiveModalTab("info");
                             }} style={{
@@ -347,7 +347,7 @@ export default function Managers() {
                                                     : ""
                             }}>
                                 <ManagerContent>
-                                <TileSetup animate={ready}>
+                                <TileSetup $animate={ready}>
                                     <Image src={manager.emblem} alt={manager.name}/>
                                     <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
                                 </TileSetup>
@@ -358,10 +358,10 @@ export default function Managers() {
                 </DivisionSection>
 
                 <DivisionSection>
-                    <DivisionHeader animate={ready} style={{color: "#FF0000"}}>West Division</DivisionHeader>
+                    <DivisionHeader $animate={ready} style={{color: "#FF0000"}}>West Division</DivisionHeader>
                     <DivisionDiv>
                         {sortedManagers.filter(m => m.division === "West").map((manager: Manager) => (
-                            <Manager animate={ready} key={manager.name} onClick={() => {
+                            <Manager $animate={ready} key={manager.name} onClick={() => {
                                 setSelectedManager(manager);
                                 setActiveModalTab("info");
                             }} style={{
@@ -377,7 +377,7 @@ export default function Managers() {
                                                     : manager.color
                             }}>
                                 <ManagerContent>
-                                    <TileSetup animate={ready}>
+                                    <TileSetup $animate={ready}>
                                         <Image src={manager.emblem} alt={manager.name}/>
                                         <span style={{fontWeight: "bold", textAlign: "center"}}>{manager.name}</span>
                                     </TileSetup>
@@ -388,7 +388,7 @@ export default function Managers() {
                 </DivisionSection>
             </DivisionContainer>
 
-            <StyledHeader animate={ready} style={{margin: "0"}}>Rivalries</StyledHeader>
+            <StyledHeader $animate={ready} style={{margin: "0"}}>Rivalries</StyledHeader>
             <Rivalry>
                 <RivalryTitle>The Battle of 726</RivalryTitle>
                 <VersusRow>

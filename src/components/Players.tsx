@@ -30,7 +30,7 @@ export const ContentDiv = styled.div`
     padding-top: 2rem;
 `;
 
-const DivisionDiv = styled.div<{ animate?: boolean }>`
+const DivisionDiv = styled.div<{ $animate?: boolean }>`
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     gap: 15px;
@@ -39,8 +39,8 @@ const DivisionDiv = styled.div<{ animate?: boolean }>`
         grid-template-columns: repeat(2,1fr);
         justify-content: center;
     }
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.5s;
@@ -57,7 +57,7 @@ const PlayerName = styled.span`
     }
 `;
 
-const Player = styled.div<{ $accent: string; animate?: boolean }>`
+const Player = styled.div<{ $accent: string; $animate?: boolean }>`
     --accent: ${({ $accent }) => $accent};
     background: linear-gradient(100deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.06) 100%);
     border-bottom: 3px solid white;
@@ -77,8 +77,8 @@ const Player = styled.div<{ $accent: string; animate?: boolean }>`
             transform: none;
         }
     }
-    ${({ animate }) =>
-            animate
+    ${({ $animate }) =>
+            $animate
                     ? css`
           opacity: 0;
           transform: translateY(30px);
@@ -91,7 +91,7 @@ const Player = styled.div<{ $accent: string; animate?: boolean }>`
         `}
 `;
 
-const GenImage = styled.img<{ animate?: boolean }>`
+const GenImage = styled.img<{ $animate?: boolean }>`
     width: 150px;
     height: 150px;   
     object-fit: cover; 
@@ -102,8 +102,8 @@ const GenImage = styled.img<{ animate?: boolean }>`
         width: 130px;
         height: 130px;
     }
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.9s;
@@ -193,23 +193,23 @@ const SortButtonsContainer = styled.div`
     }
 `;
 
-const SortButton = styled.button<{ animate?: boolean, active?: boolean }>`
+const SortButton = styled.button<{ $animate?: boolean, $active?: boolean }>`
     padding: 0.6rem 1.4rem;
     font-size: 1rem;
     font-weight: bold;
     border: none;
     cursor: pointer;
     margin-bottom: 20px;
-    background-color: ${({ active }) => (active ? "#1d3fdc" : "#2c2c80")};
+    background-color: ${({ $active }) => ($active ? "#1d3fdc" : "#2c2c80")};
     color: white;
-    box-shadow: ${({ active }) =>
-            active ? "0 0 8px rgba(255, 255, 255, 0.6)" : "none"};
+    box-shadow: ${({ $active }) =>
+            $active ? "0 0 8px rgba(255, 255, 255, 0.6)" : "none"};
     transition: all 0.2s ease;
     @media screen and (max-width: 1000px) {
         width: 175px;
     }
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.3s;
@@ -236,12 +236,12 @@ const StatBarContainer = styled.div`
     margin-top: 0.35rem;
 `;
 
-const StatBarFill = styled.div<{ value: number }>`
+const StatBarFill = styled.div<{ $value: number }>`
     height: 100%;
-    width: ${({ value }) => `${(value / 10) * 100}%`};
-    background-image: ${({ value }) => {
-        if (value >= 7)      return 'linear-gradient(90deg,#ff9966 0%,#ff5e62 100%)';  
-        if (value >= 4)      return 'linear-gradient(90deg,#6dd5fa 0%,#2980b9 100%)';  
+    width: ${({ $value }) => `${($value / 10) * 100}%`};
+    background-image: ${({ $value }) => {
+        if ($value >= 7)      return 'linear-gradient(90deg,#ff9966 0%,#ff5e62 100%)';  
+        if ($value >= 4)      return 'linear-gradient(90deg,#6dd5fa 0%,#2980b9 100%)';  
         return 'linear-gradient(90deg,#84fab0 0%,#8fd3f4 100%)';  
     }};
     transition: width 0.35s ease-in-out;
@@ -388,19 +388,19 @@ export default function Players() {
 
     return (
         <ContentDiv>
-            <StyledHeader animate={ready}>Players</StyledHeader>
+            <StyledHeader $animate={ready}>Players</StyledHeader>
 
             <SortButtonsContainer>
-                <SortButton animate={ready} active={sortOption === "az"} onClick={() => setSortOption("az")}>Sort A-Z</SortButton>
-                <SortButton animate={ready} active={sortOption === "za"} onClick={() => setSortOption("za")}>Sort Z-A</SortButton>
-                <SortButton animate={ready} active={sortOption === "color"} onClick={() => setSortOption("color")}>Sort by Color</SortButton>
-                <SortButton animate={ready} active={sortOption === "captains"} onClick={() => setSortOption("captains")}>Captains Only</SortButton>
-                <SortButton animate={ready} active={sortOption === "mii"} onClick={() => setSortOption("mii")}>Miis Only</SortButton>
+                <SortButton $animate={ready} $active={sortOption === "az"} onClick={() => setSortOption("az")}>Sort A-Z</SortButton>
+                <SortButton $animate={ready} $active={sortOption === "za"} onClick={() => setSortOption("za")}>Sort Z-A</SortButton>
+                <SortButton $animate={ready} $active={sortOption === "color"} onClick={() => setSortOption("color")}>Sort by Color</SortButton>
+                <SortButton $animate={ready} $active={sortOption === "captains"} onClick={() => setSortOption("captains")}>Captains Only</SortButton>
+                <SortButton $animate={ready} $active={sortOption === "mii"} onClick={() => setSortOption("mii")}>Miis Only</SortButton>
             </SortButtonsContainer>
 
             <DivisionDiv>
                 {sortedPlayers.map((player: Player) => (
-                    <Player animate={ready}
+                    <Player $animate={ready}
                         key={player.name}
                         $accent={player.color === "Light Blue" ? "#6dd5fa" : player.color === "Light Green" ? "#8bc34a" : player.color?.toLowerCase() || "darkblue"}
                         onClick={() => {
@@ -446,25 +446,25 @@ export default function Players() {
                                         <StatCard>
                                             <div>Batting: {statWithEmoji(selectedStat.batting)}</div>
                                             <StatBarContainer>
-                                                <StatBarFill value={selectedStat.batting} />
+                                                <StatBarFill $value={selectedStat.batting} />
                                             </StatBarContainer>
                                         </StatCard>
                                         <StatCard>
                                             <div>Pitching: {statWithEmoji(selectedStat.pitching)}</div>
                                             <StatBarContainer>
-                                                <StatBarFill value={selectedStat.pitching} />
+                                                <StatBarFill $value={selectedStat.pitching} />
                                             </StatBarContainer>
                                         </StatCard>
                                         <StatCard>
                                             <div>Fielding: {statWithEmoji(selectedStat.fielding)}</div>
                                             <StatBarContainer>
-                                                <StatBarFill value={selectedStat.fielding} />
+                                                <StatBarFill $value={selectedStat.fielding} />
                                             </StatBarContainer>
                                         </StatCard>
                                         <StatCard>
                                             <div>Running: {statWithEmoji(selectedStat.running)}</div>
                                             <StatBarContainer>
-                                                <StatBarFill value={selectedStat.running} />
+                                                <StatBarFill $value={selectedStat.running} />
                                             </StatBarContainer>
                                         </StatCard>
                                     </ModalRight>

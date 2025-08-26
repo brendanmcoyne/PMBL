@@ -24,15 +24,15 @@ export const ContentDiv = styled.div`
     padding-top: 2rem;
 `;
 
-const StyledMiniHeader = styled.h3<{ animate?: boolean }>`
+const StyledMiniHeader = styled.h3<{ $animate?: boolean }>`
     text-align: center;
     font-size: 1.7rem;
     color: white;
     margin-top: 0;
     margin-bottom: 30px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.5s;
@@ -59,15 +59,15 @@ const Gallery = styled.div`
     }
 `;
 
-const ResponsiveFlex = styled.div<{ animate?: boolean }>`
+const ResponsiveFlex = styled.div<{ $animate?: boolean }>`
     display: flex;
     flex-direction: row;
     margin-top: 30px;
     @media (max-width: 1000px) {
         flex-direction: column;
     }
-    ${({ animate }) =>
-            animate &&
+    ${({ $animate }) =>
+            $animate &&
             css`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.5s;
@@ -88,10 +88,10 @@ export default function Archives() {
 
     return(
         <ContentDiv>
-            <StyledHeader animate={ready}>Archives</StyledHeader>
-            <StyledMiniHeader animate={ready} style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
-            <SeparatorLine animate={ready}/>
-            <ResponsiveFlex animate={ready}>
+            <StyledHeader $animate={ready}>Archives</StyledHeader>
+            <StyledMiniHeader $animate={ready} style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
+            <SeparatorLine $animate={ready}/>
+            <ResponsiveFlex $animate={ready}>
                 <StyledLink bg="/archives/bowserbat.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1">Season 1</Link>
                 </StyledLink>
@@ -100,8 +100,8 @@ export default function Archives() {
                 </StyledLink>
             </ResponsiveFlex>
 
-            <StyledHeader animate={ready} style={{fontSize: "80px", marginTop: "70px"}}>Gallery</StyledHeader>
-            <StyledMiniHeader animate={ready}>In here you'll find photos and memories from seasons past</StyledMiniHeader>
+            <StyledHeader $animate={ready} style={{fontSize: "80px", marginTop: "70px"}}>Gallery</StyledHeader>
+            <StyledMiniHeader $animate={ready}>In here you'll find photos and memories from seasons past</StyledMiniHeader>
             <SeparatorLine/>
 
             <Gallery>
