@@ -69,19 +69,10 @@ const Td = styled.td`
     padding: 0.25rem;
 `;
 
-const Lob = styled.td`
-    border: 1px solid #fff;
-    padding: 0.25rem;
-    width: 80px;
-    @media screen and (max-width: 1000px) {
-        width: 40px;
-    }
-`;
-
 export default function Game() {
     const game = {
-        away: { name: "Morgan", color: "#FF00FF", manager: "Morgan", record: "0-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0  },
-        home: { name: "James", color: "#F1C232", manager: "James", record: "0-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        away: { name: "Morgan", color: "#FF00FF", manager: "Morgan", record: "0-0", scores: [1, 0, 0, 0, 4, 1, 0], R: 6, H: 18, E: 1 },
+        home: { name: "James", color: "#F1C232", manager: "James", record: "0-0", scores: [0, 4, 0, 0, 4, 2, "X"], R: 10, H: 20, E: 0 },
     };
 
     {/*
@@ -121,7 +112,6 @@ export default function Game() {
                     <Th>R</Th>
                     <Th>H</Th>
                     <Th>E</Th>
-                    <Lob style={{fontWeight: "bold"}}>LOB</Lob>
                 </tr>
                 </thead>
                 <tbody>
@@ -131,7 +121,6 @@ export default function Game() {
                     <Td>{game.away.R}</Td>
                     <Td>{game.away.H}</Td>
                     <Td>{game.away.E}</Td>
-                    <Lob>{game.away.LOB}</Lob>
                 </tr>
                 <tr>
                     <Td style={{color: game.home.color}}>{game.home.name}</Td>
@@ -139,7 +128,6 @@ export default function Game() {
                     <Td>{game.home.R}</Td>
                     <Td>{game.home.H}</Td>
                     <Td>{game.home.E}</Td>
-                    <Lob>{game.home.LOB}</Lob>
                 </tr>
                 </tbody>
             </ScoreTable>

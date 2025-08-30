@@ -65,11 +65,26 @@ const StyledTable = styled.table`
     }
 `;
 
+const ToggleButton = styled.button`
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.2s ease;
 
+    &:hover {
+        background-color: #666;
+    }
+`;
 
 export default function UpdatedStandings() {
     const [batting, setBatting] = useState<StatRow[]>([]);
     const [pitching, setPitching] = useState<StatRow[]>([]);
+    const [view, setView] = useState<"batting" | "pitching">("batting");
     const [sortConfig, setSortConfig] = useState<{ key: string; direction: "asc" | "desc" } | null>(null);
 
     const battingUrl =
@@ -130,63 +145,103 @@ export default function UpdatedStandings() {
             }
         };
 
-        const displayedData = sortedData(data);
+        const displayedData = sortedData(data).filter((row) => {
+            const gamesKey = Object.keys(row).find(
+                (key) => key.toLowerCase() === "g" || key.toLowerCase() === "games"
+            );
+            if (!gamesKey) return true;
+            const games = parseInt(row[gamesKey] || "0", 10);
+            return games > 0;
+        });
 
         return (
             <>
+                <TableTitle>{title}</TableTitle>
 
-            <TableTitle>{title}</TableTitle>
-            <TableWrapper>
-                <StyledTable>
-                    <thead>
-                    <tr>
-                        {Object.keys(data[0]).map((header) => {
-                            const isSorted = sortConfig?.key === header;
-                            const headerStyle: React.CSSProperties = {
-                                color: isSorted ? "gold" : "#fff",
-                            };
-                            return (
-                                <th key={header} onClick={() => handleSort(header)} style={headerStyle}>
-                                    {header} {isSorted ? (sortConfig.direction === "asc" ? "▲" : "▼") : ""}
-                                </th>
-                            );
-                        })}
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {displayedData.map((row, idx) => (
-                        <tr key={idx}>
-                            {Object.entries(row).map(([header, cell], i) => {
-                                let display: string | number = cell === "#DIV/0!" ? 0 : cell;
+                <ToggleButton
+                    onClick={() =>
+                        setView(view === "batting" ? "pitching" : "batting")
+                    }
+                >
+                    Switch to {view === "batting" ? "Pitching Stats" : "Batting Stats"}
+                </ToggleButton>
 
-                                const decimalStats = ["avg", "obp", "slg", "ops", "era", "whip"];
-                                if (decimalStats.includes(header.toLowerCase())) {
-                                    const numValue = parseFloat(display as string);
-                                    if (!isNaN(numValue)) display = numValue.toFixed(3);
-                                } else {
-                                    const numValue = parseFloat(display as string);
-                                    if (!isNaN(numValue)) display = Math.round(numValue);
-                                }
-
-                                const cellStyle: React.CSSProperties = {
-                                    color: sortConfig?.key === header ? "gold" : "#fff"
+                <TableWrapper>
+                    <StyledTable>
+                        <thead>
+                        <tr>
+                            {Object.keys(data[0]).map((header) => {
+                                const isSorted = sortConfig?.key === header;
+                                const headerStyle: React.CSSProperties = {
+                                    color: isSorted ? "gold" : "#fff",
                                 };
-
-                                return <td key={i} style={cellStyle}>{display}</td>;
+                                return (
+                                    <th
+                                        key={header}
+                                        onClick={() => handleSort(header)}
+                                        style={headerStyle}
+                                    >
+                                        {header}{" "}
+                                        {isSorted
+                                            ? sortConfig.direction === "asc"
+                                                ? "▲"
+                                                : "▼"
+                                            : ""}
+                                    </th>
+                                );
                             })}
                         </tr>
-                    ))}
-                    </tbody>
-                </StyledTable>
-            </TableWrapper>
+                        </thead>
+                        <tbody>
+                        {displayedData.map((row, idx) => (
+                            <tr key={idx}>
+                                {Object.entries(row).map(([header, cell], i) => {
+                                    let display: string | number =
+                                        cell === "#DIV/0!" ? 0 : cell;
+
+                                    const decimalStats = [
+                                        "avg",
+                                        "obp",
+                                        "slg",
+                                        "ops",
+                                        "era",
+                                        "whip",
+                                    ];
+                                    if (decimalStats.includes(header.toLowerCase())) {
+                                        const numValue = parseFloat(display as string);
+                                        if (!isNaN(numValue))
+                                            display = numValue.toFixed(3);
+                                    } else {
+                                        const numValue = parseFloat(display as string);
+                                        if (!isNaN(numValue))
+                                            display = Math.round(numValue);
+                                    }
+
+                                    const cellStyle: React.CSSProperties = {
+                                        color:
+                                            sortConfig?.key === header ? "gold" : "#fff",
+                                    };
+
+                                    return (
+                                        <td key={i} style={cellStyle}>
+                                            {display}
+                                        </td>
+                                    );
+                                })}
+                            </tr>
+                        ))}
+                        </tbody>
+                    </StyledTable>
+                </TableWrapper>
             </>
         );
     };
 
     return (
         <TablesContainer>
-            {renderTable("Batting Stats", batting)}
-            {renderTable("Pitching Stats", pitching)}
+            {view === "batting"
+                ? renderTable("Batting Stats", batting)
+                : renderTable("Pitching Stats", pitching)}
         </TablesContainer>
     );
 }
