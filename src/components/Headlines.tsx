@@ -31,7 +31,7 @@ export const Story = styled.div<{ $animate?: boolean }>`
     height: 400px;
     border-radius: 15px;
     overflow: hidden;
-    margin: 1rem;
+    margin: 1rem auto;
     transition: 0.5s;
     &:hover {
         transform: scale(1.05);
@@ -42,6 +42,7 @@ export const Story = styled.div<{ $animate?: boolean }>`
     @media screen and (max-width: 900px) {
         height: 200px;
         border-radius: 0;
+        width: 90%;
     }
     
     ${({ $animate }) =>
