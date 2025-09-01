@@ -12,9 +12,8 @@ export const Rivalry = styled.div`
     flex-direction: column;
     align-items: center;
 
-    @media screen and (max-width: 600px) {
-        width: 300px;
-        border-radius: 0;    
+    @media screen and (max-width: 900px) {
+        width: 280px;
     }
 `;
 
