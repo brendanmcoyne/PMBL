@@ -19,9 +19,11 @@ export const ContentDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
     padding: 2rem 1rem;
     font-size: calc(0.5rem + 1vw);
+    box-sizing: border-box; /* ✅ keeps padding inside the width */
 `;
 
 export const Story = styled.div<{ $animate?: boolean }>`
@@ -42,7 +44,6 @@ export const Story = styled.div<{ $animate?: boolean }>`
     @media screen and (max-width: 900px) {
         height: 200px;
         border-radius: 0;
-        width: 90%;
     }
     
     ${({ $animate }) =>
