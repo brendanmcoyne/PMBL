@@ -273,6 +273,14 @@ export const players: Player[] = [
         ]
     },
     {
+        name: "Claudius",
+        src: "/players/mii.jpg",
+        color: "Black",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Chungy",
         src: "/players/mii.jpg",
         color: "Yellow",
@@ -415,6 +423,14 @@ export const players: Player[] = [
         ]
     },
     {
+        name: "Ghislaine",
+        src: "/players/mii.jpg",
+        color: "Purple",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Goomba",
         src: "/players/Goomba.webp",
         color: "Brown",
@@ -525,6 +541,14 @@ export const players: Player[] = [
         mii: false,
     },
     {
+        name: "Guest E",
+        src: "/players/mii.jpg",
+        color: "Light Blue",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Hamburger",
         src: "/players/mii.jpg",
         color: "Yellow",
@@ -569,6 +593,30 @@ export const players: Player[] = [
         ]
     },
     {
+        name: "John Daly",
+        src: "/players/mii.jpg",
+        color: "Light Green",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Justin Nascimento",
+        src: "/players/mii.jpg",
+        color: "Brown",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Kimmy",
+        src: "/players/mii.jpg",
+        color: "Red",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "King Boo",
         src: "/players/King_Boo.webp",
         color: "White",
@@ -608,6 +656,14 @@ export const players: Player[] = [
         awards: [
             { name: "World Series Champion", season: 1},
         ]
+    },
+    {
+        name: "Larry Cuc",
+        src: "/players/mii.jpg",
+        color: "Green",
+        gp: 0,
+        captain: false,
+        mii: true,
     },
     {
         name: "Light Blue Yoshi",
@@ -826,6 +882,14 @@ export const players: Player[] = [
         mii: false,
     },
     {
+        name: "Reshiram",
+        src: "/players/mii.jpg",
+        color: "Orange",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Sabrina",
         src: "/players/mii.jpg",
         color: "Pink",
@@ -981,5 +1045,13 @@ export const players: Player[] = [
         captain: true,
         mii: false,
         banner: "/banners/YoshiEggs-MSS.webp",
+    },
+    {
+        name: "Zekrom",
+        src: "/players/mii.jpg",
+        color: "Yellow",
+        gp: 0,
+        captain: false,
+        mii: true,
     },
 ];

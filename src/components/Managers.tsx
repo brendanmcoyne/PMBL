@@ -451,7 +451,7 @@ export default function Managers() {
                     <span style={{ color: "#FF00FF"}}>{' '}Morgan</span>
                 </StyledMiniHeader>
                 <RivalryDesc>The members of Middlesex County, MA, have had their fair share of exciting matchups
-                    throughout the leagues history. In the Season 1 playoffs, there was two Middlesex matchups, one in the Conference Series,
+                    throughout the leagues history. In the Season 1 playoffs, there were two Middlesex matchups, one in the Conference Series,
                     and one in the World Series, culminating in James winning both, and the first ever PMBL World Series Title. </RivalryDesc>
                 <RivalryRecords>
                     <RivalryRecord>James leads Morgan 4-1</RivalryRecord>

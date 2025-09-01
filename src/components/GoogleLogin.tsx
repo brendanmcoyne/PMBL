@@ -30,7 +30,7 @@ const UserName = styled.span`
     overflow: hidden;     
     text-overflow: ellipsis; 
     @media screen and (max-width: 800px) {
-        max-width: 150px;
+        max-width: 130px;
     } 
     
 `;
