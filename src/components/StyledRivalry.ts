@@ -14,8 +14,8 @@ export const Rivalry = styled.div`
 
     @media screen and (max-width: 900px) {
         width: 100%;
-        max-width: 320px; 
-        margin: 1rem auto;
+        max-width: 360px; 
+        margin: .5rem auto;
     }
 `;
 

@@ -41,8 +41,8 @@ export const Story = styled.div<{ $animate?: boolean }>`
     }
     @media screen and (max-width: 600px) {
         height: 250px;
-        width: 290px;
-        margin: 0.75rem 0;
+        width: 300px;
+        margin: 0.75rem auto;
     }
     ${({ $animate }) =>
             $animate &&
