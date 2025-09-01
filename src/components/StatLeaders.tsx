@@ -97,19 +97,31 @@ export default function StatLeadersMini() {
 
     const getTopPlayers = (data: StatRow[], stat: string, isLowerBetter = false) => {
         return [...data]
-            .filter(row => row[stat] && !isNaN(Number(row[stat])))
+            .filter(row => row[stat] && row[stat].trim() !== "")
             .sort((a, b) => {
-                const valA = parseFloat(a[stat]);
-                const valB = parseFloat(b[stat]);
+                const valA = rowToNumber(a[stat]);
+                const valB = rowToNumber(b[stat]);
                 return isLowerBetter ? valA - valB : valB - valA;
             })
             .slice(0, 5);
     };
 
+    const rowToNumber = (value?: string): number => {
+        if (!value) return 0;
+        const clean = value.trim();
+        if (clean === "#DIV/0!") return 0;
+        const num = parseFloat(clean);
+        return isNaN(num) ? 0 : num;
+    };
+
+
     const pages = [
+        { title: "Hits", stat: "H", isLowerBetter: false, data: batting },
         { title: "Home Runs", stat: "HR", isLowerBetter: false, data: batting },
+        { title: "RBIs", stat: "RBI", isLowerBetter: false, data: batting },
         { title: "Batting Average", stat: "AVG", isLowerBetter: false, data: batting },
         { title: "ERA", stat: "ERA", isLowerBetter: true, data: pitching },
+
     ];
 
     const currentPage = pages[page];
@@ -138,10 +150,10 @@ export default function StatLeadersMini() {
                         </div>
                         <div style={{ flexShrink: 0, whiteSpace: "nowrap", marginLeft: "1rem" }}>
                             {currentPage.stat === "AVG"
-                                ? parseFloat(player[currentPage.stat]).toFixed(3)
+                                ? rowToNumber(player[currentPage.stat]).toFixed(3)
                                 : currentPage.stat === "ERA"
-                                    ? parseFloat(player[currentPage.stat]).toFixed(2)
-                                    : player[currentPage.stat]}
+                                    ? rowToNumber(player[currentPage.stat]).toFixed(2)
+                                    : rowToNumber(player[currentPage.stat])}
                         </div>
                     </PlayerRow>
                 ))}
