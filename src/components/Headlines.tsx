@@ -64,7 +64,8 @@ export const GenImage = styled.img`
     object-fit: cover;
     filter: brightness(65%);
     @media screen and (max-width: 750px) {
-        width: 340px;
+        width: 350px;
+        display: block;
     }
 `;
 
