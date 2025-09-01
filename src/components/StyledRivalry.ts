@@ -6,7 +6,7 @@ export const Rivalry = styled.div`
     padding: 2rem;
     margin: 2rem auto;
     max-width: 800px;
-    width: 95%; 
+    width: 95%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -14,9 +14,9 @@ export const Rivalry = styled.div`
 
     @media screen and (max-width: 900px) {
         width: clamp(310px, 95%, 500px);
+        max-width: 100%;     
         margin: 0.5rem auto;
-        max-width: 100%;       
-        overflow-x: hidden;    
+        overflow-x: hidden;  
     }
 `;
 

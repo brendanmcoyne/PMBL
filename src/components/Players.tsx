@@ -69,14 +69,7 @@ const Player = styled.div<{ $accent: string; $animate?: boolean }>`
     gap: 0.65rem;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.28s ease, box-shadow 0.28s ease;
 
-    &:hover {
-        transform: translateY(-4px) scale(1.04);
-        @media screen and (max-width: 500px) {
-            transform: none;
-        }
-    }
     ${({ $animate }) =>
             $animate
                     ? css`
