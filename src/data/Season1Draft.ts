@@ -519,7 +519,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Alfonzo",
         manager: "DANdrew",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Alfonzo.jpg",
         color: "#999999",
     },
     {
@@ -537,7 +537,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Jack White",
         manager: "Isaac",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Jack White.jpg",
         color: "#3586E8",
     },
     {
@@ -555,7 +555,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Triangle",
         manager: "Morgan",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Triangle.jpg",
         color: "#FF00FF",
     },
     {
@@ -564,7 +564,7 @@ export const draftRoster: DraftRoster[] = [
         player: "MLK",
         manager: "Christach",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/MLK.jpg",
         color: "#9900FF",
     },
     {
@@ -591,7 +591,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Bob Marley",
         manager: "Brendan",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Bob Marley.jpg",
         color: "#CC0000",
     },
     {
@@ -606,10 +606,10 @@ export const draftRoster: DraftRoster[] = [
     {
         pick: "67th",
         round: 9,
-        player: "Shaq",
+        player: "Cascade",
         manager: "Christach",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Cascade.jpg",
         color: "#9900FF",
     },
     {
@@ -627,7 +627,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Sebesta",
         manager: "Matt",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Sebesta.jpg",
         color: "#6AA84F",
     },
     {
@@ -636,7 +636,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Grayson McKean",
         manager: "Isaac",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Grayson McKean.jpg",
         color: "#3586E8",
     },
     {
@@ -645,7 +645,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Antenna",
         manager: "Justin",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Antenna.jpg",
         color: "#FF9900"
     },
     {
@@ -654,7 +654,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Abu Patel",
         manager: "DANdrew",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Abu Patel.jpg",
         color: "#999999",
     },
     {
@@ -663,7 +663,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Diddler",
         manager: "DANdrew",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Diddler.jpg",
         color: "#999999",
     },
     {
@@ -690,7 +690,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Hamburger",
         manager: "Matt",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Hamburger.jpg",
         color: "#6AA84F",
     },
     {
@@ -699,7 +699,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Gramps",
         manager: "Morgan",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Gramps.jpg",
         color: "#FF00FF",
     },
     {
@@ -708,7 +708,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Sabrina",
         manager: "Christach",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Sabrina.jpg",
         color: "#9900FF",
     },
     {
@@ -726,7 +726,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Gramms",
         manager: "Brendan",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Gramms.jpg",
         color: "#CC0000",
     },
     {
@@ -744,7 +744,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Entity 404",
         manager: "James",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Entity 404.jpg",
         color: "#F1C232",
     },
     {
@@ -753,7 +753,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Chungy",
         manager: "Christach",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Chungy.jpg",
         color: "#9900FF",
     },
     {
@@ -771,7 +771,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Broseph",
         manager: "Matt",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Broseph.jpg",
         color: "#6AA84F",
     },
     {
@@ -798,7 +798,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Michelle Obama",
         manager: "DANdrew",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Michelle Obama.jpg",
         color: "#999999",
     },
     {
@@ -825,7 +825,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Jesstithyn",
         manager: "Isaac",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Jesstithyn.jpg",
         color: "#3586E8",
     },
     {
@@ -834,7 +834,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Bertha",
         manager: "Matt",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Bertha.jpg",
         color: "#6AA84F",
     },
     {
@@ -843,7 +843,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Danny B",
         manager: "Morgan",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Danny B.jpg",
         color: "#FF00FF",
     },
     {
@@ -861,7 +861,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Tate McRae",
         manager: "James",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Tate McRae.jpg",
         color: "#F1C232",
     },
     {
@@ -870,7 +870,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Nose",
         manager: "Brendan",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Nose.jpg",
         color: "#CC0000",
     },
 ]

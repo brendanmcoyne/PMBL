@@ -40,9 +40,9 @@ export const Story = styled.div<{ $animate?: boolean }>`
         }
     }
     @media screen and (max-width: 900px) {
-        height: 260px;
-        width: clamp(310px, 95%, 500px);
-        margin: 0.5rem auto;
+        width: 70vw;
+        margin-left: calc(50% - 40vw);
+        margin-right: calc(50% - 40vw);
     }
     ${({ $animate }) =>
             $animate &&

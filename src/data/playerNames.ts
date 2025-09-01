@@ -17,7 +17,7 @@ export type Player = {
 export const players: Player[] = [
     {
         name: "Abu Patel",
-        src: "/players/mii.jpg",
+        src: "/players/Abu Patel.jpg",
         color: "Blue",
         gp: 10,
         captain: false,
@@ -25,7 +25,7 @@ export const players: Player[] = [
     },
     {
         name: "Alfonzo",
-        src: "/players/mii.jpg",
+        src: "/players/Alfonzo.jpg",
         color: "Blue",
         gp: 10,
         captain: false,
@@ -36,7 +36,7 @@ export const players: Player[] = [
     },
     {
         name: "Antenna",
-        src: "/players/mii.jpg",
+        src: "/players/Antenna.jpg",
         color: "Red",
         gp: 10,
         captain: false,
@@ -86,8 +86,16 @@ export const players: Player[] = [
         mii: false,
     },
     {
+        name: "Barry",
+        src: "/players/Barry.jpg",
+        color: "Blue",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Bertha",
-        src: "/players/mii.jpg",
+        src: "/players/Bertha.jpg",
         color: "Light Green",
         gp: 10,
         captain: false,
@@ -95,6 +103,14 @@ export const players: Player[] = [
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
+    },
+    {
+        name: "Betty White",
+        src: "/players/Betty White.jpg",
+        color: "Light Blue",
+        gp: 0,
+        captain: false,
+        mii: true,
     },
     {
         name: "Birdo",
@@ -193,7 +209,7 @@ export const players: Player[] = [
     },
     {
         name: "Bob Marley",
-        src: "/players/mii.jpg",
+        src: "/players/Bob Marley.jpg",
         color: "Green",
         gp: 10,
         captain: false,
@@ -252,7 +268,7 @@ export const players: Player[] = [
     },
     {
         name: "Broseph",
-        src: "/players/mii.jpg",
+        src: "/players/Broseph.jpg",
         color: "Light Green",
         gp: 10,
         captain: false,
@@ -273,18 +289,26 @@ export const players: Player[] = [
         ]
     },
     {
-        name: "Claudius",
-        src: "/players/mii.jpg",
-        color: "Black",
+        name: "Cascade",
+        src: "/players/Cascade.jpg",
+        color: "Blue",
         gp: 0,
         captain: false,
         mii: true,
     },
     {
         name: "Chungy",
-        src: "/players/mii.jpg",
+        src: "/players/Chungy.jpg",
         color: "Yellow",
         gp: 10,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Claudius",
+        src: "/players/Claudius.jpg",
+        color: "Black",
+        gp: 0,
         captain: false,
         mii: true,
     },
@@ -302,7 +326,7 @@ export const players: Player[] = [
     },
     {
         name: "Danny B",
-        src: "/players/mii.jpg",
+        src: "/players/Danny B.jpg",
         color: "White",
         gp: 9,
         captain: false,
@@ -323,7 +347,7 @@ export const players: Player[] = [
     },
     {
         name: "Diddler",
-        src: "/players/mii.jpg",
+        src: "/players/Diddler.jpg",
         color: "Blue",
         gp: 10,
         captain: false,
@@ -377,7 +401,7 @@ export const players: Player[] = [
     },
     {
         name: "Entity 404",
-        src: "/players/mii.jpg",
+        src: "/players/Entity 404.jpg",
         color: "Black",
         gp: 9,
         captain: false,
@@ -413,7 +437,7 @@ export const players: Player[] = [
     },
     {
         name: "Geek Squad",
-        src: "/players/mii.jpg",
+        src: "/players/Geek Squad.jpg",
         color: "Green",
         gp: 10,
         captain: false,
@@ -424,7 +448,7 @@ export const players: Player[] = [
     },
     {
         name: "Ghislaine",
-        src: "/players/mii.jpg",
+        src: "/players/Ghislaine.jpg",
         color: "Purple",
         gp: 0,
         captain: false,
@@ -440,7 +464,7 @@ export const players: Player[] = [
     },
     {
         name: "Gramms",
-        src: "/players/mii.jpg",
+        src: "/players/Gramms.jpg",
         color: "Brown",
         gp: 10,
         captain: false,
@@ -448,7 +472,7 @@ export const players: Player[] = [
     },
     {
         name: "Gramps",
-        src: "/players/mii.jpg",
+        src: "/players/Gramps.jpg",
         color: "White",
         gp: 9,
         captain: false,
@@ -464,7 +488,7 @@ export const players: Player[] = [
     },
     {
         name: "Grayson McKean",
-        src: "/players/mii.jpg",
+        src: "/players/Grayson McKean.jpg",
         color: "Pink",
         gp: 10,
         captain: false,
@@ -541,16 +565,8 @@ export const players: Player[] = [
         mii: false,
     },
     {
-        name: "Guest E",
-        src: "/players/mii.jpg",
-        color: "Light Blue",
-        gp: 0,
-        captain: false,
-        mii: true,
-    },
-    {
         name: "Hamburger",
-        src: "/players/mii.jpg",
+        src: "/players/Hamburger.jpg",
         color: "Yellow",
         gp: 10,
         captain: false,
@@ -575,7 +591,7 @@ export const players: Player[] = [
     },
     {
         name: "Jack White",
-        src: "/players/mii.jpg",
+        src: "/players/Jack White.jpg",
         color: "Red",
         gp: 10,
         captain: false,
@@ -583,7 +599,7 @@ export const players: Player[] = [
     },
     {
         name: "Jesstithyn",
-        src: "/players/mii.jpg",
+        src: "/players/Jesstithyn.jpg",
         color: "Pink",
         gp: 10,
         captain: false,
@@ -594,7 +610,7 @@ export const players: Player[] = [
     },
     {
         name: "John Daly",
-        src: "/players/mii.jpg",
+        src: "/players/John Daly.jpg",
         color: "Light Green",
         gp: 0,
         captain: false,
@@ -602,7 +618,7 @@ export const players: Player[] = [
     },
     {
         name: "Justin Nascimento",
-        src: "/players/mii.jpg",
+        src: "/players/Justin Nascimento.jpg",
         color: "Brown",
         gp: 0,
         captain: false,
@@ -610,7 +626,7 @@ export const players: Player[] = [
     },
     {
         name: "Kimmy",
-        src: "/players/mii.jpg",
+        src: "/players/Kimmy.jpg",
         color: "Red",
         gp: 0,
         captain: false,
@@ -659,7 +675,7 @@ export const players: Player[] = [
     },
     {
         name: "Larry Cuc",
-        src: "/players/mii.jpg",
+        src: "/players/Larry Cuc.jpg",
         color: "Green",
         gp: 0,
         captain: false,
@@ -699,7 +715,7 @@ export const players: Player[] = [
     },
     {
         name: "Michelle Obama",
-        src: "/players/mii.jpg",
+        src: "/players/Michelle Obama.jpg",
         color: "Purple",
         gp: 0,
         captain: false,
@@ -707,7 +723,7 @@ export const players: Player[] = [
     },
     {
         name: "MLK",
-        src: "/players/mii.jpg",
+        src: "/players/MLK.jpg",
         color: "Red",
         gp: 10,
         captain: false,
@@ -730,7 +746,7 @@ export const players: Player[] = [
     },
     {
         name: "Nose",
-        src: "/players/mii.jpg",
+        src: "/players/Nose.jpg",
         color: "Orange",
         gp: 5,
         captain: false,
@@ -883,7 +899,7 @@ export const players: Player[] = [
     },
     {
         name: "Reshiram",
-        src: "/players/mii.jpg",
+        src: "/players/Reshiram.jpg",
         color: "Orange",
         gp: 0,
         captain: false,
@@ -891,7 +907,7 @@ export const players: Player[] = [
     },
     {
         name: "Sabrina",
-        src: "/players/mii.jpg",
+        src: "/players/Sabrina.jpg",
         color: "Pink",
         gp: 10,
         captain: false,
@@ -899,23 +915,15 @@ export const players: Player[] = [
     },
     {
         name: "Sebesta",
-        src: "/players/mii.jpg",
+        src: "/players/Sebesta.jpg",
         color: "White",
         gp: 0,
         captain: false,
         mii: true,
     },
     {
-        name: "Shaq",
-        src: "/players/mii.jpg",
-        color: "Blue",
-        gp: 0,
-        captain: false,
-        mii: true,
-    },
-    {
         name: "Tate McRae",
-        src: "/players/mii.jpg",
+        src: "/players/Tate McRae.jpg",
         color: "Orange",
         gp: 4,
         captain: false,
@@ -953,7 +961,7 @@ export const players: Player[] = [
     },
     {
         name: "Triangle",
-        src: "/players/mii.jpg",
+        src: "/players/Triangle.jpg",
         color: "Light Blue",
         gp: 0,
         captain: false,
@@ -1048,7 +1056,7 @@ export const players: Player[] = [
     },
     {
         name: "Zekrom",
-        src: "/players/mii.jpg",
+        src: "/players/Zekrom.jpg",
         color: "Yellow",
         gp: 0,
         captain: false,

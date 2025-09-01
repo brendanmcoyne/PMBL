@@ -575,7 +575,7 @@ export const stats: Stat[] = [
         running: 5,
     },
     {
-        name: "Shaq",
+        name: "Cascade",
         batting: 5,
         pitching: 5,
         fielding: 5,
@@ -737,6 +737,20 @@ export const stats: Stat[] = [
     },
     {
         name: "Justin Nascimento",
+        batting: 5,
+        pitching: 5,
+        fielding: 5,
+        running: 5,
+    },
+    {
+        name: "Barry",
+        batting: 5,
+        pitching: 5,
+        fielding: 5,
+        running: 5,
+    },
+    {
+        name: "Betty White",
         batting: 5,
         pitching: 5,
         fielding: 5,

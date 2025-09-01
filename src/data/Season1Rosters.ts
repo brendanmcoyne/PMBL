@@ -119,7 +119,7 @@ export const rosters: Roster[] = [
             { name: "Toadsworth" },
             { name: "Baby Peach" },
             { name: "MLK" },
-            { name: "Shaq" },
+            { name: "Cascade" },
             { name: "Sabrina" },
             { name: "Blue Noki" },
             { name: "Wario" }
