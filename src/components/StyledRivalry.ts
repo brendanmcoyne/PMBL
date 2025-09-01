@@ -15,7 +15,7 @@ export const Rivalry = styled.div`
     @media screen and (max-width: 900px) {
         width: clamp(310px, 95%, 500px);
         max-width: 100%;     
-        margin: 0.5rem auto;
+        margin: 0.5rem;
         overflow-x: hidden;  
     }
 `;
