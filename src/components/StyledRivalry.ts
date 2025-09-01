@@ -13,9 +13,8 @@ export const Rivalry = styled.div`
     align-items: center;
 
     @media screen and (max-width: 900px) {
-        width: 90%;       
-        max-width: 500px;
-        margin: .5rem auto;
+        width: clamp(280px, 95%, 500px);
+        margin: 0.5rem auto;
     }
 `;
 
