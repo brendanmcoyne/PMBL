@@ -39,11 +39,13 @@ export const Story = styled.div<{ $animate?: boolean }>`
             transform: none;
         }
     }
-    @media screen and (max-width: 750px) {
-        width: 90%;       
-        height: auto;    
-        aspect-ratio: 4 / 3; 
+    @media screen and (max-width: 900px) {
+        width: 90%;       /* fill most of screen */
+        margin: 1rem auto; /* centered */
+        height: auto;
+        aspect-ratio: 4/3;
     }
+    
     ${({ $animate }) =>
             $animate &&
             css`
@@ -58,7 +60,7 @@ export const GenImage = styled.img`
     object-fit: cover;
     filter: brightness(65%);
     @media screen and (max-width: 750px) {
-        width: 300px;
+        width: 320px;
     }
 `;
 
@@ -71,8 +73,9 @@ export const Headline = styled.h2`
     padding: 0.75rem 1.25rem;
     max-width: 100%;
     margin: 0 auto;
-    @media screen and (max-width: 1000px) {
-        font-size: 1.7rem;
+    @media screen and (max-width: 750px) {
+        font-size: 1.2rem;  /* ✅ smaller for iPhone */
+        line-height: 1.3;
     }
 `;
 
