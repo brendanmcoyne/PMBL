@@ -53,7 +53,7 @@ const DivisionSection = styled.div`
 export const ContentDiv = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
     width: 100%;
     font-size: calc(0.5rem + 1vw);
