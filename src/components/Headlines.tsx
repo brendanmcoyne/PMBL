@@ -26,6 +26,7 @@ export const ContentDiv = styled.div`
 
 export const Story = styled.div<{ $animate?: boolean }>`
     position: relative;
+    align-items: center;
     width: 100%;
     height: 400px;
     border-radius: 15px;
@@ -40,7 +41,7 @@ export const Story = styled.div<{ $animate?: boolean }>`
     }
     @media screen and (max-width: 600px) {
         height: 250px;
-        width: 300px;
+        width: 290px;
         margin: 0.75rem 0;
     }
     ${({ $animate }) =>
