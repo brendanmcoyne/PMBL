@@ -46,7 +46,7 @@ export const Story = styled.div<{ $animate?: boolean }>`
     }
     @media screen and (max-width: 900px) {
         height: 200px;
-        width: 95%;
+        width: 100%;
         border-radius: 5px;
     }
     
@@ -65,7 +65,7 @@ export const GenImage = styled.img`
     filter: brightness(65%);
     @media screen and (max-width: 750px) {
         width: 350px;
-        display: block;
+        display: inline-block;
     }
 `;
 
