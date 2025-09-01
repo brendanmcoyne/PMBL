@@ -13,10 +13,11 @@ export const Rivalry = styled.div`
     align-items: center;
 
     @media screen and (max-width: 900px) {
-        width: 100%;
+        width: calc(100% - 1rem); /* 0.5rem margin on each side */
         max-width: none;
-        margin: 0.5rem 0; 
-        border-radius: 0;  
+        margin: 0.5rem auto;
+        padding: 1rem;             /* shrink padding for small screens */
+        border-radius: 12px;       /* keep slight rounding */
     }
 `;
 
