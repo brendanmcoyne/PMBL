@@ -66,7 +66,7 @@ const StyledMiniHeader = styled.h3`
     color: white;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4.5rem;
-    margin: 0;
+    margin: 1rem 0 0 0;
 
     @media screen and (max-width: 600px) {
         font-size: 2.5rem;
@@ -445,7 +445,7 @@ export default function Managers() {
             </Rivalry>
             <Rivalry style={{alignItems: "center"}}>
                 <RivalryTitle>Middlesex Matchups</RivalryTitle>
-                <StyledMiniHeader style={{fontSize: "2.5rem"}}>
+                <StyledMiniHeader style={{fontSize: "1.9rem"}}>
                     <span style={{ color: "#F1C232"}}>James</span>,
                     <span style={{ color: "#CC0000"}}>{' '}Brendan</span>,
                     <span style={{ color: "#FF00FF"}}>{' '}Morgan</span>

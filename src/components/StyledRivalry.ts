@@ -13,9 +13,10 @@ export const Rivalry = styled.div`
     align-items: center;
 
     @media screen and (max-width: 900px) {
-        width: 100%;         
-        max-width: 600px;    
-        margin: 0.5rem auto;
+        width: 100%;
+        max-width: none;
+        margin: 0.5rem 0; 
+        border-radius: 0;  
     }
 `;
 
@@ -80,6 +81,7 @@ export const VersusRow = styled.div`
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2rem;
     padding: 2px 14px;
+    margin-top: .5rem;
     margin-bottom: 0;
     color: white;
     @media screen and (max-width: 600px) {
