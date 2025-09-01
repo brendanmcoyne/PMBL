@@ -46,7 +46,8 @@ export const Story = styled.div<{ $animate?: boolean }>`
     }
     @media screen and (max-width: 900px) {
         height: 200px;
-        width: 90%;
+        width: 95%;
+        border-radius: 5px;
     }
     
     ${({ $animate }) =>
@@ -63,7 +64,7 @@ export const GenImage = styled.img`
     object-fit: cover;
     filter: brightness(65%);
     @media screen and (max-width: 750px) {
-        width: 320px;
+        width: 340px;
     }
 `;
 
@@ -77,7 +78,7 @@ export const Headline = styled.h2`
     max-width: 100%;
     margin: 0 auto;
     @media screen and (max-width: 750px) {
-        font-size: 1.2rem;  /* ✅ smaller for iPhone */
+        font-size: 1.2rem;  
         line-height: 1.3;
     }
 `;
