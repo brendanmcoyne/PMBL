@@ -334,7 +334,7 @@ export default function CurrentSeason() {
                                 borderBottom: "1px solid #444",
                                 paddingBottom: "0.5rem"
                             }}>
-                            <span style={{ flex: 1, color: game.awaycolor, fontWeight: "bold", textAlign: "left", fontSize: "1.23rem" }}>
+                            <span style={{ flex: 1, color: game.awaycolor, fontWeight: "bold", textAlign: "left"}}>
                                 {game.away || "TBD"}
                             </span>
                                 <div style={{flex: 1, textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", fontSize: "1.2rem"}}>
@@ -343,7 +343,7 @@ export default function CurrentSeason() {
                                         {game.score || "0-0"}
                                     </span>
                                 </div>
-                            <span style={{ flex: 1, color: game.homecolor, fontWeight: "bold", textAlign: "right", fontSize: "1.23rem" }}>
+                            <span style={{ flex: 1, color: game.homecolor, fontWeight: "bold", textAlign: "right"}}>
                                 {game.home || "TBD"}
                             </span>
                             </div>
