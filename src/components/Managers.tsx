@@ -2,6 +2,8 @@ import { managers } from "../data/ManagerNotes.ts";
 import type { Manager } from "../data/ManagerNotes.ts";
 import { rosters } from "../data/Season1Rosters.ts";
 import type { Roster } from "../data/Season1Rosters.ts";
+import { rosters2 } from "../data/Season2Rosters.ts";
+import type { Roster2 } from "../data/Season2Rosters.ts";
 import { StyledHeader } from "../components/CommonStyles.ts";
 import {styled, css, keyframes} from 'styled-components';
 import { useEffect, useState } from 'react';
@@ -308,8 +310,16 @@ export default function Managers() {
 
     const sortedManagers: Manager[] = [...managers];
 
-    const getRosterForManager = (managerName: string): Roster | undefined => {
-        return rosters.find((r) => r.manager === managerName);
+    const getRosterForManager = (managerName: string, oldName?: string): Roster | undefined => {
+        return rosters.find(
+            (r) => r.manager === managerName || (oldName && r.manager === oldName)
+        );
+    };
+
+    const getRosterForManagerS2 = (managerName: string, oldName?: string): Roster2 | undefined => {
+        return rosters2.find(
+            (r) => r.manager === managerName || (oldName && r.manager === oldName)
+        );
     };
 
     const [ready, setReady] = useState(false);
@@ -338,11 +348,11 @@ export default function Managers() {
                                 background:
                                     manager.name === "Brendan"
                                         ? "linear-gradient(100deg, rgba(204, 0, 0, 1) 20%, rgba(204, 0, 0, .2) 100%)"
-                                        : manager.name === "Justin"
+                                        : manager.name === "Justave"
                                             ? "linear-gradient(100deg, rgba(255, 153, 0, 1) 20%, rgba(255, 153, 0, .2) 100%)"
                                             : manager.name === "James"
                                                 ? "linear-gradient(100deg, rgba(241, 194, 50, 1) 20%, rgba(241, 194, 50, .2) 100%)"
-                                                : manager.name === "Matt"
+                                                : manager.name === "Marge"
                                                     ? "linear-gradient(100deg, rgba(106, 168, 79, 1) 20%, rgba(0, 255, 0, .2) 100%)"
                                                     : ""
                             }}>
@@ -368,11 +378,11 @@ export default function Managers() {
                                 background:
                                     manager.name === "Isaac"
                                         ? "linear-gradient(100deg, rgba(53, 134, 232, 1) 20%, rgba(53, 134, 232, .2) 100%)"
-                                        : manager.name === "Christach"
+                                        : manager.name === "Trocean"
                                             ? "linear-gradient(100deg, rgba(153, 0, 255, 1) 20%, rgba(153, 0, 255, .2) 100%)"
                                             : manager.name === "Morgan"
                                                 ? "linear-gradient(100deg, rgba(255, 0, 255, 1) 20%, rgba(255, 0, 255, .2) 100%)"
-                                                : manager.name === "DANdrew"
+                                                : manager.name === "THANdrew"
                                                     ? "linear-gradient(100deg, rgba(153, 153, 153, 1) 20%, rgba(153, 153, 153, .2) 100%)"
                                                     : manager.color
                             }}>
@@ -473,11 +483,16 @@ export default function Managers() {
                             </div>
                             {activeModalTab === "info" && (
                                 <div>
-                                    <ModalManagerName>{selectedManager.name}</ModalManagerName>
+                                    <ModalManagerName style={{marginBottom: "0"}}>{selectedManager.name}</ModalManagerName>
+                                    {selectedManager.oldname && (
+                                        <p style={{ fontSize: "1rem", color: "#555", marginTop: "0", fontStyle: "italic", alignItems: "center" }}>
+                                            (formerly {selectedManager.oldname})
+                                        </p>
+                                    )}
                                     <ModalTopLayout>
                                         <ModalLeft>
                                             <ModalImage src={selectedManager.src} alt="photo"/>
-                                            <img src={selectedManager.s1banner} alt="banner"/>
+                                            <img src={selectedManager.s2banner} alt="banner"/>
                                         </ModalLeft>
                                         <ModalRight>
                                             <StatCard>Record: {selectedManager.record}</StatCard>
@@ -490,37 +505,80 @@ export default function Managers() {
                             )}
 
                             {activeModalTab === "roster" && (
-                                <div style={{color: "#303030"}}>
-                                    <StyledMiniHeader style={{color: "#303030"}}>Season 1 Roster</StyledMiniHeader>
-                                    {getRosterForManager(selectedManager.name)?.accolades && (
-                                        <div style={{display: "flex", flexDirection: "column", gap: "8px", marginBottom: "10px"}}>
-                                            {getRosterForManager(selectedManager.name)?.accolades?.map((acc) => (
-                                                <div key={acc.type} style={{
-                                                    backgroundColor: acc.color,
-                                                    color: "white",
-                                                    padding: "4px",
-                                                    borderRadius: "8px",
-                                                    fontWeight: "bold"
-                                                }}>{acc.type}</div>
-                                            ))}
-                                        </div>
-                                    )}
-                                    <p style={{fontWeight: "bold", marginBottom: "0.4rem"}}>
-                                        <strong>Captain:</strong> {getRosterForManager(selectedManager.name)?.captain}
-                                    </p>
-                                    <img src={selectedManager.s1banner} alt="banner"/>
-                                    <ul style={{listStyleType: "none", padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.3rem",}}>
-                                        {getRosterForManager(selectedManager.name)?.roster.map((player) => (
-                                            <li key={player.name} style={{
-                                                background: "#e3e3e3",
-                                                padding: "6px 10px",
-                                                borderRadius: "6px",
-                                                fontWeight: "500",
-                                            }}>
-                                                {player.name}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                <div style={{ color: "#303030" }}>
+                                    <StyledMiniHeader style={{ color: "#303030" }}>Season 1 Roster</StyledMiniHeader>
+                                    {(() => {
+                                        const roster = getRosterForManager(selectedManager.name, selectedManager.oldname);
+
+                                        if (!roster) {
+                                            return <p>No Season 1 roster available.</p>;
+                                        }
+                                        return (
+                                            <>
+                                                {roster.accolades && (
+                                                    <div style={{display: "flex", flexDirection: "column", gap: "8px", marginBottom: "10px",}}>
+                                                        {roster.accolades.map((acc) => (
+                                                            <div key={acc.type} style={{backgroundColor: acc.color, color: "white",
+                                                                padding: "4px", borderRadius: "8px", fontWeight: "bold",}}>{acc.type}</div>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                                <p style={{ fontWeight: "bold", marginBottom: "0.4rem" }}><strong>Captain:</strong> {roster.captain}</p>
+                                                <img src={selectedManager.s1banner} alt="banner" />
+                                                <ul style={{listStyleType: "none", padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.3rem",}}>
+                                                    {roster.roster.map((player) => (
+                                                        <li key={player.name} style={{background: "#e3e3e3", padding: "6px 10px",
+                                                            borderRadius: "6px", fontWeight: "500",}}>{player.name}</li>
+                                                    ))}
+                                                </ul>
+                                            </>
+                                        );
+                                    })()}
+                                    <StyledMiniHeader style={{ color: "#303030", marginTop: "1.5rem" }}>
+                                        Season 2 Roster
+                                    </StyledMiniHeader>
+
+                                    {(() => {
+                                        const roster2 = getRosterForManagerS2(selectedManager.name, selectedManager.oldname);
+
+                                        if (!roster2) {
+                                            return <p>No Season 2 roster available.</p>;
+                                        }
+
+                                        return (
+                                            <>
+                                                <p style={{ fontWeight: "bold", marginBottom: "0.4rem" }}>
+                                                    <strong>Captain:</strong> {roster2.captain}
+                                                </p>
+
+                                                <img src={selectedManager.s2banner} alt="banner" />
+
+                                                <ul
+                                                    style={{
+                                                        listStyleType: "none",
+                                                        padding: 0,
+                                                        display: "grid",
+                                                        gridTemplateColumns: "1fr 1fr",
+                                                        gap: "0.3rem",
+                                                    }}
+                                                >
+                                                    {roster2.roster.map((player) => (
+                                                        <li
+                                                            key={player.name}
+                                                            style={{
+                                                                background: "#e3e3e3",
+                                                                padding: "6px 10px",
+                                                                borderRadius: "6px",
+                                                                fontWeight: "500",
+                                                            }}
+                                                        >
+                                                            {player.name}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </>
+                                        );
+                                    })()}
                                 </div>
                             )}
                         </ModalScrollWrapper>

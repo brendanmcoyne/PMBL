@@ -1,5 +1,6 @@
 export type Manager = {
     name: string;
+    oldname?: string;
     emblem: string;
     src: string;
     color: string;
@@ -9,13 +10,14 @@ export type Manager = {
     playoffs?: number;
     champs?: number;
     s1banner: string;
+    s2banner: string;
 }
 
 export const managers: Manager[] = [
 
     {
         name: "Brendan",
-        emblem: "/emblems/MSS-Emblem-DKWilds.webp",
+        emblem: "/emblems/MSS-Emblem-BowserMonsters.webp",
         src: "/managers/Brendan.JPEG",
         color: "#CC0000",
         record: "7 - 3",
@@ -24,11 +26,13 @@ export const managers: Manager[] = [
         divships: 1,
         champs: 0,
         s1banner: "/banners/DKWilds-MSS.webp",
+        s2banner: "/banners/BowserMonsters-MSS.webp",
     },
     {
-        name: "Justin",
+        name: "Justave",
+        oldname: "Justin",
         emblem: "/emblems/MSS-Emblem-LuigiKnights.webp",
-        src: "/managers/Justin.jpg",
+        src: "/managers/Justave.jpg",
         color: "#FF9900",
         record: "6 - 4",
         division: "East",
@@ -36,10 +40,11 @@ export const managers: Manager[] = [
         divships: 0,
         champs: 0,
         s1banner: "/banners/LuigiKnights-MSS.webp",
+        s2banner: "/banners/LuigiKnights-MSS.webp"
     },
     {
         name: "James",
-        emblem: "/emblems/MSS-Emblem-BowserMonsters.webp",
+        emblem: "/emblems/MSS-Emblem-BirdoBows.webp",
         src: "/managers/James.JPG",
         color: "#F1C232",
         record: "6 - 4",
@@ -48,11 +53,13 @@ export const managers: Manager[] = [
         divships: 0,
         champs: 1,
         s1banner: "/banners/BowserMonsters-MSS.webp",
+        s2banner: "/banners/BirdoBows-MSS.webp",
     },
     {
-        name: "Matt",
-        emblem: "/emblems/MSS-Emblem-YoshiEggs.webp",
-        src: "/managers/Matt.jpg",
+        name: "Marge",
+        oldname: "Matt",
+        emblem: "/emblems/MSS-Emblem-PeachMonarchs.png",
+        src: "/managers/Marge.jpg",
         color: "#6AA84F",
         record: "4 - 6",
         division: "East",
@@ -60,10 +67,11 @@ export const managers: Manager[] = [
         divships: 0,
         champs: 0,
         s1banner: "/banners/YoshiEggs-MSS.webp",
+        s2banner: "/banners/PeachMonarchs-MSS.webp",
     },
     {
         name: "Isaac",
-        emblem: "/emblems/MSS-Emblem-MarioFireballs.png",
+        emblem: "/emblems/MSS-Emblem-DKWilds.webp",
         src: "/managers/Isaac.jpg",
         color: "#3586E8",
         record: "4 - 6",
@@ -72,11 +80,13 @@ export const managers: Manager[] = [
         divships: 0,
         champs: 0,
         s1banner: "/banners/MarioFireballs-MSS.webp",
+        s2banner: "/banners/DKWilds-MSS.webp",
     },
     {
-        name: "Christach",
-        emblem: "/emblems/MSS-Emblem-PeachMonarchs.png",
-        src: "/managers/Christach.jpg",
+        name: "Trocean",
+        oldname: "Christach",
+        emblem: "/emblems/MSS-Emblem-MarioFireballs.png",
+        src: "/managers/Trocean.jpg",
         color: "#9900FF",
         record: "3 - 7",
         division: "West",
@@ -84,6 +94,7 @@ export const managers: Manager[] = [
         divships: 0,
         champs: 0,
         s1banner: "/banners/PeachMonarchs-MSS.webp",
+        s2banner: "/banners/MarioFireballs-MSS.webp",
     },
     {
         name: "Morgan",
@@ -96,11 +107,13 @@ export const managers: Manager[] = [
         divships: 1,
         champs: 0,
         s1banner: "/banners/DiddyMonkeys-MSS.webp",
+        s2banner: "/banners/DiddyMonkeys-MSS.webp",
     },
     {
-        name: "DANdrew",
+        name: "THANdrew",
+        oldname: "DANdrew",
         emblem: "/emblems/MSS-Emblem-WaluigiSpitballs.webp",
-        src: "/managers/Andrew.jpg",
+        src: "/managers/THANdrew.jpg",
         color: "#999999",
         record: "5 - 5",
         division: "West",
@@ -108,6 +121,7 @@ export const managers: Manager[] = [
         divships: 0,
         champs: 0,
         s1banner: "/banners/WaluigiSpitballs-MSS.webp",
+        s2banner: "/banners/WaluigiSpitballs-MSS.webp",
     },
 
 
