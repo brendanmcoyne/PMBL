@@ -98,7 +98,7 @@ export const managers: Manager[] = [
     },
     {
         name: "Morgan",
-        emblem: "/emblems/MSS-Emblem-DiddyMonkeys.webp",
+        emblem: "/emblems/MSS-Emblem-DaisyFlowers.webp",
         src: "/managers/Morgan.jpg",
         color: "#FF00FF",
         record: "5 - 5",

@@ -117,6 +117,13 @@ export default function Players() {
             <StyledMiniHeader $animate={ready}>Featuring all the top baseball stories!</StyledMiniHeader>
             <SeparatorLine $animate={ready}/>
             <Story $animate={ready}>
+                <GenImage src="/draft.jpg" alt="Draft" />
+                <Overlay>
+                    <Headline>Season 2 Draft Recap</Headline>
+                    <StyledLink to="/headlines/DraftRecap">Click to read more!</StyledLink>
+                </Overlay>
+            </Story>
+            <Story $animate={ready}>
                 <GenImage src="/miibaseball.jpg" alt="Miis" />
                 <Overlay>
                     <Headline>Head Analyst Predicts Mii Breakout Season</Headline>

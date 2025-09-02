@@ -36,6 +36,7 @@ import Draft2 from "./components/seasons/Season2/Draft.tsx";
 import Koopa from "./components/headlines/Koopa.tsx";
 import DryBones from "./components/headlines/DryBones.tsx";
 import MiiBreakout from "./components/headlines/MiiBreakout.tsx";
+import DraftRecap from "./components/headlines/DraftRecap.tsx";
 
 
 const MainContent = styled.div`
@@ -165,6 +166,7 @@ function Root() {
                     <Route path="/headlines/Koopa" element={<Koopa />} />
                     <Route path="/headlines/DryBones" element={<DryBones />} />
                     <Route path="/headlines/MiiBreakout" element={<MiiBreakout />} />
+                    <Route path="/headlines/DraftRecap" element={<DraftRecap />} />
                 </Routes>
             </MainContent>
             <Footer/>

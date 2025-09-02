@@ -90,6 +90,15 @@ export default function Koopa() {
             <StoryDiv>
                 <Stories>
                     <Story>
+                        <MiniImage src="/draft.jpg" alt="Draft" />
+                        <Overlay>
+                            <Headline>Season 2 Draft Recap</Headline>
+                            <StyledLink to="/headlines/DraftRecap">Click to read more!</StyledLink>
+                        </Overlay>
+                    </Story>
+                </Stories>
+                <Stories>
+                    <Story>
                         <MiniImage src="/miibaseball.jpg" alt="Mii" />
                         <Overlay>
                             <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
@@ -97,7 +106,6 @@ export default function Koopa() {
                         </Overlay>
                     </Story>
                 </Stories>
-
                 <Stories>
                     <Story>
                         <MiniImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />

@@ -194,8 +194,8 @@ const Draft1 = () => {
                         <StyledPlayer>Michelle Obama</StyledPlayer>
                     </Trade>
                     <TradeArrow>⇄</TradeArrow>
-                    <Trade style={{border: "1px solid #FF00FF"}}>
-                        <StyledManager style={{color: "#FF00FF"}}>Trocean Receives:</StyledManager>
+                    <Trade style={{border: "1px solid #9900FF"}}>
+                        <StyledManager style={{color: "#9900FF"}}>Trocean Receives:</StyledManager>
                         <StyledPlayer>Sabrina</StyledPlayer>
                     </Trade>
                 </StyledTrade>
