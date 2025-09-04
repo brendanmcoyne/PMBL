@@ -71,8 +71,8 @@ const Td = styled.td`
 
 export default function Game() {
     const game = {
-        away: { name: "Morgan", color: "#FF00FF", manager: "Morgan", record: "0-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0 },
-        home: { name: "James", color: "#F1C232", manager: "James", record: "0-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0 },
+        away: { name: "Marge", color: "#6AA84F", manager: "Marge", record: "1-0", scores: [0, 0, 0, 0, 4, 0, 0, 0, 0, 1, 1], R: 6, H: 22, E: 0, LOB: 0},
+        home: { name: "Trocean", color: "#9900FF", manager: "Trocean", record: "0-1", scores: [0, 0, 1, 0, 3, 0, 0, 0, 0, 1, 0], R: 5, H: 20, E: 0, LOB: 0 },
     };
 
     {/*
@@ -91,14 +91,14 @@ export default function Game() {
             <TeamsRow>
                 <TeamColumn>
                     <TeamLabel>Away Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-DaisyFlowers.webp" alt={`${game.away.name} logo`} />
+                    <Logo src="/emblems/MSS-Emblem-PeachMonarchs.png" alt={`${game.away.name} logo`} />
                     <Manager style={{color: game.away.color}}>{game.away.manager}</Manager>
                     <Record>({game.away.record})</Record>
                 </TeamColumn>
                 <p style={{margin: "0", transform: "translateY(-10px)", fontFamily: "'Luckiest Guy', cursive", fontSize: "3rem"}}>vs</p>
                 <TeamColumn>
                     <TeamLabel>Home Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-BirdoBows.webp" alt={`${game.home.name} logo`} />
+                    <Logo src="/emblems/MSS-Emblem-MarioFireballs.png" alt={`${game.home.name} logo`} />
                     <Manager style={{color: game.home.color}}>{game.home.manager}</Manager>
                     <Record>({game.home.record})</Record>
                 </TeamColumn>
@@ -108,7 +108,7 @@ export default function Game() {
                 <thead>
                 <tr>
                     <Th>Team</Th>
-                    {[...Array(7)].map((_, i) => <Th key={i}>{i + 1}</Th>)}
+                    {[...Array(11)].map((_, i) => <Th key={i}>{i + 1}</Th>)}
                     <Th>R</Th>
                     <Th>H</Th>
                     <Th>E</Th>
@@ -132,7 +132,7 @@ export default function Game() {
                 </tbody>
             </ScoreTable>
             <h4 style={{ marginTop: "0", marginBottom: "0.75rem" }}>
-                Location: <span style={{ color: "" }}>TBD</span>
+                Location: <span style={{ color: "#FF4F4F" }}>Mario Stadium</span>
             </h4>
 
             {/*
