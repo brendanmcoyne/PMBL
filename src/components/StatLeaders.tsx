@@ -97,7 +97,15 @@ export default function StatLeadersMini() {
 
     const getTopPlayers = (data: StatRow[], stat: string, isLowerBetter = false) => {
         return [...data]
-            .filter(row => row[stat] && row[stat].trim() !== "")
+            .filter(row => {
+                if (!row[stat] || row[stat].trim() === "") return false;
+                if (stat === "ERA") {
+                    const games = rowToNumber(row["G"]);
+                    if (games < 1) return false;
+                }
+
+                return true;
+            })
             .sort((a, b) => {
                 const valA = rowToNumber(a[stat]);
                 const valB = rowToNumber(b[stat]);
