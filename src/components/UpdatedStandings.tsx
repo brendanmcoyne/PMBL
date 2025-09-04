@@ -207,19 +207,21 @@ export default function UpdatedStandings() {
                                         "era",
                                         "whip",
                                     ];
-                                    if (decimalStats.includes(header.toLowerCase())) {
-                                        const numValue = parseFloat(display as string);
-                                        if (!isNaN(numValue))
-                                            display = numValue.toFixed(3);
+
+                                    const lowerHeader = header.toLowerCase();
+                                    const numValue = parseFloat(display as string);
+
+                                    if (decimalStats.includes(lowerHeader)) {
+                                        if (!isNaN(numValue)) display = numValue.toFixed(3);
+                                    } else if (lowerHeader === "ip") {
+                                        // Innings pitched → show 1 decimal place
+                                        if (!isNaN(numValue)) display = numValue.toFixed(1);
                                     } else {
-                                        const numValue = parseFloat(display as string);
-                                        if (!isNaN(numValue))
-                                            display = Math.round(numValue);
+                                        if (!isNaN(numValue)) display = Math.round(numValue);
                                     }
 
                                     const cellStyle: React.CSSProperties = {
-                                        color:
-                                            sortConfig?.key === header ? "gold" : "#fff",
+                                        color: sortConfig?.key === header ? "gold" : "#fff",
                                     };
 
                                     return (
