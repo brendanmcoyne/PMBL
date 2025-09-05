@@ -199,6 +199,18 @@ const Draft1 = () => {
                         <StyledPlayer>Sabrina</StyledPlayer>
                     </Trade>
                 </StyledTrade>
+
+                <StyledTrade>
+                    <Trade style={{border: "1px solid #3586E8"}}>
+                        <StyledManager style={{color: "#3586E8"}}>Isaac Receives:</StyledManager>
+                        <StyledPlayer>Brown Kritter</StyledPlayer>
+                    </Trade>
+                    <TradeArrow>⇄</TradeArrow>
+                    <Trade style={{border: "1px solid #999999"}}>
+                        <StyledManager style={{color: "#999999"}}>THANdrew Receives:</StyledManager>
+                        <StyledPlayer>Red Kritter</StyledPlayer>
+                    </Trade>
+                </StyledTrade>
             </AllTradesWrapper>
         </ContentDiv>
     );
