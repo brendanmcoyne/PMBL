@@ -162,10 +162,10 @@ export default function CurrentSeason() {
     const [round, setRound] = useState<'Conference Series' | 'World Series'>('Conference Series');
 
     const eastTeams = [
+        { name: 'Justave', color: "#FF9900", record: '1-0', divRecord: '1-0' },
         { name: 'James', color: "#F1C232", record: '1-0', divRecord: '0-0' },
         { name: 'Marge', color: "#6AA84F", record: '1-0', divRecord: '0-0' },
-        { name: 'Justave', color: "#FF9900", record: '0-0', divRecord: '0-0' },
-        { name: 'Brendan', color: "#CC0000", record: '0-0', divRecord: '0-0' },
+        { name: 'Brendan', color: "#CC0000", record: '0-1', divRecord: '0-1' },
     ];
 
     const westTeams = [
@@ -178,7 +178,7 @@ export default function CurrentSeason() {
     const Week1 = [
         { matchup: 1, away: "Morgan", awaycolor: "#FF00FF", home: "James", homecolor: "#F1C232", score: "3-9"},
         { matchup: 2, away: "Marge", awaycolor: "#6AA84F", home: "Trocean", homecolor: "#9900FF", score: "6-5"},
-        { matchup: 3, away: "Justave", awaycolor: "#FF9900", home: "Brendan", homecolor: "#CC0000", score: ""},
+        { matchup: 3, away: "Justave", awaycolor: "#FF9900", home: "Brendan", homecolor: "#CC0000", score: "3-2"},
         { matchup: 4, away: "THANdrew", awaycolor: "#999999", home: "Isaac", homecolor: "#3586E8", score: ""},
     ];
 
