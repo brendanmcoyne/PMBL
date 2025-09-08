@@ -117,6 +117,13 @@ export default function Players() {
             <StyledMiniHeader $animate={ready}>Featuring all the top baseball stories!</StyledMiniHeader>
             <SeparatorLine $animate={ready}/>
             <Story $animate={ready}>
+                <GenImage src="/corkedbat.jpg" alt="Corked" />
+                <Overlay>
+                    <Headline>Corked Bat Allegations Have Caused Outrage</Headline>
+                    <StyledLink to="/headlines/CorkedBat">Click to read more!</StyledLink>
+                </Overlay>
+            </Story>
+            <Story $animate={ready}>
                 <GenImage src="/draft.jpg" alt="Draft" />
                 <Overlay>
                     <Headline>Season 2 Draft Recap</Headline>

@@ -37,6 +37,7 @@ import Koopa from "./components/headlines/Koopa.tsx";
 import DryBones from "./components/headlines/DryBones.tsx";
 import MiiBreakout from "./components/headlines/MiiBreakout.tsx";
 import DraftRecap from "./components/headlines/DraftRecap.tsx";
+import CorkedBat from "./components/headlines/CorkedBat.tsx";
 
 
 const MainContent = styled.div`
@@ -167,6 +168,7 @@ function Root() {
                     <Route path="/headlines/DryBones" element={<DryBones />} />
                     <Route path="/headlines/MiiBreakout" element={<MiiBreakout />} />
                     <Route path="/headlines/DraftRecap" element={<DraftRecap />} />
+                    <Route path="/headlines/CorkedBat" element={<CorkedBat />} />
                 </Routes>
             </MainContent>
             <Footer/>
