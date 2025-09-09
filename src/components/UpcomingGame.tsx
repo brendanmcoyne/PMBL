@@ -71,8 +71,8 @@ const Td = styled.td`
 
 export default function Game() {
     const game = {
-        away: { name: "Justave", color: "#FF9900", manager: "Justave", record: "1-0", scores: [0, 0, 3, 0, 0, 0, 0], R: 3, H: 17, E: 0, LOB: 10 },
-        home: { name: "Brendan", color: "#CC0000", manager: "Brendan", record: "0-1", scores: [0, 1, 0, 0, 1, 0, 0], R: 2, H: 11, E: 0, LOB: 6 },
+        away: { name: "THANdrew", color: "#999999", manager: "THANdrew", record: "0-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        home: { name: "Isaac", color: "#3586E8", manager: "Isaac", record: "0-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
     };
 
     {/*
@@ -91,14 +91,14 @@ export default function Game() {
             <TeamsRow>
                 <TeamColumn>
                     <TeamLabel>Away Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-LuigiKnights.webp" alt={`${game.away.name} logo`} />
+                    <Logo src="/emblems/MSS-Emblem-WaluigiSpitballs.webp" alt={`${game.away.name} logo`} />
                     <Manager style={{color: game.away.color}}>{game.away.manager}</Manager>
                     <Record>({game.away.record})</Record>
                 </TeamColumn>
                 <p style={{margin: "0", transform: "translateY(-10px)", fontFamily: "'Luckiest Guy', cursive", fontSize: "3rem"}}>vs</p>
                 <TeamColumn>
                     <TeamLabel>Home Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-BowserMonsters.webp" alt={`${game.home.name} logo`} />
+                    <Logo src="/emblems/MSS-Emblem-DKWilds.webp" alt={`${game.home.name} logo`} />
                     <Manager style={{color: game.home.color}}>{game.home.manager}</Manager>
                     <Record>({game.home.record})</Record>
                 </TeamColumn>
@@ -132,7 +132,7 @@ export default function Game() {
                 </tbody>
             </ScoreTable>
             <h4 style={{ marginTop: "0", marginBottom: "0.75rem" }}>
-                Location: <span style={{ color: "#FF4F4F" }}>Mario Stadium</span>
+                Location: <span style={{ color: "" }}>TBD</span>
             </h4>
 
             {/*
