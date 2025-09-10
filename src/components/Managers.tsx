@@ -438,7 +438,7 @@ export default function Managers() {
                     A rivlary so fierce that they didn't even travel to games together despite sleeping
                     above/below one another. Both teams were dipped in controversy throughout Season 1, and met in the playoffs,
                     with James winning the series 3-1. </RivalryDesc>
-                <RivalryRecord>James leads 4-1</RivalryRecord>
+                <RivalryRecord>James leads 5-1</RivalryRecord>
             </Rivalry>
             <Rivalry>
                 <RivalryTitle> The Computer Engineering Clash</RivalryTitle>
@@ -464,7 +464,7 @@ export default function Managers() {
                     throughout the leagues history. In the Season 1 playoffs, there were two Middlesex matchups, one in the Conference Series,
                     and one in the World Series, culminating in James winning both, and the first ever PMBL World Series Title. </RivalryDesc>
                 <RivalryRecords>
-                    <RivalryRecord>James leads Morgan 4-1</RivalryRecord>
+                    <RivalryRecord>James leads Morgan 5-1</RivalryRecord>
                     <RivalryRecord>James leads Brendan 4-1</RivalryRecord>
                     <RivalryRecord>Brendan leads Morgan 1-0</RivalryRecord>
                 </RivalryRecords>
