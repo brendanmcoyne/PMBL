@@ -71,8 +71,8 @@ const Td = styled.td`
 
 export default function Game() {
     const game = {
-        away: { name: "Trocean", color: "#9900FF", manager: "Trocean", record: "0-1", scores: [0, 0, 0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 6 },
-        home: { name: "THANdrew", color: "#999999", manager: "THANdrew", record: "1-0", scores: [0, 0, 0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 3, LOB: 13 },
+        away: { name: "Trocean", color: "#9900FF", manager: "Trocean", record: "0-1", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        home: { name: "THANdrew", color: "#999999", manager: "THANdrew", record: "1-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
     };
 
     {/*
@@ -108,7 +108,7 @@ export default function Game() {
                 <thead>
                 <tr>
                     <Th>Team</Th>
-                    {[...Array(9)].map((_, i) => <Th key={i}>{i + 1}</Th>)}
+                    {[...Array(7)].map((_, i) => <Th key={i}>{i + 1}</Th>)}
                     <Th>R</Th>
                     <Th>H</Th>
                     <Th>E</Th>
@@ -132,7 +132,7 @@ export default function Game() {
                 </tbody>
             </ScoreTable>
             <h4 style={{ marginTop: "0", marginBottom: "0.75rem" }}>
-                Location: <span style={{ color: "#111111" }}>Bowsers Castle</span>
+                Location: <span style={{ color: "#FFFFFF" }}>TBD</span>
             </h4>
 
             {/*
