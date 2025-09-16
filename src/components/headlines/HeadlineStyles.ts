@@ -62,13 +62,16 @@ export const GenImage = styled.img`
     max-width: 100%;
     height: auto;
     max-height: 500px;
-    object-fit: contain;
+    object-position: center;
+    object-fit: cover;
+    display: block;
     border: 3px solid black;
     padding: 8px;
     margin: 20px 0;
     background-color: white;
-    @media screen and (max-width: 1000px) {
-        width: 400px;
+    @media screen and (max-width: 750px) {
+        width: 100%;   /* keep full width */
+        height: 100%;  /* match parent */
     }
 `;
 
