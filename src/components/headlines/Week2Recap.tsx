@@ -362,7 +362,7 @@ export default function Week2Recap() {
             glove into the stands, driving in 2 runs in the 1st inning. Trocean did stage a small comeback, shortening
             their deficit from 7 to 2, however Red Kritter would close out the game in relief of the struggling Waluigi,
             earning himself a save. Unlike last week, Blue Kritter would finally hit the ball, earning himself game
-            MVP with his 3 RBI performance.</Passage>
+            MVP with his 3 RBI performance. The Trocean and Christach franchise has now gone 0-2 to start each season.</Passage>
 
             <ScoreTable>
                 <thead>
