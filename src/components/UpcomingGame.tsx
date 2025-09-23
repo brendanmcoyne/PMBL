@@ -71,8 +71,8 @@ const Td = styled.td`
 
 export default function Game() {
     const game = {
-        away: { name: "Trocean", color: "#9900FF", manager: "Trocean", record: "0-1", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
-        home: { name: "THANdrew", color: "#999999", manager: "THANdrew", record: "1-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        away: { name: "Trocean", color: "#9900FF", manager: "Trocean", record: "0-2", scores: [0, 1, 0, 0, 0, 5, 0], R: 6, H: 12, E: 3, LOB: 3 },
+        home: { name: "THANdrew", color: "#999999", manager: "THANdrew", record: "2-0", scores: [3, 0, 0, 0, 5, 0, "X"], R: 8, H: 13, E: 2, LOB: 4 },
     };
 
     {/*
