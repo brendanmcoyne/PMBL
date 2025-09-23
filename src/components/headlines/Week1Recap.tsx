@@ -243,7 +243,6 @@ export default function Week1Recap() {
                 Mii Bertha being on the chopping block heading into Week 2 due to her batting ineptitude. Meanwhile, Justin
                 can finally breathe easy after snapping the 5 game losing streak to Brendan, as Brendan would lose his second
                 season opener in a row to the team with the last pick in the draft.</Passage>
-
             <ScoreTable>
                 <thead>
                 <tr>
@@ -334,6 +333,7 @@ export default function Week1Recap() {
                     <span style={{fontSize: ".8rem"}}>Winning Pitcher: Larry Cuc (1 - 0)</span>
                     <span style={{fontSize: ".8rem"}}>Losing Pitcher: Donkey Kong (0 - 1)</span>
                 </div>
+                <span style={{fontSize: ".8rem"}}>Save: Green Noki (1)</span>
             </GameSummary>
 
             <StyledMiniHeader>Awards</StyledMiniHeader>
