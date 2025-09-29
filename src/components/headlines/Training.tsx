@@ -1,7 +1,6 @@
 import {ContentDiv, StyledHeader, ArticleMeta, SeparatorLine, Passage, StyledMiniHeader,
     StoryDiv, Stories, Story, MiniImage, StyledLink, Overlay, Headline, ToggleButton, GenImage} from "../../components/headlines/HeadlineStyles";
 import {Link} from "react-router-dom";
-import {styled} from "styled-components";
 
 export default function Training() {
     return (
@@ -29,34 +28,32 @@ export default function Training() {
 
             <Passage>Despite the rather heartless training regiment he instilled, manager Dave demonstrated some
                 compassion and treated the team by hiring a personal chef from the luncheon kingdom (who goes by the
-                nickname “forky”). “A car runs best on premium,” the managerial team commented, “and our players are no
-                different, they need the best fuel.”</Passage>
+                nickname “Forky”) to do the majority of the teams meal preparation. “A car runs best on premium,” the
+                managerial team commented, “and our players are no different, they need the best fuel.”</Passage>
 
-            <Passage>This treat didn’t stop the team from grinding, however. As they ate, the team reviewed tape,
-                studying core tenets that the managerial team had preached. “I love the ambition that our players have,
-                but you learn so much by letting the first pitch go by. It’s smarter baseball to work the count than go
-                guns blazing,” said manager Justin. He and manager Dave are worried that some of their players will not
-                take their advice, as renegades like Koopa have a tendency to do whatever they please.</Passage>
+            <Passage>The food was not a stopping point in practice, however. As they ate, the team reviewed tape,
+                studying core concepts that the managerial team had preached. Its been a core concept of the Justave
+                philosophy that their batters should always let the first pitch go by. “I love the ambition that our
+                players have, but you learn so much by letting the first pitch go by. It’s smarter baseball to work
+                the count than go guns blazing,” said manager Justin. He and manager Dave are worried that some of
+                their players will not take their advice, as renegades like Koopa have a tendency to do whatever they
+                please.</Passage>
 
             <Passage>It is important to note that Green Shy Guy, also known around the locker room as Gry Guy, was a
                 limited participant in the practice throughout the day, claiming that he tweaked his arm during his
                 pitching stint in week 2. Instead of participating in afternoon fielding drills, he was seen performing
-                aquatherapy at the team’s olympic sized pool, with teammate Bertha as his physical therapist. Geek squad
-                was observed getting a PT session in as well, despite recording no injury and reporting no soreness at
+                aquatic therapy at the team’s olympic sized pool, with teammate Bertha as his physical therapist. Geek Squad
+                was observed getting a PT session in the pool as well, despite recording no injury and reporting no soreness at
                 either the game or practice. </Passage>
 
             <Passage>Managers at Justave are also highly aware that their most incriminating pick of the draft, Koopa,
                 will be cleared from his suspension next week, and could be in line to play Week 4 at home against
-                Marge’s Monarchs.</Passage>
+                Marge’s Monarchs. The Managers are excited to have him back in full. </Passage>
 
             <Passage>All in all, the team appears to have their game faces on as they prepare to face Thandrew’s 2-0
                 Spitballs in the upcoming week. With experimental practice regiments, top notch dieting practices,
                 constant changes to fielding and batting orders, and controversial players rotating through their
                 roster, Knights fans can only be certain of one thing: it’s going to be a show.</Passage>
-
-            <Passage>And with that, the Season 2 Draft comes to an end. The regular season will kick off with the 48 Buswell
-                Battle between James and Morgan, with King K Rool back in the house he built, and Petey Piranha going against
-                his former team.</Passage>
 
             <SeparatorLine />
             <StyledMiniHeader>Check out more stories below!</StyledMiniHeader>
