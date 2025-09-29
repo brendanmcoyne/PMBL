@@ -38,6 +38,7 @@ import DryBones from "./components/headlines/DryBones.tsx";
 import MiiBreakout from "./components/headlines/MiiBreakout.tsx";
 import DraftRecap from "./components/headlines/DraftRecap.tsx";
 import CorkedBat from "./components/headlines/CorkedBat.tsx";
+import Training from "./components/headlines/Training.tsx";
 import Week1Recap from "./components/headlines/Week1Recap.tsx";
 import Week2Recap from "./components/headlines/Week2Recap.tsx";
 
@@ -171,6 +172,7 @@ function Root() {
                     <Route path="/headlines/MiiBreakout" element={<MiiBreakout />} />
                     <Route path="/headlines/DraftRecap" element={<DraftRecap />} />
                     <Route path="/headlines/CorkedBat" element={<CorkedBat />} />
+                    <Route path="/headlines/Training" element={<Training />} />
                     <Route path="/headlines/Week1Recap" element={<Week1Recap />} />
                     <Route path="/headlines/Week2Recap" element={<Week2Recap />} />
                 </Routes>
