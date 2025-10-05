@@ -9,7 +9,7 @@ export default function DraftRecap() {
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 2 Draft Recap</StyledHeader>
-            <GenImage src="/draft.jpg" alt="Draft" />
+            <GenImage src="/headlines/draft.jpg" alt="Draft" />
             <ArticleMeta>
                 Written by: PMBL News — September 2, 2025
             </ArticleMeta>
@@ -111,7 +111,7 @@ export default function DraftRecap() {
             <StoryDiv>
                 <Stories>
                     <Story>
-                        <MiniImage src="/miibaseball.jpg" alt="Mii" />
+                        <MiniImage src="/headlines/miibaseball.jpg" alt="Mii" />
                         <Overlay>
                             <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
                             <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>
@@ -120,7 +120,7 @@ export default function DraftRecap() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
+                        <MiniImage src="/headlines/koopa_behind_the_bars.jpg" alt="Koopa" />
                         <Overlay>
                             <Headline>Koopa Found Guilty of Assault</Headline>
                             <StyledLink to="/headlines/Koopa">Click to read more!</StyledLink>
@@ -129,7 +129,7 @@ export default function DraftRecap() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
+                        <MiniImage src="/headlines/Caucasian_bones_playground.png" alt="Dry Bones" />
                         <Overlay>
                             <Headline>Dry Bones Gets a Slap on the Wrist</Headline>
                             <StyledLink to="/headlines/DryBones">Click to read more!</StyledLink>

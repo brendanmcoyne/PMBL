@@ -117,56 +117,63 @@ export default function Players() {
             <StyledMiniHeader $animate={ready}>Featuring all the top baseball stories!</StyledMiniHeader>
             <SeparatorLine $animate={ready}/>
             <Story $animate={ready}>
-                <GenImage src="/training.jpg" alt="Training" />
+                <GenImage src="/headlines/week3.webp" alt="Week3" />
+                <Overlay>
+                    <Headline>Season 2 Week 3 Recap</Headline>
+                    <StyledLink to="/headlines/Week3Recap">Click to read more!</StyledLink>
+                </Overlay>
+            </Story>
+            <Story $animate={ready}>
+                <GenImage src="/headlines/training.jpg" alt="Training" />
                 <Overlay>
                     <Headline>Deep Dive into the Justave Process</Headline>
                     <StyledLink to="/headlines/Training">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
-                <GenImage src="/week2.jpg" alt="Week2" />
+                <GenImage src="/headlines/week2.jpg" alt="Week2" />
                 <Overlay>
                     <Headline>Season 2 Week 2 Recap</Headline>
                     <StyledLink to="/headlines/Week2Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
-                <GenImage src="/week1.jpg" alt="Week1" />
+                <GenImage src="/headlines/week1.jpg" alt="Week1" />
                 <Overlay>
                     <Headline>Season 2 Week 1 Recap</Headline>
                     <StyledLink to="/headlines/Week1Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
-                <GenImage src="/corkedbat.jpg" alt="Corked" />
+                <GenImage src="/headlines/corkedbat.jpg" alt="Corked" />
                 <Overlay>
                     <Headline>Corked Bat Allegations Have Caused Outrage</Headline>
                     <StyledLink to="/headlines/CorkedBat">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
-                <GenImage src="/draft.jpg" alt="Draft" />
+                <GenImage src="/headlines/draft.jpg" alt="Draft" />
                 <Overlay>
                     <Headline>Season 2 Draft Recap</Headline>
                     <StyledLink to="/headlines/DraftRecap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
-                <GenImage src="/miibaseball.jpg" alt="Miis" />
+                <GenImage src="/headlines/miibaseball.jpg" alt="Miis" />
                 <Overlay>
                     <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
                     <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
-                <GenImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
+                <GenImage src="/headlines/koopa_behind_the_bars.jpg" alt="Koopa" />
                 <Overlay>
                     <Headline>Koopa Found Guilty of Assault</Headline>
                     <StyledLink to="/headlines/Koopa">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
-                <GenImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
+                <GenImage src="/headlines/Caucasian_bones_playground.png" alt="Dry Bones" />
                 <Overlay>
                     <Headline>Dry Bones Gets a Slap on the Wrist</Headline>
                     <StyledLink to="/headlines/DryBones">Click to read more!</StyledLink>

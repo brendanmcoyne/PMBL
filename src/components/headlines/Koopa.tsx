@@ -9,7 +9,7 @@ export default function Koopa() {
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
             <StyledHeader>Koopa found Guilty of Assault</StyledHeader>
-            <GenImage src="/koopa_behind_the_bars.jpg" alt="Koopa"/>
+            <GenImage src="/headlines/koopa_behind_the_bars.jpg" alt="Koopa"/>
             <ArticleMeta>
                 Written by: PMBL News — June 2, 2025
             </ArticleMeta>
@@ -90,7 +90,7 @@ export default function Koopa() {
             <StoryDiv>
                 <Stories>
                     <Story>
-                        <MiniImage src="/draft.jpg" alt="Draft" />
+                        <MiniImage src="/headlines/draft.jpg" alt="Draft" />
                         <Overlay>
                             <Headline>Season 2 Draft Recap</Headline>
                             <StyledLink to="/headlines/DraftRecap">Click to read more!</StyledLink>
@@ -99,7 +99,7 @@ export default function Koopa() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/miibaseball.jpg" alt="Mii" />
+                        <MiniImage src="/headlines/miibaseball.jpg" alt="Mii" />
                         <Overlay>
                             <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
                             <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>
@@ -108,7 +108,7 @@ export default function Koopa() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
+                        <MiniImage src="/headlines/Caucasian_bones_playground.png" alt="Dry Bones" />
                         <Overlay>
                             <Headline>Dry Bones Gets a Slap on the Wrist</Headline>
                             <StyledLink to="/headlines/DryBones">Click to read more!</StyledLink>

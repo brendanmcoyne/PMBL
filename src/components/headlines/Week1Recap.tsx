@@ -123,7 +123,7 @@ export default function Week1Recap() {
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 2 Week 1 Recap</StyledHeader>
-            <GenImage src="/week1.jpg" alt="Draft"/>
+            <GenImage src="/headlines/week1.jpg" alt="Draft"/>
             <ArticleMeta>
                 Written by: PMBL News — September 14, 2025
             </ArticleMeta>
@@ -353,7 +353,7 @@ export default function Week1Recap() {
                     <div className="player">Bob Marley</div>
                     <div className="manager">Manager: <span style={{ color: "#FF9900" }}>Justave</span></div>
                     <div className="description">
-                        7 IP, 11 Hits, 2 Runs
+                        (W) 7 IP, 11 Hits, 2 ER
                     </div>
                 </AwardBlock>
 
@@ -365,7 +365,7 @@ export default function Week1Recap() {
                         3/5, 2 Runs, 2 RBIs
                     </div>
                     <div className="description" style={{marginTop: "0"}}>
-                        2.1 IP, 6 Hits, 2 Runs
+                        2.1 IP, 6 Hits, 2 ER
                     </div>
                 </AwardBlock>
 
@@ -401,7 +401,7 @@ export default function Week1Recap() {
             <StoryDiv>
                 <Stories>
                     <Story>
-                        <MiniImage src="/miibaseball.jpg" alt="Mii" />
+                        <MiniImage src="/headlines/miibaseball.jpg" alt="Mii" />
                         <Overlay>
                             <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
                             <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>
@@ -410,7 +410,7 @@ export default function Week1Recap() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
+                        <MiniImage src="/headlines/koopa_behind_the_bars.jpg" alt="Koopa" />
                         <Overlay>
                             <Headline>Koopa Found Guilty of Assault</Headline>
                             <StyledLink to="/headlines/Koopa">Click to read more!</StyledLink>
@@ -419,7 +419,7 @@ export default function Week1Recap() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
+                        <MiniImage src="/headlines/Caucasian_bones_playground.png" alt="Dry Bones" />
                         <Overlay>
                             <Headline>Dry Bones Gets a Slap on the Wrist</Headline>
                             <StyledLink to="/headlines/DryBones">Click to read more!</StyledLink>

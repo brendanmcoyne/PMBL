@@ -123,7 +123,7 @@ export default function Week2Recap() {
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 2 Week 2 Recap</StyledHeader>
-            <GenImage src="/week2.jpg" alt="Draft"/>
+            <GenImage src="/headlines/week2.jpg" alt="Draft"/>
             <ArticleMeta>
                 Written by: PMBL News — September 23, 2025
             </ArticleMeta>
@@ -411,7 +411,7 @@ export default function Week2Recap() {
                         3/5, 3 Runs, 4 RBIs, 2 HRs
                     </div>
                     <div className="description" style={{marginTop: "0"}}>
-                        2.2 IP, 7 Hits, 3 Runs, 1 ꓘ
+                        2.2 IP, 7 Hits, 3 Runs, 1 K
                     </div>
                 </AwardBlock>
 
@@ -420,7 +420,7 @@ export default function Week2Recap() {
                     <div className="player">Betty White</div>
                     <div className="manager">Manager: <span style={{ color: "#3586E8" }}>Isaac</span></div>
                     <div className="description">
-                        7 IP, 6 Hits, 1 Run
+                        (W) 7 IP, 6 Hits, 1 ER
                     </div>
                 </AwardBlock>
 
@@ -432,7 +432,7 @@ export default function Week2Recap() {
                         3/5, 3 Runs, 4 RBIs, 2 HRs
                     </div>
                     <div className="description" style={{marginTop: "0"}}>
-                        2.2 IP, 7 Hits, 3 Runs, 1 ꓘ
+                        2.2 IP, 7 Hits, 3 ER, 1 K
                     </div>
                 </AwardBlock>
 
@@ -462,7 +462,7 @@ export default function Week2Recap() {
             <StoryDiv>
                 <Stories>
                     <Story>
-                        <MiniImage src="/miibaseball.jpg" alt="Mii" />
+                        <MiniImage src="/headlines/miibaseball.jpg" alt="Mii" />
                         <Overlay>
                             <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
                             <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>
@@ -471,7 +471,7 @@ export default function Week2Recap() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
+                        <MiniImage src="/headlines/koopa_behind_the_bars.jpg" alt="Koopa" />
                         <Overlay>
                             <Headline>Koopa Found Guilty of Assault</Headline>
                             <StyledLink to="/headlines/Koopa">Click to read more!</StyledLink>
@@ -480,7 +480,7 @@ export default function Week2Recap() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
+                        <MiniImage src="/headlines/Caucasian_bones_playground.png" alt="Dry Bones" />
                         <Overlay>
                             <Headline>Dry Bones Gets a Slap on the Wrist</Headline>
                             <StyledLink to="/headlines/DryBones">Click to read more!</StyledLink>

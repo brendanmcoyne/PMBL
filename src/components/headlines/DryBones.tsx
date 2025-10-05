@@ -9,7 +9,7 @@ export default function DryBones() {
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
             <StyledHeader>Dry Bones Gets a Slap on the Wrist</StyledHeader>
-            <GenImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
+            <GenImage src="/headlines/Caucasian_bones_playground.png" alt="Dry Bones" />
             <ArticleMeta>
                 Written by: PMBL News — May 6, 2025
             </ArticleMeta>
@@ -80,7 +80,7 @@ export default function DryBones() {
             <StoryDiv>
                 <Stories>
                     <Story>
-                        <MiniImage src="/draft.jpg" alt="Draft" />
+                        <MiniImage src="/headlines/draft.jpg" alt="Draft" />
                         <Overlay>
                             <Headline>Season 2 Draft Recap</Headline>
                             <StyledLink to="/headlines/DraftRecap">Click to read more!</StyledLink>
@@ -89,7 +89,7 @@ export default function DryBones() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/miibaseball.jpg" alt="Mii" />
+                        <MiniImage src="/headlines/miibaseball.jpg" alt="Mii" />
                         <Overlay>
                             <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
                             <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>
@@ -98,7 +98,7 @@ export default function DryBones() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
+                        <MiniImage src="/headlines/koopa_behind_the_bars.jpg" alt="Koopa" />
                         <Overlay>
                             <Headline>Koopa Found Guilty of Assault</Headline>
                             <StyledLink to="/headlines/Koopa">Click to read more!</StyledLink>

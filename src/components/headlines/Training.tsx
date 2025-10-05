@@ -9,7 +9,7 @@ export default function Training() {
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
             <StyledHeader>Deep Dive into the Justave Process</StyledHeader>
-            <GenImage src="/training.jpg" alt="Training" />
+            <GenImage src="/headlines/training.jpg" alt="Training" />
             <ArticleMeta>
                 Written by: New Donk Post — September 29, 2025
             </ArticleMeta>
@@ -61,7 +61,7 @@ export default function Training() {
             <StoryDiv>
                 <Stories>
                     <Story>
-                        <MiniImage src="/week2.jpg" alt="Week2" />
+                        <MiniImage src="/headlines/week2.jpg" alt="Week2" />
                         <Overlay>
                             <Headline>Week 2 Recap</Headline>
                             <StyledLink to="/headlines/Week2Recap">Click to read more!</StyledLink>
@@ -70,7 +70,7 @@ export default function Training() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/corkedbat.jpg" alt="Corked Bat" />
+                        <MiniImage src="/headlines/corkedbat.jpg" alt="Corked Bat" />
                         <Overlay>
                             <Headline>Corked Bat Allegations Have Caused Outrage</Headline>
                             <StyledLink to="/headlines/CorkedBat">Click to read more!</StyledLink>
@@ -79,7 +79,7 @@ export default function Training() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/miibaseball.jpg" alt="Mii" />
+                        <MiniImage src="/headlines/miibaseball.jpg" alt="Mii" />
                         <Overlay>
                             <Headline>Head Analyst Predicts Mii Breakout Season</Headline>
                             <StyledLink to="/headlines/MiiBreakout">Click to read more!</StyledLink>

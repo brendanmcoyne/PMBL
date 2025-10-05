@@ -9,7 +9,7 @@ export default function MiiBreakout() {
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
             <StyledHeader>Head Analyst Predicts Mii Breakout Season</StyledHeader>
-            <GenImage src="/miibaseball.jpg" alt="Miis" />
+            <GenImage src="/headlines/miibaseball.jpg" alt="Miis" />
             <ArticleMeta>
                 Written by: PMBL News — June 26, 2025
             </ArticleMeta>
@@ -87,7 +87,7 @@ export default function MiiBreakout() {
             <StoryDiv>
                 <Stories>
                     <Story>
-                        <MiniImage src="/draft.jpg" alt="Draft" />
+                        <MiniImage src="/headlines/draft.jpg" alt="Draft" />
                         <Overlay>
                             <Headline>Season 2 Draft Recap</Headline>
                             <StyledLink to="/headlines/DraftRecap">Click to read more!</StyledLink>
@@ -96,7 +96,7 @@ export default function MiiBreakout() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/koopa_behind_the_bars.jpg" alt="Koopa" />
+                        <MiniImage src="/headlines/koopa_behind_the_bars.jpg" alt="Koopa" />
                         <Overlay>
                             <Headline>Koopa Found Guilty of Assault</Headline>
                             <StyledLink to="/headlines/Koopa">Click to read more!</StyledLink>
@@ -105,7 +105,7 @@ export default function MiiBreakout() {
                 </Stories>
                 <Stories>
                     <Story>
-                        <MiniImage src="/Caucasian_bones_playground.png" alt="Dry Bones" />
+                        <MiniImage src="/headlines/Caucasian_bones_playground.png" alt="Dry Bones" />
                         <Overlay>
                             <Headline>Dry Bones Gets a Slap on the Wrist</Headline>
                             <StyledLink to="/headlines/DryBones">Click to read more!</StyledLink>
