@@ -27,7 +27,7 @@ export const rosters2: Roster2[] = [
             {name: "Blue Yoshi"},
             {name: "Abu Patel"},
             {name: "Barry"},
-            {name: "Claudius"},
+            {name: "Blue Noki"},
             {name: "Monty Mole"},
             {name: "Diddler"},
         ],
@@ -87,7 +87,7 @@ export const rosters2: Roster2[] = [
         manager: "Isaac",
         captain: "Donkey Kong",
         roster: [
-            { name: "Red Kritter" },
+            { name: "Brown Kritter" },
             { name: "Funky Kong" },
             { name: "Tiny Kong" },
             { name: "Dixie Kong" },
@@ -140,7 +140,7 @@ export const rosters2: Roster2[] = [
         roster: [
             { name: "Fire Bro" },
             { name: "Blue Kritter" },
-            { name: "Brown Kritter" },
+            { name: "Red Kritter" },
             { name: "Green Kamek" },
             { name: "Green Paratroopa" },
             { name: "Larry Cuc" },
