@@ -145,7 +145,19 @@ export default function UpdatedStandings() {
             }
         };
 
-        const displayedData = sortedData(data).filter((row) => {
+        // 🧹 1. Remove the AVG column for the Pitching table only
+        const filteredData =
+            title === "Pitching Stats"
+                ? data.map((row) => {
+                    const newRow = { ...row };
+                    delete newRow["AVG"];
+                    delete newRow["avg"];
+                    return newRow;
+                })
+                : data;
+
+        // Filter out rows with 0 games
+        const displayedData = sortedData(filteredData).filter((row) => {
             const gamesKey = Object.keys(row).find(
                 (key) => key.toLowerCase() === "g" || key.toLowerCase() === "games"
             );
@@ -170,7 +182,7 @@ export default function UpdatedStandings() {
                     <StyledTable>
                         <thead>
                         <tr>
-                            {Object.keys(data[0]).map((header) => {
+                            {Object.keys(filteredData[0]).map((header) => {
                                 const isSorted = sortConfig?.key === header;
                                 const headerStyle: React.CSSProperties = {
                                     color: isSorted ? "gold" : "#fff",
@@ -213,9 +225,17 @@ export default function UpdatedStandings() {
 
                                     if (decimalStats.includes(lowerHeader)) {
                                         if (!isNaN(numValue)) display = numValue.toFixed(3);
-                                    } else if (lowerHeader === "ip") {
-                                        // Innings pitched → show 1 decimal place
-                                        if (!isNaN(numValue)) display = numValue.toFixed(1);
+                                    }
+                                    // ⚾️ 2. Fix inning display (.3 → .1, .7 → .2)
+                                    else if (lowerHeader === "ip") {
+                                        if (!isNaN(numValue)) {
+                                            const integerPart = Math.floor(numValue);
+                                            const decimal = +(numValue - integerPart).toFixed(1);
+                                            let displayDecimal = decimal;
+                                            if (decimal === 0.3) displayDecimal = 0.1;
+                                            else if (decimal === 0.7) displayDecimal = 0.2;
+                                            display = (integerPart + displayDecimal).toFixed(1);
+                                        }
                                     } else {
                                         if (!isNaN(numValue)) display = Math.round(numValue);
                                     }
@@ -238,6 +258,7 @@ export default function UpdatedStandings() {
             </>
         );
     };
+
 
     return (
         <TablesContainer>

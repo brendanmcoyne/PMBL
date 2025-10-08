@@ -101,7 +101,9 @@ export default function StatLeadersMini() {
                 if (!row[stat] || row[stat].trim() === "") return false;
                 if (stat === "ERA") {
                     const games = rowToNumber(row["G"]);
+                    const innings = rowToNumber(row["IP"]);
                     if (games < 1) return false;
+                    if (innings < 10) return false;
                 }
 
                 return true;
