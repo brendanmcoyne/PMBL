@@ -350,7 +350,7 @@ export default function Week4Recap() {
             <Passage>During the game however, something very strange happened. A camera malfunction occurred in the 5th
             inning. On the play, Brown Kritter fielded the ball at shortstop, threw it to Gramms at 2nd, and then Gramms
             threw it to first for the double play. However, when the replay was shown, the replay showed Funky Kong
-            picking off Wario at home, and the catcher throwing to 1st base, completely the double play. Manager Morgan
+            picking off Wario at home from 3rd, and the catcher throwing to 1st base, completing the double play. Manager Morgan
             pleaded to torture Lakitu for this mistake. A few of the cameramen have been relieved of their duties because
             of this mistake.</Passage>
 
