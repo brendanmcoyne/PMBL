@@ -334,7 +334,7 @@ export default function Week4Recap() {
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 4: <span style={{ color: "#FF00FF" }}>Morgan</span> v.s.
                 <span style={{ color: "#3586E8" }}> Isaac</span></StyledMiniHeader>
             <Passage>Morgan opened this game mocking Justin Nascimento on the mound, and Morgan's team would make quick
-                work of hih. King K Rool would hit 2 home runs in this game, both which were solo shots in the 2nd and
+                work of him. King K Rool would hit 2 home runs in this game, both which were solo shots in the 2nd and
                 the 4th. Manager Morgan has also been openly critical on Funky Kong, saying the 2x Game MVP is overrated
                 and can't hit. He was true about that today, as Morgan's defense clamped down and kept Funky hitless.
                 Many remarks were made from the crowd during this game, specifically targeted Betty White's looks and the
@@ -346,6 +346,13 @@ export default function Week4Recap() {
                 defense would force a game ending triple play to win their 3rd straight game. Morgan refused to comment
                 about Yoshi or his team after the game.
             </Passage>
+
+            <Passage>During the game however, something very strange happened. A camera malfunction occurred in the 5th
+            inning. On the play, Brown Kritter grounded the ball at shortstop, threw it to Gramms at 2nd, and then Gramms
+            threw it to first for the double play. However, when the replay was shown, the replay showed Funky Kong
+            picking off Wario at home, and the catcher throwing to 1st base, completely the double play. Manager Morgan
+            pleaded to torture Lakitu for this mistake. A few of the cameramen have been relieved of their duties because
+            of this mistake.</Passage>
 
             <ScoreTable>
                 <thead>
