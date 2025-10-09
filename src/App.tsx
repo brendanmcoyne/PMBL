@@ -42,6 +42,7 @@ import Training from "./components/headlines/Training.tsx";
 import Week1Recap from "./components/headlines/Week1Recap.tsx";
 import Week2Recap from "./components/headlines/Week2Recap.tsx";
 import Week3Recap from "./components/headlines/Week3Recap.tsx";
+import Week4Recap from "./components/headlines/Week4Recap.tsx";
 
 
 const MainContent = styled.div`
@@ -177,6 +178,7 @@ function Root() {
                     <Route path="/headlines/Week1Recap" element={<Week1Recap />} />
                     <Route path="/headlines/Week2Recap" element={<Week2Recap />} />
                     <Route path="/headlines/Week3Recap" element={<Week3Recap />} />
+                    <Route path="/headlines/Week4Recap" element={<Week4Recap />} />
                 </Routes>
             </MainContent>
             <Footer/>

@@ -170,9 +170,9 @@ export default function CurrentSeason() {
 
     const westTeams = [
         { name: 'THANdrew', color: "#999999", record: '3-1', divRecord: '2-0' },
-        { name: 'Isaac', color: "#3586E8", record: '2-1', divRecord: '0-1' },
-        { name: 'Morgan', color: "#FF00FF", record: '1-2', divRecord: '0-1' },
+        { name: 'Isaac', color: "#3586E8", record: '3-1', divRecord: '1-1' },
         { name: 'Trocean', color: "#9900FF", record: '1-3', divRecord: '1-1' },
+        { name: 'Morgan', color: "#FF00FF", record: '1-3', divRecord: '0-2' },
     ];
 
     const Week1 = [
@@ -197,7 +197,7 @@ export default function CurrentSeason() {
         { matchup: 1, away: "Marge", awaycolor: "#6AA84F", home: "Justave", homecolor: "#FF9900", score: "0-16"},
         { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Trocean", homecolor: "#9900FF", score: "21-6"},
         { matchup: 3, away: "Brendan", awaycolor: "#CC0000", home: "THANdrew", homecolor: "#999999", score: "8-6"},
-        { matchup: 4, away: "Morgan", awaycolor: "#FF00FF", home: "Isaac", homecolor: "#3586E8", score: ""},
+        { matchup: 4, away: "Morgan", awaycolor: "#FF00FF", home: "Isaac", homecolor: "#3586E8", score: "4-6"},
     ];
     const Week5 = [
         { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "Justave", homecolor: "#FF9900", score: ""},
