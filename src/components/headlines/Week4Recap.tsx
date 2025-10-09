@@ -223,7 +223,7 @@ export default function Week4Recap() {
                 <span style={{ color: "#9900FF" }}> Trocean</span></StyledMiniHeader>
             <Passage>Last week, James dropped 21 points against Marge, and this week, he became the first team to ever
             do it in back to back weeks. James once again came out swinging, putting up at least 3 runs in all but one
-            inning he played. Trocean couldn't come close. They had Red Kamek and Red Pianta hit perfectly, yet the top
+            inning he played. Trocean couldn't come close. Trocean had Red Kamek and Red Pianta hit perfectly, yet the top
             of their batting order could not do anything. Week after week Manager Ocean talks about how Red Pianta is
             the only person in the league with a steal, however that stat ended today. It was known before the game that
             Wiggler was playing with more than his MVP bid on the line today, he was also playing for his relationship
@@ -273,14 +273,14 @@ export default function Week4Recap() {
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 3: <span style={{ color: "#CC0000" }}> Brendan</span> v.s.
                 <span style={{ color: "#999999" }}> THANdrew</span></StyledMiniHeader>
             <Passage>You may have heard this before, but Brendan is still in search of his first win of the season. This
-            week, it's not looking good, as he is playing the undefeated THANdrew. Looking to avoid being the first
+            week, it was not looking good, as he was playing the undefeated THANdrew. Looking to avoid being the first
             team to ever fall to 0-4, Brendan's bat came out swinging. In the first inning, Bowser would hit a 2 run
             shot to center, and hit another one in the second inning, going up 4-0. Manager Andrew very derogatorily said
             "How am I losing to BRENDAN? He's the worst team in the league!". His team would then score 6 innings between
-            the 3rd and 4th inning to go up 6-4. Leadoff batter for Brendan, Boomerang Bro, had the highest batting
+            the 3rd and 4th inning to go up 6-4. Leadoff batter for Brendan, Boomerang Bro, who had the highest batting
             percentage coming into today, had a very off game, going 1/4 with a strikeout caught looking. However, for
             the first time this season, a batter was hit by a ball. Waluigi drilled Boomerang Bro in the arm, being the
-            first walk of the season. Bowser Jr grounded into a double play the next pitch.</Passage>
+            first walk of the season. Bowser Jr grounded into a double play on the next pitch.</Passage>
 
             <Passage>In the top of the 7th, things were looking dire for Brendan. 2 outs, men on 1st and 2nd, and Diddler
             was up to bat. Being 0/3 in the game, and Green Noki being subbed in to close the game, he cracked one to
