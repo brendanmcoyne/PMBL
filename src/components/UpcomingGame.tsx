@@ -73,8 +73,8 @@ export default function Game() {
 
 
     const game = {
-        away: { name: "Morgan", color: "#FF00FF", manager: "Morgan", record: "1-3", scores: [0, 1, 0, 3, 0, 0, 0], R: 4, H: 11, E: 1, LOB: 7 },
-        home: { name: "Isaac", color: "#3586E8", manager: "Isaac", record: "3-1", scores: [0, 0, 0, 1, 0, 4, 1], R: 6, H: 17, E: 1, LOB: 5 },
+        away: { name: "THANdrew", color: "#999999", manager: "THANdrew", record: "3-1", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        home: { name: "James", color: "#F1C232", manager: "James", record: "4-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
     };
 
     {/*
@@ -93,14 +93,14 @@ export default function Game() {
             <TeamsRow>
                 <TeamColumn>
                     <TeamLabel>Away Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-DaisyFlowers.webp" alt={`${game.away.name} logo`} />
+                    <Logo src="/emblems/MSS-Emblem-WaluigiSpitballs.webp" alt={`${game.away.name} logo`} />
                     <Manager style={{color: game.away.color}}>{game.away.manager}</Manager>
                     <Record>({game.away.record})</Record>
                 </TeamColumn>
                 <p style={{margin: "0", transform: "translateY(-10px)", fontFamily: "'Luckiest Guy', cursive", fontSize: "3rem"}}>vs</p>
                 <TeamColumn>
                     <TeamLabel>Home Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-DKWilds.webp" alt={`${game.home.name} logo`} />
+                    <Logo src="/emblems/MSS-Emblem-BirdoBows.webp" alt={`${game.home.name} logo`} />
                     <Manager style={{color: game.home.color}}>{game.home.manager}</Manager>
                     <Record>({game.home.record})</Record>
                 </TeamColumn>
