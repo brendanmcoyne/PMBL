@@ -290,7 +290,7 @@ export default function Home() {
                     We've developed a live stat system so fans and friends of the league are able to keep up with their favorite players from outside the living room.<br /><br />
                     The committee of the PMBL is devoted to bringing the best baseball experience to any and all fans.
                 </TextSection>
-                <GenGif src="/Wii_Remote.webp" alt="Professional Mario Baseball League Logo" />
+                <GenGif src="/princess-daisy-super-mario.gif" alt="Professional Mario Baseball League Logo" />
             </ContentSection>
         </Page>
     );

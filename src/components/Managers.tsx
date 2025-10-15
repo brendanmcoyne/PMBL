@@ -412,7 +412,7 @@ export default function Managers() {
                     creating the league everyone knows and loves. In their sole matchup so far, Brendan took
                     an 8-4 win after being shutout the week before.
                 </RivalryDesc>
-                <RivalryRecord>Brendan leads 1-0</RivalryRecord>
+                <RivalryRecord>Series tied 1-1</RivalryRecord>
             </Rivalry>
             <Rivalry>
                 <RivalryTitle>The Park Drive Rivalry</RivalryTitle>
@@ -451,7 +451,7 @@ export default function Managers() {
                     Two division rivals of the same major. Both fan favorite teams played in the Week 7
                     Shy Guy Tribute Game, where Matt took an early 5-0 lead in the 1st, to lose 11-14 with a 3 run walk-off homer
                     in the first ever 10 inning game. They would play again a few weeks later, with Justin winning again.</RivalryDesc>
-                <RivalryRecord>Justin leads 2-0</RivalryRecord>
+                <RivalryRecord>Justin leads 3-0</RivalryRecord>
             </Rivalry>
             <Rivalry style={{alignItems: "center"}}>
                 <RivalryTitle>Middlesex Matchups</RivalryTitle>
@@ -465,7 +465,7 @@ export default function Managers() {
                     and one in the World Series, culminating in James winning both, and the first ever PMBL World Series Title. </RivalryDesc>
                 <RivalryRecords>
                     <RivalryRecord>James leads Morgan 5-1</RivalryRecord>
-                    <RivalryRecord>James leads Brendan 4-1</RivalryRecord>
+                    <RivalryRecord>James leads Brendan 5-1</RivalryRecord>
                     <RivalryRecord>Brendan leads Morgan 1-0</RivalryRecord>
                 </RivalryRecords>
             </Rivalry>
