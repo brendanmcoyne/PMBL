@@ -1,5 +1,4 @@
-import {ContentDiv, StyledHeader, GenImage, ArticleMeta, SeparatorLine, Passage, Ruling, StyledMiniHeader,
-    StoryDiv, Stories, Story, MiniImage, StyledLink, Overlay, Headline, ToggleButton} from "../../components/headlines/HeadlineStyles";
+import {ContentDiv, StyledHeader, GenImage, ArticleMeta, SeparatorLine, ToggleButton} from "../../components/headlines/HeadlineStyles";
 import {Link} from "react-router-dom";
 
 export default function Issues() {
