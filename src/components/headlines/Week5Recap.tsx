@@ -187,7 +187,7 @@ export default function Week5Recap() {
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 2: <span style={{ color: "#CC0000" }}> Brendan</span> v.s.
                 <span style={{ color: "#FF9900" }}> Justave</span></StyledMiniHeader>
             <Passage>With both teams coming off of big wins, the second matchup of Justave vs Brendan this season looked
-            to be a good one. After the win, Brendan traded away a package to get a heavy hitter, Blue Pianta, in hopes
+            to be a good one at the Cruiser. After the win, Brendan traded away a package to get a heavy hitter, Blue Pianta, in hopes
             to really get his offense going and hopefully get back into the playoff race. Justave, coming off a very
             successful return campaign from Koopa, was looking to assert themselves as a top team. Brendan's pitching woes
             have been a concern for him all season, so he decided to start newcomer Blue Pianta on the mound, the 4th
