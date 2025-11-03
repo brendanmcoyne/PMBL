@@ -162,10 +162,10 @@ export default function CurrentSeason() {
     const [round, setRound] = useState<'Conference Series' | 'World Series'>('Conference Series');
 
     const eastTeams = [
-        { name: 'James', color: "#F1C232", record: '4-1', divRecord: '2-0' },
-        { name: 'Justave', color: "#FF9900", record: '3-2', divRecord: '3-0' },
-        { name: 'Marge', color: "#6AA84F", record: '2-3', divRecord: '0-2' },
-        { name: 'Brendan', color: "#CC0000", record: '1-4', divRecord: '0-3' },
+        { name: 'Justave', color: "#FF9900", record: '4-2', divRecord: '4-0' },
+        { name: 'James', color: "#F1C232", record: '4-2', divRecord: '2-1' },
+        { name: 'Brendan', color: "#CC0000", record: '2-4', divRecord: '1-3' },
+        { name: 'Marge', color: "#6AA84F", record: '2-4', divRecord: '0-3' },
     ];
 
     const westTeams = [
@@ -208,8 +208,8 @@ export default function CurrentSeason() {
     const Week6 = [
         { matchup: 1, away: "Isaac", awaycolor: "#3586E8", home: "THANdrew", homecolor: "#999999", score: "5-1"},
         { matchup: 2, away: "Morgan", awaycolor: "#FF00FF", home: "Trocean", homecolor: "#9900FF", score: "11-2"},
-        { matchup: 3, away: "Brendan", awaycolor: "#CC0000", home: "Marge", homecolor: "#6AA84F", score: ""},
-        { matchup: 4, away: "Justave", awaycolor: "#FF9900", home: "James", homecolor: "#F1C232", score: ""},
+        { matchup: 3, away: "Justave", awaycolor: "#FF9900", home: "James", homecolor: "#F1C232", score: "6-2"},
+        { matchup: 4, away: "Brendan", awaycolor: "#CC0000", home: "Marge", homecolor: "#6AA84F", score: "7-6"},
     ];
     const Week7 = [
         { matchup: 1, away: "Trocean", awaycolor: "#9900FF", home: "Brendan", homecolor: "#CC0000", score: ""},
@@ -237,8 +237,8 @@ export default function CurrentSeason() {
     ];
 
     const ConfSeries = [
-        { matchup: 1, away: "Justave", awaycolor: "#FF9900", home: "Isaac", homecolor: "#3586E8", record: ""},
-        { matchup: 2, away: "THANdrew", awaycolor: "#999999", home: "James", homecolor: "#F1C232", record: ""},
+        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Isaac", homecolor: "#3586E8", record: ""},
+        { matchup: 2, away: "THANdrew", awaycolor: "#999999", home: "Justave", homecolor: "#FF9900", record: ""},
     ]
 
     const WorldSeries = [
