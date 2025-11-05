@@ -53,7 +53,8 @@ export default function Blooper() {
             people in a positive way.</Passage>
 
             <Passage>One of those people was the CEO of a startup, whose plan was to build houses in the Galápagos islands,
-            and offered Blooper a job. Blooper was very ecstatic, as he could not only pitch in the big leagues, but also
+            and offered Blooper a job. He believed Blooper would be a great fit due to his positive morale and fan favorite
+                energy and passion. Blooper was very ecstatic, as he could not only pitch in the big leagues, but also
             get paid to help people near the ocean where he lived. Blooper quickly accepted the job. There has been no
             information about his salary, however his house building job will not get in the way of his PMBL career. Despite
             being categorized as a low level player, Blooper could not be happier with how things are going, and is
