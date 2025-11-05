@@ -226,7 +226,6 @@ export default function UpdatedStandings() {
                                     if (decimalStats.includes(lowerHeader)) {
                                         if (!isNaN(numValue)) display = numValue.toFixed(3);
                                     }
-                                    // ⚾️ 2. Fix inning display (.3 → .1, .7 → .2)
                                     else if (lowerHeader === "ip") {
                                         if (!isNaN(numValue)) {
                                             const integerPart = Math.floor(numValue);
