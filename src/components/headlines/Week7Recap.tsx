@@ -200,7 +200,7 @@ export default function Week7Recap() {
             bad offensive output over the psat couple of weeks, he decides to take his team to Yoshi Park against Marge.
             Today would be a breath of fresh air and a much needed offensive burst for James. James' bats would immediately
             start blazing. Birdo would pitch an absolute masterclass. Pitching all 7 innings and giving up only 1 ER and 7
-            hits, it is the best stat line we have ever seen from a starting pitcher. The bats would also be coming
+            hits, one of the best stat lines we have ever seen from a starting pitcher. The bats would also be coming
             from unlikely sources for James, with Abu Patel getting 2 RBIs after replacing Cascade, and Blue Yoshi, winning
             Game MVP and hitting 4/4, 1 run, and 2 RBIs. Marge's bats once again were ineffective, with their only offense
             coming off of Peach's triple and Yamek's subsequent RBI single in the 5th. The real story of this game was Birdo,
