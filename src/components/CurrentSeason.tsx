@@ -164,15 +164,15 @@ export default function CurrentSeason() {
     const eastTeams = [
         { name: 'Justave', color: "#FF9900", record: '5-3', divRecord: '4-1' },
         { name: 'James', color: "#F1C232", record: '5-3', divRecord: '3-1' },
-        { name: 'Brendan', color: "#CC0000", record: '3-4', divRecord: '1-3' },
+        { name: 'Brendan', color: "#CC0000", record: '3-5', divRecord: '1-3' },
         { name: 'Marge', color: "#6AA84F", record: '3-5', divRecord: '1-4' },
     ];
 
     const westTeams = [
         { name: 'Isaac', color: "#3586E8", record: '6-2', divRecord: '3-1' },
-        { name: 'THANdrew', color: "#999999", record: '4-3', divRecord: '2-2' },
-        { name: 'Morgan', color: "#FF00FF", record: '3-4', divRecord: '2-2' },
-        { name: 'Trocean', color: "#9900FF", record: '1-6', divRecord: '1-3' },
+        { name: 'Morgan', color: "#FF00FF", record: '4-4', divRecord: '2-2' },
+        { name: 'THANdrew', color: "#999999", record: '4-4', divRecord: '2-3' },
+        { name: 'Trocean', color: "#9900FF", record: '2-6', divRecord: '2-3' },
     ];
 
     const Week1 = [
@@ -220,8 +220,8 @@ export default function CurrentSeason() {
     const Week8 = [
         { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Isaac", homecolor: "#3586E8", score: "9-11"},
         { matchup: 2, away: "Justave", awaycolor: "#FF9900", home: "Marge", homecolor: "#6AA84F", score: "4-10"},
-        { matchup: 3, away: "Brendan", awaycolor: "#CC0000", home: "Morgan", homecolor: "#FF00FF", score: ""},
-        { matchup: 4, away: "THANdrew", awaycolor: "#999999", home: "Trocean", homecolor: "#9900FF", score: ""},
+        { matchup: 3, away: "Brendan", awaycolor: "#CC0000", home: "Morgan", homecolor: "#FF00FF", score: "8-10"},
+        { matchup: 4, away: "THANdrew", awaycolor: "#999999", home: "Trocean", homecolor: "#9900FF", score: "4-5"},
     ];
     const Week9 = [
         { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Brendan", homecolor: "#CC0000", score: ""},
@@ -237,8 +237,8 @@ export default function CurrentSeason() {
     ];
 
     const ConfSeries = [
-        { matchup: 1, away: "THANdrew", awaycolor: "#999999", home: "Justave", homecolor: "#FF9900", record: ""},
-        { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Isaac", homecolor: "#3586E8", record: ""},
+        { matchup: 1, away: "Morgan", awaycolor: "#FF00FF", home: "Isaac", homecolor: "#3586E8", record: ""},
+        { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Justave", homecolor: "#FF9900", record: ""},
     ]
 
     const WorldSeries = [
