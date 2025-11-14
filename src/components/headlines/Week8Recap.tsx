@@ -420,7 +420,7 @@ export default function Week8Recap() {
                     <div className="player">Yellow Kamek</div>
                     <div className="manager">Manager: <span style={{ color: "#6AA84F" }}>Marge</span></div>
                     <div className="description">
-                        Incredible locking defense. Went 4/4 batting too.
+                        Incredible lockdown defense. Went 4/4 batting too.
                     </div>
                 </AwardBlock>
             </AwardsSection>
