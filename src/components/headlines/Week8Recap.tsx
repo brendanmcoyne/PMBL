@@ -330,7 +330,7 @@ export default function Week8Recap() {
             exact same shot right up the middle to finally score Red Shy Guy, tying it at 4. MLK on the next pitch would
             hit a huge shot into left center, scoring Red Pianta from 2nd to win the game 5-4 for Trocean. This would be
             the 3rd blown save for THANdrew this year, his 2nd with only one out remaining (Week 4 v.s. Brendan). Trocean
-            and Morgan were both estatic, as Morgan would now jump THANdrew in the standings for the playoff picture, as
+            and Morgan were both ecstatic, as Morgan would now jump THANdrew in the standings for the playoff picture, as
             THANdrew loses their 3rd straight. Isaac would become the 1st team to clinch the playoffs with the THANdrew
             loss.</Passage>
 
