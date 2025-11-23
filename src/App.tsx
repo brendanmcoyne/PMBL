@@ -47,6 +47,7 @@ import Week5Recap from "./components/headlines/Week5Recap.tsx";
 import Week6Recap from "./components/headlines/Week6Recap.tsx";
 import Week7Recap from "./components/headlines/Week7Recap.tsx";
 import Week8Recap from "./components/headlines/Week8Recap.tsx";
+import Week9Recap from "./components/headlines/Week9Recap.tsx";
 import AllStarGame from "./components/headlines/AllStarGame.tsx";
 import Blooper from "./components/headlines/Blooper.tsx";
 import Issues from "./components/headlines/Issues.tsx";
@@ -190,6 +191,7 @@ function Root() {
                     <Route path="/headlines/Week6Recap" element={<Week6Recap />} />
                     <Route path="/headlines/Week7Recap" element={<Week7Recap />} />
                     <Route path="/headlines/Week8Recap" element={<Week8Recap />} />
+                    <Route path="/headlines/Week9Recap" element={<Week9Recap />} />
                     <Route path="/headlines/Issues" element={<Issues />} />
                     <Route path="/headlines/Blooper" element={<Blooper />} />
                     <Route path="/headlines/AllStarGame" element={<AllStarGame />} />

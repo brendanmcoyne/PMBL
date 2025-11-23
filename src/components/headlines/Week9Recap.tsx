@@ -101,20 +101,20 @@ export const GenImage = styled.img`
 
 export default function Week9Recap() {
     const game1 = {
-        away: { name: "Isaac", color: "#3586E8", scores: [0, 0, 0, 5, 0, 1, 5], R: 11, H: 18, E: 1, LOB: 6 },
-        home: { name: "James", color: "#F1C232", scores: [0, 4, 3, 0, 1, 1, 0], R: 9, H: 21, E: 1, LOB: 9 },
+        away: { name: "Justave", color: "#FF9900", scores: [0, 0, 4, 0, 2, 6, 4], R: 16, H: 21, E: 0, LOB: 6 },
+        home: { name: "Trocean", color: "#9900FF", scores: [0, 0, 0, 3, 0, 0, 1], R: 4, H: 10, E: 0, LOB: 3 },
     };
     const game2 = {
-        away: { name: "Marge", color: "#6AA84F", scores: [0, 0, 7, 0, 0, 2, 1], R: 10, H: 19, E: 0, LOB: 6 },
-        home: { name: "Justave", color: "#FF9900", scores: [0, 1, 0, 0, 0, 0, 3], R: 4, H: 13, E: 0, LOB: 5 },
+        away: { name: "Isaac", color: "#3586E8", scores: [3, 2, 0, 0, 0, 2, 1], R: 8, H: 20, E: 0, LOB: 9 },
+        home: { name: "Morgan", color: "#FF00FF", scores: [3, 0, 0, 0, 0, 1, 1], R: 5, H: 15, E: 1, LOB: 5 },
     }
     const game3 = {
-        away: { name: "Morgan", color: "#FF00FF", scores: [0, 0, 6, 1, 0, 3, 0], R: 10, H: 19, E: 0, LOB: 8 },
-        home: { name: "Brendan", color: "#CC0000", scores: [0, 0, 0, 1, 3, 3, 1], R: 8, H: 15, E: 2, LOB: 5 },
+        away: { name: "James", color: "#F1C232", scores: [1, 0, 0, 1, 0, 0, 2], R: 4, H: 16, E: 0, LOB: 7 },
+        home: { name: "Brendan", color: "#CC0000", scores: [0, 3, 2, 2, 0, 1, "X"], R: 8, H: 19, E: 1, LOB: 5 },
     };
     const game4 = {
-        away: { name: "THANdrew", color: "#999999", scores: [3, 1, 0, 0, 0, 0, 0], R: 4, H: 16, E: 0, LOB: 11 },
-        home: { name: "Trocean", color: "#9900FF", scores: [2, 1, 0, 0, 0, 0, 2], R: 5, H: 14, E: 0, LOB: 4 },
+        away: { name: "Marge", color: "#6AA84F", scores: [0, 0, 0, 0, 1, 0, 0], R: 1, H: 6, E: 0, LOB: 1 },
+        home: { name: "THANdrew", color: "#999999", scores: [3, 0, 0, 0, 3, 0, "X"], R: 6, H: 14, E: 0, LOB: 5 },
     };
 
     return (
@@ -123,43 +123,31 @@ export default function Week9Recap() {
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 2 Week 9 Recap</StyledHeader>
-            <GenImage src="/headlines/week8.jpg" alt="Week9"/>
+            <GenImage src="/headlines/week9.jpg" alt="Week9"/>
             <ArticleMeta>
-                Written by: PMBL News — November 21, 2025
+                Written by: PMBL News — November 23, 2025
             </ArticleMeta>
             <SeparatorLine />
             <Passage>We are now one week away from the playoffs, and there is a lot on the line. Playoff spots, division
                 titles, and embarrassing regular season collapses are all on the line for some teams.
-
             </Passage>
 
-            <StyledMiniHeader style={{marginBottom: "0"}}>Game 1: <span style={{ color: "#F1C232" }}> James</span> v.s.
-                <span style={{ color: "#3586E8" }}> Isaac</span></StyledMiniHeader>
-            <Passage>In a high stakes clash, Isaac decided to take James to the jungle for his final home game of the
-                season. Another big pitching duel was to commence, with Justin Nascimento and Birdo going head to head.
-                The scoreboard stayed quiet for the first inning, before James' bats began to warm up and put 4 on the
-                scoreboard in the 2nd. Isaac realized during this inning that he gave his crew the wrong lineup, accidentally
-                messing up outfield chemistry in right. Gramms would attempt to catch a ball in right, but it would
-                bounce off her glove and into the stands, counting for a 3 run homer for James in the 3rd. This would make
-                the game 7-0 in James favor. Justin Nascimento would get  subbed out, an incredibly subpar day for him,
-                as the team brought in Donkey Kong. In the 4th inning, Birdo would put runners on 1st and 2nd, and despite
-                not giving up a single run, she would be pulled after 3 IP and 7 Hits given up. A very questionable decision
-                by the pitching staff. When everyone in the crowd thought Wiggler or Zekrom would be stepping up next, it
-                would be Blue Toad.
-            </Passage>
-
-            <Passage>Blue Toads disasterclass of a pitching performance would give up 5 runs without recording a single
-                out on 3 hits, making the score 7-5 James. One of those hits would be a grand slam by Funky Kong.
-                Blue Toad would be subbed out for Petey Piranha, the former MVP and Golden Glove winner. Many people were
-                shocked by this switch, but Petey pitched fairly well. James would tack on a couple more runs in the 5th
-                and in the 6th, with Isaac scoring 1 in the 6th, to make the score 9-6 James. Petey would let up 1 run
-                in the 7th but would get 2 outs. So with 1 out remaining and up 2, James' team decides to put in Yellow
-                Pianta to pitch. Only needing 1 out, Yellow Pianta would give up a hit to Dixie Kong to drive in a run
-                making it 9-8. On the next batter, Yellow Pianta would give up a 3 run homer to Funky Kong. Giving
-                Isaac his first lead of the game. Yellow Pianta would finally get the out, but Petey and the gang could
-                not muster 2 runs, leaving Isaac the victor of the 11-9 comeback. This would be the 3rd 7 run comeback
-                to win this season, as Isaac becomes the first team with a winning record.
-
+            <StyledMiniHeader style={{marginBottom: "0"}}>Game 1: <span style={{ color: "#9900FF" }}> Trocean</span> v.s.
+                <span style={{ color: "#FF9900" }}> Justave</span></StyledMiniHeader>
+            <Passage>After their embarrassing loss last week against Marge, Justave was prepared to come back with vengeance.
+                Their managerial staff decided to go with the "silent treatment" for this game, not saying a single word
+                or expressing any sort of emotion throughout the entire game. This would be met by boos from the fans
+                and other managers, who thought it created a more boring and lifeless vibe to the game and their team. The
+                pitching duel between Bob Marley and MLK was going steadily into the 5th inning, where the score was only
+                4-3 in favor of Justave. MLK would give up 2 more in the 5th before being subbed out for Mario, who
+                would close out the inning with Justave up 6-3. Once in the 6th inning, Justaves batters would finally come
+                alive on the cruiser, destroying Mario as a pitcher. Justaves bats would go on to score 10 runs across the
+                6th and the 7th, with Green Kritter doing most of the heavy work, knocking down 6 RBIs. Despite all the
+                storylines about the Koopa and Green Shy Guy combo together, Koopa went 0/4. The 2nd game in a row where
+                Koopa would not record a hit raised a lot of concerns from his team about his playing ability. In wake
+                of another terrible outing for Trocean's team, Kimmy would hit a home run in the 7th to boost morale. The
+                score would end 16-4, and Justave would clinch the 2nd playoff spot this season, becoming the first team
+                to make consecutive playoffs.
             </Passage>
 
             <ScoreTable>
@@ -190,32 +178,34 @@ export default function Week9Recap() {
                 </tbody>
             </ScoreTable>
             <GameSummary>
-                <div className="mvp">Game MVP: Funky Kong</div>
+                <div className="mvp">Game MVP: Green Kritter</div>
                 <div className="pitchers">
-                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Donkey Kong (1 - 2)</span>
-                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Yellow Pianta (0 - 1)</span>
+                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Bob Marley (4 - 3)</span>
+                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: MLK (0 - 1)</span>
                 </div>
-                <span style={{fontSize: ".8rem"}}>Save: Dixie Kong (1)</span>
             </GameSummary>
 
-            <StyledMiniHeader style={{marginBottom: "0"}}>Game 2: <span style={{ color: "#FF9900" }}> Justave</span> v.s.
-                <span style={{ color: "#6AA84F" }}> Marge</span></StyledMiniHeader>
-            <Passage>A very smug Justave team would roll into Bowsers Castle for Game 2 of Week 8 off the thrill of the 9
-                inning victory against Isaac the week prior. Playing Marge, they knew they beat them 16-0 earlier
-                that year. Manager Justin has been talking for weeks about how big of a game the Week 10 clash against James
-                would be. This game could definitely have been labeled as a trap game for Justave. From the first batter,
-                Green Toad would ground out, ending his 19 hit streak, and from that moment, something felt off. Justave would
-                get a solo homer from Hammer Bro in the 2nd to go up 1-0, as Marge pitcher Boo began to get tired, however Boo stayed
-                poised. Marge's bats would explode in the 3rd however, scoring 7 to take a 7-1 lead over Justave. Yellow Shy
-                Guy coming out of nowhere to knock down 3 RBIs in this game certainly helped their cause. Bob Marley looked
-                very human today, only pitching 2.1 innings, giving up 5 earned runs on 9 hits. Boo on the other hand had
-                his best pitching day by far. Going 5.1 IP, 8 hits, 1 earned run, and his first strikeout. Going into the
-                bottom of the 7th, Marge would have an incredible 10-1 lead, a shock to dozens of PMBL fans. However, despite
-                Boo's pitching performance and Marge's bats working today, none of this would have been possible without Yellow
-                Kamek. Yellow Kamek this game played some of the greatest defense this league has ever seen at shortstop. Play after
-                play, jumping to grab the ball, using his wand, and turning double plays looked effortless for him. Justave
-                would score a few in the bottom of the 7th but that would do it. Marge would win 10-4 and keep the division race
-                close between Justave and James, with Yellow Kamek deservingly winning Game MVP. </Passage>
+            <StyledMiniHeader style={{marginBottom: "0"}}>Game 2: <span style={{ color: "#3586E8" }}> Isaac</span> v.s.
+                <span style={{ color: "#FF00FF" }}> Morgan</span></StyledMiniHeader>
+            <Passage>With Morgan on a hot streak and the division title on the line, another game between Mii pitchers
+                took center stage at Mario Stadium. The biggest storyline of this game was that Betty White would not be
+                playing due to injury, therefore Triangle would be getting her PMBL debut. Runs would start fast, with
+                Isaac scoring 3 in the top of the 1st, and Morgan scoring 3 in the bottom. Fans chirped King K Rool while
+                he was up to bat, saying he was going to ground out. King K then hit a 3 run shot to silence the critics.
+                Diddy Kong would be in the lineup for Morgan today, playing against the rest of the monkeys. Claims about
+                collusion and throwing for his friends were floated throughout the game, and many people definitely
+                considered it when Diddy struck out at his first at bat against Justin. Scoring would go quiet until the
+                6th inning, still leading 5-3, Isaac would score 2 more runs, thanks in part to Funky Kongs 2nd home run
+                of the day. Morgan would then score a run in the bottom of the 6th to bring it back within 3, this time
+                from a Wario RBI. In the 7th inning, Isaac's team would score one more run to make it 8-4, ending Wario's
+                time on the mound, giving up 3 runs on 9 hits. In the bottom of the 7th, Isaacs infield would error to put
+                Baby Daisy on base, and Baby Mario would slap hit to bring her home. However, Donkey Kong would be able
+                to close it out, sealing the West Division title for Isaac. Despite Morgan being 4-5, this game didn't
+                matter in terms of his chances to make the playoffs. The only thing that matters is his Week 10 game
+                against THANdrew.
+                
+
+            </Passage>
 
             <ScoreTable>
                 <thead>
@@ -247,30 +237,28 @@ export default function Week9Recap() {
             <GameSummary>
                 <div className="mvp">Game MVP: Funky Kong</div>
                 <div className="pitchers">
-                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Boo (1 - 4)</span>
-                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Bob Marley (3 - 3)</span>
+                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Justin Nascimento (4 - 0)</span>
+                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Reshiram (2 - 1)</span>
                 </div>
             </GameSummary>
 
-            <StyledMiniHeader style={{marginBottom: "0"}}>Game 3: <span style={{ color: "#CC0000" }}> Brendan</span> v.s.
-                <span style={{ color: "#FF00FF" }}> Morgan</span></StyledMiniHeader>
-            <Passage>Both of these teams winning back to back games would set up a great scenario at Mario Stadium. If THANdrew
-                lost to Trocean in the next game, then the winner of this game would be in the playoff picture. To start off,
-                Blooper would quickly let up a few hits, but no damage was done. Brendan's batters would deep shots, however
-                the speed of Morgan's defense would easily reach them. Scoring started in the 3rd, when Morgan's team, lead by
-                King K Rool, would score 6 in the 3rd, taking out fan favorite Blooper early. King K would get a big grand slam
-                in this inning after Morgan's bats already scored 2. Morgan would score a 7th run in the 4th, with Brendan's
-                team getting themselves on the board with 1 as well. Bowser would get a 3 run homer to left in the 5th to
-                pull within 4, effectively taking out Reshiram to start the 6th. Within 3 now for Brendan, Blue Pianta
-                would error at 2nd to put Diddy on 1st, and then Daisy would hit a homer to make it 9-4, a costly mistake
-                to give up another run by Blue Pianta. After Morgan would bat in his 10th run of the day, Blue Pianta
-                would error again in the same inning, however this would not lead to any score. Brendan's bats once again
-                would respond scoring 3 runs to bring the lead back to 3. In the bottom of the 7th, it was joked about that
-                Brendan's frustration would be at an all time high if the game ended 10-9 in favor of Morgan because of
-                Blue Pianta's error. Bowser would immediately hit another homer, tying Petey Piranha for the league lead, making
-                it 10-8. With Brendan very worried he would lose by 1, the rest of his bats would ground out, losing 10-8.
-                Morgan, now off of winning 3 straight, finds himself in a decent position to make the playoffs after all hope
-                looked lost after losing to Marge 3 weeks prior. </Passage>
+            <StyledMiniHeader style={{marginBottom: "0"}}>Game 3: <span style={{ color: "#F1C232" }}> James</span> v.s.
+                <span style={{ color: "#CC0000" }}> Brendan</span></StyledMiniHeader>
+            <Passage>Both teams coming off of close losses the week prior, with James choking a 7-0 lead, he needs a
+                win in order to claim a playoff spot, and Brendan needs a win to stay alive. Petey Piranha would get
+                the start on the mound today after his 3.2 inning performance the week prior impressed James. Today he
+                would only go .2 innings, and Blones would quickly knock down an RBI to mkae it 1-0 Brendan. Birdo would
+                then come in and pitch like the All-Star pitcher she has been this year, going 5 innings, and giving up
+                1 earned run on 7 hits, with a strikeout on Barry. Blooper had an off day, giving up 4 runs on 9 hits
+                through 2.1 innings. The weakest part of the Brendan team in this game was their fielding, giving up
+                unnecessary runs due to inept fielding decisions. The worst part for Brendan was his teams base running,
+                which locked itself into a triple play not once but twice during this game. James' bats were back to normal
+                after their brief dry spell, even though this would be the only game so far this season that his bats would
+                not record a home run. Despite scoring 2 in the top of the 7th, Brendan's team did not have enough, giving
+                James the 8-4 victory, knocking Brendan out of the playoff race. James would clinch the 3rd playoff spot
+                with a record of 6-3, with a large division clinching game next week against Justave. Birdo won MVP
+                based on her great pitching day and her 3/4 and 1 RBI batting.
+            </Passage>
 
             <ScoreTable>
                 <thead>
@@ -308,33 +296,21 @@ export default function Week9Recap() {
             </GameSummary>
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 4: <span style={{ color: "#999999" }}> THANdrew</span> v.s.
-                <span style={{ color: "#9900FF" }}> Trocean</span></StyledMiniHeader>
-            <Passage>In what's already been a lost season for Trocean, due to the way the earlier games unfolded, Trocean
-                would already be eliminated from the playoffs before their game even started. However, there plan to stay
-                competitive for the rest of the season was shown by switching their batting and fielding lineups earlier in
-                the week. Facing THANdrew, Morgan was a big supporter for his division rival in Trocean, cheering more for
-                them than he ever does for his own team. MLK would get the nod to start tonight versus THANdrew, and would
-                immediately give up a 3 run homer from Fire Bro. Trocean's team would respond in kind with an RBI shot by
-                Red Toad, and then by Kimmy, making it 3-2 THANdrew. Green Kamek would be pulled after .2 innings for Waluigi,
-                his shortest start of the year. Both teams would each tack on another run in the 2nd, making it 4-3 THANdrew.
-                MLK would pitch into the 4th before being subbed in for Mario. THANdrew's team continued to get hits, however
-                could never seal the deal. Troceans defense continued to lock down when players in scoring position, not
-                allowing THANdrew any runs. It would stay 4-3 into the 7th, and Mario would pitch a 1-2-3 inning, bringing
-                up Troceans offense.</Passage>
-
-            <Passage>In the bottom of the 7th, Waluigi would surprisingly be subbed out for Fire Bro, who has never pitched
-                in a PMBL game. He would quickly give up a hit to both Red Shy Guy and Red Yoshi, putting runners on 1st and 3rd.
-                Mario would get up to the plate and hit a shot into shallow center, but Red Shy Guy would not run home and would
-                stay at 3rd, yet Mario would get picked off, advancing Red Yoshi to 2nd. Red Pianta would then step up the plate,
-                and do the exact same thing. Once again, for some reason Red Shy Guy would fail to run home to tie it, with this
-                time Red Yoshi being picked off Now with 2 outs on the board down 1, Red Toad would save the day and hit the
-                exact same shot right up the middle to finally score Red Shy Guy, tying it at 4. MLK on the next pitch would
-                hit a huge shot into left center, scoring Red Pianta from 2nd to win the game 5-4 for Trocean. This would be
-                the 3rd blown save for THANdrew this year, his 2nd with only one out remaining (Week 4 v.s. Brendan). Trocean
-                and Morgan were both ecstatic, as Morgan would now jump THANdrew in the standings for the playoff picture, as
-                THANdrew loses their 3rd straight. Isaac would become the 1st team to clinch the playoffs with the THANdrew
-                loss.</Passage>
-
+                <span style={{ color: "#6AA84F" }}> Marge</span></StyledMiniHeader>
+            <Passage>Coming into this game, THANdrew had now lost 3 straight games and was in dire need of a win. Marge
+            coming off of a huge upset against Justave was looking to stay alive in the playoff race. Matt's coaching
+            practices have been very publicized over the course of the past weeks, and it was time to see if that
+            "coaching" would pay off. After the amazing pitching performance Boo had last week, Marge hoped Boo would
+            be able to replicate that today. Instead, Boo only went 2 innings, giving up 3 earned runs on 9 hits, with
+            all 3 of those runs coming in the 1st inning. Green Kamek would have his best day on the mound for THANdrew,
+            pitching 4.2 IP, only giving up 3 hits and one earned run. The run would come on a sacrifice fly from Peach.
+            She would go 0/3 today however, as her batting percentage would continue to go down. Blue Kritter on the
+            other hand was able to record a hit and 2 RBIs to boost his batting percentage. THANdrew would score 3 more
+            in the 5th, including a Larry Cuc RBI. Waluigi would come into pitch in the 5th, and only give up 3 hits in
+            2.1 innings. THANdrews defense would have a great day, as Green Kamek and Waluigi collectively would only
+            give up 6 hits. 4 of Marge's hitters would not record a hit during this game, as THANdrew would win 6-1, and
+            secure their 2nd straight non-losing record, as Marge has been eliminated from the playoffs.
+            </Passage>
 
             <ScoreTable>
                 <thead>
@@ -379,49 +355,46 @@ export default function Week9Recap() {
                     <div className="player">Funky Kong</div>
                     <div className="manager">Manager: <span style={{ color: "#3586E8" }}>Isaac</span></div>
                     <div className="description">
-                        3/5, 3 Runs, 7 RBIs, 2 HR
+                        5/5, 3 Runs, 3 RBIs, 2 HR
                     </div>
                 </AwardBlock>
 
                 <AwardBlock>
                     <div className="award-name">Pitcher of the Week</div>
-                    <div className="player">Boo</div>
-                    <div className="manager">Manager: <span style={{ color: "#6AA84F" }}>Marge</span></div>
+                    <div className="player">Bob Marley</div>
+                    <div className="manager">Manager: <span style={{ color: "#FF9900" }}>Justave</span></div>
                     <div className="description">
-                        (W) 5.1 IP, 8 Hits, 1 ER, 1 K
+                        (W) 7 IP, 10 Hits, 4 ER
                     </div>
                 </AwardBlock>
 
                 <AwardBlock>
                     <div className="award-name">Captain of the Week</div>
-                    <div className="player">Waluigi</div>
-                    <div className="manager">Manager: <span style={{ color: "#999999" }}>THANdrew</span></div>
+                    <div className="player">Birdo</div>
+                    <div className="manager">Manager: <span style={{ color: "#F1C232" }}>James</span></div>
                     <div className="description" style={{marginBottom: "0"}}>
-                        4/4, 2 Runs, 2 Doubles
+                        3/4, 1 Run, 1 RBI
                     </div>
                     <div className="description" style={{marginTop: "0"}}>
-                        5.1 IP, 4 Hits, 1 ER
+                        5 IP, 7 Hits, 1 ER, 1 K
                     </div>
                 </AwardBlock>
 
                 <AwardBlock>
                     <div className="award-name">Rookie of the Week</div>
-                    <div className="player">Reshiram</div>
-                    <div className="manager">Manager: <span style={{ color: "#FF00FF" }}>Morgan</span></div>
-                    <div className="description" style={{marginBottom: "0"}}>
-                        1/4
-                    </div>
-                    <div className="description" style={{marginTop: "0"}}>
-                        (W) 5 IP, 10 Hits, 4 ER
+                    <div className="player">Kimmy</div>
+                    <div className="manager">Manager: <span style={{ color: "#9900FF" }}>Trocean</span></div>
+                    <div className="description">
+                        3/3, 1 Run, 2 RBIs, 1 HR
                     </div>
                 </AwardBlock>
 
                 <AwardBlock>
                     <div className="award-name">Surprise of the Week</div>
-                    <div className="player">Yellow Kamek</div>
-                    <div className="manager">Manager: <span style={{ color: "#6AA84F" }}>Marge</span></div>
+                    <div className="player">Green Kamek</div>
+                    <div className="manager">Manager: <span style={{ color: "#999999" }}>THANdrew</span></div>
                     <div className="description">
-                        Incredible lockdown defense. Went 4/4 batting too.
+                        4.2 IP, 3 Hits, 1 ER. Best pitching performance this season
                     </div>
                 </AwardBlock>
             </AwardsSection>
