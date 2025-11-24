@@ -25,10 +25,10 @@ export const rosters2: Roster2[] = [
             { name: "Blue Kamek"},
             { name: "Blue Shy Guy"},
             { name: "Barry"},
-            { name: "Monty Mole"},
             { name: "Diddler"},
             { name: "Blooper" },
             { name: "Blue Pianta" },
+            { name: "Gray Shy Guy"},
         ],
     },
     {
@@ -45,7 +45,7 @@ export const rosters2: Roster2[] = [
             { name: "Koopa"},
             { name: "Bertha"},
             { name: "Tate McRae"},
-            { name: "Michelle Obama"},
+            { name: "Sabrina"},
         ]
     },
     {
@@ -109,12 +109,12 @@ export const rosters2: Roster2[] = [
             { name: "Shy Guy" },
             { name: "Dark Bones" },
             { name: "Red Koopa" },
-            { name: "Red Toad" },
             { name: "Kimmy" },
             { name: "MLK" },
-            { name: "Toadsworth" },
             { name: "Red Yoshi" },
-            { name: "Sabrina" }
+            { name: "Michelle Obama" },
+            { name: "Red Toad" },
+            { name: "Grayson McKean" }
         ]
     },
     {
@@ -124,14 +124,14 @@ export const rosters2: Roster2[] = [
             { name: "Diddy Kong" },
             { name: "Wario" },
             { name: "Yoshi" },
-            { name: "Dry Bones" },
             { name: "Baby Mario" },
+            { name: "Dry Bones" },
             { name: "Yellow Yoshi" },
             { name: "Antenna" },
             { name: "Paratroopa" },
             { name: "King K Rool" },
-            { name: "John Daly" },
-            { name: "Baby Daisy" }
+            { name: "Baby Daisy" },
+            { name: "Reshiram" },
         ],
     },
     {
@@ -144,11 +144,11 @@ export const rosters2: Roster2[] = [
             { name: "Green Kamek" },
             { name: "Green Paratroopa" },
             { name: "Larry Cuc" },
-            { name: "Gray Shy Guy" },
             { name: "Baby Luigi" },
             { name: "Broseph" },
             { name: "Nose" },
-            { name: "Green Noki" }
+            { name: "Green Noki" },
+            { name: "Monty Mole" },
         ]
     }
 ]

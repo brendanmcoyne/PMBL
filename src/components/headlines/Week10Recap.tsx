@@ -178,10 +178,10 @@ export default function Week10Recap() {
                 </tbody>
             </ScoreTable>
             <GameSummary>
-                <div className="mvp">Game MVP: Green Kritter</div>
+                <div className="mvp">Game MVP: Diddler, Blue Pianta</div>
                 <div className="pitchers">
-                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Bob Marley (4 - 3)</span>
-                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: MLK (0 - 1)</span>
+                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Blooper (2 - 2)</span>
+                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Boo (1 - 6)</span>
                 </div>
             </GameSummary>
 
@@ -235,10 +235,10 @@ export default function Week10Recap() {
                 </tbody>
             </ScoreTable>
             <GameSummary>
-                <div className="mvp">Game MVP: Funky Kong</div>
+                <div className="mvp">Game MVP: Dark Bones</div>
                 <div className="pitchers">
-                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Justin Nascimento (4 - 0)</span>
-                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Reshiram (2 - 1)</span>
+                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Grayson McKean (1 - 0)</span>
+                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Jack White (0 - 1)</span>
                 </div>
             </GameSummary>
 
@@ -288,10 +288,10 @@ export default function Week10Recap() {
                 </tbody>
             </ScoreTable>
             <GameSummary>
-                <div className="mvp">Game MVP: Birdo</div>
+                <div className="mvp">Game MVP: Bob Marley</div>
                 <div className="pitchers">
-                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Birdo (5 - 1)</span>
-                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Blooper (1 - 2)</span>
+                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Bob Marley (5 - 3)</span>
+                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Birdo (5 - 2)</span>
                 </div>
             </GameSummary>
 
@@ -340,10 +340,10 @@ export default function Week10Recap() {
                 </tbody>
             </ScoreTable>
             <GameSummary>
-                <div className="mvp">Game MVP: Red Kritter</div>
+                <div className="mvp">Game MVP: King K Rool</div>
                 <div className="pitchers">
-                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Green Kamek (1 - 1)</span>
-                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Boo (1 - 5)</span>
+                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Wario (1 - 2)</span>
+                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Larry Cuc (0 - 2)</span>
                 </div>
             </GameSummary>
 
@@ -352,10 +352,13 @@ export default function Week10Recap() {
             <AwardsSection>
                 <AwardBlock>
                     <div className="award-name">MVP of the Week</div>
-                    <div className="player">Funky Kong</div>
-                    <div className="manager">Manager: <span style={{ color: "#3586E8" }}>Isaac</span></div>
-                    <div className="description">
-                        5/5, 3 Runs, 3 RBIs, 2 HR
+                    <div className="player">King K Rool</div>
+                    <div className="manager">Manager: <span style={{ color: "#FF00FF" }}>Morgan</span></div>
+                    <div className="description" style={{marginBottom: "0"}}>
+                        3/4, 2 Runs, 5 RBIs, 2 HR
+                    </div>
+                    <div className="description" style={{marginTop: "0"}}>
+                        Scored go-ahead run to clinch playoffs
                     </div>
                 </AwardBlock>
 
@@ -364,37 +367,32 @@ export default function Week10Recap() {
                     <div className="player">Bob Marley</div>
                     <div className="manager">Manager: <span style={{ color: "#FF9900" }}>Justave</span></div>
                     <div className="description">
-                        (W) 7 IP, 10 Hits, 4 ER
+                        (W) 6.1 IP, 9 Hits, 1 ER
                     </div>
                 </AwardBlock>
 
                 <AwardBlock>
                     <div className="award-name">Captain of the Week</div>
-                    <div className="player">Birdo</div>
-                    <div className="manager">Manager: <span style={{ color: "#F1C232" }}>James</span></div>
+                    <div className="player">Bowser</div>
+                    <div className="manager">Manager: <span style={{ color: "#CC0000" }}>Brendan</span></div>
                     <div className="description" style={{marginBottom: "0"}}>
-                        3/4, 1 Run, 1 RBI
-                    </div>
-                    <div className="description" style={{marginTop: "0"}}>
-                        5 IP, 7 Hits, 1 ER, 1 K
+                        3/4, 2 Runs, 3 RBIs, 1 HR, 1 Triple
                     </div>
                 </AwardBlock>
 
                 <AwardBlock>
                     <div className="award-name">Rookie of the Week</div>
-                    <div className="player">Kimmy</div>
-                    <div className="manager">Manager: <span style={{ color: "#9900FF" }}>Trocean</span></div>
                     <div className="description">
-                        3/3, 1 Run, 2 RBIs, 1 HR
+                        None, they were all bad.
                     </div>
                 </AwardBlock>
 
                 <AwardBlock>
                     <div className="award-name">Surprise of the Week</div>
-                    <div className="player">Green Kamek</div>
-                    <div className="manager">Manager: <span style={{ color: "#999999" }}>THANdrew</span></div>
+                    <div className="player">Blooper</div>
+                    <div className="manager">Manager: <span style={{ color: "#CC0000" }}>Brendan</span></div>
                     <div className="description">
-                        4.2 IP, 3 Hits, 1 ER. Best pitching performance this season
+                        Complete game pitched. Hit his first home run too
                     </div>
                 </AwardBlock>
             </AwardsSection>
