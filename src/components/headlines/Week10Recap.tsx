@@ -99,7 +99,7 @@ export const GenImage = styled.img`
     }
 `;
 
-export default function Week9Recap() {
+export default function Week10Recap() {
     const game1 = {
         away: { name: "Justave", color: "#FF9900", scores: [0, 0, 4, 0, 2, 6, 4], R: 16, H: 21, E: 0, LOB: 6 },
         home: { name: "Trocean", color: "#9900FF", scores: [0, 0, 0, 3, 0, 0, 1], R: 4, H: 10, E: 0, LOB: 3 },
@@ -203,7 +203,7 @@ export default function Week9Recap() {
                 to close it out, sealing the West Division title for Isaac. Despite Morgan being 4-5, this game didn't
                 matter in terms of his chances to make the playoffs. The only thing that matters is his Week 10 game
                 against THANdrew.
-                
+
 
             </Passage>
 
@@ -298,18 +298,18 @@ export default function Week9Recap() {
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 4: <span style={{ color: "#999999" }}> THANdrew</span> v.s.
                 <span style={{ color: "#6AA84F" }}> Marge</span></StyledMiniHeader>
             <Passage>Coming into this game, THANdrew had now lost 3 straight games and was in dire need of a win. Marge
-            coming off of a huge upset against Justave was looking to stay alive in the playoff race. Matt's coaching
-            practices have been very publicized over the course of the past weeks, and it was time to see if that
-            "coaching" would pay off. After the amazing pitching performance Boo had last week, Marge hoped Boo would
-            be able to replicate that today. Instead, Boo only went 2 innings, giving up 3 earned runs on 9 hits, with
-            all 3 of those runs coming in the 1st inning. Green Kamek would have his best day on the mound for THANdrew,
-            pitching 4.2 IP, only giving up 3 hits and one earned run. The run would come on a sacrifice fly from Peach.
-            She would go 0/3 today however, as her batting percentage would continue to go down. Blue Kritter on the
-            other hand was able to record a hit and 2 RBIs to boost his batting percentage. THANdrew would score 3 more
-            in the 5th, including a Larry Cuc RBI. Waluigi would come into pitch in the 5th, and only give up 3 hits in
-            2.1 innings. THANdrews defense would have a great day, as Green Kamek and Waluigi collectively would only
-            give up 6 hits. 4 of Marge's hitters would not record a hit during this game, as THANdrew would win 6-1, and
-            secure their 2nd straight non-losing record, as Marge has been eliminated from the playoffs.
+                coming off of a huge upset against Justave was looking to stay alive in the playoff race. Matt's coaching
+                practices have been very publicized over the course of the past weeks, and it was time to see if that
+                "coaching" would pay off. After the amazing pitching performance Boo had last week, Marge hoped Boo would
+                be able to replicate that today. Instead, Boo only went 2 innings, giving up 3 earned runs on 9 hits, with
+                all 3 of those runs coming in the 1st inning. Green Kamek would have his best day on the mound for THANdrew,
+                pitching 4.2 IP, only giving up 3 hits and one earned run. The run would come on a sacrifice fly from Peach.
+                She would go 0/3 today however, as her batting percentage would continue to go down. Blue Kritter on the
+                other hand was able to record a hit and 2 RBIs to boost his batting percentage. THANdrew would score 3 more
+                in the 5th, including a Larry Cuc RBI. Waluigi would come into pitch in the 5th, and only give up 3 hits in
+                2.1 innings. THANdrews defense would have a great day, as Green Kamek and Waluigi collectively would only
+                give up 6 hits. 4 of Marge's hitters would not record a hit during this game, as THANdrew would win 6-1, and
+                secure their 2nd straight non-losing record, as Marge has been eliminated from the playoffs.
             </Passage>
 
             <ScoreTable>

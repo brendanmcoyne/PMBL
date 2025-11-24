@@ -170,8 +170,8 @@ export default function CurrentSeason() {
 
     const westTeams = [
         { name: 'Isaac', color: "#3586E8", record: '7-3', divRecord: '4-2' },
-        { name: 'THANdrew', color: "#999999", record: '5-4', divRecord: '2-3' },
-        { name: 'Morgan', color: "#FF00FF", record: '4-5', divRecord: '2-3' },
+        { name: 'Morgan', color: "#FF00FF", record: '5-5', divRecord: '3-3' },
+        { name: 'THANdrew', color: "#999999", record: '5-5', divRecord: '2-4' },
         { name: 'Trocean', color: "#9900FF", record: '3-7', divRecord: '3-3' },
     ];
 
@@ -234,11 +234,11 @@ export default function CurrentSeason() {
         { matchup: 1, away: "Marge", awaycolor: "#6AA84F", home: "Brendan", homecolor: "#CC0000", score: "3-12"},
         { matchup: 2, away: "Isaac", awaycolor: "#3586E8", home: "Trocean", homecolor: "#9900FF", score: "3-7"},
         { matchup: 3, away: "James", awaycolor: "#F1C232", home: "Justave", homecolor: "#FF9900", score: "1-17"},
-        { matchup: 4, away: "THANdrew", awaycolor: "#999999", home: "Morgan", homecolor: "#FF00FF", score: ""},
+        { matchup: 4, away: "THANdrew", awaycolor: "#999999", home: "Morgan", homecolor: "#FF00FF", score: "8-9"},
     ];
 
     const ConfSeries = [
-        { matchup: 1, away: "THANdrew", awaycolor: "#999999", home: "Justave", homecolor: "#FF9900", record: ""},
+        { matchup: 1, away: "Morgan", awaycolor: "#FF00FF", home: "Justave", homecolor: "#FF9900", record: ""},
         { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Isaac", homecolor: "#3586E8", record: ""},
     ]
 
@@ -266,7 +266,7 @@ export default function CurrentSeason() {
             <StyledHeader $animate={ready}>Current Season</StyledHeader>
 
             <UpcomingGame $animate={ready}>
-                <StyledMiniHeader style={{marginBottom: "0"}}>Upcoming Game</StyledMiniHeader>
+                <StyledMiniHeader style={{marginBottom: "0"}}>Recent Game</StyledMiniHeader>
                 <Game />
             </UpcomingGame>
             <TwoSection>
