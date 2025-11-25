@@ -150,7 +150,42 @@ const TradeArrow = styled.span`
     font-weight: bold;
 `;
 
-const Draft1 = () => {
+const FreeAgency = styled.div`
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #12121c;
+    border-radius: 10px;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 350px;
+    min-height: 140px;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+`;
+
+
+const FALabel = styled.p`
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+`;
+
+
+const FAPlayer = styled.h5`
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+`;
+
+const Draft2 = () => {
     const rounds = [];
     for (let i = 0; i < draftRoster.length; i += 8) {
         rounds.push(draftRoster.slice(i, i + 8));
@@ -184,7 +219,7 @@ const Draft1 = () => {
 
             ))}
 
-            <StyledHeader style={{marginBottom: "0"}}>Season 2 Trades</StyledHeader>
+            <StyledHeader style={{marginBottom: "0"}}>Season 2 Roster Moves</StyledHeader>
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Post Draft</StyledMiniHeader>
 
             <AllTradesWrapper>
@@ -212,8 +247,136 @@ const Draft1 = () => {
                     </Trade>
                 </StyledTrade>
             </AllTradesWrapper>
+
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Week 2</StyledMiniHeader>
+
+            <AllTradesWrapper>
+                <FreeAgency style={{ border: "1px solid #CC0000" }}>
+
+                    <StyledManager style={{ color: "#CC0000", margin: 0 }}>Brendan FA Move:</StyledManager>
+
+                    <div style={{ display: "flex", gap: "60px" }}>
+                        <div>
+                            <FALabel>Drops:</FALabel>
+                            <FAPlayer>Claudius</FAPlayer>
+                        </div>
+
+                        <div>
+                            <FALabel>Receives:</FALabel>
+                            <FAPlayer>Blue Noki</FAPlayer>
+                        </div>
+                    </div>
+
+                </FreeAgency>
+            </AllTradesWrapper>
+
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Week 4</StyledMiniHeader>
+
+            <AllTradesWrapper>
+                <StyledTrade>
+                    <Trade style={{border: "1px solid #CC0000"}}>
+                        <StyledManager style={{color: "#CC0000"}}>Brendan Receives:</StyledManager>
+                        <StyledPlayer>Blue Pianta, Blooper</StyledPlayer>
+                    </Trade>
+                    <TradeArrow>⇄</TradeArrow>
+                    <Trade style={{border: "1px solid #F1C232"}}>
+                        <StyledManager style={{color: "#F1C232"}}>James Receives:</StyledManager>
+                        <StyledPlayer>Abu Patel, Blue Yoshi, Blue Noki</StyledPlayer>
+                    </Trade>
+                </StyledTrade>
+            </AllTradesWrapper>
+
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Week 5</StyledMiniHeader>
+
+            <AllTradesWrapper>
+                <FreeAgency style={{ border: "1px solid #FF00FF" }}>
+
+                    <StyledManager style={{ color: "#FF00FF", margin: 0 }}>Morgan FA Move:</StyledManager>
+
+                    <div style={{ display: "flex", gap: "60px" }}>
+                        <div>
+                            <FALabel>Drops:</FALabel>
+                            <FAPlayer>John Daly</FAPlayer>
+                        </div>
+
+                        <div>
+                            <FALabel>Picks Up:</FALabel>
+                            <FAPlayer>Reshiram</FAPlayer>
+                        </div>
+                    </div>
+
+                </FreeAgency>
+
+                <StyledTrade>
+                    <Trade style={{border: "1px solid #FF9900"}}>
+                        <StyledManager style={{color: "#FF9900"}}>Justave Receives:</StyledManager>
+                        <StyledPlayer>Sabrina</StyledPlayer>
+                    </Trade>
+                    <TradeArrow>⇄</TradeArrow>
+                    <Trade style={{border: "1px solid #9900FF"}}>
+                        <StyledManager style={{color: "#9900FF"}}>Trocean Receives:</StyledManager>
+                        <StyledPlayer>Michelle Obama</StyledPlayer>
+                    </Trade>
+                </StyledTrade>
+
+                <StyledTrade>
+                    <Trade style={{border: "1px solid #CC0000"}}>
+                        <StyledManager style={{color: "#CC0000"}}>Brendan Receives:</StyledManager>
+                        <StyledPlayer>Gray Shy Guy</StyledPlayer>
+                    </Trade>
+                    <TradeArrow>⇄</TradeArrow>
+                    <Trade style={{border: "1px solid #999999"}}>
+                        <StyledManager style={{color: "#999999"}}>THANdrew Receives:</StyledManager>
+                        <StyledPlayer>Monty Mole</StyledPlayer>
+                    </Trade>
+                </StyledTrade>
+            </AllTradesWrapper>
+
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Week 7</StyledMiniHeader>
+
+            <AllTradesWrapper>
+                <FreeAgency style={{ border: "1px solid #9900FF" }}>
+
+                    <StyledManager style={{ color: "#9900FF", margin: 0 }}>Trocean FA Move:</StyledManager>
+
+                    <div style={{ display: "flex", gap: "60px" }}>
+                        <div>
+                            <FALabel>Drops:</FALabel>
+                            <FAPlayer>Toadsworth</FAPlayer>
+                        </div>
+
+                        <div>
+                            <FALabel>Picks Up:</FALabel>
+                            <FAPlayer>Claudius</FAPlayer>
+                        </div>
+                    </div>
+
+                </FreeAgency>
+            </AllTradesWrapper>
+
+            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Week 10</StyledMiniHeader>
+
+            <AllTradesWrapper>
+                <FreeAgency style={{ border: "1px solid #9900FF" }}>
+
+                    <StyledManager style={{ color: "#9900FF", margin: 0 }}>Trocean FA Move:</StyledManager>
+
+                    <div style={{ display: "flex", gap: "60px" }}>
+                        <div>
+                            <FALabel>Drops:</FALabel>
+                            <FAPlayer>Claudius</FAPlayer>
+                        </div>
+
+                        <div>
+                            <FALabel>Picks Up:</FALabel>
+                            <FAPlayer>Grayson</FAPlayer>
+                        </div>
+                    </div>
+
+                </FreeAgency>
+            </AllTradesWrapper>
         </ContentDiv>
     );
 };
 
-export default Draft1;
+export default Draft2;
