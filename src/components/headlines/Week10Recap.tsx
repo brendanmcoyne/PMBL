@@ -101,20 +101,20 @@ export const GenImage = styled.img`
 
 export default function Week10Recap() {
     const game1 = {
-        away: { name: "Justave", color: "#FF9900", scores: [0, 0, 4, 0, 2, 6, 4], R: 16, H: 21, E: 0, LOB: 6 },
-        home: { name: "Trocean", color: "#9900FF", scores: [0, 0, 0, 3, 0, 0, 1], R: 4, H: 10, E: 0, LOB: 3 },
+        away: { name: "Marge", color: "#6AA84F", scores: [0, 2, 1, 0, 0, 0, 0], R: 3, H: 9, E: 1, LOB: 4 },
+        home: { name: "Brendan", color: "#CC0000", scores: [2, 0, 3, 3, 0, 4, "X"], R: 12, H: 19, E: 0, LOB: 3 },
     };
     const game2 = {
-        away: { name: "Isaac", color: "#3586E8", scores: [3, 2, 0, 0, 0, 2, 1], R: 8, H: 20, E: 0, LOB: 9 },
-        home: { name: "Morgan", color: "#FF00FF", scores: [3, 0, 0, 0, 0, 1, 1], R: 5, H: 15, E: 1, LOB: 5 },
+        away: { name: "Trocean", color: "#9900FF", scores: [0, 0, 4, 0, 0, 3, 0], R: 7, H: 19, E: 0, LOB: 9 },
+        home: { name: "Isaac", color: "#3586E8", scores: [2, 0, 0, 0, 0, 1, 0], R: 3, H: 10, E: 1, LOB: 3 },
     }
     const game3 = {
-        away: { name: "James", color: "#F1C232", scores: [1, 0, 0, 1, 0, 0, 2], R: 4, H: 16, E: 0, LOB: 7 },
-        home: { name: "Brendan", color: "#CC0000", scores: [0, 3, 2, 2, 0, 1, "X"], R: 8, H: 19, E: 1, LOB: 5 },
+        away: { name: "Justave", color: "#FF9900", scores: [0, 0, 7, 1, 1, 8, 0], R: 17, H: 22, E: 0, LOB: 4 },
+        home: { name: "James", color: "#F1C232", scores: [1, 0, 0, 0, 0, 0, 0], R: 1, H: 9, E: 1, LOB: 3 },
     };
     const game4 = {
-        away: { name: "Marge", color: "#6AA84F", scores: [0, 0, 0, 0, 1, 0, 0], R: 1, H: 6, E: 0, LOB: 1 },
-        home: { name: "THANdrew", color: "#999999", scores: [3, 0, 0, 0, 3, 0, "X"], R: 6, H: 14, E: 0, LOB: 5 },
+        away: { name: "THANdrew", color: "#999999", scores: [0, 1, 2, 3, 0, 1, 1], R: 8, H: 15, E: 1, LOB: 2 },
+        home: { name: "Morgan", color: "#FF00FF", scores: [4, 0, 0, 2, 0, 3, "X"], R: 9, H: 20, E: 0, LOB: 10 },
     };
 
     return (
@@ -122,32 +122,31 @@ export default function Week10Recap() {
             <ToggleButton>
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
-            <StyledHeader>Season 2 Week 9 Recap</StyledHeader>
-            <GenImage src="/headlines/week9.jpg" alt="Week9"/>
+            <StyledHeader>Season 2 Week 10 Recap</StyledHeader>
+            <GenImage src="/headlines/week10.jpg" alt="Week10"/>
             <ArticleMeta>
-                Written by: PMBL News — November 23, 2025
+                Written by: PMBL News — November 29, 2025
             </ArticleMeta>
             <SeparatorLine />
-            <Passage>We are now one week away from the playoffs, and there is a lot on the line. Playoff spots, division
-                titles, and embarrassing regular season collapses are all on the line for some teams.
+            <Passage>An incredible final week of the season brought some amazing storylines, playoff shakeups, and even
+                more questions regarding how the playoffs will go. The 4 playoff teams have officially been set. Let's see
+                how everyone did this past week first.
             </Passage>
 
-            <StyledMiniHeader style={{marginBottom: "0"}}>Game 1: <span style={{ color: "#9900FF" }}> Trocean</span> v.s.
-                <span style={{ color: "#FF9900" }}> Justave</span></StyledMiniHeader>
-            <Passage>After their embarrassing loss last week against Marge, Justave was prepared to come back with a vengeance.
-                Their managerial staff decided to go with the "silent treatment" for this game, not saying a single word
-                or expressing any sort of emotion throughout the entire game. This would be met by boos from the fans
-                and other managers, who thought it created a more boring and lifeless vibe to the game and their team. The
-                pitching duel between Bob Marley and MLK was going steadily into the 5th inning, where the score was only
-                4-3 in favor of Justave. MLK would give up 2 more in the 5th before being subbed out for Mario, who
-                would close out the inning with Justave up 6-3. Once in the 6th inning, Justaves batters would finally come
-                alive on the cruiser, destroying Mario as a pitcher. Justaves bats would go on to score 10 runs across the
-                6th and the 7th, with Green Kritter doing most of the heavy work, knocking down 6 RBIs. Despite all the
-                storylines about the Koopa and Green Shy Guy combo together, Koopa went 0/4. The 2nd game in a row where
-                Koopa would not record a hit raised a lot of concerns from his team about his playing ability. In wake
-                of another terrible outing for Trocean's team, Kimmy would hit a home run in the 7th to boost morale. The
-                score would end 16-4, and Justave would clinch the 2nd playoff spot this season, becoming the first team
-                to make consecutive playoffs.
+            <StyledMiniHeader style={{marginBottom: "0"}}>Game 1: <span style={{ color: "#6AA84F" }}> Marge</span> v.s.
+                <span style={{ color: "#CC0000" }}> Brendan</span></StyledMiniHeader>
+            <Passage>In the first every Week 10 PMBL game that means absolutely nothing for the playoffs, this game was
+                filled with surprises. Bowser would quickly hit a 2 run shot to take the lead in the home run leaderboard,
+                while Peach and Yellow Kamek would both get RBIs in the 2nd to make the score 2-2. King Boo would then hit
+                a solo shot in the 3rd to give Marge a 3-2 lead. After that, Blooper would completely lock down their
+                offense. While Brendan's offense would explode for the final time this year, putting 10 more runs on the
+                board, highlighted by Diddlers 3 run homer and Blue Pianta's 4/4 4 RBI performance. However, the greatest
+                part of this game in Brendan's eyes was Blooper. Blooper would pitch his first ever complete game, going
+                all 7 innings and only giving up 3 earned runs on 9 hits. Blooper would also hit his first every home run,
+                which had manager Brendan jumping for joy. Marge knew it would be a bad offensive day if Peach was their
+                best hitter, who surprsingly went 2/3 with an RBI. In both teams final game of the year, Brendan would
+                finish 4-6, despite being a big disappoint after last years World Series run, but a big improvement after
+                starting 0-3. Marge on the other hand would go 3-7, ending worse than the 4-6 record from last year.
             </Passage>
 
             <ScoreTable>
@@ -186,25 +185,21 @@ export default function Week10Recap() {
             </GameSummary>
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 2: <span style={{ color: "#3586E8" }}> Isaac</span> v.s.
-                <span style={{ color: "#FF00FF" }}> Morgan</span></StyledMiniHeader>
-            <Passage>With Morgan on a hot streak and the division title on the line, another game between Mii pitchers
-                took center stage at Mario Stadium. The biggest storyline of this game was that Betty White would not be
-                playing due to injury, therefore Triangle would be making her PMBL debut. Runs would start fast, with
-                Isaac scoring 3 in the top of the 1st, and Morgan scoring 3 in the bottom. Fans chirped King K Rool while
-                he was up to bat, saying he was going to ground out. King K then hit a 3 run shot to silence the critics.
-                Diddy Kong would be in the lineup for Morgan today, playing against the rest of the monkeys. Claims about
-                collusion and throwing for his friends were floated throughout the game, and many people definitely
-                considered it when Diddy struck out at his first at bat against Justin. Scoring would go quiet until the
-                6th inning, still leading 5-3, Isaac would score 2 more runs, thanks in part to Funky Kongs 2nd home run
-                of the day. Morgan would then score a run in the bottom of the 6th to bring it back within 3, this time
-                from a Wario RBI. In the 7th inning, Isaac's team would score one more run to make it 8-4, ending Wario's
-                time on the mound, giving up 3 runs on 9 hits. In the bottom of the 7th, Isaacs infield would error to put
-                Baby Daisy on base, and Baby Mario would slap hit to bring her home. However, Donkey Kong would be able
-                to close it out, sealing the West Division title for Isaac. Despite Morgan being 4-5, this game didn't
-                matter in terms of his chances to make the playoffs. The only thing that matters is his Week 10 game
-                against THANdrew.
-
-
+                <span style={{ color: "#9900FF" }}> Trocean</span></StyledMiniHeader>
+            <Passage>The only playoff implication that would come with this game would be if Issac wins, he would take the
+                #1 seed. With Betty White out again for the 2nd week, he decided to rest a few starters and give Paragoomba
+                and Jack White a chance to play this year. Justin Nascimento would play in the outfield today instead of
+                pitch, giving Jack White his first ever start. Trocean on the other hand decided to give old Isaac player
+                Grayson McKean the start for the first ever female mii start in PMBL history. Isaac would score quickly
+                in the 1st, and to no ones surprise, those runs would come off of Funky and DK home runs. Grayson McKeans
+                first two hits allowed in the PMBL would be solo shot home runs. After that however, Grayson began to lock
+                down Isaac's offense. Depending on the which team you look at, you could either say Trocean's bats started
+                blazing or Paragoombas defense was atrocious. Slowly running around in center field helped Trocean gain
+                a huge advantage against the West Division winner. Dark Bones would have 5 RBIs in this game, with a huge
+                2 RBI triple to get Trocean on the board in the 3rd, ending Jack White's pitching day. Trocean would shockingly
+                end up winning 7-3, with Grayson McKean pitching a complete game. She only gave up 3 earned runs on
+                10 hits. Paragoomba unsurprisingly would go 0/3, making him have the worst batting percentage in PMBL
+                this year. Triangle would be a close 2nd, also going 0/3 in this game, making her 1/8 on the season.
             </Passage>
 
             <ScoreTable>
@@ -243,21 +238,22 @@ export default function Week10Recap() {
             </GameSummary>
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 3: <span style={{ color: "#F1C232" }}> James</span> v.s.
-                <span style={{ color: "#CC0000" }}> Brendan</span></StyledMiniHeader>
-            <Passage>Both teams coming off of close losses the week prior, with James choking a 7-0 lead, he needs a
-                win in order to claim a playoff spot, and Brendan needs a win to stay alive. Petey Piranha would get
-                the start on the mound today after his 3.2 inning performance the week prior impressed James. Today he
-                would only go .2 innings, and Blones would quickly knock down an RBI to mkae it 1-0 Brendan. Birdo would
-                then come in and pitch like the All-Star pitcher she has been this year, going 5 innings, and giving up
-                1 earned run on 7 hits, with a strikeout on Barry. Blooper had an off day, giving up 4 runs on 9 hits
-                through 2.1 innings. The weakest part of the Brendan team in this game was their fielding, giving up
-                unnecessary runs due to inept fielding decisions. The worst part for Brendan was his teams base running,
-                which locked itself into a triple play not once but twice during this game. James' bats were back to normal
-                after their brief dry spell, even though this would be the only game so far this season that his bats would
-                not record a home run. Despite scoring 2 in the top of the 7th, Brendan's team did not have enough, giving
-                James the 8-4 victory, knocking Brendan out of the playoff race. James would clinch the 3rd playoff spot
-                with a record of 6-3, with a large division clinching game next week against Justave. Birdo won MVP
-                based on her great pitching day and her 3/4 and 1 RBI batting.
+                <span style={{ color: "#FF9900" }}> Justave</span></StyledMiniHeader>
+            <Passage>A huge matchup to decide not only who wins the East Division but also the #1 seeds created multiple
+                storylines. However, playoff seeding wasn't the only thing being played for. The batting percentage title
+                was on the line between fan favorite Green Toad and underdog Blue Toad, and also the Pitcher of the Year
+                between Birdo and Bob Marley would most likely be decided by this. Petey would open for James however,
+                so Birdo would come in for relief once Petey was tired. Petey would quickly get James on the board 1-0
+                with a home run to tie the home run lead back up with Bowser. Bob Marley would stay calm. Once Petey got
+                tired in the 3rd inning, Birdo would come in. To everyone's absolute shock, she would absolutely implode
+                on the mound, starting one of the most lopsided games in PMBL history between two highly competitive
+                games. Birdo would pitch .2 innings, giving up 5 earned runs on 5 hits. The next 5 innings would be
+                an absolute annihilation of everything that made James' team great. Birdo would be subbed out for Blue
+                Yoshi, completely killing outfield synergy. James would have to sit there in the dugout and watch his
+                team give up home runs. 17 straight runs for Justave. The batters on team James couldn't hit a single
+                thing. Bob Marley would not finish out the game, but he did win Game MVP for pitching 6.1 innings giving
+                up 1 earned run, while also hitting a grand slam due to no outfield synergy. Justave would win, head to
+                7-3, and clinch the #1 seed, and await to see who they play in the playoffs.
             </Passage>
 
             <ScoreTable>
@@ -296,20 +292,32 @@ export default function Week10Recap() {
             </GameSummary>
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 4: <span style={{ color: "#999999" }}> THANdrew</span> v.s.
-                <span style={{ color: "#6AA84F" }}> Marge</span></StyledMiniHeader>
-            <Passage>Coming into this game, THANdrew had now lost 3 straight games and was in dire need of a win. Marge
-                coming off of a huge upset against Justave was looking to stay alive in the playoff race. Matt's coaching
-                practices have been very publicized over the course of the past weeks, and it was time to see if that
-                "coaching" would pay off. After the amazing pitching performance Boo had last week, Marge hoped Boo would
-                be able to replicate that today. Instead, Boo only went 2 innings, giving up 3 earned runs on 9 hits, with
-                all 3 of those runs coming in the 1st inning. Green Kamek would have his best day on the mound for THANdrew,
-                pitching 4.2 IP, only giving up 3 hits and one earned run. The run would come on a sacrifice fly from Peach.
-                She would go 0/3 today however, as her batting percentage would continue to go down. Blue Kritter on the
-                other hand was able to record a hit and 2 RBIs to boost his batting percentage. THANdrew would score 3 more
-                in the 5th, including a Larry Cuc RBI. Waluigi would come into pitch in the 5th, and only give up 3 hits in
-                2.1 innings. THANdrews defense would have a great day, as Green Kamek and Waluigi collectively would only
-                give up 6 hits. 4 of Marge's hitters would not record a hit during this game, as THANdrew would win 6-1, and
-                secure their 2nd straight non-losing record, as Marge has been eliminated from the playoffs.
+                <span style={{ color: "#FF00FF" }}> Morgan</span></StyledMiniHeader>
+            <Passage>The biggest game in PMBL regular season history turned out to be an absolute thriller. The stakes were
+                simple. Win and you're in, lose and you're out. An appetizer to the playoffs. Morgan would quickly get out
+                to a 4-0 lead in the bottom of the 1st, getting Green Kamek out after .1 innings, giving up 3 runs. Waluigi,
+                per usual, would come in next. THANdrew would get on the board at the start of the 2nd with a rare Blue Kritter
+                hit and RBI. Despite getting the offense going, the defense looked to be in shambles. Shockingly, Waluigi
+                would be pulled before recording an out in the 2nd, thus bringing in Larry Cuc. A horrific move for the
+                outfield, destroying synergy on both sides of the field. Larry Cuc would begin to lock down on defense, and
+                even record a strikout against Reshiram. THANdrew's defense would begin to put points up. Blue Kritter and Red
+                Kritter would each hit home runs in the 3rd and 4th innings respectively, and with the help of Paratroopa's
+                2 RBI day, THANdrew would take the lead 6-4, despite having Waluigi at center.
+            </Passage>
+
+            <Passage>Despite Morgan's erotic "worried" noises, his team would come back to tie it after putting Wario in
+                to pitch. Wario and Diddy Kong would each record RBI singles in the 4th to tie it back up 6-6. Unlike last
+                game where the James pitching staff caused a landslide of runs after killing outfield synergy, these would be
+                the first 2 runs since the THANdrew pitching staff put Waluigi in center. No scoring would commence in the 5th,
+                but Green Kamek would get a bloop RBI single into right for THANdrew to take back the lead by 1. Larry Cuc,
+                still on the mound after 4.2 innings, would start to get tired. Wario would get on base thanks to an error
+                by Blue Kritter, a costly one at that. Next pitch, King K Rool would drill a home run to right field, giving
+                Morgan an 8-7 lead. Yellow Yoshi would then tack on another run off of Nose to make the lead 9-7 Morgan.
+                THANdrew would then come up to bat in the 7th with the top of his lineup. Nose and Waluigi would both get
+                out. Red Kritter, down 2, would hit a solo shot to right to make the score 9-8 Morgan. If the error by
+                Blue Kritter wasn't committed, then this would be a tie game. Unfortunately for THANdrew, Fire Bro would
+                get on base, but then Larry Cuc would ground out. Morgan wins an incredible regular season finale 9-8.
+
             </Passage>
 
             <ScoreTable>
@@ -392,7 +400,7 @@ export default function Week10Recap() {
                     <div className="player">Blooper</div>
                     <div className="manager">Manager: <span style={{ color: "#CC0000" }}>Brendan</span></div>
                     <div className="description">
-                        Complete game pitched. Hit his first home run too
+                        Complete game pitched. Hit his first home run too.
                     </div>
                 </AwardBlock>
             </AwardsSection>
