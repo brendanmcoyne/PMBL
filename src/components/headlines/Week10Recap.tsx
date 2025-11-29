@@ -135,17 +135,17 @@ export default function Week10Recap() {
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 1: <span style={{ color: "#6AA84F" }}> Marge</span> v.s.
                 <span style={{ color: "#CC0000" }}> Brendan</span></StyledMiniHeader>
-            <Passage>In the first every Week 10 PMBL game that means absolutely nothing for the playoffs, this game was
+            <Passage>In the first ever Week 10 PMBL game that means absolutely nothing for the playoffs, this game was
                 filled with surprises. Bowser would quickly hit a 2 run shot to take the lead in the home run leaderboard,
                 while Peach and Yellow Kamek would both get RBIs in the 2nd to make the score 2-2. King Boo would then hit
                 a solo shot in the 3rd to give Marge a 3-2 lead. After that, Blooper would completely lock down their
-                offense. While Brendan's offense would explode for the final time this year, putting 10 more runs on the
+                offense. Brendan's offense would explode for the final time this year, putting 10 more runs on the
                 board, highlighted by Diddlers 3 run homer and Blue Pianta's 4/4 4 RBI performance. However, the greatest
                 part of this game in Brendan's eyes was Blooper. Blooper would pitch his first ever complete game, going
-                all 7 innings and only giving up 3 earned runs on 9 hits. Blooper would also hit his first every home run,
+                all 7 innings and only giving up 3 earned runs on 9 hits. Blooper would also hit his first ever home run,
                 which had manager Brendan jumping for joy. Marge knew it would be a bad offensive day if Peach was their
                 best hitter, who surprsingly went 2/3 with an RBI. In both teams final game of the year, Brendan would
-                finish 4-6, despite being a big disappoint after last years World Series run, but a big improvement after
+                finish 4-6, being a big disappoint after last years World Series run, but a big improvement after
                 starting 0-3. Marge on the other hand would go 3-7, ending worse than the 4-6 record from last year.
             </Passage>
 
@@ -190,7 +190,7 @@ export default function Week10Recap() {
                 #1 seed. With Betty White out again for the 2nd week, he decided to rest a few starters and give Paragoomba
                 and Jack White a chance to play this year. Justin Nascimento would play in the outfield today instead of
                 pitch, giving Jack White his first ever start. Trocean on the other hand decided to give old Isaac player
-                Grayson McKean the start for the first ever female mii start in PMBL history. Isaac would score quickly
+                Grayson McKean the start for the first ever female mii vs male mii start in PMBL history. Isaac would score quickly
                 in the 1st, and to no ones surprise, those runs would come off of Funky and DK home runs. Grayson McKeans
                 first two hits allowed in the PMBL would be solo shot home runs. After that however, Grayson began to lock
                 down Isaac's offense. Depending on the which team you look at, you could either say Trocean's bats started
@@ -198,7 +198,7 @@ export default function Week10Recap() {
                 a huge advantage against the West Division winner. Dark Bones would have 5 RBIs in this game, with a huge
                 2 RBI triple to get Trocean on the board in the 3rd, ending Jack White's pitching day. Trocean would shockingly
                 end up winning 7-3, with Grayson McKean pitching a complete game. She only gave up 3 earned runs on
-                10 hits. Paragoomba unsurprisingly would go 0/3, making him have the worst batting percentage in PMBL
+                10 hits. Paragoomba unsurprisingly would go 0/3, giving him the worst batting percentage in PMBL
                 this year. Triangle would be a close 2nd, also going 0/3 in this game, making her 1/8 on the season.
             </Passage>
 
@@ -242,7 +242,7 @@ export default function Week10Recap() {
             <Passage>A huge matchup to decide not only who wins the East Division but also the #1 seeds created multiple
                 storylines. However, playoff seeding wasn't the only thing being played for. The batting percentage title
                 was on the line between fan favorite Green Toad and underdog Blue Toad, and also the Pitcher of the Year
-                between Birdo and Bob Marley would most likely be decided by this. Petey would open for James however,
+                between Birdo and Bob Marley would most likely be decided by this game. Petey would start for James however,
                 so Birdo would come in for relief once Petey was tired. Petey would quickly get James on the board 1-0
                 with a home run to tie the home run lead back up with Bowser. Bob Marley would stay calm. Once Petey got
                 tired in the 3rd inning, Birdo would come in. To everyone's absolute shock, she would absolutely implode
@@ -300,7 +300,7 @@ export default function Week10Recap() {
                 hit and RBI. Despite getting the offense going, the defense looked to be in shambles. Shockingly, Waluigi
                 would be pulled before recording an out in the 2nd, thus bringing in Larry Cuc. A horrific move for the
                 outfield, destroying synergy on both sides of the field. Larry Cuc would begin to lock down on defense, and
-                even record a strikout against Reshiram. THANdrew's defense would begin to put points up. Blue Kritter and Red
+                even record a strikout against Reshiram. Luckily, THANdrew's offense would begin to put points up. Blue Kritter and Red
                 Kritter would each hit home runs in the 3rd and 4th innings respectively, and with the help of Paratroopa's
                 2 RBI day, THANdrew would take the lead 6-4, despite having Waluigi at center.
             </Passage>
