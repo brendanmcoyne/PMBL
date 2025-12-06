@@ -238,12 +238,12 @@ export default function CurrentSeason() {
     ];
 
     const ConfSeries = [
-        { matchup: 1, away: "Morgan", awaycolor: "#FF00FF", home: "Justave", homecolor: "#FF9900", record: "1-1"},
-        { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Isaac", homecolor: "#3586E8", record: "2-0"},
+        { matchup: 1, away: "Morgan", awaycolor: "#FF00FF", home: "Justave", homecolor: "#FF9900", record: "1-3"},
+        { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Isaac", homecolor: "#3586E8", record: "3-0"},
     ]
 
     const WorldSeries = [
-        { matchup: 1, away: "", awaycolor: "", home: "", homecolor: "", record: ""},
+        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Justave", homecolor: "#FF9900", record: ""},
     ]
 
     const currentTeams = division === 'West' ? westTeams : eastTeams;

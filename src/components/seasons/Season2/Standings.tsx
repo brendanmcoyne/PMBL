@@ -110,7 +110,7 @@ export default function Standings2() {
                         <div>PD</div>
                     </HeaderRow>
                     <GridRow>
-                        <div style={{ fontWeight: "bold", color: "#FF9900" }}>Justin<sup style={{color: "#3C78D8"}}>z</sup></div>
+                        <div style={{ fontWeight: "bold", color: "#FF9900" }}>Justave<sup style={{color: "#3C78D8"}}>z</sup></div>
                         <div>7 - 3</div>
                         <div>5 - 1</div>
                         <div>W2</div>
