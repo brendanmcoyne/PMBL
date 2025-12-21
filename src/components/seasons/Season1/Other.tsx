@@ -196,11 +196,11 @@ export default function Other1 () {
             <StatRow>
                 <StyledMiniHeader>Biggest Shutout</StyledMiniHeader>
                 <StatCard>
-                    <StatValue>29</StatValue>
+                    <StatValue>9, <NameSpan color="#3586E8">Isaac</NameSpan></StatValue>
                     <StatSubText>
-                        <NameSpan color="#F1C232">James</NameSpan> <VsText>vs</VsText> <NameSpan color="#6AA84F">Matt</NameSpan>
+                        <NameSpan color="#3586E8">Isaac</NameSpan> <VsText>vs</VsText> <NameSpan color="#9900FF">Christach</NameSpan>
                     </StatSubText>
-                    <StatSubText>14 - 15 • Week 10</StatSubText>
+                    <StatSubText>9 - 0 • Week 1</StatSubText>
                 </StatCard>
             </StatRow>
 

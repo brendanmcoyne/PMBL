@@ -415,17 +415,18 @@ export default function Managers() {
                 <RivalryRecord>Series tied 1-1</RivalryRecord>
             </Rivalry>
             <Rivalry>
-                <RivalryTitle>The Park Drive Rivalry</RivalryTitle>
+                <RivalryTitle>The Battle of Stuvi 901</RivalryTitle>
                 <VersusRow>
-                    <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem"}}>Justin</span>
-                    <span style={{textAlign: "center"}}>vs</span>
-                    <span style={{ color: "#9900FF", textAlign: "left", paddingLeft: "1rem"}}>Christach</span>
+                    <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem" }}>Justave</span>
+                    <span>vs</span>
+                    <span style={{ color: "#FF00FF", textAlign: "left", paddingLeft: "1rem" }}>Morgan</span>
                 </VersusRow>
                 <RivalryDesc>
-                    Just a quick walk down the road from 726 Commonwealth Avenue was the household of
-                    the three Managers; Justin, Chris, and Zach, with all 3 of them living under the same roof. In their sole game
-                    so far, Christach rallied down 7-0, but still ended up losing 9-8. </RivalryDesc>
-                <RivalryRecord>Justin leads 1-0</RivalryRecord>
+                    What became a very intense rivalry once manager Dave joined the team in Season 2, these 3
+                    fierce competitors endured a great 4 game Conference Series matchup, with Justave moving onto
+                    the World Series
+                </RivalryDesc>
+                <RivalryRecord>Justave leads 4-2</RivalryRecord>
             </Rivalry>
             <Rivalry>
                 <RivalryTitle>The 48 Buswell Battle</RivalryTitle>
@@ -451,7 +452,7 @@ export default function Managers() {
                     Two division rivals of the same major. Both fan favorite teams played in the Week 7
                     Shy Guy Tribute Game, where Matt took an early 5-0 lead in the 1st, to lose 11-14 with a 3 run walk-off homer
                     in the first ever 10 inning game. They would play again a few weeks later, with Justin winning again.</RivalryDesc>
-                <RivalryRecord>Justin leads 3-0</RivalryRecord>
+                <RivalryRecord>Justin leads 3-1</RivalryRecord>
             </Rivalry>
             <Rivalry style={{alignItems: "center"}}>
                 <RivalryTitle>Middlesex Matchups</RivalryTitle>
@@ -547,33 +548,20 @@ export default function Managers() {
 
                                         return (
                                             <>
-                                                <p style={{ fontWeight: "bold", marginBottom: "0.4rem" }}>
-                                                    <strong>Captain:</strong> {roster2.captain}
-                                                </p>
-
+                                                {roster2.accolades && (
+                                                    <div style={{display: "flex", flexDirection: "column", gap: "8px", marginBottom: "10px",}}>
+                                                        {roster2.accolades.map((acc) => (
+                                                            <div key={acc.type} style={{backgroundColor: acc.color, color: "white",
+                                                                padding: "4px", borderRadius: "8px", fontWeight: "bold",}}>{acc.type}</div>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                                <p style={{ fontWeight: "bold", marginBottom: "0.4rem" }}><strong>Captain:</strong> {roster2.captain}</p>
                                                 <img src={selectedManager.s2banner} alt="banner" />
-
-                                                <ul
-                                                    style={{
-                                                        listStyleType: "none",
-                                                        padding: 0,
-                                                        display: "grid",
-                                                        gridTemplateColumns: "1fr 1fr",
-                                                        gap: "0.3rem",
-                                                    }}
-                                                >
+                                                <ul style={{listStyleType: "none", padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.3rem",}}>
                                                     {roster2.roster.map((player) => (
-                                                        <li
-                                                            key={player.name}
-                                                            style={{
-                                                                background: "#e3e3e3",
-                                                                padding: "6px 10px",
-                                                                borderRadius: "6px",
-                                                                fontWeight: "500",
-                                                            }}
-                                                        >
-                                                            {player.name}
-                                                        </li>
+                                                        <li key={player.name} style={{background: "#e3e3e3", padding: "6px 10px",
+                                                            borderRadius: "6px", fontWeight: "500",}}>{player.name}</li>
                                                     ))}
                                                 </ul>
                                             </>

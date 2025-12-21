@@ -38,7 +38,7 @@ export const managers: Manager[] = [
         division: "East",
         playoffs: 2,
         divships: 1,
-        champs: 0,
+        champs: 1,
         s1banner: "/banners/LuigiKnights-MSS.webp",
         s2banner: "/banners/LuigiKnights-MSS.webp"
     },

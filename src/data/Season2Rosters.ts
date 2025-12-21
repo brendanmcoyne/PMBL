@@ -46,6 +46,11 @@ export const rosters2: Roster2[] = [
             { name: "Bertha"},
             { name: "Tate McRae"},
             { name: "Sabrina"},
+        ],
+        accolades: [
+            {type: "World Series Champion", color: "gold"},
+            {type: "Best Record Champions", color: "green"},
+            {type: "East Division Champions", color: "blue"},
         ]
     },
     {
@@ -65,6 +70,9 @@ export const rosters2: Roster2[] = [
             { name: "Blue Noki"},
             { name: "Entity 404" }
         ],
+        accolades: [
+            {type: "World Series Runners Up", color: "silver"},
+        ]
     },
     {
         manager: "Marge",
@@ -98,6 +106,9 @@ export const rosters2: Roster2[] = [
             { name: "Gramms" },
             { name: "Jack White" },
             { name: "Triangle" }
+        ],
+        accolades: [
+            {type: "West Division Champions", color: "red"},
         ]
     },
     {

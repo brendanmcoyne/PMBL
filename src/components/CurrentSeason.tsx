@@ -243,7 +243,7 @@ export default function CurrentSeason() {
     ]
 
     const WorldSeries = [
-        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Justave", homecolor: "#FF9900", record: ""},
+        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Justave", homecolor: "#FF9900", record: "1-3"},
     ]
 
     const currentTeams = division === 'West' ? westTeams : eastTeams;
