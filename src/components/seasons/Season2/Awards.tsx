@@ -127,7 +127,7 @@ export default function Awards2() {
             <ToggleButton>
                 <Link style={{color: "white"}} to="/archives/seasons/Season2">← Back</Link>
             </ToggleButton>
-            <StyledHeader>Season 1 Awards</StyledHeader>
+            <StyledHeader>Season 2 Awards</StyledHeader>
 
             <StyledMiniHeader>Most Valuable Player</StyledMiniHeader>
             <AwardRow>
