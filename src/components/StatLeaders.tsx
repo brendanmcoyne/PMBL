@@ -72,10 +72,10 @@ export default function StatLeadersMini() {
     const [page, setPage] = useState(0);
 
     const battingUrl =
-        "https://docs.google.com/spreadsheets/d/10-yEizVL_OOBVuxvH3oMUg0p9Pkx8YXX7zsXwVlsZYw/export?format=csv&gid=0";
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?gid=0&single=true&output=csv";
 
     const pitchingUrl =
-        "https://docs.google.com/spreadsheets/d/10-yEizVL_OOBVuxvH3oMUg0p9Pkx8YXX7zsXwVlsZYw/export?format=csv&gid=303745750";
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?gid=235178407&single=true&output=csv";
 
     useEffect(() => {
         const fetchSheet = (url: string, setData: (data: StatRow[]) => void) => {

@@ -70,15 +70,12 @@ const Player = styled.div<{ $accent: string; $animate?: boolean }>`
     text-align: center;
     cursor: pointer;
 
-    ${({ $animate }) =>
-            $animate
-                    ? css`
+    ${({ $animate }) => $animate ? css`
           opacity: 0;
           transform: translateY(30px);
           animation: ${fadeInUp} 1s ease forwards;
           animation-delay: 0.7s;
-        `
-                    : css`
+        ` : css`
           opacity: 1;
           transform: none;
         `}
@@ -146,18 +143,13 @@ const ModalScrollWrapper = styled.div`
 
 const CloseButton = styled.button`
     position: absolute;
-    top: 10px;
-    right: 15px;
-    width: 30px;        
-    height: 30px;       
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 50%; 
-    background-color: lightgray;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+    top: 3px;
+    right: 10px;
+    background: none;
     border: none;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
 `;
 
 const StyledMiniHeader = styled.h3`

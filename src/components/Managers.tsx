@@ -191,18 +191,13 @@ const ModalContent = styled.div`
 
 const CloseButton = styled.button`
     position: absolute;
-    top: 10px;
-    right: 15px;
-    width: 30px;        
-    height: 30px;       
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 50%; 
+    top: 3px;
+    right: 10px;
+    background: none;
     border: none;
-    background-color: darkgray;     
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
 `;
 
 const ModalScrollWrapper = styled.div`
@@ -409,8 +404,7 @@ export default function Managers() {
                 <RivalryDesc>
                     These two managers were the creators of the PMBL, and live under the same roof.
                     Their passion for Mario Baseball has sparked the interest in the rest of the managers,
-                    creating the league everyone knows and loves. In their sole matchup so far, Brendan took
-                    an 8-4 win after being shutout the week before.
+                    creating the league everyone knows and loves.
                 </RivalryDesc>
                 <RivalryRecord>Series tied 1-1</RivalryRecord>
             </Rivalry>
@@ -466,8 +460,8 @@ export default function Managers() {
                     and one in the World Series, culminating in James winning both, and the first ever PMBL World Series Title. </RivalryDesc>
                 <RivalryRecords>
                     <RivalryRecord>James leads Morgan 5-1</RivalryRecord>
-                    <RivalryRecord>James leads Brendan 5-1</RivalryRecord>
-                    <RivalryRecord>Brendan leads Morgan 1-0</RivalryRecord>
+                    <RivalryRecord>James leads Brendan 6-1</RivalryRecord>
+                    <RivalryRecord>Brendan 1-1 Morgan</RivalryRecord>
                 </RivalryRecords>
             </Rivalry>
 
