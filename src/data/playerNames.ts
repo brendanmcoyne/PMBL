@@ -31,6 +31,7 @@ export const players: Player[] = [
         captain: false,
         mii: true,
         awards: [
+            { name: "1x Finals Game MVP", season: 2},
             { name: "1x Game MVP", season: 1},
             { name: "1x Game MVP", season: 2},
         ]
@@ -77,6 +78,9 @@ export const players: Player[] = [
         gp: 20,
         captain: false,
         mii: false,
+        awards: [
+            { name: "1x Semifinals Game MVP", season: 2},
+        ]
     },
     {
         name: "Baby Peach",
@@ -102,6 +106,7 @@ export const players: Player[] = [
         captain: false,
         mii: true,
         awards: [
+            { name: "World Series Champion", season: 2},
             { name: "1x Game MVP", season: 1},
         ]
     },
@@ -232,6 +237,7 @@ export const players: Player[] = [
         captain: false,
         mii: true,
         awards: [
+            { name: "World Series Champion", season: 2},
             { name: "All-Star", season: 1},
             { name: "All-Star", season: 2},
             { name: "Mii of the Year", season: 2},
@@ -323,6 +329,7 @@ export const players: Player[] = [
         captain: false,
         mii: true,
         awards: [
+            { name: "1x Semifinals Game MVP", season: 2},
             { name: "Most Hated Player", season: 2},
         ]
     },
@@ -483,6 +490,7 @@ export const players: Player[] = [
         captain: false,
         mii: true,
         awards: [
+            { name: "World Series Champion", season: 2},
             { name: "All-Star", season: 1},
             { name: "1x Game MVP", season: 2},
         ]
@@ -546,8 +554,10 @@ export const players: Player[] = [
         captain: false,
         mii: false,
         awards: [
+            { name: "World Series Champion", season: 2},
             { name: "All-Star Game MVP", season: 1},
             { name: "All-Star", season: 1},
+            { name: "2x Semifinals Game MVP", season: 2},
         ]
     },
     {
@@ -558,9 +568,11 @@ export const players: Player[] = [
         captain: false,
         mii: false,
         awards: [
+            { name: "World Series Champion", season: 2},
             { name: "All-Star", season: 1},
             { name: "All-Star", season: 2},
             { name: "Golden Glove Winner", season: 2},
+            { name: "1x Finals Game MVP", season: 2},
             { name: "2x Game MVP", season: 1},
             { name: "1x Game MVP", season: 2},
         ]
@@ -600,6 +612,7 @@ export const players: Player[] = [
         captain: false,
         mii: false,
         awards: [
+            { name: "World Series Champion", season: 2},
             { name: "Comeback Player of the Year", season: 1},
         ]
     },
@@ -611,6 +624,7 @@ export const players: Player[] = [
         captain: false,
         mii: false,
         awards: [
+            { name: "World Series Champion", season: 2},
             { name: "All-Star", season: 2},
         ]
     },
@@ -638,7 +652,9 @@ export const players: Player[] = [
             { name: "World Series Champion", season: 2},
             { name: "World Series MVP", season: 2},
             { name: "All-Star", season: 1},
+            { name: "2x Finals Game MVP", season: 2},
             { name: "1x Semifinals Game MVP", season: 1},
+            { name: "1x Semifinals Game MVP", season: 2},
             { name: "1x Game MVP", season: 1},
             { name: "2x Game MVP", season: 2},
         ]
@@ -732,6 +748,8 @@ export const players: Player[] = [
         mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
+            { name: "World Series Champion", season: 2},
+            { name: "1x Semifinals Game MVP", season: 2},
         ]
     },
     {
@@ -759,6 +777,7 @@ export const players: Player[] = [
         mii: false,
         banner: "/banners/LuigiKnights-MSS.webp",
         awards: [
+            { name: "World Series Champion", season: 2},
             { name: "All-Star", season: 1},
         ]
     },
@@ -863,6 +882,7 @@ export const players: Player[] = [
             { name: "All-Star", season: 1},
             { name: "All-Star", season: 2},
             { name: "1x Semifinals Game MVP", season: 1},
+            { name: "2x Semifinals Game MVP", season: 1},
             { name: "3x Game MVP", season: 1},
         ]
     },
@@ -985,6 +1005,9 @@ export const players: Player[] = [
         gp: 10,
         captain: false,
         mii: true,
+        awards: [
+            { name: "World Series Champion", season: 2},
+        ]
     },
     {
         name: "Sebesta",
@@ -1003,6 +1026,7 @@ export const players: Player[] = [
         mii: true,
         awards: [
             { name: "World Series Champion", season: 1},
+            { name: "World Series Champion", season: 2},
         ]
     },
     {
