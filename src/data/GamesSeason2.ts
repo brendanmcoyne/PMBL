@@ -2831,7 +2831,7 @@ export const GamesSeason2: Record<string, GameStats> = {
         pitchingStats: [
             { player: "Bob Marley", team: "Justave", IP: 0, H: 7, ER: 7, SO: 0, ERA: "999.99" },
             { player: "Luigi", team: "Justave", IP: 4.1, H: 9, ER: 6, SO: 0, ERA: "9.69" },
-            { player: "Gray Guy", team: "Justave", IP: 2, H: 4, ER: 1, SO: 0, ERA: "3.50" },
+            { player: "Green Shy Guy", team: "Justave", IP: 2, H: 4, ER: 1, SO: 0, ERA: "3.50" },
             { player: "Koopa", team: "Justave", IP: 0.2, H: 2, ER: 3, SO: 0, ERA: "31.50" },
 
             { player: "Birdo", team: "James", IP: 3.2, H: 10, ER: 6, SO: 0, ERA: "11.45" },

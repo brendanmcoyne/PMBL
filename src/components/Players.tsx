@@ -308,6 +308,8 @@ const AwardRow = styled.li<{ $kind: string }>`
         case "defense":      return "#006400";
         case "slugger":      return "#D3D3D3";
         case "glove":        return "#F9DC5C";
+        case "rookie":       return "linear-gradient(90deg, #3B2416, #8C6239, #D1A06A);";
+        case "pitcher":      return "linear-gradient(90deg, #EEEEEE, #AAAAAA)";
         default:             return "#ffffff";   
     }
     }};
@@ -323,6 +325,8 @@ const classifyAward = (name: string) => {
     if (name === "Defensive Player of the Year")              return ["defense", "🛡️"];
     if (name === "Silver Slugger Winner")                     return ["slugger", "🥈"];
     if (name === "Golden Glove Winner")                       return ["glove", "🥇"];
+    if (name === "Pitcher of the Year")                       return ["pitcher", "⚾"];
+    if (name === "Rookie of the Year")                        return ["rookie", "🆕"];
     return ["other", "⭐"];
 };
 
