@@ -310,6 +310,7 @@ const AwardRow = styled.li<{ $kind: string }>`
         case "glove":        return "#F9DC5C";
         case "rookie":       return "linear-gradient(90deg, #3B2416, #8C6239, #D1A06A);";
         case "pitcher":      return "linear-gradient(90deg, #EEEEEE, #AAAAAA)";
+        case "mii";          return "linear-gradient(90deg, #0096D6, #DDDDDD)";
         default:             return "#ffffff";   
     }
     }};
@@ -327,6 +328,7 @@ const classifyAward = (name: string) => {
     if (name === "Golden Glove Winner")                       return ["glove", "🥇"];
     if (name === "Pitcher of the Year")                       return ["pitcher", "⚾"];
     if (name === "Rookie of the Year")                        return ["rookie", "🆕"];
+    if (name === "Mii of the Year")                           return ["mii", "⭐"];
     return ["other", "⭐"];
 };
 
