@@ -274,7 +274,7 @@ export default function CurrentSeason() {
             <StyledHeader $animate={ready}>Current Season</StyledHeader>
 
             <UpcomingGame $animate={ready}>
-                <StyledMiniHeader style={{marginBottom: "0"}}>Recent Game</StyledMiniHeader>
+                <StyledMiniHeader style={{marginBottom: "0"}}>Upcoming Game</StyledMiniHeader>
                 <Game />
             </UpcomingGame>
             <TwoSection>

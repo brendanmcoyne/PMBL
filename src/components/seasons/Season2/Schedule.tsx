@@ -694,7 +694,7 @@ export default function Schedule2() {
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>** All Star Game **</StyledMiniHeader>
 
             <CenteredMatchupWrapper>
-                <Matchup>
+                <Matchup onClick={() => setSelectedGame(GamesSeason2["AllStarGame"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#FF0000"}}>All-Star West</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#4A86E8"}}>All-Star East</TeamName>
@@ -985,7 +985,6 @@ export default function Schedule2() {
                         </ModalScrollWrapper>
                     </ModalContent>
                 </ModalBackground>
-
             )}
 
         </ContentDiv>
