@@ -3010,9 +3010,4 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Luigi", team: "Justave", IP: 5.1, H: 15, ER: 3, SO: 0, ERA: "3.94" }
         ]
     }
-
-
-
-
-
 };

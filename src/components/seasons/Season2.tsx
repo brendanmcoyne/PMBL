@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 import { ToggleButton, StyledHeader, StyledMiniHeader, StyledLink, SeparatorLine } from "../CommonStyles.ts";
+import { LinkButton } from "../StatLeaders.tsx";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -50,6 +51,11 @@ export default function Season2() {
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Other">Other</Link>
                 </StyledLink>
             </LinkDiv>
+            <StyledMiniHeader style={{marginTop: "40px", textAlign: "center", color: "white"}}>Click down below to see all Season 2 stats</StyledMiniHeader>
+
+            <LinkButton to="/season/stats" style={{width: "15rem", backgroundColor: "darkblue"}} state={{ stateSet: "set2"}}>
+                View Full Season Stats
+            </LinkButton>
         </ContentDiv>
 
     );

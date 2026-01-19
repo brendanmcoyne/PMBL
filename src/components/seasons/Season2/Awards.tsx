@@ -303,7 +303,7 @@ export default function Awards2() {
                 <WinnerDiv>
                     <GenImage src="/players/Justin Nascimento.jpg" alt="JN"/>
                     <StyledMiniHeader style={{margin: "0"}}>Rookie of the Year</StyledMiniHeader>
-                    <StyledWinner>Cascade</StyledWinner>
+                    <StyledWinner>Justin Nascimento</StyledWinner>
                     <StyledManager style={{color: "#3586E8"}}>Isaac</StyledManager>
                     <StyledTeam>DK Wild</StyledTeam>
                     <ImgEmblem src="/emblems/MSS-Emblem-DKWilds.webp" alt="Luigi"/>

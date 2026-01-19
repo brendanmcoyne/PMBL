@@ -5,7 +5,14 @@ import {Link} from "react-router-dom";
 
 type StatRow = Record<string, string>;
 
-const LinkButton = styled(Link)`
+type StatSet = "set2" | "set3";
+
+type Props = {
+    statSet: StatSet;
+};
+
+
+export const LinkButton = styled(Link)`
     display: inline-block;
     margin-top: 1rem;
     margin-bottom: .5rem;
@@ -66,16 +73,27 @@ const ArrowButton = styled.button`
 `;
 
 
-export default function StatLeadersMini() {
+export default function StatLeadersMini({ statSet = "set3"}: Props) {
     const [batting, setBatting] = useState<StatRow[]>([]);
     const [pitching, setPitching] = useState<StatRow[]>([]);
     const [page, setPage] = useState(0);
 
-    const battingUrl =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?gid=0&single=true&output=csv";
 
-    const pitchingUrl =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?gid=235178407&single=true&output=csv";
+
+    const STAT_URLS: Record<StatSet, { batting: string; pitching: string }> = {
+        set2: {
+            batting:
+                "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?gid=0&single=true&output=csv",
+            pitching:
+                "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?gid=235178407&single=true&output=csv",
+        },
+        set3: {
+            batting: "",
+            pitching: "",
+        },
+    };
+
+    const { batting: battingUrl, pitching: pitchingUrl } = STAT_URLS[statSet];
 
     useEffect(() => {
         const fetchSheet = (url: string, setData: (data: StatRow[]) => void) => {
@@ -83,8 +101,8 @@ export default function StatLeadersMini() {
                 download: true,
                 header: true,
                 complete: (results) => {
-                    const rows = results.data.filter((row) =>
-                        Object.values(row).some((cell) => cell?.trim() !== "")
+                    const rows = results.data.filter(row =>
+                        Object.values(row).some(cell => cell?.trim() !== "")
                     );
                     setData(rows);
                 },
@@ -93,7 +111,8 @@ export default function StatLeadersMini() {
 
         fetchSheet(battingUrl, setBatting);
         fetchSheet(pitchingUrl, setPitching);
-    }, []);
+    }, [battingUrl, pitchingUrl]);
+
 
     const getTopPlayers = (data: StatRow[], stat: string, isLowerBetter = false) => {
         return [...data]
@@ -168,7 +187,7 @@ export default function StatLeadersMini() {
                     </PlayerRow>
                 ))}
             </Category>
-            <LinkButton to="/season/stats">
+            <LinkButton to="/season/stats" state={{statSet: "set3"}}>
                 View Full Season Stats
             </LinkButton>
         </LeadersWrapper>

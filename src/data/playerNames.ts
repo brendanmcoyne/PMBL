@@ -246,6 +246,14 @@ export const players: Player[] = [
         ]
     },
     {
+      name: "Bonnie",
+      src: "/players/Bonnie.jpg",
+      color: "Blue",
+      gp: 0,
+      captain: false,
+      mii: true,
+    },
+    {
         name: "Boo",
         src: "/players/Boo.webp",
         color: "White",
@@ -320,6 +328,14 @@ export const players: Player[] = [
             { name: "2x Game MVP", season: 1},
             { name: "2x Game MVP", season: 2},
         ]
+    },
+    {
+        name: "Candy",
+        src: "/players/Candy.jpg",
+        color: "Light Green",
+        gp: 0,
+        captain: false,
+        mii: true,
     },
     {
         name: "Cascade",
@@ -453,6 +469,14 @@ export const players: Player[] = [
         ]
     },
     {
+        name: "Eugene",
+        src: "/players/Eugene.jpg",
+        color: "Purple",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Fire Bro",
         src: "/players/Fire_Bro.webp",
         color: "Red",
@@ -467,6 +491,14 @@ export const players: Player[] = [
             { name: "2x Game MVP", season: 1},
             { name: "2x Game MVP", season: 2},
         ]
+    },
+    {
+        name: "Fish",
+        src: "/players/Fish.jpg",
+        color: "White",
+        gp: 0,
+        captain: false,
+        mii: true,
     },
     {
         name: "Funky Kong",
@@ -494,14 +526,6 @@ export const players: Player[] = [
             { name: "All-Star", season: 1},
             { name: "1x Game MVP", season: 2},
         ]
-    },
-    {
-        name: "Ghislaine",
-        src: "/players/Ghislaine.jpg",
-        color: "Purple",
-        gp: 0,
-        captain: false,
-        mii: true,
     },
     {
         name: "Goomba",
@@ -668,6 +692,14 @@ export const players: Player[] = [
         mii: true,
     },
     {
+        name: "Jake",
+        src: "/players/Jake.jpg",
+        color: "Pink",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Jesstithyn",
         src: "/players/Jesstithyn.jpg",
         color: "Pink",
@@ -687,6 +719,22 @@ export const players: Player[] = [
         mii: true,
     },
     {
+        name: "Jordan Hudson",
+        src: "/players/Jordan Hudson.jpg",
+        color: "Purple",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Justin Bieber",
+        src: "/players/Justin Bieber.jpg",
+        color: "Blue",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Justin Nascimento",
         src: "/players/Justin Nascimento.jpg",
         color: "Brown",
@@ -697,6 +745,14 @@ export const players: Player[] = [
             { name: "All-Star", season: 2},
             { name: "Rookie of the Year", season: 2},
         ]
+    },
+    {
+        name: "Kaguya",
+        src: "/players/Kaguya.jpg",
+        color: "Red",
+        gp: 0,
+        captain: false,
+        mii: true,
     },
     {
         name: "Kimmy",
@@ -769,6 +825,14 @@ export const players: Player[] = [
         mii: false,
     },
     {
+        name: "Lucia",
+        src: "/players/Lucia.jpg",
+        color: "Orange",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Luigi",
         src: "/players/Luigi.webp",
         color: "Green",
@@ -798,6 +862,14 @@ export const players: Player[] = [
         src: "/players/Michelle Obama.jpg",
         color: "Purple",
         gp: 3,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Miss Jones",
+        src: "/players/Miss Jones.jpg",
+        color: "Green",
+        gp: 0,
         captain: false,
         mii: true,
     },
@@ -885,6 +957,22 @@ export const players: Player[] = [
             { name: "2x Semifinals Game MVP", season: 1},
             { name: "3x Game MVP", season: 1},
         ]
+    },
+    {
+        name: "Piggie",
+        src: "/players/Piggie.jpg",
+        color: "Green",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Pikachu",
+        src: "/players/Pikachu.jpg",
+        color: "Yellow",
+        gp: 0,
+        captain: false,
+        mii: true,
     },
     {
         name: "Pink Yoshi",
@@ -999,6 +1087,14 @@ export const players: Player[] = [
         mii: true,
     },
     {
+        name: "Saber",
+        src: "/players/Saber.jpg",
+        color: "Blue",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Sabrina",
         src: "/players/Sabrina.jpg",
         color: "Pink",
@@ -1013,6 +1109,30 @@ export const players: Player[] = [
         name: "Sebesta",
         src: "/players/Sebesta.jpg",
         color: "White",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Sherpa",
+        src: "/players/Sherpa.jpg",
+        color: "Brown",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Smurf",
+        src: "/players/Smurf.jpg",
+        color: "Light Blue",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Tarzan",
+        src: "/players/Tarzan.jpg",
+        color: "Brown",
         gp: 0,
         captain: false,
         mii: true,
@@ -1055,6 +1175,14 @@ export const players: Player[] = [
         gp: 10,
         captain: false,
         mii: false,
+    },
+    {
+        name: "Tonka",
+        src: "/players/Tonka.jpg",
+        color: "Black",
+        gp: 0,
+        captain: false,
+        mii: true,
     },
     {
         name: "Triangle",
