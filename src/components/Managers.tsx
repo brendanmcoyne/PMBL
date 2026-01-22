@@ -4,6 +4,8 @@ import { rosters } from "../data/Season1Rosters.ts";
 import type { Roster } from "../data/Season1Rosters.ts";
 import { rosters2 } from "../data/Season2Rosters.ts";
 import type { Roster2 } from "../data/Season2Rosters.ts";
+import { rosters3 } from "../data/Season3Rosters.ts";
+import type { Roster3 } from "../data/Season3Rosters.ts";
 import { StyledHeader } from "../components/CommonStyles.ts";
 import {styled, css, keyframes} from 'styled-components';
 import { useEffect, useState } from 'react';
@@ -317,6 +319,12 @@ export default function Managers() {
         );
     };
 
+    const getRosterForManagerS3 = (managerName: string, oldName?: string): Roster3 | undefined => {
+        return rosters3.find(
+            (r) => r.manager === managerName || (oldName && r.manager === oldName)
+        );
+    };
+
     const [ready, setReady] = useState(false);
 
     useEffect(() => {
@@ -487,7 +495,7 @@ export default function Managers() {
                                     <ModalTopLayout>
                                         <ModalLeft>
                                             <ModalImage src={selectedManager.src} alt="photo"/>
-                                            <img src={selectedManager.s2banner} alt="banner"/>
+                                            <img src={selectedManager.s3banner} alt="banner"/>
                                         </ModalLeft>
                                         <ModalRight>
                                             <StatCard>Record: {selectedManager.record}</StatCard>
@@ -529,9 +537,7 @@ export default function Managers() {
                                             </>
                                         );
                                     })()}
-                                    <StyledMiniHeader style={{ color: "#303030", marginTop: "1.5rem" }}>
-                                        Season 2 Roster
-                                    </StyledMiniHeader>
+                                    <StyledMiniHeader style={{ color: "#303030", marginTop: "1.5rem" }}>Season 2 Roster</StyledMiniHeader>
 
                                     {(() => {
                                         const roster2 = getRosterForManagerS2(selectedManager.name, selectedManager.oldname);
@@ -554,6 +560,37 @@ export default function Managers() {
                                                 <img src={selectedManager.s2banner} alt="banner" />
                                                 <ul style={{listStyleType: "none", padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.3rem",}}>
                                                     {roster2.roster.map((player) => (
+                                                        <li key={player.name} style={{background: "#e3e3e3", padding: "6px 10px",
+                                                            borderRadius: "6px", fontWeight: "500",}}>{player.name}</li>
+                                                    ))}
+                                                </ul>
+                                            </>
+                                        );
+                                    })()}
+
+                                    <StyledMiniHeader style={{ color: "#303030", marginTop: "1.5rem" }}>Season 3 Roster</StyledMiniHeader>
+
+                                    {(() => {
+                                        const roster3 = getRosterForManagerS3(selectedManager.name, selectedManager.oldname);
+
+                                        if (!roster3) {
+                                            return <p>No Season 3 roster available.</p>;
+                                        }
+
+                                        return (
+                                            <>
+                                                {roster3.accolades && (
+                                                    <div style={{display: "flex", flexDirection: "column", gap: "8px", marginBottom: "10px",}}>
+                                                        {roster3.accolades.map((acc) => (
+                                                            <div key={acc.type} style={{backgroundColor: acc.color, color: "white",
+                                                                padding: "4px", borderRadius: "8px", fontWeight: "bold",}}>{acc.type}</div>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                                <p style={{ fontWeight: "bold", marginBottom: "0.4rem" }}><strong>Captain:</strong> {roster3.captain}</p>
+                                                <img src={selectedManager.s3banner} alt="banner" />
+                                                <ul style={{listStyleType: "none", padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.3rem",}}>
+                                                    {roster3.roster.map((player) => (
                                                         <li key={player.name} style={{background: "#e3e3e3", padding: "6px 10px",
                                                             borderRadius: "6px", fontWeight: "500",}}>{player.name}</li>
                                                     ))}
