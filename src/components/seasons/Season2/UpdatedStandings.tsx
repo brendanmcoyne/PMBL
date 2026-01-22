@@ -81,17 +81,17 @@ const ToggleButton = styled.button`
     }
 `;
 
-export default function UpdatedStandings() {
+export default function Stats2() {
     const [batting, setBatting] = useState<StatRow[]>([]);
     const [pitching, setPitching] = useState<StatRow[]>([]);
     const [view, setView] = useState<"batting" | "pitching">("batting");
     const [sortConfig, setSortConfig] = useState<{ key: string; direction: "asc" | "desc" } | null>(null);
 
     const battingUrl =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRNrcLuwjEnaUMiJROqOs6CNwUY7zsn9lAg31gczRwnca6n_r02Bk_v04w7rgvzfxObieeqHGmAsDgO/pub?gid=0&single=true&output=csv";
+        "https://docs.google.com/spreadsheets/d/10-yEizVL_OOBVuxvH3oMUg0p9Pkx8YXX7zsXwVlsZYw/export?format=csv&gid=0";
 
     const pitchingUrl =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRNrcLuwjEnaUMiJROqOs6CNwUY7zsn9lAg31gczRwnca6n_r02Bk_v04w7rgvzfxObieeqHGmAsDgO/pub?gid=1237690545&single=true&output=csv";
+        "https://docs.google.com/spreadsheets/d/10-yEizVL_OOBVuxvH3oMUg0p9Pkx8YXX7zsXwVlsZYw/export?format=csv&gid=303745750";
 
     useEffect(() => {
         const fetchSheet = (url: string, setData: (data: StatRow[]) => void) => {

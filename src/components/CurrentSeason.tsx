@@ -360,7 +360,7 @@ export default function CurrentSeason() {
             <TwoSection>
                 <StatLeaders $animate={ready}>
                     <StyledMiniHeader>Stat Leaders</StyledMiniHeader>
-                    <StatLeadersMini statSet="set3" />
+                    <StatLeadersMini />
                 </StatLeaders>
                 <PlayoffProjection $animate={ready}>
                     <StyledMiniHeader>Current Playoffs</StyledMiniHeader>

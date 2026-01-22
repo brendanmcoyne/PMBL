@@ -28,6 +28,7 @@ import Playoffs1 from "./components/seasons/Season1/Playoffs.tsx";
 import Playoffs2 from "./components/seasons/Season2/Playoffs.tsx";
 import Standings1 from "./components/seasons/Season1/Standings.tsx";
 import Standings2 from "./components/seasons/Season2/Standings.tsx";
+import FullStats2 from "./components/seasons/Season2/FullStats.tsx";
 import Other1 from "./components/seasons/Season1/Other.tsx";
 import Other2 from "./components/seasons/Season2/Other.tsx";
 import Draft1 from "./components/seasons/Season1/Draft.tsx";
@@ -37,6 +38,7 @@ import Koopa from "./components/headlines/Koopa.tsx";
 import DryBones from "./components/headlines/DryBones.tsx";
 import MiiBreakout from "./components/headlines/MiiBreakout.tsx";
 import DraftRecap from "./components/headlines/DraftRecap.tsx";
+import DraftRecap3 from "./components/headlines/season3/DraftRecap.tsx";
 import CorkedBat from "./components/headlines/CorkedBat.tsx";
 import Training from "./components/headlines/Training.tsx";
 import Week1Recap from "./components/headlines/Week1Recap.tsx";
@@ -174,6 +176,7 @@ function Root() {
                     <Route path="/archives/seasons/Season2/Standings" element={<Standings2 />} />
                     <Route path="/archives/seasons/Season2/Other" element={<Other2 />} />
                     <Route path="/archives/seasons/Season2/Draft" element={<Draft2 />} />
+                    <Route path="/archives/seasons/Season2/Stats" element={<Content><FullStats2 /></Content>} />
 
                     /* Season 3 */
 
@@ -199,6 +202,7 @@ function Root() {
                     <Route path="/headlines/Season2Recap" element={<Season2Recap />} />
                     <Route path="/headlines/Blooper" element={<Blooper />} />
                     <Route path="/headlines/AllStarGame" element={<AllStarGame />} />
+                    <Route path="/headlines/season3/DraftRecap" element={<DraftRecap3 />} />
                 </Routes>
             </MainContent>
             <Footer/>

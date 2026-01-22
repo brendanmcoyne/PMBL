@@ -53,7 +53,7 @@ export default function Season2() {
             </LinkDiv>
             <StyledMiniHeader style={{marginTop: "40px", textAlign: "center", color: "white"}}>Click down below to see all Season 2 stats</StyledMiniHeader>
 
-            <LinkButton to="/season/stats" style={{width: "15rem", backgroundColor: "darkblue"}} state={{ stateSet: "set2"}}>
+            <LinkButton to="/archives/seasons/Season2/Stats" style={{width: "15rem", backgroundColor: "darkblue"}} state={{ stateSet: "set2"}}>
                 View Full Season Stats
             </LinkButton>
         </ContentDiv>
