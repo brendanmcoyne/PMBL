@@ -38,7 +38,6 @@ import Koopa from "./components/headlines/Koopa.tsx";
 import DryBones from "./components/headlines/DryBones.tsx";
 import MiiBreakout from "./components/headlines/MiiBreakout.tsx";
 import DraftRecap from "./components/headlines/DraftRecap.tsx";
-import DraftRecap3 from "./components/headlines/season3/DraftRecap.tsx";
 import CorkedBat from "./components/headlines/CorkedBat.tsx";
 import Training from "./components/headlines/Training.tsx";
 import Week1Recap from "./components/headlines/Week1Recap.tsx";
@@ -56,6 +55,8 @@ import Season2Recap from "./components/headlines/Season2Recap.tsx";
 import AllStarGame from "./components/headlines/AllStarGame.tsx";
 import Blooper from "./components/headlines/Blooper.tsx";
 
+import DraftRecap3 from "./components/headlines/season3/DraftRecap.tsx";
+import Week1Recap3 from "./components/headlines/season3/Week1Recap.tsx";
 
 const MainContent = styled.div`
     padding-top: 80px;
@@ -203,6 +204,7 @@ function Root() {
                     <Route path="/headlines/Blooper" element={<Blooper />} />
                     <Route path="/headlines/AllStarGame" element={<AllStarGame />} />
                     <Route path="/headlines/season3/DraftRecap" element={<DraftRecap3 />} />
+                    <Route path="/headlines/season3/Week1Recap" element={<Week1Recap3 />} />
                 </Routes>
             </MainContent>
             <Footer/>
