@@ -262,8 +262,8 @@ export default function Awards2() {
                     <GenImage style={{objectFit: "cover"}} src="/managers/Morgan.jpg" alt="Morgan"/>
                     <StyledMiniHeader style={{margin: "0"}}>Manager of the Year</StyledMiniHeader>
                     <StyledManager style={{fontSize: "35px", color: "#FF00FF"}}>Morgan</StyledManager>
-                    <StyledTeam>Luigi Knights</StyledTeam>
-                    <ImgEmblem src="/emblems/MSS-Emblem-LuigiKnights.webp" alt="Luigi"/>
+                    <StyledTeam>Daisy Flowers</StyledTeam>
+                    <ImgEmblem src="/emblems/MSS-Emblem-DaisyFlowers.webp" alt="Luigi"/>
                 </WinnerDiv>
                 <WinnerDiv>
                     <GenImage src="/season2awards/Birdo.jpg" alt="Birdo"/>
