@@ -134,7 +134,7 @@ export default function Game() {
                 </tbody>
             </ScoreTable>
             <h4 style={{ marginTop: "0", marginBottom: "0.75rem" }}>
-                Location: <span style={{ color: "#4CAF50" }}>Yoshi Park</span>
+                Location: <span style={{ color: "#EEEEEE" }}>TBD</span>
             </h4>
 
             {/*
