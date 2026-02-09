@@ -162,17 +162,17 @@ export default function CurrentSeason() {
     const [round, setRound] = useState<'Conference Series' | 'World Series'>('Conference Series');
 
     const eastTeams = [
-        { name: 'James', color: "#F1C232", record: '2-0', divRecord: '1-0' },
+        { name: 'James', color: "#F1C232", record: '3-0', divRecord: '2-0' },
         { name: 'Brendan', color: "#CC0000", record: '2-0', divRecord: '0-0' },
-        { name: 'Justave', color: "#FF9900", record: '1-1', divRecord: '0-0' },
+        { name: 'Justave', color: "#FF9900", record: '1-2', divRecord: '0-1' },
         { name: 'Marge', color: "#6AA84F", record: '0-2', divRecord: '0-1' },
     ];
 
     const westTeams = [
-        { name: 'THANdrew', color: "#999999", record: '1-1', divRecord: '1-0' },
-        { name: 'Trocean', color: "#9900FF", record: '1-1', divRecord: '0-0' },
-        { name: 'Isaac', color: "#3586E8", record: '1-1', divRecord: '0-1' },
-        { name: 'Morgan', color: "#FF00FF", record: '0-2', divRecord: '0-0' },
+        { name: 'Isaac', color: "#3586E8", record: '2-1', divRecord: '1-1' },
+        { name: 'Morgan', color: "#FF00FF", record: '1-2', divRecord: '1-0' },
+        { name: 'Trocean', color: "#9900FF", record: '1-2', divRecord: '0-1' },
+        { name: 'THANdrew', color: "#999999", record: '1-2', divRecord: '1-1' },
     ];
 
     const Week1 = [
@@ -190,10 +190,10 @@ export default function CurrentSeason() {
     ];
 
     const Week3 = [
-        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Justave", homecolor: "#FF9900", score: "" },
-        { matchup: 2, away: "Brendan", awaycolor: "#CC0000", home: "Marge", homecolor: "#6AA84F", score: "" },
-        { matchup: 3, away: "Morgan", awaycolor: "#FF00FF", home: "THANdrew", homecolor: "#999999", score: "" },
-        { matchup: 4, away: "Trocean", awaycolor: "#9900FF", home: "Isaac", homecolor: "#3586E8", score: "" },
+        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Justave", homecolor: "#FF9900", score: "11-7" },
+        { matchup: 2, away: "Morgan", awaycolor: "#FF00FF", home: "THANdrew", homecolor: "#999999", score: "8-7" },
+        { matchup: 3, away: "Trocean", awaycolor: "#9900FF", home: "Isaac", homecolor: "#3586E8", score: "12-23" },
+        { matchup: 4, away: "Brendan", awaycolor: "#CC0000", home: "Marge", homecolor: "#6AA84F", score: "" },
     ];
 
     const Week4 = [
