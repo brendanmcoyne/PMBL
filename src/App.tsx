@@ -58,6 +58,7 @@ import Blooper from "./components/headlines/Blooper.tsx";
 import DraftRecap3 from "./components/headlines/season3/DraftRecap.tsx";
 import Week1Recap3 from "./components/headlines/season3/Week1Recap.tsx";
 import Week2Recap3 from "./components/headlines/season3/Week2Recap.tsx";
+import Cascade from "./components/headlines/season3/Cascade.tsx";
 
 const MainContent = styled.div`
     padding-top: 80px;
@@ -207,6 +208,7 @@ function Root() {
                     <Route path="/headlines/season3/DraftRecap" element={<DraftRecap3 />} />
                     <Route path="/headlines/season3/Week1Recap" element={<Week1Recap3 />} />
                     <Route path="/headlines/season3/Week2Recap" element={<Week2Recap3 />} />
+                    <Route path="/headlines/season3/Cascade" element={<Cascade />} />
                 </Routes>
             </MainContent>
             <Footer/>

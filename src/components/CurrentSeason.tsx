@@ -163,9 +163,9 @@ export default function CurrentSeason() {
 
     const eastTeams = [
         { name: 'James', color: "#F1C232", record: '3-0', divRecord: '2-0' },
-        { name: 'Brendan', color: "#CC0000", record: '2-0', divRecord: '0-0' },
+        { name: 'Brendan', color: "#CC0000", record: '3-0', divRecord: '1-0' },
         { name: 'Justave', color: "#FF9900", record: '1-2', divRecord: '0-1' },
-        { name: 'Marge', color: "#6AA84F", record: '0-2', divRecord: '0-1' },
+        { name: 'Marge', color: "#6AA84F", record: '0-3', divRecord: '0-2' },
     ];
 
     const westTeams = [
@@ -193,7 +193,7 @@ export default function CurrentSeason() {
         { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Justave", homecolor: "#FF9900", score: "11-7" },
         { matchup: 2, away: "Morgan", awaycolor: "#FF00FF", home: "THANdrew", homecolor: "#999999", score: "8-7" },
         { matchup: 3, away: "Trocean", awaycolor: "#9900FF", home: "Isaac", homecolor: "#3586E8", score: "12-23" },
-        { matchup: 4, away: "Brendan", awaycolor: "#CC0000", home: "Marge", homecolor: "#6AA84F", score: "" },
+        { matchup: 4, away: "Brendan", awaycolor: "#CC0000", home: "Marge", homecolor: "#6AA84F", score: "18-10" },
     ];
 
     const Week4 = [
@@ -246,8 +246,8 @@ export default function CurrentSeason() {
     ];
 
     const ConfSeries = [
-        { matchup: 1, away: "TBD", awaycolor: "#FFFFFF", home: "TBD", homecolor: "#FFFFFF", record: "0-0"},
-        { matchup: 2, away: "TBD", awaycolor: "#FFFFFF", home: "TBD", homecolor: "#FFFFFF", record: "0-0"},
+        { matchup: 1, away: "Morgan", awaycolor: "#FF00FF", home: "James", homecolor: "#F1C232", record: "0-0"},
+        { matchup: 2, away: "Brendan", awaycolor: "#CC0000", home: "Isaac", homecolor: "#3586E8", record: "0-0"},
     ]
 
     const WorldSeries = [
