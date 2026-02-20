@@ -207,7 +207,7 @@ export default function Week3Recap3() {
                 <thead>
                 <tr>
                     <Th>Team</Th>
-                    {[...Array(7)].map((_, i) => <Th key={i}>{i + 1}</Th>)}
+                    {[...Array(8)].map((_, i) => <Th key={i}>{i + 1}</Th>)}
                     <Th>R</Th>
                     <Th>H</Th>
                     <Th>E</Th>

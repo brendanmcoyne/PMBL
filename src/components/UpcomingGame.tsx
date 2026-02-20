@@ -73,8 +73,8 @@ export default function Game() {
 
 
     const game = {
-        away: { name: "THANdrew", color: "#999999", manager: "THANdrew", record: "1-2", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
-        home: { name: "Marge", color: "#6AA84F", manager: "Justave", record: "0-3", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        away: { name: "James", color: "#F1C232", manager: "James", record: "4-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        home: { name: "THANdrew", color: "#999999", manager: "THANdrew", record: "2-2", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
     };
 
     {/*
@@ -100,7 +100,7 @@ export default function Game() {
                 <p style={{margin: "0", transform: "translateY(-10px)", fontFamily: "'Luckiest Guy', cursive", fontSize: "3rem"}}>vs</p>
                 <TeamColumn>
                     <TeamLabel>Home Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-MarioFireballs.png" alt={`${game.home.name} logo`} />
+                    <Logo src="/emblems/MSS-Emblem-BirdoBows.webp" alt={`${game.home.name} logo`} />
                     <Manager style={{color: game.home.color}}>{game.home.manager}</Manager>
                     <Record>({game.home.record})</Record>
                 </TeamColumn>
