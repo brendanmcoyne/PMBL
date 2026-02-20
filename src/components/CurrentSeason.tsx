@@ -246,7 +246,7 @@ export default function CurrentSeason() {
     ];
 
     const ConfSeries = [
-        { matchup: 1, away: "THANdrew", awaycolor: "#99999", home: "James", homecolor: "#F1C232", record: "0-0"},
+        { matchup: 1, away: "THANdrew", awaycolor: "#999999", home: "James", homecolor: "#F1C232", record: "0-0"},
         { matchup: 2, away: "Brendan", awaycolor: "#CC0000", home: "Morgan", homecolor: "#FF00FF", record: "0-0"},
     ]
 
