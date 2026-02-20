@@ -73,8 +73,8 @@ export default function Game() {
 
 
     const game = {
-        away: { name: "James", color: "#F1C232", manager: "James", record: "2-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
-        home: { name: "Justave", color: "#FF9900", manager: "Justave", record: "1-1", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        away: { name: "THANdrew", color: "#999999", manager: "THANdrew", record: "1-2", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        home: { name: "Marge", color: "#6AA84F", manager: "Justave", record: "0-3", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
     };
 
     {/*

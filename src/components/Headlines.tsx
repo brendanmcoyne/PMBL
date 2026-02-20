@@ -117,6 +117,20 @@ export default function Players() {
             <StyledMiniHeader $animate={ready}>Featuring all the top baseball stories!</StyledMiniHeader>
             <SeparatorLine $animate={ready}/>
             <Story $animate={ready}>
+                <GenImage src="/headlines/3week4.jpeg" alt="Week4" />
+                <Overlay>
+                    <Headline>Season 3 Week 4 Recap</Headline>
+                    <StyledLink to="/headlines/season3/Week4Recap">Click to read more!</StyledLink>
+                </Overlay>
+            </Story>
+            <Story $animate={ready}>
+                <GenImage src="/headlines/3week3.jpg" alt="Week3" />
+                <Overlay>
+                    <Headline>Season 3 Week 3 Recap</Headline>
+                    <StyledLink to="/headlines/season3/Week3Recap">Click to read more!</StyledLink>
+                </Overlay>
+            </Story>
+            <Story $animate={ready}>
                 <GenImage src="/headlines/Cascade.jpg" alt="Isaac" />
                 <Overlay>
                     <Headline>Cascade CAPTURED by alleged girlfriend, OUT Week 4</Headline>
