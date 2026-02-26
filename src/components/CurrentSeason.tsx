@@ -204,10 +204,10 @@ export default function CurrentSeason() {
     ];
 
     const Week5 = [
-        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "THANdrew", homecolor: "#999999", score: "" },
-        { matchup: 2, away: "Trocean", awaycolor: "#9900FF", home: "Brendan", homecolor: "#CC0000", score: "" },
-        { matchup: 4, away: "Isaac", awaycolor: "#3586E8", home: "Morgan", homecolor: "#FF00FF", score: "" },
-        { matchup: 3, away: "Marge", awaycolor: "#6AA84F", home: "Justave", homecolor: "#FF9900", score: "" },
+        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "THANdrew", homecolor: "#999999", score: "3-4" },
+        { matchup: 2, away: "Trocean", awaycolor: "#9900FF", home: "Brendan", homecolor: "#CC0000", score: "7-14" },
+        { matchup: 3, away: "Marge", awaycolor: "#6AA84F", home: "Justave", homecolor: "#FF9900", score: "5-7" },
+        { matchup: 4, away: "Isaac", awaycolor: "#3586E8", home: "Morgan", homecolor: "#FF00FF", score: "4-8" },
     ];
 
     const Week6 = [
