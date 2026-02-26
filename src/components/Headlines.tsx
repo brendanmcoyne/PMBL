@@ -117,6 +117,13 @@ export default function Players() {
             <StyledMiniHeader $animate={ready}>Featuring all the top baseball stories!</StyledMiniHeader>
             <SeparatorLine $animate={ready}/>
             <Story $animate={ready}>
+                <GenImage src="/headlines/3week5.jpeg" alt="Week5" />
+                <Overlay>
+                    <Headline>Season 3 Week 5 Recap</Headline>
+                    <StyledLink to="/headlines/season3/Week5Recap">Click to read more!</StyledLink>
+                </Overlay>
+            </Story>
+            <Story $animate={ready}>
                 <GenImage src="/headlines/3week4.jpeg" alt="Week4" />
                 <Overlay>
                     <Headline>Season 3 Week 4 Recap</Headline>
