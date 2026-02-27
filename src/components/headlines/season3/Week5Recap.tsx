@@ -113,8 +113,8 @@ export default function Week5Recap3() {
         home: { name: "Justave", color: "#FF9900", scores: [0, 1, 0, 3, 3, 0, "X"], R: 7, H: 16, E: 1, LOB: 4 },
     };
     const game4 = {
-        away: { name: "Isaac", color: "#3586E8", scores: [0, 0, 0, 0, 1, 1, 2], R: 8, H: 14, E: 2, LOB: 6 },
-        home: { name: "Morgan", color: "#FF00FF", scores: [0, 1, 2, 2, 3, 0, "X"], R: 4, H: 21, E: 0, LOB: 10 },
+        away: { name: "Isaac", color: "#3586E8", scores: [0, 0, 0, 0, 1, 1, 2], R: 4, H: 14, E: 2, LOB: 6 },
+        home: { name: "Morgan", color: "#FF00FF", scores: [0, 1, 2, 2, 3, 0, "X"], R: 8, H: 21, E: 0, LOB: 10 },
 
     };
 
