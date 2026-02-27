@@ -133,7 +133,7 @@ export default function Week5Recap3() {
             does your favorite team stack up after the 1st half of the season?</Passage>
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 1: <span style={{ color: "#F1C232" }}> James</span> v.s.
-                <span style={{ color: "#999999" }}>THANdrew</span></StyledMiniHeader>
+                <span style={{ color: "#999999" }}> THANdrew</span></StyledMiniHeader>
             <Passage>In a very THANdrew way, their first 4 games of the season have each been decided by less than 3 runs
             each. Close battles, tough losses, and small margin victories. Once again, James comes into his matchup against
             THANdrew once again at 4-0, looking to make history as the first team to ever start 5-0. He would start off
@@ -311,7 +311,7 @@ export default function Week5Recap3() {
             </GameSummary>
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 4: <span style={{ color: "#3586E8" }}> Isaac</span> v.s.
-                <span style={{ color: "#FF00FF" }}>Morgan</span></StyledMiniHeader>
+                <span style={{ color: "#FF00FF" }}> Morgan</span></StyledMiniHeader>
             <Passage>Even though the game was late, the fans showed up and did not disappoint. Despite his previous
             hatred toward the cruiser, Morgan decided to head there against Isaac. The funeral for now deceased player
             Gramps had been pushed back for a week due to grieving, so the game would be played. Danny B would replace
