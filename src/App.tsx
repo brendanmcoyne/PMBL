@@ -19,20 +19,27 @@ import FullStats from "./components/FullStats.tsx";
 
 import Season1 from './components/seasons/Season1.tsx';
 import Season2 from './components/seasons/Season2.tsx';
+import Season3 from './components/seasons/Season3.tsx';
 
 import Awards1 from "./components/seasons/Season1/Awards.tsx";
 import Awards2 from "./components/seasons/Season2/Awards.tsx";
+import Awards3 from "./components/seasons/Season3/Awards.tsx";
 import Schedule1 from "./components/seasons/Season1/Schedule.tsx";
 import Schedule2 from "./components/seasons/Season2/Schedule.tsx";
+import Schedule3 from "./components/seasons/Season3/Schedule.tsx";
 import Playoffs1 from "./components/seasons/Season1/Playoffs.tsx";
 import Playoffs2 from "./components/seasons/Season2/Playoffs.tsx";
+import Playoffs3 from "./components/seasons/Season3/Playoffs.tsx";
 import Standings1 from "./components/seasons/Season1/Standings.tsx";
 import Standings2 from "./components/seasons/Season2/Standings.tsx";
+import Standings3 from "./components/seasons/Season3/Standings.tsx";
 import FullStats2 from "./components/seasons/Season2/FullStats.tsx";
 import Other1 from "./components/seasons/Season1/Other.tsx";
 import Other2 from "./components/seasons/Season2/Other.tsx";
+import Other3 from "./components/seasons/Season3/Other.tsx";
 import Draft1 from "./components/seasons/Season1/Draft.tsx";
 import Draft2 from "./components/seasons/Season2/Draft.tsx";
+import Draft3 from "./components/seasons/Season3/Draft.tsx";
 
 import Koopa from "./components/headlines/Koopa.tsx";
 import DryBones from "./components/headlines/DryBones.tsx";
@@ -166,6 +173,7 @@ function Root() {
                     /* Archives */
                     <Route path="/archives/seasons/Season1" element={<Season1 />} />
                     <Route path="/archives/seasons/Season2" element={<Season2 />} />
+                    <Route path="/archives/seasons/Season3" element={<Season3 />} />
 
                     /* Season 1 */
                     <Route path="/archives/seasons/Season1/Awards" element={<Awards1 />} />
@@ -185,7 +193,12 @@ function Root() {
                     <Route path="/archives/seasons/Season2/Stats" element={<Content><FullStats2 /></Content>} />
 
                     /* Season 3 */
-
+                    <Route path="/archives/seasons/Season3/Awards" element={<Awards3 />} />
+                    <Route path="/archives/seasons/Season3/Schedule" element={<Schedule3 />} />
+                    <Route path="/archives/seasons/Season3/Playoffs" element={<Playoffs3 />} />
+                    <Route path="/archives/seasons/Season3/Standings" element={<Standings3 />} />
+                    <Route path="/archives/seasons/Season3/Other" element={<Other3 />} />
+                    <Route path="/archives/seasons/Season3/Draft" element={<Draft3 />} />
 
                     /* Headlines */
                     <Route path="/headlines/Koopa" element={<Koopa />} />

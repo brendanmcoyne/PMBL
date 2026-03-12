@@ -98,6 +98,9 @@ export default function Archives() {
                 <StyledLink bg="/archives/mario-super-sluggers-screenshot.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2">Season 2</Link>
                 </StyledLink>
+                <StyledLink bg="/archives/s3.jpg">
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season3">Season 3</Link>
+                </StyledLink>
             </ResponsiveFlex>
 
             <StyledHeader $animate={ready} style={{fontSize: "80px", marginTop: "70px"}}>Gallery</StyledHeader>
@@ -108,8 +111,12 @@ export default function Archives() {
                 <img src="/archives/IMG_7373.jpg" alt="1"/>
                 <img src="/archives/IMG_7375.jpg" alt="2"/>
                 <img src="/archives/IMG_7376.jpg" alt="3"/>
-                <img src="/archives/IMG_7425.jpg" alt="4"/>
-                <img src="/archives/IMG_7436.jpg" alt="5"/>
+                <img src="/archives/IMG_9834.jpg" alt="4"/>
+                <img src="/archives/IMG_7425.jpg" alt="5"/>
+                <img src="/archives/IMG_7436.jpg" alt="6"/>
+                <img src="/archives/IMG_9838.jpg" alt="7"/>
+                <img src="/archives/IMG_9830.jpg" alt="8"/>
+                <img src="/archives/IMG_0611.jpg" alt="9"/>
             </Gallery>
         </ContentDiv>
 
