@@ -405,7 +405,7 @@ export default function Week5Recap3() {
 
                 <AwardBlock>
                     <div className="award-name">Rookie of the Week</div>
-                    <div className="player">Piggy</div>
+                    <div className="player">Piggie</div>
                     <div className="manager">Manager: <span style={{ color: "#6AA84F" }}>Marge</span></div>
                     <div className="description">
                         3/4, 1 Run, 2 D
