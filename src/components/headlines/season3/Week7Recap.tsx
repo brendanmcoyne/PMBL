@@ -341,6 +341,7 @@ export default function Week7Recap3() {
                     <span style={{fontSize: ".8rem"}}>Winning Pitcher: Piggie (1 - 0)</span>
                     <span style={{fontSize: ".8rem"}}>Losing Pitcher: Wario (4 - 2)</span>
                 </div>
+                <span style={{fontSize: ".8rem"}}>Save: Green Magikoopa (1)</span>
             </GameSummary>
 
             <StyledMiniHeader>Awards</StyledMiniHeader>
@@ -391,7 +392,7 @@ export default function Week7Recap3() {
                 <AwardBlock>
                     <div className="award-name">Surprise of the Week</div>
                     <div className="player">Bonnie</div>
-                    <div className="manager">Manager: <span style={{ color: "#9900FF" }}>THANdrew</span></div>
+                    <div className="manager">Manager: <span style={{ color: "#999999" }}>THANdrew</span></div>
                     <div className="description">
                         Bonnie grand slam
                     </div>
