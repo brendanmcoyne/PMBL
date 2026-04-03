@@ -162,17 +162,17 @@ export default function CurrentSeason() {
     const [round, setRound] = useState<'Conference Series' | 'World Series'>('Conference Series');
 
     const eastTeams = [
-        { name: 'James', color: "#F1C232", record: '5-1', divRecord: '3-0' },
-        { name: 'Brendan', color: "#CC0000", record: '4-2', divRecord: '1-1' },
-        { name: 'Justave', color: "#FF9900", record: '3-3', divRecord: '2-1' },
-        { name: 'Marge', color: "#6AA84F", record: '0-6', divRecord: '0-4' },
+        { name: 'James', color: "#F1C232", record: '6-1', divRecord: '4-0' },
+        { name: 'Brendan', color: "#CC0000", record: '4-3', divRecord: '1-2' },
+        { name: 'Justave', color: "#FF9900", record: '3-4', divRecord: '2-2' },
+        { name: 'Marge', color: "#6AA84F", record: '1-6', divRecord: '1-4' },
     ];
 
     const westTeams = [
-        { name: 'THANdrew', color: "#999999", record: '4-2', divRecord: '1-1' },
-        { name: 'Morgan', color: "#FF00FF", record: '3-3', divRecord: '3-1' },
-        { name: 'Isaac', color: "#3586E8", record: '3-3', divRecord: '1-2' },
-        { name: 'Trocean', color: "#9900FF", record: '2-4', divRecord: '1-2' },
+        { name: 'THANdrew', color: "#999999", record: '5-2', divRecord: '2-1' },
+        { name: 'Isaac', color: "#3586E8", record: '4-3', divRecord: '2-2' },
+        { name: 'Morgan', color: "#FF00FF", record: '3-4', divRecord: '3-2' },
+        { name: 'Trocean', color: "#9900FF", record: '2-5', divRecord: '1-3' },
     ];
 
     const Week1 = [
@@ -218,10 +218,11 @@ export default function CurrentSeason() {
     ];
 
     const Week7 = [
-        { matchup: 1, away: "THANdrew", awaycolor: "#999999", home: "Morgan", homecolor: "#FF00FF", score: "" },
-        { matchup: 2, away: "Justave", awaycolor: "#FF9900", home: "James", homecolor: "#F1C232", score: "" },
-        { matchup: 3, away: "Marge", awaycolor: "#6AA84F", home: "Brendan", homecolor: "#CC0000", score: "" },
-        { matchup: 4, away: "Isaac", awaycolor: "#3586E8", home: "Trocean", homecolor: "#9900FF", score: "" },
+        { matchup: 1, away: "Justave", awaycolor: "#FF9900", home: "James", homecolor: "#F1C232", score: "3-6" },
+        { matchup: 2, away: "Isaac", awaycolor: "#3586E8", home: "Trocean", homecolor: "#9900FF", score: "14-3" },
+        { matchup: 3, away: "THANdrew", awaycolor: "#999999", home: "Morgan", homecolor: "#FF00FF", score: "16-4" },
+        { matchup: 4, away: "Marge", awaycolor: "#6AA84F", home: "Brendan", homecolor: "#CC0000", score: "9-6" },
+
     ];
 
     const Week8 = [
@@ -246,8 +247,8 @@ export default function CurrentSeason() {
     ];
 
     const ConfSeries = [
-        { matchup: 1, away: "Morgan", awaycolor: "#FF00FF", home: "James", homecolor: "#F1C232", record: "0-0"},
-        { matchup: 2, away: "Brendan", awaycolor: "#CC0000", home: "THANdrew", homecolor: "#999999", record: "0-0"},
+        { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "James", homecolor: "#F1C232", record: "0-0"},
+        { matchup: 2, away: "Isaac", awaycolor: "#3586E8", home: "THANdrew", homecolor: "#999999", record: "0-0"},
     ]
 
     const WorldSeries = [
