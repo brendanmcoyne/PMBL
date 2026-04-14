@@ -162,17 +162,17 @@ export default function CurrentSeason() {
     const [round, setRound] = useState<'Conference Series' | 'World Series'>('Conference Series');
 
     const eastTeams = [
-        { name: 'James', color: "#F1C232", record: '6-1', divRecord: '4-0' },
-        { name: 'Brendan', color: "#CC0000", record: '4-3', divRecord: '1-2' },
-        { name: 'Justave', color: "#FF9900", record: '3-4', divRecord: '2-2' },
-        { name: 'Marge', color: "#6AA84F", record: '1-6', divRecord: '1-4' },
+        { name: 'James', color: "#F1C232", record: '6-2', divRecord: '4-1' },
+        { name: 'Brendan', color: "#CC0000", record: '5-3', divRecord: '2-2' },
+        { name: 'Justave', color: "#FF9900", record: '4-4', divRecord: '2-2' },
+        { name: 'Marge', color: "#6AA84F", record: '2-6', divRecord: '1-4' },
     ];
 
     const westTeams = [
-        { name: 'THANdrew', color: "#999999", record: '5-2', divRecord: '2-1' },
-        { name: 'Isaac', color: "#3586E8", record: '4-3', divRecord: '2-2' },
-        { name: 'Morgan', color: "#FF00FF", record: '3-4', divRecord: '3-2' },
-        { name: 'Trocean', color: "#9900FF", record: '2-5', divRecord: '1-3' },
+        { name: 'THANdrew', color: "#999999", record: '6-2', divRecord: '3-1' },
+        { name: 'Isaac', color: "#3586E8", record: '4-4', divRecord: '2-2' },
+        { name: 'Morgan', color: "#FF00FF", record: '3-5', divRecord: '3-2' },
+        { name: 'Trocean', color: "#9900FF", record: '2-6', divRecord: '1-4' },
     ];
 
     const Week1 = [
@@ -226,17 +226,17 @@ export default function CurrentSeason() {
     ];
 
     const Week8 = [
-        { matchup: 1, away: "Morgan", awaycolor: "#FF00FF", home: "Justave", homecolor: "#FF9900", score: "" },
-        { matchup: 2, away: "Brendan", awaycolor: "#CC0000", home: "James", homecolor: "#F1C232", score: "" },
-        { matchup: 3, away: "Isaac", awaycolor: "#3586E8", home: "Marge", homecolor: "#6AA84F", score: "" },
-        { matchup: 4, away: "THANdrew", awaycolor: "#999999", home: "Trocean", homecolor: "#9900FF", score: "" },
+        { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "James", homecolor: "#F1C232", score: "14-11" },
+        { matchup: 2, away: "Morgan", awaycolor: "#FF00FF", home: "Justave", homecolor: "#FF9900", score: "7-8" },
+        { matchup: 3, away: "THANdrew", awaycolor: "#999999", home: "Trocean", homecolor: "#9900FF", score: "16-14" },
+        { matchup: 4, away: "Isaac", awaycolor: "#3586E8", home: "Marge", homecolor: "#6AA84F", score: "13-14" },
     ];
 
     const Week9 = [
-        { matchup: 1, away: "Marge", awaycolor: "#6AA84F", home: "Morgan", homecolor: "#FF00FF", score: "" },
-        { matchup: 2, away: "Trocean", awaycolor: "#9900FF", home: "James", homecolor: "#F1C232", score: "" },
-        { matchup: 3, away: "Justave", awaycolor: "#FF9900", home: "Brendan", homecolor: "#CC0000", score: "" },
-        { matchup: 4, away: "Isaac", awaycolor: "#3586E8", home: "THANdrew", homecolor: "#999999", score: "" },
+        { matchup: 1, away: "Trocean", awaycolor: "#9900FF", home: "James", homecolor: "#F1C232", score: "" },
+        { matchup: 2, away: "Justave", awaycolor: "#FF9900", home: "Brendan", homecolor: "#CC0000", score: "" },
+        { matchup: 3, away: "Isaac", awaycolor: "#3586E8", home: "THANdrew", homecolor: "#999999", score: "" },
+        { matchup: 4, away: "Marge", awaycolor: "#6AA84F", home: "Morgan", homecolor: "#FF00FF", score: "" },
     ];
 
     const Week10 = [
@@ -247,8 +247,8 @@ export default function CurrentSeason() {
     ];
 
     const ConfSeries = [
-        { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "James", homecolor: "#F1C232", record: "0-0"},
-        { matchup: 2, away: "Isaac", awaycolor: "#3586E8", home: "THANdrew", homecolor: "#999999", record: "0-0"},
+        { matchup: 1, away: "Isaac", awaycolor: "#3586E8", home: "James", homecolor: "#F1C232", record: "0-0"},
+        { matchup: 2, away: "Brendan", awaycolor: "#CC0000", home: "THANdrew", homecolor: "#999999", record: "0-0"},
     ]
 
     const WorldSeries = [
