@@ -310,7 +310,7 @@ export default function Week8Recap3() {
             </GameSummary>
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 4: <span style={{ color: "#3586E8" }}> Isaac</span> v.s.
-                <span style={{ color: "#6AA84F" }}>Marge</span></StyledMiniHeader>
+                <span style={{ color: "#6AA84F" }}> Marge</span></StyledMiniHeader>
             <Passage>Despite getting their first win last week, Marge would be facing heavy competition, playing Isaac
                 on his PhD signing day. This would be proved very quickly, as Blue Kritter would immediately hit a solo
                 shot to start the game. Isaac would score another 2 runs to make it 3-0 Isaac in the first. King K Rool,
