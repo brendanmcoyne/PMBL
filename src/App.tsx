@@ -71,6 +71,7 @@ import Week5Recap3 from "./components/headlines/season3/Week5Recap.tsx";
 import Week6Recap3 from "./components/headlines/season3/Week6Recap.tsx";
 import Week7Recap3 from "./components/headlines/season3/Week7Recap.tsx";
 import Week8Recap3 from "./components/headlines/season3/Week8Recap.tsx";
+import Season3Recap from "./components/headlines/season3/Season3Recap.tsx";
 import Preview from "./components/headlines/season3/Preview.tsx";
 import Cascade from "./components/headlines/season3/Cascade.tsx";
 
@@ -234,6 +235,7 @@ function Root() {
                     <Route path="/headlines/season3/Week6Recap" element={<Week6Recap3 />} />
                     <Route path="/headlines/season3/Week7Recap" element={<Week7Recap3 />} />
                     <Route path="/headlines/season3/Week8Recap" element={<Week8Recap3 />} />
+                    <Route path="/headlines/season3/Season3Recap" element={<Season3Recap />} />
                     <Route path="/headlines/season3/Cascade" element={<Cascade />} />
                     <Route path="/headlines/season3/Preview" element={<Preview />} />
                 </Routes>

@@ -248,12 +248,12 @@ export default function CurrentSeason() {
     ];
 
     const ConfSeries = [
-        { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "James", homecolor: "#F1C232", record: "2-0"},
-        { matchup: 2, away: "Isaac", awaycolor: "#3586E8", home: "THANdrew", homecolor: "#999999", record: "1-1"},
+        { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "James", homecolor: "#F1C232", record: "3-0"},
+        { matchup: 2, away: "Isaac", awaycolor: "#3586E8", home: "THANdrew", homecolor: "#999999", record: "3-1"},
     ]
 
     const WorldSeries = [
-        { matchup: 1, away: "TBD", awaycolor: "#FFFFFF", home: "TBD", homecolor: "#FFFFFF", record: "0-0"},
+        { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "Isaac", homecolor: "#3586E8", record: "2-3"},
     ]
 
     const currentTeams = division === 'West' ? westTeams : eastTeams;
@@ -276,7 +276,7 @@ export default function CurrentSeason() {
             <StyledHeader $animate={ready}>Current Season</StyledHeader>
 
             <UpcomingGame $animate={ready}>
-                <StyledMiniHeader style={{marginBottom: "0"}}>Upcoming Game</StyledMiniHeader>
+                <StyledMiniHeader style={{marginBottom: "0"}}>Recent Game</StyledMiniHeader>
                 <Game />
             </UpcomingGame>
             <TwoSection>

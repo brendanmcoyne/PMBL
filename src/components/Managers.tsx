@@ -414,7 +414,7 @@ export default function Managers() {
                     Their passion for Mario Baseball has sparked the interest in the rest of the managers,
                     creating the league everyone knows and loves.
                 </RivalryDesc>
-                <RivalryRecord>Series tied 1-1</RivalryRecord>
+                <RivalryRecord>Isaac leads 5-3</RivalryRecord>
             </Rivalry>
             <Rivalry>
                 <RivalryTitle>The Battle of Stuvi 901</RivalryTitle>
@@ -428,7 +428,7 @@ export default function Managers() {
                     fierce competitors endured a great 4 game Conference Series matchup, with Justave moving onto
                     the World Series
                 </RivalryDesc>
-                <RivalryRecord>Justave leads 4-2</RivalryRecord>
+                <RivalryRecord>Justave leads 5-2</RivalryRecord>
             </Rivalry>
             <Rivalry>
                 <RivalryTitle>The 48 Buswell Battle</RivalryTitle>
@@ -441,7 +441,7 @@ export default function Managers() {
                     A rivlary so fierce that they didn't even travel to games together despite sleeping
                     above/below one another. Both teams were dipped in controversy throughout Season 1, and met in the playoffs,
                     with James winning the series 3-1. </RivalryDesc>
-                <RivalryRecord>James leads 5-1</RivalryRecord>
+                <RivalryRecord>James leads 6-1</RivalryRecord>
             </Rivalry>
             <Rivalry>
                 <RivalryTitle> The Computer Engineering Clash</RivalryTitle>
@@ -454,7 +454,7 @@ export default function Managers() {
                     Two division rivals of the same major. Both fan favorite teams played in the Week 7
                     Shy Guy Tribute Game, where Matt took an early 5-0 lead in the 1st, to lose 11-14 with a 3 run walk-off homer
                     in the first ever 10 inning game. They would play again a few weeks later, with Justin winning again.</RivalryDesc>
-                <RivalryRecord>Justin leads 3-1</RivalryRecord>
+                <RivalryRecord>Justin leads 4-2</RivalryRecord>
             </Rivalry>
             <Rivalry style={{alignItems: "center"}}>
                 <RivalryTitle>Middlesex Matchups</RivalryTitle>
@@ -467,9 +467,9 @@ export default function Managers() {
                     throughout the leagues history. In the Season 1 playoffs, there were two Middlesex matchups, one in the Conference Series,
                     and one in the World Series, culminating in James winning both, and the first ever PMBL World Series Title. </RivalryDesc>
                 <RivalryRecords>
-                    <RivalryRecord>James leads Morgan 5-1</RivalryRecord>
-                    <RivalryRecord>James leads Brendan 6-1</RivalryRecord>
-                    <RivalryRecord>Brendan 1-1 Morgan</RivalryRecord>
+                    <RivalryRecord>James leads Morgan 6-1</RivalryRecord>
+                    <RivalryRecord>James leads Brendan 7-5</RivalryRecord>
+                    <RivalryRecord>Brendan leads Morgan 2-1</RivalryRecord>
                 </RivalryRecords>
             </Rivalry>
 

@@ -241,7 +241,7 @@ export default function Schedule3() {
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game1"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#FF9900"}}>Justin</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
                     <TeamRecord>(1-0)</TeamRecord>
                     <div />
                     <TeamRecord>(0-1)</TeamRecord>
@@ -286,42 +286,42 @@ export default function Schedule3() {
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game5"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
-                    <TeamRecord>(1-1)</TeamRecord>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                    <TeamRecord>(0-2)</TeamRecord>
                     <div/>
-                    <TeamRecord>(1-1)</TeamRecord>
-                    <ScoreLine>12 - 5</ScoreLine>
+                    <TeamRecord>(2-0)</TeamRecord>
+                    <ScoreLine>11 - 21</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game6"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                    <TeamRecord>(0-2)</TeamRecord>
+                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
+                    <TeamRecord>(1-1)</TeamRecord>
                     <div />
-                    <TeamRecord>(2-0)</TeamRecord>
-                    <ScoreLine>9 - 14</ScoreLine>
-                    <Stadium>Daisy Cruiser</Stadium>
+                    <TeamRecord>(1-1)</TeamRecord>
+                    <ScoreLine>11 - 9</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game7"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <TeamRecord>(1-1)</TeamRecord>
                     <div/>
                     <TeamRecord>(1-1)</TeamRecord>
-                    <ScoreLine>4 - 1</ScoreLine>
-                    <Stadium>Bowsers Castle</Stadium>
+                    <ScoreLine>12 - 11</ScoreLine>
+                    <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game8"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <TeamRecord>(0-2)</TeamRecord>
                     <div/>
                     <TeamRecord>(2-0)</TeamRecord>
                     <ScoreLine>6 - 8</ScoreLine>
-                    <Stadium>Daisy Cruiser</Stadium>
+                    <Stadium>DK Jungle</Stadium>
                 </Matchup>
 
             </Week>
@@ -330,44 +330,44 @@ export default function Schedule3() {
 
             <Week>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game9"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                    <TeamRecord>(1-2)</TeamRecord>
+                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
+                    <TeamRecord>(3-0)</TeamRecord>
                     <div />
                     <TeamRecord>(1-2)</TeamRecord>
-                    <ScoreLine>12 - 4</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
+                    <ScoreLine>11 - 7</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
                 </Matchup>
 
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game10"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
                     <TeamRecord>(1-2)</TeamRecord>
                     <div />
-                    <TeamRecord>(3-0)</TeamRecord>
-                    <ScoreLine>1 - 3</ScoreLine>
-                    <Stadium>DK Jungle</Stadium>
+                    <TeamRecord>(1-2)</TeamRecord>
+                    <ScoreLine>8 - 7</ScoreLine>
+                    <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game11"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
+                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
-                    <TeamRecord>(3-0)</TeamRecord>
-                    <div />
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <TeamRecord>(1-2)</TeamRecord>
-                    <ScoreLine>21 - 4</ScoreLine>
-                    <Stadium>Yoshi Park</Stadium>
+                    <div />
+                    <TeamRecord>(2-1)</TeamRecord>
+                    <ScoreLine>12 - 23</ScoreLine>
+                    <Stadium>Wario City</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game12"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <TeamRecord>(2-1)</TeamRecord>
-                    <div />
                     <TeamRecord>(0-3)</TeamRecord>
-                    <ScoreLine>7 - 3</ScoreLine>
+                    <div />
+                    <TeamRecord>(3-0)</TeamRecord>
+                    <ScoreLine>10 - 18</ScoreLine>
                     <Stadium>Yoshi Park</Stadium>
                 </Matchup>
             </Week>
@@ -377,44 +377,44 @@ export default function Schedule3() {
 
             <Week>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game13"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
-                    <TeamRecord>(1-3)</TeamRecord>
+                    <TeamRecord>(3-1)</TeamRecord>
                     <div />
                     <TeamRecord>(2-2)</TeamRecord>
-                    <ScoreLine>0 - 16</ScoreLine>
-                    <Stadium>Daisy Cruiser</Stadium>
+                    <ScoreLine>11 - 10</ScoreLine>
+                    <Stadium>Wario City</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game14"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <TeamRecord>(4-0)</TeamRecord>
                     <div />
-                    <TeamRecord>(1-3)</TeamRecord>
-                    <ScoreLine>21 - 6</ScoreLine>
-                    <Stadium>Bowsers Castle</Stadium>
+                    <TeamRecord>(2-2)</TeamRecord>
+                    <ScoreLine>10 - 6</ScoreLine>
+                    <Stadium>Wario City</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game15"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <TeamRecord>(1-3)</TeamRecord>
                     <div />
-                    <TeamRecord>(3-1)</TeamRecord>
-                    <ScoreLine>8 - 6</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
+                    <TeamRecord>(2-2)</TeamRecord>
+                    <ScoreLine>13 - 15</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game16"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <TeamRecord>(1-3)</TeamRecord>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <TeamRecord>(2-2)</TeamRecord>
                     <div />
-                    <TeamRecord>(3-1)</TeamRecord>
-                    <ScoreLine>4 - 6</ScoreLine>
-                    <Stadium>DK Jungle</Stadium>
+                    <TeamRecord>(0-4)</TeamRecord>
+                    <ScoreLine>6 - 4</ScoreLine>
+                    <Stadium>Bowser Jr Playroom</Stadium>
                 </Matchup>
             </Week>
 
@@ -422,44 +422,44 @@ export default function Schedule3() {
 
             <Week>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game17"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <TeamRecord>(1-4)</TeamRecord>
-                    <div />
+                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
                     <TeamRecord>(4-1)</TeamRecord>
-                    <ScoreLine>3 - 10</ScoreLine>
-                    <Stadium>Yoshi Park</Stadium>
-                </Matchup>
-                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game18"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
-                    <TeamRecord>(1-4)</TeamRecord>
                     <div />
                     <TeamRecord>(3-2)</TeamRecord>
-                    <ScoreLine>5 - 15</ScoreLine>
+                    <ScoreLine>3 - 4</ScoreLine>
                     <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
-                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game19"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
+                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game18"])} style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                    <TeamRecord>(4-1)</TeamRecord>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                    <TeamRecord>(1-4)</TeamRecord>
                     <div />
                     <TeamRecord>(4-1)</TeamRecord>
-                    <ScoreLine>6 - 5</ScoreLine>
-                    <Stadium>Daisy Cruiser</Stadium>
+                    <ScoreLine>7 - 14</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
+                </Matchup>
+                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game19"])} style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
+                    <TeamRecord>(0-5)</TeamRecord>
+                    <div />
+                    <TeamRecord>(3-2)</TeamRecord>
+                    <ScoreLine>5 - 7</ScoreLine>
+                    <Stadium>Wario City</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game20"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <TeamRecord>(2-3)</TeamRecord>
                     <div />
-                    <TeamRecord>(1-4)</TeamRecord>
-                    <ScoreLine>12 - 9</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
+                    <TeamRecord>(3-2)</TeamRecord>
+                    <ScoreLine>4 - 8</ScoreLine>
+                    <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
             </Week>
 
@@ -467,44 +467,44 @@ export default function Schedule3() {
 
             <Week>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game21"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
-                    <TeamRecord>(5-1)</TeamRecord>
-                    <div />
-                    <TeamRecord>(4-2)</TeamRecord>
-                    <ScoreLine>5 - 1</ScoreLine>
-                    <Stadium>Bowser Jrs Playroom</Stadium>
-                </Matchup>
-                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game22"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
-                    <TeamRecord>(2-4)</TeamRecord>
+                    <TeamRecord>(3-3)</TeamRecord>
                     <div />
-                    <TeamRecord>(1-5)</TeamRecord>
-                    <ScoreLine>11 - 4</ScoreLine>
-                    <Stadium>Wario City</Stadium>
+                    <TeamRecord>(2-4)</TeamRecord>
+                    <ScoreLine>8 - 11</ScoreLine>
+                    <Stadium>DK Jungle</Stadium>
+                </Matchup>
+                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game22"])} style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <TeamRecord>(5-1)</TeamRecord>
+                    <div />
+                    <TeamRecord>(0-6)</TeamRecord>
+                    <ScoreLine>33 - 15</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game23"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                    <TeamRecord>(4-2)</TeamRecord>
+                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
+                    <TeamRecord>(3-3)</TeamRecord>
                     <div />
                     <TeamRecord>(4-2)</TeamRecord>
-                    <ScoreLine>6 - 2</ScoreLine>
+                    <ScoreLine>4 - 8</ScoreLine>
                     <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game24"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
-                    <TeamRecord>(2-4)</TeamRecord>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                    <TeamRecord>(4-2)</TeamRecord>
                     <div />
-                    <TeamRecord>(2-4)</TeamRecord>
-                    <ScoreLine>7 - 6</ScoreLine>
-                    <Stadium>Yoshi Park</Stadium>
+                    <TeamRecord>(3-3)</TeamRecord>
+                    <ScoreLine>6 - 7</ScoreLine>
+                    <Stadium>DK Jungle</Stadium>
                 </Matchup>
             </Week>
 
@@ -514,42 +514,42 @@ export default function Schedule3() {
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game25"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <TeamRecord>(5-2)</TeamRecord>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
+                    <TeamRecord>(3-4)</TeamRecord>
                     <div />
-                    <TeamRecord>(5-2)</TeamRecord>
-                    <ScoreLine>5 - 3</ScoreLine>
-                    <Stadium>Bowser Jrs Playroom</Stadium>
+                    <TeamRecord>(6-1)</TeamRecord>
+                    <ScoreLine>3 - 6</ScoreLine>
+                    <Stadium>Bowsers Castle</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game26"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                    <TeamRecord>(2-5)</TeamRecord>
+                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
+                    <TeamRecord>(4-3)</TeamRecord>
                     <div />
-                    <TeamRecord>(5-2)</TeamRecord>
-                    <ScoreLine>1 - 13</ScoreLine>
-                    <Stadium>Yoshi Park</Stadium>
+                    <TeamRecord>(2-5)</TeamRecord>
+                    <ScoreLine>14 - 3</ScoreLine>
+                    <Stadium>Wario City</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game27"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
+                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                    <TeamRecord>(5-2)</TeamRecord>
+                    <div />
+                    <TeamRecord>(3-4)</TeamRecord>
+                    <ScoreLine>16 - 4</ScoreLine>
+                    <Stadium>Daisy Cruiser</Stadium>
+                </Matchup>
+                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game28"])} style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <TeamRecord>(1-6)</TeamRecord>
                     <div />
-                    <TeamRecord>(3-4)</TeamRecord>
-                    <ScoreLine>5 - 14</ScoreLine>
-                    <Stadium>Yoshi Park</Stadium>
-                </Matchup>
-                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game28"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
-                    <TeamRecord>(3-4)</TeamRecord>
-                    <div />
                     <TeamRecord>(4-3)</TeamRecord>
-                    <ScoreLine>9 - 8</ScoreLine>
-                    <Stadium>Daisy Cruiser</Stadium>
+                    <ScoreLine>9 - 6</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
                 </Matchup>
             </Week>
 
@@ -557,44 +557,44 @@ export default function Schedule3() {
 
             <Week>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game29"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <TeamRecord>(5-3)</TeamRecord>
                     <div />
                     <TeamRecord>(6-2)</TeamRecord>
-                    <ScoreLine>9 - 11</ScoreLine>
-                    <Stadium>DK Jungle</Stadium>
+                    <ScoreLine>14 - 11</ScoreLine>
+                    <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game30"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
-                    <TeamRecord>(5-3)</TeamRecord>
-                    <div />
-                    <TeamRecord>(3-5)</TeamRecord>
-                    <ScoreLine>4 - 10</ScoreLine>
-                    <Stadium>Bowsers Castle</Stadium>
-                </Matchup>
-                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game31"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <VsText>vs</VsText>
                     <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
                     <TeamRecord>(3-5)</TeamRecord>
                     <div />
                     <TeamRecord>(4-4)</TeamRecord>
-                    <ScoreLine>8 - 10</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
+                    <ScoreLine>7 - 8</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
                 </Matchup>
-                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game32"])} style={{ cursor: "pointer" }}>
+                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game31"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
+                    <TeamRecord>(6-2)</TeamRecord>
+                    <div />
+                    <TeamRecord>(2-6)</TeamRecord>
+                    <ScoreLine>16 - 14</ScoreLine>
+                    <Stadium>DK Jungle</Stadium>
+                </Matchup>
+                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game32"])} style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
                     <TeamRecord>(4-4)</TeamRecord>
                     <div />
                     <TeamRecord>(2-6)</TeamRecord>
-                    <ScoreLine>4 - 5</ScoreLine>
-                    <Stadium>Bowsers Castle</Stadium>
+                    <ScoreLine>13 - 14</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
                 </Matchup>
             </Week>
 
@@ -604,42 +604,42 @@ export default function Schedule3() {
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game33"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <TeamRecord>(2-7)</TeamRecord>
                     <div />
-                    <TeamRecord>(6-3)</TeamRecord>
-                    <ScoreLine>4 - 16</ScoreLine>
-                    <Stadium>Daisy Cruiser</Stadium>
+                    <TeamRecord>(7-2)</TeamRecord>
+                    <ScoreLine>6 - 7</ScoreLine>
+                    <Stadium>Luigis Mansion</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game34"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                    <TeamRecord>(7-2)</TeamRecord>
+                    <TeamRecord>(3-6)</TeamRecord>
                     <div />
-                    <TeamRecord>(4-5)</TeamRecord>
-                    <ScoreLine>8 - 5</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
+                    <TeamRecord>(3-6)</TeamRecord>
+                    <ScoreLine>12 - 6</ScoreLine>
+                    <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game35"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <TeamRecord>(6-3)</TeamRecord>
-                    <div />
-                    <TeamRecord>(3-6)</TeamRecord>
-                    <ScoreLine>8 - 4</ScoreLine>
-                    <Stadium>Bowsers Castle</Stadium>
-                </Matchup>
-                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game36"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
                     <TeamRecord>(5-4)</TeamRecord>
                     <div />
-                    <TeamRecord>(3-6)</TeamRecord>
-                    <ScoreLine>6 - 1</ScoreLine>
-                    <Stadium>Bowsers Castle</Stadium>
+                    <TeamRecord>(6-3)</TeamRecord>
+                    <ScoreLine>4 - 3</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
+                </Matchup>
+                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game36"])} style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                    <TeamRecord>(4-5)</TeamRecord>
+                    <div />
+                    <TeamRecord>(6-3)</TeamRecord>
+                    <ScoreLine>5 - 15</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
                 </Matchup>
             </Week>
 
@@ -647,47 +647,47 @@ export default function Schedule3() {
 
             <Week>
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game37"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <TeamRecord>(3-7)</TeamRecord>
+                    <TeamRecord>(8-2)</TeamRecord>
                     <div />
-                    <TeamRecord>(4-6)</TeamRecord>
-                    <ScoreLine>3 - 12</ScoreLine>
+                    <TeamRecord>(6-4)</TeamRecord>
+                    <ScoreLine>12 - 4</ScoreLine>
                     <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
 
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game38"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <VsText>vs</VsText>
                     <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
-                    <TeamRecord>(7-3)</TeamRecord>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
+                    <TeamRecord>(2-8)</TeamRecord>
                     <div />
-                    <TeamRecord>(3-7)</TeamRecord>
-                    <ScoreLine>3 - 7</ScoreLine>
-                    <Stadium>Bowser Jrs Playroom</Stadium>
+                    <TeamRecord>(7-3)</TeamRecord>
+                    <ScoreLine>10 - 14</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
                 </Matchup>
 
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game39"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
-                    <TeamRecord>(6-4)</TeamRecord>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                    <TeamRecord>(3-7)</TeamRecord>
                     <div />
-                    <TeamRecord>(7-3)</TeamRecord>
-                    <ScoreLine>1 - 17</ScoreLine>
-                    <Stadium>Daisy Cruiser</Stadium>
+                    <TeamRecord>(6-4)</TeamRecord>
+                    <ScoreLine>0 - 8</ScoreLine>
+                    <Stadium>DK Jungle</Stadium>
                 </Matchup>
 
                 <Matchup onClick={() => setSelectedGame(GamesSeason2["Game40"])} style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
+                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
                     <VsText>vs</VsText>
-                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                    <TeamRecord>(5-5)</TeamRecord>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <TeamRecord>(4-6)</TeamRecord>
                     <div />
-                    <TeamRecord>(5-5)</TeamRecord>
-                    <ScoreLine>8 - 9</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
+                    <TeamRecord>(4-6)</TeamRecord>
+                    <ScoreLine>8 - 10</ScoreLine>
+                    <Stadium>Bowsers Castle</Stadium>
                 </Matchup>
             </Week>
 
@@ -698,10 +698,10 @@ export default function Schedule3() {
                     <TeamName style={{color: "#FF0000"}}>All-Star West</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#4A86E8"}}>All-Star East</TeamName>
-                    <TeamRecord>(0-2)</TeamRecord>
+                    <TeamRecord>(1-2)</TeamRecord>
                     <div />
-                    <TeamRecord>(2-0)</TeamRecord>
-                    <ScoreLine>11 - 12</ScoreLine>
+                    <TeamRecord>(2-1)</TeamRecord>
+                    <ScoreLine>15 - 14</ScoreLine>
                     <Stadium>Yoshi Park</Stadium>
                 </Matchup>
             </CenteredMatchupWrapper>
@@ -710,115 +710,77 @@ export default function Schedule3() {
 
             <Week style={{display: "flex", flexDirection: "column", maxWidth: "600px"}}>
                 <Matchup style={{display: "flex", flexDirection: "column"}}>
-                    <MatchupLabel>The 11 Inning Slug Fest</MatchupLabel>
-                    <h5 style={{margin: "0"}}>Week 1</h5>
-                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
-                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
-                            <TeamName style={{color: "#6AA84F", marginRight: "10px"}}>Marge</TeamName>
-                        </div>
-                        <VsText>vs</VsText>
-                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
-                            <TeamName style={{color: "#9900FF", marginLeft: "10px"}}>Trocean</TeamName>
-                        </div>
-                    </div>
-                    <ScoreLine>6 - 5</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
-                    <p style={{color: "lightgray"}}>With 3 of the 4 managers in this game coaching for the very first time,
-                        this game would go into the 11th inning, before Peach would hit a walkoff single to give Marge the victory.
-                        This game would set the record for longest PMBL game.</p>
-                </Matchup>
-                <Matchup style={{display: "flex", flexDirection: "column"}}>
-                    <MatchupLabel>The Noki Game</MatchupLabel>
-                    <h5 style={{margin: "0"}}>Week 1</h5>
-                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
-                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
-                            <TeamName style={{color: "#999999", marginRight: "10px"}}>THANdrew</TeamName>
-                        </div>
-                        <VsText>vs</VsText>
-                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
-                            <TeamName style={{color: "#3586E8", marginLeft: "10px"}}>Isaac</TeamName>
-                        </div>
-                    </div>
-                    <ScoreLine>6 - 5</ScoreLine>
-                    <Stadium>Bowsers Castle</Stadium>
-                    <p style={{color: "lightgray"}}>In a controversial move to give one of the Nokis its first ever playing time,
-                        neither team expected Green Noki to be the hero of the game for THANdrew, hitting the go ahead RBI in the 9th
-                        and recording the save on the mound securing the final 2 outs.</p>
-                </Matchup>
-                <Matchup style={{display: "flex", flexDirection: "column"}}>
-                    <MatchupLabel>The Crime Time Game</MatchupLabel>
+                    <MatchupLabel>The 11-Run Comeback</MatchupLabel>
                     <h5 style={{margin: "0"}}>Week 4</h5>
                     <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
                         <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
-                            <TeamName style={{color: "#CC0000", marginRight: "10px"}}>Brendan</TeamName>
-                        </div>
-                        <VsText>vs</VsText>
-                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
-                            <TeamName style={{color: "#999999", marginLeft: "10px"}}>THANdrew</TeamName>
-                        </div>
-                    </div>
-                    <ScoreLine>8 - 6</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
-                    <p style={{color: "lightgray"}}>Boomerang Bro would be the first player to ever be hit by a pitch
-                        in this game, which sparked tons of item usage, including the game tying 2 run RBI by Diddler thanks
-                        to a boo. The Larry Cuc impersonator was also caught during this game, who looked a lot more
-                        like Geek Squad.</p>
-                </Matchup>
-                <Matchup style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
-                    <MatchupLabel>Bloopers Debut</MatchupLabel>
-                    <h5 style={{margin: "0"}}>Week 6</h5>
-                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
-                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
-                            <TeamName style={{color: "#CC0000", marginRight: "10px"}}>Brendan</TeamName>
-                        </div>
-                        <VsText>vs</VsText>
-                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
-                            <TeamName style={{color: "#6AA84F", marginLeft: "10px"}}>Marge</TeamName>
-                        </div>
-                    </div>
-                    <ScoreLine>7 - 6</ScoreLine>
-                    <Stadium>Yoshi Park</Stadium>
-                    <p style={{color: "lightgray"}}>Bloopers first ever PMBL game became a close one between two bottom
-                        feeders with Brendan blowing a 4-0 lead, and then almost giving up a 7-4 lead in the bottom of the
-                        7th. Marge would load the bases with their best batter up down 1 for Boomerang Bro to make an
-                        All-Star caliber play at short to seal the 7-6 victory.</p>
-                </Matchup>
-                <Matchup style={{display: "flex", flexDirection: "column"}}>
-                    <MatchupLabel>The Error Game</MatchupLabel>
-                    <h5 style={{margin: "0"}}>Week 8</h5>
-                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
-                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
-                            <TeamName style={{color: "#F1C232", marginRight: "10px"}}>James</TeamName>
-                        </div>
-                        <VsText>vs</VsText>
-                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
-                            <TeamName style={{color: "#3586E8", marginLeft: "10px"}}>Isaac</TeamName>
-                        </div>
-                    </div>
-                    <ScoreLine>9 - 11</ScoreLine>
-                    <Stadium>DK Jungle</Stadium>
-                    <p style={{color: "lightgray"}}>In one of the most bizarre games in PMBL history, Isaac failed to setup
-                        his outfield correctly and James blew a 7-0 lead and a 9-6 lead with one out remaining in the 7th.
-                        Blue Toad and Yellow Pianta, who have both never pitched before, would give up 9 of Isaacs 11 scored runs
-                        while only pitching .1 innings. </p>
-                </Matchup>
-                <Matchup style={{display: "flex", flexDirection: "column"}}>
-                    <MatchupLabel>The Playoff Clinching Shootout</MatchupLabel>
-                    <h5 style={{margin: "0"}}>Week 10</h5>
-                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
-                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
-                            <TeamName style={{color: "#999999", marginRight: "10px"}}>THANdrew</TeamName>
+                            <TeamName style={{color: "#9900FF", marginRight: "10px"}}>Trocean</TeamName>
                         </div>
                         <VsText>vs</VsText>
                         <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
                             <TeamName style={{color: "#FF00FF", marginLeft: "10px"}}>Morgan</TeamName>
                         </div>
                     </div>
-                    <ScoreLine>8 - 9</ScoreLine>
-                    <Stadium>Mario Stadium</Stadium>
-                    <p style={{color: "lightgray"}}>Win and in, lose and out. An incredible back and forth game to
-                        end the regular season, resulting in multiple lead changes and questionable fielding substitutions.
-                        King K's 5 RBI day would propel Morgan to the playoffs for the 2nd season in a row.</p>
+                    <ScoreLine>13 - 15</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
+                    <p style={{color: "lightgray"}}>Down 13-2 after the 4th inning, Morgan's offense exploded, scoring
+                    6 in the 5th, 4 in the 6th, and then a 3 run homer by team legend Dry Bones in the 7th to complete
+                    the comeback.</p>
+                </Matchup>
+                <Matchup style={{display: "flex", flexDirection: "column"}}>
+                    <MatchupLabel>The Funeral Game</MatchupLabel>
+                    <h5 style={{margin: "0"}}>Week 6</h5>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
+                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
+                            <TeamName style={{color: "#FF00FF", marginRight: "10px"}}>Morgan</TeamName>
+                        </div>
+                        <VsText>vs</VsText>
+                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
+                            <TeamName style={{color: "#9900FF", marginLeft: "10px"}}>Trocean</TeamName>
+                        </div>
+                    </div>
+                    <ScoreLine>8 - 11</ScoreLine>
+                    <Stadium>DK Jungle</Stadium>
+                    <p style={{color: "lightgray"}}>In the wake of Morgan's player Gramps passing away at age 103, Trocean
+                    stomped on Morgans team, going up 11-0. Morgan's team would fight back with a fury, but would not
+                    be able to complete the comeback this time.</p>
+                </Matchup>
+                <Matchup style={{display: "flex", flexDirection: "column"}}>
+                    <MatchupLabel>The Yoshi Park Home Run Derby II</MatchupLabel>
+                    <h5 style={{margin: "0"}}>Week 6</h5>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
+                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
+                            <TeamName style={{color: "#F1C232", marginRight: "10px"}}>James</TeamName>
+                        </div>
+                        <VsText>vs</VsText>
+                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
+                            <TeamName style={{color: "#6AA84F", marginLeft: "10px"}}>Marge</TeamName>
+                        </div>
+                    </div>
+                    <ScoreLine>33 - 15</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
+                    <p style={{color: "lightgray"}}>The last time these two teams played at Yoshi Park it ended 15-14 Marge
+                    in a classic. Despite being down 5-0 and 9-5 respectively during the game, James would score 24 consecutively
+                    and become the first team to pass 30, as Marge would also become the first team ever to score 15+ runs and
+                    still lose by double digits.</p>
+                </Matchup>
+                <Matchup style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                    <MatchupLabel>The King K Game</MatchupLabel>
+                    <h5 style={{margin: "0"}}>Week 8</h5>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: "20px"}}>
+                        <div style={{ display: "flex", justifyContent: "flex-end", flex: 1 }}>
+                            <TeamName style={{color: "#3586E8", marginRight: "10px"}}>Isaac</TeamName>
+                        </div>
+                        <VsText>vs</VsText>
+                        <div style={{ display: "flex", justifyContent: "flex-start", flex: 1 }}>
+                            <TeamName style={{color: "#6AA84F", marginLeft: "10px"}}>Marge</TeamName>
+                        </div>
+                    </div>
+                    <ScoreLine>13 - 14</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
+                    <p style={{color: "lightgray"}}>Down on the scoreboard multiple times, King K would carry Marge's
+                    team to victory, hitting 4 home runs and achieving 10 RBIs in this game, posting the most productive
+                    solo-game performance in PMBL history, and spoiling Isaac's PhD signing day.</p>
                 </Matchup>
             </Week>
 

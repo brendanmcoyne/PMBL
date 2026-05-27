@@ -119,6 +119,13 @@ export default function Players() {
             <Story $animate={ready}>
                 <GenImage src="/headlines/draft3.jpg" alt="Week8" />
                 <Overlay>
+                    <Headline>Complete Season 3 Recap</Headline>
+                    <StyledLink to="/headlines/season3/Season3Recap">Click to read more!</StyledLink>
+                </Overlay>
+            </Story>
+            <Story $animate={ready}>
+                <GenImage src="/headlines/draft3.jpg" alt="Week8" />
+                <Overlay>
                     <Headline>Season 3 Playoff Recap</Headline>
                     <StyledLink to="/headlines/season3/Preview">Click to read more!</StyledLink>
                 </Overlay>

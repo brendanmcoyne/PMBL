@@ -70,11 +70,9 @@ const Td = styled.td`
 `;
 
 export default function Game() {
-
-
     const game = {
-        away: { name: "THANdrew", color: "#999999", manager: "THANdrew", record: "1-1", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
-        home: { name: "Isaac", color: "#3586E8", manager: "Isaac", record: "1-1", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        away: { name: "Brendan", color: "#CC0000", manager: "Brendan", record: "2-3", scores: [0, 0, 2, 0, 0, 0, 0], R: 2, H: 7, E: 0, LOB: 5 },
+        home: { name: "Isaac", color: "#3586E8", manager: "Isaac", record: "3-2", scores: [3, 1, 0, 2, 0, 0, "X"], R: 6, H: 20, E: 3, LOB: 10 },
     };
 
     {/*
@@ -93,7 +91,7 @@ export default function Game() {
             <TeamsRow>
                 <TeamColumn>
                     <TeamLabel>Away Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-BirdoBows.webp" alt={`${game.away.name} logo`} />
+                    <Logo src="/emblems/MSS-Emblem-WaluigiSpitballs.webp" alt={`${game.away.name} logo`} />
                     <Manager style={{color: game.away.color}}>{game.away.manager}</Manager>
                     <Record>({game.away.record})</Record>
                 </TeamColumn>

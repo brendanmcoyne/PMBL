@@ -224,7 +224,7 @@ export default function Other2 () {
                         <StatSubText>
                             <NameSpan color="#FF9900">Justave</NameSpan> <VsText>vs</VsText> <NameSpan color="#F1C232">James</NameSpan>
                         </StatSubText>
-                        <StatSubText>21 - 4 • Week 10</StatSubText>
+                        <StatSubText>17 - 1 • Week 10</StatSubText>
                     </StatCard>
                 </StatRow>
 
@@ -257,7 +257,7 @@ export default function Other2 () {
                         <StatSubText>
                             <NameSpan color="#CC0000">Brendan</NameSpan> <VsText>vs</VsText> <NameSpan color="#3586E8">Isaac</NameSpan>
                         </StatSubText>
-                        <StatSubText>3 - 7 • Week 1</StatSubText>
+                        <StatSubText>3 - 7 • Week 3</StatSubText>
                     </StatCard>
                 </StatRow>
             </AwardsGrid>

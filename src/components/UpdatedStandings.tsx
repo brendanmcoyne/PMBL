@@ -186,11 +186,7 @@ export default function UpdatedStandings() {
                                     color: isSorted ? "gold" : "#fff",
                                 };
                                 return (
-                                    <th
-                                        key={header}
-                                        onClick={() => handleSort(header)}
-                                        style={headerStyle}
-                                    >
+                                    <th key={header} onClick={() => handleSort(header)} style={headerStyle}>
                                         {header}{" "}
                                         {isSorted
                                             ? sortConfig.direction === "asc"
@@ -206,17 +202,9 @@ export default function UpdatedStandings() {
                         {displayedData.map((row, idx) => (
                             <tr key={idx}>
                                 {Object.entries(row).map(([header, cell], i) => {
-                                    let display: string | number =
-                                        cell === "#DIV/0!" ? 0 : cell;
+                                    let display: string | number = cell === "#DIV/0!" ? 0 : cell;
 
-                                    const decimalStats = [
-                                        "avg",
-                                        "obp",
-                                        "slg",
-                                        "ops",
-                                        "era",
-                                        "whip",
-                                    ];
+                                    const decimalStats = ["avg", "obp", "slg", "ops", "era", "whip",];
 
                                     const lowerHeader = header.toLowerCase();
                                     const numValue = parseFloat(display as string);

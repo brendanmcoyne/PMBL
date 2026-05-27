@@ -31,6 +31,9 @@ export const rosters3: Roster3[] = [
             { name: "Justin Bieber" },
             { name: "Sherpa" },
         ],
+        accolades: [
+            {type: "World Series Runners Up", color: "silver"},
+        ]
     },
     {
         manager: "Justave",
@@ -66,6 +69,10 @@ export const rosters3: Roster3[] = [
             { name: "Dark Bones" },
             { name: "Paragoomba" },
         ],
+        accolades: [
+            {type: "Best Record Champions", color: "green"},
+            {type: "East Division Champions", color: "blue"},
+        ]
     },
     {
         manager: "Marge",
@@ -101,6 +108,9 @@ export const rosters3: Roster3[] = [
             { name: "Blue Noki" },
             { name: "Eugene" }
         ],
+        accolades: [
+            {type: "World Series Champion", color: "gold"},
+        ]
     },
     {
         manager: "Trocean",
@@ -150,6 +160,9 @@ export const rosters3: Roster3[] = [
             { name: "Alfonzo" },
             { name: "Koopa" },
             { name: "Red Pianta" },
+        ],
+        accolades: [
+            {type: "West Division Champions", color: "red"},
         ]
     }
 ]
