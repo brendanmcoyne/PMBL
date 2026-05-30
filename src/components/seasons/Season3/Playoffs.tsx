@@ -2,8 +2,8 @@ import { styled, keyframes, css } from "styled-components";
 import {Link} from "react-router-dom";
 import { useState, useLayoutEffect } from "react";
 import { ToggleButton, StyledHeader } from "../../CommonStyles.ts";
-import { GamesSeason2 } from "../../../data/GamesSeason2";
-import type { GameStats } from "../../../data/GamesSeason2";
+import { GamesSeason3 } from "../../../data/GamesSeason3";
+import type { GameStats } from "../../../data/GamesSeason3";
 
 const fadeInUp = keyframes`
   0% {
@@ -274,7 +274,7 @@ export default function Playoffs3() {
             <GamesRow3>
                 <div>
                     <StyledMiniHeader>Game 1</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason2["Game44"])} style={{ cursor: "pointer" }}>
+                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game45"])} style={{ cursor: "pointer" }}>
                         <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#F1C232"}}>James</TeamName>
@@ -288,7 +288,7 @@ export default function Playoffs3() {
 
                 <div>
                     <StyledMiniHeader>Game 2</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason2["Game45"])} style={{ cursor: "pointer" }}>
+                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game46"])} style={{ cursor: "pointer" }}>
                         <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#F1C232"}}>James</TeamName>
@@ -302,7 +302,7 @@ export default function Playoffs3() {
 
                 <div>
                     <StyledMiniHeader>Game 3</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason2["Game46"])} style={{ cursor: "pointer" }}>
+                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game47"])} style={{ cursor: "pointer" }}>
                         <TeamName style={{color: "#F1C232"}}>James</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
@@ -322,7 +322,7 @@ export default function Playoffs3() {
             <GamesRow3>
                 <div>
                     <StyledMiniHeader>Game 1</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason2["Game41"])} style={{ cursor: "pointer" }}>
+                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game41"])} style={{ cursor: "pointer" }}>
                         <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#999999"}}>THAN.</TeamName>
@@ -335,7 +335,7 @@ export default function Playoffs3() {
                 </div>
                 <div>
                     <StyledMiniHeader>Game 2</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason2["Game42"])} style={{ cursor: "pointer" }}>
+                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game42"])} style={{ cursor: "pointer" }}>
                         <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#999999"}}>THAN.</TeamName>
@@ -348,7 +348,7 @@ export default function Playoffs3() {
                 </div>
                 <div>
                     <StyledMiniHeader>Game 3</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason2["Game43"])} style={{ cursor: "pointer" }}>
+                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game43"])} style={{ cursor: "pointer" }}>
                         <TeamName style={{color: "#999999"}}>THAN.</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
@@ -362,7 +362,7 @@ export default function Playoffs3() {
             </GamesRow3>
             <div style={{marginBottom: "50px"}}>
                 <StyledMiniHeader>Game 4</StyledMiniHeader>
-                <Matchup onClick={() => setSelectedGame(GamesSeason2["Game51"])} style={{ cursor: "pointer" }}>
+                <Matchup onClick={() => setSelectedGame(GamesSeason3["Game44"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#999999"}}>THAN.</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
@@ -383,7 +383,7 @@ export default function Playoffs3() {
             <GamesRow3>
                 <div>
                     <StyledMiniHeader>Game 1</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason2["Game48"])} style={{ cursor: "pointer" }}>
+                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game48"])} style={{ cursor: "pointer" }}>
                         <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
@@ -396,7 +396,7 @@ export default function Playoffs3() {
                 </div>
                 <div>
                     <StyledMiniHeader>Game 2</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason2["Game48"])} style={{ cursor: "pointer" }}>
+                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game49"])} style={{ cursor: "pointer" }}>
                         <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
@@ -409,7 +409,7 @@ export default function Playoffs3() {
                 </div>
                 <div>
                     <StyledMiniHeader>Game 3</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason2["Game50"])} style={{ cursor: "pointer" }}>
+                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game50"])} style={{ cursor: "pointer" }}>
                         <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
@@ -424,7 +424,7 @@ export default function Playoffs3() {
             <GamesRow2>
                 <div style={{marginBottom: "50px"}}>
                     <StyledMiniHeader>Game 4</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason2["Game51"])} style={{ cursor: "pointer" }}>
+                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game51"])} style={{ cursor: "pointer" }}>
                         <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
@@ -437,7 +437,7 @@ export default function Playoffs3() {
                 </div>
                 <div style={{marginBottom: "50px"}}>
                     <StyledMiniHeader>Game 5</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason2["Game51"])} style={{ cursor: "pointer" }}>
+                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game52"])} style={{ cursor: "pointer" }}>
                         <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>

@@ -74,7 +74,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 4, H: 1, R: 1, RBI: 2, HR: 0, AVG: "0.250" },
             { player: "Yellow Pianta", team: "James", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
             { player: "Blue Toad", team: "James", AB: 4, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.250" },
-            { player: "Alfonso", team: "James", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
+            { player: "Alfonzo", team: "James", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
             { player: "Blue Pianta", team: "James", AB: 4, H: 3, R: 2, RBI: 2, HR: 2, AVG: "0.750" },
             { player: "Cascade", team: "James", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
 
@@ -366,7 +366,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
             { player: "Yellow Pianta", team: "James", AB: 4, H: 3, R: 1, RBI: 2, HR: 0, AVG: "0.750" },
             { player: "Blue Toad", team: "James", AB: 4, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.500" },
-            { player: "Alfonso", team: "James", AB: 4, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.500" },
+            { player: "Alfonzo", team: "James", AB: 4, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.500" },
             { player: "Blue Pianta", team: "James", AB: 4, H: 2, R: 2, RBI: 2, HR: 0, AVG: "0.500" },
             { player: "Cascade", team: "James", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
         ],
@@ -639,7 +639,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 6, H: 3, R: 3, RBI: 1, HR: 0, AVG: "0.500" },
             { player: "Yellow Pianta", team: "James", AB: 5, H: 3, R: 3, RBI: 1, HR: 0, AVG: "0.600" },
             { player: "Blue Toad", team: "James", AB: 5, H: 5, R: 3, RBI: 4, HR: 1, AVG: "1.000" },
-            { player: "Alfonso", team: "James", AB: 5, H: 5, R: 1, RBI: 6, HR: 1, AVG: "1.000" },
+            { player: "Alfonzo", team: "James", AB: 5, H: 5, R: 1, RBI: 6, HR: 1, AVG: "1.000" },
             { player: "Blue Pianta", team: "James", AB: 5, H: 3, R: 0, RBI: 0, HR: 0, AVG: "0.600" },
             { player: "Cascade", team: "James", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
 
@@ -811,7 +811,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 6, H: 5, R: 4, RBI: 5, HR: 1, AVG: "0.833" },
             { player: "Yellow Pianta", team: "James", AB: 5, H: 3, R: 2, RBI: 4, HR: 0, AVG: "0.600" },
             { player: "Blue Toad", team: "James", AB: 5, H: 4, R: 0, RBI: 2, HR: 0, AVG: "0.800" },
-            { player: "Alfonso", team: "James", AB: 5, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.200" },
+            { player: "Alfonzo", team: "James", AB: 5, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.200" },
             { player: "Blue Pianta", team: "James", AB: 5, H: 3, R: 1, RBI: 3, HR: 1, AVG: "0.600" },
             { player: "Cascade", team: "James", AB: 5, H: 3, R: 3, RBI: 0, HR: 0, AVG: "0.600" },
 
@@ -828,7 +828,7 @@ export const GamesSeason2: Record<string, GameStats> = {
 
         pitchingStats: [
             { player: "Birdo", team: "James", IP: 4.1, H: 10, ER: 2, SO: 2, ERA: "3.23" },
-            { player: "Alfonso", team: "James", IP: 2.2, H: 8, ER: 4, SO: 0, ERA: "10.50" },
+            { player: "Alfonzo", team: "James", IP: 2.2, H: 8, ER: 4, SO: 0, ERA: "10.50" },
 
             { player: "Mario", team: "Trocean", IP: 2, H: 9, ER: 5, SO: 0, ERA: "17.50" },
             { player: "Red Kamek", team: "Trocean", IP: 1.1, H: 5, ER: 4, SO: 0, ERA: "21.00" },
@@ -1339,7 +1339,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
             { player: "Yellow Pianta", team: "James", AB: 3, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.333" },
             { player: "Blue Toad", team: "James", AB: 3, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.333" },
-            { player: "Alfonso", team: "James", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
+            { player: "Alfonzo", team: "James", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
             { player: "Cascade", team: "James", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
             { player: "Blue Yoshi", team: "James", AB: 2, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
         ],
@@ -1348,7 +1348,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Bob Marley", team: "Justave", IP: 7, H: 8, ER: 2, SO: 0, ERA: "2.00" },
 
             { player: "Birdo", team: "James", IP: 4.2, H: 11, ER: 3, SO: 1, ERA: "4.50" },
-            { player: "Alfonso", team: "James", IP: 1.1, H: 5, ER: 3, SO: 0, ERA: "15.75" },
+            { player: "Alfonzo", team: "James", IP: 1.1, H: 5, ER: 3, SO: 0, ERA: "15.75" },
         ]
     },
     "Game24": {
@@ -1507,7 +1507,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 4, H: 2, R: 1, RBI: 1, HR: 1, AVG: "0.500" },
             { player: "Yellow Pianta", team: "James", AB: 4, H: 3, R: 3, RBI: 1, HR: 1, AVG: "0.750" },
             { player: "Blue Toad", team: "James", AB: 4, H: 3, R: 2, RBI: 0, HR: 0, AVG: "0.750" },
-            { player: "Alfonso", team: "James", AB: 4, H: 1, R: 0, RBI: 2, HR: 0, AVG: "0.250" },
+            { player: "Alfonzo", team: "James", AB: 4, H: 1, R: 0, RBI: 2, HR: 0, AVG: "0.250" },
             { player: "Blue Yoshi", team: "James", AB: 4, H: 4, R: 1, RBI: 2, HR: 0, AVG: "1.000" },
             { player: "Cascade", team: "James", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
         ],
@@ -1670,7 +1670,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 5, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.200" },
             { player: "Yellow Pianta", team: "James", AB: 4, H: 3, R: 2, RBI: 0, HR: 0, AVG: "0.750" },
             { player: "Blue Toad", team: "James", AB: 4, H: 4, R: 2, RBI: 0, HR: 0, AVG: "1.000" },
-            { player: "Alfonso", team: "James", AB: 3, H: 2, R: 2, RBI: 4, HR: 0, AVG: "0.250" },
+            { player: "Alfonzo", team: "James", AB: 3, H: 2, R: 2, RBI: 4, HR: 0, AVG: "0.250" },
             { player: "Blue Yoshi", team: "James", AB: 4, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.250" },
             { player: "Abu Patel", team: "James", AB: 4, H: 2, R: 2, RBI: 0, HR: 0, AVG: "0.500" },
 
@@ -2013,7 +2013,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 4, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.500" },
             { player: "Yellow Pianta", team: "James", AB: 3, H: 3, R: 1, RBI: 0, HR: 0, AVG: "1.000" },
             { player: "Blue Toad", team: "James", AB: 3, H: 2, R: 1, RBI: 2, HR: 0, AVG: "0.667" },
-            { player: "Alfonso", team: "James", AB: 3, H: 1, R: 0, RBI: 2, HR: 0, AVG: "0.333" },
+            { player: "Alfonzo", team: "James", AB: 3, H: 1, R: 0, RBI: 2, HR: 0, AVG: "0.333" },
             { player: "Blue Yoshi", team: "James", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
             { player: "Abu Patel", team: "James", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
 
@@ -2238,7 +2238,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
             { player: "Yellow Pianta", team: "James", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
             { player: "Blue Toad", team: "James", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Alfonso", team: "James", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "Alfonzo", team: "James", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
             { player: "Blue Yoshi", team: "James", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
             { player: "Abu Patel", team: "James", AB: 2, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
 
@@ -2414,7 +2414,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 6, H: 6, R: 4, RBI: 1, HR: 0, AVG: "1.000" },
             { player: "Yellow Pianta", team: "James", AB: 5, H: 4, R: 3, RBI: 2, HR: 0, AVG: "0.800" },
             { player: "Blue Toad", team: "James", AB: 6, H: 4, R: 2, RBI: 3, HR: 0, AVG: "0.667" },
-            { player: "Alfonso", team: "James", AB: 5, H: 3, R: 1, RBI: 5, HR: 0, AVG: "0.600" },
+            { player: "Alfonzo", team: "James", AB: 5, H: 3, R: 1, RBI: 5, HR: 0, AVG: "0.600" },
             { player: "Blue Yoshi", team: "James", AB: 5, H: 3, R: 1, RBI: 1, HR: 0, AVG: "0.600" },
             { player: "Cascade", team: "James", AB: 5, H: 4, R: 3, RBI: 1, HR: 0, AVG: "0.800" },
 
@@ -2433,7 +2433,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Petey Piranha", team: "James", IP: 3, H: 5, ER: 1, SO: 0, ERA: "2.33" },
             { player: "Birdo", team: "James", IP: 1.2, H: 6, ER: 7, SO: 0, ERA: "29.40" },
             { player: "Cascade", team: "James", IP: 1.1, H: 9, ER: 6, SO: 0, ERA: "31.50" },
-            { player: "Alfonso", team: "James", IP: 1, H: 1, ER: 2, SO: 0, ERA: "14.00" },
+            { player: "Alfonzo", team: "James", IP: 1, H: 1, ER: 2, SO: 0, ERA: "14.00" },
 
             { player: "J-Nasty", team: "Isaac", IP: 3, H: 13, ER: 8, SO: 0, ERA: "18.67" },
             { player: "Donkey Kong", team: "Isaac", IP: 0, H: 9, ER: 8, SO: 0, ERA: "999.99" },
@@ -2484,7 +2484,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 5, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.400" },
             { player: "Yellow Pianta", team: "James", AB: 4, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.500" },
             { player: "Blue Toad", team: "James", AB: 4, H: 3, R: 1, RBI: 0, HR: 0, AVG: "0.750" },
-            { player: "Alfonso", team: "James", AB: 4, H: 3, R: 1, RBI: 4, HR: 1, AVG: "0.750" },
+            { player: "Alfonzo", team: "James", AB: 4, H: 3, R: 1, RBI: 4, HR: 1, AVG: "0.750" },
             { player: "Blue Yoshi", team: "James", AB: 4, H: 1, R: 2, RBI: 0, HR: 0, AVG: "0.250" },
             { player: "Cascade", team: "James", AB: 4, H: 3, R: 2, RBI: 1, HR: 0, AVG: "0.750" }
         ],
@@ -2532,7 +2532,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 4, H: 4, R: 3, RBI: 1, HR: 0, AVG: "1.000" },
             { player: "Yellow Pianta", team: "James", AB: 4, H: 3, R: 3, RBI: 0, HR: 0, AVG: "0.750" },
             { player: "Blue Toad", team: "James", AB: 4, H: 4, R: 4, RBI: 8, HR: 2, AVG: "1.000" },
-            { player: "Alfonso", team: "James", AB: 4, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.250" },
+            { player: "Alfonzo", team: "James", AB: 4, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.250" },
             { player: "Blue Yoshi", team: "James", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
             { player: "Cascade", team: "James", AB: 3, H: 3, R: 2, RBI: 3, HR: 1, AVG: "1.000" },
 
@@ -2823,7 +2823,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 5, H: 3, R: 2, RBI: 1, HR: 0, AVG: "0.600" },
             { player: "Yellow Pianta", team: "James", AB: 5, H: 3, R: 3, RBI: 2, HR: 1, AVG: "0.600" },
             { player: "Blue Toad", team: "James", AB: 5, H: 3, R: 2, RBI: 1, HR: 0, AVG: "0.600" },
-            { player: "Alfonso", team: "James", AB: 4, H: 3, R: 3, RBI: 4, HR: 1, AVG: "0.750" },
+            { player: "Alfonzo", team: "James", AB: 4, H: 3, R: 3, RBI: 4, HR: 1, AVG: "0.750" },
             { player: "Blue Yoshi", team: "James", AB: 4, H: 1, R: 1, RBI: 2, HR: 0, AVG: "0.250" },
             { player: "Cascade", team: "James", AB: 4, H: 1, R: 1, RBI: 1, HR: 0, AVG: "0.250" }
         ],
@@ -2881,7 +2881,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 5, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.200" },
             { player: "Yellow Pianta", team: "James", AB: 5, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.400" },
             { player: "Blue Toad", team: "James", AB: 5, H: 3, R: 0, RBI: 0, HR: 0, AVG: "0.600" },
-            { player: "Alfonso", team: "James", AB: 5, H: 3, R: 1, RBI: 1, HR: 0, AVG: "0.600" },
+            { player: "Alfonzo", team: "James", AB: 5, H: 3, R: 1, RBI: 1, HR: 0, AVG: "0.600" },
             { player: "Blue Yoshi", team: "James", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
             { player: "Cascade", team: "James", AB: 3, H: 0, R: 1, RBI: 0, HR: 0, AVG: "0.000" }
         ],
@@ -2929,7 +2929,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 3, H: 0, R: 0, RBI: 1, HR: 0, AVG: "0.000" },
             { player: "Yellow Pianta", team: "James", AB: 4, H: 3, R: 0, RBI: 1, HR: 0, AVG: "0.750" },
             { player: "Blue Toad", team: "James", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Alfonso", team: "James", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
+            { player: "Alfonzo", team: "James", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
             { player: "Blue Yoshi", team: "James", AB: 3, H: 1, R: 1, RBI: 1, HR: 0, AVG: "0.333" },
             { player: "Cascade", team: "James", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
             
@@ -2987,7 +2987,7 @@ export const GamesSeason2: Record<string, GameStats> = {
             { player: "Zekrom", team: "James", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
             { player: "Yellow Pianta", team: "James", AB: 4, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
             { player: "Blue Toad", team: "James", AB: 4, H: 3, R: 0, RBI: 0, HR: 0, AVG: "0.750" },
-            { player: "Alfonso", team: "James", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
+            { player: "Alfonzo", team: "James", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
             { player: "Blue Yoshi", team: "James", AB: 3, H: 3, R: 3, RBI: 0, HR: 0, AVG: "1.000" },
             { player: "Cascade", team: "James", AB: 4, H: 2, R: 2, RBI: 0, HR: 0, AVG: "0.500" },
 
@@ -3004,7 +3004,7 @@ export const GamesSeason2: Record<string, GameStats> = {
 
         pitchingStats: [
             { player: "Birdo", team: "James", IP: 5, H: 13, ER: 7, SO: 0, ERA: "9.80" },
-            { player: "Alfonso", team: "James", IP: 2, H: 8, ER: 1, SO: 0, ERA: "3.50" },
+            { player: "Alfonzo", team: "James", IP: 2, H: 8, ER: 1, SO: 0, ERA: "3.50" },
 
             { player: "Bob Marley", team: "Justave", IP: 1.2, H: 6, ER: 3, SO: 0, ERA: "12.60" },
             { player: "Luigi", team: "Justave", IP: 5.1, H: 15, ER: 3, SO: 0, ERA: "3.94" }
