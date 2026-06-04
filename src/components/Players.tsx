@@ -291,6 +291,54 @@ const AwardsList = styled.ul`
     gap: 0.65rem;    
 `;
 
+const StatsScrollContainer = styled.div`
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+
+    &::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #4a90e2;
+        border-radius: 5px;
+    }
+`;
+
+const StatsBar = styled.div`
+    display: flex;
+    width: max-content;
+    background: #f0f4f8;
+    border-radius: 10px;
+    overflow: hidden;
+    border-left: 5px solid #4a90e2;
+`;
+
+const StatCell = styled.div`
+    width: 110px;
+    min-width: 110px;
+    max-width: 110px;
+
+    padding: 1rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+
+    border-right: 1px solid #d0d0d0;
+    box-sizing: border-box;
+
+    &:last-child {
+        border-right: none;
+    }
+`;
+
+const SeasonCell = styled(StatCell)`
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
+`;
+
 const AwardRow = styled.li<{ $kind: string }>`
     padding: 0.6rem 1.1rem;
     border-radius: 10px;
@@ -342,7 +390,7 @@ export default function Players() {
     const [sortOption, setSortOption] = useState("az");
     const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
     const [selectedStat, setSelectedStat] = useState<Stat | null>(null);
-    const [activeModalTab, setActiveModalTab] = useState<"info" | "awards">("info");
+    const [activeModalTab, setActiveModalTab] = useState<"info" | "awards" | "stats">("info");
 
     const colorOrder = [
         "Red", "Orange", "Yellow", "Light Green", "Green",
@@ -374,6 +422,193 @@ export default function Players() {
         }, 100);
         return () => clearTimeout(timer);
     }, []);
+
+    type CsvRow = Record<string, string>;
+    type StatLine = Record<string, string | number>;
+
+    function parseCsv(text: string): CsvRow[] {
+        const lines = text.trim().split("\n");
+
+        const headers = lines[0]
+            .split(/\t|,/)
+            .map((header, i) => i === 0 ? "name" : header.trim());
+
+        return lines.slice(1).map((line) => {
+            const values = line.split(/\t|,/);
+
+            return headers.reduce((obj, header, i) => {
+                obj[header] = values[i]?.trim() ?? "";
+                return obj;
+            }, {} as CsvRow);
+        });
+    }
+
+    const BATTINGS2 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?gid=0&single=true&output=csv";
+    const BATTINGS3 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5wCbbjTUbYIHGbkCscbS-p_3YgUAZ5SiyJmKj0l9FgWEjN6jisRwQzCpgkRoaMANdjLfr427LlzTt/pub?gid=0&single=true&output=csv";
+
+    const PITCHINGS2 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?gid=235178407&single=true&output=csv";
+    const PITCHINGS3 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5wCbbjTUbYIHGbkCscbS-p_3YgUAZ5SiyJmKj0l9FgWEjN6jisRwQzCpgkRoaMANdjLfr427LlzTt/pub?gid=61989451&single=true&output=csv";
+
+    const battingUrls = [
+        BATTINGS2,
+        BATTINGS3,
+    ];
+
+    const pitchingUrls = [
+        PITCHINGS2,
+        PITCHINGS3,
+    ];
+
+    const [battingSeasons, setBattingSeasons] = useState<CsvRow[][]>([]);
+    const [pitchingSeasons, setPitchingSeasons] = useState<CsvRow[][]>([]);
+
+    useEffect(() => {
+        async function loadStats() {
+            const battingData = await Promise.all(
+                battingUrls.map(async (url) =>
+                    parseCsv(await (await fetch(url)).text())
+                )
+            );
+
+            const pitchingData = await Promise.all(
+                pitchingUrls.map(async (url) =>
+                    parseCsv(await (await fetch(url)).text())
+                )
+            );
+
+            setBattingSeasons(battingData);
+            setPitchingSeasons(pitchingData);
+        }
+
+        loadStats();
+    }, []);
+
+    const playerBattingStats = selectedPlayer
+        ? battingSeasons.map(
+            season => season.find(row => row.name === selectedPlayer.name) ?? null
+        )
+        : [];
+
+    const playerPitchingStats = selectedPlayer
+        ? pitchingSeasons.map(
+            season => season.find(row => row.name === selectedPlayer.name) ?? null
+        )
+        : [];
+
+    const activeBattingSeasons = playerBattingStats
+        .map((stats, index) => ({
+            season: index + 2,
+            stats,
+        }))
+        .filter(({ stats }) => Number(stats?.G || 0) > 0);
+
+    const activePitchingSeasons = playerPitchingStats
+        .map((stats, index) => ({
+            season: index + 2,
+            stats,
+        }))
+        .filter(({ stats }) => Number(stats?.G || 0) > 0);
+
+    function num(row: CsvRow | null, stat: string) {
+        return Number(row?.[stat] || 0);
+    }
+
+    function sumStats(rows: (CsvRow | null)[], stat: string) {
+        return rows.reduce((total, row) => total + num(row, stat), 0);
+    }
+
+    function formatDecimal(value: number) {
+        return value.toFixed(3);
+    }
+
+    function totalBattingLine(rows: (CsvRow | null)[]): StatLine {
+        const g = sumStats(rows, "G");
+        const ab = sumStats(rows, "AB");
+        const r = sumStats(rows, "R");
+        const h = sumStats(rows, "H");
+        const doubles = sumStats(rows, "2B");
+        const triples = sumStats(rows, "3B");
+        const hr = sumStats(rows, "HR");
+        const rbi = sumStats(rows, "RBI");
+        const bb = sumStats(rows, "BB");
+        const so = sumStats(rows, "SO");
+        const sb = sumStats(rows, "SB");
+        const cs = sumStats(rows, "CS");
+
+        const singles = h - doubles - triples - hr;
+        const totalBases = singles + doubles * 2 + triples * 3 + hr * 4;
+
+        const avg = ab > 0 ? h / ab : 0;
+        const obp = ab + bb > 0 ? (h + bb) / (ab + bb) : 0;
+        const slg = ab > 0 ? totalBases / ab : 0;
+        const ops = obp + slg;
+
+        return {
+            G: g,
+            AB: ab,
+            R: r,
+            H: h,
+            "2B": doubles,
+            "3B": triples,
+            HR: hr,
+            RBI: rbi,
+            BB: bb,
+            SO: so,
+            SB: sb,
+            CS: cs,
+            AVG: formatDecimal(avg),
+            OBP: formatDecimal(obp),
+            SLG: formatDecimal(slg),
+            OPS: formatDecimal(ops),
+        };
+    }
+
+    function totalPitchingLine(rows: (CsvRow | null)[]): StatLine {
+        const ip = sumStats(rows, "IP");
+        const er = sumStats(rows, "ER");
+        const h = sumStats(rows, "H");
+        const bb = sumStats(rows, "BB");
+
+        const era = ip > 0 ? (er * 7) / ip : 0;
+        const whip = ip > 0 ? (bb + h) / ip : 0;
+
+        return {
+            W: sumStats(rows, "W"),
+            L: sumStats(rows, "L"),
+            ERA: formatDecimal(era),
+            G: sumStats(rows, "G"),
+            GS: sumStats(rows, "GS"),
+            CG: sumStats(rows, "CG"),
+            SHO: sumStats(rows, "SHO"),
+            SV: sumStats(rows, "SV"),
+            SVO: sumStats(rows, "SVO"),
+            IP: ip,
+            H: h,
+            R: sumStats(rows, "R"),
+            ER: er,
+            HR: sumStats(rows, "HR"),
+            HB: sumStats(rows, "HB"),
+            BB: bb,
+            K: sumStats(rows, "K"),
+            "ꓘ": sumStats(rows, "ꓘ"),
+            WHIP: formatDecimal(whip),
+        };
+    }
+
+    function formatIP(ip: number) {
+        const whole = Math.floor(ip);
+        const fraction = ip - whole;
+
+        if (fraction < 0.17) {
+            return `${whole}.0`;
+        }
+
+        if (fraction < 0.5) {
+            return `${whole}.1`;
+        }
+
+        return `${whole}.2`;
+    }
 
     if (!ready) return null;
 
@@ -415,11 +650,11 @@ export default function Players() {
                             <div style={{ marginBottom: "1rem", marginTop: "1rem" }}>
                                 <ToggleButton active={activeModalTab === "info"} onClick={() => setActiveModalTab("info")}>Info</ToggleButton>
                                 <ToggleButton active={activeModalTab === "awards"} onClick={() => setActiveModalTab("awards")}>Awards</ToggleButton>
+                                <ToggleButton active={activeModalTab === "stats"} onClick={() => setActiveModalTab("stats")}>Stats</ToggleButton>
                             </div>
-                            <StyledMiniHeader style={{ fontSize: "33px", margin: "5px", color: "black" }}>
-                                {selectedPlayer.name}
-                            </StyledMiniHeader>
+                            <StyledMiniHeader style={{ fontSize: "33px", margin: "5px", color: "black" }}>{selectedPlayer.name}</StyledMiniHeader>
                             {selectedPlayer.captain ? <img style={{marginBottom: "10px", padding: "0"}} src={selectedPlayer.banner} alt="banner"/> : ""}
+
                             {activeModalTab === "info" && (
                                 <ModalTopLayout>
                                     <ModalLeft>
@@ -461,6 +696,7 @@ export default function Players() {
                                     </ModalRight>
                                 </ModalTopLayout>
                             )}
+
                             {activeModalTab === "awards" && (
                                 <>
                                     {Array.isArray(selectedPlayer.awards) && selectedPlayer.awards.length > 0 ? (
@@ -479,6 +715,108 @@ export default function Players() {
                                             </AwardsList>
                                         </>
                                     ) : (<p style={{ fontStyle: "italic", color: "black"}}>No awards yet.</p>)}
+                                </>
+                            )}
+
+                            {activeModalTab === "stats" && (
+                                <>
+                                    <StyledMiniHeader style={{ color: "black" }}>Stats</StyledMiniHeader>
+
+                                    <StyledMiniHeader style={{ color: "black" }}>Batting</StyledMiniHeader>
+
+                                    {activeBattingSeasons.length > 0 ? (
+                                    <StatsScrollContainer>
+                                        <StatsBar style={{ flexDirection: "column" }}>
+                                            {[
+                                                ...activeBattingSeasons,
+                                                {
+                                                    season: "All Time",
+                                                    stats: totalBattingLine(
+                                                        activeBattingSeasons.map(({ stats }) => stats)
+                                                    ),
+                                                },
+                                            ].map(({ season, stats: rowStats }) => (
+                                                <div
+                                                    key={season}
+                                                    style={{
+                                                        display: "flex",
+                                                        borderTop:
+                                                            season === "All Time"
+                                                                ? "3px solid #4a90e2"
+                                                                : "none",
+                                                    }}
+                                                >
+                                                    <SeasonCell>
+                                                        {typeof season === "number" ? `Season ${season}` : season}
+                                                    </SeasonCell>
+
+                                                    {["G", "AB", "R", "H", "2B", "3B", "HR", "RBI", "BB", "SO", "SB", "CS", "AVG", "OBP", "SLG", "OPS"].map((stat) => (
+                                                        <StatCell key={stat}>
+                                                            <div>{stat}</div>
+                                                            <div>
+                                                                {["AVG", "OBP", "SLG", "OPS"].includes(stat)
+                                                                    ? Number((rowStats as StatLine)?.[stat] ?? 0).toFixed(3)
+                                                                    : String((rowStats as StatLine)?.[stat] ?? "-")}
+                                                            </div>
+                                                        </StatCell>
+                                                    ))}
+                                                </div>
+                                            ))}
+                                        </StatsBar>
+                                    </StatsScrollContainer>
+                                    ) : (
+                                        <p style={{ fontStyle: "italic", color: "black" }}>No batting stats available.</p>
+                                    )}
+
+                                    <StyledMiniHeader style={{ color: "black" }}>Pitching</StyledMiniHeader>
+
+                                    {activePitchingSeasons.length > 0 ? (
+                                    <StatsScrollContainer>
+                                        <StatsBar style={{ flexDirection: "column" }}>
+                                            {[
+                                                ...activePitchingSeasons,
+                                                {
+                                                    season: "All Time",
+                                                    stats: totalPitchingLine(
+                                                        activePitchingSeasons.map(({ stats }) => stats)
+                                                    ),
+                                                },
+                                            ].map(({ season, stats: rowStats }) => (
+                                                <div
+                                                    key={season}
+                                                    style={{
+                                                        display: "flex",
+                                                        borderTop:
+                                                            season === "All Time"
+                                                                ? "3px solid #4a90e2"
+                                                                : "none",
+                                                    }}
+                                                >
+                                                    <SeasonCell>
+                                                        {typeof season === "number" ? `Season ${season}` : season}
+                                                    </SeasonCell>
+
+                                                    {["W", "L", "ERA", "G", "GS", "CG", "SHO", "SV", "SVO", "IP", "H", "R", "ER", "HR", "HB", "BB", "K", "ꓘ", "WHIP"].map((stat) => (
+                                                        <StatCell key={stat}>
+                                                            <div>{stat}</div>
+                                                            <div>
+                                                                {stat === "IP"
+                                                                    ? formatIP(Number((rowStats as StatLine)?.[stat] ?? 0))
+                                                                    : stat === "ERA"
+                                                                        ? Number((rowStats as StatLine)?.[stat] ?? 0).toFixed(2)
+                                                                        : stat === "WHIP"
+                                                                            ? Number((rowStats as StatLine)?.[stat] ?? 0).toFixed(3)
+                                                                            : String((rowStats as StatLine)?.[stat] ?? "-")}
+                                                            </div>
+                                                        </StatCell>
+                                                    ))}
+                                                </div>
+                                            ))}
+                                        </StatsBar>
+                                    </StatsScrollContainer>
+                                    ) : (
+                                        <p style={{ fontStyle: "italic", color: "black" }}>No pitching stats available.</p>
+                                    )}
                                 </>
                             )}
                         </ModalScrollWrapper>

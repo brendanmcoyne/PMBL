@@ -9,7 +9,6 @@ import type { Roster3 } from "../data/Season3Rosters.ts";
 import { StyledHeader } from "../components/CommonStyles.ts";
 import {styled, css, keyframes} from 'styled-components';
 import { useEffect, useState } from 'react';
-import { Rivalry, RivalryTitle, RivalryDesc, RivalryRecord, RivalryRecords, VersusRow } from "../components/StyledRivalry.ts";
 
 interface ToggleButtonProps {
     active: boolean;
@@ -301,6 +300,79 @@ const Image = styled.img`
     }
 `;
 
+const RecordDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 105%;
+    min-width: 320px;
+    max-width: 1200px;
+
+    @media screen and (max-width: 900px) {
+        width: 90%;
+    }
+`;
+
+const GridRow = styled.div`
+    display: grid;
+    grid-template-columns: minmax(100px, 1.5fr) repeat(8, 1fr);
+    gap: 10px;
+    padding: 0.75rem 1rem;
+    align-items: center;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid white;
+    background-color: #12121c;
+    border-radius: 10px;
+    @media screen and (max-width: 600px) {
+        grid-template-columns: minmax(80px, 2fr) repeat(6, 1fr);
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+`;
+
+const HeaderRow = styled(GridRow)`
+    font-weight: bold;
+    background-color: #12121c;
+    border-bottom: 1px solid white;
+`;
+
+const RivalryCell = styled.div`
+    position: relative;
+    margin: 0;
+    cursor: help;
+    
+    &:hover span {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -8px);
+    }
+    
+    &:hover {
+        font-weight: bold;
+    }
+`;
+
+const Tooltip = styled.span`
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    bottom: 120%;
+    background: #222;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    opacity: 0;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 140px;
+    text-align: center;
+`;
+
 export default function Managers() {
     const [selectedManager, setSelectedManager] = useState<Manager | null>(null);
     const [activeModalTab, setActiveModalTab] = useState<"info" | "roster">("info");
@@ -335,6 +407,24 @@ export default function Managers() {
         }, []);
 
     if (!ready) return null;
+
+    const RecordCell = ({total, regular, playoffs,}: {
+        total: string;
+        regular?: string;
+        playoffs?: string;
+    }) => {
+        if (!regular && !playoffs) return <div>{total}</div>;
+
+        return (
+            <RivalryCell>
+                {total}
+                <Tooltip>
+                    <div>Regular Season: {regular}</div>
+                    <div>Playoffs: {playoffs}</div>
+                </Tooltip>
+            </RivalryCell>
+        );
+    };
 
     return (
         <ContentDiv>
@@ -401,77 +491,162 @@ export default function Managers() {
                 </DivisionSection>
             </DivisionContainer>
 
-            <StyledHeader $animate={ready} style={{margin: "0"}}>Rivalries</StyledHeader>
-            <Rivalry>
-                <RivalryTitle>The Battle of 726</RivalryTitle>
-                <VersusRow>
-                    <span style={{ color: "#CC0000", textAlign: "right", paddingRight: "1rem" }}>Brendan</span>
-                    <span>vs</span>
-                    <span style={{ color: "#3586E8", textAlign: "left", paddingLeft: "1rem" }}>Isaac</span>
-                </VersusRow>
-                <RivalryDesc>
-                    These two managers were the creators of the PMBL, and live under the same roof.
-                    Their passion for Mario Baseball has sparked the interest in the rest of the managers,
-                    creating the league everyone knows and loves.
-                </RivalryDesc>
-                <RivalryRecord>Isaac leads 5-3</RivalryRecord>
-            </Rivalry>
-            <Rivalry>
-                <RivalryTitle>The Battle of Stuvi 901</RivalryTitle>
-                <VersusRow>
-                    <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem" }}>Justave</span>
-                    <span>vs</span>
-                    <span style={{ color: "#FF00FF", textAlign: "left", paddingLeft: "1rem" }}>Morgan</span>
-                </VersusRow>
-                <RivalryDesc>
-                    What became a very intense rivalry once manager Dave joined the team in Season 2, these 3
-                    fierce competitors endured a great 4 game Conference Series matchup, with Justave moving onto
-                    the World Series
-                </RivalryDesc>
-                <RivalryRecord>Justave leads 5-2</RivalryRecord>
-            </Rivalry>
-            <Rivalry>
-                <RivalryTitle>The 48 Buswell Battle</RivalryTitle>
-                <VersusRow>
-                    <span style={{ color: "#F1C232", textAlign: "right", paddingRight: "1rem"}}>James</span>
-                    <span>vs</span>
-                    <span style={{ color: "#FF00FF", textAlign: "left", paddingLeft: "1rem"}}>Morgan</span>
-                </VersusRow>
-                <RivalryDesc>
-                    A rivlary so fierce that they didn't even travel to games together despite sleeping
-                    above/below one another. Both teams were dipped in controversy throughout Season 1, and met in the playoffs,
-                    with James winning the series 3-1. </RivalryDesc>
-                <RivalryRecord>James leads 6-1</RivalryRecord>
-            </Rivalry>
-            <Rivalry>
-                <RivalryTitle> The Computer Engineering Clash</RivalryTitle>
-                <VersusRow>
-                    <span style={{ color: "#FF9900", textAlign: "right", paddingRight: "1rem"}}>Justin</span>
-                    <span>vs</span>
-                    <span style={{color: "#6AA84F", textAlign: "left", paddingLeft: "1rem"}}>Matt</span>
-                </VersusRow>
-                <RivalryDesc>
-                    Two division rivals of the same major. Both fan favorite teams played in the Week 7
-                    Shy Guy Tribute Game, where Matt took an early 5-0 lead in the 1st, to lose 11-14 with a 3 run walk-off homer
-                    in the first ever 10 inning game. They would play again a few weeks later, with Justin winning again.</RivalryDesc>
-                <RivalryRecord>Justin leads 4-2</RivalryRecord>
-            </Rivalry>
-            <Rivalry style={{alignItems: "center"}}>
-                <RivalryTitle>Middlesex Matchups</RivalryTitle>
-                <StyledMiniHeader style={{fontSize: "1.9rem"}}>
-                    <span style={{ color: "#F1C232"}}>James</span>,
-                    <span style={{ color: "#CC0000"}}>{' '}Brendan</span>,
-                    <span style={{ color: "#FF00FF"}}>{' '}Morgan</span>
-                </StyledMiniHeader>
-                <RivalryDesc>The members of Middlesex County, MA, have had their fair share of exciting matchups
-                    throughout the leagues history. In the Season 1 playoffs, there were two Middlesex matchups, one in the Conference Series,
-                    and one in the World Series, culminating in James winning both, and the first ever PMBL World Series Title. </RivalryDesc>
-                <RivalryRecords>
-                    <RivalryRecord>James leads Morgan 6-1</RivalryRecord>
-                    <RivalryRecord>James leads Brendan 7-5</RivalryRecord>
-                    <RivalryRecord>Brendan leads Morgan 2-1</RivalryRecord>
-                </RivalryRecords>
-            </Rivalry>
+            <StyledHeader $animate={ready}>Records</StyledHeader>
+
+            <RecordDiv>
+                <HeaderRow>
+                    <div> </div>
+                    <div style={{color: "#CC0000"}}>Brendan</div>
+                    <div style={{color: "#FF9900"}}>Justave</div>
+                    <div style={{color: "#F1C232"}}>James</div>
+                    <div style={{color: "#6AA84F"}}>Marge</div>
+                    <div style={{color: "#3586E8"}}>Isaac</div>
+                    <div style={{color: "#9900FF"}}>Trocean</div>
+                    <div style={{color: "#FF00FF"}}>Morgan</div>
+                    <div style={{color: "#999999"}}>THANdrew</div>
+                </HeaderRow>
+                <GridRow>
+                    <RivalryCell>
+                        <div style={{ fontWeight: "bold", color: "#CC0000" }}>Brendan</div>
+                        <Tooltip>
+                            <div>All-Time: 25-19</div>
+                            <div>Regular Season: 17-13</div>
+                            <div>Playoffs: 8-6</div>
+                        </Tooltip>
+                    </RivalryCell>
+                    <div>X</div>
+                    <RecordCell total="6-3" regular="3-3" playoffs="3-0" />
+                    <RecordCell total="5-7" regular="2-4" playoffs="3-3" />
+                    <div>5-1</div>
+                    <RecordCell total="3-5" regular="1-2" playoffs="2-3" />
+                    <div>2-1</div>
+                    <div>2-1</div>
+                    <div>2-1</div>
+                </GridRow>
+                <GridRow>
+
+                    <RivalryCell>
+                        <div style={{ fontWeight: "bold", color: "#FF9900" }}>Justave</div>
+                        <Tooltip>
+                            <div>All-Time: 23-18</div>
+                            <div>Regular Season: 17-13</div>
+                            <div>Playoffs: 6-5</div>
+                        </Tooltip>
+                    </RivalryCell>
+                    <RecordCell total="3-6" regular="3-3" playoffs="0-3" />
+                    <div>X</div>
+                    <RecordCell total="5-5" regular="2-4" playoffs="3-1" />
+                    <div>4-2</div>
+                    <div>2-1</div>
+                    <div>3-0</div>
+                    <RecordCell total="5-2" regular="2-1" playoffs="3-1" />
+                    <div>1-2</div>
+                </GridRow>
+                <GridRow>
+                    <RivalryCell>
+                        <div style={{ fontWeight: "bold", color: "#F1C232" }}>James</div>
+                        <Tooltip>
+                            <div>All-Time: 30-23</div>
+                            <div>Regular Season: 20-10</div>
+                            <div>Playoffs: 10-5</div>
+                        </Tooltip>
+                    </RivalryCell>
+                    <RecordCell total="7-5" regular="4-2" playoffs="3-3" />
+                    <RecordCell total="5-5" regular="4-2" playoffs="1-1" />
+                    <div>X</div>
+                    <div>4-2</div>
+                    <RecordCell total="5-1" regular="2-1" playoffs="3-0" />
+                    <div>2-1</div>
+                    <RecordCell total="6-1" regular="3-0" playoffs="3-1" />
+                    <div>1-2</div>
+                </GridRow>
+                <GridRow>
+                    <RivalryCell>
+                        <div style={{ fontWeight: "bold", color: "#6AA84F" }}>Marge</div>
+                        <Tooltip>
+                            <div>All-Time: 11-19</div>
+                        </Tooltip>
+                    </RivalryCell>
+                    <div>1-5</div>
+                    <div>2-4</div>
+                    <div>2-4</div>
+                    <div>X</div>
+                    <div>1-2</div>
+                    <div>2-1</div>
+                    <div>3-0</div>
+                    <div>0-3</div>
+                </GridRow>
+                <GridRow>
+                    <RivalryCell>
+                        <div style={{ fontWeight: "bold", color: "#3586E8" }}>Isaac</div>
+                        <Tooltip>
+                            <div>All-Time: 23-19</div>
+                            <div>Regular Season: 17-13</div>
+                            <div>Playoffs: 6-6</div>
+                        </Tooltip>
+                    </RivalryCell>
+                    <RecordCell total="5-3" regular="2-1" playoffs="3-2" />
+                    <div>1-2</div>
+                    <RecordCell total="1-5" regular="1-2" playoffs="0-3" />
+                    <div>2-1</div>
+                    <div>X</div>
+                    <div>5-1</div>
+                    <div>3-3</div>
+                    <RecordCell total="6-4" regular="3-3" playoffs="3-1" />
+                </GridRow>
+                <GridRow>
+                    <RivalryCell>
+                        <div style={{ fontWeight: "bold", color: "#9900FF" }}>Trocean</div>
+                        <Tooltip>
+                            <div>All-Time: 8-22</div>
+                        </Tooltip>
+                    </RivalryCell>
+                    <div>1-2</div>
+                    <div>0-3</div>
+                    <div>1-2</div>
+                    <div>1-2</div>
+                    <div>1-5</div>
+                    <div>X</div>
+                    <div>3-3</div>
+                    <div>1-5</div>
+                </GridRow>
+                <GridRow>
+                    <RivalryCell>
+                        <div style={{ fontWeight: "bold", color: "#FF00FF" }}>Morgan</div>
+                        <Tooltip>
+                            <div>All-Time: 19-23</div>
+                            <div>Regular Season: 13-17</div>
+                            <div>Playoffs: 2-6</div>
+                        </Tooltip>
+                    </RivalryCell>
+                    <div>1-2</div>
+                    <RecordCell total="2-5" regular="1-2" playoffs="1-3" />
+                    <RecordCell total="1-6" regular="0-3" playoffs="1-3" />
+                    <div>0-3</div>
+                    <div>3-3</div>
+                    <div>3-3</div>
+                    <div>X</div>
+                    <div>5-1</div>
+                </GridRow>
+                <GridRow>
+                    <RivalryCell>
+                        <div style={{ fontWeight: "bold", color: "#999999" }}>THANdrew</div>
+                        <Tooltip>
+                            <div>All-Time: 18-16</div>
+                            <div>Regular Season: 17-13</div>
+                            <div>Playoffs: 1-3</div>
+                        </Tooltip>
+                    </RivalryCell>
+                    <div>1-2</div>
+                    <div>2-1</div>
+                    <div>2-1</div>
+                    <div>3-0</div>
+                    <RecordCell total="4-6" regular="3-3" playoffs="1-3" />
+                    <div>5-1</div>
+                    <div>1-5</div>
+                    <div>X</div>
+                </GridRow>
+            </RecordDiv>
 
             {selectedManager && (
                 <ModalBackground onClick={() => setSelectedManager(null)}>
