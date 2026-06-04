@@ -561,6 +561,13 @@ export const stats: Stat[] = [
         running: 5,
     },
     {
+        name: "Milk",
+        batting: 5,
+        pitching: 5,
+        fielding: 5,
+        running: 5,
+    },
+    {
         name: "Miss Jones",
         batting: 5,
         pitching: 5,

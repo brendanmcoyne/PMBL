@@ -938,6 +938,14 @@ export const players: Player[] = [
         mii: true,
     },
     {
+        name: "Milk",
+        src: "/players/Milk.jpg",
+        color: "White",
+        gp: 2,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Miss Jones",
         src: "/players/Miss Jones.jpg",
         color: "Green",
