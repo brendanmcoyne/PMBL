@@ -85,6 +85,13 @@ export const stats: Stat[] = [
         running: 5,
     },
     {
+        name: "Big D",
+        batting: 5,
+        pitching: 5,
+        fielding: 5,
+        running: 5,
+    },
+    {
         name: "Birdo",
         batting: 8,
         pitching: 4,
@@ -211,6 +218,13 @@ export const stats: Stat[] = [
         running: 4,
     },
     {
+        name: "Bugs Bunny",
+        batting: 5,
+        pitching: 5,
+        fielding: 5,
+        running: 5,
+    },
+    {
         name: "Candy",
         batting: 5,
         pitching: 5,
@@ -219,6 +233,13 @@ export const stats: Stat[] = [
     },
     {
         name: "Cascade",
+        batting: 5,
+        pitching: 5,
+        fielding: 5,
+        running: 5,
+    },
+    {
+        name: "Charlemagne",
         batting: 5,
         pitching: 5,
         fielding: 5,
@@ -435,6 +456,13 @@ export const stats: Stat[] = [
         running: 3,
     },
     {
+        name: "Hima",
+        batting: 5,
+        pitching: 5,
+        fielding: 5,
+        running: 5,
+    },
+    {
         name: "Jack White",
         batting: 5,
         pitching: 5,
@@ -523,6 +551,13 @@ export const stats: Stat[] = [
         batting: 5,
         pitching: 5,
         fielding: 5,
+        running: 5,
+    },
+    {
+        name: "Light Blue Shy Guy",
+        batting: 3,
+        pitching: 4,
+        fielding:9,
         running: 5,
     },
     {
@@ -650,6 +685,13 @@ export const stats: Stat[] = [
         pitching: 5,
         fielding: 2,
         running: 7,
+    },
+    {
+        name: "Purple Yoshi",
+        batting: 3,
+        pitching: 2,
+        fielding: 7,
+        running: 8,
     },
     {
         name: "Red Koopa",
@@ -786,6 +828,13 @@ export const stats: Stat[] = [
     },
     {
         name: "Tonka",
+        batting: 5,
+        pitching: 5,
+        fielding: 5,
+        running: 5,
+    },
+    {
+        name: "Tony Soprano",
         batting: 5,
         pitching: 5,
         fielding: 5,

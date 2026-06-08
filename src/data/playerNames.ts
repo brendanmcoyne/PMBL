@@ -1342,7 +1342,7 @@ export const players: Player[] = [
     },
     {
         name: "Tony Soprano",
-        src: "/players/Tony Sorpano.jpg",
+        src: "/players/Tony Soprano.jpg",
         color: "Black",
         gp: 0,
         captain: false,
