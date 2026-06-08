@@ -100,6 +100,9 @@ export const players: Player[] = [
         gp: 18,
         captain: false,
         mii: true,
+        awards: [
+            { name: "World Series Champion", season: 3},
+        ]
     },
     {
         name: "Bertha",
@@ -118,6 +121,14 @@ export const players: Player[] = [
         src: "/players/Betty White.jpg",
         color: "Light Blue",
         gp: 8,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Big D",
+        src: "/players/Big D.jpg",
+        color: "Purple",
+        gp: 0,
         captain: false,
         mii: true,
     },
@@ -370,6 +381,14 @@ export const players: Player[] = [
         ]
     },
     {
+        name: "Bugs Bunny",
+        src: "/players/Bugs Bunny.jpg",
+        color: "White",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Candy",
         src: "/players/Candy.jpg",
         color: "Light Green",
@@ -385,9 +404,18 @@ export const players: Player[] = [
         captain: false,
         mii: true,
         awards: [
+            { name: "World Series Champion", season: 3},
             { name: "1x Semifinals Game MVP", season: 2},
             { name: "Most Hated Player", season: 2},
         ]
+    },
+    {
+        name: "Charlemagne",
+        src: "/players/Charlemagne.jpg",
+        color: "Pink",
+        gp: 0,
+        captain: false,
+        mii: true,
     },
     {
         name: "Chungy",
@@ -525,6 +553,9 @@ export const players: Player[] = [
         gp: 1,
         captain: false,
         mii: true,
+        awards: [
+            { name: "World Series Champion", season: 3},
+        ]
     },
     {
         name: "Fire Bro",
@@ -746,6 +777,14 @@ export const players: Player[] = [
         ]
     },
     {
+        name: "Hima",
+        src: "/players/Hima.jpg",
+        color: "Yellow",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Jack White",
         src: "/players/Jack White.jpg",
         color: "Red",
@@ -892,6 +931,14 @@ export const players: Player[] = [
         src: "/players/Light_Blue_Yoshi.webp",
         color: "Light Blue",
         gp: 4,
+        captain: false,
+        mii: false,
+    },
+    {
+        name: "Light Blue Shy Guy",
+        src: "/players/Light_Blue_Shy_Guy.png",
+        color: "Light Blue",
+        gp: 0,
         captain: false,
         mii: false,
     },
@@ -1093,6 +1140,14 @@ export const players: Player[] = [
         ]
     },
     {
+        name: "Purple Yoshi",
+        src: "/players/Purple_Yoshi.png",
+        color: "Purple",
+        gp: 0,
+        captain: false,
+        mii: true,
+    },
+    {
         name: "Red Koopa",
         src: "/players/Red_Koopa.webp",
         color: "Red",
@@ -1193,6 +1248,9 @@ export const players: Player[] = [
         gp: 10,
         captain: false,
         mii: true,
+        awards: [
+            { name: "World Series Champion", season: 3},
+        ]
     },
     {
         name: "Sabrina",
@@ -1204,14 +1262,6 @@ export const players: Player[] = [
         awards: [
             { name: "World Series Champion", season: 2},
         ]
-    },
-    {
-        name: "Sebesta",
-        src: "/players/Sebesta.jpg",
-        color: "White",
-        gp: 0,
-        captain: false,
-        mii: true,
     },
     {
         name: "Sherpa",
@@ -1278,12 +1328,23 @@ export const players: Player[] = [
         gp: 11,
         captain: false,
         mii: false,
+        awards: [
+            { name: "World Series Champion", season: 3},
+        ]
     },
     {
         name: "Tonka",
         src: "/players/Tonka.jpg",
         color: "Black",
         gp: 4,
+        captain: false,
+        mii: true,
+    },
+    {
+        name: "Tony Soprano",
+        src: "/players/Tony Sorpano.jpg",
+        color: "Black",
+        gp: 0,
         captain: false,
         mii: true,
     },
@@ -1340,6 +1401,7 @@ export const players: Player[] = [
         mii: false,
         awards: [
             { name: "World Series Champion", season: 1},
+            { name: "World Series Champion", season: 3},
             { name: "Golden Glove Winner", season: 2},
             { name: "1x Game MVP", season: 2},
         ]
