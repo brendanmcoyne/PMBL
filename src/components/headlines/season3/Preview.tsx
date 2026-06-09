@@ -23,7 +23,7 @@ export default function Preview() {
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 3 Playoff Preview</StyledHeader>
-            <GenImage src="/headlines/draft3.jpg" alt="Draft" />
+            <GenImage src="/headlines/playoffs3.jpg" alt="Draft" />
             <ArticleMeta>
                 Written by: Delfino Times — May 9, 2026
             </ArticleMeta>

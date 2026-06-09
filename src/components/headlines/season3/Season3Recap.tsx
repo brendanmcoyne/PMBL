@@ -9,7 +9,7 @@ export default function Season3Recap() {
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
             <StyledHeader>Complete Season 3 Recap</StyledHeader>
-            <GenImage src="/headlines/draft.jpg" alt="Draft" />
+            <GenImage src="/archives/s3.jpg" alt="Draft" />
             <ArticleMeta>
                 Written by: PMBL News — May 27, 2026
             </ArticleMeta>

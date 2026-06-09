@@ -391,7 +391,7 @@ export const players: Player[] = [
     {
         name: "Candy",
         src: "/players/Candy.jpg",
-        color: "Light Green",
+        color: "Light Blue",
         gp: 0,
         captain: false,
         mii: true,

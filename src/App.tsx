@@ -75,6 +75,9 @@ import Season3Recap from "./components/headlines/season3/Season3Recap.tsx";
 import Preview from "./components/headlines/season3/Preview.tsx";
 import Cascade from "./components/headlines/season3/Cascade.tsx";
 
+import DraftRecap4 from "./components/headlines/season4/DraftRecap.tsx";
+import KeyPlayers from "./components/headlines/season4/KeyPlayers.tsx";
+
 const MainContent = styled.div`
     padding-top: 80px;
     flex-grow: 1;
@@ -238,6 +241,9 @@ function Root() {
                     <Route path="/headlines/season3/Season3Recap" element={<Season3Recap />} />
                     <Route path="/headlines/season3/Cascade" element={<Cascade />} />
                     <Route path="/headlines/season3/Preview" element={<Preview />} />
+
+                    <Route path="/headlines/season4/DraftRecap" element={<DraftRecap4 />} />
+                    <Route path="/headlines/season4/KeyPlayers" element={<KeyPlayers />} />
                 </Routes>
             </MainContent>
             <Footer/>

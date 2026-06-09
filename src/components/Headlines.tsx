@@ -117,16 +117,30 @@ export default function Players() {
             <StyledMiniHeader $animate={ready}>Featuring all the top baseball stories!</StyledMiniHeader>
             <SeparatorLine $animate={ready}/>
             <Story $animate={ready}>
+                <GenImage src="/headlines/players.jpg" alt="Players" />
+                <Overlay>
+                    <Headline>10 Players that look to bounce back</Headline>
+                    <StyledLink to="/headlines/season4/KeyPlayers">Click to read more!</StyledLink>
+                </Overlay>
+            </Story>
+            <Story $animate={ready}>
                 <GenImage src="/headlines/draft3.jpg" alt="Week8" />
+                <Overlay>
+                    <Headline>Season 4 Draft Recap</Headline>
+                    <StyledLink to="/headlines/season4/DraftRecap">Click to read more!</StyledLink>
+                </Overlay>
+            </Story>
+            <Story $animate={ready}>
+                <GenImage src="/archives/s3.jpg" alt="S3" />
                 <Overlay>
                     <Headline>Complete Season 3 Recap</Headline>
                     <StyledLink to="/headlines/season3/Season3Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
-                <GenImage src="/headlines/draft3.jpg" alt="Week8" />
+                <GenImage src="/headlines/playoffs3.jpg" alt="Preview" />
                 <Overlay>
-                    <Headline>Season 3 Playoff Recap</Headline>
+                    <Headline>Season 3 Playoff Preview</Headline>
                     <StyledLink to="/headlines/season3/Preview">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
