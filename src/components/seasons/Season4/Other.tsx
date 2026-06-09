@@ -16,7 +16,7 @@ export default function Other4() {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "white"}} to="/archives/Season3">← Back</Link>
+                <Link style={{color: "white"}} to="/archives/Season4">← Back</Link>
             </ToggleButton>
 
         </ContentDiv>

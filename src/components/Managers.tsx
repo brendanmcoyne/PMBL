@@ -213,6 +213,26 @@ const ModalScrollWrapper = styled.div`
     }
 `;
 
+const RecordsWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 900px) {
+        justify-content: flex-start;
+        overflow-x: auto;
+        width: 400px;
+        -webkit-overflow-scrolling: touch;
+        
+        scrollbar-width: none;     
+        -ms-overflow-style: none;   
+
+        &::-webkit-scrollbar {
+            display: none;   
+        }
+    }
+`;
+
 const ToggleButton = styled.button<ToggleButtonProps>`
     margin: 0 0.5rem;
     padding: 0.5rem 1.2rem;
@@ -307,11 +327,12 @@ const RecordDiv = styled.div`
     flex-direction: column;
     gap: 10px;
     width: 105%;
-    min-width: 320px;
+    min-width: 1000px;
     max-width: 1200px;
 
     @media screen and (max-width: 900px) {
-        width: 90%;
+        min-width: 750px;
+        max-width: none;
     }
 `;
 
@@ -326,8 +347,8 @@ const GridRow = styled.div`
     border-bottom: 1px solid white;
     background-color: #12121c;
     border-radius: 10px;
+
     @media screen and (max-width: 600px) {
-        grid-template-columns: minmax(80px, 2fr) repeat(6, 1fr);
         font-size: 0.8rem;
         padding: 0.4rem;
     }
@@ -501,6 +522,7 @@ export default function Managers() {
 
             <StyledHeader $animate={ready}>Records</StyledHeader>
 
+            <RecordsWrapper>
             <RecordDiv>
                 <HeaderRow>
                     <div> </div>
@@ -655,6 +677,7 @@ export default function Managers() {
                     <div>X</div>
                 </GridRow>
             </RecordDiv>
+            </RecordsWrapper>
 
             {selectedManager && (
                 <ModalBackground onClick={() => setSelectedManager(null)}>

@@ -55,7 +55,7 @@ const Gallery = styled.div`
         break-inside: avoid;
     }
     @media screen and (max-width: 1000px) {
-        max-width: 400px;
+        max-width: 600px;
     }
 `;
 
