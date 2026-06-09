@@ -21,33 +21,33 @@ const LinkDiv = styled.div`
     }
 `;
 
-export default function Season3() {
+export default function Season4() {
     return(
         <ContentDiv>
             <ToggleButton>
                 <Link style={{color: "white"}} to="/archives">← Back</Link>
             </ToggleButton>
-            <StyledHeader>Season 3 PMBL</StyledHeader>
-            <StyledMiniHeader style={{textAlign: "center", color: "white"}}>All Records from Season 3</StyledMiniHeader>
+            <StyledHeader>Season 4 PMBL</StyledHeader>
+            <StyledMiniHeader style={{textAlign: "center", color: "white"}}>All Records from Season 4</StyledMiniHeader>
             <SeparatorLine />
             <LinkDiv>
                 <StyledLink bg="/archives/schedule.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season3/Schedule">Schedule</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4/Schedule">Schedule</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/Draft.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season3/Draft">Draft</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4/Draft">Draft</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/awards.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season3/Awards">Awards</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4/Awards">Awards</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/Standings.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season3/Standings">Standings</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4/Standings">Standings</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/playoffs.png">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season3/Playoffs">Playoffs</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4/Playoffs">Playoffs</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/other.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season3/Other">Other</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4/Other">Other</Link>
                 </StyledLink>
             </LinkDiv>
         </ContentDiv>

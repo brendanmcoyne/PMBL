@@ -33,27 +33,27 @@ export default function Season2() {
             <SeparatorLine />
             <LinkDiv>
                 <StyledLink bg="/archives/schedule.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Schedule">Schedule</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season2/Schedule">Schedule</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/Draft.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Draft">Draft</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season2/Draft">Draft</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/awards.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Awards">Awards</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season2/Awards">Awards</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/Standings.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Standings">Standings</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season2/Standings">Standings</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/playoffs.png">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Playoffs">Playoffs</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season2/Playoffs">Playoffs</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/other.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2/Other">Other</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season2/Other">Other</Link>
                 </StyledLink>
             </LinkDiv>
             <StyledMiniHeader style={{marginTop: "40px", textAlign: "center", color: "white"}}>Click down below to see all Season 2 stats</StyledMiniHeader>
 
-            <LinkButton to="/archives/seasons/Season2/Stats" style={{width: "15rem", backgroundColor: "darkblue"}} state={{ stateSet: "set2"}}>
+            <LinkButton to="/archives/Season2/Stats" style={{width: "15rem", backgroundColor: "darkblue"}} state={{ stateSet: "set2"}}>
                 View Full Season Stats
             </LinkButton>
         </ContentDiv>

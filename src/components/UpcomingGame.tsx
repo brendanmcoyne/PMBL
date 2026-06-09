@@ -71,8 +71,8 @@ const Td = styled.td`
 
 export default function Game() {
     const game = {
-        away: { name: "Brendan", color: "#CC0000", manager: "Brendan", record: "2-3", scores: [0, 0, 2, 0, 0, 0, 0], R: 2, H: 7, E: 0, LOB: 5 },
-        home: { name: "Isaac", color: "#3586E8", manager: "Isaac", record: "3-2", scores: [3, 1, 0, 2, 0, 0, "X"], R: 6, H: 20, E: 3, LOB: 10 },
+        away: { name: "THANdrew", color: "#999999", manager: "THANdrew", record: "0-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        home: { name: "Isaac", color: "#3586E8", manager: "Isaac", record: "0-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
     };
 
     {/*
@@ -91,14 +91,14 @@ export default function Game() {
             <TeamsRow>
                 <TeamColumn>
                     <TeamLabel>Away Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-WaluigiSpitballs.webp" alt={`${game.away.name} logo`} />
+                    <Logo src="/emblems/MSS-Emblem-LuigiKnights.webp" alt={`${game.away.name} logo`} />
                     <Manager style={{color: game.away.color}}>{game.away.manager}</Manager>
                     <Record>({game.away.record})</Record>
                 </TeamColumn>
                 <p style={{margin: "0", transform: "translateY(-10px)", fontFamily: "'Luckiest Guy', cursive", fontSize: "3rem"}}>vs</p>
                 <TeamColumn>
                     <TeamLabel>Home Team</TeamLabel>
-                    <Logo src="/emblems//MSS-Emblem-BowserMonsters.webp" alt={`${game.home.name} logo`} />
+                    <Logo src="/emblems//MSS-Emblem-DaisyFlowers.webp" alt={`${game.home.name} logo`} />
                     <Manager style={{color: game.home.color}}>{game.home.manager}</Manager>
                     <Record>({game.home.record})</Record>
                 </TeamColumn>
@@ -132,7 +132,7 @@ export default function Game() {
                 </tbody>
             </ScoreTable>
             <h4 style={{ marginTop: "0", marginBottom: "0.75rem" }}>
-                Location: <span style={{ color: "#8B4513" }}>DK Jungle</span>
+                Location: <span style={{ color: "#999999" }}>TBD</span>
             </h4>
 
             {/*

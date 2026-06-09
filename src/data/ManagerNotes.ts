@@ -12,13 +12,14 @@ export type Manager = {
     s1banner: string;
     s2banner: string;
     s3banner: string;
+    s4banner: string;
 }
 
 export const managers: Manager[] = [
 
     {
         name: "Brendan",
-        emblem: "/emblems/MSS-Emblem-WaluigiSpitballs.webp",
+        emblem: "/emblems/MSS-Emblem-WarioMuscles.webp",
         src: "/managers/Brendan.JPEG",
         color: "#CC0000",
         record: "17 - 13",
@@ -29,11 +30,12 @@ export const managers: Manager[] = [
         s1banner: "/banners/DKWilds-MSS.webp",
         s2banner: "/banners/BowserMonsters-MSS.webp",
         s3banner: "/banners/WaluigiSpitballs-MSS.webp",
+        s4banner: "/banners/WarioMuscles-MSS.webp",
     },
     {
         name: "Justave",
         oldname: "Justin",
-        emblem: "/emblems/MSS-Emblem-MarioFireballs.png",
+        emblem: "/emblems/MSS-Emblem-PeachMonarchs.png",
         src: "/managers/Justave.jpg",
         color: "#FF9900",
         record: "17 - 13",
@@ -44,6 +46,7 @@ export const managers: Manager[] = [
         s1banner: "/banners/LuigiKnights-MSS.webp",
         s2banner: "/banners/LuigiKnights-MSS.webp",
         s3banner: "/banners/MarioFireballs-MSS.webp",
+        s4banner: "/banners/PeachMonarchs-MSS.webp",
     },
     {
         name: "James",
@@ -58,11 +61,12 @@ export const managers: Manager[] = [
         s1banner: "/banners/BowserMonsters-MSS.webp",
         s2banner: "/banners/BirdoBows-MSS.webp",
         s3banner: "/banners/BowserJrRookies-MSS.webp",
+        s4banner: "/banners/BowserJrRookies-MSS.webp",
     },
     {
         name: "Marge",
         oldname: "Matt",
-        emblem: "/emblems/MSS-Emblem-LuigiKnights.webp",
+        emblem: "/emblems/MSS-Emblem-BirdoBows.webp",
         src: "/managers/Marge.jpg",
         color: "#6AA84F",
         record: "11 - 19",
@@ -73,10 +77,11 @@ export const managers: Manager[] = [
         s1banner: "/banners/YoshiEggs-MSS.webp",
         s2banner: "/banners/PeachMonarchs-MSS.webp",
         s3banner: "/banners/LuigiKnights-MSS.webp",
+        s4banner: "/banners/BirdoBows-MSS.webp",
     },
     {
         name: "Isaac",
-        emblem: "/emblems/MSS-Emblem-BowserMonsters.webp",
+        emblem: "/emblems/MSS-Emblem-DaisyFlowers.webp",
         src: "/managers/Isaac.jpg",
         color: "#3586E8",
         record: "17 - 13",
@@ -87,6 +92,7 @@ export const managers: Manager[] = [
         s1banner: "/banners/MarioFireballs-MSS.webp",
         s2banner: "/banners/DKWilds-MSS.webp",
         s3banner: "/banners/BowserMonsters-MSS.webp",
+        s4banner: "/banners/DaisyFlowers-MSS.webp",
     },
     {
         name: "Trocean",
@@ -102,10 +108,11 @@ export const managers: Manager[] = [
         s1banner: "/banners/PeachMonarchs-MSS.webp",
         s2banner: "/banners/MarioFireballs-MSS.webp",
         s3banner: "/banners/DKWilds-MSS.webp",
+        s4banner: "/banners/DiddyMonkeys-MSS.webp",
     },
     {
         name: "Morgan",
-        emblem: "/emblems/MSS-Emblem-DaisyFlowers.webp",
+        emblem: "/emblems/MSS-Emblem-MarioFireballs.png",
         src: "/managers/Morgan.jpg",
         color: "#FF00FF",
         record: "13 - 17",
@@ -116,11 +123,12 @@ export const managers: Manager[] = [
         s1banner: "/banners/DiddyMonkeys-MSS.webp",
         s2banner: "/banners/DaisyFlowers-MSS.webp",
         s3banner: "/banners/DaisyFlowers-MSS.webp",
+        s4banner: "/banners/MarioFireballs-MSS.webp",
     },
     {
         name: "THANdrew",
         oldname: "DANdrew",
-        emblem: "/emblems/MSS-Emblem-BirdoBows.webp",
+        emblem: "/emblems/MSS-Emblem-LuigiKnights.webp",
         src: "/managers/THANdrew.jpg",
         color: "#999999",
         record: "17 - 13",
@@ -131,6 +139,7 @@ export const managers: Manager[] = [
         s1banner: "/banners/WaluigiSpitballs-MSS.webp",
         s2banner: "/banners/WaluigiSpitballs-MSS.webp",
         s3banner: "/banners/BirdoBows-MSS.webp",
+        s4banner: "/banners/LuigiKnights-MSS.webp",
     },
 
 

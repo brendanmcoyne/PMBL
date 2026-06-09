@@ -125,7 +125,7 @@ export default function Awards2() {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "white"}} to="/archives/seasons/Season2">← Back</Link>
+                <Link style={{color: "white"}} to="/archives/Season2">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 2 Awards</StyledHeader>
 

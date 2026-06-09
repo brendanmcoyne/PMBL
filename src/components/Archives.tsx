@@ -42,12 +42,12 @@ const StyledMiniHeader = styled.h3<{ $animate?: boolean }>`
 const Gallery = styled.div`
     column-count: 2;
     column-gap: 16px;
-    max-width: 800px;
+    max-width: 1200px;
 
     img {
         width: 100%;
         @media screen and (max-width: 750px) {
-            max-width: 400px;
+            max-width: 500px;
         }
         margin-bottom: 16px;
         border-radius: 10px;
@@ -92,31 +92,44 @@ export default function Archives() {
             <StyledMiniHeader $animate={ready} style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
             <SeparatorLine $animate={ready}/>
             <ResponsiveFlex $animate={ready}>
-                <StyledLink bg="/archives/bowserbat.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1">Season 1</Link>
+                <StyledLink bg="/archives/s1.jpg">
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season1">Season 1</Link>
                 </StyledLink>
-                <StyledLink bg="/archives/mario-super-sluggers-screenshot.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2">Season 2</Link>
-                </StyledLink>
-                <StyledLink bg="/archives/s3.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season3">Season 3</Link>
+                <StyledLink bg="/archives/s2.jpg">
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season2">Season 2</Link>
                 </StyledLink>
             </ResponsiveFlex>
+            <ResponsiveFlex>
+                <StyledLink bg="/archives/s3.jpg">
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season3">Season 3</Link>
+                </StyledLink>
+                <StyledLink bg="/archives/s4.jpg">
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4">Season 4</Link>
+                </StyledLink>
+            </ResponsiveFlex>
+
 
             <StyledHeader $animate={ready} style={{fontSize: "80px", marginTop: "70px"}}>Gallery</StyledHeader>
             <StyledMiniHeader $animate={ready}>In here you'll find photos and memories from seasons past</StyledMiniHeader>
             <SeparatorLine/>
 
             <Gallery>
-                <img src="/archives/IMG_7373.jpg" alt="1"/>
-                <img src="/archives/IMG_7375.jpg" alt="2"/>
-                <img src="/archives/IMG_7376.jpg" alt="3"/>
-                <img src="/archives/IMG_9834.jpg" alt="4"/>
-                <img src="/archives/IMG_7425.jpg" alt="5"/>
-                <img src="/archives/IMG_7436.jpg" alt="6"/>
-                <img src="/archives/IMG_9838.jpg" alt="7"/>
-                <img src="/archives/IMG_9830.jpg" alt="8"/>
-                <img src="/archives/IMG_0611.jpg" alt="9"/>
+                <img src="/archives/gallery/IMG_7373.jpg" alt="1"/>
+                <img src="/archives/gallery/IMG_3942.jpg" alt="2"/>
+                <img src="/archives/gallery/IMG_7375.jpg" alt="3"/>
+                <img src="/archives/gallery/IMG_7376.jpg" alt="4"/>
+                <img src="/archives/gallery/IMG_9834.jpg" alt="5"/>
+                <img src="/archives/gallery/IMG_1938.jpg" alt="6"/>
+                <img src="/archives/gallery/IMG_7425.jpg" alt="7"/>
+                <img src="/archives/gallery/IMG_4428.jpg" alt="8"/>
+                <img src="/archives/gallery/IMG_4918.jpg" alt="9"/>
+                <img src="/archives/gallery/IMG_7436.jpg" alt="10"/>
+                <img src="/archives/gallery/IMG_9838.jpg" alt="11"/>
+                <img src="/archives/gallery/IMG_9830.jpg" alt="12"/>
+                <img src="/archives/gallery/IMG_5815.jpg" alt="13"/>
+                <img src="/archives/gallery/IMG_6581.jpg" alt="14"/>
+                <img src="/archives/gallery/IMG_0611.jpg" alt="15"/>
+                <img src="/archives/gallery/IMG_3817.jpg" alt="16"/>
             </Gallery>
         </ContentDiv>
 

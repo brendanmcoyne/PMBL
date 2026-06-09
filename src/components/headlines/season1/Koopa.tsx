@@ -1,5 +1,5 @@
 import {ContentDiv, StyledHeader, GenImage, ArticleMeta, SeparatorLine, Passage, Ruling, StyledMiniHeader,
-    StoryDiv, Stories, Story, MiniImage, StyledLink, Overlay, Headline, ToggleButton} from "../../components/headlines/HeadlineStyles";
+    StoryDiv, Stories, Story, MiniImage, StyledLink, Overlay, Headline, ToggleButton} from "../HeadlineStyles.ts";
 import {Link} from "react-router-dom";
 
 export default function Koopa() {

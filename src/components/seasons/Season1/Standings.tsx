@@ -94,7 +94,7 @@ export default function Standings1() {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "white"}} to="/archives/seasons/Season1">← Back</Link>
+                <Link style={{color: "white"}} to="/archives/Season1">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 1 PMBL Standings</StyledHeader>
             <StandingsContainer>

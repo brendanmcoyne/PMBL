@@ -162,98 +162,96 @@ export default function CurrentSeason() {
     const [round, setRound] = useState<'Conference Series' | 'World Series'>('Conference Series');
 
     const eastTeams = [
-        { name: 'James', color: "#F1C232", record: '8-2', divRecord: '5-1' },
-        { name: 'Brendan', color: "#CC0000", record: '6-4', divRecord: '3-3' },
-        { name: 'Marge', color: "#6AA84F", record: '4-6', divRecord: '2-4' },
-        { name: 'Justave', color: "#FF9900", record: '4-6', divRecord: '2-4' },
+        { name: 'James', color: "#F1C232", record: '0-0', divRecord: '0-0' },
+        { name: 'Brendan', color: "#CC0000", record: '0-0', divRecord: '0-0' },
+        { name: 'Marge', color: "#6AA84F", record: '0-0', divRecord: '0-0' },
+        { name: 'Justave', color: "#FF9900", record: '0-0', divRecord: '0-0' },
     ];
 
     const westTeams = [
-        { name: 'THANdrew', color: "#999999", record: '7-3', divRecord: '4-2' },
-        { name: 'Isaac', color: "#3586E8", record: '6-4', divRecord: '4-2' },
-        { name: 'Morgan', color: "#FF00FF", record: '3-7', divRecord: '3-3' },
-        { name: 'Trocean', color: "#9900FF", record: '2-8', divRecord: '1-5' },
+        { name: 'THANdrew', color: "#999999", record: '0-0', divRecord: '0-0' },
+        { name: 'Isaac', color: "#3586E8", record: '0-0', divRecord: '0-0' },
+        { name: 'Morgan', color: "#FF00FF", record: '0-0', divRecord: '0-0' },
+        { name: 'Trocean', color: "#9900FF", record: '0-0', divRecord: '0-0' },
     ];
 
     const Week1 = [
-        { matchup: 1, away: "Isaac", awaycolor: "#3586E8", home: "Justave", homecolor: "#FF9900", score: "17-1" },
-        { matchup: 2, away: "Morgan", awaycolor: "#FF00FF", home: "James", homecolor: "#F1C232", score: "1-6" },
-        { matchup: 3, away: "Marge", awaycolor: "#6AA84F", home: "Trocean", homecolor: "#9900FF", score: "7-9" },
-        { matchup: 4, away: "THANdrew", awaycolor: "#999999", home: "Brendan", homecolor: "#CC0000", score: "3-4" },
+        { matchup: 1, away: "THANdrew", awaycolor: "#999999", home: "Isaac", homecolor: "#3586E8", score: "0-0" },
+        { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Trocean", homecolor: "#9900FF", score: "0-0" },
+        { matchup: 3, away: "Brendan", awaycolor: "#CC0000", home: "Marge", homecolor: "#6AA84F", score: "0-0" },
+        { matchup: 4, away: "Justave", awaycolor: "#FF9900", home: "Morgan", homecolor: "#FF00FF", score: "0-0" },
     ];
 
     const Week2 = [
-        { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "Morgan", homecolor: "#FF00FF", score: "21-11" },
-        { matchup: 2, away: "Justave", awaycolor: "#FF9900", home: "Trocean", homecolor: "#9900FF", score: "11-9" },
-        { matchup: 3, away: "THANdrew", awaycolor: "#999999", home: "Isaac", homecolor: "#3586E8", score: "12-11" },
-        { matchup: 4, away: "Marge", awaycolor: "#6AA84F", home: "James", homecolor: "#F1C232", score: "6-8" },
+        { matchup: 1, away: "Justave", awaycolor: "#FF9900", home: "James", homecolor: "#F1C232", score: "0-0" },
+        { matchup: 2, away: "Brendan", awaycolor: "#CC0000", home: "THANdrew", homecolor: "#999999", score: "0-0" },
+        { matchup: 3, away: "Marge", awaycolor: "#6AA84F", home: "Isaac", homecolor: "#3586E8", score: "0-0" },
+        { matchup: 4, away: "Morgan", awaycolor: "#FF00FF", home: "Trocean", homecolor: "#9900FF", score: "0-0" },
     ];
 
     const Week3 = [
-        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Justave", homecolor: "#FF9900", score: "11-7" },
-        { matchup: 2, away: "Morgan", awaycolor: "#FF00FF", home: "THANdrew", homecolor: "#999999", score: "8-7" },
-        { matchup: 3, away: "Trocean", awaycolor: "#9900FF", home: "Isaac", homecolor: "#3586E8", score: "12-23" },
-        { matchup: 4, away: "Brendan", awaycolor: "#CC0000", home: "Marge", homecolor: "#6AA84F", score: "18-10" },
+        { matchup: 1, away: "Isaac", awaycolor: "#3586E8", home: "James", homecolor: "#F1C232", score: "0-0" },
+        { matchup: 2, away: "Morgan", awaycolor: "#FF00FF", home: "Brendan", homecolor: "#CC0000", score: "0-0" },
+        { matchup: 3, away: "Trocean", awaycolor: "#9900FF", home: "Marge", homecolor: "#6AA84F", score: "0-0" },
+        { matchup: 4, away: "THANdrew", awaycolor: "#999999", home: "Justave", homecolor: "#FF9900", score: "0-0" },
     ];
 
     const Week4 = [
-        { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "Justave", homecolor: "#FF9900", score: "10-11" },
-        { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Isaac", homecolor: "#3586E8", score: "10-6" },
-        { matchup: 3, away: "Trocean", awaycolor: "#9900FF", home: "Morgan", homecolor: "#FF00FF", score: "13-15" },
-        { matchup: 4, away: "THANdrew", awaycolor: "#999999", home: "Marge", homecolor: "#6AA84F", score: "6-4" },
+        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Morgan", homecolor: "#FF00FF", score: "0-0" },
+        { matchup: 2, away: "Justave", awaycolor: "#FF9900", home: "Brendan", homecolor: "#CC0000", score: "0-0" },
+        { matchup: 3, away: "Marge", awaycolor: "#6AA84F", home: "THANdrew", homecolor: "#999999", score: "0-0" },
+        { matchup: 4, away: "Trocean", awaycolor: "#9900FF", home: "Isaac", homecolor: "#3586E8", score: "0-0" },
     ];
 
     const Week5 = [
-        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "THANdrew", homecolor: "#999999", score: "3-4" },
-        { matchup: 2, away: "Trocean", awaycolor: "#9900FF", home: "Brendan", homecolor: "#CC0000", score: "7-14" },
-        { matchup: 3, away: "Marge", awaycolor: "#6AA84F", home: "Justave", homecolor: "#FF9900", score: "5-7" },
-        { matchup: 4, away: "Isaac", awaycolor: "#3586E8", home: "Morgan", homecolor: "#FF00FF", score: "4-8" },
+        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Justave", homecolor: "#FF9900", score: "0-0" },
+        { matchup: 2, away: "Marge", awaycolor: "#6AA84F", home: "Brendan", homecolor: "#CC0000", score: "0-0" },
+        { matchup: 3, away: "THANdrew", awaycolor: "#999999", home: "Isaac", homecolor: "#3586E8", score: "0-0" },
+        { matchup: 4, away: "Trocean", awaycolor: "#9900FF", home: "Morgan", homecolor: "#FF00FF", score: "0-0" },
     ];
 
     const Week6 = [
-        { matchup: 1, away: "Morgan", awaycolor: "#FF00FF", home: "Trocean", homecolor: "#9900FF", score: "8-11" },
-        { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Marge", homecolor: "#6AA84F", score: "33-15" },
-        { matchup: 3, away: "Justave", awaycolor: "#FF9900", home: "THANdrew", homecolor: "#999999", score: "4-8" },
-        { matchup: 4, away: "Brendan", awaycolor: "#CC0000", home: "Isaac", homecolor: "#3586E8", score: "6-7" },
+        { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "James", homecolor: "#F1C232", score: "0-0" },
+        { matchup: 2, away: "Justave", awaycolor: "#FF9900", home: "Marge", homecolor: "#6AA84F", score: "0-0" },
+        { matchup: 3, away: "THANdrew", awaycolor: "#999999", home: "Trocean", homecolor: "#9900FF", score: "0-0" },
+        { matchup: 4, away: "Morgan", awaycolor: "#FF00FF", home: "Isaac", homecolor: "#3586E8", score: "0-0" },
     ];
 
     const Week7 = [
-        { matchup: 1, away: "Justave", awaycolor: "#FF9900", home: "James", homecolor: "#F1C232", score: "3-6" },
-        { matchup: 2, away: "Isaac", awaycolor: "#3586E8", home: "Trocean", homecolor: "#9900FF", score: "14-3" },
-        { matchup: 3, away: "THANdrew", awaycolor: "#999999", home: "Morgan", homecolor: "#FF00FF", score: "16-4" },
-        { matchup: 4, away: "Marge", awaycolor: "#6AA84F", home: "Brendan", homecolor: "#CC0000", score: "9-6" },
-
+        { matchup: 1, away: "Marge", awaycolor: "#6AA84F", home: "James", homecolor: "#F1C232", score: "0-0" },
+        { matchup: 2, away: "Brendan", awaycolor: "#CC0000", home: "Trocean", homecolor: "#9900FF", score: "0-0" },
+        { matchup: 3, away: "Justave", awaycolor: "#FF9900", home: "Isaac", homecolor: "#3586E8", score: "0-0" },
+        { matchup: 4, away: "THANdrew", awaycolor: "#999999", home: "Morgan", homecolor: "#FF00FF", score: "0-0" },
     ];
 
     const Week8 = [
-        { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "James", homecolor: "#F1C232", score: "14-11" },
-        { matchup: 2, away: "Morgan", awaycolor: "#FF00FF", home: "Justave", homecolor: "#FF9900", score: "7-8" },
-        { matchup: 3, away: "THANdrew", awaycolor: "#999999", home: "Trocean", homecolor: "#9900FF", score: "16-14" },
-        { matchup: 4, away: "Isaac", awaycolor: "#3586E8", home: "Marge", homecolor: "#6AA84F", score: "13-14" },
+        { matchup: 1, away: "THANdrew", awaycolor: "#999999", home: "James", homecolor: "#F1C232", score: "0-0" },
+        { matchup: 2, away: "Brendan", awaycolor: "#CC0000", home: "Justave", homecolor: "#FF9900", score: "0-0" },
+        { matchup: 3, away: "Morgan", awaycolor: "#FF00FF", home: "Marge", homecolor: "#6AA84F", score: "0-0" },
+        { matchup: 4, away: "Isaac", awaycolor: "#3586E8", home: "Trocean", homecolor: "#9900FF", score: "0-0" },
     ];
 
     const Week9 = [
-        { matchup: 1, away: "Trocean", awaycolor: "#9900FF", home: "James", homecolor: "#F1C232", score: "6-7" },
-        { matchup: 2, away: "Marge", awaycolor: "#6AA84F", home: "Morgan", homecolor: "#FF00FF", score: "12-6" },
-        { matchup: 3, away: "Isaac", awaycolor: "#3586E8", home: "THANdrew", homecolor: "#999999", score: "4-3" },
-        { matchup: 4, away: "Justave", awaycolor: "#FF9900", home: "Brendan", homecolor: "#CC0000", score: "5-15" },
-
+        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Marge", homecolor: "#6AA84F", score: "0-0" },
+        { matchup: 2, away: "Isaac", awaycolor: "#3586E8", home: "Brendan", homecolor: "#CC0000", score: "0-0" },
+        { matchup: 3, away: "Morgan", awaycolor: "#FF00FF", home: "THANdrew", homecolor: "#999999", score: "0-0" },
+        { matchup: 4, away: "Trocean", awaycolor: "#9900FF", home: "Justave", homecolor: "#FF9900", score: "0-0" },
     ];
 
     const Week10 = [
-        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Brendan", homecolor: "#CC0000", score: "12-4" },
-        { matchup: 2, away: "Trocean", awaycolor: "#9900FF", home: "THANdrew", homecolor: "#999999", score: "10-14" },
-        { matchup: 3, away: "Morgan", awaycolor: "#FF00FF", home: "Isaac", homecolor: "#3586E8", score: "0-8" },
-        { matchup: 4, away: "Justave", awaycolor: "#FF9900", home: "Marge", homecolor: "#6AA84F", score: "8-10" },
+        { matchup: 1, away: "James", awaycolor: "#F1C232", home: "Brendan", homecolor: "#CC0000", score: "0-0" },
+        { matchup: 2, away: "Marge", awaycolor: "#6AA84F", home: "Justave", homecolor: "#FF9900", score: "0-0" },
+        { matchup: 3, away: "Trocean", awaycolor: "#9900FF", home: "THANdrew", homecolor: "#999999", score: "0-0" },
+        { matchup: 4, away: "Isaac", awaycolor: "#3586E8", home: "Morgan", homecolor: "#FF00FF", score: "0-0" },
     ];
 
     const ConfSeries = [
-        { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "James", homecolor: "#F1C232", record: "3-0"},
-        { matchup: 2, away: "Isaac", awaycolor: "#3586E8", home: "THANdrew", homecolor: "#999999", record: "3-1"},
+        { matchup: 1, away: "TBD", awaycolor: "#999999", home: "TBD", homecolor: "#999999", record: "0-0"},
+        { matchup: 2, away: "TBD", awaycolor: "#999999", home: "TBD", homecolor: "#999999", record: "0-0"},
     ]
 
     const WorldSeries = [
-        { matchup: 1, away: "Brendan", awaycolor: "#CC0000", home: "Isaac", homecolor: "#3586E8", record: "2-3"},
+        { matchup: 1, away: "TBD", awaycolor: "#999999", home: "TBD", homecolor: "#999999", record: "0-0"},
     ]
 
     const currentTeams = division === 'West' ? westTeams : eastTeams;
@@ -276,7 +274,7 @@ export default function CurrentSeason() {
             <StyledHeader $animate={ready}>Current Season</StyledHeader>
 
             <UpcomingGame $animate={ready}>
-                <StyledMiniHeader style={{marginBottom: "0"}}>Recent Game</StyledMiniHeader>
+                <StyledMiniHeader style={{marginBottom: "0"}}>Upcoming Game</StyledMiniHeader>
                 <Game />
             </UpcomingGame>
             <TwoSection>

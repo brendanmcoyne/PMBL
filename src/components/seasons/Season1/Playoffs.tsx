@@ -122,7 +122,7 @@ export default function Playoffs1() {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "white"}} to="/archives/seasons/Season1">← Back</Link>
+                <Link style={{color: "white"}} to="/archives/Season1">← Back</Link>
             </ToggleButton>
             <StyledHeader style={{marginBottom: "10px"}}>Season 1 PMBL Playoffs</StyledHeader>
 

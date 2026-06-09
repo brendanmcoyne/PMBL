@@ -163,7 +163,7 @@ export default function Other3 () {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "white"}} to="/archives/seasons/Season3">← Back</Link>
+                <Link style={{color: "white"}} to="/archives/Season3">← Back</Link>
             </ToggleButton>
             <StyledHeader style={{marginBottom: "15px"}}>Game Stats</StyledHeader>
             <SeparatorLine/>

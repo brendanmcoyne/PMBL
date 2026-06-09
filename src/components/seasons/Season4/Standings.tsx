@@ -90,13 +90,13 @@ const StandingsContainer = styled.div`
     }
 `;
 
-export default function Standings3() {
+export default function Standings4() {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "white"}} to="/archives/Season3">← Back</Link>
+                <Link style={{color: "white"}} to="/archives/Season4">← Back</Link>
             </ToggleButton>
-            <StyledHeader>Season 3 PMBL Standings</StyledHeader>
+            <StyledHeader>Season 4 PMBL Standings</StyledHeader>
             <StandingsContainer>
                 <DivisionDiv>
                     <StyledMiniHeader style={{marginTop: "0", color: "#4285F4"}}>East Division</StyledMiniHeader>
@@ -110,40 +110,40 @@ export default function Standings3() {
                         <div>PD</div>
                     </HeaderRow>
                     <GridRow>
-                        <div style={{ fontWeight: "bold", color: "#F1C232" }}>James<sup style={{color: "#3C78D8"}}>z</sup></div>
-                        <div>8 - 2</div>
-                        <div>5 - 1</div>
+                        <div style={{ fontWeight: "bold", color: "#F1C232" }}>James</div>
+                        <div>0 - 0</div>
+                        <div>0 - 0</div>
                         <div>W2</div>
-                        <div>100</div>
-                        <div>60</div>
-                        <div>40</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
                     </GridRow>
                     <GridRow>
-                        <div style={{ fontWeight: "bold", color: "#CC0000" }}>Brendan<sup style={{color: "#38761D"}}>x</sup></div>
-                        <div>6 - 4</div>
-                        <div>3 - 3</div>
+                        <div style={{ fontWeight: "bold", color: "#CC0000" }}>Brendan</div>
+                        <div>0 - 0</div>
+                        <div>0 - 0</div>
                         <div>L1</div>
-                        <div>119</div>
-                        <div>92</div>
-                        <div>27</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
                     </GridRow>
                     <GridRow>
-                        <div style={{ fontWeight: "bold", color: "#6AA84F" }}>Marge<sup style={{color: "#A0A0A0"}}>e</sup></div>
-                        <div>4 - 6</div>
-                        <div>2 - 4</div>
+                        <div style={{ fontWeight: "bold", color: "#6AA84F" }}>Marge</div>
+                        <div>0 - 0</div>
+                        <div>0 - 0</div>
                         <div>W4</div>
-                        <div>83</div>
-                        <div>111</div>
-                        <div>-28</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
                     </GridRow>
                     <GridRow>
-                        <div style={{ fontWeight: "bold", color: "#FF9900" }}>Justave<sup style={{color: "#A0A0A0"}}>e</sup></div>
-                        <div>4 - 6</div>
-                        <div>2 - 4</div>
+                        <div style={{ fontWeight: "bold", color: "#FF9900" }}>Justave</div>
+                        <div>0 - 0</div>
+                        <div>0 - 0</div>
                         <div>L2</div>
-                        <div>65</div>
-                        <div>98</div>
-                        <div>-33</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
                     </GridRow>
                 </DivisionDiv>
 
@@ -159,40 +159,40 @@ export default function Standings3() {
                         <div>PD</div>
                     </HeaderRow>
                     <GridRow>
-                        <div style={{ fontWeight: "bold", color: "#999999" }}>THANdrew<sup style={{color: "#FF9900"}}>y</sup></div>
-                        <div>7 - 3</div>
-                        <div>4 - 2</div>
+                        <div style={{ fontWeight: "bold", color: "#999999" }}>THANdrew</div>
+                        <div>0 - 0</div>
+                        <div>0 - 0</div>
                         <div>W1</div>
-                        <div>89</div>
-                        <div>66</div>
-                        <div>23</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
                     </GridRow>
                     <GridRow>
-                        <div style={{ fontWeight: "bold", color: "#3586E8" }}>Isaac<sup style={{color: "#38761D"}}>x</sup></div>
-                        <div>6 - 4</div>
-                        <div>4 - 2</div>
+                        <div style={{ fontWeight: "bold", color: "#3586E8" }}>Isaac</div>
+                        <div>0 - 0</div>
+                        <div>0 - 0</div>
                         <div>W2</div>
-                        <div>107</div>
-                        <div>65</div>
-                        <div>42</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
                     </GridRow>
                     <GridRow>
-                        <div style={{ fontWeight: "bold", color: "#FF00FF" }}>Morgan<sup style={{color: "#A0A0A0"}}>e</sup></div>
-                        <div>3 - 7</div>
-                        <div>3 - 3</div>
+                        <div style={{ fontWeight: "bold", color: "#FF00FF" }}>Morgan</div>
+                        <div>0 - 0</div>
+                        <div>0 - 0</div>
                         <div>L5</div>
-                        <div>66</div>
-                        <div>105</div>
-                        <div>-37</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
                     </GridRow>
                     <GridRow>
-                        <div style={{ fontWeight: "bold", color: "#9900FF" }}>Trocean<sup style={{color: "#A0A0A0"}}>e</sup></div>
-                        <div>2 - 8</div>
-                        <div>1 - 5</div>
+                        <div style={{ fontWeight: "bold", color: "#9900FF" }}>Trocean</div>
+                        <div>0 - 0</div>
+                        <div>0 - 0</div>
                         <div>L4</div>
-                        <div>94</div>
-                        <div>129</div>
-                        <div>-35</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
                     </GridRow>
                 </DivisionDiv>
             </StandingsContainer>

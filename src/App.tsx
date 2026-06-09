@@ -20,47 +20,54 @@ import FullStats from "./components/FullStats.tsx";
 import Season1 from './components/seasons/Season1.tsx';
 import Season2 from './components/seasons/Season2.tsx';
 import Season3 from './components/seasons/Season3.tsx';
+import Season4 from './components/seasons/Season4.tsx';
 
 import Awards1 from "./components/seasons/Season1/Awards.tsx";
 import Awards2 from "./components/seasons/Season2/Awards.tsx";
 import Awards3 from "./components/seasons/Season3/Awards.tsx";
+import Awards4 from "./components/seasons/Season4/Awards.tsx";
 import Schedule1 from "./components/seasons/Season1/Schedule.tsx";
 import Schedule2 from "./components/seasons/Season2/Schedule.tsx";
 import Schedule3 from "./components/seasons/Season3/Schedule.tsx";
+import Schedule4 from "./components/seasons/Season4/Schedule.tsx";
 import Playoffs1 from "./components/seasons/Season1/Playoffs.tsx";
 import Playoffs2 from "./components/seasons/Season2/Playoffs.tsx";
 import Playoffs3 from "./components/seasons/Season3/Playoffs.tsx";
+import Playoffs4 from "./components/seasons/Season4/Playoffs.tsx";
 import Standings1 from "./components/seasons/Season1/Standings.tsx";
 import Standings2 from "./components/seasons/Season2/Standings.tsx";
 import Standings3 from "./components/seasons/Season3/Standings.tsx";
+import Standings4 from "./components/seasons/Season4/Standings.tsx";
 import FullStats2 from "./components/seasons/Season2/FullStats.tsx";
 import Other1 from "./components/seasons/Season1/Other.tsx";
 import Other2 from "./components/seasons/Season2/Other.tsx";
 import Other3 from "./components/seasons/Season3/Other.tsx";
+import Other4 from "./components/seasons/Season4/Other.tsx";
 import Draft1 from "./components/seasons/Season1/Draft.tsx";
 import Draft2 from "./components/seasons/Season2/Draft.tsx";
 import Draft3 from "./components/seasons/Season3/Draft.tsx";
+import Draft4 from "./components/seasons/Season4/Draft.tsx";
 
-import Koopa from "./components/headlines/Koopa.tsx";
-import DryBones from "./components/headlines/DryBones.tsx";
-import MiiBreakout from "./components/headlines/MiiBreakout.tsx";
-import DraftRecap from "./components/headlines/DraftRecap.tsx";
-import CorkedBat from "./components/headlines/CorkedBat.tsx";
-import Training from "./components/headlines/Training.tsx";
-import Week1Recap from "./components/headlines/Week1Recap.tsx";
-import Week2Recap from "./components/headlines/Week2Recap.tsx";
-import Week3Recap from "./components/headlines/Week3Recap.tsx";
-import Week4Recap from "./components/headlines/Week4Recap.tsx";
-import Week5Recap from "./components/headlines/Week5Recap.tsx";
-import Week6Recap from "./components/headlines/Week6Recap.tsx";
-import Week7Recap from "./components/headlines/Week7Recap.tsx";
-import Week8Recap from "./components/headlines/Week8Recap.tsx";
-import Week9Recap from "./components/headlines/Week9Recap.tsx";
-import Week10Recap from "./components/headlines/Week10Recap.tsx";
-import PlayoffRecap from "./components/headlines/PlayoffRecap.tsx";
-import Season2Recap from "./components/headlines/Season2Recap.tsx";
-import AllStarGame from "./components/headlines/AllStarGame.tsx";
-import Blooper from "./components/headlines/Blooper.tsx";
+import Koopa from "./components/headlines/season1/Koopa.tsx";
+import DryBones from "./components/headlines/season1/DryBones.tsx";
+import MiiBreakout from "./components/headlines/season1/MiiBreakout.tsx";
+import DraftRecap from "./components/headlines/season2/DraftRecap.tsx";
+import CorkedBat from "./components/headlines/season2/CorkedBat.tsx";
+import Training from "./components/headlines/season2/Training.tsx";
+import Week1Recap from "./components/headlines/season2/Week1Recap.tsx";
+import Week2Recap from "./components/headlines/season2/Week2Recap.tsx";
+import Week3Recap from "./components/headlines/season2/Week3Recap.tsx";
+import Week4Recap from "./components/headlines/season2/Week4Recap.tsx";
+import Week5Recap from "./components/headlines/season2/Week5Recap.tsx";
+import Week6Recap from "./components/headlines/season2/Week6Recap.tsx";
+import Week7Recap from "./components/headlines/season2/Week7Recap.tsx";
+import Week8Recap from "./components/headlines/season2/Week8Recap.tsx";
+import Week9Recap from "./components/headlines/season2/Week9Recap.tsx";
+import Week10Recap from "./components/headlines/season2/Week10Recap.tsx";
+import PlayoffRecap from "./components/headlines/season2/PlayoffRecap.tsx";
+import Season2Recap from "./components/headlines/season2/Season2Recap.tsx";
+import AllStarGame from "./components/headlines/season2/AllStarGame.tsx";
+import Blooper from "./components/headlines/season2/Blooper.tsx";
 
 import DraftRecap3 from "./components/headlines/season3/DraftRecap.tsx";
 import Week1Recap3 from "./components/headlines/season3/Week1Recap.tsx";
@@ -179,56 +186,65 @@ function Root() {
                     <Route path="/season/stats" element={<Content><FullStats/></Content>} />
 
                     /* Archives */
-                    <Route path="/archives/seasons/Season1" element={<Season1 />} />
-                    <Route path="/archives/seasons/Season2" element={<Season2 />} />
-                    <Route path="/archives/seasons/Season3" element={<Season3 />} />
+                    <Route path="/archives/Season1" element={<Season1 />} />
+                    <Route path="/archives/Season2" element={<Season2 />} />
+                    <Route path="/archives/Season3" element={<Season3 />} />
+                    <Route path="/archives/Season4" element={<Season4 />} />
 
                     /* Season 1 */
-                    <Route path="/archives/seasons/Season1/Awards" element={<Awards1 />} />
-                    <Route path="/archives/seasons/Season1/Schedule" element={<Schedule1 />} />
-                    <Route path="/archives/seasons/Season1/Playoffs" element={<Playoffs1 />} />
-                    <Route path="/archives/seasons/Season1/Standings" element={<Standings1 />} />
-                    <Route path="/archives/seasons/Season1/Other" element={<Other1 />} />
-                    <Route path="/archives/seasons/Season1/Draft" element={<Draft1 />} />
+                    <Route path="/archives/Season1/Awards" element={<Awards1 />} />
+                    <Route path="/archives/Season1/Schedule" element={<Schedule1 />} />
+                    <Route path="/archives/Season1/Playoffs" element={<Playoffs1 />} />
+                    <Route path="/archives/Season1/Standings" element={<Standings1 />} />
+                    <Route path="/archives/Season1/Other" element={<Other1 />} />
+                    <Route path="/archives/Season1/Draft" element={<Draft1 />} />
 
                     /* Season 2 */
-                    <Route path="/archives/seasons/Season2/Awards" element={<Awards2 />} />
-                    <Route path="/archives/seasons/Season2/Schedule" element={<Schedule2 />} />
-                    <Route path="/archives/seasons/Season2/Playoffs" element={<Playoffs2 />} />
-                    <Route path="/archives/seasons/Season2/Standings" element={<Standings2 />} />
-                    <Route path="/archives/seasons/Season2/Other" element={<Other2 />} />
-                    <Route path="/archives/seasons/Season2/Draft" element={<Draft2 />} />
-                    <Route path="/archives/seasons/Season2/Stats" element={<Content><FullStats2 /></Content>} />
+                    <Route path="/archives/Season2/Awards" element={<Awards2 />} />
+                    <Route path="/archives/Season2/Schedule" element={<Schedule2 />} />
+                    <Route path="/archives/Season2/Playoffs" element={<Playoffs2 />} />
+                    <Route path="/archives/Season2/Standings" element={<Standings2 />} />
+                    <Route path="/archives/Season2/Other" element={<Other2 />} />
+                    <Route path="/archives/Season2/Draft" element={<Draft2 />} />
+                    <Route path="/archives/Season2/Stats" element={<Content><FullStats2 /></Content>} />
 
                     /* Season 3 */
-                    <Route path="/archives/seasons/Season3/Awards" element={<Awards3 />} />
-                    <Route path="/archives/seasons/Season3/Schedule" element={<Schedule3 />} />
-                    <Route path="/archives/seasons/Season3/Playoffs" element={<Playoffs3 />} />
-                    <Route path="/archives/seasons/Season3/Standings" element={<Standings3 />} />
-                    <Route path="/archives/seasons/Season3/Other" element={<Other3 />} />
-                    <Route path="/archives/seasons/Season3/Draft" element={<Draft3 />} />
+                    <Route path="/archives/Season3/Awards" element={<Awards3 />} />
+                    <Route path="/archives/Season3/Schedule" element={<Schedule3 />} />
+                    <Route path="/archives/Season3/Playoffs" element={<Playoffs3 />} />
+                    <Route path="/archives/Season3/Standings" element={<Standings3 />} />
+                    <Route path="/archives/Season3/Other" element={<Other3 />} />
+                    <Route path="/archives/Season3/Draft" element={<Draft3 />} />
+
+                    /* Season 4 */
+                    <Route path="/archives/Season4/Awards" element={<Awards4 />} />
+                    <Route path="/archives/Season4/Schedule" element={<Schedule4 />} />
+                    <Route path="/archives/Season4/Playoffs" element={<Playoffs4 />} />
+                    <Route path="/archives/Season4/Standings" element={<Standings4 />} />
+                    <Route path="/archives/Season4/Other" element={<Other4 />} />
+                    <Route path="/archives/Season4/Draft" element={<Draft4 />} />
 
                     /* Headlines */
                     <Route path="/headlines/Koopa" element={<Koopa />} />
                     <Route path="/headlines/DryBones" element={<DryBones />} />
                     <Route path="/headlines/MiiBreakout" element={<MiiBreakout />} />
-                    <Route path="/headlines/DraftRecap" element={<DraftRecap />} />
-                    <Route path="/headlines/CorkedBat" element={<CorkedBat />} />
-                    <Route path="/headlines/Training" element={<Training />} />
-                    <Route path="/headlines/Week1Recap" element={<Week1Recap />} />
-                    <Route path="/headlines/Week2Recap" element={<Week2Recap />} />
-                    <Route path="/headlines/Week3Recap" element={<Week3Recap />} />
-                    <Route path="/headlines/Week4Recap" element={<Week4Recap />} />
-                    <Route path="/headlines/Week5Recap" element={<Week5Recap />} />
-                    <Route path="/headlines/Week6Recap" element={<Week6Recap />} />
-                    <Route path="/headlines/Week7Recap" element={<Week7Recap />} />
-                    <Route path="/headlines/Week8Recap" element={<Week8Recap />} />
-                    <Route path="/headlines/Week9Recap" element={<Week9Recap />} />
-                    <Route path="/headlines/Week10Recap" element={<Week10Recap />} />
-                    <Route path="/headlines/PlayoffRecap" element={<PlayoffRecap />} />
-                    <Route path="/headlines/Season2Recap" element={<Season2Recap />} />
-                    <Route path="/headlines/Blooper" element={<Blooper />} />
-                    <Route path="/headlines/AllStarGame" element={<AllStarGame />} />
+                    <Route path="/headlines/season2/DraftRecap" element={<DraftRecap />} />
+                    <Route path="/headlines/season2/CorkedBat" element={<CorkedBat />} />
+                    <Route path="/headlines/season2Training" element={<Training />} />
+                    <Route path="/headlines/season2/Week1Recap" element={<Week1Recap />} />
+                    <Route path="/headlines/season2/Week2Recap" element={<Week2Recap />} />
+                    <Route path="/headlines/season2/Week3Recap" element={<Week3Recap />} />
+                    <Route path="/headlines/season2/Week4Recap" element={<Week4Recap />} />
+                    <Route path="/headlines/season2/Week5Recap" element={<Week5Recap />} />
+                    <Route path="/headlines/season2/Week6Recap" element={<Week6Recap />} />
+                    <Route path="/headlines/season2/Week7Recap" element={<Week7Recap />} />
+                    <Route path="/headlines/season2/Week8Recap" element={<Week8Recap />} />
+                    <Route path="/headlines/season2/Week9Recap" element={<Week9Recap />} />
+                    <Route path="/headlines/season2/Week10Recap" element={<Week10Recap />} />
+                    <Route path="/headlines/season2/PlayoffRecap" element={<PlayoffRecap />} />
+                    <Route path="/headlines/season2/Season2Recap" element={<Season2Recap />} />
+                    <Route path="/headlines/season2/Blooper" element={<Blooper />} />
+                    <Route path="/headlines/season2/AllStarGame" element={<AllStarGame />} />
                     <Route path="/headlines/season3/DraftRecap" element={<DraftRecap3 />} />
                     <Route path="/headlines/season3/Week1Recap" element={<Week1Recap3 />} />
                     <Route path="/headlines/season3/Week2Recap" element={<Week2Recap3 />} />

@@ -1,5 +1,5 @@
 import {ContentDiv, StyledHeader, ArticleMeta, SeparatorLine, Passage, StyledMiniHeader,
-    StoryDiv, Stories, Story, MiniImage, StyledLink, Overlay, Headline, ToggleButton, GenImage} from "../../components/headlines/HeadlineStyles";
+    StoryDiv, Stories, Story, MiniImage, StyledLink, Overlay, Headline, ToggleButton, GenImage} from "../HeadlineStyles.ts";
 import {Link} from "react-router-dom";
 
 export default function Training() {

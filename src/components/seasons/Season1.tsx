@@ -32,22 +32,22 @@ export default function Season1() {
             <SeparatorLine />
             <LinkDiv>
                 <StyledLink bg="/archives/schedule.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Schedule">Schedule</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season1/Schedule">Schedule</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/Draft.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Draft">Draft</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season1/Draft">Draft</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/awards.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Awards">Awards</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season1/Awards">Awards</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/Standings.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Standings">Standings</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season1/Standings">Standings</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/playoffs.png">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Playoffs">Playoffs</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season1/Playoffs">Playoffs</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/other.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1/Other">Other</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season1/Other">Other</Link>
                 </StyledLink>
             </LinkDiv>
         </ContentDiv>

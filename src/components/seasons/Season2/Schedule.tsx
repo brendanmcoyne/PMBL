@@ -232,7 +232,7 @@ export default function Schedule2() {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "white"}} to="/archives/seasons/Season2">← Back</Link>
+                <Link style={{color: "white"}} to="/archives/Season2">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 2 Regular Season</StyledHeader>
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 1</StyledMiniHeader>

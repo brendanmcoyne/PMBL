@@ -1,6 +1,6 @@
 import {styled} from "styled-components";
 import { Link } from "react-router-dom";
-import { draftRoster } from "../../../data/Season3Draft";
+import { draftRoster } from "../../../data/Season4Draft";
 import { ToggleButton, StyledHeader } from "../../CommonStyles.ts";
 
 export const ContentDiv = styled.div`
@@ -113,9 +113,9 @@ const Draft3 = () => {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "white"}} to="/archives/Season3">← Back</Link>
+                <Link style={{color: "white"}} to="/archives/Season4">← Back</Link>
             </ToggleButton>
-            <StyledHeader style={{marginBottom: "0"}}>Season 3 PMBL Draft</StyledHeader>
+            <StyledHeader style={{marginBottom: "0"}}>Season 4 PMBL Draft</StyledHeader>
             {rounds.map((roundPicks, roundIndex) => (
                 <div key={roundIndex}>
                     <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Round {roundIndex + 1}</StyledMiniHeader>

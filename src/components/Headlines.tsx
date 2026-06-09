@@ -218,119 +218,119 @@ export default function Players() {
                 <GenImage src="/headlines/draft.jpg" alt="Week10" />
                 <Overlay>
                     <Headline>Complete Season 2 Recap</Headline>
-                    <StyledLink to="/headlines/Season2Recap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Season2Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/playoffs.jpg" alt="Week10" />
                 <Overlay>
                     <Headline>Season 2 Playoff Recap</Headline>
-                    <StyledLink to="/headlines/PlayoffRecap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/PlayoffRecap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/week10.jpg" alt="Week10" />
                 <Overlay>
                     <Headline>Season 2 Week 10 Recap</Headline>
-                    <StyledLink to="/headlines/Week10Recap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Week10Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/week9.jpg" alt="Week9" />
                 <Overlay>
                     <Headline>Season 2 Week 9 Recap</Headline>
-                    <StyledLink to="/headlines/Week9Recap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Week9Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/week8.jpg" alt="Week8" />
                 <Overlay>
                     <Headline>Season 2 Week 8 Recap</Headline>
-                    <StyledLink to="/headlines/Week8Recap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Week8Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/week7.jpg" alt="Week7" />
                 <Overlay>
                     <Headline>Season 2 Week 7 Recap</Headline>
-                    <StyledLink to="/headlines/Week7Recap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Week7Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/blooper.jpeg" alt="Blooper" />
                 <Overlay>
                     <Headline>Blooper Asks Crush Out, Got Something Better Instead</Headline>
-                    <StyledLink to="/headlines/Blooper">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Blooper">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/AllStar.jpg" alt="AllStar" />
                 <Overlay>
                     <Headline>Season 2 All Star Game Recap</Headline>
-                    <StyledLink to="/headlines/AllStarGame">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/AllStarGame">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/week6.jpg" alt="Week6" />
                 <Overlay>
                     <Headline>Season 2 Week 6 Recap</Headline>
-                    <StyledLink to="/headlines/Week6Recap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Week6Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/week5.webp" alt="Week5" />
                 <Overlay>
                     <Headline>Season 2 Week 5 Recap</Headline>
-                    <StyledLink to="/headlines/Week5Recap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Week5Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/week4.jpg" alt="Week4" />
                 <Overlay>
                     <Headline>Season 2 Week 4 Recap</Headline>
-                    <StyledLink to="/headlines/Week4Recap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Week4Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/week3.webp" alt="Week3" />
                 <Overlay>
                     <Headline>Season 2 Week 3 Recap</Headline>
-                    <StyledLink to="/headlines/Week3Recap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Week3Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/training.jpg" alt="Training" />
                 <Overlay>
                     <Headline>Deep Dive into the Justave Process</Headline>
-                    <StyledLink to="/headlines/Training">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Training">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/week2.jpg" alt="Week2" />
                 <Overlay>
                     <Headline>Season 2 Week 2 Recap</Headline>
-                    <StyledLink to="/headlines/Week2Recap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Week2Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/week1.jpg" alt="Week1" />
                 <Overlay>
                     <Headline>Season 2 Week 1 Recap</Headline>
-                    <StyledLink to="/headlines/Week1Recap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/Week1Recap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/corkedbat.jpg" alt="Corked" />
                 <Overlay>
                     <Headline>Corked Bat Allegations Have Caused Outrage</Headline>
-                    <StyledLink to="/headlines/CorkedBat">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/CorkedBat">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>
                 <GenImage src="/headlines/draft.jpg" alt="Draft" />
                 <Overlay>
                     <Headline>Season 2 Draft Recap</Headline>
-                    <StyledLink to="/headlines/DraftRecap">Click to read more!</StyledLink>
+                    <StyledLink to="/headlines/season2/DraftRecap">Click to read more!</StyledLink>
                 </Overlay>
             </Story>
             <Story $animate={ready}>

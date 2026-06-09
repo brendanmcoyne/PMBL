@@ -6,6 +6,8 @@ import { rosters2 } from "../data/Season2Rosters.ts";
 import type { Roster2 } from "../data/Season2Rosters.ts";
 import { rosters3 } from "../data/Season3Rosters.ts";
 import type { Roster3 } from "../data/Season3Rosters.ts";
+import { rosters4 } from "../data/Season4Rosters.ts";
+import type { Roster4 } from "../data/Season4Rosters.ts";
 import { StyledHeader } from "../components/CommonStyles.ts";
 import {styled, css, keyframes} from 'styled-components';
 import { useEffect, useState } from 'react';
@@ -397,6 +399,12 @@ export default function Managers() {
         );
     };
 
+    const getRosterForManagerS4 = (managerName: string, oldName?: string): Roster4 | undefined => {
+        return rosters4.find(
+            (r) => r.manager === managerName || (oldName && r.manager === oldName)
+        );
+    };
+
     const [ready, setReady] = useState(false);
 
     useEffect(() => {
@@ -670,7 +678,7 @@ export default function Managers() {
                                     <ModalTopLayout>
                                         <ModalLeft>
                                             <ModalImage src={selectedManager.src} alt="photo"/>
-                                            <img src={selectedManager.s3banner} alt="banner"/>
+                                            <img src={selectedManager.s4banner} alt="banner"/>
                                         </ModalLeft>
                                         <ModalRight>
                                             <StatCard>Record: {selectedManager.record}</StatCard>
@@ -766,6 +774,37 @@ export default function Managers() {
                                                 <img src={selectedManager.s3banner} alt="banner" />
                                                 <ul style={{listStyleType: "none", padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.3rem",}}>
                                                     {roster3.roster.map((player) => (
+                                                        <li key={player.name} style={{background: "#e3e3e3", padding: "6px 10px",
+                                                            borderRadius: "6px", fontWeight: "500",}}>{player.name}</li>
+                                                    ))}
+                                                </ul>
+                                            </>
+                                        );
+                                    })()}
+
+                                    <StyledMiniHeader style={{ color: "#303030", marginTop: "1.5rem" }}>Season 4 Roster</StyledMiniHeader>
+
+                                    {(() => {
+                                        const roster4 = getRosterForManagerS4(selectedManager.name, selectedManager.oldname);
+
+                                        if (!roster4) {
+                                            return <p>No Season 4 roster available.</p>;
+                                        }
+
+                                        return (
+                                            <>
+                                                {roster4.accolades && (
+                                                    <div style={{display: "flex", flexDirection: "column", gap: "8px", marginBottom: "10px",}}>
+                                                        {roster4.accolades.map((acc) => (
+                                                            <div key={acc.type} style={{backgroundColor: acc.color, color: "white",
+                                                                padding: "4px", borderRadius: "8px", fontWeight: "bold",}}>{acc.type}</div>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                                <p style={{ fontWeight: "bold", marginBottom: "0.4rem" }}><strong>Captain:</strong> {roster4.captain}</p>
+                                                <img src={selectedManager.s4banner} alt="banner" />
+                                                <ul style={{listStyleType: "none", padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.3rem",}}>
+                                                    {roster4.roster.map((player) => (
                                                         <li key={player.name} style={{background: "#e3e3e3", padding: "6px 10px",
                                                             borderRadius: "6px", fontWeight: "500",}}>{player.name}</li>
                                                     ))}
