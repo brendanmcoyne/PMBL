@@ -364,11 +364,15 @@ const RivalryCell = styled.div`
     position: relative;
     margin: 0;
     cursor: help;
-    
+
     &:hover span {
         opacity: 1;
         visibility: visible;
         transform: translate(-50%, -8px);
+
+        @media screen and (max-width: 900px) {
+            transform: translateX(-50%);
+        }
     }
     
     &:hover {
@@ -394,6 +398,14 @@ const Tooltip = styled.span`
     gap: 4px;
     min-width: 140px;
     text-align: center;
+
+    @media screen and (max-width: 900px) {
+        position: fixed;
+        left: 50%;
+        top: 90px;
+        bottom: auto;
+        transform: translateX(-50%);
+    }
 `;
 
 export default function Managers() {
