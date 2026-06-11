@@ -10,6 +10,7 @@ type Team = {
 export type Roster3 = {
     manager: string;
     captain: string;
+    record: string;
     roster: Team[];
     accolades?: Accs[];
 }
@@ -18,6 +19,7 @@ export const rosters3: Roster3[] = [
     {
         manager: "Brendan",
         captain: "Waluigi",
+        record: "6-4",
         roster: [
             { name: "Funky Kong" },
             { name: "Green Dry Bones" },
@@ -38,6 +40,7 @@ export const rosters3: Roster3[] = [
     {
         manager: "Justave",
         captain: "Mario",
+        record: "4-6",
         roster: [
             { name: "Hammer Bro" },
             { name: "Yoshi" },
@@ -56,6 +59,7 @@ export const rosters3: Roster3[] = [
     {
         manager: "James",
         captain: "Bowser Jr",
+        record: "8-2",
         roster: [
             { name: "Fire Bro" },
             { name: "Red Kritter" },
@@ -77,6 +81,7 @@ export const rosters3: Roster3[] = [
     {
         manager: "Marge",
         captain: "Luigi",
+        record: "4-6",
         roster: [
             { name: "Green Kritter" },
             { name: "Green Kamek" },
@@ -95,6 +100,7 @@ export const rosters3: Roster3[] = [
     {
         manager: "Isaac",
         captain: "Bowser",
+        record: "6-4",
         roster: [
             { name: "Blue Kritter" },
             { name: "Blue Dry Bones" },
@@ -115,6 +121,7 @@ export const rosters3: Roster3[] = [
     {
         manager: "Trocean",
         captain: "Donkey Kong",
+        record: "2-8",
         roster: [
             { name: "Wiggler" },
             { name: "Baby DK" },
@@ -131,6 +138,7 @@ export const rosters3: Roster3[] = [
     {
         manager: "Morgan",
         captain: "Daisy",
+        record: "3-7",
         roster: [
             { name: "Peach" },
             { name: "Green Toad" },
@@ -148,6 +156,7 @@ export const rosters3: Roster3[] = [
     {
         manager: "THANdrew",
         captain: "Birdo",
+        record: "7-3",
         roster: [
             { name: "Boomerang Bro" },
             { name: "Blue Yoshi" },

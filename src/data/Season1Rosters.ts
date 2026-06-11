@@ -10,6 +10,7 @@ type Team = {
 export type Roster = {
     manager: string;
     captain: string;
+    record: string;
     roster: Team[];
     accolades?: Accs[];
 }
@@ -18,6 +19,7 @@ export const rosters: Roster[] = [
     {
         manager: "Brendan",
         captain: "Donkey Kong",
+        record: "7-3",
         roster: [
             {name: "Red Kritter"},
             {name: "Dixie Kong"},
@@ -40,6 +42,7 @@ export const rosters: Roster[] = [
     {
         manager: "Justin",
         captain: "Luigi",
+        record: "6-4",
         roster: [
             {name: "Daisy"},
             {name: "Green Kritter"},
@@ -57,6 +60,7 @@ export const rosters: Roster[] = [
     {
         manager: "James",
         captain: "Bowser",
+        record: "6-4",
         roster: [
             { name: "Bowser Jr" },
             { name: "King K Rool" },
@@ -77,6 +81,7 @@ export const rosters: Roster[] = [
     {
         manager: "Matt",
         captain: "Yoshi",
+        record: "4-6",
         roster: [
             { name: "King Boo" },
             { name: "Chungy" },
@@ -95,6 +100,7 @@ export const rosters: Roster[] = [
     {
         manager: "Isaac",
         captain: "Mario",
+        record: "4-6",
         roster: [
             { name: "Birdo" },
             { name: "Fire Bro" },
@@ -112,6 +118,7 @@ export const rosters: Roster[] = [
     {
         manager: "Christach",
         captain: "Peach",
+        record: "3-7",
         roster: [
             { name: "Blue Toad" },
             { name: "Red Pianta" },
@@ -128,6 +135,7 @@ export const rosters: Roster[] = [
     {
         manager: "Morgan",
         captain: "Diddy Kong",
+        record: "5-5",
         roster: [
             { name: "Petey Piranha" },
             { name: "Boo" },
@@ -148,6 +156,7 @@ export const rosters: Roster[] = [
     {
         manager: "DANdrew",
         captain: "Waluigi",
+        record: "5-5",
         roster: [
             { name: "Funky Kong" },
             { name: "Blue Yoshi" },

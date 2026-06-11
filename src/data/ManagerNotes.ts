@@ -9,6 +9,7 @@ export type Manager = {
     divships?: number;
     playoffs?: number;
     champs?: number;
+
     s1banner: string;
     s2banner: string;
     s3banner: string;

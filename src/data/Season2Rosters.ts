@@ -10,6 +10,7 @@ type Team = {
 export type Roster2 = {
     manager: string;
     captain: string;
+    record: string;
     roster: Team[];
     accolades?: Accs[];
 }
@@ -18,6 +19,7 @@ export const rosters2: Roster2[] = [
     {
         manager: "Brendan",
         captain: "Bowser",
+        record: "4-6",
         roster: [
             { name: "Bowser Jr"},
             { name: "Boomerang Bro"},
@@ -34,6 +36,7 @@ export const rosters2: Roster2[] = [
     {
         manager: "Justave",
         captain: "Luigi",
+        record: "7-3",
         roster: [
             { name: "Hammer Bro"},
             { name: "Green Kritter"},
@@ -56,6 +59,7 @@ export const rosters2: Roster2[] = [
     {
         manager: "James",
         captain: "Birdo",
+        record: "6-4",
         roster: [
             { name: "Petey Piranha" },
             { name: "Wiggler" },
@@ -77,6 +81,7 @@ export const rosters2: Roster2[] = [
     {
         manager: "Marge",
         captain: "Peach",
+        record: "3-7",
         roster: [
             { name: "King Boo" },
             { name: "Boo" },
@@ -94,6 +99,7 @@ export const rosters2: Roster2[] = [
     {
         manager: "Isaac",
         captain: "Donkey Kong",
+        record: "7-3",
         roster: [
             { name: "Brown Kritter" },
             { name: "Funky Kong" },
@@ -114,6 +120,7 @@ export const rosters2: Roster2[] = [
     {
         manager: "Trocean",
         captain: "Mario",
+        record: "3-7",
         roster: [
             { name: "Red Kamek" },
             { name: "Red Pianta" },
@@ -131,6 +138,7 @@ export const rosters2: Roster2[] = [
     {
         manager: "Morgan",
         captain: "Daisy",
+        record: "5-5",
         roster: [
             { name: "Diddy Kong" },
             { name: "Wario" },
@@ -148,6 +156,7 @@ export const rosters2: Roster2[] = [
     {
         manager: "THANdrew",
         captain: "Waluigi",
+        record: "5-5",
         roster: [
             { name: "Fire Bro" },
             { name: "Blue Kritter" },

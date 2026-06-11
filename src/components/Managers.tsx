@@ -43,6 +43,11 @@ const DivisionContainer = styled.div`
     }
 `;
 
+const StyleRecord = styled.h4`
+    margin-top: 5px;
+    margin-bottom: 0;
+`;
+
 const DivisionSection = styled.div`
     display: flex;
     flex-direction: column;
@@ -744,7 +749,8 @@ export default function Managers() {
                                                         ))}
                                                     </div>
                                                 )}
-                                                <p style={{ fontWeight: "bold", marginBottom: "0.4rem" }}><strong>Captain:</strong> {roster.captain}</p>
+                                                <StyleRecord><strong>Record:</strong> {roster.record}</StyleRecord>
+                                                <p style={{ fontWeight: "bold", marginTop: "0", marginBottom: "0.4rem" }}><strong>Captain:</strong> {roster.captain}</p>
                                                 <img src={selectedManager.s1banner} alt="banner" />
                                                 <ul style={{listStyleType: "none", padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.3rem",}}>
                                                     {roster.roster.map((player) => (
@@ -774,7 +780,8 @@ export default function Managers() {
                                                         ))}
                                                     </div>
                                                 )}
-                                                <p style={{ fontWeight: "bold", marginBottom: "0.4rem" }}><strong>Captain:</strong> {roster2.captain}</p>
+                                                <StyleRecord><strong>Record:</strong> {roster2.record}</StyleRecord>
+                                                <p style={{ fontWeight: "bold", marginTop: "0", marginBottom: "0.4rem" }}><strong>Captain:</strong> {roster2.captain}</p>
                                                 <img src={selectedManager.s2banner} alt="banner" />
                                                 <ul style={{listStyleType: "none", padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.3rem",}}>
                                                     {roster2.roster.map((player) => (
@@ -805,7 +812,8 @@ export default function Managers() {
                                                         ))}
                                                     </div>
                                                 )}
-                                                <p style={{ fontWeight: "bold", marginBottom: "0.4rem" }}><strong>Captain:</strong> {roster3.captain}</p>
+                                                <StyleRecord><strong>Record:</strong> {roster3.record}</StyleRecord>
+                                                <p style={{ fontWeight: "bold", marginTop: "0", marginBottom: "0.4rem" }}><strong>Captain:</strong> {roster3.captain}</p>
                                                 <img src={selectedManager.s3banner} alt="banner" />
                                                 <ul style={{listStyleType: "none", padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.3rem",}}>
                                                     {roster3.roster.map((player) => (
@@ -836,7 +844,7 @@ export default function Managers() {
                                                         ))}
                                                     </div>
                                                 )}
-                                                <p style={{ fontWeight: "bold", marginBottom: "0.4rem" }}><strong>Captain:</strong> {roster4.captain}</p>
+                                                <p style={{ fontWeight: "bold", marginTop: "0", marginBottom: "0.4rem" }}><strong>Captain:</strong> {roster4.captain}</p>
                                                 <img src={selectedManager.s4banner} alt="banner" />
                                                 <ul style={{listStyleType: "none", padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.3rem",}}>
                                                     {roster4.roster.map((player) => (

@@ -184,10 +184,6 @@ const SortButtonsContainer = styled.div`
         & > * {
             width: 100%;  
         }
-        & > *:last-child {
-            grid-column: span 2;
-            justify-self: center;
-        }
     }
 `;
 
