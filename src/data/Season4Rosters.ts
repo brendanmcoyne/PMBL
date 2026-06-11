@@ -80,7 +80,7 @@ export const rosters4: Roster4[] = [
             { name: "Charlemagne" },
             { name: "Miss Jones" },
             { name: "Shy Guy" },
-            { name: "Michelle Obama" },
+            { name: "Eugene" },
         ]
     },
     {
@@ -114,7 +114,7 @@ export const rosters4: Roster4[] = [
             { name: "Tarzan" },
             { name: "Justin Bieber" },
             { name: "Bugs Bunny" },
-            { name: "Eugene" },
+            { name: "Hima" },
         ]
     },
     {

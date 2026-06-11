@@ -10,6 +10,7 @@ export type Player = {
     gp: number;
     captain?: boolean;
     mii?: boolean;
+    retired?: boolean;
     banner?: string;
     awards?: Award[];
 };
@@ -542,6 +543,7 @@ export const players: Player[] = [
         gp: 9,
         captain: false,
         mii: true,
+        retired: true,
         awards: [
             { name: "World Series Champion", season: 1},
         ]
@@ -810,6 +812,7 @@ export const players: Player[] = [
         gp: 10,
         captain: false,
         mii: true,
+        retired: true,
         awards: [
             { name: "1x Game MVP", season: 1},
         ]
@@ -845,6 +848,7 @@ export const players: Player[] = [
         gp: 10,
         captain: false,
         mii: true,
+        retired: true,
         awards: [
             { name: "All-Star", season: 2},
             { name: "Rookie of the Year", season: 2},

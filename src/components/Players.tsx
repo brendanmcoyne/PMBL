@@ -17,6 +17,17 @@ const fadeInUp = keyframes`
   }
 `;
 
+const fadeOutDown = keyframes`
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+`;
+
 interface ToggleButtonProps {
     active: boolean;
 }
@@ -57,7 +68,7 @@ const PlayerName = styled.span`
     }
 `;
 
-const Player = styled.div<{ $accent: string; $animate?: boolean }>`
+const Player = styled.div<{ $accent: string; $animationState?: "enter" | "exit" }>`
     --accent: ${({ $accent }) => $accent};
     background: linear-gradient(100deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.06) 100%);
     border-bottom: 3px solid white;
@@ -70,14 +81,16 @@ const Player = styled.div<{ $accent: string; $animate?: boolean }>`
     text-align: center;
     cursor: pointer;
 
-    ${({ $animate }) => $animate ? css`
-          opacity: 0;
-          transform: translateY(30px);
-          animation: ${fadeInUp} 1s ease forwards;
-          animation-delay: 0.7s;
-        ` : css`
-          opacity: 1;
-          transform: none;
+    ${({ $animationState }) =>
+            $animationState === "enter" &&
+            css`
+            animation: ${fadeInUp} 1s ease 0.2s both;
+        `}
+
+    ${({ $animationState }) =>
+            $animationState === "exit" &&
+            css`
+            animation: ${fadeOutDown} 0.35s ease both;
         `}
 `;
 
@@ -387,7 +400,11 @@ function statWithEmoji(value: number): string {
 }
 
 export default function Players() {
-    const [sortOption, setSortOption] = useState("az");
+    const [selectedSort, setSelectedSort] = useState("az");
+    const [displayedSort, setDisplayedSort] = useState("az");
+    const [playerAnimationState, setPlayerAnimationState] = useState<"enter" | "exit">("enter");
+    const [isSorting, setIsSorting] = useState(false);
+
     const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
     const [selectedStat, setSelectedStat] = useState<Stat | null>(null);
     const [activeModalTab, setActiveModalTab] = useState<"info" | "awards" | "stats">("info");
@@ -400,21 +417,42 @@ export default function Players() {
 
     const sortedPlayers: Player[] = [...players]
         .filter((player) => {
-            if (sortOption === "captains") return player.captain;
+            if (displayedSort === "captains") return player.captain;
             return true;
         })
         .filter((player) => {
-            if (sortOption === "mii") return player.mii;
+            if (displayedSort === "mii") return player.mii;
+            return true;
+        })
+        .filter((player) => {
+            if (displayedSort === "retired") return player.retired;
             return true;
         })
         .sort((a, b) => {
-            if (sortOption === "az") return a.name.localeCompare(b.name);
-            if (sortOption === "za") return b.name.localeCompare(a.name);
-            if (sortOption === "color") return colorOrder.indexOf(a.color) - colorOrder.indexOf(b.color);
+            if (displayedSort === "az") return a.name.localeCompare(b.name);
+            if (displayedSort === "za") return b.name.localeCompare(a.name);
+            if (displayedSort === "color") return colorOrder.indexOf(a.color) - colorOrder.indexOf(b.color);
             return 0;
         });
 
     const [ready, setReady] = useState(false);
+
+    const handleSortChange = (newSort: string) => {
+        if (newSort === displayedSort || isSorting) return;
+
+        setSelectedSort(newSort);
+        setIsSorting(true);
+        setPlayerAnimationState("exit");
+
+        setTimeout(() => {
+            setDisplayedSort(newSort);
+            setPlayerAnimationState("enter");
+
+            setTimeout(() => {
+                setIsSorting(false);
+            }, 1000);
+        }, 350);
+    };
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -617,16 +655,17 @@ export default function Players() {
             <StyledHeader $animate={ready}>Players</StyledHeader>
 
             <SortButtonsContainer>
-                <SortButton $animate={ready} $active={sortOption === "az"} onClick={() => setSortOption("az")}>Sort A-Z</SortButton>
-                <SortButton $animate={ready} $active={sortOption === "za"} onClick={() => setSortOption("za")}>Sort Z-A</SortButton>
-                <SortButton $animate={ready} $active={sortOption === "color"} onClick={() => setSortOption("color")}>Sort by Color</SortButton>
-                <SortButton $animate={ready} $active={sortOption === "captains"} onClick={() => setSortOption("captains")}>Captains Only</SortButton>
-                <SortButton $animate={ready} $active={sortOption === "mii"} onClick={() => setSortOption("mii")}>Miis Only</SortButton>
+                <SortButton $animate={ready} $active={selectedSort === "az"} onClick={() => handleSortChange("az")}>Sort A-Z</SortButton>
+                <SortButton $animate={ready} $active={selectedSort === "za"} onClick={() => handleSortChange("za")}>Sort Z-A</SortButton>
+                <SortButton $animate={ready} $active={selectedSort === "color"} onClick={() => handleSortChange("color")}>Sort by Color</SortButton>
+                <SortButton $animate={ready} $active={selectedSort === "captains"} onClick={() => handleSortChange("captains")}>Captains Only</SortButton>
+                <SortButton $animate={ready} $active={selectedSort === "mii"} onClick={() => handleSortChange("mii")}>Miis Only</SortButton>
+                <SortButton $animate={ready} $active={selectedSort === "retired"} onClick={() => handleSortChange("retired")}>Retired</SortButton>
             </SortButtonsContainer>
 
             <DivisionDiv>
                 {sortedPlayers.map((player: Player) => (
-                    <Player $animate={ready}
+                    <Player $animationState={playerAnimationState}
                         key={player.name}
                         $accent={player.color === "Light Blue" ? "#6dd5fa" : player.color === "Light Green" ? "#8bc34a" : player.color?.toLowerCase() || "darkblue"}
                         onClick={() => {
