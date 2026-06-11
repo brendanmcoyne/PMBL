@@ -80,7 +80,7 @@ const ToggleButton = styled.button`
     }
 `;
 
-export default function FullStats2() {
+export default function FullStats3() {
     const [batting, setBatting] = useState<StatRow[]>([]);
     const [pitching, setPitching] = useState<StatRow[]>([]);
     const [view, setView] = useState<"batting" | "pitching">("batting");
@@ -90,10 +90,10 @@ export default function FullStats2() {
     } | null>(null);
 
     const battingUrl =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?gid=0&single=true&output=csv";
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5wCbbjTUbYIHGbkCscbS-p_3YgUAZ5SiyJmKj0l9FgWEjN6jisRwQzCpgkRoaMANdjLfr427LlzTt/pub?gid=0&single=true&output=csv";
 
     const pitchingUrl =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?gid=235178407&single=true&output=csv";
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5wCbbjTUbYIHGbkCscbS-p_3YgUAZ5SiyJmKj0l9FgWEjN6jisRwQzCpgkRoaMANdjLfr427LlzTt/pub?gid=61989451&single=true&output=csv";
 
     useEffect(() => {
         const fetchSheet = (url: string, setData: (data: StatRow[]) => void) => {

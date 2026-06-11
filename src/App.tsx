@@ -39,6 +39,7 @@ import Standings2 from "./components/seasons/Season2/Standings.tsx";
 import Standings3 from "./components/seasons/Season3/Standings.tsx";
 import Standings4 from "./components/seasons/Season4/Standings.tsx";
 import FullStats2 from "./components/seasons/Season2/FullStats.tsx";
+import FullStats3 from "./components/seasons/Season3/FullStats.tsx";
 import Other1 from "./components/seasons/Season1/Other.tsx";
 import Other2 from "./components/seasons/Season2/Other.tsx";
 import Other3 from "./components/seasons/Season3/Other.tsx";
@@ -215,6 +216,7 @@ function Root() {
                     <Route path="/archives/Season3/Standings" element={<Standings3 />} />
                     <Route path="/archives/Season3/Other" element={<Other3 />} />
                     <Route path="/archives/Season3/Draft" element={<Draft3 />} />
+                    <Route path="/archives/Season3/Stats" element={<Content><FullStats3 /></Content>} />
 
                     /* Season 4 */
                     <Route path="/archives/Season4/Awards" element={<Awards4 />} />

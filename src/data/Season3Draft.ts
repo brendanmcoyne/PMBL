@@ -273,7 +273,7 @@ export const draftRoster: DraftRoster[] = [
     {
         pick: "30th",
         round: 4,
-        player: "Blue_Pianta",
+        player: "Blue Pianta",
         manager: "Isaac",
         captain: false,
         photo: "/players/Blue_Pianta.webp",
@@ -447,7 +447,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Sherpa",
         manager: "Trocean",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Sherpa.jpg",
         color: "#9900FF",
     },
     {
@@ -852,7 +852,7 @@ export const draftRoster: DraftRoster[] = [
         player: "Eugene",
         manager: "Isaac",
         captain: false,
-        photo: "/players/mii.jpg",
+        photo: "/players/Eugene.jpg",
         color: "#3586E8",
     },
     {
