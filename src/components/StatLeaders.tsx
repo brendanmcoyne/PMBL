@@ -64,10 +64,10 @@ const ArrowButton = styled.button`
 `;
 
 const BATTING_URL =
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vRNrcLuwjEnaUMiJROqOs6CNwUY7zsn9lAg31gczRwnca6n_r02Bk_v04w7rgvzfxObieeqHGmAsDgO/pub?gid=0&single=true&output=csv";
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vR6Yquslv4MzdUiPB-H0AsVEyIMJok9SLEhBO9fuIPve_vjjFMRspjSpTA4bzsFxj6Tfezzj1UbosDM/pub?gid=0&single=true&output=csv"
 
 const PITCHING_URL =
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vRNrcLuwjEnaUMiJROqOs6CNwUY7zsn9lAg31gczRwnca6n_r02Bk_v04w7rgvzfxObieeqHGmAsDgO/pub?gid=1237690545&single=true&output=csv";
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vR6Yquslv4MzdUiPB-H0AsVEyIMJok9SLEhBO9fuIPve_vjjFMRspjSpTA4bzsFxj6Tfezzj1UbosDM/pub?gid=1237690545&single=true&output=csv"
 
 export default function StatLeadersMini() {
     const [batting, setBatting] = useState<StatRow[]>([]);

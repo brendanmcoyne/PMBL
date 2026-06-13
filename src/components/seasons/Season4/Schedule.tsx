@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useLayoutEffect } from "react";
-import { GamesSeason3 } from "../../../data/GamesSeason3";
-import type { GameStats } from "../../../data/GamesSeason3";
+import { GamesSeason4 } from "../../../data/GamesSeason4";
+import type { GameStats } from "../../../data/GamesSeason4";
 import { ToggleButton, StyledHeader } from "../../CommonStyles.ts";
 import { styled, keyframes, css } from "styled-components";
 
@@ -239,15 +239,15 @@ export default function Schedule4() {
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 1</StyledMiniHeader>
 
             <Week>
-                <Matchup onClick={() => setSelectedGame(GamesSeason3["Game1"])} style={{ cursor: "pointer" }}>
+                <Matchup onClick={() => setSelectedGame(GamesSeason4["Game1"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(0-1)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(1-0)</TeamRecord>
+                    <ScoreLine>0-1</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
                 </Matchup>
                 <Matchup style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#F1C232"}}>James</TeamName>
@@ -713,7 +713,7 @@ export default function Schedule4() {
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>** All Star Game **</StyledMiniHeader>
 
             <CenteredMatchupWrapper>
-                <Matchup onClick={() => setSelectedGame(GamesSeason3["AllStarGame"])} style={{ cursor: "pointer" }}>
+                <Matchup>
                     <TeamName style={{color: "#4A86E8"}}>All-Star East</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#FF0000"}}>All-Star West</TeamName>

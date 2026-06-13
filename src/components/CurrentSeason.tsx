@@ -169,14 +169,14 @@ export default function CurrentSeason() {
     ];
 
     const westTeams = [
-        { name: 'THANdrew', color: "#999999", record: '0-0', divRecord: '0-0' },
-        { name: 'Isaac', color: "#3586E8", record: '0-0', divRecord: '0-0' },
+        { name: 'Isaac', color: "#3586E8", record: '1-0', divRecord: '1-0' },
         { name: 'Morgan', color: "#FF00FF", record: '0-0', divRecord: '0-0' },
         { name: 'Trocean', color: "#9900FF", record: '0-0', divRecord: '0-0' },
+        { name: 'THANdrew', color: "#999999", record: '0-1', divRecord: '0-1' },
     ];
 
     const Week1 = [
-        { matchup: 1, away: "THANdrew", awaycolor: "#999999", home: "Isaac", homecolor: "#3586E8", score: "0-0" },
+        { matchup: 1, away: "THANdrew", awaycolor: "#999999", home: "Isaac", homecolor: "#3586E8", score: "0-1" },
         { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Trocean", homecolor: "#9900FF", score: "0-0" },
         { matchup: 3, away: "Brendan", awaycolor: "#CC0000", home: "Marge", homecolor: "#6AA84F", score: "0-0" },
         { matchup: 4, away: "Justave", awaycolor: "#FF9900", home: "Morgan", homecolor: "#FF00FF", score: "0-0" },
@@ -274,7 +274,7 @@ export default function CurrentSeason() {
             <StyledHeader $animate={ready}>Current Season</StyledHeader>
 
             <UpcomingGame $animate={ready}>
-                <StyledMiniHeader style={{marginBottom: "0"}}>Upcoming Game</StyledMiniHeader>
+                <StyledMiniHeader style={{marginBottom: "0"}}>Recent Game</StyledMiniHeader>
                 <Game />
             </UpcomingGame>
             <TwoSection>
