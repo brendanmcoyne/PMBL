@@ -160,7 +160,7 @@ export const GamesSeason3: Record<string, GameStats> = {
     "Game3": {
         id: "Game3",
         awayManager: "Marge",
-        homeManager: "Tracean",
+        homeManager: "Trocean",
 
         game: {
             away: {
@@ -195,15 +195,15 @@ export const GamesSeason3: Record<string, GameStats> = {
             { player: "Green Koopa", team: "Marge", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
             { player: "Yellow Pianta", team: "Marge", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
 
-            { player: "Sherpa", team: "Tracean", AB: 4, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.500" },
-            { player: "Diddy Kong", team: "Tracean", AB: 4, H: 2, R: 2, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Donkey Kong", team: "Tracean", AB: 4, H: 4, R: 3, RBI: 4, HR: 2, AVG: "1.000" },
-            { player: "Wiggler", team: "Tracean", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "King Boo", team: "Tracean", AB: 4, H: 2, R: 2, RBI: 2, HR: 1, AVG: "0.500" },
-            { player: "Baby DK", team: "Tracean", AB: 4, H: 2, R: 0, RBI: 2, HR: 0, AVG: "0.500" },
-            { player: "Gramms", team: "Tracean", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Tarzan", team: "Tracean", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Monty Mole", team: "Tracean", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "Sherpa", team: "Trocean", AB: 4, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.500" },
+            { player: "Diddy Kong", team: "Trocean", AB: 4, H: 2, R: 2, RBI: 0, HR: 0, AVG: "0.500" },
+            { player: "Donkey Kong", team: "Trocean", AB: 4, H: 4, R: 3, RBI: 4, HR: 2, AVG: "1.000" },
+            { player: "Wiggler", team: "Trocean", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
+            { player: "King Boo", team: "Trocean", AB: 4, H: 2, R: 2, RBI: 2, HR: 1, AVG: "0.500" },
+            { player: "Baby DK", team: "Trocean", AB: 4, H: 2, R: 0, RBI: 2, HR: 0, AVG: "0.500" },
+            { player: "Gramms", team: "Trocean", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
+            { player: "Tarzan", team: "Trocean", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Monty Mole", team: "Trocean", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
         ],
 
         pitchingStats: [
@@ -212,8 +212,8 @@ export const GamesSeason3: Record<string, GameStats> = {
             { player: "Green Koopa", team: "Marge", IP: 1.1, H: 5, ER: 2, SO: 0, ERA: "10.50" },
             { player: "Yellow Pianta", team: "Marge", IP: 1, H: 1, ER: 1, SO: 0, ERA: "7.00" },
 
-            { player: "Donkey Kong", team: "Tracean", IP: 4.1, H: 11, ER: 6, SO: 0, ERA: "9.69" },
-            { player: "Diddy Kong", team: "Tracean", IP: 2.2, H: 4, ER: 1, SO: 0, ERA: "2.63" },
+            { player: "Donkey Kong", team: "Trocean", IP: 4.1, H: 11, ER: 6, SO: 0, ERA: "9.69" },
+            { player: "Diddy Kong", team: "Trocean", IP: 2.2, H: 4, ER: 1, SO: 0, ERA: "2.63" },
         ]
     },
     "Game4": {

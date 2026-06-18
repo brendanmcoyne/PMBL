@@ -249,30 +249,30 @@ export default function Schedule4() {
                     <ScoreLine>0-1</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
-                <Matchup style={{ cursor: "pointer" }}>
+                <Matchup onClick={() => setSelectedGame(GamesSeason4["Game2"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(0-1)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(1-0)</TeamRecord>
+                    <ScoreLine>9-11</ScoreLine>
+                    <Stadium>Wario City</Stadium>
+                </Matchup>
+                <Matchup onClick={() => setSelectedGame(GamesSeason4["Game3"])} style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                    <TeamRecord>(0-1)</TeamRecord>
+                    <div/>
+                    <TeamRecord>(1-0)</TeamRecord>
+                    <ScoreLine>2-12</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
                 </Matchup>
                 <Matchup style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
-                </Matchup>
-                <Matchup style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <TeamRecord>(0-0)</TeamRecord>
                     <div/>
                     <TeamRecord>(0-0)</TeamRecord>

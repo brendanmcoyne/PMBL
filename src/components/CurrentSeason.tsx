@@ -162,24 +162,24 @@ export default function CurrentSeason() {
     const [round, setRound] = useState<'Conference Series' | 'World Series'>('Conference Series');
 
     const eastTeams = [
-        { name: 'James', color: "#F1C232", record: '0-0', divRecord: '0-0' },
         { name: 'Brendan', color: "#CC0000", record: '0-0', divRecord: '0-0' },
         { name: 'Marge', color: "#6AA84F", record: '0-0', divRecord: '0-0' },
-        { name: 'Justave', color: "#FF9900", record: '0-0', divRecord: '0-0' },
+        { name: 'James', color: "#F1C232", record: '0-1', divRecord: '0-0' },
+        { name: 'Justave', color: "#FF9900", record: '0-1', divRecord: '0-0' },
     ];
 
     const westTeams = [
         { name: 'Isaac', color: "#3586E8", record: '1-0', divRecord: '1-0' },
-        { name: 'Morgan', color: "#FF00FF", record: '0-0', divRecord: '0-0' },
-        { name: 'Trocean', color: "#9900FF", record: '0-0', divRecord: '0-0' },
+        { name: 'Morgan', color: "#FF00FF", record: '1-0', divRecord: '0-0' },
+        { name: 'Trocean', color: "#9900FF", record: '1-0', divRecord: '0-0' },
         { name: 'THANdrew', color: "#999999", record: '0-1', divRecord: '0-1' },
     ];
 
     const Week1 = [
         { matchup: 1, away: "THANdrew", awaycolor: "#999999", home: "Isaac", homecolor: "#3586E8", score: "0-1" },
-        { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Trocean", homecolor: "#9900FF", score: "0-0" },
-        { matchup: 3, away: "Brendan", awaycolor: "#CC0000", home: "Marge", homecolor: "#6AA84F", score: "0-0" },
-        { matchup: 4, away: "Justave", awaycolor: "#FF9900", home: "Morgan", homecolor: "#FF00FF", score: "0-0" },
+        { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Trocean", homecolor: "#9900FF", score: "9-11" },
+        { matchup: 3, away: "Justave", awaycolor: "#FF9900", home: "Morgan", homecolor: "#FF00FF", score: "2-12" },
+        { matchup: 4, away: "Brendan", awaycolor: "#CC0000", home: "Marge", homecolor: "#6AA84F", score: "0-0" },
     ];
 
     const Week2 = [
