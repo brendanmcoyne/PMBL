@@ -177,7 +177,7 @@ export default function CurrentSeason() {
 
     const Week1 = [
         { matchup: 1, away: "THANdrew", awaycolor: "#999999", home: "Isaac", homecolor: "#3586E8", score: "0-1" },
-        { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Trocean", homecolor: "#9900FF", score: "9-11" },
+        { matchup: 2, away: "James", awaycolor: "#F1C232", home: "Trocean", homecolor: "#9900FF", score: "10-11" },
         { matchup: 3, away: "Justave", awaycolor: "#FF9900", home: "Morgan", homecolor: "#FF00FF", score: "2-12" },
         { matchup: 4, away: "Brendan", awaycolor: "#CC0000", home: "Marge", homecolor: "#6AA84F", score: "0-0" },
     ];

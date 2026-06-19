@@ -256,7 +256,7 @@ export default function Schedule4() {
                     <TeamRecord>(0-1)</TeamRecord>
                     <div/>
                     <TeamRecord>(1-0)</TeamRecord>
-                    <ScoreLine>9-11</ScoreLine>
+                    <ScoreLine>10-11</ScoreLine>
                     <Stadium>Wario City</Stadium>
                 </Matchup>
                 <Matchup onClick={() => setSelectedGame(GamesSeason4["Game3"])} style={{ cursor: "pointer" }}>

@@ -106,8 +106,8 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "James",
                 color: "#F1C232",
-                scores: [7, 0, 0, 1, 1, 0, 0],
-                R: 9,
+                scores: [7, 0, 0, 1, 1, 0, 1],
+                R: 10,
                 H: 20,
                 E: 0,
                 LOB: 8
@@ -166,9 +166,9 @@ export const GamesSeason4: Record<string, GameStats> = {
                 color: "#FF9900",
                 scores: [0, 0, 0, 0, 0, 2, 0],
                 R: 2,
-                H: 0,
-                E: 0,
-                LOB: 0
+                H: 7,
+                E: 2,
+                LOB: 3
             },
 
             home: {
@@ -176,9 +176,9 @@ export const GamesSeason4: Record<string, GameStats> = {
                 color: "#FF00FF",
                 scores: [1, 2, 2, 0, 5, 2, 0],
                 R: 12,
-                H: 0,
+                H: 20,
                 E: 0,
-                LOB: 0
+                LOB: 8
             }
         },
 
@@ -186,12 +186,12 @@ export const GamesSeason4: Record<string, GameStats> = {
             { player: "Light Blue Yoshi", team: "Justave", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
             { player: "Triangle", team: "Justave", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
             { player: "Funky Kong", team: "Justave", AB: 3, H: 2, R: 1, RBI: 2, HR: 1, AVG: "0.667" },
-            { player: "Smurf", team: "Justave", AB: 4, H: 2, R: 1, RBI: 4, HR: 1, AVG: "0.500" },
-            { player: "Light Blue Shy Guy", team: "Justave", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
+            { player: "Smurf", team: "Justave", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Light Blue Shy Guy", team: "Justave", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
             { player: "Peach", team: "Justave", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Grayson McKean", team: "Justave", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Jake", team: "Justave", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Sabrina", team: "Justave", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Grayson McKean", team: "Justave", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Jake", team: "Justave", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "Sabrina", team: "Justave", AB: 2, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
 
             { player: "Yellow Toad", team: "Morgan", AB: 5, H: 4, R: 1, RBI: 0, HR: 0, AVG: "0.800" },
             { player: "Dry Bones", team: "Morgan", AB: 5, H: 2, R: 1, RBI: 4, HR: 0, AVG: "0.400" },
