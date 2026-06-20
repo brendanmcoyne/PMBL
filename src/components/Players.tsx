@@ -3,6 +3,7 @@ import { players } from "../data/playerNames.ts";
 import type { Player } from "../data/playerNames.ts";
 import { stats } from "../data/playerStats.ts";
 import type { Stat } from "../data/playerStats.ts";
+import { playerHistory } from "../data/PlayerHistory.ts";
 import { StyledHeader } from "../components/CommonStyles.ts";
 import { styled, keyframes, css } from "styled-components";
 
@@ -403,7 +404,7 @@ export default function Players() {
 
     const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
     const [selectedStat, setSelectedStat] = useState<Stat | null>(null);
-    const [activeModalTab, setActiveModalTab] = useState<"info" | "awards" | "stats">("info");
+    const [activeModalTab, setActiveModalTab] = useState<"info" | "awards" | "stats" | "history">("info");
 
     const colorOrder = [
         "Red", "Orange", "Yellow", "Light Green", "Green",
@@ -479,18 +480,22 @@ export default function Players() {
 
     const BATTINGS2 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?gid=0&single=true&output=csv";
     const BATTINGS3 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5wCbbjTUbYIHGbkCscbS-p_3YgUAZ5SiyJmKj0l9FgWEjN6jisRwQzCpgkRoaMANdjLfr427LlzTt/pub?gid=0&single=true&output=csv";
+    const BATTINGS4 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR6Yquslv4MzdUiPB-H0AsVEyIMJok9SLEhBO9fuIPve_vjjFMRspjSpTA4bzsFxj6Tfezzj1UbosDM/pub?gid=0&single=true&output=csv";
 
     const PITCHINGS2 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQI9f3DvikuiVGwybMAzw-RWIrETSb1TXze3TVmYDvjdfUb_usdve9KnRkuXxmZNmIW3DLapKjmNg9F/pub?gid=235178407&single=true&output=csv";
     const PITCHINGS3 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5wCbbjTUbYIHGbkCscbS-p_3YgUAZ5SiyJmKj0l9FgWEjN6jisRwQzCpgkRoaMANdjLfr427LlzTt/pub?gid=61989451&single=true&output=csv";
+    const PITCHINGS4 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR6Yquslv4MzdUiPB-H0AsVEyIMJok9SLEhBO9fuIPve_vjjFMRspjSpTA4bzsFxj6Tfezzj1UbosDM/pub?gid=1237690545&single=true&output=csv";
 
     const battingUrls = [
         BATTINGS2,
         BATTINGS3,
+        BATTINGS4,
     ];
 
     const pitchingUrls = [
         PITCHINGS2,
         PITCHINGS3,
+        PITCHINGS4,
     ];
 
     const [battingSeasons, setBattingSeasons] = useState<CsvRow[][]>([]);
@@ -528,6 +533,10 @@ export default function Players() {
             season => season.find(row => row.name === selectedPlayer.name) ?? null
         )
         : [];
+
+    const selectedHistory = selectedPlayer
+        ? playerHistory.find((p) => p.name === selectedPlayer.name)
+        : null;
 
     const activeBattingSeasons = playerBattingStats
         .map((stats, index) => ({
@@ -686,6 +695,7 @@ export default function Players() {
                                 <ToggleButton active={activeModalTab === "info"} onClick={() => setActiveModalTab("info")}>Info</ToggleButton>
                                 <ToggleButton active={activeModalTab === "awards"} onClick={() => setActiveModalTab("awards")}>Awards</ToggleButton>
                                 <ToggleButton active={activeModalTab === "stats"} onClick={() => setActiveModalTab("stats")}>Stats</ToggleButton>
+                                <ToggleButton active={activeModalTab === "history"} onClick={() => setActiveModalTab("history")}>History</ToggleButton>
                             </div>
                             <StyledMiniHeader style={{ fontSize: "33px", margin: "5px", color: "black" }}>{selectedPlayer.name}</StyledMiniHeader>
                             {selectedPlayer.captain ? <img style={{marginBottom: "10px", padding: "0"}} src={selectedPlayer.banner} alt="banner"/> : ""}
@@ -851,6 +861,48 @@ export default function Players() {
                                     </StatsScrollContainer>
                                     ) : (
                                         <p style={{ fontStyle: "italic", color: "black" }}>No pitching stats available.</p>
+                                    )}
+                                </>
+                            )}
+
+                            {activeModalTab === "history" && (
+                                <>
+                                    <StyledMiniHeader style={{ color: "black" }}>History</StyledMiniHeader>
+
+                                    {selectedHistory && selectedHistory.history.length > 0 ? (
+                                        <AwardsList>
+                                            {selectedHistory.history.map((item) => (
+                                                <AwardRow key={item.season} $kind="other">
+                                                    <span>📜</span>
+
+                                                    <div style={{ textAlign: "left" }}>
+                                                        <div>Season {item.season}: {item.team}</div>
+
+                                                        {item.drafted && (
+                                                            <div style={{ opacity: 0.75 }}>
+                                                                Drafted — {item.draftPick}
+                                                            </div>
+                                                        )}
+
+                                                        {!item.drafted && (
+                                                            <div style={{ opacity: 0.75 }}>
+                                                                Not drafted
+                                                            </div>
+                                                        )}
+
+                                                        {item.transactions?.map((transaction, idx) => (
+                                                            <div key={idx} style={{ opacity: 0.75 }}>
+                                                                • {transaction}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </AwardRow>
+                                            ))}
+                                        </AwardsList>
+                                    ) : (
+                                        <p style={{ fontStyle: "italic", color: "black" }}>
+                                            No history available yet.
+                                        </p>
                                     )}
                                 </>
                             )}
