@@ -85,6 +85,7 @@ import Cascade from "./components/headlines/season3/Cascade.tsx";
 
 import DraftRecap4 from "./components/headlines/season4/DraftRecap.tsx";
 import KeyPlayers from "./components/headlines/season4/KeyPlayers.tsx";
+import Justin from "./components/headlines/season4/Justin.tsx";
 
 const MainContent = styled.div`
     padding-top: 80px;
@@ -262,6 +263,7 @@ function Root() {
 
                     <Route path="/headlines/season4/DraftRecap" element={<DraftRecap4 />} />
                     <Route path="/headlines/season4/KeyPlayers" element={<KeyPlayers />} />
+                    <Route path="/headlines/season4/Justin" element={<Justin />} />
                 </Routes>
             </MainContent>
             <Footer/>

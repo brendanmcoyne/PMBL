@@ -182,6 +182,16 @@ export default function Players() {
     const season4Stories = (
         <>
             <Story $animationState={animationState}>
+                <GenImage src="/headlines/Justin.jpg" alt="Draft" />
+                <Overlay>
+                    <Headline>J-Nasty: From Underdog Coach to Injury-Riddled Player</Headline>
+                    <StyledLink to="/headlines/season4/Justin">
+                        Click to read more!
+                    </StyledLink>
+                </Overlay>
+            </Story>
+
+            <Story $animationState={animationState}>
                 <GenImage src="/headlines/players.jpg" alt="Players" />
                 <Overlay>
                     <Headline>10 Players that look to bounce back</Headline>
