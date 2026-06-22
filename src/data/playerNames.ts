@@ -826,14 +826,6 @@ export const players: Player[] = [
         mii: true,
     },
     {
-        name: "Jordan Hudson",
-        src: "/players/Jordan Hudson.jpg",
-        color: "Purple",
-        gp: 0,
-        captain: false,
-        mii: true,
-    },
-    {
         name: "Justin Bieber",
         src: "/players/Justin Bieber.jpg",
         color: "Blue",
