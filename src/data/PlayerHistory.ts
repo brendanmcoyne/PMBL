@@ -2355,4 +2355,1072 @@ export const playerHistory: PlayerHistory[] = [
             },
         ],
     },
+    {
+        name: "Paratroopa",
+        history: [
+            {
+                season: 1,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 10, Pick 7",
+            },
+            {
+                season: 2,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 9, Pick 6",
+            },
+            {
+                season: 3,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 10, Pick 1",
+            },
+            {
+                season: 4,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 9, Pick 2",
+            },
+        ],
+    },
+    {
+        name: "Paratroopa",
+        history: [
+            {
+                season: 1,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 10, Pick 7",
+            },
+            {
+                season: 2,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 9, Pick 6",
+            },
+            {
+                season: 3,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 10, Pick 1",
+            },
+            {
+                season: 4,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 9, Pick 2",
+            },
+        ],
+    },
+    {
+        name: "Peach",
+        history: [
+            {
+                season: 1,
+                team: "Christach",
+                drafted: true,
+                draftPick: "Round 1, Pick 3",
+            },
+            {
+                season: 2,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 5, Pick 7",
+            },
+            {
+                season: 3,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 2, Pick 3",
+            },
+            {
+                season: 4,
+                team: "Justave",
+                drafted: true,
+                draftPick: "Round 2, Pick 3",
+            },
+        ],
+    },
+    {
+        name: "Petey Piranha",
+        history: [
+            {
+                season: 1,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 1, Pick 4",
+            },
+            {
+                season: 2,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 1, Pick 2",
+            },
+            {
+                season: 3,
+                team: "Brendan",
+                drafted: true,
+                draftPick: "Round 1, Pick 2",
+            },
+            {
+                season: 4,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 1, Pick 1",
+            },
+        ],
+    },
+    {
+        name: "Piggie",
+        history: [
+            {
+                season: 3,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 8, Pick 4",
+            },
+            {
+                season: 4,
+                team: "THANdrew",
+                drafted: true,
+                draftPick: "Round 7, Pick 4",
+            },
+        ],
+    },
+    {
+        name: "Pikachu",
+        history: [
+            {
+                season: 3,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 12, Pick 4",
+            },
+            {
+                season: 4,
+                team: "N/A",
+                drafted: false,
+            },
+        ],
+    },
+    {
+        name: "Pink Yoshi",
+        history: [
+            {
+                season: 1,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 6, Pick 3",
+            },
+            {
+                season: 2,
+                team: "N/A",
+                drafted: false,
+            },
+            {
+                season: 3,
+                team: "N/A",
+                drafted: false,
+            },
+            {
+                season: 4,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 7, Pick 1",
+            },
+        ],
+    },
+    {
+        name: "Purple Toad",
+        history: [
+            {
+                season: 1,
+                team: "Brendan",
+                drafted: true,
+                draftPick: "Round 8, Pick 8",
+            },
+            {
+                season: 2,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 12, Pick 2",
+            },
+            {
+                season: 3,
+                team: "THANdrew",
+                drafted: true,
+                draftPick: "Round 6, Pick 2",
+            },
+            {
+                season: 4,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 5, Pick 5",
+            },
+        ],
+    },
+    {
+        name: "Purple Yoshi",
+        history: [
+            {
+                season: 4,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 6, Pick 4",
+            },
+        ],
+    },
+    {
+        name: "Red Koopa",
+        history: [
+            {
+                season: 1,
+                team: "Matt",
+                drafted: true,
+                draftPick: "Round 8, Pick 4",
+            },
+            {
+                season: 2,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 6, Pick 5",
+            },
+            {
+                season: 3,
+                team: "THANdrew",
+                drafted: true,
+                draftPick: "Round 12, Pick 2",
+                transactions: [
+                    "Traded to James in Week 4",
+                ]
+            },
+            {
+                season: 4,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 5, Pick 1",
+                transactions: [
+                    "Traded to Brendan Post Draft",
+                ]
+            },
+        ],
+    },
+    {
+        name: "Red Kritter",
+        history: [
+            {
+                season: 1,
+                team: "Brendan",
+                drafted: true,
+                draftPick: "Round 2, Pick 8",
+            },
+            {
+                season: 2,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 2, Pick 4",
+                transactions: [
+                    "Traded to THANdrew Post Draft",
+                ]
+            },
+            {
+                season: 3,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 2, Pick 1",
+            },
+            {
+                season: 4,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 2, Pick 8",
+            },
+        ],
+    },
+    {
+        name: "Red Magikoopa",
+        history: [
+            {
+                season: 1,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 5, Pick 6",
+            },
+            {
+                season: 2,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 2, Pick 5",
+            },
+            {
+                season: 3,
+                team: "Justave",
+                drafted: true,
+                draftPick: "Round 12, Pick 5",
+            },
+            {
+                season: 4,
+                team: "Brendan",
+                drafted: true,
+                draftPick: "Round 8, Pick 2",
+            },
+        ],
+    },
+    {
+        name: "Red Noki",
+        history: [
+            {
+                season: 1,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 11, Pick 3",
+            },
+            {
+                season: 2,
+                team: "N/A",
+                drafted: false,
+            },
+            {
+                season: 3,
+                team: "N/A",
+                drafted: false,
+            },
+            {
+                season: 4,
+                team: "N/A",
+                drafted: false,
+            },
+        ],
+    },
+    {
+        name: "Red Pianta",
+        history: [
+            {
+                season: 1,
+                team: "Christach",
+                drafted: true,
+                draftPick: "Round 4, Pick 6",
+            },
+            {
+                season: 2,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 3, Pick 4",
+            },
+            {
+                season: 3,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 3, Pick 8",
+                transactions: [
+                    "Traded to THANdrew in Week 4",
+                ]
+            },
+            {
+                season: 4,
+                team: "Brendan",
+                drafted: true,
+                draftPick: "Round 5, Pick 7",
+            },
+        ],
+    },
+    {
+        name: "Red Shy Guy",
+        history: [
+            {
+                season: 1,
+                team: "Justin",
+                drafted: true,
+                draftPick: "Round 10, Pick 2",
+            },
+            {
+                season: 2,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 4, Pick 5",
+            },
+            {
+                season: 3,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 7, Pick 6",
+            },
+            {
+                season: 4,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 11, Pick 5",
+            },
+        ],
+    },
+    {
+        name: "Red Toad",
+        history: [
+            {
+                season: 1,
+                team: "Matt",
+                drafted: true,
+                draftPick: "Round 6, Pick 4",
+            },
+            {
+                season: 2,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 7, Pick 4",
+            },
+            {
+                season: 3,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 5, Pick 8",
+            },
+            {
+                season: 4,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 5, Pick 8",
+            },
+        ],
+    },
+    {
+        name: "Red Yoshi",
+        history: [
+            {
+                season: 1,
+                team: "DANdrew",
+                drafted: true,
+                draftPick: "Round 3, Pick 8",
+                transactions: [
+                    "Traded to Isaac Post Draft",
+                ]
+            },
+            {
+                season: 2,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 11, Pick 4",
+            },
+            {
+                season: 3,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 12, Pick 3",
+            },
+            {
+                season: 4,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 10, Pick 1",
+            },
+        ],
+    },
+    {
+        name: "Reshiram",
+        history: [
+            {
+                season: 2,
+                team: "N/A",
+                drafted: false,
+                transactions: [
+                    "Picked up by Morgan in Week 5",
+                ]
+            },
+            {
+                season: 3,
+                team: "N/A",
+                drafted: false,
+                transactions: [
+                    "Picked up by Isaac in Week 4",
+                    "Dropped by Isaac in Week 6",
+                ]
+            },
+            {
+                season: 4,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 10, Pick 8",
+            },
+        ],
+    },
+    {
+        name: "Saber",
+        history: [
+            {
+                season: 3,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 6, Pick 6",
+            },
+            {
+                season: 4,
+                team: "N/A",
+                drafted: false,
+            },
+        ],
+    },
+    {
+        name: "Sabrina",
+        history: [
+            {
+                season: 1,
+                team: "Christach",
+                drafted: true,
+                draftPick: "Round 10, Pick 6",
+            },
+            {
+                season: 2,
+                team: "Justave",
+                drafted: true,
+                draftPick: "Round 12, Pick 1",
+                transactions: [
+                    "Traded to Trocean Post Draft",
+                    "Traded to Justave in Week 5",
+                ]
+            },
+            {
+                season: 3,
+                team: "N/A",
+                drafted: false,
+            },
+            {
+                season: 4,
+                team: "Justave",
+                drafted: true,
+                draftPick: "Round 6, Pick 3",
+            },
+        ],
+    },
+    {
+        name: "Sherpa",
+        history: [
+            {
+                season: 3,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 7, Pick 1",
+                transactions: [
+                    "Traded to Brendan in Week 5",
+                ]
+            },
+            {
+                season: 4,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 8, Pick 6",
+            },
+        ],
+    },
+    {
+        name: "Smurf",
+        history: [
+            {
+                season: 3,
+                team: "N/A",
+                drafted: false,
+            },
+            {
+                season: 4,
+                team: "Justave",
+                drafted: true,
+                draftPick: "Round 9, Pick 6",
+            },
+        ],
+    },
+    {
+        name: "Tarzan",
+        history: [
+            {
+                season: 3,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 9, Pick 1",
+            },
+            {
+                season: 4,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 10, Pick 6",
+            },
+        ],
+    },
+    {
+        name: "Tate McRae",
+        history: [
+            {
+                season: 1,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 12, Pick 7",
+            },
+            {
+                season: 2,
+                team: "Justave",
+                drafted: true,
+                draftPick: "Round 11, Pick 8",
+            },
+            {
+                season: 3,
+                team: "N/A",
+                drafted: false,
+            },
+            {
+                season: 4,
+                team: "N/A",
+                drafted: false,
+            },
+        ],
+    },
+    {
+        name: "Tiny Kong",
+        history: [
+            {
+                season: 1,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 4, Pick 5",
+            },
+            {
+                season: 2,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 4, Pick 4",
+            },
+            {
+                season: 3,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 6, Pick 8",
+            },
+            {
+                season: 4,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 5, Pick 3",
+            },
+        ],
+    },
+    {
+        name: "Toadette",
+        history: [
+            {
+                season: 1,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 4, Pick 3",
+            },
+            {
+                season: 2,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 9, Pick 7",
+            },
+            {
+                season: 3,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 6, Pick 3",
+            },
+            {
+                season: 4,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 7, Pick 5",
+            },
+        ],
+    },
+    {
+        name: "Toadsworth",
+        history: [
+            {
+                season: 1,
+                team: "Christach",
+                drafted: true,
+                draftPick: "Round 6, Pick 6",
+            },
+            {
+                season: 2,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 10, Pick 5",
+                transactions: [
+                    "Dropped by Trocean in Week 7",
+                ]
+            },
+            {
+                season: 3,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 9, Pick 3",
+            },
+            {
+                season: 4,
+                team: "THANdrew",
+                drafted: true,
+                draftPick: "Round 12, Pick 5",
+            },
+        ],
+    },
+    {
+        name: "Tonka",
+        history: [
+            {
+                season: 3,
+                team: "N/A",
+                drafted: false,
+                transactions: [
+                    "Picked up by Justave in Week 4",
+                ]
+            },
+            {
+                season: 4,
+                team: "N/A",
+                drafted: false,
+            },
+        ],
+    },
+    {
+        name: "Tony Soprano",
+        history: [
+            {
+                season: 4,
+                team: "N/A",
+                drafted: false,
+            },
+        ],
+    },
+    {
+        name: "Triangle",
+        history: [
+            {
+                season: 1,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 8, Pick 5",
+            },
+            {
+                season: 2,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 12, Pick 4",
+            },
+            {
+                season: 3,
+                team: "N/A",
+                drafted: false,
+            },
+            {
+                season: 4,
+                team: "Justave",
+                drafted: true,
+                draftPick: "Round 11, Pick 3",
+            },
+        ],
+    },
+    {
+        name: "Waluigi",
+        history: [
+            {
+                season: 1,
+                team: "DANdrew",
+                drafted: true,
+                draftPick: "Round 1, Pick 8",
+            },
+            {
+                season: 2,
+                team: "THANdrew",
+                drafted: true,
+                draftPick: "Round 4, Pick 6",
+            },
+            {
+                season: 3,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 4, Pick 8",
+                transactions: [
+                    "Traded to Brendan Post Draft",
+                ]
+            },
+            {
+                season: 4,
+                team: "Brendan",
+                drafted: true,
+                draftPick: "Round 6, Pick 2",
+            },
+        ],
+    },
+    {
+        name: "Wario",
+        history: [
+            {
+                season: 1,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 3, Pick 4",
+                transactions: [
+                    "Traded to Christach Post Draft",
+                ]
+            },
+            {
+                season: 2,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 3, Pick 6",
+            },
+            {
+                season: 3,
+                team: "Brendan",
+                drafted: true,
+                draftPick: "Round 4, Pick 7",
+            },
+            {
+                season: 4,
+                team: "Brendan",
+                drafted: true,
+                draftPick: "Round 4, Pick 2",
+            },
+        ],
+    },
+    {
+        name: "Wiggler",
+        history: [
+            {
+                season: 1,
+                team: "Christach",
+                drafted: true,
+                draftPick: "Round 2, Pick 6",
+                transactions: [
+                    "Traded to Matt Post Draft",
+                ]
+            },
+            {
+                season: 2,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 2, Pick 7",
+            },
+            {
+                season: 3,
+                team: "Trocean",
+                drafted: true,
+                draftPick: "Round 2, Pick 8",
+            },
+            {
+                season: 4,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 3, Pick 1",
+            },
+        ],
+    },
+    {
+        name: "Yellow Magikoopa",
+        history: [
+            {
+                season: 1,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 5, Pick 2",
+            },
+            {
+                season: 2,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 3, Pick 7",
+            },
+            {
+                season: 3,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 7, Pick 3",
+            },
+            {
+                season: 4,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 4, Pick 7",
+            },
+        ],
+    },
+    {
+        name: "Yellow Pianta",
+        history: [
+            {
+                season: 1,
+                team: "Matt",
+                drafted: true,
+                draftPick: "Round 4, Pick 4",
+            },
+            {
+                season: 2,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 4, Pick 7",
+            },
+            {
+                season: 3,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 4, Pick 4",
+                transactions: [
+                    "Traded to Trocean in Week 5",
+                ]
+            },
+            {
+                season: 4,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 6, Pick 8",
+            },
+        ],
+    },
+    {
+        name: "Yellow Shy Guy",
+        history: [
+            {
+                season: 1,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 11, Pick 4",
+            },
+            {
+                season: 2,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 4, Pick 2",
+            },
+            {
+                season: 3,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 8, Pick 1",
+            },
+            {
+                season: 4,
+                team: "N/A",
+                drafted: false,
+            },
+        ],
+    },
+    {
+        name: "Yellow Toad",
+        history: [
+            {
+                season: 1,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 10, Pick 3",
+                transactions: [
+                    "Traded to Morgan Post Draft",
+                ]
+            },
+            {
+                season: 2,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 6, Pick 2",
+            },
+            {
+                season: 3,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 6, Pick 1",
+                transactions: [
+                    "Traded to Justave in Week 4",
+                ]
+            },
+            {
+                season: 4,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 4, Pick 1",
+            },
+        ],
+    },
+    {
+        name: "Yellow Yoshi",
+        history: [
+            {
+                season: 1,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 7, Pick 4",
+            },
+            {
+                season: 2,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 7, Pick 3",
+            },
+            {
+                season: 3,
+                team: "Justave",
+                drafted: true,
+                draftPick: "Round 6, Pick 5",
+                transactions: [
+                    "Dropped by Justave in Week 4",
+                ]
+            },
+            {
+                season: 4,
+                team: "N/A",
+                drafted: false,
+            },
+        ],
+    },
+    {
+        name: "Yoshi",
+        history: [
+            {
+                season: 1,
+                team: "Matt",
+                drafted: true,
+                draftPick: "Round 1, Pick 5",
+            },
+            {
+                season: 2,
+                team: "Morgan",
+                drafted: true,
+                draftPick: "Round 4, Pick 3",
+            },
+            {
+                season: 3,
+                team: "Justave",
+                drafted: true,
+                draftPick: "Round 4, Pick 5",
+            },
+            {
+                season: 4,
+                team: "Marge",
+                drafted: true,
+                draftPick: "Round 2, Pick 4",
+            },
+        ],
+    },
+    {
+        name: "Zekrom",
+        history: [
+            {
+                season: 2,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 7, Pick 2",
+            },
+            {
+                season: 3,
+                team: "James",
+                drafted: true,
+                draftPick: "Round 12, Pick 1",
+                transactions: [
+                    "Traded to Justave in Week 4",
+                ]
+            },
+            {
+                season: 4,
+                team: "Isaac",
+                drafted: true,
+                draftPick: "Round 11, Pick 1",
+            },
+        ],
+    },
 ];

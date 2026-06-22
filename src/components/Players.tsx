@@ -4,6 +4,7 @@ import type { Player } from "../data/playerNames.ts";
 import { stats } from "../data/playerStats.ts";
 import type { Stat } from "../data/playerStats.ts";
 import { playerHistory } from "../data/PlayerHistory.ts";
+import { retiredHistory } from "../data/RetiredHistory.ts";
 import { StyledHeader } from "../components/CommonStyles.ts";
 import { styled, keyframes, css } from "styled-components";
 
@@ -523,33 +524,23 @@ export default function Players() {
     }, []);
 
     const playerBattingStats = selectedPlayer
-        ? battingSeasons.map(
-            season => season.find(row => row.name === selectedPlayer.name) ?? null
-        )
-        : [];
+        ? battingSeasons.map(season => season.find(row => row.name === selectedPlayer.name) ?? null) : [];
 
     const playerPitchingStats = selectedPlayer
-        ? pitchingSeasons.map(
-            season => season.find(row => row.name === selectedPlayer.name) ?? null
-        )
-        : [];
+        ? pitchingSeasons.map(season => season.find(row => row.name === selectedPlayer.name) ?? null) : [];
 
     const selectedHistory = selectedPlayer
-        ? playerHistory.find((p) => p.name === selectedPlayer.name)
-        : null;
+        ? (selectedPlayer.retired
+                ? retiredHistory.find((p) => p.name === selectedPlayer.name)
+                : playerHistory.find((p) => p.name === selectedPlayer.name)
+        ) : null;
 
     const activeBattingSeasons = playerBattingStats
-        .map((stats, index) => ({
-            season: index + 2,
-            stats,
-        }))
+        .map((stats, index) => ({season: index + 2, stats,}))
         .filter(({ stats }) => Number(stats?.G || 0) > 0);
 
     const activePitchingSeasons = playerPitchingStats
-        .map((stats, index) => ({
-            season: index + 2,
-            stats,
-        }))
+        .map((stats, index) => ({season: index + 2, stats,}))
         .filter(({ stats }) => Number(stats?.G || 0) > 0);
 
     function num(row: CsvRow | null, stat: string) {

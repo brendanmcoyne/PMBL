@@ -639,6 +639,7 @@ export const players: Player[] = [
         gp: 13,
         captain: false,
         mii: true,
+        retired: true,
         awards: [
             { name: "1x Game MVP", season: 3},
         ]
@@ -1141,7 +1142,7 @@ export const players: Player[] = [
         color: "Purple",
         gp: 0,
         captain: false,
-        mii: true,
+        mii: false,
     },
     {
         name: "Red Koopa",
