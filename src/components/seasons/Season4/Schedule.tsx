@@ -269,15 +269,15 @@ export default function Schedule4() {
                     <ScoreLine>2-12</ScoreLine>
                     <Stadium>Mario Stadium</Stadium>
                 </Matchup>
-                <Matchup style={{ cursor: "pointer" }}>
+                <Matchup onClick={() => setSelectedGame(GamesSeason4["Game4"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(0-1)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(1-0)</TeamRecord>
+                    <ScoreLine>5-7</ScoreLine>
+                    <Stadium>Bowser Castle</Stadium>
                 </Matchup>
             </Week>
 
@@ -288,9 +288,9 @@ export default function Schedule4() {
                     <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(0-1)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(0-1)</TeamRecord>
                     <ScoreLine>0-0</ScoreLine>
                     <Stadium>TBD</Stadium>
                 </Matchup>
@@ -298,9 +298,9 @@ export default function Schedule4() {
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(0-1)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(0-1)</TeamRecord>
                     <ScoreLine>0-0</ScoreLine>
                     <Stadium>TBD</Stadium>
                 </Matchup>
@@ -308,9 +308,9 @@ export default function Schedule4() {
                     <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(1-0)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(1-0)</TeamRecord>
                     <ScoreLine>0-0</ScoreLine>
                     <Stadium>TBD</Stadium>
                 </Matchup>
@@ -318,9 +318,9 @@ export default function Schedule4() {
                     <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(1-0)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(1-0)</TeamRecord>
                     <ScoreLine>0-0</ScoreLine>
                     <Stadium>TBD</Stadium>
                 </Matchup>

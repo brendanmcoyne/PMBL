@@ -216,58 +216,60 @@ export const GamesSeason4: Record<string, GameStats> = {
     },
     "Game4": {
         id: "Game4",
-        awayManager: "THANdrew",
-        homeManager: "Brendan",
+        awayManager: "Brendan",
+        homeManager: "Marge",
 
         game: {
             away: {
-                name: "THANdrew",
-                color: "#999999",
-                scores: [0, 0, 1, 0, 1, 0, 1],
-                R: 3,
-                H: 12,
-                E: 1,
+                name: "Brendan",
+                color: "#CC0000",
+                scores: [0, 2, 0, 1, 2, 0, 0],
+                R: 5,
+                H: 13,
+                E: 0,
                 LOB: 5
             },
 
             home: {
-                name: "Brendan",
-                color: "#CC0000",
-                scores: [0, 0, 2, 0, 2, 0, 0],
-                R: 4,
-                H: 10,
-                E: 1,
-                LOB: 7
+                name: "Marge",
+                color: "#6AA84F",
+                scores: [1, 0, 2, 0, 0, 2, 2],
+                R: 7,
+                H: 15,
+                E: 0,
+                LOB: 6
             }
         },
 
         battingStats: [
-            { player: "Purple Toad", team: "THANdrew", AB: 4, H: 4, R: 0, RBI: 2, HR: 0, AVG: "1.000" },
-            { player: "Abu Patel", team: "THANdrew", AB: 4, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Blue Yoshi", team: "THANdrew", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Birdo", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Boomerang Bro", team: "THANdrew", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Blue Kamek", team: "THANdrew", AB: 3, H: 1, R: 1, RBI: 1, HR: 1, AVG: "0.333" },
-            { player: "Diddler", team: "THANdrew", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Blue Shy Guy", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Bonnie", team: "THANdrew", AB: 2, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
+            { player: "Blue Dry Bones", team: "Brendan", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
+            { player: "Red Koopa", team: "Brendan", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
+            { player: "Dark Bones", team: "Brendan", AB: 4, H: 3, R: 0, RBI: 0, HR: 0, AVG: "0.750" },
+            { player: "Antenna", team: "Brendan", AB: 4, H: 2, R: 1, RBI: 2, HR: 0, AVG: "0.500" },
+            { player: "Fire Bro", team: "Brendan", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "Red Kamek", team: "Brendan", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Wario", team: "Brendan", AB: 3, H: 3, R: 1, RBI: 1, HR: 0, AVG: "1.000" },
+            { player: "Waluigi", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 2, HR: 0, AVG: "0.333" },
+            { player: "Red Pianta", team: "Brendan", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
 
-            { player: "Bertha", team: "Brendan", AB: 4, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Petey Piranha", team: "Brendan", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Green Dry Bones", team: "Brendan", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Funky Kong", team: "Brendan", AB: 3, H: 2, R: 2, RBI: 4, HR: 2, AVG: "0.667" },
-            { player: "Dixie Kong", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Grayson McKean", team: "Brendan", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Baby Peach", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Wario", team: "Brendan", AB: 3, H: 3, R: 0, RBI: 0, HR: 0, AVG: "1.000" },
-            { player: "Waluigi", team: "Brendan", AB: 2, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
+            { player: "Green Dry Bones", team: "Marge", AB: 4, H: 2, R: 2, RBI: 1, HR: 0, AVG: "0.500" },
+            { player: "Miss Jones", team: "Marge", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
+            { player: "Baby Luigi", team: "Marge", AB: 4, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.500" },
+            { player: "Yoshi", team: "Marge", AB: 4, H: 2, R: 0, RBI: 1, HR: 0, AVG: "0.500" },
+            { player: "Birdo", team: "Marge", AB: 4, H: 1, R: 1, RBI: 2, HR: 1, AVG: "0.250" },
+            { player: "Purple Yoshi", team: "Marge", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Eugene", team: "Marge", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
+            { player: "Purple Toad", team: "Marge", AB: 3, H: 2, R: 0, RBI: 1, HR: 0, AVG: "0.667" },
+            { player: "Blue Pianta", team: "Marge", AB: 3, H: 1, R: 1, RBI: 1, HR: 0, AVG: "0.333" },
         ],
 
         pitchingStats: [
-            { player: "Birdo", team: "THANdrew", IP: 6, H: 10, ER: 4, SO: 0, ERA: "4.67" },
+            { player: "Antenna", team: "Brendan", IP: 3.2, H: 9, ER: 3, SO: 1, ERA: "5.73" },
+            { player: "Wario", team: "Brendan", IP: 2.2, H: 6, ER: 4, SO: 0, ERA: "10.50" },
 
-            { player: "Wario", team: "Brendan", IP: 6, H: 9, ER: 2, SO: 0, ERA: "2.33" },
-            { player: "Waluigi", team: "Brendan", IP: 1, H: 3, ER: 1, SO: 0, ERA: "7.00" },
+
+            { player: "Blue Pianta", team: "Marge", IP: 2.2, H: 4, ER: 2, SO: 0, ERA: "5.25" },
+            { player: "Birdo", team: "Marge", IP: 4.1, H: 9, ER: 3, SO: 1, ERA: "4.85" },
         ]
     },
     "Game5": {

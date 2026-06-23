@@ -84,6 +84,7 @@ import Preview from "./components/headlines/season3/Preview.tsx";
 import Cascade from "./components/headlines/season3/Cascade.tsx";
 
 import DraftRecap4 from "./components/headlines/season4/DraftRecap.tsx";
+import Week1Recap4 from "./components/headlines/season4/Week1Recap.tsx";
 import KeyPlayers from "./components/headlines/season4/KeyPlayers.tsx";
 import Justin from "./components/headlines/season4/Justin.tsx";
 
@@ -248,6 +249,7 @@ function Root() {
                     <Route path="/headlines/season2/Season2Recap" element={<Season2Recap />} />
                     <Route path="/headlines/season2/Blooper" element={<Blooper />} />
                     <Route path="/headlines/season2/AllStarGame" element={<AllStarGame />} />
+
                     <Route path="/headlines/season3/DraftRecap" element={<DraftRecap3 />} />
                     <Route path="/headlines/season3/Week1Recap" element={<Week1Recap3 />} />
                     <Route path="/headlines/season3/Week2Recap" element={<Week2Recap3 />} />
@@ -262,8 +264,10 @@ function Root() {
                     <Route path="/headlines/season3/Preview" element={<Preview />} />
 
                     <Route path="/headlines/season4/DraftRecap" element={<DraftRecap4 />} />
+                    <Route path="/headlines/season4/Week1Recap" element={<Week1Recap4 />} />
                     <Route path="/headlines/season4/KeyPlayers" element={<KeyPlayers />} />
                     <Route path="/headlines/season4/Justin" element={<Justin />} />
+
                 </Routes>
             </MainContent>
             <Footer/>
