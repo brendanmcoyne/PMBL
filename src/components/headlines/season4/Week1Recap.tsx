@@ -47,10 +47,15 @@ const GameSummary = styled.div`
 
 const AwardsSection = styled.div`
     display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 400px));
     gap: 2rem;
+    justify-content: center;
     margin: 2rem auto;
-    width: fit-content;
     text-align: center;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 const AwardBlock = styled.div`
@@ -272,7 +277,7 @@ export default function Week1Recap4() {
             </GameSummary>
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 3: <span style={{ color: "#FF9900" }}>Justave</span> v.s.
-                <span style={{ color: "#FF00FF" }}>Morgan</span></StyledMiniHeader>
+                <span style={{ color: "#FF00FF" }}> Morgan</span></StyledMiniHeader>
             <Passage>Justave had a very interesting draft, taking 7 miis of pink and light blue shirt color. Nicknamed
             the "Cotton Candy Squad", they look to redeem last years disappointment with a Week 1 win against Morgan, who
             has never won in Opening Week. Triangle would get her first ever start against the veteran himself, Bob Marley.
@@ -380,7 +385,7 @@ export default function Week1Recap4() {
 
             <StyledMiniHeader>Awards</StyledMiniHeader>
 
-            <AwardsSection>
+            <AwardsSection style={{marginTop: "0"}}>
                 <AwardBlock>
                     <div className="award-name">MVP of the Week</div>
                     <div className="player">Abu Patel</div>
