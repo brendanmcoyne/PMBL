@@ -284,15 +284,25 @@ export default function Schedule4() {
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 2</StyledMiniHeader>
 
             <Week>
-                <Matchup style={{ cursor: "pointer" }}>
+                <Matchup onClick={() => setSelectedGame(GamesSeason4["Game5"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                    <TeamRecord>(0-1)</TeamRecord>
+                    <TeamRecord>(1-1)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-1)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(0-2)</TeamRecord>
+                    <ScoreLine>8-4</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
+                </Matchup>
+                <Matchup onClick={() => setSelectedGame(GamesSeason4["Game6"])} style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                    <TeamRecord>(1-1)</TeamRecord>
+                    <div/>
+                    <TeamRecord>(2-0)</TeamRecord>
+                    <ScoreLine>4-11</ScoreLine>
+                    <Stadium>DK Jungle</Stadium>
                 </Matchup>
                 <Matchup style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
@@ -301,16 +311,6 @@ export default function Schedule4() {
                     <TeamRecord>(0-1)</TeamRecord>
                     <div/>
                     <TeamRecord>(0-1)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
-                </Matchup>
-                <Matchup style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <TeamRecord>(1-0)</TeamRecord>
-                    <div/>
-                    <TeamRecord>(1-0)</TeamRecord>
                     <ScoreLine>0-0</ScoreLine>
                     <Stadium>TBD</Stadium>
                 </Matchup>
