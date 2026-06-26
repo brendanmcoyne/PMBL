@@ -132,22 +132,22 @@ export const GenImage = styled.img`
     }
 `;
 
-export default function Week1Recap4() {
+export default function Week2Recap4() {
     const game1 = {
-        away: { name: "THANdrew", color: "#999999", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 7, E: 0, LOB: 5 },
-        home: { name: "Isaac", color: "#3586E8", scores: [1, 0, 0, 0, 0, 0,"X"], R: 1, H: 5, E: 1, LOB: 3 },
+        away: { name: "Justave", color: "#FF9900", scores: [2, 1, 1, 2, 0, 2, 0], R: 8, H: 18, E: 0, LOB: 8 },
+        home: { name: "James", color: "#F1C232", scores: [2, 0, 0, 1, 1, 0, 0], R: 4, H: 16, E: 3, LOB: 7 },
     };
     const game2 = {
-        away: { name: "James", color: "#F1C232", scores: [7, 0, 0, 1, 1, 0, 1], R: 10, H: 20, E: 0, LOB: 8 },
-        home: { name: "Trocean", color: "#9900FF", scores: [0, 0, 3, 4, 4, 0, "X"], R: 11, H: 22, E: 1, LOB: 7 },
+        away: { name: "Marge", color: "#6AA84F", scores: [0, 2, 0, 0, 0, 1, 1], R: 4, H: 10, E: 2, LOB: 4 },
+        home: { name: "Isaac", color: "#3586E8", scores: [0, 9, 0, 2, 0, 0, "X"], R: 11, H: 17, E: 0, LOB: 8 },
     };
     const game3 = {
-        away: { name: "Justave", color: "#FF9900", scores: [0, 0, 0, 0, 0, 2, 0], R: 2, H: 7, E: 2, LOB: 3 },
-        home: { name: "Morgan", color: "#FF00FF", scores: [1, 2, 2, 0, 5, 2, "X"], R: 12, H: 20, E: 0, LOB: 8 },
+        away: { name: "Morgan", color: "#FF00FF", scores: [1, 2, 2, 0, 5, 2, "X"], R: 12, H: 20, E: 0, LOB: 8 },
+        home: { name: "Trocean", color: "#9900FF", scores: [0, 0, 3, 4, 4, 0, "X"], R: 11, H: 22, E: 1, LOB: 7 },
     };
     const game4 = {
         away: { name: "Brendan", color: "#CC0000", scores: [0, 2, 0, 1, 2, 0, 0], R: 5, H: 13, E: 0, LOB: 5 },
-        home: { name: "Marge", color: "#6AA84F", scores: [1, 0, 2, 0, 0, 2, 2], R: 7, H: 15, E: 0, LOB: 6 },
+        home: { name: "THANdrew", color: "#999999", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 7, E: 0, LOB: 5 },
     };
 
     return (
@@ -162,25 +162,13 @@ export default function Week1Recap4() {
             </ArticleMeta>
             <SeparatorLine />
             <Passage>Welcome to Season 4. Even though this season will be online, we hope the fans will still show
-            up to watch their favorite teams compete. The league is excited for some of the new looking lineups this year.</Passage>
+                up to watch their favorite teams compete. The league is excited for some of the new looking lineups this year.</Passage>
 
-            <StyledMiniHeader style={{marginBottom: "0"}}>Game 1: <span style={{ color: "#999999" }}> THANdrew</span> v.s.
-                <span style={{ color: "#3586E8" }}> Isaac</span></StyledMiniHeader>
-            <Passage>With Isaac now a champion, he would face off against THANdrew once again after defeating them 3-1
-            in the Conference Series last season. Being graced the #1 pick, Petey Piranha looks to start his championship
-            run, as he is the only player to make all 3 playoffs and not win it all. One of the most interesting pitching
-            matchups would take place, with Baby Daisy vs King K. Rool on the mound. This would be the first time in PMBL
-            history where one starting pitcher would be 10x heavier than the other. Petey Piranha would hit a sacrifice fly
-            off of King K in the 1st making it 1-0 Isaac, and neither pitcher would give up another earned run. Both would
-            pitch 4.1 innings, with Baby Daisy giving up 6 hits, and King K only giving up 3. A very good starting pitching
-            duel with little to no offense. THANdrew's base running was incredibly lackluster, with not one but two of thier
-            hitters being thrown out, including Hammer Bro at home which would've tied the game. Absolutely zero offense
-            could happen even when Daisy and Luigi took the mound for their teams. Despite the sac fly, Petey could not
-            muster a hit, and neither could hitters 5 through 9 behind him on Isaac's team. Luigi, while pitching fairly
-            well, went 0/3 and struck out looking in a cruical spot in the 7th inning, thus leading to a 1-0 win for Isaac.
-            Fans were incredibly disappointed by this game, an absolute joke of a starting game, which caused them to worry
-            about the future games this year due to the leagues changes. Petey would win a "fraudulent" MVP after going
-            0/2 and a sac fly, as Isaac would only win off of 5 hits thanks to his starting 3 in the batting lineup.</Passage>
+            <StyledMiniHeader style={{marginBottom: "0"}}>Game 1: <span style={{ color: "#FF9900" }}>Justave</span> v.s.
+                <span style={{ color: "#F1C232" }}> James</span></StyledMiniHeader>
+            <Passage>
+
+            </Passage>
 
             <ScoreTable>
                 <thead>
@@ -210,35 +198,18 @@ export default function Week1Recap4() {
                 </tbody>
             </ScoreTable>
             <GameSummary>
-                <div className="mvp">Game MVP: Petey Piranha</div>
+                <div className="mvp">Game MVP: Grayson McKean</div>
                 <div className="pitchers">
-                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Baby Daisy (1 - 0)</span>
-                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: King K. Rool (0 - 1)</span>
+                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Peach (1 - 0)</span>
+                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Bowser Jr (0 - 2)</span>
                 </div>
-                <span style={{fontSize: ".8rem"}}>Save: Daisy (1)</span>
             </GameSummary>
 
-            <StyledMiniHeader style={{marginBottom: "0"}}>Game 2: <span style={{ color: "#F1C232" }}> James</span> v.s.
-                <span style={{ color: "#9900FF" }}> Trocean</span></StyledMiniHeader>
-            <Passage>Two complete opposite teams last year face off in Week 1 with somewhat similar team structure
-            as years before. James brought back Bowser Jr and made him captain over Bowser, and Trocean likewise took
-            Diddy Kong again and made him captain over Donkey Kong. This would be the first ever matchup where Bowser
-            Jr and Diddy Kong would play each other as captains. Donkey Kong getting the start the mound, hoping to
-            erase his horrific performance on the mound last year. He could not. He would get the first out, and then
-            immediately give up 7 runs. He would see 11 batters in the first inning. The biggest was a 3 run homer by Abu
-            Patel. Donkey would get pulled 1.2 innings in for Diddy Kong, but a horrific performance to start, giving up
-            7 earned runs off of 8 hits. Diddy would bring the team back, hitting a 2 RBI double in the 3rd, and then score
-            off of a Sherpa sac double to make it 7-3. Abu would then hit his 2nd homer against Trocean to make it 8-3
-            shortly after. Troceans bats would strike again in the bottom of the 4th thanks to a Baby DK 3 run homer, and
-            another Sherpa RBI to make it 8-7 James, pulling Bowser off the mound in favor of captain Bowser Jr. Gramms
-            would enter the mound in the 5th, quickly load the bases, and Abu Patel would get his 3rd hit and 5th RBI, making
-            it 9-7 James. Once again, Trocean's bats wouldn't stop. Boomerang Bro got his first hit of the season off a
-            2-run homer to tie the game 9-9, then Tiny and Diddy would get back to back RBI singles to give Trocean an
-            11-9 lead. Nothing would happen in the 6th, but James would get his players into scoring position in the 7th.
-            Bowser would hit a bloop single to drive in Abu Patel, and with Bowser Jr at 3rd, Paratroopa would ground out,
-            giving Trocean the comeback 11-10 victory. In the stat era (Season 2 - Present), Trocean has never won a game
-            where they have scored first, and now they've come back down 7-0 to win. This is James 4th 7-run blown lead
-            in his franchise history, 3rd in which he has lost. This is the first time James has lost Opening Week.</Passage>
+            <StyledMiniHeader style={{marginBottom: "0"}}>Game 2: <span style={{ color: "#6AA84F" }}> Marge</span> v.s.
+                <span style={{ color: "#3586E8" }}> Isaac</span></StyledMiniHeader>
+            <Passage>
+
+            </Passage>
 
             <ScoreTable>
                 <thead>
@@ -268,31 +239,18 @@ export default function Week1Recap4() {
                 </tbody>
             </ScoreTable>
             <GameSummary>
-                <div className="mvp">Game MVP: Diddy Kong</div>
+                <div className="mvp">Game MVP: Red Kritter</div>
                 <div className="pitchers">
-                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Gramms (1 - 0)</span>
-                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Bowser Jr (0 - 1)</span>
+                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Wiggler (1 - 0)</span>
+                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Miss Jones (0 - 1)</span>
                 </div>
             </GameSummary>
 
-            <StyledMiniHeader style={{marginBottom: "0"}}>Game 3: <span style={{ color: "#FF9900" }}>Justave</span> v.s.
+            <StyledMiniHeader style={{marginBottom: "0"}}>Game 3: <span style={{ color: "#9900FF" }}> Trocean</span> v.s.
                 <span style={{ color: "#FF00FF" }}> Morgan</span></StyledMiniHeader>
-            <Passage>Justave had a very interesting draft, taking 7 miis of pink and light blue shirt color. Nicknamed
-            the "Cotton Candy Squad", they look to redeem last years disappointment with a Week 1 win against Morgan, who
-            has never won in Opening Week. Triangle would get her first ever start against the veteran himself, Bob Marley.
-            Triangle struggled on her first ever start, giving up 8 hits and 4 earned runs in 2.2 innings. Morgan
-            would score 1 in the 1st, 2 in the 2nd, and 2 in the 3rd. His players would be getting on base very efficiently,
-            and Bob Marley would be pitching very well once again. He would get his first ever regular season strikeout
-            on the fading Grayson McKean, and would pitch 4 innings scoreless. The runs would only hit him off of a Funky
-            Kong 2-run homer in the 5th inning with Triangle on base. Bob Marley would finish the day going 5.1 innings
-            and given up 2 earned runs off fo 7 hits, and recorded a strikeout. Justave's team really struggled in Opening Week.
-            Their team is very young, and lacked some experience. Smurf and Light Blue Shy Guy made their PMBL debuts going
-            a combined 1/6, and the Pink outfield went 2/7. Peach did not record a hit, and only lasted 1.1 innings on the
-            mound, and last years Morgan Hartwell Man of the Year Award recipient, Jake, pitching 1 inning and gave up
-            5 runs. 4 players on Justave did not record hits, including Peach. Light Blue Yoshi committed 2 errors at
-            2nd base which would help Morgan score more runs. It was would be 12-2 Morgan win in the end, with Mario winning
-            his first ever Game MVP, going 3/4, 2 Runs, and an RBI with 2 doubles. He also took over for Bob on the mound
-            pitching a hitless 1.2 innings. Kaguya also got MVP, going 4/4 with 3 runs and an RBI.</Passage>
+            <Passage>
+
+            </Passage>
             <ScoreTable>
                 <thead>
                 <tr>
@@ -329,24 +287,10 @@ export default function Week1Recap4() {
             </GameSummary>
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 4: <span style={{ color: "#CC0000" }}> Brendan</span> v.s.
-                <span style={{ color: "#6AA84F" }}> Marge</span></StyledMiniHeader>
-            <Passage>In the final game of the week, Marge would take Brendan to Bowsers Castle to fight back against his
-            heavier hitting squad, and be debuting Purple Yoshi in the outfield. Very excited about his outfield, Brendan
-            would be starting the Koopa and Bones outfield, consisting of Dark Bones, Blue Dry Bones, and Red Koopa. Marge
-            would start the scoring off of Yoshi hittig an RBI in the first, and Brendan would counter with 2 RBIs thanks to
-            Waluigi in the 2nd. Antenna, starting on the mound for Brendan, would strike out Eugene looking, which Marge
-            threatened to drop him after the game. Marge would fight back with 2 more RBIs in the 3rd off of Green Dry Bones
-            and Baby Luigi to go up 3-2. Blue Pianta would get off the mound in favor of Birdo, and would give up the game
-            tying run to Wario, making it 3-3. Antenna would bat in 2 more runs in the 5th after striking out the inning
-            before to give Brendan the 5-3 lead. In the Witching Hour, Marge's bats were able to get past Brendan's outfield
-            once again, with Purple Toad and Blue Pianta both hitting RBI singles to tie it 5-5. The King Bob-omb in the
-            outfield played a big role, throwing and successfully hitting bombs on outfielders for both teams due to the
-            shorter bomb fuses introduced this year. In the 7th, Red Koopa would hit a ball off of King Bob-omb, which
-            Purple Toad would make the heads up play to catch it for the out. In the 7th, Wario would get one out with Baby
-            Luigi on base, and Birdo, who was 0/3 to start the game would step up and a hit a deep shot. Red Koopa would get
-            hit by the fire and be unable to jump and catch it in time, giving Marge the 7-5 home run walkoff against Brendan.
-            Birdo off that one home run would instantly win MVP, and Marge now leads the East Division for the first time
-            since Season 1 Week 2. </Passage>
+                <span style={{ color: "#999999" }}> THANdrew</span></StyledMiniHeader>
+            <Passage>
+
+            </Passage>
             <ScoreTable>
                 <thead>
                 <tr>
@@ -424,10 +368,10 @@ export default function Week1Recap4() {
 
                 <AwardBlock>
                     <div className="award-name">Surprise of the Week</div>
-                    <div className="player">Baby DK</div>
-                    <div className="manager">Manager: <span style={{ color: "#9900FF" }}>Trocean</span></div>
+                    <div className="player">Blue Noki</div>
+                    <div className="manager">Manager: <span style={{ color: "#3586E8" }}>Isaac</span></div>
                     <div className="description">
-                        3/4, 3 Runs, 3 run homer
+                        5/5, 3 Runs, 2 RBIs
                     </div>
                 </AwardBlock>
 
