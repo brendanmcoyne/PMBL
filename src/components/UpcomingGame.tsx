@@ -71,8 +71,8 @@ const Td = styled.td`
 
 export default function Game() {
     const game = {
-        away: { name: "Morgan", color: "#FF00FF", manager: "Morgan", record: "1-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
-        home: { name: "Trocean", color: "#9900FF", manager: "Trocean", record: "1-0", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        away: { name: "Morgan", color: "#FF00FF", manager: "Morgan", record: "1-1", scores: [0, 0, 0, 0, 0, 0, 3], R: 3, H: 12, E: 0, LOB: 6 },
+        home: { name: "Trocean", color: "#9900FF", manager: "Trocean", record: "2-0", scores: [7, 0, 1, 0, 2, 0, "X"], R: 10, H: 20, E: 0, LOB: 6 },
     };
 
     {/*
@@ -132,7 +132,7 @@ export default function Game() {
                 </tbody>
             </ScoreTable>
             <h4 style={{ marginTop: "0", marginBottom: "0.75rem" }}>
-                Location: <span style={{ color: "#999999" }}>TBD</span>
+                Location: <span style={{ color: "#8B4513" }}>DK Jungle</span>
             </h4>
 
             {/*

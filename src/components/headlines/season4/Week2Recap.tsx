@@ -142,12 +142,12 @@ export default function Week2Recap4() {
         home: { name: "Isaac", color: "#3586E8", scores: [0, 9, 0, 2, 0, 0, "X"], R: 11, H: 17, E: 0, LOB: 8 },
     };
     const game3 = {
-        away: { name: "Morgan", color: "#FF00FF", scores: [1, 2, 2, 0, 5, 2, "X"], R: 12, H: 20, E: 0, LOB: 8 },
-        home: { name: "Trocean", color: "#9900FF", scores: [0, 0, 3, 4, 4, 0, "X"], R: 11, H: 22, E: 1, LOB: 7 },
+        away: { name: "Morgan", color: "#FF00FF", scores: [0, 0, 0, 0, 0, 0, 3], R: 3, H: 12, E: 0, LOB: 6 },
+        home: { name: "Trocean", color: "#9900FF", scores: [7, 0, 1, 0, 2, 0, "X"], R: 10, H: 20, E: 0, LOB: 6 },
     };
     const game4 = {
-        away: { name: "Brendan", color: "#CC0000", scores: [0, 2, 0, 1, 2, 0, 0], R: 5, H: 13, E: 0, LOB: 5 },
-        home: { name: "THANdrew", color: "#999999", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 7, E: 0, LOB: 5 },
+        away: { name: "Brendan", color: "#CC0000", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        home: { name: "THANdrew", color: "#999999", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
     };
 
     return (
@@ -166,8 +166,24 @@ export default function Week2Recap4() {
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 1: <span style={{ color: "#FF9900" }}>Justave</span> v.s.
                 <span style={{ color: "#F1C232" }}> James</span></StyledMiniHeader>
-            <Passage>
-
+            <Passage>Coming off his first ever Opening Week loss, James looked to ride the ship against division opponent
+                Justave, who lost 12-2 to Morgan the week prior. Bowser Jr would take his spot on the mound against Dixie Kongs
+                first ever start. With a new batting order, Light Blue Shy Guy would record his first ever hit in the majors, and
+                his first run as Funky Kong would bat 2 runs in after they were loaded. The top of the inning would end off of
+                a predictable strikeout from Grayson McKean before James' bats would score 2 of thier own, getting Dixie off the
+                mound after only .2 innings. King Boo would record the RBIs thanks to Bowser putting himself and Bowser Jr into
+                scoring position. Justave would get runs in both the 2nd and 3rd thanks to solo shots by Peach and Triangle, and
+                then a 3rd solo shot by newcomer Smurf in the top of the 4th, followed by a Funkey Kong sacrifice fly to make it
+                6-2 Justave. Peach would be taken off the mound in favor of Funky Kong surprisingly in the 4th for Justaves team,
+                who would give up a sac fly to King Boo in the 4th and another Abu Patel RBI in the 5th making the score 6-4
+                Justave. Going into the witching hour, Dixie Kong would get her first RBI of the season, bringing in Light Blue
+                Shy Guy, and Grayson would get a very lucky RBI off of a King Boo error at 3rd base, extending the Justave lead
+                back to 4 runs, and taking Bowser off the mound for Yellow Magikoopa. James would be unable to score for his
+                last 2 innings batting, and he would fall to Justave for the first time since the World Series 8-4. Despite
+                Funky Kong having 3 RBIs and 3 different batters hitting solo homers, the game MVP would be given to Grayson
+                McKean, who went 2/3 with a K, and RBI'ed off of an error. The fans once again very upset with the Game MVP
+                voting, calling it "fraudulent" like Petey Piranha's in Week 1. Justave for the 4th straight year will start
+                1-1, while James for the first time ever will start 0-2.
             </Passage>
 
             <ScoreTable>
@@ -207,8 +223,21 @@ export default function Week2Recap4() {
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 2: <span style={{ color: "#6AA84F" }}> Marge</span> v.s.
                 <span style={{ color: "#3586E8" }}> Isaac</span></StyledMiniHeader>
-            <Passage>
-
+            <Passage>Coming off a big walk off win at the castle, vibes were high for Marge. Bringing sophomore Miss
+                Jones onto the mound against Wiggler. No hits would be exchanged in the 1st inning, but in the 2nd
+                inning, Birdo would hit a deep drive to right center, scoring 2 to give Marge an early 2 run lead.
+                That would very quickly end as Marge's fielding completely fell apart, as Yoshi would error at
+                shortstop and then fail to throw the ball to second. This would end up giving Red Kritter a
+                grand slam to make it 4-2 Isaac. The Marge outfield would get the 2nd out off of Yellow Pianta, but give up
+                3 more hits, including to Petey for a ground-rule double, taking Miss Jones off the mound down 5-2. Isaac
+                would get some luck thanks to Eugene deciding to synergy pass the ball to Purple Toad instead of catching
+                it himself, allowing 2 more runs to score off of a Daisy triple. Lucia and Tate McRae would each pick up
+                another RBI to make it 9-2 Isaac, a disastrous fielding inning for Marge. Marges bats could not find
+                anything for the rest of the game, repeatedly grounding to short and having 1-2-3 innings. Red Kritter
+                would hit another 2 run homer in the 4th for Isaac making it 11-2, and Baby Luigi and Birdo would each
+                bat in a run in the 6th and 7th innings, with Birdos being a solo shot. The starting 2 batters in Marges
+                lineup, Eugene and Purple Toad, both went 0-4, including Purple Toad erroring in left field. The game
+                would end 11-4 Isaac in the jungle, and Isaac would go to 2-0 for the first time ever.
             </Passage>
 
             <ScoreTable>
@@ -246,10 +275,28 @@ export default function Week2Recap4() {
                 </div>
             </GameSummary>
 
-            <StyledMiniHeader style={{marginBottom: "0"}}>Game 3: <span style={{ color: "#9900FF" }}> Trocean</span> v.s.
-                <span style={{ color: "#FF00FF" }}> Morgan</span></StyledMiniHeader>
-            <Passage>
-
+            <StyledMiniHeader style={{marginBottom: "0"}}>Game 3: <span style={{ color: "#FF00FF" }}> Morgan</span> v.s.
+                <span style={{ color: "#9900FF" }}> Trocean</span></StyledMiniHeader>
+            <Passage>Per tradition in the Trocean management, Manager Ocean loves to skip important baseball events for
+                family vacations. Last year he failed to attend the draft, and this year he is missing out on Week 2
+                against Morgan, taking an indefinite amount of time away from the team. Morgan would also not be
+                present for his game, leaving the players to "figure it out", with longest tenured players Danny B
+                and Dry Bones taking the leadership roles. Danny B would be start on the mound against Diddy Kong for Trocean.
+                Diddy Kong would quickly get rid of the 1st 3 batters, before Danny B would watch his PMBL life flash before
+                his eyes, giving up hits to the first 8 batters he saw, giving up 6 earned runs, and being taken off the
+                mound without recording an out. This would be the longest streak of hits to start a game in PMBL history.
+                Mario would then quickly come up and end the inning, but a 7-0 lead with the starter out was a terrible
+                sight for Morgan fans. The game stayed very balanced and in check for the remainder of the innings, with
+                Trocean scoring another run in the 3rd and 2 more in the 5th. Morgans bats could get absolutely zero
+                momentum whatsoever. The Ketchup & Mustard toad duo was very dormant up until the 7th inning, and Dry
+                Bones was not able to get sort of offense going for his team. In the 7th inning, with Donkey Kong hoping
+                to end his day scoreless after an almost Danny B-like performance last week on the mound, he would give up
+                3 runs off of RBI singles. The DK haters rejoiced as his pitching woes still were continuing in Week 2.
+                The game would end on a very fitting Danny B double play. Troceans 10-3 win would bring them 2 games above
+                .500 for the first time in their history, and the fans don't know how to react. The Morgan fans know
+                exactly how to react to Danny B, rivaling the Red Yoshi performance from a season ago, Danny B went
+                0/4, and giving up 6 earned runs on 8 hits without recording an out. For the first time in PMBL history,
+                Trocean will sit #1 in league rankings to end the week. Morgan is the only team which has never sat #1.
             </Passage>
             <ScoreTable>
                 <thead>
@@ -279,10 +326,10 @@ export default function Week2Recap4() {
                 </tbody>
             </ScoreTable>
             <GameSummary>
-                <div className="mvp">Game MVP: Mario, Kaguya</div>
+                <div className="mvp">Game MVP: Brown Kritter</div>
                 <div className="pitchers">
-                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Bob Marley (1 - 0)</span>
-                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Triangle (0 - 1)</span>
+                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Diddy Kong (1 - 0)</span>
+                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Danny B (0 - 1)</span>
                 </div>
             </GameSummary>
 

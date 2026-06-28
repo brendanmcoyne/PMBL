@@ -84,8 +84,8 @@ export const GamesSeason4: Record<string, GameStats> = {
             { player: "Petey Piranha", team: "Isaac", AB: 3, H: 0, R: 0, RBI: 1, HR: 0, AVG: "0.000" },
             { player: "Daisy", team: "Isaac", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
             { player: "Reshiram", team: "Isaac", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Baby Daisy", team: "Isaac", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
             { player: "Lucia", team: "Isaac", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "Baby Daisy", team: "Isaac", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
             { player: "Red Kritter", team: "Isaac", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
         ],
 
@@ -391,121 +391,115 @@ export const GamesSeason4: Record<string, GameStats> = {
     },
     "Game7": {
         id: "Game7",
-        awayManager: "THANdrew",
-        homeManager: "Isaac",
+        awayManager: "Morgan",
+        homeManager: "Trocean",
 
         game: {
             away: {
-                name: "THANdrew",
-                color: "#999999",
-                scores: [3, 0, 4, 2, 0, 3, 0],
-                R: 12,
-                H: 23,
+                name: "Morgan",
+                color: "#FF00FF",
+                scores: [0, 0, 0, 0, 0, 0, 3],
+                R: 3,
+                H: 0,
                 E: 0,
-                LOB: 10
+                LOB: 0
             },
 
             home: {
-                name: "Isaac",
-                color: "#3586E8",
-                scores: [3, 1, 1, 1, 0, 3, 2],
-                R: 11,
-                H: 21,
-                E: 2,
-                LOB: 5
+                name: "Trocean",
+                color: "#9900FF",
+                scores: [7, 0, 1, 2, 0, 0, 0],
+                R: 10,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Purple Toad", team: "THANdrew", AB: 5, H: 4, R: 2, RBI: 3, HR: 0, AVG: "0.800" },
-            { player: "Abu Patel", team: "THANdrew", AB: 5, H: 3, R: 2, RBI: 4, HR: 1, AVG: "0.600" },
-            { player: "Blue Yoshi", team: "THANdrew", AB: 5, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.400" },
-            { player: "Birdo", team: "THANdrew", AB: 5, H: 3, R: 1, RBI: 1, HR: 0, AVG: "0.600" },
-            { player: "Boomerang Bro", team: "THANdrew", AB: 5, H: 2, R: 0, RBI: 1, HR: 0, AVG: "0.400" },
-            { player: "Blue Kamek", team: "THANdrew", AB: 5, H: 3, R: 1, RBI: 1, HR: 0, AVG: "0.600" },
-            { player: "Diddler", team: "THANdrew", AB: 4, H: 2, R: 2, RBI: 1, HR: 0, AVG: "0.500" },
-            { player: "Blue Shy Guy", team: "THANdrew", AB: 3, H: 2, R: 2, RBI: 1, HR: 0, AVG: "0.667" },
-            { player: "Alfonzo", team: "THANdrew", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
+            { player: "Yellow Toad", team: "Morgan", AB: 4, H: 2, R: 0, RBI: 1, HR: 0, AVG: "0.500" },
+            { player: "Dry Bones", team: "Morgan", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
+            { player: "Danny B", team: "Morgan", AB: 4, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "Green Kritter", team: "Morgan", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Mario", team: "Morgan", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Kimmy", team: "Morgan", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Kaguya", team: "Morgan", AB: 3, H: 2, R: 0, RBI: 1, HR: 0, AVG: "0.667" },
+            { player: "Jack White", team: "Morgan", AB: 3, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.333" },
+            { player: "Red Toad", team: "Morgan", AB: 3, H: 3, R: 0, RBI: 0, HR: 0, AVG: "1.000" },
 
-            { player: "Bowser", team: "Isaac", AB: 5, H: 4, R: 4, RBI: 4, HR: 3, AVG: "0.800" },
-            { player: "Blue Dry Bones", team: "Isaac", AB: 5, H: 3, R: 3, RBI: 2, HR: 1, AVG: "0.600" },
-            { player: "Saber", team: "Isaac", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Blue Kritter", team: "Isaac", AB: 4, H: 1, R: 0, RBI: 2, HR: 0, AVG: "0.250" },
-            { player: "Barry", team: "Isaac", AB: 4, H: 3, R: 2, RBI: 0, HR: 0, AVG: "0.750" },
-            { player: "Blue Toad", team: "Isaac", AB: 4, H: 3, R: 0, RBI: 0, HR: 0, AVG: "0.750" },
-            { player: "Blue Pianta", team: "Isaac", AB: 4, H: 2, R: 0, RBI: 3, HR: 0, AVG: "0.500" },
-            { player: "Cascade", team: "Isaac", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Blue Noki", team: "Isaac", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
+            { player: "Tiny Kong", team: "Trocean", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
+            { player: "Diddy Kong", team: "Trocean", AB: 4, H: 3, R: 1, RBI: 1, HR: 0, AVG: "0.750" },
+            { player: "Donkey Kong", team: "Trocean", AB: 4, H: 1, R: 1, RBI: 1, HR: 0, AVG: "0.250" },
+            { player: "Sherpa", team: "Trocean", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
+            { player: "Brown Kritter", team: "Trocean", AB: 4, H: 3, R: 3, RBI: 2, HR: 0, AVG: "0.750" },
+            { player: "Gramms", team: "Trocean", AB: 4, H: 3, R: 2, RBI: 0, HR: 0, AVG: "0.750" },
+            { player: "Tarzan", team: "Trocean", AB: 4, H: 1, R: 1, RBI: 1, HR: 0, AVG: "0.250" },
+            { player: "Boomerang Bro", team: "Trocean", AB: 3, H: 3, R: 0, RBI: 4, HR: 0, AVG: "1.000" },
+            { player: "Baby DK", team: "Trocean", AB: 3, H: 2, R: 0, RBI: 1, HR: 0, AVG: "0.667" },
         ],
 
         pitchingStats: [
-            { player: "Blue Kamek", team: "THANdrew", IP: 0.2, H: 5, ER: 3, SO: 0, ERA: "31.50" },
-            { player: "Birdo", team: "THANdrew", IP: 6, H: 16, ER: 8, SO: 0, ERA: "9.33" },
-            { player: "Abu Patel", team: "THANdrew", IP: 0.1, H: 0, ER: 0, SO: 0, ERA: "0.00" },
+            { player: "Danny B", team: "Morgan", IP: 0.2, H: 8, ER: 6, SO: 0, ERA: "999.99" },
+            { player: "Mario", team: "Morgan", IP: 4.2, H: 8, ER: 3, SO: 1, ERA: "4.50" },
+            { player: "Kimmy", team: "Morgan", IP: 1.1, H: 3, ER: 1, SO: 0, ERA: "5.25" },
 
-            { player: "Cascade", team: "Isaac", IP: 2.1, H: 9, ER: 3, SO: 0, ERA: "9.00" },
-            { player: "Bowser", team: "Isaac", IP: 1.2, H: 8, ER: 6, SO: 1, ERA: "25.20" },
-            { player: "Blue Kritter", team: "Isaac", IP: 3, H: 6, ER: 3, SO: 0, ERA: "7.00" },
+            { player: "Diddy Kong", team: "Trocean", IP: 3.2, H: 3, ER: 0, SO: 1, ERA: "0.00" },
+            { player: "Donkey Kong", team: "Trocean", IP: 3.1, H: 9, ER: 3, SO: 0, ERA: "6.30" },
         ]
     },
     "Game8": {
         id: "Game8",
-        awayManager: "Marge",
-        homeManager: "James",
+        awayManager: "Brendan",
+        homeManager: "THANdrew",
 
         game: {
             away: {
-                name: "Marge",
-                color: "#6AA84F",
-                scores: [0, 3, 0, 1, 0, 0, 2],
-                R: 6,
-                H: 13,
+                name: "Brendan",
+                color: "#CC0000",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 5
+                LOB: 0
             },
 
             home: {
-                name: "James",
-                color: "#F1C232",
-                scores: [1, 0, 0, 0, 3, 4, 0],
-                R: 8,
-                H: 17,
+                name: "THANdrew",
+                color: "#999999",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 6
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Luigi", team: "Marge", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Piggie", team: "Marge", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Green Kritter", team: "Marge", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "King K Rool", team: "Marge", AB: 4, H: 1, R: 0, RBI: 2, HR: 0, AVG: "0.250" },
-            { player: "Miss Jones", team: "Marge", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Green Shy Guy", team: "Marge", AB: 3, H: 1, R: 1, RBI: 2, HR: 1, AVG: "0.333" },
-            { player: "Geek Squad", team: "Marge", AB: 3, H: 2, R: 1, RBI: 1, HR: 1, AVG: "0.667" },
-            { player: "Green Kamek", team: "Marge", AB: 3, H: 2, R: 1, RBI: 1, HR: 1, AVG: "0.667" },
-            { player: "Yellow Pianta", team: "Marge", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Blue Dry Bones", team: "Brendan", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
+            { player: "Red Koopa", team: "Brendan", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
+            { player: "Dark Bones", team: "Brendan", AB: 4, H: 3, R: 0, RBI: 0, HR: 0, AVG: "0.750" },
+            { player: "Antenna", team: "Brendan", AB: 4, H: 2, R: 1, RBI: 2, HR: 0, AVG: "0.500" },
+            { player: "Fire Bro", team: "Brendan", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "Red Kamek", team: "Brendan", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Wario", team: "Brendan", AB: 3, H: 3, R: 1, RBI: 1, HR: 0, AVG: "1.000" },
+            { player: "Waluigi", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 2, HR: 0, AVG: "0.333" },
+            { player: "Red Pianta", team: "Brendan", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
 
-            { player: "Bowser Jr", team: "James", AB: 4, H: 2, R: 2, RBI: 2, HR: 0, AVG: "0.500" },
-            { player: "Fire Bro", team: "James", AB: 4, H: 4, R: 3, RBI: 4, HR: 2, AVG: "1.000" },
-            { player: "Kimmy", team: "James", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Red Kritter", team: "James", AB: 4, H: 3, R: 1, RBI: 1, HR: 0, AVG: "0.750" },
-            { player: "MLK", team: "James", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Red Toad", team: "James", AB: 3, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.333" },
-            { player: "Red Pianta", team: "James", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Jack White", team: "James", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Paratroopa", team: "James", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
+            { player: "Larry Cuc", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Blue Kritter", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Hammer Bro", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "King K Rool", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Luigi", team: "THANdrew", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "Green Kamek", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Piggie", team: "THANdrew", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "Geek Squad", team: "THANdrew", AB: 2, H: 2, R: 0, RBI: 0, HR: 0, AVG: "1.000" },
+            { player: "Toadsworth", team: "THANdrew", AB: 2, H: 3, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
         ],
 
         pitchingStats: [
-            { player: "Geek Squad", team: "Marge", IP: 2.2, H: 4, ER: 1, SO: 0, ERA: "2.63" },
-            { player: "Luigi", team: "Marge", IP: 1.1, H: 6, ER: 2, SO: 0, ERA: "10.50" },
-            { player: "Green Kamak", team: "Marge", IP: 1, H: 3, ER: 1, SO: 0, ERA: "7.00" },
-            { player: "Yellow Pianta", team: "Marge", IP: 1, H: 4, ER: 4, SO: 0, ERA: "28.00" },
+            { player: "Geek Squad", team: "Brendan", IP: 2.2, H: 4, ER: 1, SO: 0, ERA: "2.63" },
 
-            { player: "Jack White", team: "James", IP: 2.2, H: 6, ER: 3, SO: 0, ERA: "7.88" },
-            { player: "Bowser Jr", team: "James", IP: 2.2, H: 4, ER: 1, SO: 1, ERA: "2.63" },
-            { player: "Red Pianta", team: "James", IP: 1.2, H: 3, ER: 2, SO: 0, ERA: "8.40" },
+            { player: "Jack White", team: "THANdrew", IP: 2.2, H: 6, ER: 3, SO: 0, ERA: "7.88" },
         ]
     },
     "Game9": {

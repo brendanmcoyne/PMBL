@@ -203,7 +203,7 @@ export default function UpdatedStandings() {
                                 {Object.entries(row).map(([header, cell], i) => {
                                     let display: string | number = cell === "#DIV/0!" ? 0 : cell;
 
-                                    const decimalStats = ["avg", "obp", "slg", "ops", "era", "whip",];
+                                    const decimalStats = ["avg", "obp", "slg", "ops", "era", "whip", "woba", "wrc", "wrc+"];
 
                                     const lowerHeader = header.toLowerCase();
                                     const numValue = parseFloat(display as string);

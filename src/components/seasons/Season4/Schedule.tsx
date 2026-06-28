@@ -304,6 +304,16 @@ export default function Schedule4() {
                     <ScoreLine>4-11</ScoreLine>
                     <Stadium>DK Jungle</Stadium>
                 </Matchup>
+                <Matchup onClick={() => setSelectedGame(GamesSeason4["Game6"])} style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
+                    <TeamRecord>(1-1)</TeamRecord>
+                    <div/>
+                    <TeamRecord>(2-0)</TeamRecord>
+                    <ScoreLine>3-10</ScoreLine>
+                    <Stadium>DK Jungle</Stadium>
+                </Matchup>
                 <Matchup style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
@@ -311,16 +321,6 @@ export default function Schedule4() {
                     <TeamRecord>(0-1)</TeamRecord>
                     <div/>
                     <TeamRecord>(0-1)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
-                </Matchup>
-                <Matchup style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
-                    <TeamRecord>(1-0)</TeamRecord>
-                    <div/>
-                    <TeamRecord>(1-0)</TeamRecord>
                     <ScoreLine>0-0</ScoreLine>
                     <Stadium>TBD</Stadium>
                 </Matchup>
