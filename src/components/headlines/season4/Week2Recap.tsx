@@ -156,7 +156,7 @@ export default function Week2Recap4() {
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 4 Week 2 Recap</StyledHeader>
-            <GenImage src="/headlines/4week1.jpeg" alt="Draft"/>
+            <GenImage src="/headlines/4week2.jpeg" alt="Draft"/>
             <ArticleMeta>
                 Written by: PMBL News — June 29, 2026
             </ArticleMeta>
