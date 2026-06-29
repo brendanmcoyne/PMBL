@@ -367,7 +367,7 @@ export default function Week2Recap4() {
                 <thead>
                 <tr>
                     <Th>Team</Th>
-                    {[...Array(7)].map((_, i) => <Th key={i}>{i + 1}</Th>)}
+                    {[...Array(8)].map((_, i) => <Th key={i}>{i + 1}</Th>)}
                     <Th>R</Th>
                     <Th>H</Th>
                     <Th>E</Th>
@@ -413,7 +413,7 @@ export default function Week2Recap4() {
                 <AwardBlock>
                     <div className="award-name">Pitcher of the Week</div>
                     <div className="player">Diddy Kong</div>
-                    <div className="manager">Manager: <span style={{ color: "#FF00FF" }}>Trocean</span></div>
+                    <div className="manager">Manager: <span style={{ color: "#9900FF" }}>Trocean</span></div>
                     <div className="description">
                         (W) 3.2 IP, 3 Hits, 1 K
                     </div>
