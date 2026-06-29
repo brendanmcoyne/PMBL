@@ -146,8 +146,8 @@ export default function Week2Recap4() {
         home: { name: "Trocean", color: "#9900FF", scores: [7, 0, 1, 0, 2, 0, "X"], R: 10, H: 20, E: 0, LOB: 6 },
     };
     const game4 = {
-        away: { name: "Brendan", color: "#CC0000", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
-        home: { name: "THANdrew", color: "#999999", scores: [0, 0, 0, 0, 0, 0, 0], R: 0, H: 0, E: 0, LOB: 0 },
+        away: { name: "Brendan", color: "#CC0000", scores: [0, 0, 0, 0, 5, 5, 0, 0], R: 10, H: 23, E: 0, LOB: 9 },
+        home: { name: "THANdrew", color: "#999999", scores: [3, 2, 0, 2, 2, 1, 0, 1], R: 11, H: 22, E: 1, LOB: 6 },
     };
 
     return (
@@ -155,14 +155,15 @@ export default function Week2Recap4() {
             <ToggleButton>
                 <Link style={{color: "white"}} to="/headlines">← Back</Link>
             </ToggleButton>
-            <StyledHeader>Season 4 Week 1 Recap</StyledHeader>
+            <StyledHeader>Season 4 Week 2 Recap</StyledHeader>
             <GenImage src="/headlines/4week1.jpeg" alt="Draft"/>
             <ArticleMeta>
-                Written by: PMBL News — June 23, 2026
+                Written by: PMBL News — June 29, 2026
             </ArticleMeta>
             <SeparatorLine />
-            <Passage>Welcome to Season 4. Even though this season will be online, we hope the fans will still show
-                up to watch their favorite teams compete. The league is excited for some of the new looking lineups this year.</Passage>
+            <Passage>Season 4 begins to rumble on with very little trade rumors this time around. Maybe teams are
+            content with their squads, or maybe something big is brewing. As for now, here is what happened in Season
+            2!</Passage>
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 1: <span style={{ color: "#FF9900" }}>Justave</span> v.s.
                 <span style={{ color: "#F1C232" }}> James</span></StyledMiniHeader>
@@ -335,8 +336,32 @@ export default function Week2Recap4() {
 
             <StyledMiniHeader style={{marginBottom: "0"}}>Game 4: <span style={{ color: "#CC0000" }}> Brendan</span> v.s.
                 <span style={{ color: "#999999" }}> THANdrew</span></StyledMiniHeader>
-            <Passage>
+            <Passage>Both playoff teams from last year coming off a close loss head to the Daisy Cruiser for the final
+                game of Week 2. With Red Pianta getting the start on the mound for Brendan and Toadsworth for THANdrew,
+                it looked to be a very interesting pitching duel. THANdrew would quickly get on the board and knock
+                off Red Pianta after just 1 inning of pitching, giving up 3 earned runs off of 7 hits. Toadsworth on the
+                other hand would not give up an earned run through his 2.1 innings of pitching, giving up only 6 hits. Luigi
+                would come on to the mound in the 3rd, and keep the scoresheet clean for THANdrew going into the 5th inning,
+                who thanks to a King K home run would get a 7-0 lead. The first 3 innings ended in very quick double plays for
+                Brendan, leaving him quite distraught. Fire Bro, who had been under scrutiny for being the 1st round pick and
+                not recording a hit in Week 1, stepped up to the plate and launched a nuke to left center to get the scoring
+                going for Brendan with a bases clearing single, making it 7-3. Two more runs would be scored before Luigi was
+                pulled, making the THANdrew lead only 7-5. Waluigi would leave the bases loaded to end the inning. Piggie
+                would get a big double in the bottom of the 5th scoring Blue Kritter and Toadsworth thanks to a boo to make
+                it 9-5 THANdrew, and then Brendan's bats would come alive again in the 6th. Brendans team would rally to take
+                the lead 10-9 thanks to 5 more runs, scoring 2 off of Green Magikoopa, and another 3 from Larry Cuc off of
+                only 3 hits. Now with the lead, Red Magikoopa would quickly give up a solo shot to Hammer Bro to tie the
+                game, his 2nd home run of the game.
+            </Passage>
 
+            <Passage>
+                Brendan wouldn't be able to score in the top of the 7th, but in the bottom, his defense thanks to a bit of
+                item luck was able to turn a triple play to force extra innings. Red Pianta would get a drop into center
+                field in the 8th, but the ball would be thrown from center field to 1st base to get him out in time, stunning
+                the crowd. After not scoring in the 8th, THANdrew would quickly get 2 on in the bottom of the inning, and
+                King K would hit a sacrifice fly to left, scoring Green Magikoopa and ending the thriller. A very
+                disappointed Brendan would drop another close game after another walkoff to go to 0-2, and THANdrew stays
+                alive in a very competitive West Division at 1-1.
             </Passage>
             <ScoreTable>
                 <thead>
@@ -366,10 +391,10 @@ export default function Week2Recap4() {
                 </tbody>
             </ScoreTable>
             <GameSummary>
-                <div className="mvp">Game MVP: Birdo</div>
+                <div className="mvp">Game MVP: King K. Rool</div>
                 <div className="pitchers">
-                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Birdo (1 - 0)</span>
-                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Wario (0 - 1)</span>
+                    <span style={{fontSize: ".8rem"}}>Winning Pitcher: Larry Cuc (1 - 0)</span>
+                    <span style={{fontSize: ".8rem"}}>Losing Pitcher: Fire Bro (0 - 1)</span>
                 </div>
             </GameSummary>
 
@@ -378,19 +403,19 @@ export default function Week2Recap4() {
             <AwardsSection style={{marginTop: "0"}}>
                 <AwardBlock>
                     <div className="award-name">MVP of the Week</div>
-                    <div className="player">Abu Patel</div>
-                    <div className="manager">Manager: <span style={{ color: "#F1C232" }}>James</span></div>
+                    <div className="player">King K Rool</div>
+                    <div className="manager">Manager: <span style={{ color: "#999999" }}>THANdrew</span></div>
                     <div className="description">
-                        4/4, 3 runs, 5 RBIs, 2 HR
+                        3/4, 2 Runs, 5 RBIs, 1 HR
                     </div>
                 </AwardBlock>
 
                 <AwardBlock>
                     <div className="award-name">Pitcher of the Week</div>
-                    <div className="player">Bob Marley</div>
-                    <div className="manager">Manager: <span style={{ color: "#FF00FF" }}>Morgan</span></div>
+                    <div className="player">Diddy Kong</div>
+                    <div className="manager">Manager: <span style={{ color: "#FF00FF" }}>Trocean</span></div>
                     <div className="description">
-                        (W) 5.1 IP, 7 Hits, 2 ER, 1 K
+                        (W) 3.2 IP, 3 Hits, 1 K
                     </div>
                 </AwardBlock>
 
@@ -399,41 +424,46 @@ export default function Week2Recap4() {
                     <div className="player">Diddy Kong</div>
                     <div className="manager">Manager: <span style={{ color: "#9900FF" }}>Trocean</span></div>
                     <div className="description" style={{marginBottom: "0"}}>
-                        3/4, 1 Run, 3 RBIs, 1 Double
+                       3/4, 1 Run, 1 RBI
                     </div>
                     <div className="description" style={{marginTop: "0"}}>
-                        2.1 IP, 4 Hits, 1 ER
+                        (W) 3.2 IP, 3 Hits, 1 K
                     </div>
                 </AwardBlock>
 
                 <AwardBlock>
                     <div className="award-name">Rookie of the Week</div>
+                    <div className="player">Light Blue Shy Guy</div>
+                    <div className="manager">Manager: <span style={{ color: "#FF9900" }}>Justave</span></div>
                     <div className="description">
-                        Not awarded.
+                        4/3, 3 Runs
                     </div>
                 </AwardBlock>
 
                 <AwardBlock>
                     <div className="award-name">Surprise of the Week</div>
-                    <div className="player">Blue Noki</div>
-                    <div className="manager">Manager: <span style={{ color: "#3586E8" }}>Isaac</span></div>
+                    <div className="player">Smurf, Triangle</div>
+                    <div className="manager">Manager: <span style={{ color: "#FF9900" }}>Justave</span></div>
                     <div className="description">
-                        5/5, 3 Runs, 2 RBIs
+                        Solo home runs, 1st of their careers
                     </div>
                 </AwardBlock>
 
                 <AwardBlock>
                     <div className="award-name">Disappointment of the Week</div>
-                    <div className="player">Light Blue Yoshi</div>
-                    <div className="manager">Manager: <span style={{ color: "#FF9900" }}>Justave</span></div>
-                    <div className="description">
-                        0/3 and 2 fielding errors
+                    <div className="player">Danny B</div>
+                    <div className="manager">Manager: <span style={{ color: "#FF00FF" }}>Morgan</span></div>
+                    <div className="description" style={{marginBottom: "0"}}>
+                        0/4, game ending double play
+                    </div>
+                    <div className="description" style={{marginTop: "0"}}>
+                        (L) 0 IP, 8 Hits, 6 ER
                     </div>
                 </AwardBlock>
             </AwardsSection>
 
 
-            <StyledMiniHeader>Week 1 Stat Leaders</StyledMiniHeader>
+            <StyledMiniHeader>Week 2 Stat Leaders</StyledMiniHeader>
 
             <StatLeadersBlock style={{marginTop: "0"}}>
                 <LeaderboardTable>
@@ -450,12 +480,14 @@ export default function Week2Recap4() {
                     <tr>
                         <td>Batting Average</td>
                         <td>
-                            <span style={{ color: "#F1C232" }}>Abu Patel</span> (1.000)
+                            <span style={{ color: "#FF00FF" }}>Kaguya</span> (0.857)
                         </td>
                         <td>
-                            <span style={{ color: "#999999" }}>Geek Squad</span> (1.000)
+                            <span style={{ color: "#CC0000" }}>Wario</span> (0.857)
                         </td>
-                        <td>4 Players (1.000)</td>
+                        <td>
+                            5 Players (0.750)
+                        </td>
                     </tr>
 
                     <tr>
@@ -464,53 +496,59 @@ export default function Week2Recap4() {
                             <span style={{ color: "#F1C232" }}>Abu Patel</span> (2)
                         </td>
                         <td>
-                            <span style={{ color: "#9900FF" }}>Baby DK</span> (1)
+                            <span style={{ color: "#6AA84F" }}>Birdo</span> (2)
                         </td>
-                        <td>4 Players (1)</td>
+                        <td>
+                            2 Players (2)
+                        </td>
                     </tr>
 
                     <tr>
                         <td>RBIs</td>
                         <td>
-                            <span style={{ color: "#F1C232" }}>Abu Patel</span> (5)
+                            <span style={{ color: "#F1C232" }}>Abu Patel</span> (6)
                         </td>
                         <td>
-                            <span style={{ color: "#FF00FF" }}>Dry Bones</span> (4)
+                            <span style={{ color: "#9900FF" }}>Boomerang Bro</span> (6)
                         </td>
-                        <td>2 Players (3)</td>
+                        <td>
+                            <span style={{ color: "#3586E8" }}>Red Kritter</span> (6)
+                        </td>
                     </tr>
 
                     <tr>
                         <td>Runs</td>
                         <td>
-                            <span style={{ color: "#F1C232" }}>Abu Patel</span> (3)
+                            <span style={{ color: "#9900FF" }}>Gramms</span> (4)
                         </td>
                         <td>
-                            <span style={{ color: "#9900FF" }}>Baby DK</span> (3)
+                            <span style={{ color: "#FF00FF" }}>Kaguya</span> (4)
                         </td>
                         <td>
-                            <span style={{ color: "#FF00FF" }}>Kaguya</span> (3)
+                            10 Players (3)
                         </td>
                     </tr>
 
                     <tr>
                         <td>Hits</td>
                         <td>
-                            <span style={{ color: "#F1C232" }}>Abu Patel</span> (4)
+                            <span style={{ color: "#F1C232" }}>Bowser Jr</span> (6)
                         </td>
                         <td>
-                            <span style={{ color: "#FF00FF" }}>Kaguya</span> (4)
+                            <span style={{ color: "#CC0000" }}>Dark Bones</span> (4)
                         </td>
-                        <td>3 Players (4)</td>
+                        <td>
+                            6 Players (6)
+                        </td>
                     </tr>
 
                     <tr>
-                        <td>ERA (Min. 3 IP)</td>
+                        <td>ERA (Min. 5 IP)</td>
                         <td>
-                            <span style={{ color: "#3586E8" }}>Baby Daisy</span> (0.00)
+                            <span style={{ color: "#3586E8" }}>Diddy Kong</span> (1.61)
                         </td>
                         <td>
-                            <span style={{ color: "#999999" }}>King K. Rool</span> (1.62)
+                            <span style={{ color: "#3586E8" }}>Daisy</span> (2.21)
                         </td>
                         <td>
                             <span style={{ color: "#FF00FF" }}>Bob Marley</span> (2.63)
@@ -520,23 +558,23 @@ export default function Week2Recap4() {
                     <tr>
                         <td>Innings Pitched</td>
                         <td>
-                            <span style={{ color: "#FF00FF" }}>Bob Marley</span> (5.1)
+                            <span style={{ color: "#6AA84F" }}>Birdo</span> (8)
                         </td>
                         <td>
-                            <span style={{ color: "#3586E8" }}>Baby Daisy</span> (4.1)
+                            <span style={{ color: "#F1C232" }}>Bowser</span> (7.2)
                         </td>
-                        <td>2 Players (4.1)</td>
+                        <td>2 Players (6.1)</td>
                     </tr>
 
                     <tr>
                         <td>Strikeouts</td>
                         <td>
-                            <span style={{ color: "#CC0000" }}>Antenna</span> (1)
+                            <span style={{ color: "#6AA84F" }}>Birdo</span> (2)
                         </td>
                         <td>
-                            <span style={{ color: "#6AA84F" }}>Birdo</span> (1)
+                            <span style={{ color: "#CC0000" }}>Antenna</span> (1)
                         </td>
-                        <td>4 Players (1)</td>
+                        <td>7 Players (1)</td>
                     </tr>
                     </tbody>
                 </LeaderboardTable>

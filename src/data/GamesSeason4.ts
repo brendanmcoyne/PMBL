@@ -456,50 +456,58 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Brendan",
                 color: "#CC0000",
-                scores: [0, 0, 0, 0, 0, 0, 0],
-                R: 0,
-                H: 0,
+                scores: [0, 0, 0, 0, 5, 5, 0, 0],
+                R: 10,
+                H: 23,
                 E: 0,
-                LOB: 0
+                LOB: 9
             },
 
             home: {
                 name: "THANdrew",
                 color: "#999999",
-                scores: [0, 0, 0, 0, 0, 0, 0],
-                R: 0,
-                H: 0,
-                E: 0,
-                LOB: 0
+                scores: [3, 2, 0, 2, 2, 1, 0, 0],
+                R: 11,
+                H: 22,
+                E: 1,
+                LOB: 6
             }
         },
 
         battingStats: [
-            { player: "Blue Dry Bones", team: "Brendan", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Red Koopa", team: "Brendan", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Dark Bones", team: "Brendan", AB: 4, H: 3, R: 0, RBI: 0, HR: 0, AVG: "0.750" },
-            { player: "Antenna", team: "Brendan", AB: 4, H: 2, R: 1, RBI: 2, HR: 0, AVG: "0.500" },
-            { player: "Fire Bro", team: "Brendan", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Red Kamek", team: "Brendan", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Wario", team: "Brendan", AB: 3, H: 3, R: 1, RBI: 1, HR: 0, AVG: "1.000" },
-            { player: "Waluigi", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 2, HR: 0, AVG: "0.333" },
-            { player: "Red Pianta", team: "Brendan", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
+            { player: "Blue Dry Bones", team: "Brendan", AB: 4, H: 3, R: 1, RBI: 1, HR: 0, AVG: "0.750" },
+            { player: "Dark Bones", team: "Brendan", AB: 4, H: 3, R: 2, RBI: 0, HR: 0, AVG: "0.750" },
+            { player: "Fire Bro", team: "Brendan", AB: 5, H: 3, R: 2, RBI: 4, HR: 0, AVG: "0.600" },
+            { player: "Red Kamek", team: "Brendan", AB: 5, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.400" },
+            { player: "MLK", team: "Brendan", AB: 5, H: 3, R: 1, RBI: 2, HR: 0, AVG: "0.600" },
+            { player: "Red Pianta", team: "Brendan", AB: 4, H: 3, R: 0, RBI: 2, HR: 0, AVG: "0.750" },
+            { player: "Antenna", team: "Brendan", AB: 5, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.200" },
+            { player: "Wario", team: "Brendan", AB: 4, H: 3, R: 2, RBI: 0, HR: 0, AVG: "0.750" },
+            { player: "Waluigi", team: "Brendan", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
 
-            { player: "Larry Cuc", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Blue Kritter", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Hammer Bro", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "King K Rool", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Luigi", team: "THANdrew", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Green Kamek", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Piggie", team: "THANdrew", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Geek Squad", team: "THANdrew", AB: 2, H: 2, R: 0, RBI: 0, HR: 0, AVG: "1.000" },
-            { player: "Toadsworth", team: "THANdrew", AB: 2, H: 3, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+
+            { player: "Piggie", team: "THANdrew", AB: 5, H: 1, R: 0, RBI: 2, HR: 0, AVG: "0.200" },
+            { player: "Green Kamek", team: "THANdrew", AB: 5, H: 2, R: 2, RBI: 0, HR: 0, AVG: "0.400" },
+            { player: "Hammer Bro", team: "THANdrew", AB: 5, H: 5, R: 2, RBI: 3, HR: 3, AVG: "1.000" },
+            { player: "King K Rool", team: "THANdrew", AB: 4, H: 3, R: 2, RBI: 5, HR: 1, AVG: "0.750" },
+            { player: "Larry Cuc", team: "THANdrew", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
+            { player: "Luigi", team: "THANdrew", AB: 4, H: 3, R: 0, RBI: 1, HR: 0, AVG: "0.750" },
+            { player: "Geek Squad", team: "THANdrew", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
+            { player: "Blue Kritter", team: "THANdrew", AB: 4, H: 3, R: 2, RBI: 0, HR: 0, AVG: "0.750" },
+            { player: "Toadsworth", team: "THANdrew", AB: 4, H: 3, R: 2, RBI: 0, HR: 0, AVG: "0.750" },
         ],
 
         pitchingStats: [
-            { player: "Geek Squad", team: "Brendan", IP: 2.2, H: 4, ER: 1, SO: 0, ERA: "2.63" },
+            { player: "Red Pianta", team: "Brendan", IP: 1, H: 7, ER: 3, SO: 0, ERA: "21.00" },
+            { player: "Waluigi", team: "Brendan", IP: 1.1, H: 4, ER: 2, SO: 0, ERA: "10.50" },
+            { player: "Wario", team: "Brendan", IP: 2.1, H: 5, ER: 4, SO: 0, ERA: "12.00" },
+            { player: "Red Kamek", team: "Brendan", IP: 1, H: 1, ER: 1, SO: 0, ERA: "7.00" },
+            { player: "Fire Bro", team: "Brendan", IP: 1.2, H: 5, ER: 1, SO: 0, ERA: "5.25" },
 
-            { player: "Jack White", team: "THANdrew", IP: 2.2, H: 6, ER: 3, SO: 0, ERA: "7.88" },
+            { player: "Toadsworth", team: "THANdrew", IP: 2.1, H: 6, ER: 0, SO: 0, ERA: "0.00" },
+            { player: "Luigi", team: "THANdrew", IP: 2.1, H: 7, ER: 5, SO: 0, ERA: "15.00" },
+            { player: "Green Kamek", team: "THANdrew", IP: 0.2, H: 5, ER: 2, SO: 0, ERA: "21.00" },
+            { player: "Larry Cuc", team: "THANdrew", IP: 2.2, H: 5, ER: 3, SO: 0, ERA: "7.88" },
         ]
     },
     "Game9": {
