@@ -486,7 +486,7 @@ export default function Week2Recap4() {
                             <span style={{ color: "#CC0000" }}>Wario</span> (0.857)
                         </td>
                         <td>
-                            5 Players (0.750)
+                            4 Players (0.750)
                         </td>
                     </tr>
 

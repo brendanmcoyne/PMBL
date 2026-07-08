@@ -519,21 +519,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "James",
                 color: "#F1C232",
-                scores: [1, 2, 0, 0, 6, 0, 2],
-                R: 11,
-                H: 24,
-                E: 2,
-                LOB: 9
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Justave",
                 color: "#FF9900",
-                scores: [2, 1, 1, 2, 1, 0, 0],
-                R: 7,
-                H: 13,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 6
+                LOB: 0
             }
         },
 
@@ -579,21 +579,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Morgan",
                 color: "#FF00FF",
-                scores: [2, 0, 0, 0, 3, 1, 0, 2],
-                R: 8,
-                H: 15,
-                E: 1,
-                LOB: 8
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "THANdrew",
                 color: "#999999",
-                scores: [1, 1, 3, 0, 0, 0, 1, 0],
-                R: 7,
-                H: 19,
-                E: 3,
-                LOB: 6
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -638,21 +638,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Trocean",
                 color: "#9900FF",
-                scores: [1, 0, 1, 6, 0, 0, 4],
-                R: 12,
-                H: 21,
-                E: 2,
-                LOB: 6
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Isaac",
                 color: "#3586E8",
-                scores: [1, 9, 3, 10, 0, 0, 0],
-                R: 23,
-                H: 31,
-                E: 2,
-                LOB: 4
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -701,21 +701,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Brendan",
                 color: "#CC0000",
-                scores: [1, 2, 6, 5, 0, 1, 3],
-                R: 18,
-                H: 26,
-                E: 4,
-                LOB: 8
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Marge",
                 color: "#6AA84F",
-                scores: [5, 0, 0, 2, 1, 2, 0],
-                R: 10,
-                H: 18,
-                E: 2,
-                LOB: 5
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -762,21 +762,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Brendan",
                 color: "#CC0000",
-                scores: [0, 0, 1, 0, 2, 7, 0],
-                R: 10,
-                H: 17,
-                E: 4,
-                LOB: 8
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Justave",
                 color: "#FF9900",
-                scores: [0, 0, 3, 0, 0, 6, 2],
-                R: 11,
-                H: 22,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 9
+                LOB: 0
             }
         },
 
@@ -824,21 +824,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "James",
                 color: "#F1C232",
-                scores: [1, 0, 1, 1, 5, 2, 0],
-                R: 10,
-                H: 22,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 9
+                LOB: 0
             },
 
             home: {
                 name: "Isaac",
                 color: "#3586E8",
-                scores: [1, 5, 0, 0, 0, 0, 0],
-                R: 6,
-                H: 14,
-                E: 2,
-                LOB: 4
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -883,21 +883,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Trocean",
                 color: "#9900FF",
-                scores: [2, 4, 6, 1, 0, 0, 0],
-                R: 13,
-                H: 24,
-                E: 1,
-                LOB: 11
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Morgan",
                 color: "#FF00FF",
-                scores: [0, 1, 1, 0, 6, 4, 3],
-                R: 15,
-                H: 23,
-                E: 3,
-                LOB: 5
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -944,21 +944,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "THANdrew",
                 color: "#999999",
-                scores: [3, 0, 0, 0, 3, 0, 0],
-                R: 6,
-                H: 16,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 5
+                LOB: 0
             },
 
             home: {
                 name: "Marge",
                 color: "#6AA84F",
-                scores: [0, 0, 0, 1, 2, 1, 0],
-                R: 4,
-                H: 12,
-                E: 1,
-                LOB: 4
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -1004,21 +1004,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "James",
                 color: "#F1C232",
-                scores: [1, 0, 0, 0, 0, 1, 1],
-                R: 3,
-                H: 9,
-                E: 2,
-                LOB: 3
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "THANdrew",
                 color: "#999999",
-                scores: [2, 0, 0, 2, 0, 0, 0],
-                R: 4,
-                H: 12,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 5
+                LOB: 0
             }
         },
 
@@ -1061,21 +1061,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Trocean",
                 color: "#9900FF",
-                scores: [3, 0, 0, 0, 0, 4, 0],
-                R: 7,
-                H: 16,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 6
+                LOB: 0
             },
 
             home: {
                 name: "Brendan",
                 color: "#CC0000",
-                scores: [0, 2, 7, 0, 5, 0, 0],
-                R: 14,
-                H: 23,
-                E: 2,
-                LOB: 5
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -1119,21 +1119,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Marge",
                 color: "#6AA84F",
-                scores: [1, 0, 2, 0, 0, 2, 0],
-                R: 5,
-                H: 12,
-                E: 1,
-                LOB: 7
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Justave",
                 color: "#FF9900",
-                scores: [0, 1, 0, 3, 3, 0, 0],
-                R: 7,
-                H: 16,
-                E: 1,
-                LOB: 4
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -1179,21 +1179,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Isaac",
                 color: "#3586E8",
-                scores: [0, 0, 0, 0, 1, 1, 2],
-                R: 8,
-                H: 14,
-                E: 2,
-                LOB: 6
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Morgan",
                 color: "#FF00FF",
-                scores: [0, 1, 2, 2, 3, 0, 0],
-                R: 4,
-                H: 21,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 10
+                LOB: 0
             }
         },
 
@@ -1238,21 +1238,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Morgan",
                 color: "#FF00FF",
-                scores: [1, 0, 3, 3, 0, 1, 0],
-                R: 8,
-                H: 19,
-                E: 2,
-                LOB: 9
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Trocean",
                 color: "#9900FF",
-                scores: [0, 6, 5, 0, 0, 0, 0],
-                R: 11,
-                H: 18,
-                E: 1,
-                LOB: 6
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -1297,21 +1297,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "James",
                 color: "#F1C232",
-                scores: [0, 0, 5, 9, 8, 2, 9],
-                R: 33,
-                H: 45,
-                E: 1,
-                LOB: 8
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Marge",
                 color: "#6AA84F",
-                scores: [3, 2, 4, 0, 0, 6, 0],
-                R: 15,
-                H: 28,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 11
+                LOB: 0
             }
         },
 
@@ -1363,21 +1363,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Justave",
                 color: "#FF9900",
-                scores: [0, 0, 2, 0, 0, 1, 1],
-                R: 4,
-                H: 13,
-                E: 1,
-                LOB: 9
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "THANdrew",
                 color: "#999999",
-                scores: [1, 0, 2, 0, 5, 0, 0],
-                R: 8,
-                H: 16,
-                E: 1,
-                LOB: 5
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -1421,21 +1421,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Brendan",
                 color: "#CC0000",
-                scores: [0, 0, 4, 1, 0, 1, 0],
-                R: 6,
-                H: 16,
-                E: 5,
-                LOB: 8
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Isaac",
                 color: "#3586E8",
-                scores: [0, 0, 0, 2, 4, 0, 1],
-                R: 7,
-                H: 15,
-                E: 1,
-                LOB: 9
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -1478,21 +1478,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Justave",
                 color: "#FF9900",
-                scores: [1, 0, 0, 0, 0, 2, 0],
-                R: 3,
-                H: 15,
-                E: 2,
-                LOB: 8
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "James",
                 color: "#F1C232",
-                scores: [0, 0, 3, 3, 0, 0, 0],
-                R: 6,
-                H: 12,
-                E: 2,
-                LOB: 5
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -1536,21 +1536,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Isaac",
                 color: "#3586E8",
-                scores: [3, 0, 1, 4, 1, 1, 4],
-                R: 14,
-                H: 25,
-                E: 1,
-                LOB: 9
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Trocean",
                 color: "#9900FF",
-                scores: [0, 0, 1, 1, 0, 1, 0],
-                R: 3,
-                H: 11,
-                E: 1,
-                LOB: 5
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -1595,21 +1595,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "THANdrew",
                 color: "#999999",
-                scores: [0, 2, 0, 0, 2, 7, 5],
-                R: 16,
-                H: 27,
-                E: 1,
-                LOB: 10
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Morgan",
                 color: "#FF00FF",
-                scores: [0, 0, 2, 0, 0, 0, 2],
-                R: 4,
-                H: 12,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 5
+                LOB: 0
             }
         },
 
@@ -1655,21 +1655,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Marge",
                 color: "#6AA84F",
-                scores: [1, 5, 0, 1, 0, 2, 0],
-                R: 9,
-                H: 19,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 7
+                LOB: 0
             },
 
             home: {
                 name: "Brendan",
                 color: "#CC0000",
-                scores: [2, 0, 0, 4, 0, 0, 0],
-                R: 6,
-                H: 15,
-                E: 2,
-                LOB: 6
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -1715,21 +1715,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Brendan",
                 color: "#CC0000",
-                scores: [2, 5, 1, 1, 2, 0, 3],
-                R: 14,
-                H: 21,
-                E: 2,
-                LOB: 8
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "James",
                 color: "#F1C232",
-                scores: [2, 1, 0, 0, 7, 0, 1],
-                R: 11,
-                H: 19,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 2
+                LOB: 0
             }
         },
 
@@ -1775,21 +1775,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Morgan",
                 color: "#FF00FF",
-                scores: [7, 0, 0, 0, 0, 0, 0],
-                R: 7,
-                H: 18,
-                E: 3,
-                LOB: 7
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Justave",
                 color: "#FF9900",
-                scores: [0, 0, 0, 1, 3, 0, 4],
-                R: 8,
-                H: 19,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 4
+                LOB: 0
             }
         },
 
@@ -1834,21 +1834,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "THANdrew",
                 color: "#999999",
-                scores: [4, 1, 0, 0, 6, 0, 5],
-                R: 16,
-                H: 19,
-                E: 2,
-                LOB: 1
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Trocean",
                 color: "#9900FF",
-                scores: [0, 0, 1, 0, 9, 0, 4],
-                R: 14,
-                H: 21,
-                E: 2,
-                LOB: 9
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -1895,21 +1895,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Isaac",
                 color: "#3586E8",
-                scores: [3, 0, 0, 0, 1, 3, 6],
-                R: 13,
-                H: 19,
-                E: 6,
-                LOB: 6
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Marge",
                 color: "#6AA84F",
-                scores: [1, 0, 3, 5, 1, 0, 4],
-                R: 14,
-                H: 19,
-                E: 1,
-                LOB: 6
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -1956,21 +1956,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Trocean",
                 color: "#9900FF",
-                scores: [0, 0, 0, 2, 2, 0, 2, 0],
-                R: 6,
-                H: 13,
-                E: 2,
-                LOB: 4
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "James",
                 color: "#F1C232",
-                scores: [3, 0, 0, 2, 1, 0, 1, 1],
-                R: 7,
-                H: 14,
-                E: 1,
-                LOB: 5
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -2014,21 +2014,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Marge",
                 color: "#6AA84F",
-                scores: [2, 6, 1, 0, 0, 3, 0],
-                R: 12,
-                H: 15,
-                E: 1,
-                LOB: 8
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Morgan",
                 color: "#FF00FF",
-                scores: [2, 0, 0, 0, 1, 3, 0],
-                R: 6,
-                H: 21,
-                E: 3,
-                LOB: 5
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -2072,21 +2072,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Isaac",
                 color: "#3586E8",
-                scores: [1, 1, 0, 1, 0, 0, 1],
-                R: 4,
-                H: 15,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 7
+                LOB: 0
             },
 
             home: {
                 name: "THANdrew",
                 color: "#999999",
-                scores: [0, 0, 3, 0, 0, 0, 0],
-                R: 3,
-                H: 11,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 4
+                LOB: 0
             }
         },
 
@@ -2128,21 +2128,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Justave",
                 color: "#FF9900",
-                scores: [0, 2, 1, 1, 1, 0, 0],
-                R: 5,
-                H: 11,
-                E: 1,
-                LOB: 5
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Brendan",
                 color: "#CC0000",
-                scores: [10, 0, 0, 5, 0, 0, 0],
-                R: 15,
-                H: 25,
-                E: 1,
-                LOB: 8
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -2189,21 +2189,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "James",
                 color: "#F1C232",
-                scores: [0, 0, 2, 1, 5, 4, 0],
-                R: 12,
-                H: 20,
-                E: 4,
-                LOB: 8
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Brendan",
                 color: "#CC0000",
-                scores: [1, 0, 0, 3, 0, 0, 0],
-                R: 4,
-                H: 7,
-                E: 2,
-                LOB: 4
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -2248,21 +2248,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Trocean",
                 color: "#9900FF",
-                scores: [0, 5, 0, 1, 4, 0, 0],
-                R: 10,
-                H: 23,
-                E: 1,
-                LOB: 8
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "THANdrew",
                 color: "#999999",
-                scores: [0, 3, 1, 3, 1, 6, 0],
-                R: 14,
-                H: 22,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 6
+                LOB: 0
             }
         },
 
@@ -2311,19 +2311,19 @@ export const GamesSeason4: Record<string, GameStats> = {
                 color: "#FF00FF",
                 scores: [0, 0, 0, 0, 0, 0, 0],
                 R: 0,
-                H: 11,
-                E: 2,
-                LOB: 6
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Isaac",
                 color: "#3586E8",
-                scores: [0, 7, 0, 0, 1, 0, 0],
-                R: 8,
-                H: 17,
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 10
+                LOB: 0
             }
         },
 
@@ -2367,21 +2367,21 @@ export const GamesSeason4: Record<string, GameStats> = {
             away: {
                 name: "Justave",
                 color: "#FF9900",
-                scores: [3, 0, 0, 0, 0, 0, 5],
-                R: 8,
-                H: 19,
-                E: 4,
-                LOB: 5
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
 
             home: {
                 name: "Marge",
                 color: "#6AA84F",
-                scores: [6, 1, 0, 0, 0, 3, 0],
-                R: 10,
-                H: 18,
-                E: 3,
-                LOB: 10
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
@@ -2418,747 +2418,451 @@ export const GamesSeason4: Record<string, GameStats> = {
     },
     "AllStarGame": {
         id: "AllStarGame",
-        awayManager: "All-Star West",
-        homeManager: "All-Star East",
+        awayManager: "All-Star East",
+        homeManager: "All-Star West",
         game: {
             away: {
-                name: "All-Star West",
-                color: "#FF0000",
-                scores: [0, 1, 10, 4, 0, 0, 0],
-                R: 15,
-                H: 26,
-                E: 0,
-                LOB: 9
-            },
-            home: {
                 name: "All-Star East",
                 color: "#4A86E8",
-                scores: [1, 2, 0, 2, 0, 1, 8],
-                R: 14,
-                H: 24,
-                E: 2,
-                LOB: 5
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
+            },
+            home: {
+                name: "All-Star West",
+                color: "#FF0000",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Wario", team: "All-Star East", AB: 5, H: 5, R: 2, RBI: 1, HR: 0, AVG: "1.000" },
-            { player: "Bowser Jr", team: "All-Star East", AB: 5, H: 4, R: 1, RBI: 0, HR: 0, AVG: "0.800" },
-            { player: "Fire Bro", team: "All-Star East", AB: 5, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.200" },
-            { player: "Petey Piranha", team: "All-Star East", AB: 5, H: 3, R: 0, RBI: 2, HR: 0, AVG: "0.600" },
-            { player: "King Boo", team: "All-Star East", AB: 5, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.200" },
-            { player: "Red Kritter", team: "All-Star East", AB: 4, H: 1, R: 1, RBI: 1, HR: 0, AVG: "0.250" },
-            { player: "King K Rool", team: "All-Star East", AB: 4, H: 3, R: 3, RBI: 1, HR: 1, AVG: "0.750" },
-            { player: "Green Kritter", team: "All-Star East", AB: 4, H: 2, R: 2, RBI: 5, HR: 2, AVG: "0.500" },
-            { player: "Funky Kong", team: "All-Star East", AB: 4, H: 3, R: 3, RBI: 3, HR: 3, AVG: "0.750" },
+            { player: "", team: "All-Star East", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star East", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star East", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star East", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star East", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star East", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star East", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star East", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star East", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
 
-            { player: "Birdo", team: "All-Star West", AB: 5, H: 3, R: 1, RBI: 1, HR: 0, AVG: "0.600" },
-            { player: "Boomerang Bro", team: "All-Star West", AB: 5, H: 3, R: 2, RBI: 3, HR: 1, AVG: "0.600" },
-            { player: "Bowser", team: "All-Star West", AB: 4, H: 3, R: 3, RBI: 3, HR: 2, AVG: "0.750" },
-            { player: "Blue Dry Bones", team: "All-Star West", AB: 5, H: 4, R: 1, RBI: 0, HR: 0, AVG: "0.800" },
-            { player: "Dry Bones", team: "All-Star West", AB: 4, H: 3, R: 1, RBI: 1, HR: 0, AVG: "0.750" },
-            { player: "Tiny Kong", team: "All-Star West", AB: 5, H: 0, R: 0, RBI: 1, HR: 0, AVG: "0.000" },
-            { player: "Donkey Kong", team: "All-Star West", AB: 5, H: 4, R: 3, RBI: 4, HR: 2, AVG: "0.800" },
-            { player: "Green Toad", team: "All-Star West", AB: 3, H: 3, R: 2, RBI: 0, HR: 0, AVG: "1.000" },
-            { player: "Red Pianta", team: "All-Star West", AB: 4, H: 3, R: 2, RBI: 2, HR: 0, AVG: "0.750" }
+            { player: "", team: "All-Star West", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star West", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star West", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star West", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star West", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star West", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star West", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star West", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
+            { player: "", team: "All-Star West", AB: 0, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
         ],
 
         pitchingStats: [
-            { player: "Bowser Jr", team: "All-Star East", IP: 2.1, H: 10, ER: 3, SO: 0, ERA: "9.00" },
-            { player: "Wario", team: "All-Star East", IP: 0.2, H: 8, ER: 8, SO: 0, ERA: "84.00" },
-            { player: "King Boo", team: "All-Star East", IP: 1.1, H: 5, ER: 4, SO: 0, ERA: "21.00" },
-            { player: "Petey Piranha", team: "All-Star East", IP: 2.2, H: 3, ER: 0, SO: 0, ERA: "0.00" },
+            { player: "", team: "All-Star East", IP: 0, H: 0, ER: 0, SO: 0, ERA: "0.00" },
 
-            { player: "Bowser", team: "All-Star West", IP: 6.1, H: 18, ER: 7, SO: 0, ERA: "7.74" },
-            { player: "Donkey Kong", team: "All-Star West", IP: 0.2, H: 6, ER: 7, SO: 0, ERA: "73.50" }
+            { player: "", team: "All-Star West", IP: 0, H: 0, ER: 0, SO: 0, ERA: "0.00" },
         ]
     },
     "Game41": {
         id: "Game41",
-        awayManager: "Isaac",
-        homeManager: "THANdrew",
-
+        awayManager: "",
+        homeManager: "",
         game: {
             away: {
-                name: "Isaac",
-                color: "#3586E8",
-                scores: [2, 5, 2, 0, 4, 1, 0],
-                R: 14,
-                H: 26,
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 10
+                LOB: 0
             },
-
             home: {
-                name: "THANdrew",
-                color: "#999999",
-                scores: [0, 1, 1, 2, 0, 0, 0],
-                R: 4,
-                H: 19,
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 10
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Purple Toad", team: "THANdrew", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Red Pianta", team: "THANdrew", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Boomerang Bro", team: "THANdrew", AB: 4, H: 3, R: 1, RBI: 3, HR: 1, AVG: "0.750" },
-            { player: "Abu Patel", team: "THANdrew", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Birdo", team: "THANdrew", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Blue Yoshi", team: "THANdrew", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Diddler", team: "THANdrew", AB: 4, H: 4, R: 1, RBI: 0, HR: 0, AVG: "1.000" },
-            { player: "Blue Kamek", team: "THANdrew", AB: 4, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Bonnie", team: "THANdrew", AB: 4, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.500" },
 
-            { player: "Blue Kritter", team: "Isaac", AB: 5, H: 4, R: 2, RBI: 2, HR: 0, AVG: "0.800" },
-            { player: "Barry", team: "Isaac", AB: 4, H: 3, R: 4, RBI: 1, HR: 0, AVG: "0.750" },
-            { player: "Blue Dry Bones", team: "Isaac", AB: 5, H: 3, R: 2, RBI: 1, HR: 0, AVG: "0.600" },
-            { player: "Bowser", team: "Isaac", AB: 5, H: 4, R: 1, RBI: 3, HR: 0, AVG: "0.800" },
-            { player: "Blue Noki", team: "Isaac", AB: 5, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.400" },
-            { player: "Blue Pianta", team: "Isaac", AB: 5, H: 3, R: 1, RBI: 6, HR: 1, AVG: "0.600" },
-            { player: "Blue Toad", team: "Isaac", AB: 5, H: 3, R: 0, RBI: 0, HR: 0, AVG: "0.600" },
-            { player: "Saber", team: "Isaac", AB: 5, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.400" },
-            { player: "Cascade", team: "Isaac", AB: 5, H: 2, R: 2, RBI: 0, HR: 0, AVG: "0.400" },
         ],
 
         pitchingStats: [
-            { player: "Birdo", team: "THANdrew", IP: 1.2, H: 9, ER: 5, SO: 1, ERA: "21.00" },
-            { player: "Blue Kamek", team: "THANdrew", IP: 0.1, H: 2, ER: 2, SO: 0, ERA: "42.00" },
-            { player: "Diddler", team: "THANdrew", IP: 2, H: 5, ER: 2, SO: 0, ERA: "7.00" },
-            { player: "Abu Patel", team: "THANdrew", IP: 1.2, H: 7, ER: 5, SO: 0, ERA: "21.00" },
-            { player: "Red Pianta", team: "THANdrew", IP: 1.1, H: 3, ER: 0, SO: 0, ERA: "0.00" },
 
-            { player: "Blue Pianta", team: "Isaac", IP: 3.1, H: 11, ER: 2, SO: 1, ERA: "4.20" },
-            { player: "Bowser", team: "Isaac", IP: 3.2, H: 8, ER: 2, SO: 2, ERA: "3.82" },
         ]
     },
     "Game42": {
         id: "Game42",
-        awayManager: "Isaac",
-        homeManager: "THANdrew",
-
+        awayManager: "",
+        homeManager: "",
         game: {
             away: {
-                name: "Isaac",
-                color: "#3586E8",
-                scores: [1, 0, 0, 0, 0, 0, 1],
-                R: 2,
-                H: 13,
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 5
+                LOB: 0
             },
-
             home: {
-                name: "THANdrew",
-                color: "#999999",
-                scores: [1, 1, 0, 0, 2, 0, 0],
-                R: 4,
-                H: 11,
-                E: 1,
-                LOB: 5
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Purple Toad", team: "THANdrew", AB: 3, H: 3, R: 2, RBI: 0, HR: 0, AVG: "1.000" },
-            { player: "Red Pianta", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.333" },
-            { player: "Boomerang Bro", team: "THANdrew", AB: 3, H: 2, R: 1, RBI: 2, HR: 1, AVG: "0.667" },
-            { player: "Abu Patel", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.333" },
-            { player: "Birdo", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Blue Yoshi", team: "THANdrew", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Diddler", team: "THANdrew", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Blue Kamek", team: "THANdrew", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Bonnie", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
 
-            { player: "Blue Kritter", team: "Isaac", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Barry", team: "Isaac", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Blue Dry Bones", team: "Isaac", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Bowser", team: "Isaac", AB: 4, H: 4, R: 0, RBI: 1, HR: 0, AVG: "1.000" },
-            { player: "Blue Noki", team: "Isaac", AB: 4, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.250" },
-            { player: "Blue Pianta", team: "Isaac", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Blue Toad", team: "Isaac", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Saber", team: "Isaac", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Cascade", team: "Isaac", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
         ],
 
         pitchingStats: [
-            { player: "Blue Kamek", team: "THANdrew", IP: 2, H: 3, ER: 1, SO: 0, ERA: "3.50" },
-            { player: "Birdo", team: "THANdrew", IP: 5, H: 10, ER: 1, SO: 1, ERA: "1.40" },
 
-            { player: "Saber", team: "Isaac", IP: 2.2, H: 7, ER: 2, SO: 0, ERA: "5.25" },
-            { player: "Bowser", team: "Isaac", IP: 3.1, H: 4, ER: 2, SO: 2, ERA: "4.20" },
         ]
     },
     "Game43": {
         id: "Game43",
-        awayManager: "THANdrew",
-        homeManager: "Isaac",
-
+        awayManager: "",
+        homeManager: "",
         game: {
             away: {
-                name: "THANdrew",
-                color: "#999999",
-                scores: [0, 0, 0, 2, 4, 0, 0],
-                R: 6,
-                H: 18,
-                E: 1,
-                LOB: 6
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
-
             home: {
-                name: "Isaac",
-                color: "#3586E8",
-                scores: [0, 7, 0, 1, 0, 1, 0],
-                R: 9,
-                H: 16,
-                E: 2,
-                LOB: 2
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Blue Kritter", team: "Isaac", AB: 4, H: 4, R: 1, RBI: 2, HR: 1, AVG: "1.000" },
-            { player: "Barry", team: "Isaac", AB: 4, H: 3, R: 0, RBI: 1, HR: 0, AVG: "0.750" },
-            { player: "Blue Dry Bones", team: "Isaac", AB: 3, H: 1, R: 0, RBI: 2, HR: 0, AVG: "0.333" },
-            { player: "Bowser", team: "Isaac", AB: 3, H: 1, R: 1, RBI: 3, HR: 1, AVG: "0.333" },
-            { player: "Blue Pianta", team: "Isaac", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Blue Toad", team: "Isaac", AB: 3, H: 2, R: 0, RBI: 1, HR: 0, AVG: "0.667" },
-            { player: "Saber", team: "Isaac", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Blue Noki", team: "Isaac", AB: 2, H: 1, R: 2, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Cascade", team: "Isaac", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
 
-            { player: "Purple Toad", team: "THANdrew", AB: 4, H: 3, R: 1, RBI: 0, HR: 0, AVG: "0.750" },
-            { player: "Red Pianta", team: "THANdrew", AB: 4, H: 4, R: 0, RBI: 0, HR: 0, AVG: "1.000" },
-            { player: "Boomerang Bro", team: "THANdrew", AB: 4, H: 1, R: 1, RBI: 1, HR: 0, AVG: "0.250" },
-            { player: "Abu Patel", team: "THANdrew", AB: 4, H: 3, R: 2, RBI: 0, HR: 0, AVG: "0.750" },
-            { player: "Birdo", team: "THANdrew", AB: 4, H: 2, R: 1, RBI: 3, HR: 1, AVG: "0.500" },
-            { player: "Blue Yoshi", team: "THANdrew", AB: 2, H: 2, R: 1, RBI: 1, HR: 0, AVG: "1.000" },
-            { player: "Diddler", team: "THANdrew", AB: 4, H: 2, R: 0, RBI: 1, HR: 0, AVG: "0.500" },
-            { player: "Blue Kamek", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Bonnie", team: "THANdrew", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
         ],
 
         pitchingStats: [
-            { player: "Blue Pianta", team: "Isaac", IP: 3, H: 7, ER: 0, SO: 0, ERA: "0.00" },
-            { player: "Bowser", team: "Isaac", IP: 4, H: 11, ER: 5, SO: 0, ERA: "8.75" },
 
-            { player: "Birdo", team: "THANdrew", IP: 1.2, H: 9, ER: 7, SO: 0, ERA: "29.40" },
-            { player: "Blue Kamek", team: "THANdrew", IP: 2.1, H: 4, ER: 1, SO: 0, ERA: "3.00" },
-            { player: "Abu Patel", team: "THANdrew", IP: 2, H: 3, ER: 1, SO: 0, ERA: "3.50" },
         ]
     },
     "Game44": {
         id: "Game44",
-        awayManager: "THANdrew",
-        homeManager: "Isaac",
-
+        awayManager: "",
+        homeManager: "",
         game: {
             away: {
-                name: "THANdrew",
-                color: "#999999",
-                scores: [0, 0, 1, 0, 0, 0, 2],
-                R: 3,
-                H: 9,
-                E: 1,
-                LOB: 2
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
-
             home: {
-                name: "Isaac",
-                color: "#3586E8",
-                scores: [0, 3, 0, 3, 0, 3, 0],
-                R: 9,
-                H: 17,
-                E: 2,
-                LOB: 4
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Blue Kritter", team: "Isaac", AB: 4, H: 3, R: 1, RBI: 2, HR: 0, AVG: "0.750" },
-            { player: "Barry", team: "Isaac", AB: 3, H: 1, R: 1, RBI: 1, HR: 0, AVG: "0.333" },
-            { player: "Blue Dry Bones", team: "Isaac", AB: 4, H: 4, R: 1, RBI: 1, HR: 0, AVG: "1.000" },
-            { player: "Bowser", team: "Isaac", AB: 4, H: 1, R: 1, RBI: 3, HR: 1, AVG: "0.250" },
-            { player: "Blue Pianta", team: "Isaac", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Blue Toad", team: "Isaac", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Saber", team: "Isaac", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Blue Noki", team: "Isaac", AB: 3, H: 2, R: 2, RBI: 2, HR: 0, AVG: "0.667" },
-            { player: "Cascade", team: "Isaac", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
 
-            { player: "Purple Toad", team: "THANdrew", AB: 3, H: 3, R: 0, RBI: 1, HR: 0, AVG: "1.000" },
-            { player: "Red Pianta", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Boomerang Bro", team: "THANdrew", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Abu Patel", team: "THANdrew", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Birdo", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Blue Yoshi", team: "THANdrew", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Diddler", team: "THANdrew", AB: 1, H: 0, R: 1, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Blue Kamek", team: "THANdrew", AB: 3, H: 2, R: 2, RBI: 2, HR: 1, AVG: "0.667" },
-            { player: "Bonnie", team: "THANdrew", AB: 2, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
         ],
 
         pitchingStats: [
-            { player: "Saber", team: "Isaac", IP: 6.2, H: 9, ER: 3, SO: 0, ERA: "3.15" },
-            { player: "Bowser", team: "Isaac", IP: 0.1, H: 0, ER: 0, SO: 0, ERA: "0.00" },
 
-            { player: "Blue Kamek", team: "THANdrew", IP: 1.2, H: 5, ER: 2, SO: 0, ERA: "8.40" },
-            { player: "Birdo", team: "THANdrew", IP: 4.2, H: 12, ER: 6, SO: 1, ERA: "9.00" },
-            { player: "Diddler", team: "THANdrew", IP: 0.2, H: 0, ER: 0, SO: 0, ERA: "0.00" },
         ]
     },
     "Game45": {
         id: "Game45",
-        awayManager: "Brendan",
-        homeManager: "James",
+        awayManager: "",
+        homeManager: "",
         game: {
             away: {
-                name: "Brendan",
-                color: "#CC0000",
-                scores: [0, 2, 4, 1, 2, 0, 1],
-                R: 10,
-                H: 20,
-                E: 3,
-                LOB: 10
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
             home: {
-                name: "James",
-                color: "#F1C232",
-                scores: [1, 1, 0, 0, 3, 0, 0],
-                R: 5,
-                H: 14,
-                E: 2,
-                LOB: 4
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Bertha", team: "Brendan", AB: 4, H: 0, R: 1, RBI: 1, HR: 0, AVG: "0.000" },
-            { player: "Petey Piranha", team: "Brendan", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Funky Kong", team: "Brendan", AB: 5, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.400" },
-            { player: "Dixie Kong", team: "Brendan", AB: 5, H: 4, R: 1, RBI: 0, HR: 0, AVG: "0.800" },
-            { player: "Jake", team: "Brendan", AB: 4, H: 1, R: 1, RBI: 2, HR: 0, AVG: "0.250" },
-            { player: "Baby Peach", team: "Brendan", AB: 3, H: 0, R: 1, RBI: 1, HR: 0, AVG: "0.000" },
-            { player: "Green Dry Bones", team: "Brendan", AB: 4, H: 4, R: 3, RBI: 1, HR: 0, AVG: "1.000" },
-            { player: "Wario", team: "Brendan", AB: 4, H: 3, R: 1, RBI: 2, HR: 0, AVG: "0.750" },
-            { player: "Waluigi", team: "Brendan", AB: 4, H: 4, R: 0, RBI: 2, HR: 0, AVG: "1.000" },
 
-            { player: "Bowser Jr", team: "James", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Fire Bro", team: "James", AB: 4, H: 3, R: 2, RBI: 1, HR: 0, AVG: "0.750" },
-            { player: "Kimmy", team: "James", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Red Kritter", team: "James", AB: 4, H: 2, R: 0, RBI: 2, HR: 0, AVG: "0.500" },
-            { player: "MLK", team: "James", AB: 3, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.333" },
-            { player: "Red Toad", team: "James", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Jack White", team: "James", AB: 1, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Dark Bones", team: "James", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Red Koopa", team: "James", AB: 3, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.667" }
         ],
 
         pitchingStats: [
-            { player: "Bertha", team: "Brendan", IP: 4.1, H: 12, ER: 5, SO: 0, ERA: "8.08" },
-            { player: "Wario", team: "Brendan", IP: 2.2, H: 2, ER: 0, SO: 0, ERA: "0.00" },
 
-            { player: "Red Koopa", team: "James", IP: 2, H: 4, ER: 2, SO: 0, ERA: "7.00" },
-            { player: "Bowser Jr", team: "James", IP: 1.1, H: 8, ER: 4, SO: 0, ERA: "21.00" },
-            { player: "Jack White", team: "James", IP: 2, H: 3, ER: 3, SO: 0, ERA: "10.50" },
-            { player: "Red Toad", team: "James", IP: 0.2, H: 2, ER: 0, SO: 0, ERA: "0.00" },
-            { player: "Fire Bro", team: "James", IP: 1, H: 3, ER: 1, SO: 0, ERA: "7.00" }
         ]
     },
     "Game46": {
         id: "Game46",
-        awayManager: "Brendan",
-        homeManager: "James",
+        awayManager: "",
+        homeManager: "",
         game: {
             away: {
-                name: "Brendan",
-                color: "#CC0000",
-                scores: [0, 1, 2, 1, 0, 0, 1],
-                R: 5,
-                H: 14,
-                E: 2,
-                LOB: 8
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
             home: {
-                name: "James",
-                color: "#F1C232",
-                scores: [0, 3, 0, 0, 0, 0, 0],
-                R: 3,
-                H: 9,
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 4
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Blooper", team: "Brendan", AB: 3, H: 1, R: 1, RBI: 1, HR: 0, AVG: "0.333" },
-            { player: "Petey Piranha", team: "Brendan", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Funky Kong", team: "Brendan", AB: 4, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.500" },
-            { player: "Dixie Kong", team: "Brendan", AB: 4, H: 3, R: 1, RBI: 0, HR: 0, AVG: "0.750" },
-            { player: "Jake", team: "Brendan", AB: 4, H: 2, R: 0, RBI: 1, HR: 0, AVG: "0.500" },
-            { player: "Baby Peach", team: "Brendan", AB: 4, H: 1, R: 1, RBI: 1, HR: 0, AVG: "0.250" },
-            { player: "Green Dry Bones", team: "Brendan", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Wario", team: "Brendan", AB: 3, H: 2, R: 0, RBI: 1, HR: 0, AVG: "0.667" },
-            { player: "Waluigi", team: "Brendan", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
 
-            { player: "Bowser Jr", team: "James", AB: 4, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.250" },
-            { player: "Fire Bro", team: "James", AB: 3, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.333" },
-            { player: "Kimmy", team: "James", AB: 2, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Red Kritter", team: "James", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "MLK", team: "James", AB: 3, H: 1, R: 1, RBI: 1, HR: 1, AVG: "0.333" },
-            { player: "Red Toad", team: "James", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Jack White", team: "James", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Dark Bones", team: "James", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Red Koopa", team: "James", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" }
         ],
 
         pitchingStats: [
-            { player: "Blooper", team: "Brendan", IP: 1.1, H: 6, ER: 1, SO: 0, ERA: "5.25" },
-            { player: "Waluigi", team: "Brendan", IP: 2.1, H: 3, ER: 2, SO: 0, ERA: "6.00" },
-            { player: "Wario", team: "Brendan", IP: 3.1, H: 0, ER: 0, SO: 0, ERA: "0.00" },
 
-            { player: "Jack White", team: "James", IP: 2.2, H: 6, ER: 1, SO: 0, ERA: "2.63" },
-            { player: "Bowser Jr", team: "James", IP: 2.1, H: 5, ER: 2, SO: 0, ERA: "6.00" },
-            { player: "Dark Bones", team: "James", IP: 1.1, H: 3, ER: 1, SO: 0, ERA: "5.25" },
-            { player: "Fire Bro", team: "James", IP: 0.2, H: 0, ER: 0, SO: 0, ERA: "0.00" }
         ]
     },
     "Game47": {
         id: "Game47",
-        awayManager: "James",
-        homeManager: "Brendan",
+        awayManager: "",
+        homeManager: "",
         game: {
             away: {
-                name: "James",
-                color: "#F1C232",
-                scores: [0, 0, 3, 0, 2, 0, 0],
-                R: 5,
-                H: 12,
-                E: 1,
-                LOB: 8
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
             home: {
-                name: "Brendan",
-                color: "#CC0000",
-                scores: [10, 0, 0, 0, 0, 1, 0],
-                R: 11,
-                H: 15,
-                E: 2,
-                LOB: 7
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Bowser Jr", team: "James", AB: 4, H: 3, R: 2, RBI: 2, HR: 0, AVG: "0.750" },
-            { player: "Fire Bro", team: "James", AB: 4, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.500" },
-            { player: "Kimmy", team: "James", AB: 3, H: 2, R: 0, RBI: 1, HR: 0, AVG: "0.667" },
-            { player: "Red Kritter", team: "James", AB: 3, H: 2, R: 0, RBI: 1, HR: 0, AVG: "0.667" },
-            { player: "MLK", team: "James", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Dark Bones", team: "James", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Red Koopa", team: "James", AB: 2, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Paratroopa", team: "James", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Paragoomba", team: "James", AB: 2, H: 0, R: 1, RBI: 0, HR: 0, AVG: "0.000" },
 
-            { player: "Bertha", team: "Brendan", AB: 4, H: 2, R: 2, RBI: 1, HR: 0, AVG: "0.500" },
-            { player: "Petey Piranha", team: "Brendan", AB: 4, H: 4, R: 2, RBI: 7, HR: 2, AVG: "1.000" },
-            { player: "Funky Kong", team: "Brendan", AB: 4, H: 3, R: 2, RBI: 2, HR: 2, AVG: "0.750" },
-            { player: "Dixie Kong", team: "Brendan", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Jake", team: "Brendan", AB: 2, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Baby Peach", team: "Brendan", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Green Dry Bones", team: "Brendan", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Wario", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.333" },
-            { player: "Waluigi", team: "Brendan", AB: 3, H: 2, R: 2, RBI: 0, HR: 0, AVG: "0.667" }
         ],
 
         pitchingStats: [
-            { player: "Paragoomba", team: "James", IP: 0.1, H: 5, ER: 3, SO: 0, ERA: "63.00" },
-            { player: "Bowser Jr", team: "James", IP: 0.1, H: 5, ER: 7, SO: 0, ERA: "147.00" },
-            { player: "Kimmy", team: "James", IP: 4.2, H: 5, ER: 1, SO: 0, ERA: "1.50" },
-            { player: "Red Koopa", team: "James", IP: 0.2, H: 0, ER: 0, SO: 0, ERA: "0.00" },
 
-            { player: "Bertha", team: "Brendan", IP: 4.1, H: 9, ER: 3, SO: 0, ERA: "4.85" },
-            { player: "Wario", team: "Brendan", IP: 2.2, H: 3, ER: 2, SO: 0, ERA: "5.25" }
         ]
     },
     "Game48": {
         id: "Game48",
-        awayManager: "Brendan",
-        homeManager: "Isaac",
+        awayManager: "",
+        homeManager: "",
         game: {
             away: {
-                name: "Brendan",
-                color: "#CC0000",
-                scores: [0, 0, 0, 0, 0, 1, 0],
-                R: 1,
-                H: 11,
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 7
+                LOB: 0
             },
             home: {
-                name: "Isaac",
-                color: "#3586E8",
-                scores: [2, 5, 2, 0, 5, 0, 0],
-                R: 14,
-                H: 24,
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 6
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Blue Kritter", team: "Isaac", AB: 5, H: 5, R: 2, RBI: 2, HR: 1, AVG: "1.000" },
-            { player: "Barry", team: "Isaac", AB: 5, H: 2, R: 2, RBI: 1, HR: 0, AVG: "0.400" },
-            { player: "Blue Dry Bones", team: "Isaac", AB: 4, H: 3, R: 2, RBI: 3, HR: 0, AVG: "0.750" },
-            { player: "Bowser", team: "Isaac", AB: 4, H: 4, R: 3, RBI: 8, HR: 3, AVG: "1.000" },
-            { player: "Blue Pianta", team: "Isaac", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Blue Toad", team: "Isaac", AB: 4, H: 4, R: 0, RBI: 0, HR: 0, AVG: "1.000" },
-            { player: "Saber", team: "Isaac", AB: 4, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Blue Noki", team: "Isaac", AB: 4, H: 2, R: 2, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Cascade", team: "Isaac", AB: 4, H: 3, R: 2, RBI: 0, HR: 0, AVG: "0.750" },
 
-            { player: "Bertha", team: "Brendan", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Petey", team: "Brendan", AB: 4, H: 4, R: 0, RBI: 0, HR: 0, AVG: "1.000" },
-            { player: "Funky Kong", team: "Brendan", AB: 4, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Dixie Kong", team: "Brendan", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Jake", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.333" },
-            { player: "Baby Peach", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Green Dry Bones", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Wario", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Waluigi", team: "Brendan", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" }
         ],
 
         pitchingStats: [
-            { player: "Blue Pianta", team: "Isaac", IP: 5, H: 8, ER: 1, SO: 0, ERA: "1.40" },
-            { player: "Bowser", team: "Isaac", IP: 2, H: 3, ER: 1, SO: 0, ERA: "3.50" },
 
-            { player: "Bertha", team: "Brendan", IP: 1.1, H: 9, ER: 7, SO: 0, ERA: "36.75" },
-            { player: "Waluigi", team: "Brendan", IP: 1.2, H: 4, ER: 2, SO: 0, ERA: "8.40" },
-            { player: "Wario", team: "Brendan", IP: 1.2, H: 8, ER: 5, SO: 0, ERA: "21.00" },
-            { player: "Baby Peach", team: "Brendan", IP: 1.2, H: 3, ER: 0, SO: 0, ERA: "0.00" }
         ]
     },
     "Game49": {
         id: "Game49",
-        awayManager: "Brendan",
-        homeManager: "Isaac",
+        awayManager: "",
+        homeManager: "",
         game: {
             away: {
-                name: "Brendan",
-                color: "#CC0000",
-                scores: [0, 0, 2, 3, 2, 0, 3],
-                R: 10,
-                H: 18,
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 4
+                LOB: 0
             },
             home: {
-                name: "Isaac",
-                color: "#3586E8",
-                scores: [0, 0, 4, 0, 0, 0, 0],
-                R: 4,
-                H: 14,
-                E: 3,
-                LOB: 3
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Blue Kritter", team: "Isaac", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Barry", team: "Isaac", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Blue Dry Bones", team: "Isaac", AB: 4, H: 3, R: 1, RBI: 1, HR: 0, AVG: "0.750" },
-            { player: "Bowser", team: "Isaac", AB: 3, H: 1, R: 1, RBI: 2, HR: 0, AVG: "0.333" },
-            { player: "Blue Pianta", team: "Isaac", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Blue Toad", team: "Isaac", AB: 3, H: 3, R: 0, RBI: 1, HR: 0, AVG: "1.000" },
-            { player: "Saber", team: "Isaac", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Blue Noki", team: "Isaac", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Cascade", team: "Isaac", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
 
-            { player: "Blooper", team: "Brendan", AB: 4, H: 2, R: 2, RBI: 3, HR: 0, AVG: "0.500" },
-            { player: "Petey Piranha", team: "Brendan", AB: 5, H: 2, R: 1, RBI: 4, HR: 1, AVG: "0.400" },
-            { player: "Funky Kong", team: "Brendan", AB: 5, H: 2, R: 0, RBI: 2, HR: 0, AVG: "0.400" },
-            { player: "Dixie Kong", team: "Brendan", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Jake", team: "Brendan", AB: 2, H: 2, R: 1, RBI: 0, HR: 0, AVG: "1.000" },
-            { player: "Baby Peach", team: "Brendan", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Green Dry Bones", team: "Brendan", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Wario", team: "Brendan", AB: 4, H: 3, R: 2, RBI: 0, HR: 0, AVG: "0.750" },
-            { player: "Waluigi", team: "Brendan", AB: 3, H: 3, R: 2, RBI: 1, HR: 0, AVG: "1.000" }
         ],
 
         pitchingStats: [
-            { player: "Saber", team: "Isaac", IP: 3, H: 5, ER: 2, SO: 0, ERA: "4.67" },
-            { player: "Bowser", team: "Isaac", IP: 3.2, H: 13, ER: 6, SO: 0, ERA: "11.45" },
-            { player: "Blue Dry Bones", team: "Isaac", IP: 0.1, H: 0, ER: 0, SO: 0, ERA: "0.00" },
 
-            { player: "Blooper", team: "Brendan", IP: 2.1, H: 8, ER: 3, SO: 0, ERA: "9.00" },
-            { player: "Wario", team: "Brendan", IP: 4.2, H: 6, ER: 1, SO: 0, ERA: "1.50" }
         ]
     },
     "Game50": {
         id: "Game50",
-        awayManager: "Isaac",
-        homeManager: "Brendan",
+        awayManager: "",
+        homeManager: "",
         game: {
             away: {
-                name: "Isaac",
-                color: "#3586E8",
-                scores: [3, 0, 0, 4, 0, 0, 5],
-                R: 12,
-                H: 20,
-                E: 1,
-                LOB: 5
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
             home: {
-                name: "Brendan",
-                color: "#CC0000",
-                scores: [4, 0, 0, 0, 1, 0, 0],
-                R: 5,
-                H: 7,
-                E: 4,
-                LOB: 2
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Blue Kritter", team: "Isaac", AB: 5, H: 3, R: 0, RBI: 1, HR: 0, AVG: "0.600" },
-            { player: "Barry", team: "Isaac", AB: 2, H: 1, R: 2, RBI: 1, HR: 0, AVG: "0.500" },
-            { player: "Blue Dry Bones", team: "Isaac", AB: 5, H: 3, R: 1, RBI: 2, HR: 0, AVG: "0.600" },
-            { player: "Bowser", team: "Isaac", AB: 5, H: 2, R: 1, RBI: 3, HR: 1, AVG: "0.400" },
-            { player: "Blue Pianta", team: "Isaac", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Blue Toad", team: "Isaac", AB: 4, H: 2, R: 2, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Saber", team: "Isaac", AB: 4, H: 3, R: 2, RBI: 1, HR: 0, AVG: "0.750" },
-            { player: "Blue Noki", team: "Isaac", AB: 3, H: 1, R: 2, RBI: 2, HR: 0, AVG: "0.333" },
-            { player: "Cascade", team: "Isaac", AB: 4, H: 2, R: 1, RBI: 2, HR: 0, AVG: "0.500" },
 
-            { player: "Bertha", team: "Brendan", AB: 4, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Petey Piranha", team: "Brendan", AB: 4, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Funky Kong", team: "Brendan", AB: 3, H: 2, R: 2, RBI: 1, HR: 1, AVG: "0.667" },
-            { player: "Dixie Kong", team: "Brendan", AB: 3, H: 0, R: 0, RBI: 1, HR: 0, AVG: "0.000" },
-            { player: "Jake", team: "Brendan", AB: 2, H: 0, R: 1, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Baby Peach", team: "Brendan", AB: 3, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Green Dry Bones", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 2, HR: 0, AVG: "0.333" },
-            { player: "Wario", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.333" },
-            { player: "Waluigi", team: "Brendan", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" }
         ],
 
         pitchingStats: [
-            { player: "Blue Pianta", team: "Isaac", IP: 1.2, H: 5, ER: 4, SO: 0, ERA: "16.80" },
-            { player: "Bowser", team: "Isaac", IP: 4.1, H: 2, ER: 1, SO: 1, ERA: "1.62" },
 
-            { player: "Bertha", team: "Brendan", IP: 3, H: 9, ER: 3, SO: 0, ERA: "7.00" },
-            { player: "Waluigi", team: "Brendan", IP: 0.2, H: 2, ER: 3, SO: 0, ERA: "31.50" },
-            { player: "Wario", team: "Brendan", IP: 3, H: 9, ER: 5, SO: 0, ERA: "11.67" },
-            { player: "Baby Peach", team: "Brendan", IP: 0.1, H: 0, ER: 1, SO: 0, ERA: "21.00" }
         ]
     },
     "Game51": {
         id: "Game51",
-        awayManager: "Isaac",
-        homeManager: "Brendan",
+        awayManager: "",
+        homeManager: "",
         game: {
             away: {
-                name: "Isaac",
-                color: "#3586E8",
-                scores: [2, 0, 0, 0, 1, 0, 0],
-                R: 3,
-                H: 13,
-                E: 1,
-                LOB: 7
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             },
             home: {
-                name: "Brendan",
-                color: "#CC0000",
-                scores: [2, 0, 0, 4, 0, 1, 0],
-                R: 7,
-                H: 17,
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 9
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Blooper", team: "Brendan", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Petey Piranha", team: "Brendan", AB: 4, H: 1, R: 1, RBI: 1, HR: 1, AVG: "0.250" },
-            { player: "Funky Kong", team: "Brendan", AB: 4, H: 3, R: 3, RBI: 1, HR: 1, AVG: "0.750" },
-            { player: "Dixie Kong", team: "Brendan", AB: 4, H: 2, R: 1, RBI: 1, HR: 0, AVG: "0.500" },
-            { player: "Jake", team: "Brendan", AB: 4, H: 2, R: 1, RBI: 2, HR: 0, AVG: "0.500" },
-            { player: "Baby Peach", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Green Dry Bones", team: "Brendan", AB: 3, H: 2, R: 0, RBI: 2, HR: 0, AVG: "0.667" },
-            { player: "Wario", team: "Brendan", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Waluigi", team: "Brendan", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
 
-            { player: "Blue Kritter", team: "Isaac", AB: 4, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Barry", team: "Isaac", AB: 4, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Blue Dry Bones", team: "Isaac", AB: 4, H: 2, R: 1, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Bowser", team: "Isaac", AB: 4, H: 4, R: 2, RBI: 3, HR: 2, AVG: "1.000" },
-            { player: "Blue Pianta", team: "Isaac", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Blue Toad", team: "Isaac", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Saber", team: "Isaac", AB: 4, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Blue Noki", team: "Isaac", AB: 3, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Cascade", team: "Isaac", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" }
         ],
 
         pitchingStats: [
-            { player: "Saber", team: "Isaac", IP: 2.2, H: 7, ER: 2, SO: 1, ERA: "5.25" },
-            { player: "Bowser", team: "Isaac", IP: 3.1, H: 10, ER: 5, SO: 0, ERA: "10.50" },
 
-            { player: "Blooper", team: "Brendan", IP: 1.2, H: 5, ER: 2, SO: 0, ERA: "8.40" },
-            { player: "Waluigi", team: "Brendan", IP: 2, H: 2, ER: 0, SO: 0, ERA: "0.00" },
-            { player: "Wario", team: "Brendan", IP: 3.1, H: 6, ER: 2, SO: 0, ERA: "4.20" }
         ]
     },
     "Game52": {
         id: "Game52",
-        awayManager: "Brendan",
-        homeManager: "Isaac",
+        awayManager: "",
+        homeManager: "",
         game: {
             away: {
-                name: "Brendan",
-                color: "#CC0000",
-                scores: [0, 0, 2, 0, 0, 0, 0],
-                R: 2,
-                H: 7,
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
                 E: 0,
-                LOB: 5
+                LOB: 0
             },
             home: {
-                name: "Isaac",
-                color: "#3586E8",
-                scores: [3, 1, 0, 2, 0, 0, 0],
-                R: 6,
-                H: 20,
-                E: 3,
-                LOB: 10
+                name: "",
+                color: "",
+                scores: [0, 0, 0, 0, 0, 0, 0],
+                R: 0,
+                H: 0,
+                E: 0,
+                LOB: 0
             }
         },
 
         battingStats: [
-            { player: "Blue Kritter", team: "Isaac", AB: 4, H: 3, R: 1, RBI: 0, HR: 0, AVG: "0.750" },
-            { player: "Barry", team: "Isaac", AB: 4, H: 2, R: 1, RBI: 2, HR: 1, AVG: "0.500" },
-            { player: "Blue Dry Bones", team: "Isaac", AB: 4, H: 3, R: 2, RBI: 2, HR: 1, AVG: "0.750" },
-            { player: "Bowser", team: "Isaac", AB: 4, H: 4, R: 1, RBI: 1, HR: 1, AVG: "1.000" },
-            { player: "Blue Pianta", team: "Isaac", AB: 4, H: 1, R: 0, RBI: 1, HR: 0, AVG: "0.250" },
-            { player: "Blue Toad", team: "Isaac", AB: 4, H: 3, R: 0, RBI: 0, HR: 0, AVG: "0.750" },
-            { player: "Saber", team: "Isaac", AB: 4, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.250" },
-            { player: "Blue Noki", team: "Isaac", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Cascade", team: "Isaac", AB: 3, H: 1, R: 1, RBI: 0, HR: 0, AVG: "0.333" },
 
-            { player: "Bertha", team: "Brendan", AB: 4, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Petey Piranha", team: "Brendan", AB: 3, H: 0, R: 1, RBI: 1, HR: 1, AVG: "0.000" },
-            { player: "Funky Kong", team: "Brendan", AB: 3, H: 1, R: 1, RBI: 1, HR: 1, AVG: "0.333" },
-            { player: "Dixie Kong", team: "Brendan", AB: 4, H: 0, R: 0, RBI: 0, HR: 0, AVG: "0.000" },
-            { player: "Jake", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Baby Peach", team: "Brendan", AB: 2, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.500" },
-            { player: "Grooves", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" },
-            { player: "Wario", team: "Brendan", AB: 3, H: 2, R: 0, RBI: 0, HR: 0, AVG: "0.667" },
-            { player: "Waluigi", team: "Brendan", AB: 3, H: 1, R: 0, RBI: 0, HR: 0, AVG: "0.333" }
         ],
 
         pitchingStats: [
-            { player: "Blue Pianta", team: "Isaac", IP: 2.2, H: 4, ER: 1, SO: 0, ERA: "2.63" },
-            { player: "Bowser", team: "Isaac", IP: 4.1, H: 3, ER: 0, SO: 0, ERA: "0.00" },
 
-            { player: "Bertha", team: "Brendan", IP: 1.2, H: 9, ER: 4, SO: 0, ERA: "16.80" },
-            { player: "Waluigi", team: "Brendan", IP: 2, H: 2, ER: 0, SO: 0, ERA: "0.00" },
-            { player: "Wario", team: "Brendan", IP: 2.1, H: 9, ER: 2, SO: 0, ERA: "6.00" }
         ]
     },
 };

@@ -100,6 +100,17 @@ export default function StatLeadersMini() {
         return isNaN(num) ? 0 : num;
     };
 
+    const formatInningsPitched = (value?: string): string => {
+        const num = rowToNumber(value);
+
+        const wholeInnings = Math.floor(num);
+        const decimal = num - wholeInnings;
+
+        if (decimal >= 0.6) return `${wholeInnings}.2`;
+        if (decimal >= 0.3) return `${wholeInnings}.1`;
+        return `${wholeInnings}.0`;
+    };
+
     const getTopPlayers = (data: StatRow[], stat: string, isLowerBetter = false) => {
         return [...data]
             .filter(row => {
@@ -127,6 +138,7 @@ export default function StatLeadersMini() {
         { title: "RBIs", stat: "RBI", data: batting },
         { title: "Batting Average", stat: "AVG", data: batting },
         { title: "ERA", stat: "ERA", data: pitching, isLowerBetter: true },
+        { title: "Innings Pitched", stat: "IP", data: pitching },
     ];
 
     const currentPage = pages[page];
@@ -158,8 +170,13 @@ export default function StatLeadersMini() {
                         </div>
 
                         <div style={{ whiteSpace: "nowrap", marginLeft: "1rem" }}>
-                            {currentPage.stat === "AVG" ? rowToNumber(player[currentPage.stat]).toFixed(3) :
-                                currentPage.stat === "ERA" ? rowToNumber(player[currentPage.stat]).toFixed(2) : rowToNumber(player[currentPage.stat])}
+                            {currentPage.stat === "AVG"
+                                ? rowToNumber(player[currentPage.stat]).toFixed(3)
+                                : currentPage.stat === "ERA"
+                                    ? rowToNumber(player[currentPage.stat]).toFixed(2)
+                                    : currentPage.stat === "IP"
+                                        ? formatInningsPitched(player[currentPage.stat])
+                                        : rowToNumber(player[currentPage.stat])}
                         </div>
                     </PlayerRow>
                 ))}

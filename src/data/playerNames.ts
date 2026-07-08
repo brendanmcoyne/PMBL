@@ -484,7 +484,7 @@ export const players: Player[] = [
     {
         name: "Diddy Kong",
         src: "/players/Diddy_Kong.webp",
-        color: "None",
+        color: "Brown",
         gp: 25,
         captain: true,
         mii: false,

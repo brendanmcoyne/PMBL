@@ -45,20 +45,25 @@ export const ContentDiv = styled.div`
 
 const DivisionDiv = styled.div<{ $animate?: boolean }>`
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    gap: 15px;
-    width: 85%;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 22px;
+    width: min(1200px, 92%);
+    margin-bottom: 3rem;
+
     @media screen and (max-width: 1000px) {
         grid-template-columns: repeat(2,1fr);
         justify-content: center;
+        gap: 15px;
     }
     ${({ $animate }) =>
             $animate &&
             css`
-      animation: ${fadeInUp} 1s ease forwards;
-      animation-delay: 0.5s;
-    `}
+                animation: ${fadeInUp} 0.75s ease forwards;
+                animation-delay: 0.25s;
+            `}
 `;
+
+
 
 const PlayerName = styled.span`
     font-weight: bold;
@@ -71,29 +76,73 @@ const PlayerName = styled.span`
 `;
 
 const Player = styled.div<{ $accent: string; $animationState?: "enter" | "exit" }>`
-    --accent: ${({ $accent }) => $accent};
-    background: linear-gradient(100deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.06) 100%);
-    border-bottom: 3px solid white;
-    border-radius: 14px;
-    padding: 1.1rem 0.85rem;
+
+    position: relative;
+    min-height: 240px;
+    padding: 1rem;
+    border-radius: 22px;
+    overflow: hidden;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.65rem;
-    text-align: center;
+    justify-content: space-between;
+
     cursor: pointer;
+    text-align: center;
+
+    background:
+            radial-gradient(circle at top, rgba(255, 255, 255, 0.35), transparent 42%),
+            linear-gradient(145deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.06));
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-bottom: 6px solid ${({ $accent }) => $accent};
+
+    @media screen and (max-width: 1000px) {
+        width: 180px;
+        height: 180px;
+    }
+    
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow:
+                0 18px 36px rgba(0, 0, 0, 0.38),
+                0 0 18px ${({ $accent }) => $accent};
+        border-color: ${({ $accent }) => $accent};
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+                120deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.22) 45%,
+                transparent 70%
+        );
+        transform: translateX(-120%);
+        transition: transform 0.45s ease;
+    }
+
+    &:hover::before {
+        transform: translateX(120%);
+    }
 
     ${({ $animationState }) =>
             $animationState === "enter" &&
             css`
-            animation: ${fadeInUp} 1s ease 0.2s both;
-        `}
+                animation: ${fadeInUp} 1s ease 0.2s both;
+            `}
 
     ${({ $animationState }) =>
             $animationState === "exit" &&
             css`
-            animation: ${fadeOutDown} 0.35s ease both;
-        `}
+                animation: ${fadeOutDown} 0.35s ease both;
+            `}
+    
 `;
 
 const GenImage = styled.img<{ $animate?: boolean }>`
