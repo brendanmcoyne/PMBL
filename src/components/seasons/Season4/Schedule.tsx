@@ -329,32 +329,32 @@ export default function Schedule4() {
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 3</StyledMiniHeader>
 
             <Week>
-                <Matchup style={{ cursor: "pointer" }}>
+                <Matchup onClick={() => setSelectedGame(GamesSeason4["Game9"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(2-1)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(1-2)</TeamRecord>
+                    <ScoreLine>4-7</ScoreLine>
+                    <Stadium>Wario City</Stadium>
+                </Matchup>
+
+                <Matchup onClick={() => setSelectedGame(GamesSeason4["Game10"])} style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <TeamRecord>(2-1)</TeamRecord>
+                    <div/>
+                    <TeamRecord>(2-1)</TeamRecord>
+                    <ScoreLine>7-8</ScoreLine>
+                    <Stadium>Bowser Jr Playroom</Stadium>
                 </Matchup>
 
                 <Matchup style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
-                </Matchup>
-
-                <Matchup style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
                     <TeamRecord>(0-0)</TeamRecord>
                     <div/>
                     <TeamRecord>(0-0)</TeamRecord>

@@ -436,7 +436,7 @@ export default function Week2Recap4() {
                     <div className="player">Light Blue Shy Guy</div>
                     <div className="manager">Manager: <span style={{ color: "#FF9900" }}>Justave</span></div>
                     <div className="description">
-                        4/3, 3 Runs
+                        3/4, 3 Runs
                     </div>
                 </AwardBlock>
 

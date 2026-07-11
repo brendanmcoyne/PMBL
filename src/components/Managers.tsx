@@ -121,14 +121,16 @@ const Manager = styled.div<{ $animate?: boolean }>`
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     border: 2px solid black;
     border-radius: 2%;
-    transition: transform 0.2s;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     cursor: pointer;
 
     &:hover {
-        transform: scale(1.07);
-        @media screen and (max-width: 500px) {
-            transform: none;
-        }
+        transform: translateY(-8px) scale(1.02);
+        box-shadow:
+                0 18px 36px rgba(0, 0, 0, 0.38),
+                0 0 18px;
+        border-color: white;
     }
 
     @media screen and (max-width: 750px) {

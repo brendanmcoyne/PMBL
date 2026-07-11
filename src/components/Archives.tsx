@@ -89,25 +89,16 @@ export default function Archives() {
     return(
         <ContentDiv>
             <StyledHeader $animate={ready}>Archives</StyledHeader>
-            <StyledMiniHeader $animate={ready} style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
+            <StyledMiniHeader $animate={ready} style={{textAlign: "center", color: "white"}}>Every bit of PMBL history can be found here</StyledMiniHeader>
             <SeparatorLine $animate={ready}/>
             <ResponsiveFlex $animate={ready}>
                 <StyledLink bg="/archives/s1.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season1">Season 1</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons">Seasons</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/s2.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season2">Season 2</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/records&stats">Records & Stats</Link>
                 </StyledLink>
             </ResponsiveFlex>
-            <ResponsiveFlex>
-                <StyledLink bg="/archives/s3.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season3">Season 3</Link>
-                </StyledLink>
-                <StyledLink bg="/archives/s4.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4">Season 4</Link>
-                </StyledLink>
-            </ResponsiveFlex>
-
 
             <StyledHeader $animate={ready} style={{fontSize: "80px", marginTop: "70px"}}>Gallery</StyledHeader>
             <StyledMiniHeader $animate={ready}>In here you'll find photos and memories from seasons past</StyledMiniHeader>

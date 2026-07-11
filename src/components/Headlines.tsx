@@ -182,7 +182,17 @@ export default function Players() {
     const season4Stories = (
         <>
             <Story $animationState={animationState}>
-                <GenImage src="/headlines/4week2.jpeg" alt="4Week1" />
+                <GenImage src="/headlines/4week3.jpg" alt="4Week3" />
+                <Overlay>
+                    <Headline>Season 4 Week 3 Recap</Headline>
+                    <StyledLink to="/headlines/season4/Week3Recap">
+                        Click to read more!
+                    </StyledLink>
+                </Overlay>
+            </Story>
+
+            <Story $animationState={animationState}>
+                <GenImage src="/headlines/4week2.jpeg" alt="4Week2" />
                 <Overlay>
                     <Headline>Season 4 Week 2 Recap</Headline>
                     <StyledLink to="/headlines/season4/Week2Recap">

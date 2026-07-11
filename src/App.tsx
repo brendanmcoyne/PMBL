@@ -22,10 +22,7 @@ import Season2 from './components/seasons/Season2.tsx';
 import Season3 from './components/seasons/Season3.tsx';
 import Season4 from './components/seasons/Season4.tsx';
 
-import Awards1 from "./components/seasons/Season1/Awards.tsx";
-import Awards2 from "./components/seasons/Season2/Awards.tsx";
-import Awards3 from "./components/seasons/Season3/Awards.tsx";
-import Awards4 from "./components/seasons/Season4/Awards.tsx";
+import Awards from './components/archives/Awards.tsx';
 import Schedule1 from "./components/seasons/Season1/Schedule.tsx";
 import Schedule2 from "./components/seasons/Season2/Schedule.tsx";
 import Schedule3 from "./components/seasons/Season3/Schedule.tsx";
@@ -86,6 +83,7 @@ import Cascade from "./components/headlines/season3/Cascade.tsx";
 import DraftRecap4 from "./components/headlines/season4/DraftRecap.tsx";
 import Week1Recap4 from "./components/headlines/season4/Week1Recap.tsx";
 import Week2Recap4 from "./components/headlines/season4/Week2Recap.tsx";
+import Week3Recap4 from "./components/headlines/season4/Week3Recap.tsx";
 import KeyPlayers from "./components/headlines/season4/KeyPlayers.tsx";
 import Justin from "./components/headlines/season4/Justin.tsx";
 
@@ -190,39 +188,30 @@ function Root() {
                     <Route path="/season/stats" element={<Content><FullStats/></Content>} />
 
                     /* Archives */
+                    <Route path="/archives/Awards" element={<Awards />} />
+
+                    /* Archives */
                     <Route path="/archives/Season1" element={<Season1 />} />
                     <Route path="/archives/Season2" element={<Season2 />} />
                     <Route path="/archives/Season3" element={<Season3 />} />
                     <Route path="/archives/Season4" element={<Season4 />} />
-
-                    /* Season 1 */
-                    <Route path="/archives/Season1/Awards" element={<Awards1 />} />
                     <Route path="/archives/Season1/Schedule" element={<Schedule1 />} />
                     <Route path="/archives/Season1/Playoffs" element={<Playoffs1 />} />
                     <Route path="/archives/Season1/Standings" element={<Standings1 />} />
                     <Route path="/archives/Season1/Other" element={<Other1 />} />
                     <Route path="/archives/Season1/Draft" element={<Draft1 />} />
-
-                    /* Season 2 */
-                    <Route path="/archives/Season2/Awards" element={<Awards2 />} />
                     <Route path="/archives/Season2/Schedule" element={<Schedule2 />} />
                     <Route path="/archives/Season2/Playoffs" element={<Playoffs2 />} />
                     <Route path="/archives/Season2/Standings" element={<Standings2 />} />
                     <Route path="/archives/Season2/Other" element={<Other2 />} />
                     <Route path="/archives/Season2/Draft" element={<Draft2 />} />
                     <Route path="/archives/Season2/Stats" element={<Content><FullStats2 /></Content>} />
-
-                    /* Season 3 */
-                    <Route path="/archives/Season3/Awards" element={<Awards3 />} />
                     <Route path="/archives/Season3/Schedule" element={<Schedule3 />} />
                     <Route path="/archives/Season3/Playoffs" element={<Playoffs3 />} />
                     <Route path="/archives/Season3/Standings" element={<Standings3 />} />
                     <Route path="/archives/Season3/Other" element={<Other3 />} />
                     <Route path="/archives/Season3/Draft" element={<Draft3 />} />
                     <Route path="/archives/Season3/Stats" element={<Content><FullStats3 /></Content>} />
-
-                    /* Season 4 */
-                    <Route path="/archives/Season4/Awards" element={<Awards4 />} />
                     <Route path="/archives/Season4/Schedule" element={<Schedule4 />} />
                     <Route path="/archives/Season4/Playoffs" element={<Playoffs4 />} />
                     <Route path="/archives/Season4/Standings" element={<Standings4 />} />
@@ -267,6 +256,7 @@ function Root() {
                     <Route path="/headlines/season4/DraftRecap" element={<DraftRecap4 />} />
                     <Route path="/headlines/season4/Week1Recap" element={<Week1Recap4 />} />
                     <Route path="/headlines/season4/Week2Recap" element={<Week2Recap4 />} />
+                    <Route path="/headlines/season4/Week3Recap" element={<Week3Recap4 />} />
                     <Route path="/headlines/season4/KeyPlayers" element={<KeyPlayers />} />
                     <Route path="/headlines/season4/Justin" element={<Justin />} />
 

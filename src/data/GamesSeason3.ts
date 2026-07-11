@@ -870,7 +870,7 @@ export const GamesSeason3: Record<string, GameStats> = {
         pitchingStats: [
             { player: "Paragoomba", team: "James", IP: 1.1, H: 7, ER: 6, SO: 0, ERA: "31.50" },
             { player: "Bowser Jr", team: "James", IP: 3.1, H: 6, ER: 0, SO: 0, ERA: "0.00" },
-            { player: "Red Magikoopa", team: "James", IP: 2.2, H: 1, ER: 0, SO: 0, ERA: "0.00" },
+            { player: "Red Koopa", team: "James", IP: 2.2, H: 1, ER: 0, SO: 0, ERA: "0.00" },
 
             { player: "Saber", team: "Isaac", IP: 3, H: 7, ER: 3, SO: 0, ERA: "7.00" },
             { player: "Bowser", team: "Isaac", IP: 2, H: 10, ER: 7, SO: 0, ERA: "24.50" },
