@@ -1,7 +1,7 @@
 export const awards = [
     {
         id: "MVP",
-        name: "MVP",
+        name: "Most Valuable Player",
         description: "Awarded to the league's most valuable player."
     },
     {
@@ -92,7 +92,7 @@ export const awardWinners = [
         playerName: "Funky Kong",
         playerImage: "/players/Funky_Kong.webp",
         manager: "Isaac",
-        team: "Donkey Konu"
+        team: "Donkey Kong"
     },
     {
         awardId: "MVP",
@@ -208,6 +208,30 @@ export const awardWinners = [
         team: "Waluigi"
     },
 
+    {
+        awardId: "GG",
+        season: "Season 3",
+        playerName: "Boomerang Bro",
+        playerImage: "/players/Boomerang_Bro.webp",
+        manager: "THANdrew",
+        team: "Birdo"
+    },
+    {
+        awardId: "GG",
+        season: "Season 3",
+        playerName: "Green Kritter",
+        playerImage: "/players/Green_Kritter.webp",
+        manager: "Marge",
+        team: "Luigi"
+    },
+    {
+        awardId: "GG",
+        season: "Season 3",
+        playerName: "Fire Bro",
+        playerImage: "/players/Fire_Bro.webp",
+        manager: "James",
+        team: "Bowser Jr"
+    },
     // Silver Slugger - 3 per season
     {
         awardId: "SS",
@@ -287,12 +311,6 @@ export const awardWinners = [
     // Mii of the Year
     {
         awardId: "MIIOY",
-        season: "Season 1",
-        playerName: "Not Awarded",
-    },
-
-    {
-        awardId: "MIIOY",
         season: "Season 2",
         playerName: "Bob Marley",
         playerImage: "/players/Bob Marley.jpg",
@@ -310,11 +328,6 @@ export const awardWinners = [
     },
 
     // Rookie of the Year
-    {
-        awardId: "ROTY",
-        season: "Season 1",
-        playerName: "Not Awarded",
-    },
 
     {
         awardId: "ROTY",
@@ -420,21 +433,24 @@ export const awardWinners = [
 
     // Manager of the Year
     {
-        awardId: "MOTY",
+        awardId: "MOY",
         season: "Season 1",
         playerName: "Justin",
+        manager: "Justin",
     },
 
     {
-        awardId: "MOTY",
+        awardId: "MOY",
         season: "Season 2",
         playerName: "Morgan",
+        manager: "Morgan",
     },
 
     {
-        awardId: "MOTY",
+        awardId: "MOY",
         season: "Season 3",
         playerName: "James",
+        manager: "James",
     },
 
     // Captain of the Year
@@ -463,11 +479,6 @@ export const awardWinners = [
     },
 
     // Stadium of the Year
-    {
-        awardId: "SOY",
-        season: "Season 1",
-        playerName: "Not Awarded",
-    },
 
     {
         awardId: "SOY",
@@ -482,11 +493,6 @@ export const awardWinners = [
     },
 
     // Game of the Year
-    {
-        awardId: "GOTY",
-        season: "Season 1",
-        playerName: "Not Awarded",
-    },
 
     {
         awardId: "GOTY",
@@ -505,11 +511,6 @@ export const awardWinners = [
     },
 
     // Pitcher of the Year
-    {
-        awardId: "POTY",
-        season: "Season 1",
-        playerName: "Not Awarded",
-    },
 
     {
         awardId: "POTY",

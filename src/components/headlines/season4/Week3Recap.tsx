@@ -537,10 +537,10 @@ export default function Week3Recap4() {
                     <tr>
                         <td>ERA (Min. 7 IP)</td>
                         <td>
-                            <span style={{ color: "#FF00FF" }}>Mario</span> (2.63)
+                            <span style={{ color: "#FF00FF" }}>Bob Marley</span> (2.65)
                         </td>
                         <td>
-                            <span style={{ color: "#FF00FF" }}>Bob Marley</span> (2.89)
+                            <span style={{ color: "#FF00FF" }}>Mario</span> (2.65)
                         </td>
                         <td>
                             <span style={{ color: "#6AA84F" }}>Birdo</span> (4.20)

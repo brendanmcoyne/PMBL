@@ -17,34 +17,32 @@ import Headlines from "./components/Headlines.tsx";
 import Scrolling from "./components/Scrolling.tsx";
 import FullStats from "./components/FullStats.tsx";
 
-import Season1 from './components/seasons/Season1.tsx';
-import Season2 from './components/seasons/Season2.tsx';
-import Season3 from './components/seasons/Season3.tsx';
-import Season4 from './components/seasons/Season4.tsx';
+import Season1 from './components/archives/Season1.tsx';
+import Season2 from './components/archives/Season2.tsx';
+import Season3 from './components/archives/Season3.tsx';
+import Season4 from './components/archives/Season4.tsx';
 
+import Seasons from './components/archives/Seasons.tsx';
+import RecordsStats from './components/archives/Records&Stats.tsx';
 import Awards from './components/archives/Awards.tsx';
-import Schedule1 from "./components/seasons/Season1/Schedule.tsx";
-import Schedule2 from "./components/seasons/Season2/Schedule.tsx";
-import Schedule3 from "./components/seasons/Season3/Schedule.tsx";
-import Schedule4 from "./components/seasons/Season4/Schedule.tsx";
-import Playoffs1 from "./components/seasons/Season1/Playoffs.tsx";
-import Playoffs2 from "./components/seasons/Season2/Playoffs.tsx";
-import Playoffs3 from "./components/seasons/Season3/Playoffs.tsx";
-import Playoffs4 from "./components/seasons/Season4/Playoffs.tsx";
-import Standings1 from "./components/seasons/Season1/Standings.tsx";
-import Standings2 from "./components/seasons/Season2/Standings.tsx";
-import Standings3 from "./components/seasons/Season3/Standings.tsx";
-import Standings4 from "./components/seasons/Season4/Standings.tsx";
-import FullStats2 from "./components/seasons/Season2/FullStats.tsx";
-import FullStats3 from "./components/seasons/Season3/FullStats.tsx";
-import Other1 from "./components/seasons/Season1/Other.tsx";
-import Other2 from "./components/seasons/Season2/Other.tsx";
-import Other3 from "./components/seasons/Season3/Other.tsx";
-import Other4 from "./components/seasons/Season4/Other.tsx";
-import Draft1 from "./components/seasons/Season1/Draft.tsx";
-import Draft2 from "./components/seasons/Season2/Draft.tsx";
-import Draft3 from "./components/seasons/Season3/Draft.tsx";
-import Draft4 from "./components/seasons/Season4/Draft.tsx";
+import Records from './components/archives/Records.tsx';
+import Stats from './components/archives/Stats.tsx';
+import Schedule1 from "./components/archives/Season1/Schedule.tsx";
+import Schedule2 from "./components/archives/Season2/Schedule.tsx";
+import Schedule3 from "./components/archives/Season3/Schedule.tsx";
+import Schedule4 from "./components/archives/Season4/Schedule.tsx";
+import Playoffs1 from "./components/archives/Season1/Playoffs.tsx";
+import Playoffs2 from "./components/archives/Season2/Playoffs.tsx";
+import Playoffs3 from "./components/archives/Season3/Playoffs.tsx";
+import Playoffs4 from "./components/archives/Season4/Playoffs.tsx";
+import Standings1 from "./components/archives/Season1/Standings.tsx";
+import Standings2 from "./components/archives/Season2/Standings.tsx";
+import Standings3 from "./components/archives/Season3/Standings.tsx";
+import Standings4 from "./components/archives/Season4/Standings.tsx";
+import Draft1 from "./components/archives/Season1/Draft.tsx";
+import Draft2 from "./components/archives/Season2/Draft.tsx";
+import Draft3 from "./components/archives/Season3/Draft.tsx";
+import Draft4 from "./components/archives/Season4/Draft.tsx";
 
 import Koopa from "./components/headlines/season1/Koopa.tsx";
 import DryBones from "./components/headlines/season1/DryBones.tsx";
@@ -129,7 +127,7 @@ function Root() {
 
     const isMainNavPage = mainNavPaths.includes(location.pathname);
     const isHomePage = location.pathname === "/";
-    const skipNextLoading = useRef(false); //Makes sure that "loading" isn't rendered right after "Welcome!"
+    const skipNextLoading = useRef(false);
 
     useEffect(() => {
         let earlyCancelTimer: number | null = null;
@@ -188,7 +186,15 @@ function Root() {
                     <Route path="/season/stats" element={<Content><FullStats/></Content>} />
 
                     /* Archives */
-                    <Route path="/archives/Awards" element={<Awards />} />
+                    <Route path="/archives/seasons" element={<Seasons />} />
+                    <Route path="/archives/seasons/Season1" element={<Season1 />} />
+                    <Route path="/archives/seasons/Season2" element={<Season2 />} />
+                    <Route path="/archives/seasons/Season3" element={<Season3 />} />
+                    <Route path="/archives/seasons/Season4" element={<Season4 />} />
+                    <Route path="/archives/records&stats" element={<RecordsStats />} />
+                    <Route path="/archives/records&stats/Awards" element={<Awards />} />
+                    <Route path="/archives/records&stats/Records" element={<Records />} />
+                    <Route path="/archives/records&stats/Stats" element={<Stats />} />
 
                     /* Archives */
                     <Route path="/archives/Season1" element={<Season1 />} />
@@ -198,24 +204,18 @@ function Root() {
                     <Route path="/archives/Season1/Schedule" element={<Schedule1 />} />
                     <Route path="/archives/Season1/Playoffs" element={<Playoffs1 />} />
                     <Route path="/archives/Season1/Standings" element={<Standings1 />} />
-                    <Route path="/archives/Season1/Other" element={<Other1 />} />
                     <Route path="/archives/Season1/Draft" element={<Draft1 />} />
                     <Route path="/archives/Season2/Schedule" element={<Schedule2 />} />
                     <Route path="/archives/Season2/Playoffs" element={<Playoffs2 />} />
                     <Route path="/archives/Season2/Standings" element={<Standings2 />} />
-                    <Route path="/archives/Season2/Other" element={<Other2 />} />
                     <Route path="/archives/Season2/Draft" element={<Draft2 />} />
-                    <Route path="/archives/Season2/Stats" element={<Content><FullStats2 /></Content>} />
                     <Route path="/archives/Season3/Schedule" element={<Schedule3 />} />
                     <Route path="/archives/Season3/Playoffs" element={<Playoffs3 />} />
                     <Route path="/archives/Season3/Standings" element={<Standings3 />} />
-                    <Route path="/archives/Season3/Other" element={<Other3 />} />
                     <Route path="/archives/Season3/Draft" element={<Draft3 />} />
-                    <Route path="/archives/Season3/Stats" element={<Content><FullStats3 /></Content>} />
                     <Route path="/archives/Season4/Schedule" element={<Schedule4 />} />
                     <Route path="/archives/Season4/Playoffs" element={<Playoffs4 />} />
                     <Route path="/archives/Season4/Standings" element={<Standings4 />} />
-                    <Route path="/archives/Season4/Other" element={<Other4 />} />
                     <Route path="/archives/Season4/Draft" element={<Draft4 />} />
 
                     /* Headlines */

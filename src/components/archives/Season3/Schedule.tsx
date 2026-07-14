@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useLayoutEffect } from "react";
-import { GamesSeason3 } from "../../../data/GamesSeason3";
-import type { GameStats } from "../../../data/GamesSeason3";
+import { GamesSeason3 } from "../../../data/GamesSeason3.ts";
+import type { GameStats } from "../../../data/GamesSeason3.ts";
 import { ToggleButton, StyledHeader } from "../../CommonStyles.ts";
 import { styled, keyframes, css } from "styled-components";
 

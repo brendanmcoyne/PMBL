@@ -1,6 +1,6 @@
 import {styled} from "styled-components";
 import { Link } from "react-router-dom";
-import { draftRoster } from "../../../data/Season1Draft";
+import { draftRoster } from "../../../data/Season1Draft.ts";
 import { ToggleButton, StyledHeader } from "../../CommonStyles.ts";
 
 export const ContentDiv = styled.div`

@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import styled from "styled-components";
+import { StyledHeader } from "../CommonStyles.ts";
 import { awards, awardWinners } from "../../data/awardData.ts";
 
 const AwardsPage = styled.main`
@@ -35,17 +36,6 @@ const AwardsHero = styled.section`
     flex-direction: column;
     align-items: stretch;
   }
-`;
-
-const HeroText = styled.div``;
-
-const Eyebrow = styled.p`
-  margin: 0 0 8px !important;
-  color: #facc15 !important;
-  font-size: 0.78rem;
-  font-weight: 900;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
 `;
 
 const AwardSelectorCard = styled.div`
@@ -135,19 +125,6 @@ const WinnerDetails = styled.div`
   font-size: 0.92rem;
 `;
 
-const EmptyAwards = styled.div`
-  padding: 28px;
-  border: 1px dashed #d1d5db;
-  border-radius: 18px;
-  text-align: center;
-  color: #6b7280;
-
-  h3 {
-    margin: 0 0 6px;
-    color: #111827;
-  }
-`;
-
 type ManagerColorProps = {
     $managerColor: string;
 };
@@ -231,7 +208,7 @@ const getManagerColor = (manager = ""): string => {
     return managerColors[normalizedManager] || "#111827";
 };
 
-function Awards() {
+export default function Awards() {
     const [selectedAwardId, setSelectedAwardId] = useState(awards[0]?.id || "");
 
     const selectedAward = useMemo(() => {
@@ -244,21 +221,20 @@ function Awards() {
             .sort((a, b) => {
                 const seasonA = Number(a.season.replace(/\D/g, ""));
                 const seasonB = Number(b.season.replace(/\D/g, ""));
-                return seasonB - seasonA;
+                return seasonA - seasonB;
             });
     }, [selectedAwardId]);
 
     return (
         <AwardsPage>
+            <StyledHeader>Awards History</StyledHeader>
             <AwardsHero>
-                <HeroText>
-                    <Eyebrow>League History</Eyebrow>
-                    <h1>Awards</h1>
-                    <p>
-                        View every award winner by season, including the manager and team
-                        connected to each winner.
-                    </p>
-                </HeroText>
+                {selectedAward && (
+                    <SelectedAwardHeader>
+                        <h2 style={{color: "white" }}>{selectedAward.name}</h2>
+                        <p style={{color: "#DDDDDD" }}>{selectedAward.description}</p>
+                    </SelectedAwardHeader>
+                )}
 
                 <AwardSelectorCard>
                     <label htmlFor="award-select">Choose an Award</label>
@@ -275,13 +251,6 @@ function Awards() {
                     </select>
                 </AwardSelectorCard>
             </AwardsHero>
-
-            {selectedAward && (
-                <SelectedAwardHeader>
-                    <h2>{selectedAward.name}</h2>
-                    <p>{selectedAward.description}</p>
-                </SelectedAwardHeader>
-            )}
 
             <AwardWinnersSection>
                 {filteredWinners.length > 0 ? (
@@ -312,19 +281,12 @@ function Awards() {
 
                                             <WinnerDetails>
                                                 {winner.manager && (
-                                                    <span>
-      <strong>Manager:</strong>{" "}
-                                                        <ManagerName $managerColor={managerColor}>
-        {winner.manager}
-      </ManagerName>
-    </span>
+                                                    <span><strong>Manager:</strong>{" "}
+                                                        <ManagerName $managerColor={managerColor}>{winner.manager}</ManagerName>
+                                                    </span>
                                                 )}
 
-                                                {winner.team && (
-                                                    <span>
-      <strong>Team:</strong> {winner.team}
-    </span>
-                                                )}
+                                                {winner.team && (<span><strong>Team:</strong> {winner.team}</span>)}
                                             </WinnerDetails>
                                         </WinnerInfo>
                                     </WinnerContent>
@@ -333,14 +295,10 @@ function Awards() {
                         })}
                     </AwardWinnersList>
                 ) : (
-                    <EmptyAwards>
-                        <h3>No winners listed yet</h3>
-                        <p>This award does not have any winners entered yet.</p>
-                    </EmptyAwards>
+                    <>
+                    </>
                 )}
             </AwardWinnersSection>
         </AwardsPage>
     );
 }
-
-export default Awards;

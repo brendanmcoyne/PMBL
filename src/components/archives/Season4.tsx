@@ -12,11 +12,11 @@ export const ContentDiv = styled.div`
     padding-top: 2rem;
 `;
 
-const LinkDiv = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    @media screen and (max-width: 1000px) {
-        display: flex;
+const ResponsiveFlex = styled.div<{ $animate?: boolean }>`
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    @media (max-width: 1000px) {
         flex-direction: column;
     }
 `;
@@ -25,31 +25,27 @@ export default function Season4() {
     return(
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "white"}} to="/archives">← Back</Link>
+                <Link style={{color: "white"}} to="/archives/seasons">← Back</Link>
             </ToggleButton>
             <StyledHeader>Season 4 PMBL</StyledHeader>
             <StyledMiniHeader style={{textAlign: "center", color: "white"}}>All Records from Season 4</StyledMiniHeader>
             <SeparatorLine />
-            <LinkDiv>
+            <ResponsiveFlex>
                 <StyledLink bg="/archives/schedule.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4/Schedule">Schedule</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/Draft.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4/Draft">Draft</Link>
                 </StyledLink>
-                <StyledLink bg="/archives/awards.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4/Awards">Awards</Link>
-                </StyledLink>
+            </ResponsiveFlex>
+            <ResponsiveFlex>
                 <StyledLink bg="/archives/Standings.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4/Standings">Standings</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/playoffs.png">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4/Playoffs">Playoffs</Link>
                 </StyledLink>
-                <StyledLink bg="/archives/other.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4/Other">Other</Link>
-                </StyledLink>
-            </LinkDiv>
+            </ResponsiveFlex>
         </ContentDiv>
 
     );

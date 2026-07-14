@@ -2,16 +2,16 @@ import { styled, keyframes, css } from "styled-components";
 import {Link} from "react-router-dom";
 import { useState, useLayoutEffect } from "react";
 import { ToggleButton, StyledHeader } from "../../CommonStyles.ts";
-import { GamesSeason3 } from "../../../data/GamesSeason3";
-import type { GameStats } from "../../../data/GamesSeason3";
+import { GamesSeason3 } from "../../../data/GamesSeason3.ts";
+import type { GameStats } from "../../../data/GamesSeason3.ts";
 
 const fadeInUp = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 `;
 
 export const ContentDiv = styled.div`
@@ -85,7 +85,7 @@ const ScoreLine = styled.div`
     font-weight: bold;
     font-size: 1.3rem;
     text-align: center;
-    margin-top: -1.5rem;
+    margin-top: -1.5rem; 
 `;
 
 const GamesRow3 = styled.div`
@@ -114,9 +114,9 @@ const GamesRow2 = styled.div`
 
 const WorldSeriesHeader = styled(StyledMiniHeader)`
     font-family: 'Anton', sans-serif;
-    font-size: 6rem;
+    font-size: 6rem;  
     letter-spacing: 0.1em;
-    color: #FFD700;
+    color: #FFD700;   
     text-shadow: 2px 2px 4px #000;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -126,11 +126,11 @@ const WorldSeriesHeader = styled(StyledMiniHeader)`
 `;
 
 const BannerDiv = styled.div`
-    border: 20px solid #999999;
+    border: 20px solid #3586E8; 
     background-color: #EEEEEE;
     width: 700px;
-    padding: 2rem 3rem;
-    box-shadow: 0 0 20px 5px rgba(241, 194, 50, 0.4);
+    padding: 2rem 3rem;          
+    box-shadow: 0 0 20px 5px rgba(241, 194, 50, 0.4); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,10 +156,10 @@ const ModalContent = styled.div<{ $navOffset: number; $animate?: boolean }>`
     height: ${({ $navOffset }) => `calc(100vh - ${$navOffset}px - 24px)`};
 
     ${({ $animate }) =>
-            $animate &&
-            css`
-                animation: ${fadeInUp} 0.6s ease forwards;
-            `}
+    $animate &&
+    css`
+            animation: ${fadeInUp} 0.6s ease forwards;
+        `}
 `;
 
 
@@ -169,7 +169,7 @@ const ModalScrollWrapper = styled.div`
     padding: 0 0.5rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
-
+    
 
     &::-webkit-scrollbar {
         width: 0;
@@ -211,7 +211,7 @@ const StatsTable = styled.table`
     border: 1px solid #444;
     border-radius: 10px;
     overflow: hidden;
-
+    
 `;
 
 const StatsTh = styled.th`
@@ -243,7 +243,7 @@ const TeamColumn = styled.div`
     background: rgba(255, 255, 255, .05);
 `;
 
-export default function Playoffs4() {
+export default function Playoffs3() {
     const [selectedGame, setSelectedGame] = useState<GameStats | null>(null);
     const [navHeight, setNavHeight] = useState(0);
 
@@ -262,116 +262,88 @@ export default function Playoffs4() {
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "white"}} to="/archives/Season4">← Back</Link>
+                <Link style={{color: "white"}} to="/archives/Season3">← Back</Link>
             </ToggleButton>
-            <StyledHeader style={{marginBottom: "10px"}}>Season 4 PMBL Playoffs</StyledHeader>
+            <StyledHeader style={{marginBottom: "10px"}}>Season 3 PMBL Playoffs</StyledHeader>
 
             <WorldSeriesHeader style={{color: "#888888"}}>Conference Series</WorldSeriesHeader>
             <StyledMiniHeader>
-                (1) <span style={{color: "#999999"}}>TBD</span> v.s. (4) <span style={{color: "#999999"}}>TBD</span>
+                (1) <span style={{color: "#F1C232"}}>James</span> v.s. (4) <span style={{color: "#CC0000"}}>Brendan</span>
             </StyledMiniHeader>
 
             <GamesRow3>
                 <div>
                     <StyledMiniHeader>Game 1</StyledMiniHeader>
                     <Matchup onClick={() => setSelectedGame(GamesSeason3["Game45"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
+                        <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                         <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
+                        <TeamName style={{color: "#F1C232"}}>James</TeamName>
+                        <TeamRecord>(1-0)</TeamRecord>
                         <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
+                        <TeamRecord>(0-1)</TeamRecord>
+                        <ScoreLine>10 - 5</ScoreLine>
+                        <Stadium>Luigis Mansion</Stadium>
                     </Matchup>
                 </div>
 
                 <div>
                     <StyledMiniHeader>Game 2</StyledMiniHeader>
                     <Matchup onClick={() => setSelectedGame(GamesSeason3["Game46"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
+                        <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                         <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
+                        <TeamName style={{color: "#F1C232"}}>James</TeamName>
+                        <TeamRecord>(2-0)</TeamRecord>
                         <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
+                        <TeamRecord>(0-2)</TeamRecord>
+                        <ScoreLine>5 - 3</ScoreLine>
+                        <Stadium>Luigis Mansion</Stadium>
                     </Matchup>
                 </div>
 
                 <div>
                     <StyledMiniHeader>Game 3</StyledMiniHeader>
                     <Matchup onClick={() => setSelectedGame(GamesSeason3["Game47"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
+                        <TeamName style={{color: "#F1C232"}}>James</TeamName>
                         <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
+                        <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                        <TeamRecord>(0-3)</TeamRecord>
                         <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
+                        <TeamRecord>(3-0)</TeamRecord>
+                        <ScoreLine>5 - 11</ScoreLine>
+                        <Stadium>Mario Stadium</Stadium>
                     </Matchup>
                 </div>
             </GamesRow3>
-            <GamesRow2>
-                <div style={{marginBottom: "50px"}}>
-                    <StyledMiniHeader>Game 4</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game51"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
-                    </Matchup>
-                </div>
-                <div style={{marginBottom: "50px"}}>
-                    <StyledMiniHeader>Game 5</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game52"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
-                    </Matchup>
-                </div>
-            </GamesRow2>
 
             <StyledMiniHeader>
-                (2) <span style={{color: "#999999"}}>TBD</span> v.s. (3) <span style={{color: "#999999"}}>TBD</span>
+                (2) <span style={{color: "#999999"}}>THANdrew</span> v.s. (3) <span style={{color: "#3586E8"}}>Isaac</span>
             </StyledMiniHeader>
 
             <GamesRow3>
                 <div>
                     <StyledMiniHeader>Game 1</StyledMiniHeader>
                     <Matchup onClick={() => setSelectedGame(GamesSeason3["Game41"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
+                        <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#999999"}}>THAN.</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
+                        <TeamRecord>(1-0)</TeamRecord>
                         <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
+                        <TeamRecord>(0-1)</TeamRecord>
+                        <ScoreLine>14 - 4</ScoreLine>
+                        <Stadium>Daisy Cruiser</Stadium>
                     </Matchup>
                 </div>
                 <div>
                     <StyledMiniHeader>Game 2</StyledMiniHeader>
                     <Matchup onClick={() => setSelectedGame(GamesSeason3["Game42"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
+                        <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                         <VsText>vs</VsText>
                         <TeamName style={{color: "#999999"}}>THAN.</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
+                        <TeamRecord>(1-1)</TeamRecord>
                         <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
+                        <TeamRecord>(1-1)</TeamRecord>
+                        <ScoreLine>2 - 4</ScoreLine>
+                        <Stadium>Daisy Cruiser</Stadium>
                     </Matchup>
                 </div>
                 <div>
@@ -379,87 +351,73 @@ export default function Playoffs4() {
                     <Matchup onClick={() => setSelectedGame(GamesSeason3["Game43"])} style={{ cursor: "pointer" }}>
                         <TeamName style={{color: "#999999"}}>THAN.</TeamName>
                         <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
+                        <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                        <TeamRecord>(1-2)</TeamRecord>
                         <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
+                        <TeamRecord>(2-1)</TeamRecord>
+                        <ScoreLine>6 - 9</ScoreLine>
+                        <Stadium>DK Jungle</Stadium>
                     </Matchup>
                 </div>
             </GamesRow3>
-            <GamesRow2>
-                <div style={{marginBottom: "50px"}}>
-                    <StyledMiniHeader>Game 4</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game51"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
-                    </Matchup>
-                </div>
-                <div style={{marginBottom: "50px"}}>
-                    <StyledMiniHeader>Game 5</StyledMiniHeader>
-                    <Matchup onClick={() => setSelectedGame(GamesSeason3["Game52"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
-                    </Matchup>
-                </div>
-            </GamesRow2>
+            <div style={{marginBottom: "50px"}}>
+                <StyledMiniHeader>Game 4</StyledMiniHeader>
+                <Matchup onClick={() => setSelectedGame(GamesSeason3["Game44"])} style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#999999"}}>THAN.</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                    <TeamRecord>(1-3)</TeamRecord>
+                    <div/>
+                    <TeamRecord>(3-1)</TeamRecord>
+                    <ScoreLine>3 - 9</ScoreLine>
+                    <Stadium>DK Jungle</Stadium>
+                </Matchup>
+            </div>
+
             <WorldSeriesHeader>WORLD SERIES</WorldSeriesHeader>
 
             <StyledMiniHeader>
-                (3) <span style={{color: "#999999"}}>TBD</span> v.s. (4) <span style={{color: "#999999"}}>TBD</span>
+                (3) <span style={{color: "#3586E8"}}>Isaac</span> v.s. (4) <span style={{color: "#CC0000"}}>Brendan</span>
             </StyledMiniHeader>
 
             <GamesRow3>
                 <div>
                     <StyledMiniHeader>Game 1</StyledMiniHeader>
                     <Matchup onClick={() => setSelectedGame(GamesSeason3["Game48"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
+                        <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                         <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
+                        <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                        <TeamRecord>(0-1)</TeamRecord>
+                        <div />
+                        <TeamRecord>(1-0)</TeamRecord>
+                        <ScoreLine>14 - 1</ScoreLine>
+                        <Stadium>DK Jungle</Stadium>
                     </Matchup>
                 </div>
                 <div>
                     <StyledMiniHeader>Game 2</StyledMiniHeader>
                     <Matchup onClick={() => setSelectedGame(GamesSeason3["Game49"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
+                        <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                         <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
+                        <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                        <TeamRecord>(1-1)</TeamRecord>
+                        <div />
+                        <TeamRecord>(1-1)</TeamRecord>
+                        <ScoreLine>10 - 4</ScoreLine>
+                        <Stadium>DK Jungle</Stadium>
                     </Matchup>
                 </div>
                 <div>
                     <StyledMiniHeader>Game 3</StyledMiniHeader>
                     <Matchup onClick={() => setSelectedGame(GamesSeason3["Game50"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
+                        <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                         <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
+                        <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                        <TeamRecord>(2-1)</TeamRecord>
+                        <div />
+                        <TeamRecord>(1-2)</TeamRecord>
+                        <ScoreLine>12 - 5</ScoreLine>
+                        <Stadium>Mario Stadium</Stadium>
                     </Matchup>
                 </div>
             </GamesRow3>
@@ -467,36 +425,37 @@ export default function Playoffs4() {
                 <div style={{marginBottom: "50px"}}>
                     <StyledMiniHeader>Game 4</StyledMiniHeader>
                     <Matchup onClick={() => setSelectedGame(GamesSeason3["Game51"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
+                        <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
                         <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
+                        <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                        <TeamRecord>(2-2)</TeamRecord>
+                        <div />
+                        <TeamRecord>(2-2)</TeamRecord>
+                        <ScoreLine>3 - 7</ScoreLine>
+                        <Stadium>Mario Stadium</Stadium>
                     </Matchup>
                 </div>
                 <div style={{marginBottom: "50px"}}>
                     <StyledMiniHeader>Game 5</StyledMiniHeader>
                     <Matchup onClick={() => setSelectedGame(GamesSeason3["Game52"])} style={{ cursor: "pointer" }}>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
+                        <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                         <VsText>vs</VsText>
-                        <TeamName style={{color: "#999999"}}>TBD</TeamName>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <div/>
-                        <TeamRecord>(0-0)</TeamRecord>
-                        <ScoreLine>0 - 0</ScoreLine>
-                        <Stadium>TBD</Stadium>
+                        <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
+                        <TeamRecord>(2-3)</TeamRecord>
+                        <div />
+                        <TeamRecord>(3-2)</TeamRecord>
+                        <ScoreLine>2 - 6</ScoreLine>
+                        <Stadium>DK Jungle</Stadium>
                     </Matchup>
                 </div>
             </GamesRow2>
 
             <BannerDiv>
-                <WorldSeriesHeader style={{marginBottom: "0", textShadow: "none", color: "#999999"}}>World Series Champions</WorldSeriesHeader>
+                <WorldSeriesHeader style={{marginBottom: "0", textShadow: "none", color: "#3586E8"}}>World Series Champions</WorldSeriesHeader>
                 <img src="/LeagueLogo_noWords.png" alt="logo" style={{width: "150px", height: "150px", objectFit: "contain", margin: "0",}}/>
-                <h2 style={{fontFamily: "'Anton', sans-serif", letterSpacing: "2px", fontSize: "4rem", margin: "0", color: "#999999"}}>TBD</h2>
-                <h4 style={{fontFamily: "'Open Sans', sans-serif", color: "black"}}>TBD</h4>
+                <h2 style={{fontFamily: "'Anton', sans-serif", letterSpacing: "2px", fontSize: "4rem", margin: "0", color: "#3586E8"}}>Isaac</h2>
+                <h4 style={{fontFamily: "'Open Sans', sans-serif", color: "black"}}>Bowser Monsters</h4>
+                <img src="/emblems/MSS-Emblem-BowserMonsters.webp" alt="Bowser"/>
             </BannerDiv>
 
             {selectedGame && (

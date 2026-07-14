@@ -2,8 +2,8 @@ import { styled, keyframes, css } from "styled-components";
 import {Link} from "react-router-dom";
 import { useState, useLayoutEffect } from "react";
 import { ToggleButton, StyledHeader } from "../../CommonStyles.ts";
-import { GamesSeason2 } from "../../../data/GamesSeason2";
-import type { GameStats } from "../../../data/GamesSeason2";
+import { GamesSeason2 } from "../../../data/GamesSeason2.ts";
+import type { GameStats } from "../../../data/GamesSeason2.ts";
 
 const fadeInUp = keyframes`
   0% {

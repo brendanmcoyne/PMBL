@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import {Link} from "react-router-dom";
-import { SeparatorLine } from "../../headlines/HeadlineStyles";
+import { SeparatorLine } from "../../headlines/HeadlineStyles.ts";
 import { ToggleButton, StyledHeader } from "../../CommonStyles.ts";
 
 export const ContentDiv = styled.div`

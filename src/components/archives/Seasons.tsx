@@ -1,18 +1,7 @@
-import { styled, css, keyframes } from "styled-components";
+import { styled } from "styled-components";
 import { Link } from "react-router-dom";
-import {useEffect, useState} from "react";
-import { StyledHeader, StyledLink, SeparatorLine } from "../CommonStyles.ts";
+import {StyledHeader, StyledLink, SeparatorLine, ToggleButton} from "../CommonStyles.ts";
 
-const fadeInUp = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -31,12 +20,6 @@ const StyledMiniHeader = styled.h3<{ $animate?: boolean }>`
     margin-top: 0;
     margin-bottom: 30px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    ${({ $animate }) =>
-    $animate &&
-    css`
-      animation: ${fadeInUp} 1s ease forwards;
-      animation-delay: 0.5s;
-    `}
 `;
 
 const ResponsiveFlex = styled.div<{ $animate?: boolean }>`
@@ -46,45 +29,32 @@ const ResponsiveFlex = styled.div<{ $animate?: boolean }>`
     @media (max-width: 1000px) {
         flex-direction: column;
     }
-    ${({ $animate }) =>
-    $animate &&
-    css`
-      animation: ${fadeInUp} 1s ease forwards;
-      animation-delay: 0.5s;
-    `}
 `;
 
 export default function Seasons() {
-    const [ready, setReady] = useState(false);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setReady(true);
-        }, 100);
-        return () => clearTimeout(timer);
-    }, []);
-
-    if (!ready) return null;
 
     return(
         <ContentDiv>
-            <StyledHeader $animate={ready}>Seasons</StyledHeader>
-            <StyledMiniHeader $animate={ready} style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
-            <SeparatorLine $animate={ready}/>
-            <ResponsiveFlex $animate={ready}>
+            <ToggleButton>
+                <Link style={{color: "white"}} to="/archives">← Back</Link>
+            </ToggleButton>
+            <StyledHeader>Seasons</StyledHeader>
+            <StyledMiniHeader style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
+            <SeparatorLine/>
+            <ResponsiveFlex>
                 <StyledLink bg="/archives/s1.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season1">Season 1</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season1">Season 1</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/s2.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season2">Season 2</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season2">Season 2</Link>
                 </StyledLink>
             </ResponsiveFlex>
             <ResponsiveFlex>
                 <StyledLink bg="/archives/s3.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season3">Season 3</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season3">Season 3</Link>
                 </StyledLink>
                 <StyledLink bg="/archives/s4.jpg">
-                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/Season4">Season 4</Link>
+                    <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons/Season4">Season 4</Link>
                 </StyledLink>
             </ResponsiveFlex>
         </ContentDiv>
