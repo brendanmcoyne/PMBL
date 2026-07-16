@@ -22,12 +22,24 @@ const StyledMiniHeader = styled.h3`
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 `;
 
-const ResponsiveFlex = styled.div`
-    display: flex;
-    flex-direction: row;
+const TriangleGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
     margin-top: 30px;
+    width: fit-content;
+
+    /* Third item */
+    & > *:nth-child(3) {
+        grid-column: 1 / 3;
+        justify-self: center;
+    }
+
     @media (max-width: 1000px) {
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
 `;
 
@@ -51,17 +63,17 @@ export default function RecordsStats() {
             <StyledHeader>Seasons</StyledHeader>
             <StyledMiniHeader style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
             <SeparatorLine/>
-            <ResponsiveFlex>
-                <StyledLink bg="/archives/s1.jpg">
+            <TriangleGrid>
+                <StyledLink bg="/archives/records.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/records&stats/records">Records</Link>
                 </StyledLink>
-                <StyledLink bg="/archives/s2.jpg">
+                <StyledLink bg="/archives/awards.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/records&stats/awards">Awards</Link>
                 </StyledLink>
-                <StyledLink bg="/archives/s3.jpg">
+                <StyledLink bg="/archives/stats.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/records&stats/stats">Stats</Link>
                 </StyledLink>
-            </ResponsiveFlex>
+            </TriangleGrid>
         </ContentDiv>
 
     );

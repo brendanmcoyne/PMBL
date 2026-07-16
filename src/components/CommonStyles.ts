@@ -31,14 +31,44 @@ export const SeparatorLine = styled.hr<{ $animate?: boolean }>`
 `;
 
 export const ToggleButton = styled.button`
-    background-color: black;
-    color: white;
-    font-size: 1.5rem;
-    border: 2px solid white;
-    padding: 3px 10px;
-    cursor: pointer;
-    align-self: flex-start;  
+    align-self: flex-start;
     margin-left: 2rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    padding: 0;
+    overflow: hidden;
+    font-family: inherit;
+    cursor: pointer;
+
+    transition:
+            background-color 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        padding: 0.55rem 1rem;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.16);
+        border-color: white;
+        transform: translateX(-3px);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 1000px) {
+        margin-left: 1rem;
+    }
 `;
 
 export const StyledHeader = styled.h1<{ $animate?: boolean }>`
@@ -93,8 +123,8 @@ export const StyledLink = styled.p<StyledLinkProps>`
     padding: 40px 80px;
     border-radius: 8px;
     display: flex;
-    width: 220px;
-    height: 110px;
+    width: 340px;
+    height: 180px;
     flex-direction: column;
     justify-content: center;
     background-image: ${({ bg }) => `url(${bg})`};

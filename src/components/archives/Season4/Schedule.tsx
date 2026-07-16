@@ -351,41 +351,41 @@ export default function Schedule4() {
                     <Stadium>Bowser Jr Playroom</Stadium>
                 </Matchup>
 
-                <Matchup style={{ cursor: "pointer" }}>
+                <Matchup onClick={() => setSelectedGame(GamesSeason4["Game11"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(2-1)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(0-3)</TeamRecord>
+                    <ScoreLine>4-2</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
                 </Matchup>
 
-                <Matchup style={{ cursor: "pointer" }}>
+                <Matchup onClick={() => setSelectedGame(GamesSeason4["Game12"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(2-1)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(1-2)</TeamRecord>
+                    <ScoreLine>7-5</ScoreLine>
+                    <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
             </Week>
 
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 4</StyledMiniHeader>
 
             <Week>
-                <Matchup style={{ cursor: "pointer" }}>
+                <Matchup onClick={() => setSelectedGame(GamesSeason4["Game13"])} style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(1-3)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(3-1)</TeamRecord>
+                    <ScoreLine>5-7</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
                 </Matchup>
 
                 <Matchup style={{ cursor: "pointer" }}>

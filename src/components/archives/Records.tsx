@@ -377,7 +377,6 @@ const recordSections: RecordSection[] = [
             {
                 id: "most-runs-season",
                 title: "Most Runs in a Season",
-                holder: "Brendan",
                 manager: "Brendan",
                 recordValue: "119 Runs",
                 season: "Season 3",
@@ -385,7 +384,6 @@ const recordSections: RecordSection[] = [
             {
                 id: "least-runs-season",
                 title: "Least Runs in a Season",
-                holder: "Marge",
                 manager: "Marge",
                 recordValue: "44 Runs",
                 season: "Season 2",
@@ -393,7 +391,6 @@ const recordSections: RecordSection[] = [
             {
                 id: "most-runs-against",
                 title: "Most Runs Against",
-                holder: "Trocean",
                 manager: "Trocean",
                 recordValue: "129 Runs",
                 season: "Season 3",
@@ -401,7 +398,6 @@ const recordSections: RecordSection[] = [
             {
                 id: "least-runs-against",
                 title: "Least Runs Against",
-                holder: "Justave",
                 manager: "Justave",
                 recordValue: "42 Runs",
                 season: "Season 2",
@@ -409,7 +405,6 @@ const recordSections: RecordSection[] = [
             {
                 id: "best-run-differential",
                 title: "Best Run Differential",
-                holder: "Justave",
                 manager: "Justave",
                 recordValue: "46 Runs",
                 season: "Season 2",
@@ -417,7 +412,6 @@ const recordSections: RecordSection[] = [
             {
                 id: "worst-run-differential",
                 title: "Worst Run Differential",
-                holder: "Marge",
                 manager: "Marge",
                 recordValue: "-53 Runs",
                 season: "Season 2",
@@ -425,7 +419,6 @@ const recordSections: RecordSection[] = [
             {
                 id: "longest-winning-streak",
                 title: "Longest Winning Streak",
-                holders: ["Isaac", "THANdrew"],
                 managers: ["Isaac", "THANdrew"],
                 recordValue: "5 Wins",
                 season: "Season 2 & 3",
@@ -433,37 +426,176 @@ const recordSections: RecordSection[] = [
             {
                 id: "longest-losing-streak",
                 title: "Longest Losing Streak",
-                holder: "Marge",
                 manager: "Marge",
                 recordValue: "8 Losses",
                 season: "Season 2 & 3",
             },
         ],
     },
+    {
+        title: "All-Time Records (Player)",
+        description: "Records accumulated over the history of PMBL statistics. (Only full seasons are counted)",
+        records: [
+            {
+                id: "most-hits-all-time",
+                title: "Most Hits",
+                holder: "Green Toad",
+                recordValue: "60 Hits",
+            },
+            {
+                id: "most-doubles-all-time",
+                title: "Most Doubles",
+                holders: ["Baby DK", "Peach", "Petey Piranha"],
+                recordValue: "8 Doubles",
+            },
+            {
+                id: "most-triples-all-time",
+                title: "Most Triples",
+                holder: "Bowser Jr",
+                recordValue: "7 Triples",
+            },
+            {
+                id: "most-homeruns-all-time",
+                title: "Most Home Runs",
+                holders: ["Bowser", "King K. Rool", "Petey Piranha"],
+                recordValue: "22 HRs",
+            },
+            {
+                id: "most-rbis-all-time",
+                title: "Most RBIs",
+                holder: "King K. Rool",
+                recordValue: "62 RBIs",
+            },
+            {
+                id: "most-batting-strikeouts",
+                title: "Most Batting Strikeouts",
+                holder: "Abu Patel",
+                recordValue: "4 Ks",
+            },
+            {
+                id: "best-batting-average",
+                title: "Best Batting Average",
+                holder: "Purple Toad",
+                recordValue: "0.733",
+            },
+            {
+                id: "best-slugging-percentage",
+                title: "Best Slugging Percentage",
+                holder: "King K. Rool",
+                recordValue: "1.520",
+            },
+            {
+                id: "most-pitching-wins",
+                title: "Most Pitching Wins",
+                holder: "Birdo",
+                recordValue: "9 Wins",
+            },
+            {
+                id: "most-pitching-losses",
+                title: "Most Pitching Losses",
+                holders: ["Boo", "Donkey Kong"],
+                recordValue: "6 Losses",
+            },
+            {
+                id: "best-era-all-time",
+                title: "Best ERA (50+ IP)",
+                holder: "Bob Marley",
+                recordValue: "4.480",
+            },
+            {
+                id: "most-complete-games",
+                title: "Most Complete Games Pitched",
+                holder: "Bob Marley",
+                recordValue: "5",
+            },
+            {
+                id: "innings-pitched",
+                title: "Most Innings Pitched",
+                holder: "Birdo",
+                recordValue: "88.0 IP",
+            },
+            {
+                id: "most-hits-pitcher",
+                title: "Most Hits Given Up",
+                holder: "Birdo",
+                recordValue: "184 Hits",
+            },
+            {
+                id: "most-runs-pitcher",
+                title: "Most Runs Given Up",
+                holder: "Mario",
+                recordValue: "88.0 IP",
+            },
+            {
+                id: "most-homeruns-pitcher",
+                title: "Most Homers Given Up",
+                holder: "Birdo",
+                recordValue: "17 HRs",
+            },
+            {
+                id: "Most-strikeouts",
+                title: "Most Strikeouts All Time",
+                holder: "Birdo",
+                recordValue: "14 Ks",
+            },
+            {
+                id: "Most-strikeouts-swinging",
+                title: "Most Strikeouts Swinging",
+                holder: "Birdo",
+                recordValue: "12 Ks",
+            },
+            {
+                id: "Most-strikeouts-looking",
+                title: "Most Strikeouts Looking",
+                holder: "Luigi",
+                recordValue: "7 ꓘs",
+            },
+        ],
+    },
 ];
 
 const RecordsPage = styled.main`
-    width: min(1100px, calc(100% - 32px));
+    width: min(1240px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 45px 0 80px;
+
+    @media (max-width: 600px) {
+        width: min(100% - 24px, 1240px);
+        padding-top: 28px;
+    }
 `;
 
 const RecordsSection = styled.section`
-    margin-bottom: 38px;
+    margin-bottom: 64px;
 `;
 
 const SectionHeader = styled.div`
-    margin-bottom: 16px;
+    position: relative;
+    margin-bottom: 24px;
+    padding-left: 18px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        bottom: 3px;
+        left: 0;
+        width: 5px;
+        border-radius: 999px;
+        background: #f1c232;
+    }
 
     h2 {
         margin: 0;
         color: white;
-        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-size: clamp(1.45rem, 2.5vw, 2rem);
+        line-height: 1.2;
     }
 
     p {
-        margin: 6px 0 0;
-        color: #bfc3ca;
+        margin: 7px 0 0;
+        color: #aeb4bf;
+        font-size: 0.95rem;
         line-height: 1.5;
     }
 `;
@@ -475,54 +607,114 @@ const RecordsList = styled.div`
 
 type RecordColorProps = {
     $recordColor: string;
+    $compact?: boolean;
 };
 
 const RecordCard = styled.article<RecordColorProps>`
     position: relative;
     overflow: hidden;
-    display: grid;
-    grid-template-columns: minmax(180px, 1fr) minmax(240px, 1.4fr) auto;
-    align-items: center;
-    gap: 24px;
-    padding: 20px 20px 20px 28px;
-    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+
+    min-height: ${({ $compact }) => ($compact ? "125px" : "200px")};
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 18px;
-    background: white;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.035)), #242424;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 
     &::before {
         content: "";
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 8px;
+        inset: 0 auto 0 0;
+        width: 7px;
         background: ${({ $recordColor }) => $recordColor};
     }
 
-    @media (max-width: 750px) {
-        grid-template-columns: 1fr;
-        gap: 16px;
+    &::after {
+        content: "";
+        position: absolute;
+        top: -90px;
+        right: -90px;
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        background: ${({ $recordColor }) => $recordColor};
+        opacity: 0.08;
+        pointer-events: none;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 255, 255, 0.22);
+    }
+
+    @media (max-width: 700px) {
+        min-height: 0;
     }
 `;
 
 const RecordTitle = styled.div`
+    min-width: 0;
+
+    span {
+        display: block;
+        margin-bottom: 7px;
+        color: #9299a5;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+    }
+
     h3 {
         margin: 0;
-        color: #111827;
-        font-size: 1.12rem;
-        line-height: 1.3;
+        color: white;
+        font-size: 1.22rem;
+        line-height: 1.35;
     }
 `;
 
-const RecordHolder = styled.div`
-    min-width: 0;
+const RecordValue = styled.div<RecordColorProps>`
+    min-width: 105px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    background: ${({ $recordColor }) => $recordColor};
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 900;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 
-    h4 {
-        margin: 0 0 7px;
-        color: #111827;
-        font-size: 1.05rem;
+    @media (max-width: 500px) {
+        min-width: 0;
+        width: fit-content;
     }
+`;
+
+const RecordBody = styled.div<{ $compact?: boolean }>`
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    padding: ${({ $compact }) =>
+            $compact ? "0 24px 18px 30px" : "0 24px 18px 30px"};
+`;
+
+const RecordHolder = styled.div`
+    h4 {
+        margin: 0 0 14px;
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+`;
+
+const ManagerList = styled.span`
+    border: none;
+    background: none;
 `;
 
 const ManagerName = styled.span<ManagerColorProps>`
@@ -533,35 +725,62 @@ const ManagerName = styled.span<ManagerColorProps>`
 const RecordDetails = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 16px;
-    color: #4b5563;
-    font-size: 0.9rem;
+    gap: 8px;
+    margin-top: auto;
 
-    span {
-        white-space: nowrap;
+    > span {
+        padding: 6px 9px;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0.045);
+        color: #c8cbd1;
+        font-size: 0.82rem;
+        line-height: 1.25;
     }
-`;
 
-const RecordValue = styled.div<RecordColorProps>`
-    background: ${({ $recordColor }) => $recordColor};
-    color: white;
-    min-width: 115px;
-    padding: 10px 16px;
-    border-radius: 999px;
-    font-size: 0.95rem;
-    font-weight: 900;
-    text-align: center;
-
-    @media (max-width: 750px) {
-        width: fit-content;
-        min-width: 0;
+    strong {
+        color: white;
     }
 `;
 
 const RecordContext = styled.p`
-    margin: 8px 0 0;
-    color: #6b7280;
-    font-size: 0.88rem;
+    margin: 14px 0 0;
+    padding-top: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    color: #9fa5af;
+    font-size: 0.85rem;
+    line-height: 1.45;
+`;
+
+const CardTop = styled.div<{ $compact?: boolean }>`
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: ${({ $compact }) => ($compact ? "center" : "flex-start")};
+    gap: 18px;
+
+    padding: ${({ $compact }) =>
+            $compact ? "20px 24px 10px 30px" : "18px 24px 12px 30px"};
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+`;
+
+const PageIntro = styled.div`
+    text-align: center;
+    margin-bottom: 60px;
+
+    p {
+        max-width: 650px;
+        margin: 12px auto 0;
+        color: #b8bdc7;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 `;
 
 const getManagerColor = (manager = ""): string => {
@@ -592,88 +811,111 @@ const getManagerColor = (manager = ""): string => {
     return managerColors[normalizedManager] || "#374151";
 };
 
+
+
 export default function Records() {
 
     return (
         <RecordsPage>
-            <StyledHeader>PMBL Records</StyledHeader>
+            <PageIntro>
+                <StyledHeader>PMBL Records</StyledHeader>
+            </PageIntro>
 
             {recordSections.map((section) => (
                 <RecordsSection key={section.title}>
                     <SectionHeader>
                         <h2>{section.title}</h2>
-
-                        {section.description && (
-                            <p>{section.description}</p>
-                        )}
+                        {section.description && (<p>{section.description}</p>)}
                     </SectionHeader>
 
                     <RecordsList>
                         {section.records.map((record) => {
-                            const managers = record.managers
-                                ?? (record.manager ? [record.manager] : []);
+                            const managers = record.managers ?? (record.manager ? [record.manager] : []);
 
-                            const managerColors =
-                                managers.length > 0
-                                    ? managers.map(getManagerColor)
-                                    : ["#374151"];
+                            const managerColors = managers.length > 0 ? managers.map(getManagerColor) : ["#6b7280"];
+                            const recordColor =
+                                managerColors.length > 1 ? `linear-gradient(135deg,
+                                ${managerColors[0]} 0%,${managerColors[0]} 48%,${managerColors[1]} 52%,${managerColors[1]} 100%)` : managerColors[0];
 
-                            const recordColor = managerColors.length > 1 ? `linear-gradient(90deg,
-                            ${managerColors[0]} 0%,
-                            ${managerColors[0]} 50%,
-                            ${managerColors[1]} 50%,
-                            ${managerColors[1]} 100%)` : managerColors[0];
+                            const holders = record.holders ?? (record.holder ? [record.holder] : []);
+                            const isCompact = section.title === "Season Records (Team)" || section.title === "All-Time Records (Player)"
 
                             return (
-                                <RecordCard key={record.id} $recordColor={recordColor}>
-                                    <RecordTitle>
-                                        <h3>{record.title}</h3>
-                                    </RecordTitle>
+                                <RecordCard key={record.id} $recordColor={recordColor} $compact={isCompact}>
+                                    <CardTop $compact={isCompact}>
+                                        <RecordTitle>
+                                            <span>PMBL Record</span>
+                                            <h3>{record.title}</h3>
+                                        </RecordTitle>
 
-                                    <RecordHolder>
-                                        <h4>
-                                            {record.holders ? (
-                                                record.holders.map((holder, index) => (
-                                                    <span key={holder}>
-                                                        <ManagerName $managerColor={getManagerColor(holder)}>
-                                                            {holder}
-                                                        </ManagerName>
+                                        <RecordValue $recordColor={recordColor}>
+                                            {record.recordValue}
+                                        </RecordValue>
+                                    </CardTop>
 
-                                                        {index < record.holders!.length - 1 && " / "}
-                                                    </span>
-                                                ))) : (
-                                                <ManagerName $managerColor={getManagerColor(record.holder)}>
-                                                    {record.holder}
-                                                </ManagerName>
-                                            )}
-                                        </h4>
+                                    <RecordBody $compact={isCompact}>
+                                        {holders.length > 0 && (
+                                            <RecordHolder>
+                                                <h4>
+                                                    {holders.map((holder, index) => {
+                                                        const holderColor = managerColors[Math.min(index, managerColors.length - 1)];
+
+                                                        return (
+                                                            <span key={`${record.id}-${holder}`}>
+                                                                <ManagerName $managerColor={holderColor}>
+                                                                    {holder}
+                                                                </ManagerName>
+                                                                {index < holders.length - 1 && " / "}
+                                                            </span>
+                                                        );
+                                                    })}
+                                                </h4>
+                                            </RecordHolder>
+                                        )}
 
                                         <RecordDetails>
                                             {managers.length > 0 && (
-                                                <span><strong>{managers.length > 1 ? "Managers:" : "Manager:"}</strong>{" "}
-                                                    {managers.map((manager, index) => (
-                                                        <span key={manager}>
-                                                            <ManagerName $managerColor={managerColors[index]}>
-                                                                {manager}
-                                                            </ManagerName>
+                                                <span>
+                                                    <strong>
+                                                        {managers.length > 1
+                                                            ? "Managers:"
+                                                            : "Manager:"}
+                                                    </strong>{" "}
+                                                    {managers.map(
+                                                        (manager, index) => (
+                                                            <ManagerList key={`${record.id}-${manager}`}>
+                                                                <ManagerName $managerColor={managerColors[index]}>
+                                                                    {manager}
+                                                                </ManagerName>
 
-                                                            {index < managers.length - 1 && " / "}
-                                                        </span>
-                                                    ))}
+                                                                {index < managers.length - 1 && " / "}
+                                                            </ManagerList>
+                                                        )
+                                                    )}
                                                 </span>
                                             )}
 
-                                            {record.season && (<span><strong>Season:</strong> {record.season}</span>)}
+                                            {record.season && (
+                                                <span>
+                                                    <strong>Season:</strong>{" "}
+                                                    {record.season}
+                                                </span>
+                                            )}
 
-                                            {record.week && (<span><strong>Week:</strong> {record.week}</span>)}
+                                            {record.week && (
+                                                <span>
+                                                    <strong>Week:</strong>{" "}
+                                                    {record.week}
+                                                </span>
+                                            )}
                                         </RecordDetails>
 
-                                        {record.details && (<RecordContext>{record.details}</RecordContext>)}
-                                    </RecordHolder>
-
-                                    <RecordValue $recordColor={recordColor}>
-                                        {record.recordValue}
-                                    </RecordValue>
+                                        {record.details && (
+                                            <RecordContext>
+                                                {record.details}
+                                            </RecordContext>
+                                        )}
+                                    </RecordBody>
                                 </RecordCard>
                             );
                         })}
