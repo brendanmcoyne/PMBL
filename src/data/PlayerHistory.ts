@@ -779,7 +779,7 @@ export const playerHistory: PlayerHistory[] = [
         ],
     },
     {
-        name: "Bowser Jr",
+        name: "Bowser Jr.",
         history: [
             {
                 season: 1,

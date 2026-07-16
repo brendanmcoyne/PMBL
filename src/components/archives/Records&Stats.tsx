@@ -60,8 +60,8 @@ export default function RecordsStats() {
             <ToggleButton>
                 <Link style={{color: "white"}} to="/archives">← Back</Link>
             </ToggleButton>
-            <StyledHeader>Seasons</StyledHeader>
-            <StyledMiniHeader style={{textAlign: "center", color: "white"}}>Here you'll find any and all information from past seasons</StyledMiniHeader>
+            <StyledHeader>Records & Stats</StyledHeader>
+            <StyledMiniHeader style={{textAlign: "center", color: "white"}}>Here you'll find all records and statistics from past seasons</StyledMiniHeader>
             <SeparatorLine/>
             <TriangleGrid>
                 <StyledLink bg="/archives/records.jpg">

@@ -92,10 +92,10 @@ export default function Archives() {
             <StyledMiniHeader $animate={ready} style={{textAlign: "center", color: "white"}}>Every bit of PMBL history can be found here</StyledMiniHeader>
             <SeparatorLine $animate={ready}/>
             <ResponsiveFlex $animate={ready}>
-                <StyledLink bg="/archives/s1.jpg">
+                <StyledLink bg="/archives/season.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/seasons">Seasons</Link>
                 </StyledLink>
-                <StyledLink bg="/archives/s2.jpg">
+                <StyledLink bg="/archives/recordstats.jpg">
                     <Link style={{color: "lightgray", fontWeight: "bold"}} to="/archives/records&stats">Records & Stats</Link>
                 </StyledLink>
             </ResponsiveFlex>

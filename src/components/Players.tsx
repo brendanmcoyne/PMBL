@@ -446,6 +446,58 @@ function statWithEmoji(value: number): string {
     return `${value}`;
 }
 
+const managerColors: Record<string, string> = {
+    brendan: "#CC0000",
+
+    justave: "#FF9900",
+    justin: "#FF9900",
+
+    james: "#F1C232",
+
+    marge: "#6AA84F",
+    matt: "#6AA84F",
+
+    isaac: "#3586E8",
+
+    trocean: "#9900FF",
+    christach: "#9900FF",
+
+    morgan: "#FF00FF",
+
+    thandrew: "#999999",
+    dandrew: "#999999",
+};
+
+const getManagerColor = (manager: string) =>
+    managerColors[manager.toLowerCase()] ?? "black";
+
+function colorManagerNames(text: string) {
+    const managerPattern = new RegExp(
+        `(${Object.keys(managerColors).join("|")})`,
+        "gi"
+    );
+
+    return text.split(managerPattern).map((part, index) => {
+        const color = managerColors[part.toLowerCase()];
+
+        if (!color) {
+            return part;
+        }
+
+        return (
+            <span
+                key={`${part}-${index}`}
+                style={{
+                    color,
+                    fontWeight: "bold",
+                }}
+            >
+                {part}
+            </span>
+        );
+    });
+}
+
 export default function Players() {
     const [selectedSort, setSelectedSort] = useState("az");
     const [displayedSort, setDisplayedSort] = useState("az");
@@ -907,7 +959,9 @@ export default function Players() {
 
                             {activeModalTab === "history" && (
                                 <>
-                                    <StyledMiniHeader style={{ color: "black" }}>History</StyledMiniHeader>
+                                    <StyledMiniHeader style={{ color: "black" }}>
+                                        History
+                                    </StyledMiniHeader>
 
                                     {selectedHistory && selectedHistory.history.length > 0 ? (
                                         <AwardsList>
@@ -916,7 +970,17 @@ export default function Players() {
                                                     <span>📜</span>
 
                                                     <div style={{ textAlign: "left" }}>
-                                                        <div>Season {item.season}: {item.team}</div>
+                                                        <div>
+                                                            Season {item.season}:{" "}
+                                                            <span
+                                                                style={{
+                                                                    color: getManagerColor(item.team),
+                                                                    fontWeight: "bold",
+                                                                }}
+                                                            >
+                                    {item.team}
+                                </span>
+                                                        </div>
 
                                                         {item.drafted && (
                                                             <div style={{ opacity: 0.75 }}>
@@ -932,7 +996,7 @@ export default function Players() {
 
                                                         {item.transactions?.map((transaction, idx) => (
                                                             <div key={idx} style={{ opacity: 0.75 }}>
-                                                                • {transaction}
+                                                                • {colorManagerNames(transaction)}
                                                             </div>
                                                         ))}
                                                     </div>

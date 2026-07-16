@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import Papa from "papaparse";
 import styled from "styled-components";
+import {Link} from "react-router-dom";
+import {StyledHeader, ToggleButton} from "../CommonStyles.ts";
 
 type StatRow = Record<string, string>;
 type SeasonKey = "season2" | "season3" | "season4" | "allTime";
@@ -79,17 +81,6 @@ const PageContainer = styled.main`
     margin: 2rem auto;
     color: white;
     font-family: "Bebas Neue", sans-serif;
-`;
-
-const PageTitle = styled.h1`
-    margin: 0 0 1.5rem;
-    text-align: center;
-    font-size: 3.5rem;
-    color: #f9f9f9;
-
-    @media screen and (max-width: 500px) {
-        font-size: 2.4rem;
-    }
 `;
 
 const Controls = styled.div`
@@ -237,7 +228,6 @@ function formatStatValue(header: string, value: string): string | number {
 
         let displayedDecimal = decimalPart;
 
-        // Converts spreadsheet thirds into baseball innings notation.
         if (decimalPart === 0.3) {
             displayedDecimal = 0.1;
         } else if (decimalPart === 0.7) {
@@ -446,7 +436,11 @@ export default function Stats() {
 
     return (
         <PageContainer>
-            <PageTitle>Player Statistics</PageTitle>
+            <ToggleButton>
+                <Link style={{color: "white"}} to="/archives/records&stats">← Back</Link>
+            </ToggleButton>
+
+            <StyledHeader style={{marginTop: "5px"}}>Player Statistics</StyledHeader>
 
             <Controls>
                 <ButtonGroup aria-label="Select season">

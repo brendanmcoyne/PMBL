@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { StyledHeader } from "../CommonStyles.ts";
+import {StyledHeader, ToggleButton} from "../CommonStyles.ts";
+import {Link} from "react-router-dom";
 
 type RecordEntry = {
     id: string;
@@ -582,7 +583,7 @@ const SectionHeader = styled.div`
         left: 0;
         width: 5px;
         border-radius: 999px;
-        background: #f1c232;
+        background: darkblue;
     }
 
     h2 {
@@ -643,11 +644,6 @@ const RecordCard = styled.article<RecordColorProps>`
         background: ${({ $recordColor }) => $recordColor};
         opacity: 0.08;
         pointer-events: none;
-    }
-
-    &:hover {
-        transform: translateY(-4px);
-        border-color: rgba(255, 255, 255, 0.22);
     }
 
     @media (max-width: 700px) {
@@ -817,6 +813,10 @@ export default function Records() {
 
     return (
         <RecordsPage>
+            <ToggleButton>
+                <Link style={{color: "white"}} to="/archives/records&stats">← Back</Link>
+            </ToggleButton>
+
             <PageIntro>
                 <StyledHeader>PMBL Records</StyledHeader>
             </PageIntro>
