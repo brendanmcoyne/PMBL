@@ -392,34 +392,36 @@ export default function Schedule4() {
                     <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(1-3)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
-                </Matchup>
-
-                <Matchup style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(1-3)</TeamRecord>
+                    <ScoreLine>4-5</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
                 </Matchup>
 
                 <Matchup style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(3-1)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(2-2)</TeamRecord>
+                    <ScoreLine>12-1</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
                 </Matchup>
+
+                <Matchup style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
+                    <TeamRecord>(3-1)</TeamRecord>
+                    <div/>
+                    <TeamRecord>(2-2)</TeamRecord>
+                    <ScoreLine>8-4</ScoreLine>
+                    <Stadium>Luigis Mansion</Stadium>
+                </Matchup>
+
+
             </Week>
 
             <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", margin: "30px"}}>Week 5</StyledMiniHeader>

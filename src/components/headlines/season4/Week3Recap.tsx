@@ -485,13 +485,13 @@ export default function Week3Recap4() {
                     <tr>
                         <td>Home Runs</td>
                         <td>
+                            <span style={{ color: "#999999" }}>Hammer Bro</span> (3)
+                        </td>
+                        <td>
                             <span style={{ color: "#3586E8" }}>Red Kritter</span> (3)
                         </td>
                         <td>
-                            <span style={{ color: "#F1C232" }}>Abu Patel</span> (2)
-                        </td>
-                        <td>
-                            4 Players (2)
+                            5 Players (2)
                         </td>
                     </tr>
 
@@ -556,7 +556,7 @@ export default function Week3Recap4() {
                             <span style={{ color: "#6AA84F" }}>Birdo</span> (13.1)
                         </td>
                         <td>
-                            <span style={{ color: "#3586E8" }}>Donkey Kong</span> (11.1)
+                            <span style={{ color: "#9900FF" }}>Donkey Kong</span> (11.1)
                         </td>
                     </tr>
 
