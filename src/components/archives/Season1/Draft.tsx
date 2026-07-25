@@ -1,7 +1,10 @@
 import {styled} from "styled-components";
 import { Link } from "react-router-dom";
-import { draftRoster } from "../../../data/Season1Draft.ts";
 import { ToggleButton, StyledHeader } from "../../CommonStyles.ts";
+import { useEffect, useState } from "react";
+import Papa from "papaparse";
+import type { DraftPick } from "../../../data/DraftPick.ts";
+
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -104,56 +107,181 @@ const HoverImage = styled.img`
   }
 `;
 
-const Trade = styled.div`
-    display: flex;
-    flex-direction: column;
-    background-color: #12121c;
-    border-radius: 10px;
-    padding: 1rem;
-    box-sizing: border-box;
-    width: 300px;
-    min-height: 140px;
-    flex-shrink: 0; 
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+const DRAFT_CSV_URL =
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vThYLNSuXm1tCR0pYVz2HuJ1bqlDAUsGsH66Bw9a_w3XW98ePLfjGeuc2QNwmt60CHLaWjusiiHLY3O/pub?gid=0&single=true&output=csv";
 
-    @media screen and (max-width: 700px) {
-        width: 100%;
-        max-width: 200px;
+type DraftCsvRow = {
+    Round: string;
+    Pick: string;
+    Overall: string;
+    Manager: string;
+    Player: string;
+    "Captain?": string;
+};
+
+const managerColors: Record<string, string> = {
+    Brendan: "#CC0000",
+    James: "#F1C232",
+    Christach: "#9900FF",
+    Morgan: "#FF00FF",
+    Matt: "#6AA84F",
+    Isaac: "#3586E8",
+    Justin: "#FF9900",
+    DANdrew: "#999999",
+};
+
+const jpgPlayers = new Set([
+    "Alfonzo",
+    "Jack White",
+    "Triangle",
+    "MLK",
+    "Bob Marley",
+    "Broseph",
+    "Michelle Obama",
+    "Jesstithyn",
+    "Bertha",
+    "Danny B",
+    "Tate McRae",
+    "Nose",
+]);
+
+const getPlayerPhoto = (player: string): string => {
+    if (player === "Baby DK") {
+        return "/players/Baby_Donkey_Kong.webp";
     }
-`;
 
-const StyledTrade = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
-    flex-wrap: nowrap;
-    width: 100%;
-`;
+    const extension = jpgPlayers.has(player) ? "jpg" : "webp";
 
-const AllTradesWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-`;
+    /*
+     * Your existing JPG filenames contain spaces, while your WebP filenames
+     * use underscores.
+     */
+    const filename = extension === "jpg" ? player : player.replace(/ /g, "_");
 
-const TradeArrow = styled.span`
-    align-self: center;
-    font-size: 2rem;
-    margin: 0;
-    color: white;
-    font-weight: bold;
-`;
+    return `/players/${filename}.${extension}`;
+};
+
+const formatOrdinal = (number: number): string => {
+    const lastTwoDigits = number % 100;
+
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
+        return `${number}th`;
+    }
+
+    switch (number % 10) {
+        case 1:
+            return `${number}st`;
+        case 2:
+            return `${number}nd`;
+        case 3:
+            return `${number}rd`;
+        default:
+            return `${number}th`;
+    }
+};
 
 const Draft1 = () => {
-    const rounds = [];
-    for (let i = 0; i < draftRoster.length; i += 8) {
-        rounds.push(draftRoster.slice(i, i + 8));
+    const [draftRoster, setDraftRoster] = useState<DraftPick[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const loadDraft = async () => {
+            try {
+                setLoading(true);
+                setError(null);
+
+                const response = await fetch(DRAFT_CSV_URL);
+
+                if (!response.ok) {
+                    throw new Error(
+                        `Could not load the draft CSV (${response.status})`
+                    );
+                }
+
+                const csvText = await response.text();
+
+                const result = Papa.parse<DraftCsvRow>(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    transformHeader: (header) => header.trim(),
+                });
+
+                if (result.errors.length > 0) {
+                    console.error("CSV parsing errors:", result.errors);
+                }
+
+                const parsedDraft: DraftPick[] = result.data
+                    .filter(
+                        (row) =>
+                            row.Round &&
+                            row.Pick &&
+                            row.Overall &&
+                            row.Manager &&
+                            row.Player
+                    )
+                    .map((row) => ({
+                        round: Number(row.Round),
+                        pick: Number(row.Pick),
+                        overall: Number(row.Overall),
+                        manager: row.Manager.trim(),
+                        player: row.Player.trim(),
+                        captain:
+                            row["Captain?"]?.trim().toLowerCase() === "yes",
+                    }))
+                    .filter(
+                        (draftPick) =>
+                            Number.isFinite(draftPick.round) &&
+                            Number.isFinite(draftPick.pick) &&
+                            Number.isFinite(draftPick.overall)
+                    )
+                    .sort((a, b) => a.overall - b.overall);
+
+                setDraftRoster(parsedDraft);
+            } catch (caughtError) {
+                console.error(caughtError);
+
+                setError(
+                    caughtError instanceof Error
+                        ? caughtError.message
+                        : "Could not load the draft."
+                );
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        void loadDraft();
+    }, []);
+
+    const rounds = draftRoster.reduce<Record<number, DraftPick[]>>(
+        (groupedRounds, draftPick) => {
+            if (!groupedRounds[draftPick.round]) {
+                groupedRounds[draftPick.round] = [];
+            }
+
+            groupedRounds[draftPick.round].push(draftPick);
+
+            return groupedRounds;
+        },
+        {}
+    );
+
+    if (loading) {
+        return (
+            <ContentDiv>
+                <StyledHeader>Loading Season 1 Draft...</StyledHeader>
+            </ContentDiv>
+        );
+    }
+
+    if (error) {
+        return (
+            <ContentDiv>
+                <StyledHeader>Unable to load draft</StyledHeader>
+                <p>{error}</p>
+            </ContentDiv>
+        );
     }
 
     return (
@@ -162,82 +290,60 @@ const Draft1 = () => {
                 <Link style={{color: "white"}} to="/archives/Season1">← Back</Link>
             </ToggleButton>
             <StyledHeader style={{marginBottom: "0"}}>Season 1 PMBL Draft</StyledHeader>
-            {rounds.map((roundPicks, roundIndex) => (
-                <div key={roundIndex}>
-                    <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Round {roundIndex + 1}</StyledMiniHeader>
-                    <StyledRound>
-                        {roundPicks.map((entry, i) => (
-                            <Pick key={i} style={{borderBottom: `2px solid ${entry.color}`}}>
-                                <PickText>
-                                    <StyledPick>{entry.pick} Overall:</StyledPick>
-                                    <StyledPlayer>
-                                        {entry.player}
-                                        {entry.captain ? " (C)" : ""}
-                                    </StyledPlayer>
-                                    <StyledManager style={{color: entry.color}}>{entry.manager}</StyledManager>
-                                </PickText>
-                                <HoverImage src={entry.photo} alt="Chracter" />
-                            </Pick>
-                        ))}
-                    </StyledRound>
-                </div>
+            {Object.entries(rounds)
+                .sort(([roundA], [roundB]) => Number(roundA) - Number(roundB))
+                .map(([roundNumber, roundPicks]) => (
+                    <div key={roundNumber}>
+                        <StyledMiniHeader
+                            style={{
+                                fontFamily: "'Oswald', sans-serif",
+                                fontSize: "3rem",
+                            }}
+                        >
+                            Round {roundNumber}
+                        </StyledMiniHeader>
 
-            ))}
+                        <StyledRound>
+                            {[...roundPicks]
+                                .sort((a, b) => a.pick - b.pick)
+                                .map((entry) => {
+                                    const managerColor =
+                                        managerColors[entry.manager] ?? "#FFFFFF";
 
-            <StyledHeader style={{marginBottom: "0"}}>Season 1 Trades</StyledHeader>
-            <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Post Draft</StyledMiniHeader>
+                                    return (
+                                        <Pick
+                                            key={entry.overall}
+                                            style={{
+                                                borderBottom: `2px solid ${managerColor}`,
+                                            }}
+                                        >
+                                            <PickText>
+                                                <StyledPick>
+                                                    {formatOrdinal(entry.overall)} Overall:
+                                                </StyledPick>
 
-            <AllTradesWrapper>
-                <StyledTrade>
-                    <Trade style={{border: "1px solid #3586E8"}}>
-                        <StyledManager style={{color: "#3586E8"}}>Isaac Receives:</StyledManager>
-                        <StyledPlayer>Blue Yoshi</StyledPlayer>
-                    </Trade>
-                    <TradeArrow>⇄</TradeArrow>
-                    <Trade style={{border: "1px solid #FF00FF"}}>
-                        <StyledManager style={{color: "#FF00FF"}}>Morgan Receives:</StyledManager>
-                        <StyledPlayer>Yellow Toad</StyledPlayer>
-                    </Trade>
-                </StyledTrade>
+                                                <StyledPlayer>
+                                                    {entry.player}
+                                                    {entry.captain ? " (C)" : ""}
+                                                </StyledPlayer>
 
-                <StyledTrade>
-                    <Trade style={{border: "1px solid #9900FF"}}>
-                        <StyledManager style={{color: "#9900FF"}}>Christach Receives:</StyledManager>
-                        <StyledPlayer>Wario</StyledPlayer>
-                    </Trade>
-                    <TradeArrow>⇄</TradeArrow>
-                    <Trade style={{border: "1px solid #6AA84F"}}>
-                        <StyledManager style={{color: "#6AA84F"}}>Matt Receives:</StyledManager>
-                        <StyledPlayer>Wiggler, Chungy</StyledPlayer>
-                    </Trade>
-                </StyledTrade>
+                                                <StyledManager
+                                                    style={{ color: managerColor }}
+                                                >
+                                                    {entry.manager}
+                                                </StyledManager>
+                                            </PickText>
 
-                <StyledTrade>
-                    <Trade style={{border: "1px solid #3586E8"}}>
-                        <StyledManager style={{color: "#3586E8"}}>Isaac Receives:</StyledManager>
-                        <StyledPlayer>Red Yoshi</StyledPlayer>
-                    </Trade>
-                    <TradeArrow>⇄</TradeArrow>
-                    <Trade style={{border: "1px solid #999999"}}>
-                        <StyledManager style={{color: "#999999"}}>DANdrew Receives:</StyledManager>
-                        <StyledPlayer>Blue Yoshi</StyledPlayer>
-                    </Trade>
-                </StyledTrade>
-
-                <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem", marginTop: "0"}}>Week 5</StyledMiniHeader>
-
-                <StyledTrade style={{marginBottom: "50px"}}>
-                    <Trade style={{border: "1px solid #CC0000"}}>
-                        <StyledManager style={{color: "#CC0000"}}>Brendan Receives:</StyledManager>
-                        <StyledPlayer>Michelle Obama</StyledPlayer>
-                    </Trade>
-                    <TradeArrow>⇄</TradeArrow>
-                    <Trade style={{border: "1px solid #999999"}}>
-                        <StyledManager style={{color: "#999999"}}>DANdrew Receives:</StyledManager>
-                        <StyledPlayer>Nose</StyledPlayer>
-                    </Trade>
-                </StyledTrade>
-            </AllTradesWrapper>
+                                            <HoverImage
+                                                src={getPlayerPhoto(entry.player)}
+                                                alt={entry.player}
+                                            />
+                                        </Pick>
+                                    );
+                                })}
+                        </StyledRound>
+                    </div>
+                ))}
         </ContentDiv>
     );
 };
