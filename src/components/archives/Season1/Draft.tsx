@@ -137,25 +137,36 @@ const jpgPlayers = new Set([
     "MLK",
     "Bob Marley",
     "Broseph",
+    "Chungy",
+    "Entity 404",
     "Michelle Obama",
     "Jesstithyn",
     "Bertha",
     "Danny B",
     "Tate McRae",
     "Nose",
+    "Gramps",
+    "Sabrina",
+    "Gramms",
+    "Diddler",
+    "Hamburger",
+    "Sebesta",
+    "Grayson McKean",
+    "Cascade",
+    "Antenna",
+    "Abu Patel",
+    "Geek Squad",
 ]);
 
 const getPlayerPhoto = (player: string): string => {
     if (player === "Baby DK") {
         return "/players/Baby_Donkey_Kong.webp";
     }
+    if (player === "Shy Guy") {
+        return "/players/Red_Shy_Guy.webp";
+    }
 
     const extension = jpgPlayers.has(player) ? "jpg" : "webp";
-
-    /*
-     * Your existing JPG filenames contain spaces, while your WebP filenames
-     * use underscores.
-     */
     const filename = extension === "jpg" ? player : player.replace(/ /g, "_");
 
     return `/players/${filename}.${extension}`;

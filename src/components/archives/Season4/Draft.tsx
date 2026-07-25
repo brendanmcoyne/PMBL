@@ -1,7 +1,9 @@
-import {styled} from "styled-components";
+import { styled } from "styled-components";
 import { Link } from "react-router-dom";
-import { draftRoster } from "../../../data/Season4Draft.ts";
 import { ToggleButton, StyledHeader } from "../../CommonStyles.ts";
+import { useEffect, useState } from "react";
+import Papa from "papaparse";
+import type { DraftPick } from "../../../data/DraftPick.ts";
 
 export const ContentDiv = styled.div`
     display: flex;
@@ -49,14 +51,14 @@ const StyledPlayer = styled.h5`
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    
 `;
 
 const StyledRound = styled.div`
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     width: 60%;
+
     @media screen and (max-width: 1000px) {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -73,8 +75,9 @@ const Pick = styled.span`
     padding: 1rem;
     box-sizing: border-box;
     overflow: hidden;
-    width: 200px; 
+    width: 200px;
     height: 180px;
+
     @media screen and (max-width: 1000px) {
         width: 180px;
     }
@@ -90,55 +93,305 @@ const PickText = styled.span`
 `;
 
 const HoverImage = styled.img`
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 
-  ${Pick}:hover & {
-    opacity: 1;
-  }
+    ${Pick}:hover & {
+        opacity: 1;
+    }
 `;
 
-const Draft3 = () => {
-    const rounds = [];
-    for (let i = 0; i < draftRoster.length; i += 8) {
-        rounds.push(draftRoster.slice(i, i + 8));
+const DRAFT_CSV_URL =
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vThYLNSuXm1tCR0pYVz2HuJ1bqlDAUsGsH66Bw9a_w3XW98ePLfjGeuc2QNwmt60CHLaWjusiiHLY3O/pub?gid=1508059271&single=true&output=csv";
+
+type DraftCsvRow = {
+    Round: string;
+    Pick: string;
+    Overall: string;
+    Manager: string;
+    Player: string;
+    "Captain?": string;
+};
+
+const managerColors: Record<string, string> = {
+    Isaac: "#3586E8",
+    James: "#F1C232",
+    Trocean: "#9900FF",
+    THANdrew: "#999999",
+    Marge: "#6AA84F",
+    Justave: "#FF9900",
+    Brendan: "#CC0000",
+    Morgan: "#FF00FF",
+};
+
+const jpgPlayers = new Set([
+    "Sabrina",
+    "Gramms",
+    "Piggie",
+    "Jake",
+    "Kaguya",
+    "Danny B",
+    "Grayson McKean",
+    "Larry Cuc",
+    "Sherpa",
+    "Barry",
+    "Justin Bieber",
+    "Charlemagne",
+    "Smurf",
+    "Antenna",
+    "Bob Marley",
+    "Betty White",
+    "Miss Jones",
+    "Geek Squad",
+    "Tarzan",
+    "Reshiram",
+    "Zekrom",
+    "Candy",
+    "Triangle",
+    "MLK",
+    "Jack White",
+    "Kimmy",
+    "Eugene",
+    "Michelle Obama",
+    "Bugs Bunny",
+    "Lucia",
+]);
+
+const specialPlayerPhotos: Record<string, string> = {
+    "Baby DK": "/players/Baby_Donkey_Kong.webp",
+    "Shy Guy": "/players/Red_Shy_Guy.webp",
+    "Light Blue Shy Guy": "/players/Light_Blue_Shy_Guy.png",
+    "Purple Yoshi": "/players/Purple_Yoshi.png",
+};
+
+const getPlayerPhoto = (player: string): string => {
+    const specialPhoto = specialPlayerPhotos[player];
+
+    if (specialPhoto) {
+        return specialPhoto;
+    }
+
+    if (jpgPlayers.has(player)) {
+        return `/players/${player}.jpg`;
+    }
+
+    return `/players/${player.replace(/ /g, "_")}.webp`;
+};
+
+const formatOrdinal = (number: number): string => {
+    const lastTwoDigits = number % 100;
+
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
+        return `${number}th`;
+    }
+
+    switch (number % 10) {
+        case 1:
+            return `${number}st`;
+        case 2:
+            return `${number}nd`;
+        case 3:
+            return `${number}rd`;
+        default:
+            return `${number}th`;
+    }
+};
+
+const Draft4 = () => {
+    const [draftRoster, setDraftRoster] = useState<DraftPick[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const loadDraft = async () => {
+            try {
+                setLoading(true);
+                setError(null);
+
+                const response = await fetch(DRAFT_CSV_URL);
+
+                if (!response.ok) {
+                    throw new Error(
+                        `Could not load the draft CSV (${response.status})`
+                    );
+                }
+
+                const csvText = await response.text();
+
+                const result = Papa.parse<DraftCsvRow>(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    transformHeader: (header) => header.trim(),
+                });
+
+                if (result.errors.length > 0) {
+                    console.error("CSV parsing errors:", result.errors);
+                }
+
+                const parsedDraft: DraftPick[] = result.data
+                    .filter(
+                        (row) =>
+                            row.Round &&
+                            row.Pick &&
+                            row.Overall &&
+                            row.Manager &&
+                            row.Player
+                    )
+                    .map((row) => ({
+                        round: Number(row.Round),
+                        pick: Number(row.Pick),
+                        overall: Number(row.Overall),
+                        manager: row.Manager.trim(),
+                        player: row.Player.trim(),
+                        captain:
+                            row["Captain?"]?.trim().toLowerCase() === "yes",
+                    }))
+                    .filter(
+                        (draftPick) =>
+                            Number.isFinite(draftPick.round) &&
+                            Number.isFinite(draftPick.pick) &&
+                            Number.isFinite(draftPick.overall)
+                    )
+                    .sort((a, b) => a.overall - b.overall);
+
+                setDraftRoster(parsedDraft);
+            } catch (caughtError) {
+                console.error(caughtError);
+
+                setError(
+                    caughtError instanceof Error
+                        ? caughtError.message
+                        : "Could not load the draft."
+                );
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        void loadDraft();
+    }, []);
+
+    const rounds = draftRoster.reduce<Record<number, DraftPick[]>>(
+        (groupedRounds, draftPick) => {
+            if (!groupedRounds[draftPick.round]) {
+                groupedRounds[draftPick.round] = [];
+            }
+
+            groupedRounds[draftPick.round].push(draftPick);
+
+            return groupedRounds;
+        },
+        {}
+    );
+
+    if (loading) {
+        return (
+            <ContentDiv>
+                <StyledHeader>Loading Season 4 Draft...</StyledHeader>
+            </ContentDiv>
+        );
+    }
+
+    if (error) {
+        return (
+            <ContentDiv>
+                <StyledHeader>Unable to load draft</StyledHeader>
+                <p>{error}</p>
+            </ContentDiv>
+        );
     }
 
     return (
         <ContentDiv>
             <ToggleButton>
-                <Link style={{color: "white"}} to="/archives/Season4">← Back</Link>
+                <Link
+                    style={{ color: "white" }}
+                    to="/archives/Season4"
+                >
+                    ← Back
+                </Link>
             </ToggleButton>
-            <StyledHeader style={{marginBottom: "0"}}>Season 4 PMBL Draft</StyledHeader>
-            {rounds.map((roundPicks, roundIndex) => (
-                <div key={roundIndex}>
-                    <StyledMiniHeader style={{fontFamily: "'Oswald', sans-serif", fontSize: "3rem"}}>Round {roundIndex + 1}</StyledMiniHeader>
-                    <StyledRound>
-                        {roundPicks.map((entry, i) => (
-                            <Pick key={i} style={{borderBottom: `2px solid ${entry.color}`}}>
-                                <PickText>
-                                    <StyledPick>{entry.pick} Overall:</StyledPick>
-                                    <StyledPlayer>
-                                        {entry.player}
-                                        {entry.captain ? " (C)" : ""}
-                                    </StyledPlayer>
-                                    <StyledManager style={{color: entry.color}}>{entry.manager}</StyledManager>
-                                </PickText>
-                                <HoverImage src={entry.photo} alt="Chracter" />
-                            </Pick>
-                        ))}
-                    </StyledRound>
-                </div>
 
-            ))}
+            <StyledHeader style={{ marginBottom: "0" }}>
+                Season 4 PMBL Draft
+            </StyledHeader>
+
+            {Object.entries(rounds)
+                .sort(
+                    ([roundA], [roundB]) =>
+                        Number(roundA) - Number(roundB)
+                )
+                .map(([roundNumber, roundPicks]) => (
+                    <div key={roundNumber}>
+                        <StyledMiniHeader
+                            style={{
+                                fontFamily: "'Oswald', sans-serif",
+                                fontSize: "3rem",
+                            }}
+                        >
+                            Round {roundNumber}
+                        </StyledMiniHeader>
+
+                        <StyledRound>
+                            {[...roundPicks]
+                                .sort((a, b) => a.pick - b.pick)
+                                .map((entry) => {
+                                    const managerColor =
+                                        managerColors[entry.manager] ??
+                                        "#FFFFFF";
+
+                                    return (
+                                        <Pick
+                                            key={entry.overall}
+                                            style={{
+                                                borderBottom:
+                                                    `2px solid ${managerColor}`,
+                                            }}
+                                        >
+                                            <PickText>
+                                                <StyledPick>
+                                                    {formatOrdinal(
+                                                        entry.overall
+                                                    )}{" "}
+                                                    Overall:
+                                                </StyledPick>
+
+                                                <StyledPlayer>
+                                                    {entry.player}
+                                                    {entry.captain
+                                                        ? " (C)"
+                                                        : ""}
+                                                </StyledPlayer>
+
+                                                <StyledManager
+                                                    style={{
+                                                        color: managerColor,
+                                                    }}
+                                                >
+                                                    {entry.manager}
+                                                </StyledManager>
+                                            </PickText>
+
+                                            <HoverImage
+                                                src={getPlayerPhoto(
+                                                    entry.player
+                                                )}
+                                                alt={entry.player}
+                                            />
+                                        </Pick>
+                                    );
+                                })}
+                        </StyledRound>
+                    </div>
+                ))}
         </ContentDiv>
     );
 };
 
-export default Draft3;
+export default Draft4;

@@ -76,13 +76,9 @@ PMBL/
 │   │   ├── ManagerNotes.ts
 │   │   ├── PlayerHistory.ts
 │   │   ├── RetiredHistory.ts
-│   │   ├── Season1Draft.ts
 │   │   ├── Season1Rosters.ts
-│   │   ├── Season2Draft.ts
 │   │   ├── Season2Rosters.ts
-│   │   ├── Season3Draft.ts
 │   │   ├── Season3Rosters.ts
-│   │   ├── Season4Draft.ts
 │   │   ├── Season4Rosters.ts
 │   │   ├── playerNames.ts
 │   │   └── playerStats.ts
