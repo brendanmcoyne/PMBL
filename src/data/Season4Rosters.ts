@@ -28,8 +28,8 @@ export const rosters4: Roster4[] = [
             { name: "Antenna" },
             { name: "Monty Mole" },
             { name: "MLK" },
-            { name: "Baby Mario" },
             { name: "Red Koopa" },
+            { name: "Hima" },
         ],
     },
     {
@@ -63,7 +63,7 @@ export const rosters4: Roster4[] = [
             { name: "Paratroopa" },
             { name: "Abu Patel" },
             { name: "Blue Shy Guy" },
-            { name: "Blue Yoshi" },
+            { name: "Saber" },
         ],
     },
     {
@@ -75,12 +75,11 @@ export const rosters4: Roster4[] = [
             { name: "Blue Pianta" },
             { name: "Purple Toad" },
             { name: "Purple Yoshi" },
-            { name: "Toadette" },
-            { name: "Baby Luigi" },
             { name: "Charlemagne" },
             { name: "Miss Jones" },
             { name: "Shy Guy" },
             { name: "Eugene" },
+            { name: "Green Toad" },
         ]
     },
     {
@@ -94,10 +93,10 @@ export const rosters4: Roster4[] = [
             { name: "Pink Yoshi" },
             { name: "Baby Daisy" },
             { name: "Blooper" },
-            { name: "Reshiram" },
             { name: "Zekrom" },
             { name: "Lucia" },
             { name: "Koopa" },
+            { name: "Reshiram" },
         ],
     },
     {
@@ -114,7 +113,7 @@ export const rosters4: Roster4[] = [
             { name: "Tarzan" },
             { name: "Justin Bieber" },
             { name: "Bugs Bunny" },
-            { name: "Hima" },
+            { name: "Goomba" },
         ]
     },
     {
@@ -142,13 +141,14 @@ export const rosters4: Roster4[] = [
             { name: "Hammer Bro" },
             { name: "Blue Kritter" },
             { name: "Green Kamek" },
-            { name: "Green Toad" },
             { name: "Piggie" },
             { name: "Larry Cuc" },
             { name: "Blue Kamek" },
             { name: "Geek Squad" },
             { name: "Green Paratroopa" },
             { name: "Toadsworth" },
+            { name: "Toadette" },
+            { name: "Baby Luigi" },
         ],
     }
 ]

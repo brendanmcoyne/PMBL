@@ -60,7 +60,6 @@ PMBL/
 │   │   ├── seasons/           # Season-specific pages
 │   │   ├── Archives.tsx
 │   │   ├── CurrentSeason.tsx
-│   │   ├── FullStats.tsx
 │   │   ├── GoogleLogin.tsx
 │   │   ├── Headlines.tsx
 │   │   ├── Home.tsx

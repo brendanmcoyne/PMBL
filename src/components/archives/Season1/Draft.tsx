@@ -158,18 +158,23 @@ const jpgPlayers = new Set([
     "Geek Squad",
 ]);
 
+const specialPlayerPhotos: Record<string, string> = {
+    "Baby DK": "/players/Baby_Donkey_Kong.webp",
+    "Shy Guy": "/players/Red_Shy_Guy.webp",
+};
+
 const getPlayerPhoto = (player: string): string => {
-    if (player === "Baby DK") {
-        return "/players/Baby_Donkey_Kong.webp";
-    }
-    if (player === "Shy Guy") {
-        return "/players/Red_Shy_Guy.webp";
+    const specialPhoto = specialPlayerPhotos[player];
+
+    if (specialPhoto) {
+        return specialPhoto;
     }
 
-    const extension = jpgPlayers.has(player) ? "jpg" : "webp";
-    const filename = extension === "jpg" ? player : player.replace(/ /g, "_");
+    if (jpgPlayers.has(player)) {
+        return `/players/${player}.jpg`;
+    }
 
-    return `/players/${filename}.${extension}`;
+    return `/players/${player.replace(/ /g, "_")}.webp`;
 };
 
 const formatOrdinal = (number: number): string => {
