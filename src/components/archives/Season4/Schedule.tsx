@@ -431,11 +431,22 @@ export default function Schedule4() {
                     <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(1-4)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(2-3)</TeamRecord>
+                    <ScoreLine>9-20</ScoreLine>
+                    <Stadium>Yoshi Park</Stadium>
+                </Matchup>
+
+                <Matchup style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
+                    <TeamRecord>(4-1)</TeamRecord>
+                    <div/>
+                    <TeamRecord>(3-2)</TeamRecord>
+                    <ScoreLine>9-5</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
                 </Matchup>
 
                 <Matchup style={{ cursor: "pointer" }}>
@@ -453,17 +464,6 @@ export default function Schedule4() {
                     <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
-                </Matchup>
-
-                <Matchup style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <TeamRecord>(0-0)</TeamRecord>
                     <div/>
                     <TeamRecord>(0-0)</TeamRecord>
