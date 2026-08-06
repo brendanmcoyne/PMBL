@@ -175,13 +175,6 @@ export function inningsToOuts(
         numericValue -
         wholeInnings;
 
-    /*
-     * Already formatted as baseball
-     * innings notation, such as:
-     *
-     * 3.1 = 3 innings and 1 out
-     * 3.2 = 3 innings and 2 outs
-     */
     if (
         Math.abs(decimalPart - 0.1) <
         0.0001

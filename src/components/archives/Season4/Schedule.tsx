@@ -450,25 +450,25 @@ export default function Schedule4() {
                 </Matchup>
 
                 <Matchup style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
-                </Matchup>
-
-                <Matchup style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(2-3)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(3-2)</TeamRecord>
+                    <ScoreLine>6-12</ScoreLine>
+                    <Stadium>Daisy Cruiser</Stadium>
+                </Matchup>
+
+                <Matchup style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                    <TeamRecord>(4-1)</TeamRecord>
+                    <div/>
+                    <TeamRecord>(1-4)</TeamRecord>
+                    <ScoreLine>14-13</ScoreLine>
+                    <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
             </Week>
 

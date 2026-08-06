@@ -16,6 +16,7 @@ import CurrentSeason from "./components/CurrentSeason.tsx";
 import Headlines from "./components/Headlines.tsx";
 import Scrolling from "./components/Scrolling.tsx";
 import FullStats from "./components/FullStats.tsx";
+import ComparePlayers from "./components/ComparePlayers.tsx";
 
 import Season1 from './components/archives/Season1.tsx';
 import Season2 from './components/archives/Season2.tsx';
@@ -185,6 +186,8 @@ function Root() {
                     <Route path="/season" element={<Content><CurrentSeason /></Content>} />
                     <Route path="/headlines" element={<Content><Headlines /></Content>} />
                     <Route path="/season/stats" element={<Content><FullStats/></Content>} />
+
+                    <Route path="/compare" element={<Content><ComparePlayers /></Content>}/>
 
                     /* Archives */
                     <Route path="/archives/seasons" element={<Seasons />} />

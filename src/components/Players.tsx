@@ -7,6 +7,7 @@ import { playerHistory } from "../data/PlayerHistory.ts";
 import { retiredHistory } from "../data/RetiredHistory.ts";
 import { StyledHeader } from "../components/CommonStyles.ts";
 import { styled, keyframes, css } from "styled-components";
+import {Link} from "react-router-dom";
 
 const fadeInUp = keyframes`
   0% {
@@ -259,6 +260,21 @@ const SortButton = styled.button<{ $animate?: boolean, $active?: boolean }>`
       animation: ${fadeInUp} 1s ease forwards;
       animation-delay: 0.3s;
     `}
+`;
+
+const CompareLink = styled.p`
+    padding: 0.6rem 1.4rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-radius: 999px;
+    background-color: #2c2c80;
+    @media screen and (max-width: 1000px) {
+        width: 175px;
+    }
 `;
 
 const StatCard = styled.div`
@@ -751,6 +767,7 @@ export default function Players() {
         <ContentDiv>
             <StyledHeader $animate={ready}>Players</StyledHeader>
 
+            <CompareLink><Link to="/compare" style={{color: "white"}}>Compare Players</Link></CompareLink>
             <SortButtonsContainer>
                 <SortButton $animate={ready} $active={selectedSort === "az"} onClick={() => handleSortChange("az")}>Sort A-Z</SortButton>
                 <SortButton $animate={ready} $active={selectedSort === "za"} onClick={() => handleSortChange("za")}>Sort Z-A</SortButton>

@@ -310,12 +310,7 @@ function aggregatePlayerRows(
             normalizePlayerColumn
         );
 
-    const result: StatRow = {
-        Player:
-            getPlayerName(
-                normalizedRows[0]
-            ),
-    };
+    const result: StatRow = {Player: getPlayerName(normalizedRows[0])};
 
     const headers =
         Array.from(
