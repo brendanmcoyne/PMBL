@@ -25,6 +25,34 @@ const GameSummary = styled.div`
     }
 `;
 
+const StatLeadersBlock = styled.div`
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid #555;
+    border-radius: 14px;
+    padding: 1.5rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+`;
+
+const LeaderboardTable = styled.table`
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+
+    th, td {
+        border: 1px solid #555;
+        padding: 0.75rem;
+    }
+
+    th {
+        background: rgba(255,255,255,0.1);
+    }
+
+    tr:nth-child(even) {
+        background: rgba(255,255,255,0.03);
+    }
+`;
+
 export default function Halfway4Recap() {
     return (
         <ContentDiv>
@@ -170,6 +198,127 @@ export default function Halfway4Recap() {
                 <div className="mvp">Team MVP: Birdo</div>
                 <div className="mvp">Team LVP: Yoshi</div>
             </GameSummary>
+
+            <StyledMiniHeader>Week 4 Stat Leaders</StyledMiniHeader>
+
+            <StatLeadersBlock style={{marginTop: "0"}}>
+                <LeaderboardTable>
+                    <thead>
+                    <tr>
+                        <th>Stat</th>
+                        <th>1st</th>
+                        <th>2nd</th>
+                        <th>3rd</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>Batting Average</td>
+                        <td>
+                            <span style={{ color: "#FF00FF" }}>Yellow Toad</span> (0.762)
+                        </td>
+                        <td>
+                            <span style={{ color: "#6AA84F" }}>Green Dry Bones</span> (0.750)
+                        </td>
+                        <td>
+                            <span style={{ color: "#FF9900" }}>Funky Kong</span> (0.737)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Home Runs</td>
+                        <td>
+                            <span style={{ color: "#9900FF" }}>Donkey Kong</span> (5)
+                        </td>
+                        <td>
+                            <span style={{ color: "#6AA84F" }}>Birdo</span> (3)
+                        </td>
+                        <td>
+                            4 Players (3)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>RBIs</td>
+                        <td>
+                            <span style={{ color: "#FF9900" }}>Funky Kong</span> (14)
+                        </td>
+                        <td>
+                            <span style={{ color: "#9900FF" }}>Donkey Kong</span> (12)
+                        </td>
+                        <td>
+                            <span style={{ color: "#FF00FF" }}>Dry Bones</span> (10)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Runs</td>
+                        <td>
+                            <span style={{ color: "#F1C232" }}>Bowser Jr</span> (8)
+                        </td>
+                        <td>
+                            <span style={{ color: "#6AA84F" }}>Green Dry Bones</span> (8)
+                        </td>
+                        <td>
+                            <span style={{ color: "#9900FF" }}>Tiny Kong</span> (8)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Hits</td>
+                        <td>
+                            <span style={{ color: "#FF00FF" }}>Yellow Toad</span> (16)
+                        </td>
+                        <td>
+                            <span style={{ color: "#CC0000" }}>Dark Bones</span> (15)
+                        </td>
+                        <td>
+                            <span style={{ color: "#6AA84F" }}>Green Dry Bones</span> (15)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>ERA (Min. 10 IP)</td>
+                        <td>
+                            <span style={{ color: "#FF00FF" }}>Bob Marley</span> (2.65)
+                        </td>
+                        <td>
+                            <span style={{ color: "#9900FF" }}>Diddy Kong</span> (2.92)
+                        </td>
+                        <td>
+                            <span style={{ color: "#6AA84F" }}>Birdo</span> (3.00)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Innings Pitched</td>
+                        <td>
+                            <span style={{ color: "#6AA84F" }}>Birdo</span> (24.1)
+                        </td>
+                        <td>
+                            <span style={{ color: "#9900FF" }}>Donkey Kong</span> (19.2)
+                        </td>
+                        <td>
+                            <span style={{ color: "#F1C232" }}>Bowser</span> (19.0)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Strikeouts</td>
+                        <td>
+                            <span style={{ color: "#9900FF" }}>Diddy Kong</span> (3)
+                        </td>
+                        <td>
+                            <span style={{ color: "#6AA84F" }}>Birdo</span> (2)
+                        </td>
+                        <td>
+                            3 Players (2)
+                        </td>
+                    </tr>
+                    </tbody>
+                </LeaderboardTable>
+            </StatLeadersBlock>
 
             <SeparatorLine />
             <StyledMiniHeader>Check out more stories below!</StyledMiniHeader>
