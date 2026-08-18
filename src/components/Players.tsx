@@ -133,17 +133,10 @@ const Player = styled.div<{ $accent: string; $animationState?: "enter" | "exit" 
     }
 
     ${({ $animationState }) =>
-            $animationState === "enter" &&
-            css`
-                animation: ${fadeInUp} 1s ease 0.2s both;
-            `}
+            $animationState === "enter" && css`animation: ${fadeInUp} 1s ease 0.2s both`}
 
     ${({ $animationState }) =>
-            $animationState === "exit" &&
-            css`
-                animation: ${fadeOutDown} 0.35s ease both;
-            `}
-    
+            $animationState === "exit" && css`animation: ${fadeOutDown} 0.35s ease both`}
 `;
 
 const GenImage = styled.img<{ $animate?: boolean }>`

@@ -321,7 +321,7 @@ export default function Schedule4() {
                     <TeamRecord>(0-2)</TeamRecord>
                     <div/>
                     <TeamRecord>(1-1)</TeamRecord>
-                    <ScoreLine>11-10</ScoreLine>
+                    <ScoreLine>10-11</ScoreLine>
                     <Stadium>Daisy Cruiser</Stadium>
                 </Matchup>
             </Week>
@@ -476,20 +476,20 @@ export default function Schedule4() {
 
             <Week>
                 <Matchup style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
-                </Matchup>
-
-                <Matchup style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#FF9900"}}>Justave</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#6AA84F"}}>Marge</TeamName>
+                    <TeamRecord>(2-4)</TeamRecord>
+                    <div/>
+                    <TeamRecord>(5-1)</TeamRecord>
+                    <ScoreLine>1-8</ScoreLine>
+                    <Stadium>Luigis Mansion</Stadium>
+                </Matchup>
+                
+                <Matchup style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#F1C232"}}>James</TeamName>
                     <TeamRecord>(0-0)</TeamRecord>
                     <div/>
                     <TeamRecord>(0-0)</TeamRecord>

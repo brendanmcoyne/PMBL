@@ -71,8 +71,8 @@ const Td = styled.td`
 
 export default function Game() {
     const game = {
-        away: { name: "Trocean", color: "#9900FF", manager: "Trocean", record: "4-1", scores: [1, 0, 1, 0, 0, 4, 3], R: 9, H: 12, E: 1, LOB: 5 },
-        home: { name: "Morgan", color: "#FF00FF", manager: "Morgan", record: "3-2", scores: [0, 0, 1, 0, 0, 4, 0], R: 5, H: 14, E: 3, LOB: 7 },
+        away: { name: "Justave", color: "#FF9900", manager: "Justave", record: "2-4", scores: [0, 0, 0, 0, 0, 1, 0], R: 1, H: 12, E: 1, LOB: 8 },
+        home: { name: "Marge", color: "#6AA84F", manager: "Marge", record: "5-1", scores: [2, 1, 5, 0, 0, 0, "X"], R: 8, H: 22, E: 1, LOB: 10 },
     };
 
     {/*
@@ -91,14 +91,14 @@ export default function Game() {
             <TeamsRow>
                 <TeamColumn>
                     <TeamLabel>Away Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-DiddyMonkeys.webp" alt={`${game.away.name} logo`} />
+                    <Logo src="/emblems/MSS-Emblem-PeachMonarchs.png" alt={`${game.away.name} logo`} />
                     <Manager style={{color: game.away.color}}>{game.away.manager}</Manager>
                     <Record>({game.away.record})</Record>
                 </TeamColumn>
                 <p style={{margin: "0", transform: "translateY(-10px)", fontFamily: "'Luckiest Guy', cursive", fontSize: "3rem"}}>vs</p>
                 <TeamColumn>
                     <TeamLabel>Home Team</TeamLabel>
-                    <Logo src="/emblems/MSS-Emblem-MarioFireballs.png" alt={`${game.home.name} logo`} />
+                    <Logo src="/emblems/MSS-Emblem-BirdoBows.webp" alt={`${game.home.name} logo`} />
                     <Manager style={{color: game.home.color}}>{game.home.manager}</Manager>
                     <Record>({game.home.record})</Record>
                 </TeamColumn>
@@ -132,7 +132,7 @@ export default function Game() {
                 </tbody>
             </ScoreTable>
             <h4 style={{ marginTop: "0", marginBottom: "0.75rem" }}>
-                Location: <span style={{ color: "#FF4F4F" }}>Mario Stadium</span>
+                Location: <span style={{ color: "#68884F" }}>Luigis Mansion</span>
             </h4>
 
             {/*
@@ -143,6 +143,7 @@ export default function Game() {
                 DK Jungle: "#8B4513"
                 Bowser Jr's Playroom: "#CDA434"
                 Bowsers Castle: "#111111"
+                Luigis Mansion: "#68884F"
             */}
         </ContentDiv>
     );
