@@ -85,6 +85,7 @@ import Week2Recap4 from "./components/headlines/season4/Week2Recap.tsx";
 import Week3Recap4 from "./components/headlines/season4/Week3Recap.tsx";
 import Week4Recap4 from "./components/headlines/season4/Week4Recap.tsx";
 import Halfway4Recap from "./components/headlines/season4/HalfSeasonRecap.tsx";
+import Week6Recap4 from "./components/headlines/season4/Week6Recap.tsx";
 import KeyPlayers from "./components/headlines/season4/KeyPlayers.tsx";
 import Justin from "./components/headlines/season4/Justin.tsx";
 
@@ -264,6 +265,7 @@ function Root() {
                     <Route path="/headlines/season4/Week3Recap" element={<Week3Recap4 />} />
                     <Route path="/headlines/season4/Week4Recap" element={<Week4Recap4 />} />
                     <Route path="/headlines/season4/Halfway4Recap" element={<Halfway4Recap />} />
+                    <Route path="/headlines/season4/Week6Recap" element={<Week6Recap4 />} />
                     <Route path="/headlines/season4/KeyPlayers" element={<KeyPlayers />} />
                     <Route path="/headlines/season4/Justin" element={<Justin />} />
 

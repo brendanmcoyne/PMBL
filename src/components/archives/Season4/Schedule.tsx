@@ -490,33 +490,33 @@ export default function Schedule4() {
                     <TeamName style={{color: "#CC0000"}}>Brendan</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#F1C232"}}>James</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(2-4)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
-                </Matchup>
-
-                <Matchup style={{ cursor: "pointer" }}>
-                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
-                    <VsText>vs</VsText>
-                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(1-5)</TeamRecord>
+                    <ScoreLine>13-5</ScoreLine>
+                    <Stadium>Wario City</Stadium>
                 </Matchup>
 
                 <Matchup style={{ cursor: "pointer" }}>
                     <TeamName style={{color: "#FF00FF"}}>Morgan</TeamName>
                     <VsText>vs</VsText>
                     <TeamName style={{color: "#3586E8"}}>Isaac</TeamName>
-                    <TeamRecord>(0-0)</TeamRecord>
+                    <TeamRecord>(3-3)</TeamRecord>
                     <div/>
-                    <TeamRecord>(0-0)</TeamRecord>
-                    <ScoreLine>0-0</ScoreLine>
-                    <Stadium>TBD</Stadium>
+                    <TeamRecord>(4-2)</TeamRecord>
+                    <ScoreLine>4-10</ScoreLine>
+                    <Stadium>DK Jungle</Stadium>
+                </Matchup>
+
+                <Matchup style={{ cursor: "pointer" }}>
+                    <TeamName style={{color: "#999999"}}>THANdrew</TeamName>
+                    <VsText>vs</VsText>
+                    <TeamName style={{color: "#9900FF"}}>Trocean</TeamName>
+                    <TeamRecord>(2-4)</TeamRecord>
+                    <div/>
+                    <TeamRecord>(5-1)</TeamRecord>
+                    <ScoreLine>7-14</ScoreLine>
+                    <Stadium>Mario Stadium</Stadium>
                 </Matchup>
             </Week>
 

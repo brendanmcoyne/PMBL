@@ -199,7 +199,7 @@ export default function Halfway4Recap() {
                 <div className="mvp">Team LVP: Yoshi</div>
             </GameSummary>
 
-            <StyledMiniHeader>Week 4 Stat Leaders</StyledMiniHeader>
+            <StyledMiniHeader>Week 5 Stat Leaders</StyledMiniHeader>
 
             <StatLeadersBlock style={{marginTop: "0"}}>
                 <LeaderboardTable>
