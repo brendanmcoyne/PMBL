@@ -42,20 +42,30 @@ const StyledMiniHeader = styled.h3<{ $animate?: boolean }>`
 const Gallery = styled.div`
     column-count: 2;
     column-gap: 16px;
+    width: 92%;
     max-width: 1200px;
+    margin: 0 auto 40px;
+    box-sizing: border-box;
 
     img {
+        display: block;
         width: 100%;
-        @media screen and (max-width: 750px) {
-            max-width: 500px;
-        }
+        height: auto;
         margin-bottom: 16px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         break-inside: avoid;
     }
-    @media screen and (max-width: 1000px) {
-        max-width: 600px;
+
+    @media screen and (max-width: 750px) {
+        column-count: 2;
+        column-gap: 10px;
+        width: 96%;
+
+        img {
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
     }
 `;
 

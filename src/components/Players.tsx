@@ -5,7 +5,7 @@ import { stats } from "../data/playerStats.ts";
 import type { Stat } from "../data/playerStats.ts";
 import { playerHistory } from "../data/PlayerHistory.ts";
 import { retiredHistory } from "../data/RetiredHistory.ts";
-import { StyledHeader } from "../components/CommonStyles.ts";
+import { StyledHeader } from "./CommonStyles.ts";
 import { styled, keyframes, css } from "styled-components";
 import {Link} from "react-router-dom";
 
@@ -44,6 +44,7 @@ export const ContentDiv = styled.div`
     padding-top: 2rem;
 `;
 
+
 const DivisionDiv = styled.div<{ $animate?: boolean }>`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -52,10 +53,10 @@ const DivisionDiv = styled.div<{ $animate?: boolean }>`
     margin-bottom: 3rem;
 
     @media screen and (max-width: 1000px) {
-        grid-template-columns: repeat(2,1fr);
-        justify-content: center;
-        gap: 15px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
     }
+
     ${({ $animate }) =>
             $animate &&
             css`
@@ -64,15 +65,14 @@ const DivisionDiv = styled.div<{ $animate?: boolean }>`
             `}
 `;
 
-
-
 const PlayerName = styled.span`
     font-weight: bold;
     text-align: center;
     color: white;
     font-size: 1.45rem;
     @media screen and (max-width: 1000px) {
-        font-size: 1.4rem;
+        font-size: clamp(0.9rem, 3.5vw, 1.4rem);
+        overflow-wrap: anywhere;
     }
 `;
 
@@ -99,10 +99,14 @@ const Player = styled.div<{ $accent: string; $animationState?: "enter" | "exit" 
     border-bottom: 6px solid ${({ $accent }) => $accent};
 
     @media screen and (max-width: 1000px) {
-        width: 180px;
-        height: 180px;
+        width: 100%;
+        min-width: 0;
+        min-height: 190px;
+        height: auto;
+        padding: 12px 8px;
+        box-sizing: border-box;
     }
-    
+
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 
@@ -146,10 +150,15 @@ const GenImage = styled.img<{ $animate?: boolean }>`
     border: 3px solid black;
     padding: 5px;
     background-color: white;
+
     @media screen and (max-width: 1000px) {
-        width: 130px;
-        height: 130px;
+        width: min(100%, 130px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        box-sizing: border-box;
     }
+
     ${({ $animate }) =>
             $animate &&
             css`
@@ -188,14 +197,44 @@ const ModalContent = styled.div`
     text-align: center;
     position: relative;
     border: 2px solid black;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 750px) {
+        width: calc(100vw - 20px);
+        max-height: 90dvh;
+        padding: 12px 8px;
+        border-radius: 12px;
+    }
 `;
 
 const ModalScrollWrapper = styled.div`
-    max-height: calc(90vh - 4rem); 
+    max-height: calc(90vh - 4rem);
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 1rem;
+
     &::-webkit-scrollbar {
         width: 6px;
+    }
+
+    @media screen and (max-width: 750px) {
+        max-height: calc(90dvh - 28px);
+        padding: 10px 6px;
+    }
+`;
+
+const ModalTabs = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 1rem 0;
+
+    @media screen and (max-width: 750px) {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 5px;
+        width: 100%;
+        margin: 12px 0 18px;
     }
 `;
 
@@ -216,59 +255,114 @@ const StyledMiniHeader = styled.h3`
     font-family: 'Archivo Black', sans-serif;
 `;
 
+
 const SortButtonsContainer = styled.div`
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: min(1000px, 92%);
+    margin: 0 auto 35px;
+
     @media screen and (max-width: 1000px) {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-
-        & > * {
-            width: 100%;  
-        }
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        width: 92%;
+        margin-bottom: 30px;
     }
 `;
 
-const SortButton = styled.button<{ $animate?: boolean, $active?: boolean }>`
-    padding: 0.6rem 1.4rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
+const SortButton = styled.button<{ $animate?: boolean; $active?: boolean }>`
+    padding: 12px 22px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border: 1px solid ${({ $active }) => $active ? "#e8193f" : "rgba(255,255,255,0.2)"};
+    border-radius: 10px;
     cursor: pointer;
-    margin-bottom: 20px;
-    background-color: ${({ $active }) => ($active ? "#1d3fdc" : "#2c2c80")};
+
+    background: ${({ $active }) =>
+            $active
+                    ? "linear-gradient(135deg, #e8193f, #b81030)"
+                    : "linear-gradient(135deg, #303078, #202055)"};
+
     color: white;
     box-shadow: ${({ $active }) =>
-            $active ? "0 0 8px rgba(255, 255, 255, 0.6)" : "none"};
-    transition: all 0.2s ease;
-    @media screen and (max-width: 1000px) {
-        width: 175px;
+            $active ? "0 0 12px rgba(232,25,63,0.35)" : "none"};
+
+    transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        border-color: transparent;
+        outline: none;
     }
+
+    &:focus, &:active {
+        outline: none;
+        box-shadow: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #e8193f;
+        outline-offset: 2px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        min-width: 0;
+        padding: 12px 6px;
+        font-size: clamp(0.75rem, 3vw, 0.95rem);
+    }
+
     ${({ $animate }) =>
             $animate &&
             css`
-      animation: ${fadeInUp} 1s ease forwards;
-      animation-delay: 0.3s;
+            animation: ${fadeInUp} 1s ease forwards;
+            animation-delay: 0.3s;
+        `}
+`;
+
+
+const CompareLink = styled(Link)<{ $animate?: boolean }>`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    width: min(350px, 92%);
+    box-sizing: border-box;
+    margin: 3px auto 25px;
+    padding: 14px 20px;
+
+    background: linear-gradient(135deg, #e8193f, #b81030);
+    color: white;
+    border: 1px solid #e8193f;
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(232, 25, 63, 0.35);
+        color: white;
+    }
+
+    ${({ $animate }) =>
+            $animate && css`
+        animation: ${fadeInUp} 1s ease 0.3s both;
     `}
 `;
 
-const CompareLink = styled.p`
-    padding: 0.6rem 1.4rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-radius: 999px;
-    background-color: #2c2c80;
-    @media screen and (max-width: 1000px) {
-        width: 175px;
-    }
-`;
 
 const StatCard = styled.div`
     background-color: #f0f4f8;
@@ -310,6 +404,13 @@ const ModalTopLayout = styled.div`
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 1rem;
+    
+    @media screen and (max-width: 750px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        width: 100%;
+    }
 `;
 
 const ModalLeft = styled.div`
@@ -319,7 +420,13 @@ const ModalLeft = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem; 
+    gap: 0.5rem;
+
+    @media screen and (max-width: 750px) {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+    }
 `;
 
 const ModalRight = styled.div`
@@ -327,7 +434,13 @@ const ModalRight = styled.div`
     min-width: 220px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
+    justify-content: flex-start;
+
+    @media screen and (max-width: 750px) {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+    }
 `;
 
 const AboutSection = styled.div`
@@ -340,15 +453,26 @@ const AboutSection = styled.div`
 `;
 
 const ToggleButton = styled.button<ToggleButtonProps>`
-    margin: 0 0.5rem;
+    margin: 0;
     padding: 0.5rem 1.2rem;
     font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
     border: none;
-    background-color: ${({ active }) => (active ? "#4a90e2" : "#e0e0e0")};
-    color: ${({ active }) => (active ? "white" : "black")};
+    background-color: ${({ active }) =>
+            active ? "#4a90e2" : "#e0e0e0"};
+    color: ${({ active }) =>
+            active ? "white" : "black"};
     border-radius: 10px;
     transition: background-color 0.2s, color 0.2s;
+
+    @media screen and (max-width: 750px) {
+        width: 100%;
+        min-width: 0;
+        padding: 10px 2px;
+        font-size: clamp(0.7rem, 3vw, 0.85rem);
+        border-radius: 7px;
+    }
 `;
 
 const AwardsList = styled.ul`
@@ -357,7 +481,15 @@ const AwardsList = styled.ul`
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.65rem;    
+    gap: 0.65rem;
+
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 750px) {
+        gap: 10px;
+    }
 `;
 
 const StatsScrollContainer = styled.div`
@@ -408,6 +540,32 @@ const SeasonCell = styled(StatCell)`
     max-width: 160px;
 `;
 
+const AwardText = styled.div`
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    min-width: 0;
+    text-align: left;
+
+    @media screen and (max-width: 750px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        flex: 1;
+    }
+`;
+
+const AwardSeason = styled.span`
+    opacity: 0.75;
+    color: black;
+    font-size: 0.9rem;
+
+    @media screen and (max-width: 750px) {
+        font-size: 0.8rem;
+    }
+`;
+
 const AwardRow = styled.li<{ $kind: string }>`
     padding: 0.6rem 1.1rem;
     border-radius: 10px;
@@ -416,6 +574,20 @@ const AwardRow = styled.li<{ $kind: string }>`
     align-items: center;
     gap: 0.5rem; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+
+    @media screen and (max-width: 750px) {
+        padding: 12px;
+        gap: 10px;
+        align-items: flex-start;
+        text-align: left;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+    
     background: ${({ $kind }) => {
     switch ($kind) {
         case "champ":        return "#FFD700";
@@ -494,13 +666,7 @@ function colorManagerNames(text: string) {
         }
 
         return (
-            <span
-                key={`${part}-${index}`}
-                style={{
-                    color,
-                    fontWeight: "bold",
-                }}
-            >
+            <span key={`${part}-${index}`} style={{color, fontWeight: "bold"}}>
                 {part}
             </span>
         );
@@ -760,7 +926,8 @@ export default function Players() {
         <ContentDiv>
             <StyledHeader $animate={ready}>Players</StyledHeader>
 
-            <CompareLink><Link to="/compare" style={{color: "white"}}>Compare Players</Link></CompareLink>
+
+            <CompareLink to="/compare" $animate={ready}>Compare Players</CompareLink>
             <SortButtonsContainer>
                 <SortButton $animate={ready} $active={selectedSort === "az"} onClick={() => handleSortChange("az")}>Sort A-Z</SortButton>
                 <SortButton $animate={ready} $active={selectedSort === "za"} onClick={() => handleSortChange("za")}>Sort Z-A</SortButton>
@@ -793,13 +960,19 @@ export default function Players() {
                         onClick={(e) => e.stopPropagation()}>
                         <CloseButton onClick={() => { setSelectedPlayer(null); setSelectedStat(null); }}>✕</CloseButton>
                         <ModalScrollWrapper>
-                            <div style={{ marginBottom: "1rem", marginTop: "1rem" }}>
+
+                            <ModalTabs>
                                 <ToggleButton active={activeModalTab === "info"} onClick={() => setActiveModalTab("info")}>Info</ToggleButton>
                                 <ToggleButton active={activeModalTab === "awards"} onClick={() => setActiveModalTab("awards")}>Awards</ToggleButton>
                                 <ToggleButton active={activeModalTab === "stats"} onClick={() => setActiveModalTab("stats")}>Stats</ToggleButton>
                                 <ToggleButton active={activeModalTab === "history"} onClick={() => setActiveModalTab("history")}>History</ToggleButton>
-                            </div>
-                            <StyledMiniHeader style={{ fontSize: "33px", margin: "5px", color: "black" }}>{selectedPlayer.name}</StyledMiniHeader>
+                            </ModalTabs>
+
+
+                            <StyledMiniHeader style={{fontSize: "clamp(1.4rem, 6vw, 33px)", margin: "5px", color: "black", overflowWrap: "anywhere"}}>
+                                {selectedPlayer.name}
+                            </StyledMiniHeader>
+
                             {selectedPlayer.captain ? <img style={{marginBottom: "10px", padding: "0"}} src={selectedPlayer.banner} alt="banner"/> : ""}
 
                             {activeModalTab === "info" && (
@@ -854,8 +1027,12 @@ export default function Players() {
                                                     const [kind, emoji] = classifyAward(name);
                                                     return (
                                                         <AwardRow key={idx} $kind={kind}>
-                                                            <span>{emoji}</span>
-                                                            {name} <span style={{ opacity: .75, color: "black" }}>— Season {season}</span>
+                                                            <span style={{ flexShrink: 0 }}>{emoji}</span>
+
+                                                            <AwardText>
+                                                                <span>{name}</span>
+                                                                <AwardSeason>Season {season}</AwardSeason>
+                                                            </AwardText>
                                                         </AwardRow>
                                                     );
                                                 })}
