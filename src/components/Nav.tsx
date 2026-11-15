@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+
 import { styled } from "styled-components";
 import GoogleLogin from "./GoogleLogin";
+import { NavLink } from "react-router-dom";
 
 const StyledNavContainer = styled.div`
     position: fixed;
@@ -15,7 +16,7 @@ const StyledNavContainer = styled.div`
 `;
 
 const StyledNav = styled.nav`
-    background-color: darkblue;
+    background: linear-gradient(180deg, #080878, #05054a);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,27 +68,50 @@ const StyledList = styled.ul`
     }
 `;
 
+
 const StyledLink = styled.li`
     font-size: 1.1rem;
     padding: 6px 14px;
     text-align: center;
-    border-radius: 6px;
-    transition: background-color 0.2s ease-in-out;
 
     a {
+        position: relative;
+        display: inline-block;
         color: white;
         text-decoration: none;
         font-weight: bold;
-        height: 100%;
+        padding: 8px 0;
+        transition: color 0.2s ease;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: #ff2448;
+            border-radius: 3px;
+            transform: translateX(-50%);
+            transition: width 0.25s ease;
+        }
+
         &:hover {
-            text-decoration: underline;
+            color: #f0f0f0;
+        }
+
+        &:hover::after,
+        &.active::after {
+            width: 100%;
         }
     }
+
     @media (max-width: 1000px) {
         font-size: 0.7rem;
         padding: 4px 8px;
     }
 `;
+
 
 const LogoDesktop = styled.img`
     height: 70px;
@@ -147,12 +171,12 @@ export default function Nav() {
                 <LeftSection>
                     <LogoDesktop src="LeagueLogo_noWords.png" alt="League Logo" />
                     <StyledList>
-                        <StyledLink><Link to="/">Home</Link></StyledLink>
-                        <StyledLink><Link to="/players">Players</Link></StyledLink>
-                        <StyledLink><Link to="/managers">Managers</Link></StyledLink>
-                        <StyledLink><Link to="/archives">Archives</Link></StyledLink>
-                        <StyledLink><Link to="/season">Season</Link></StyledLink>
-                        <StyledLink><Link to="/headlines">Headlines</Link></StyledLink>
+                        <StyledLink><NavLink to="/" end>Home</NavLink></StyledLink>
+                        <StyledLink><NavLink to="/players">Players</NavLink></StyledLink>
+                        <StyledLink><NavLink to="/managers">Managers</NavLink></StyledLink>
+                        <StyledLink><NavLink to="/archives">Archives</NavLink></StyledLink>
+                        <StyledLink><NavLink to="/season">Season</NavLink></StyledLink>
+                        <StyledLink><NavLink to="/headlines">Headlines</NavLink></StyledLink>
                     </StyledList>
                 </LeftSection>
                 <GoogleDesktop>

@@ -9,16 +9,29 @@ type GoogleUser = {
     picture: string;
 };
 
-const SignButton = styled.span`
+const SignButton = styled.button`
+    background-color: #e8193f;
     color: white;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding-right: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
     white-space: nowrap;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 
     &:hover {
-        text-decoration: underline;
+        background-color: #c8102e;
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 0.85rem;
+        padding: 7px 14px;
     }
 `;
 
@@ -31,10 +44,8 @@ const UserName = styled.span`
     text-overflow: ellipsis; 
     @media screen and (max-width: 800px) {
         max-width: 130px;
-    } 
-    
+    }
 `;
-
 
 const ProfImage = styled.img`
     background-color: white;
